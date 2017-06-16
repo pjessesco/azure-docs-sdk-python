@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -77,8 +77,7 @@ items:
     content: check_name_availability(name, search_management_request_options=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The Search service name to validate. Search service names
+    - description: 'The Search service name to validate. Search service names
 
         must only contain lowercase letters, digits or dashes, cannot use dash
 
@@ -90,17 +89,17 @@ items:
       id: name
       type:
       - str
-    - description: 'Additional parameters for
+    - defaultValue: None
+      description: 'Additional parameters for
 
         the operation
 
         '
       id: search_management_request_options
       type:
-      - '@azure.mgmt.search.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.search.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -115,15 +114,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - CheckNameAvailabilityOutput
       - 'ClientRawResponse
 
         if raw=true'
@@ -154,8 +147,7 @@ items:
     content: create_or_update(resource_group_name, search_service_name, service, search_management_request_options=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group within the
+    - description: 'The name of the resource group within the
 
         current subscription. You can obtain this value from the Azure
 
@@ -165,8 +157,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Azure Search service to
+    - description: 'The name of the Azure Search service to
 
         create or update. Search service names must only contain lowercase
 
@@ -186,34 +177,32 @@ items:
       id: search_service_name
       type:
       - str
-    - defaultValue: None
-      description: 'The definition of the Search service to create or
+    - description: 'The definition of the Search service to create or
 
         update.
 
         '
       id: service
       type:
-      - '@azure.mgmt.search.models
-
-        '
-    - description: 'Additional parameters for
+      - azure.mgmt.search.models
+    - defaultValue: None
+      description: 'Additional parameters for
 
         the operation
 
         '
       id: search_management_request_options
       type:
-      - '@azure.mgmt.search.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.search.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -221,14 +210,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - SearchService
       - 'ClientRawResponse
 
         if raw=true'
@@ -257,8 +241,7 @@ items:
     content: delete(resource_group_name, search_service_name, search_management_request_options=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group within the
+    - description: 'The name of the resource group within the
 
         current subscription. You can obtain this value from the Azure
 
@@ -268,8 +251,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Azure Search service
+    - description: 'The name of the Azure Search service
 
         associated with the specified resource group.
 
@@ -277,23 +259,24 @@ items:
       id: search_service_name
       type:
       - str
-    - description: 'Additional parameters for
+    - defaultValue: None
+      description: 'Additional parameters for
 
         the operation
 
         '
       id: search_management_request_options
       type:
-      - '@azure.mgmt.search.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.search.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -301,15 +284,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -338,8 +315,7 @@ items:
     content: get(resource_group_name, search_service_name, search_management_request_options=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group within the
+    - description: 'The name of the resource group within the
 
         current subscription. You can obtain this value from the Azure
 
@@ -349,8 +325,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Azure Search service
+    - description: 'The name of the Azure Search service
 
         associated with the specified resource group.
 
@@ -358,23 +333,24 @@ items:
       id: search_service_name
       type:
       - str
-    - description: 'Additional parameters for
+    - defaultValue: None
+      description: 'Additional parameters for
 
         the operation
 
         '
       id: search_management_request_options
       type:
-      - '@azure.mgmt.search.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.search.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -382,15 +358,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - SearchService
       - 'ClientRawResponse
 
         if raw=true'
@@ -417,8 +387,7 @@ items:
     content: list_by_resource_group(resource_group_name, search_management_request_options=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group within the
+    - description: 'The name of the resource group within the
 
         current subscription. You can obtain this value from the Azure
 
@@ -428,17 +397,17 @@ items:
       id: resource_group_name
       type:
       - str
-    - description: 'Additional parameters for
+    - defaultValue: None
+      description: 'Additional parameters for
 
         the operation
 
         '
       id: search_management_request_options
       type:
-      - '@azure.mgmt.search.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.search.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -453,13 +422,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - SearchServicePaged

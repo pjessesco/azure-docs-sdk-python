@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -143,9 +143,7 @@ items:
     content: create_or_update(resource_group_name, name, hosting_environment_envelope,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -153,8 +151,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
@@ -167,16 +164,16 @@ items:
         '
       id: hosting_environment_envelope
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -186,6 +183,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns AppServiceEnvironmentResource'
       - 'ClientRawResponse
 
         if raw=true'
@@ -215,9 +215,7 @@ items:
     content: create_or_update_multi_role_pool(resource_group_name, name, multi_role_pool_envelope,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -225,8 +223,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
@@ -237,16 +234,16 @@ items:
         '
       id: multi_role_pool_envelope
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -256,6 +253,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns WorkerPoolResource'
       - 'ClientRawResponse
 
         if raw=true'
@@ -285,7 +285,6 @@ items:
     content: create_or_update_worker_pool(resource_group_name, name, worker_pool_name,
       worker_pool_envelope, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
     - description: 'Name of the resource group to which the
 
         resource belongs.
@@ -294,15 +293,13 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the worker pool.
+    - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
@@ -313,16 +310,16 @@ items:
         '
       id: worker_pool_envelope
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -332,6 +329,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns WorkerPoolResource'
       - 'ClientRawResponse
 
         if raw=true'
@@ -361,10 +361,7 @@ items:
     content: delete(resource_group_name, name, force_delete=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      id: self
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -378,7 +375,8 @@ items:
       id: name
       type:
       - str
-    - description: 'Specify <code>true</code> to force the deletion
+    - defaultValue: None
+      description: 'Specify <code>true</code> to force the deletion
 
         even if the App Service Environment contains resources. The default is
 
@@ -388,7 +386,8 @@ items:
       id: force_delete
       type:
       - bool
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -405,6 +404,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -433,8 +435,7 @@ items:
   syntax:
     content: get(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -442,20 +443,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -463,14 +465,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - AppServiceEnvironmentResource
       - 'ClientRawResponse
 
         if raw=true'
@@ -508,27 +505,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the diagnostics item.
+    - description: 'Name of the diagnostics item.
 
         '
       id: diagnostics_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -536,14 +533,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - HostingEnvironmentDiagnostics
       - 'ClientRawResponse
 
         if raw=true'
@@ -573,8 +565,7 @@ items:
     content: get_multi_role_pool(resource_group_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -582,20 +573,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -603,14 +595,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - WorkerPoolResource
       - 'ClientRawResponse
 
         if raw=true'
@@ -648,27 +635,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the worker pool.
+    - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -676,14 +663,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - WorkerPoolResource
       - 'ClientRawResponse
 
         if raw=true'
@@ -712,7 +694,8 @@ items:
   syntax:
     content: list(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -727,13 +710,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - AppServiceEnvironmentPaged
@@ -763,8 +739,7 @@ items:
     content: list_app_service_plans(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -772,20 +747,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -793,12 +769,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - AppServicePlanPaged
@@ -828,8 +798,7 @@ items:
     content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -837,13 +806,15 @@ items:
       id: resource_group_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -851,13 +822,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - AppServiceEnvironmentPaged
@@ -891,8 +855,7 @@ items:
     content: list_capacities(resource_group_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -900,20 +863,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -921,12 +885,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - StampCapacityPaged
@@ -956,8 +914,7 @@ items:
     content: list_diagnostics(resource_group_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -965,20 +922,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -986,14 +944,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - list of HostingEnvironmentDiagnostics
       - 'ClientRawResponse
 
         if raw=true'
@@ -1023,8 +976,7 @@ items:
     content: list_metric_definitions(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1032,20 +984,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1053,14 +1006,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - MetricDefinition
       - 'ClientRawResponse
 
         if raw=true'
@@ -1090,8 +1038,7 @@ items:
     content: list_metrics(resource_group_name, name, details=None, filter=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1099,14 +1046,14 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'Specify <code>true</code> to include instance details.
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
 
         The default is <code>false</code>.
 
@@ -1114,7 +1061,8 @@ items:
       id: details
       type:
       - bool
-    - description: 'Return only usages/metrics specified in the filter.
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
 
         Filter conforms to odata syntax. Example: $filter=(name.value eq
 
@@ -1128,7 +1076,8 @@ items:
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -1143,13 +1092,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricPaged
@@ -1183,8 +1125,7 @@ items:
     content: list_multi_role_metric_definitions(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1192,20 +1133,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1213,12 +1155,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricDefinitionPaged
@@ -1249,8 +1185,7 @@ items:
       time_grain=None, details=None, filter=None, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1258,32 +1193,34 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'Beginning time of the metrics query.
+    - defaultValue: None
+      description: 'Beginning time of the metrics query.
 
         '
       id: start_time
       type:
       - str
-    - description: 'End time of the metrics query.
+    - defaultValue: None
+      description: 'End time of the metrics query.
 
         '
       id: end_time
       type:
       - str
-    - description: 'Time granularity of the metrics query.
+    - defaultValue: None
+      description: 'Time granularity of the metrics query.
 
         '
       id: time_grain
       type:
       - str
-    - defaultValue: 'False'
+    - defaultValue: None
       description: 'Specify <code>true</code> to include instance details.
 
         The default is <code>false</code>.
@@ -1314,7 +1251,7 @@ items:
       id: custom_headers
       type:
       - dict
-    - defaultValue: None
+    - defaultValue: 'False'
       description: 'returns the direct response alongside the
 
         deserialized response
@@ -1323,13 +1260,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricPaged
@@ -1371,27 +1301,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the instance in the multi-role pool.
+    - description: 'Name of the instance in the multi-role pool.
 
         '
       id: instance
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1399,12 +1329,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricDefinitionPaged
@@ -1438,8 +1362,7 @@ items:
     content: list_multi_role_pool_instance_metrics(resource_group_name, name, instance,
       details=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1447,21 +1370,20 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the instance in the multi-role pool.
+    - description: 'Name of the instance in the multi-role pool.
 
         '
       id: instance
       type:
       - str
-    - description: 'Specify <code>true</code> to include instance details.
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
 
         The default is <code>false</code>.
 
@@ -1469,13 +1391,15 @@ items:
       id: details
       type:
       - bool
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1483,12 +1407,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricPaged
@@ -1518,8 +1436,7 @@ items:
     content: list_multi_role_pool_skus(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1527,20 +1444,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1548,12 +1466,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - SkuInfoPaged
@@ -1583,8 +1495,7 @@ items:
     content: list_multi_role_pools(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1592,20 +1503,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1613,12 +1525,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - WorkerPoolResourcePaged
@@ -1648,8 +1554,7 @@ items:
     content: list_multi_role_usages(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1657,20 +1562,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1678,12 +1584,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - UsagePaged
@@ -1713,8 +1613,7 @@ items:
     content: list_operations(resource_group_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1722,20 +1621,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1743,14 +1643,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - list of Operation
       - 'ClientRawResponse
 
         if raw=true'
@@ -1780,8 +1675,7 @@ items:
     content: list_usages(resource_group_name, name, filter=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1789,14 +1683,14 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'Return only usages/metrics specified in the filter.
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
 
         Filter conforms to odata syntax. Example: $filter=(name.value eq
 
@@ -1810,13 +1704,15 @@ items:
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1824,13 +1720,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - CsmUsageQuotaPaged
@@ -1860,8 +1749,7 @@ items:
     content: list_vips(resource_group_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1869,20 +1757,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1890,14 +1779,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - AddressResponse
       - 'ClientRawResponse
 
         if raw=true'
@@ -1927,8 +1811,7 @@ items:
     content: list_web_apps(resource_group_name, name, properties_to_include=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1936,14 +1819,14 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'Comma separated list of app properties
+    - defaultValue: None
+      description: 'Comma separated list of app properties
 
         to include.
 
@@ -1951,13 +1834,15 @@ items:
       id: properties_to_include
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1965,13 +1850,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - SitePaged
@@ -2009,27 +1887,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the worker pool.
+    - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2037,12 +1915,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricDefinitionPaged
@@ -2076,8 +1948,7 @@ items:
     content: list_web_worker_metrics(resource_group_name, name, worker_pool_name,
       details=None, filter=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -2085,21 +1956,20 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of worker pool
+    - description: 'Name of worker pool
 
         '
       id: worker_pool_name
       type:
       - str
-    - description: 'Specify <code>true</code> to include instance details.
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
 
         The default is <code>false</code>.
 
@@ -2107,7 +1977,8 @@ items:
       id: details
       type:
       - bool
-    - description: 'Return only usages/metrics specified in the filter.
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
 
         Filter conforms to odata syntax. Example: $filter=(name.value eq
 
@@ -2121,13 +1992,15 @@ items:
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2135,13 +2008,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricPaged
@@ -2179,27 +2045,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the worker pool.
+    - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2207,12 +2073,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - UsagePaged
@@ -2260,27 +2120,27 @@ items:
       id: name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the worker pool.
+    - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the instance in the worker pool.
+    - description: 'Name of the instance in the worker pool.
 
         '
       id: instance
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2288,12 +2148,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricDefinitionPaged
@@ -2327,8 +2181,7 @@ items:
     content: list_worker_pool_instance_metrics(resource_group_name, name, worker_pool_name,
       instance, details=None, filter=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -2336,28 +2189,26 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the worker pool.
+    - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the instance in the worker pool.
+    - description: 'Name of the instance in the worker pool.
 
         '
       id: instance
       type:
       - str
-    - description: 'Specify <code>true</code> to include instance details.
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
 
         The default is <code>false</code>.
 
@@ -2365,7 +2216,8 @@ items:
       id: details
       type:
       - bool
-    - description: 'Return only usages/metrics specified in the filter.
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
 
         Filter conforms to odata syntax. Example: $filter=(name.value eq
 
@@ -2379,13 +2231,15 @@ items:
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2393,12 +2247,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceMetricPaged
@@ -2436,27 +2284,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the worker pool.
+    - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2464,12 +2312,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - SkuInfoPaged
@@ -2499,8 +2341,7 @@ items:
     content: list_worker_pools(resource_group_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -2508,20 +2349,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2529,12 +2371,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - WorkerPoolResourcePaged
@@ -2563,8 +2399,7 @@ items:
   syntax:
     content: reboot(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -2572,20 +2407,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2593,14 +2429,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -2629,8 +2460,7 @@ items:
   syntax:
     content: resume(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -2638,20 +2468,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2659,12 +2490,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - SitePaged
@@ -2693,8 +2518,7 @@ items:
   syntax:
     content: suspend(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -2702,20 +2526,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the App Service Environment.
+    - description: 'Name of the App Service Environment.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -2723,12 +2548,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - SitePaged

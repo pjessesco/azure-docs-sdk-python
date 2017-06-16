@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -85,8 +85,7 @@ items:
       id: profile_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the endpoint under the profile which is
+    - description: 'Name of the endpoint under the profile which is
 
         unique globally.
 
@@ -94,8 +93,7 @@ items:
       id: endpoint_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the origin which is unique within the
+    - description: 'Name of the origin which is unique within the
 
         endpoint.
 
@@ -103,13 +101,15 @@ items:
       id: origin_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -117,14 +117,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - Origin
       - 'ClientRawResponse
 
         if raw=true'
@@ -159,8 +154,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the CDN profile which is unique within
+    - description: 'Name of the CDN profile which is unique within
 
         the resource group.
 
@@ -168,8 +162,7 @@ items:
       id: profile_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the endpoint under the profile which is
+    - description: 'Name of the endpoint under the profile which is
 
         unique globally.
 
@@ -177,13 +170,15 @@ items:
       id: endpoint_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -191,12 +186,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - OriginPaged
@@ -223,7 +212,6 @@ items:
     content: update(resource_group_name, profile_name, endpoint_name, origin_name,
       origin_update_properties, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
     - description: 'Name of the Resource group within the
 
         Azure subscription.
@@ -240,8 +228,7 @@ items:
       id: profile_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the endpoint under the profile which is
+    - description: 'Name of the endpoint under the profile which is
 
         unique globally.
 
@@ -249,8 +236,7 @@ items:
       id: endpoint_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the origin which is unique within the
+    - description: 'Name of the origin which is unique within the
 
         endpoint.
 
@@ -263,16 +249,16 @@ items:
         '
       id: origin_update_properties
       type:
-      - '@azure.mgmt.cdn.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.cdn.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -282,6 +268,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns Origin'
       - 'ClientRawResponse
 
         if raw=true'

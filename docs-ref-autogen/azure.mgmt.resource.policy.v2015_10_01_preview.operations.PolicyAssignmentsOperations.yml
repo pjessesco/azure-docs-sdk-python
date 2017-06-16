@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -99,29 +99,27 @@ items:
       id: scope
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the policy assignment.
+    - description: 'The name of the policy assignment.
 
         '
       id: policy_assignment_name
       type:
       - str
-    - defaultValue: None
-      description: 'Parameters for the policy assignment.
+    - description: 'Parameters for the policy assignment.
 
         '
       id: parameters
       type:
-      - '@azure.mgmt.resource.policy.v2015_10_01_preview.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.resource.policy.v2015_10_01_preview.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -129,14 +127,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - PolicyAssignment
       - 'ClientRawResponse
 
         if raw=true'
@@ -180,8 +173,7 @@ items:
     content: create_by_id(policy_assignment_id, parameters, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The ID of the policy assignment to
+    - description: 'The ID of the policy assignment to
 
         create. Use the format
 
@@ -191,22 +183,21 @@ items:
       id: policy_assignment_id
       type:
       - str
-    - defaultValue: None
-      description: 'Parameters for policy assignment.
+    - description: 'Parameters for policy assignment.
 
         '
       id: parameters
       type:
-      - '@azure.mgmt.resource.policy.v2015_10_01_preview.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.resource.policy.v2015_10_01_preview.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -214,14 +205,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - PolicyAssignment
       - 'ClientRawResponse
 
         if raw=true'
@@ -248,15 +234,13 @@ items:
     content: delete(scope, policy_assignment_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The scope of the policy assignment.
+    - description: 'The scope of the policy assignment.
 
         '
       id: scope
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the policy assignment to
+    - description: 'The name of the policy assignment to
 
         delete.
 
@@ -264,13 +248,15 @@ items:
       id: policy_assignment_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -278,14 +264,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - PolicyAssignment
       - 'ClientRawResponse
 
         if raw=true'
@@ -324,8 +305,7 @@ items:
   syntax:
     content: delete_by_id(policy_assignment_id, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The ID of the policy assignment to
+    - description: 'The ID of the policy assignment to
 
         delete. Use the format
 
@@ -335,13 +315,15 @@ items:
       id: policy_assignment_id
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -349,15 +331,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - PolicyAssignment
       - 'ClientRawResponse
 
         if raw=true'
@@ -383,15 +359,13 @@ items:
   syntax:
     content: get(scope, policy_assignment_name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The scope of the policy assignment.
+    - description: 'The scope of the policy assignment.
 
         '
       id: scope
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the policy assignment to
+    - description: 'The name of the policy assignment to
 
         get.
 
@@ -399,13 +373,15 @@ items:
       id: policy_assignment_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -413,14 +389,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - PolicyAssignment
       - 'ClientRawResponse
 
         if raw=true'
@@ -459,8 +430,7 @@ items:
   syntax:
     content: get_by_id(policy_assignment_id, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The ID of the policy assignment to get.
+    - description: 'The ID of the policy assignment to get.
 
         Use the format
 
@@ -470,13 +440,15 @@ items:
       id: policy_assignment_id
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -484,15 +456,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - PolicyAssignment
       - 'ClientRawResponse
 
         if raw=true'
@@ -518,20 +484,21 @@ items:
   syntax:
     content: list(filter=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'The filter to apply on the operation.
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
 
         '
       id: filter
       type:
       - str
-    - defaultValue: 'False'
+    - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - defaultValue: None
+    - defaultValue: 'False'
       description: 'returns the direct response alongside the
 
         deserialized response
@@ -540,13 +507,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - PolicyAssignmentPaged
@@ -589,22 +549,19 @@ items:
       id: resource_provider_namespace
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The parent resource path.
+    - description: 'The parent resource path.
 
         '
       id: parent_resource_path
       type:
       - str
-    - defaultValue: None
-      description: 'The resource type.
+    - description: 'The resource type.
 
         '
       id: resource_type
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the resource with policy
+    - description: 'The name of the resource with policy
 
         assignments.
 
@@ -612,19 +569,22 @@ items:
       id: resource_name
       type:
       - str
-    - description: 'The filter to apply on the operation.
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
 
         '
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -632,12 +592,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - PolicyAssignmentPaged
@@ -664,8 +618,7 @@ items:
     content: list_for_resource_group(resource_group_name, filter=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group that
+    - description: 'The name of the resource group that
 
         contains policy assignments.
 
@@ -673,13 +626,15 @@ items:
       id: resource_group_name
       type:
       - str
-    - description: 'The filter to apply on the operation.
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
 
         '
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -694,13 +649,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - PolicyAssignmentPaged

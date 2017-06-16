@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -90,29 +90,27 @@ items:
       id: lab_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the user profile.
+    - description: 'The name of the user profile.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Profile of a lab user.
+    - description: 'Profile of a lab user.
 
         '
       id: user
       type:
-      - '@azure.mgmt.devtestlabs.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.devtestlabs.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -120,14 +118,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - User
       - 'ClientRawResponse
 
         if raw=true'
@@ -154,16 +147,13 @@ items:
     content: delete(resource_group_name, lab_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the lab.
+    - description: 'The name of the lab.
 
         '
       id: lab_name
@@ -175,13 +165,15 @@ items:
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -191,6 +183,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -217,28 +212,26 @@ items:
     content: get(resource_group_name, lab_name, name, expand=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the lab.
+    - description: 'The name of the lab.
 
         '
       id: lab_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the user profile.
+    - description: 'The name of the user profile.
 
         '
       id: name
       type:
       - str
-    - description: 'Specify the $expand query. Example:
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
 
         ''properties($select=identity)''
 
@@ -246,13 +239,15 @@ items:
       id: expand
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -260,14 +255,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - User
       - 'ClientRawResponse
 
         if raw=true'
@@ -294,21 +284,20 @@ items:
     content: list(resource_group_name, lab_name, expand=None, filter=None, top=None,
       orderby=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the lab.
+    - description: 'The name of the lab.
 
         '
       id: lab_name
       type:
       - str
-    - description: 'Specify the $expand query. Example:
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
 
         ''properties($select=identity)''
 
@@ -316,13 +305,15 @@ items:
       id: expand
       type:
       - str
-    - description: 'The filter to apply to the operation.
+    - defaultValue: None
+      description: 'The filter to apply to the operation.
 
         '
       id: filter
       type:
       - str
-    - description: 'The maximum number of resources to return from the
+    - defaultValue: None
+      description: 'The maximum number of resources to return from the
 
         operation.
 
@@ -330,7 +321,7 @@ items:
       id: top
       type:
       - int
-    - defaultValue: 'False'
+    - defaultValue: None
       description: 'The ordering expression for the results, using OData
 
         notation.
@@ -346,7 +337,7 @@ items:
       id: custom_headers
       type:
       - dict
-    - defaultValue: None
+    - defaultValue: 'False'
       description: 'returns the direct response alongside the
 
         deserialized response
@@ -355,13 +346,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - UserPaged
@@ -400,29 +384,27 @@ items:
       id: lab_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the user profile.
+    - description: 'The name of the user profile.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Profile of a lab user.
+    - description: 'Profile of a lab user.
 
         '
       id: user
       type:
-      - '@azure.mgmt.devtestlabs.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.devtestlabs.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -430,14 +412,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - User
       - 'ClientRawResponse
 
         if raw=true'

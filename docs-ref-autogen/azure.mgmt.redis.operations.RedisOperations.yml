@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -92,16 +92,13 @@ items:
     content: create(resource_group_name, name, parameters, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
@@ -112,16 +109,16 @@ items:
         '
       id: parameters
       type:
-      - '@azure.mgmt.redis.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.redis.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -131,6 +128,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns RedisResource'
       - 'ClientRawResponse
 
         if raw=true'
@@ -156,10 +156,7 @@ items:
   syntax:
     content: delete(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -171,13 +168,15 @@ items:
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -187,6 +186,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -213,16 +215,13 @@ items:
     content: export_data(resource_group_name, name, parameters, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
@@ -233,16 +232,16 @@ items:
         '
       id: parameters
       type:
-      - '@azure.mgmt.redis.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.redis.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -252,6 +251,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -280,22 +282,19 @@ items:
     content: force_reboot(resource_group_name, name, reboot_type, shard_id=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Which Redis node(s) to reboot. Depending on this
+    - description: 'Which Redis node(s) to reboot. Depending on this
 
         value data loss is possible. Possible values include: ''PrimaryNode'',
 
@@ -307,7 +306,8 @@ items:
       - 'str or @azure.mgmt.redis.models
 
         '
-    - description: 'If clustering is enabled, the ID of the shard to be
+    - defaultValue: None
+      description: 'If clustering is enabled, the ID of the shard to be
 
         rebooted.
 
@@ -315,13 +315,15 @@ items:
       id: shard_id
       type:
       - int
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -329,14 +331,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - RedisForceRebootResponse
       - 'ClientRawResponse
 
         if raw=true'
@@ -362,27 +359,27 @@ items:
   syntax:
     content: get(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -390,14 +387,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - RedisResource
       - 'ClientRawResponse
 
         if raw=true'
@@ -424,17 +416,13 @@ items:
     content: import_data(resource_group_name, name, files, format=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
@@ -446,19 +434,22 @@ items:
       id: files
       type:
       - list of str
-    - description: 'File format.
+    - defaultValue: None
+      description: 'File format.
 
         '
       id: format
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -468,6 +459,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -493,7 +487,8 @@ items:
   syntax:
     content: list(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -508,13 +503,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - RedisResourcePaged
@@ -541,20 +529,21 @@ items:
     content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -562,13 +551,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - RedisResourcePaged
@@ -597,27 +579,27 @@ items:
     content: list_keys(resource_group_name, name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -625,14 +607,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - RedisAccessKeys
       - 'ClientRawResponse
 
         if raw=true'
@@ -667,15 +644,13 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'The Redis access key to regenerate. Possible values
+    - description: 'The Redis access key to regenerate. Possible values
 
         include: ''Primary'', ''Secondary''
 
@@ -685,13 +660,15 @@ items:
       - 'str or @azure.mgmt.redis.models
 
         '
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -699,14 +676,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - RedisAccessKeys
       - 'ClientRawResponse
 
         if raw=true'
@@ -739,29 +711,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the Redis cache.
+    - description: 'The name of the Redis cache.
 
         '
       id: name
       type:
       - str
-    - defaultValue: None
-      description: 'Parameters supplied to the Update Redis operation.
+    - description: 'Parameters supplied to the Update Redis operation.
 
         '
       id: parameters
       type:
-      - '@azure.mgmt.redis.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.redis.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -769,14 +739,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - RedisResource
       - 'ClientRawResponse
 
         if raw=true'

@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -80,27 +80,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The workflow name.
+    - description: 'The workflow name.
 
         '
       id: workflow_name
       type:
       - str
-    - defaultValue: None
-      description: 'The workflow run name.
+    - description: 'The workflow run name.
 
         '
       id: run_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -108,14 +108,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -148,27 +143,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The workflow name.
+    - description: 'The workflow name.
 
         '
       id: workflow_name
       type:
       - str
-    - defaultValue: None
-      description: 'The workflow run name.
+    - description: 'The workflow run name.
 
         '
       id: run_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -176,14 +171,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - WorkflowRun
       - 'ClientRawResponse
 
         if raw=true'
@@ -210,33 +200,34 @@ items:
     content: list(resource_group_name, workflow_name, top=None, filter=None, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The resource group name.
+    - description: 'The resource group name.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The workflow name.
+    - description: 'The workflow name.
 
         '
       id: workflow_name
       type:
       - str
-    - description: 'The number of items to be included in the result.
+    - defaultValue: None
+      description: 'The number of items to be included in the result.
 
         '
       id: top
       type:
       - int
-    - description: 'The filter to apply on the operation.
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
 
         '
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -251,13 +242,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - WorkflowRunPaged

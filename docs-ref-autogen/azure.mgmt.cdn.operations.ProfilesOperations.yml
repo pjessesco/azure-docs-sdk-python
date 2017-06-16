@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -81,9 +81,7 @@ items:
     content: create(resource_group_name, profile_name, profile, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'Name of the Resource group within the
+    - description: 'Name of the Resource group within the
 
         Azure subscription.
 
@@ -91,8 +89,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the CDN profile which is unique within
+    - description: 'Name of the CDN profile which is unique within
 
         the resource group.
 
@@ -105,16 +102,16 @@ items:
         '
       id: profile
       type:
-      - '@azure.mgmt.cdn.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.cdn.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -124,6 +121,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns Profile'
       - 'ClientRawResponse
 
         if raw=true'
@@ -154,10 +154,7 @@ items:
     content: delete(resource_group_name, profile_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'Name of the Resource group within the
+    - description: 'Name of the Resource group within the
 
         Azure subscription.
 
@@ -173,13 +170,15 @@ items:
       id: profile_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -189,6 +188,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -225,8 +227,7 @@ items:
     content: generate_sso_uri(resource_group_name, profile_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the Resource group within the
+    - description: 'Name of the Resource group within the
 
         Azure subscription.
 
@@ -234,8 +235,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the CDN profile which is unique within
+    - description: 'Name of the CDN profile which is unique within
 
         the resource group.
 
@@ -243,13 +243,15 @@ items:
       id: profile_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -257,14 +259,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - SsoUri
       - 'ClientRawResponse
 
         if raw=true'
@@ -293,8 +290,7 @@ items:
     content: get(resource_group_name, profile_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the Resource group within the
+    - description: 'Name of the Resource group within the
 
         Azure subscription.
 
@@ -302,8 +298,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the CDN profile which is unique within
+    - description: 'Name of the CDN profile which is unique within
 
         the resource group.
 
@@ -311,13 +306,15 @@ items:
       id: profile_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -325,14 +322,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - Profile
       - 'ClientRawResponse
 
         if raw=true'
@@ -358,7 +350,8 @@ items:
   syntax:
     content: list(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -373,13 +366,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ProfilePaged
@@ -406,8 +392,7 @@ items:
     content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the Resource group within the
+    - description: 'Name of the Resource group within the
 
         Azure subscription.
 
@@ -415,13 +400,15 @@ items:
       id: resource_group_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -429,13 +416,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ProfilePaged
@@ -464,8 +444,7 @@ items:
     content: list_resource_usage(resource_group_name, profile_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the Resource group within the
+    - description: 'Name of the Resource group within the
 
         Azure subscription.
 
@@ -473,8 +452,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the CDN profile which is unique within
+    - description: 'Name of the CDN profile which is unique within
 
         the resource group.
 
@@ -482,13 +460,15 @@ items:
       id: profile_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -496,12 +476,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceUsagePaged
@@ -530,9 +504,7 @@ items:
     content: update(resource_group_name, profile_name, tags, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'Name of the Resource group within the
+    - description: 'Name of the Resource group within the
 
         Azure subscription.
 
@@ -540,8 +512,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the CDN profile which is unique within
+    - description: 'Name of the CDN profile which is unique within
 
         the resource group.
 
@@ -555,13 +526,15 @@ items:
       id: tags
       type:
       - dict
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -571,6 +544,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns Profile'
       - 'ClientRawResponse
 
         if raw=true'

@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -78,8 +78,7 @@ items:
     content: create_or_update(link_id, properties=None, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The fully qualified ID of the resource link. Use the
+    - description: 'The fully qualified ID of the resource link. Use the
 
         format,
 
@@ -93,15 +92,15 @@ items:
       id: link_id
       type:
       - str
-    - description: 'Properties for resource link.
+    - defaultValue: None
+      description: 'Properties for resource link.
 
         '
       id: properties
       type:
-      - '@azure.mgmt.resource.links.v2016_09_01.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.resource.links.v2016_09_01.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -116,15 +115,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - ResourceLink
       - 'ClientRawResponse
 
         if raw=true'
@@ -150,8 +143,7 @@ items:
   syntax:
     content: delete(link_id, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The fully qualified ID of the resource link. Use the
+    - description: 'The fully qualified ID of the resource link. Use the
 
         format,
 
@@ -165,13 +157,15 @@ items:
       id: link_id
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -179,15 +173,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -213,8 +201,7 @@ items:
   syntax:
     content: get(link_id, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The fully qualified Id of the resource link. For
+    - description: 'The fully qualified Id of the resource link. For
 
         example,
 
@@ -224,13 +211,15 @@ items:
       id: link_id
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -238,15 +227,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - ResourceLink
       - 'ClientRawResponse
 
         if raw=true'
@@ -273,8 +256,7 @@ items:
     content: list_at_source_scope(scope, filter=None, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The fully qualified ID of the scope for getting the
+    - description: 'The fully qualified ID of the scope for getting the
 
         resource links. For example, to list resource links at and under a
 
@@ -286,7 +268,8 @@ items:
       id: scope
       type:
       - str
-    - description: 'The filter to apply when getting resource links. To get
+    - defaultValue: None
+      description: 'The filter to apply when getting resource links. To get
 
         links only at the specified scope (not below the scope), use
 
@@ -296,7 +279,8 @@ items:
       id: filter
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -311,13 +295,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceLinkPaged
@@ -343,7 +320,8 @@ items:
   syntax:
     content: list_at_subscription(filter=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'The filter to apply on the list resource links
+    - defaultValue: None
+      description: 'The filter to apply on the list resource links
 
         operation. The supported filter for list resource links is targetid.
 
@@ -353,14 +331,14 @@ items:
       id: filter
       type:
       - str
-    - defaultValue: 'False'
+    - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - defaultValue: None
+    - defaultValue: 'False'
       description: 'returns the direct response alongside the
 
         deserialized response
@@ -369,13 +347,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceLinkPaged

@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -76,8 +76,7 @@ items:
     content: get(resource_provider_namespace, feature_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The resource provider namespace
+    - description: 'The resource provider namespace
 
         for the feature.
 
@@ -85,20 +84,21 @@ items:
       id: resource_provider_namespace
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the feature to get.
+    - description: 'The name of the feature to get.
 
         '
       id: feature_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -106,14 +106,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - FeatureResult
       - 'ClientRawResponse
 
         if raw=true'
@@ -141,8 +136,7 @@ items:
   syntax:
     content: list(resource_provider_namespace, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The namespace of the resource
+    - description: 'The namespace of the resource
 
         provider for getting features.
 
@@ -150,13 +144,15 @@ items:
       id: resource_provider_namespace
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -164,13 +160,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - FeatureResultPaged
@@ -198,7 +187,8 @@ items:
   syntax:
     content: list_all(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -213,13 +203,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - FeatureResultPaged
@@ -246,8 +229,7 @@ items:
     content: register(resource_provider_namespace, feature_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The namespace of the resource
+    - description: 'The namespace of the resource
 
         provider.
 
@@ -255,20 +237,21 @@ items:
       id: resource_provider_namespace
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the feature to register.
+    - description: 'The name of the feature to register.
 
         '
       id: feature_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -276,14 +259,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - FeatureResult
       - 'ClientRawResponse
 
         if raw=true'

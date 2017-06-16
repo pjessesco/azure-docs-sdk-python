@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -38,9 +38,7 @@ items:
         '
       id: credentials
       type:
-      - '@../msrestazure.azure_active_directory
-
-        '
+      - ../msrestazure.azure_active_directory
     - description: 'Azure Subscription ID.
 
         '
@@ -154,20 +152,21 @@ items:
   syntax:
     content: check_name_availability(name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The resource name to validate.
+    - description: 'The resource name to validate.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -175,15 +174,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - CheckNameAvailabilityOutput
       - 'ClientRawResponse
 
         if raw=true'
@@ -211,7 +204,8 @@ items:
   syntax:
     content: check_resource_usage(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -226,13 +220,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ResourceUsagePaged
@@ -258,7 +245,8 @@ items:
   syntax:
     content: list_operations(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -273,13 +261,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - OperationPaged

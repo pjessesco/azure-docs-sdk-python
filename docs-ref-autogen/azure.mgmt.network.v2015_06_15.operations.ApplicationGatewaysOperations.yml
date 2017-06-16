@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -82,16 +82,13 @@ items:
     content: create_or_update(resource_group_name, application_gateway_name, parameters,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the application gateway.
+    - description: 'The name of the application gateway.
 
         '
       id: application_gateway_name
@@ -104,16 +101,16 @@ items:
         '
       id: parameters
       type:
-      - '@azure.mgmt.network.v2015_06_15.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.network.v2015_06_15.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -123,6 +120,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns ApplicationGateway'
       - 'ClientRawResponse
 
         if raw=true'
@@ -149,10 +149,7 @@ items:
     content: delete(resource_group_name, application_gateway_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -164,13 +161,15 @@ items:
       id: application_gateway_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -180,6 +179,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -206,27 +208,27 @@ items:
     content: get(resource_group_name, application_gateway_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the application gateway.
+    - description: 'The name of the application gateway.
 
         '
       id: application_gateway_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -234,14 +236,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - ApplicationGateway
       - 'ClientRawResponse
 
         if raw=true'
@@ -267,20 +264,21 @@ items:
   syntax:
     content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -288,13 +286,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ApplicationGatewayPaged
@@ -320,7 +311,8 @@ items:
   syntax:
     content: list_all(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -335,13 +327,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ApplicationGatewayPaged
@@ -368,10 +353,7 @@ items:
     content: start(resource_group_name, application_gateway_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -383,13 +365,15 @@ items:
       id: application_gateway_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -399,6 +383,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -425,10 +412,7 @@ items:
     content: stop(resource_group_name, application_gateway_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -440,13 +424,15 @@ items:
       id: application_gateway_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -456,6 +442,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'

@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -88,16 +88,13 @@ items:
     content: create_or_update(resource_group_name, circuit_name, parameters, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the circuit.
+    - description: 'The name of the circuit.
 
         '
       id: circuit_name
@@ -110,16 +107,16 @@ items:
         '
       id: parameters
       type:
-      - '@azure.mgmt.network.v2016_09_01.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.network.v2016_09_01.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -129,6 +126,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns ExpressRouteCircuit'
       - 'ClientRawResponse
 
         if raw=true'
@@ -155,10 +155,7 @@ items:
     content: delete(resource_group_name, circuit_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -170,13 +167,15 @@ items:
       id: circuit_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -186,6 +185,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -212,27 +214,27 @@ items:
     content: get(resource_group_name, circuit_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of express route circuit.
+    - description: 'The name of express route circuit.
 
         '
       id: circuit_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -240,14 +242,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - ExpressRouteCircuit
       - 'ClientRawResponse
 
         if raw=true'
@@ -280,27 +277,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the express route circuit.
+    - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the peering.
+    - description: 'The name of the peering.
 
         '
       id: peering_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -308,14 +305,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - ExpressRouteCircuitStats
       - 'ClientRawResponse
 
         if raw=true'
@@ -342,27 +334,27 @@ items:
     content: get_stats(resource_group_name, circuit_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the express route circuit.
+    - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -370,14 +362,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - ExpressRouteCircuitStats
       - 'ClientRawResponse
 
         if raw=true'
@@ -403,20 +390,21 @@ items:
   syntax:
     content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -424,13 +412,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ExpressRouteCircuitPaged
@@ -456,7 +437,8 @@ items:
   syntax:
     content: list_all(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -471,13 +453,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - ExpressRouteCircuitPaged
@@ -506,22 +481,19 @@ items:
     content: list_arp_table(resource_group_name, circuit_name, peering_name, device_path,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
     - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the express route circuit.
+    - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the peering.
+    - description: 'The name of the peering.
 
         '
       id: peering_name
@@ -533,13 +505,15 @@ items:
       id: device_path
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -549,6 +523,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns ExpressRouteCircuitsArpTableListResult'
       - 'ClientRawResponse
 
         if raw=true'
@@ -577,22 +554,19 @@ items:
     content: list_routes_table(resource_group_name, circuit_name, peering_name, device_path,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
     - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the express route circuit.
+    - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the peering.
+    - description: 'The name of the peering.
 
         '
       id: peering_name
@@ -604,13 +578,15 @@ items:
       id: device_path
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -620,6 +596,11 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns
+
+        ExpressRouteCircuitsRoutesTableListResult'
       - 'ClientRawResponse
 
         if raw=true'
@@ -648,22 +629,19 @@ items:
     content: list_routes_table_summary(resource_group_name, circuit_name, peering_name,
       device_path, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
     - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the express route circuit.
+    - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the peering.
+    - description: 'The name of the peering.
 
         '
       id: peering_name
@@ -675,13 +653,15 @@ items:
       id: device_path
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -691,6 +671,11 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns
+
+        ExpressRouteCircuitsRoutesTableSummaryListResult'
       - 'ClientRawResponse
 
         if raw=true'

@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -107,9 +107,7 @@ items:
     content: create_or_update(resource_group_name, certificate_order_name, certificate_distinguished_name,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -117,8 +115,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
@@ -131,16 +128,16 @@ items:
         '
       id: certificate_distinguished_name
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -150,6 +147,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns AppServiceCertificateOrder'
       - 'ClientRawResponse
 
         if raw=true'
@@ -179,7 +179,6 @@ items:
     content: create_or_update_certificate(resource_group_name, certificate_order_name,
       name, key_vault_certificate, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
     - description: 'Name of the resource group to which the
 
         resource belongs.
@@ -188,15 +187,13 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate.
+    - description: 'Name of the certificate.
 
         '
       id: name
@@ -207,16 +204,16 @@ items:
         '
       id: key_vault_certificate
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -226,6 +223,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns AppServiceCertificateResource'
       - 'ClientRawResponse
 
         if raw=true'
@@ -255,8 +255,7 @@ items:
     content: delete(resource_group_name, certificate_order_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -264,20 +263,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -285,14 +285,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -330,27 +325,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate.
+    - description: 'Name of the certificate.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -358,14 +353,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -395,8 +385,7 @@ items:
     content: get(resource_group_name, certificate_order_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -404,20 +393,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order..
+    - description: 'Name of the certificate order..
 
         '
       id: certificate_order_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -425,14 +415,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - AppServiceCertificateOrder
       - 'ClientRawResponse
 
         if raw=true'
@@ -470,27 +455,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate.
+    - description: 'Name of the certificate.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -498,14 +483,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - AppServiceCertificateResource
       - 'ClientRawResponse
 
         if raw=true'
@@ -534,7 +514,8 @@ items:
   syntax:
     content: list(custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -549,13 +530,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - AppServiceCertificateOrderPaged
@@ -585,8 +559,7 @@ items:
     content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
       **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -594,13 +567,15 @@ items:
       id: resource_group_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -608,13 +583,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - AppServiceCertificateOrderPaged
@@ -644,8 +612,7 @@ items:
     content: list_certificates(resource_group_name, certificate_order_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -653,20 +620,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -674,12 +642,6 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - AppServiceCertificateResourcePaged
@@ -717,29 +679,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - defaultValue: None
-      description: 'Parameters for the reissue.
+    - description: 'Parameters for the reissue.
 
         '
       id: reissue_certificate_order_request
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -747,14 +707,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -792,29 +747,27 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - defaultValue: None
-      description: 'Renew parameters
+    - description: 'Renew parameters
 
         '
       id: renew_certificate_order_request
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -822,14 +775,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -859,8 +807,7 @@ items:
     content: resend_email(resource_group_name, certificate_order_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -868,20 +815,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -889,14 +837,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -926,8 +869,7 @@ items:
     content: resend_request_emails(resource_group_name, certificate_order_name, name=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -935,26 +877,28 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - description: 'Name of the object.
+    - defaultValue: None
+      description: 'Name of the object.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -962,15 +906,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -1000,8 +938,7 @@ items:
     content: retrieve_certificate_actions(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1009,20 +946,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1030,14 +968,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - list of CertificateOrderAction
       - 'ClientRawResponse
 
         if raw=true'
@@ -1067,8 +1000,7 @@ items:
     content: retrieve_certificate_email_history(resource_group_name, name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1076,20 +1008,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1097,14 +1030,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - list of CertificateEmail
       - 'ClientRawResponse
 
         if raw=true'
@@ -1134,8 +1062,7 @@ items:
     content: retrieve_site_seal(resource_group_name, certificate_order_name, light_theme=None,
       locale=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1143,26 +1070,28 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - description: 'Theme
+    - defaultValue: None
+      description: 'Theme
 
         '
       id: light_theme
       type:
       - bool
-    - description: 'Locale
+    - defaultValue: None
+      description: 'Locale
 
         '
       id: locale
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -1177,15 +1106,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: None
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - SiteSeal
       - 'ClientRawResponse
 
         if raw=true'
@@ -1215,24 +1138,23 @@ items:
     content: validate_purchase_information(app_service_certificate_order, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'Information for a certificate
+    - description: 'Information for a certificate
 
         order.
 
         '
       id: app_service_certificate_order
       type:
-      - '@azure.mgmt.web.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.web.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1240,15 +1162,9 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'
@@ -1278,8 +1194,7 @@ items:
     content: verify_domain_ownership(resource_group_name, certificate_order_name,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'Name of the resource group to which the
+    - description: 'Name of the resource group to which the
 
         resource belongs.
 
@@ -1287,20 +1202,21 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'Name of the certificate order.
+    - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -1308,14 +1224,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - None
       - 'ClientRawResponse
 
         if raw=true'

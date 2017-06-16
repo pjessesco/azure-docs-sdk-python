@@ -1,4 +1,4 @@
-#YamlMime:PythonReference
+### YamlMime:UniversalReference
 api_name: []
 items:
 - children:
@@ -88,16 +88,13 @@ items:
     content: create_or_update(resource_group_name, virtual_network_gateway_name, parameters,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the virtual network
+    - description: 'The name of the virtual network
 
         gateway.
 
@@ -112,16 +109,16 @@ items:
         '
       id: parameters
       type:
-      - '@azure.mgmt.network.v2016_12_01.models
-
-        '
-    - description: 'headers that will be added to the request
+      - azure.mgmt.network.v2016_12_01.models
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -131,6 +128,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns VirtualNetworkGateway'
       - 'ClientRawResponse
 
         if raw=true'
@@ -157,10 +157,7 @@ items:
     content: delete(resource_group_name, virtual_network_gateway_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -174,13 +171,15 @@ items:
       id: virtual_network_gateway_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -190,6 +189,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns None'
       - 'ClientRawResponse
 
         if raw=true'
@@ -224,8 +226,7 @@ items:
       id: resource_group_name
       type:
       - str
-    - defaultValue: 'False'
-      description: 'The name of the virtual network
+    - description: 'The name of the virtual network
 
         gateway.
 
@@ -233,8 +234,7 @@ items:
       id: virtual_network_gateway_name
       type:
       - str
-    - defaultValue: None
-      description: 'VPN client Processor Architecture.
+    - description: 'VPN client Processor Architecture.
 
         Possible values are: ''AMD64'' and ''X86''. Possible values include:
 
@@ -246,13 +246,15 @@ items:
       - 'str or @azure.mgmt.network.v2016_12_01.models
 
         '
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -260,14 +262,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - str
       - 'ClientRawResponse
 
         if raw=true'
@@ -294,15 +291,13 @@ items:
     content: get(resource_group_name, virtual_network_gateway_name, custom_headers=None,
       raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the virtual network
+    - description: 'The name of the virtual network
 
         gateway.
 
@@ -310,13 +305,15 @@ items:
       id: virtual_network_gateway_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -324,14 +321,9 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
+      - VirtualNetworkGateway
       - 'ClientRawResponse
 
         if raw=true'
@@ -360,16 +352,13 @@ items:
     content: get_advertised_routes(resource_group_name, virtual_network_gateway_name,
       peer, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - id: self
-    - defaultValue: 'False'
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - defaultValue: None
-      description: 'The name of the virtual network
+    - description: 'The name of the virtual network
 
         gateway.
 
@@ -383,13 +372,15 @@ items:
       id: peer
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -399,6 +390,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns GatewayRouteListResult'
       - 'ClientRawResponse
 
         if raw=true'
@@ -425,10 +419,7 @@ items:
     content: get_bgp_peer_status(resource_group_name, virtual_network_gateway_name,
       peer=None, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -442,13 +433,15 @@ items:
       id: virtual_network_gateway_name
       type:
       - str
-    - description: 'The IP address of the peer to retrieve the status of.
+    - defaultValue: None
+      description: 'The IP address of the peer to retrieve the status of.
 
         '
       id: peer
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -465,6 +458,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns BgpPeerStatusListResult'
       - 'ClientRawResponse
 
         if raw=true'
@@ -493,10 +489,7 @@ items:
     content: get_learned_routes(resource_group_name, virtual_network_gateway_name,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: 'False'
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -510,13 +503,15 @@ items:
       id: virtual_network_gateway_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -526,6 +521,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns GatewayRouteListResult'
       - 'ClientRawResponse
 
         if raw=true'
@@ -551,20 +549,21 @@ items:
   syntax:
     content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - description: 'returns the direct response alongside the
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
 
         deserialized response
 
@@ -572,13 +571,6 @@ items:
       id: raw
       type:
       - bool
-    - defaultValue: 'False'
-      description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
     return:
       type:
       - VirtualNetworkGatewayPaged
@@ -607,10 +599,7 @@ items:
     content: reset(resource_group_name, virtual_network_gateway_name, gateway_vip=None,
       custom_headers=None, raw=False, **operation_config)
     parameters:
-    - defaultValue: None
-      id: self
-    - defaultValue: None
-      description: 'The name of the resource group.
+    - description: 'The name of the resource group.
 
         '
       id: resource_group_name
@@ -624,7 +613,8 @@ items:
       id: virtual_network_gateway_name
       type:
       - str
-    - description: 'Virtual network gateway vip address supplied to
+    - defaultValue: None
+      description: 'Virtual network gateway vip address supplied to
 
         the begin reset of the active-active feature enabled gateway.
 
@@ -632,7 +622,8 @@ items:
       id: gateway_vip
       type:
       - str
-    - description: 'headers that will be added to the request
+    - defaultValue: None
+      description: 'headers that will be added to the request
 
         '
       id: custom_headers
@@ -649,6 +640,9 @@ items:
       - bool
     return:
       type:
+      - 'AzureOperationPoller
+
+        instance that returns VirtualNetworkGateway'
       - 'ClientRawResponse
 
         if raw=true'
