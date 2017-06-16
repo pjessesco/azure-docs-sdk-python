@@ -1,5 +1,5 @@
 ---
-uid: azure.python.sdk.langdingPage.services.Authorization
+uid: azure.python.sdk.landingPage.services.Authorization
 summary: *content
 ---
 
