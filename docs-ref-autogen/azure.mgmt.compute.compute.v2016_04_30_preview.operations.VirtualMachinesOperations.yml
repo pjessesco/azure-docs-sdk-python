@@ -26,10 +26,10 @@ items:
   name: VirtualMachinesOperations
   source:
     id: VirtualMachinesOperations
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
     startLine: 20
   summary: 'VirtualMachinesOperations operations.
@@ -85,10 +85,10 @@ items:
   name: capture
   source:
     id: capture
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
     startLine: 39
   summary: 'Captures the VM by copying virtual hard disks of the VM and outputs a
@@ -137,13 +137,17 @@ items:
       type:
       - bool
     return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
+
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineCaptureResult
+        or
+
+        @msrest.pipeline.ClientRawResponse if raw=true
+
+        '
       type:
-      - 'AzureOperationPoller
-
-        instance that returns VirtualMachineCaptureResult'
-      - 'ClientRawResponse
-
-        if raw=true'
+      - msrestazure.azure_operation.AzureOperationPoller
+      - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
@@ -156,12 +160,12 @@ items:
   name: convert_to_managed_disks
   source:
     id: convert_to_managed_disks
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 382
+    startLine: 381
   summary: 'Converts virtual machine disks from blob-based to managed disks.
 
     Virtual machine must be stop-deallocated before invoking this
@@ -203,10 +207,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns OperationStatusResponse'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -221,12 +225,12 @@ items:
   name: create_or_update
   source:
     id: create_or_update
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 133
+    startLine: 132
   summary: 'The operation to create or update a virtual machine.
 
     '
@@ -272,10 +276,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns VirtualMachine'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -290,12 +294,12 @@ items:
   name: deallocate
   source:
     id: deallocate
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 469
+    startLine: 468
   summary: 'Shuts down the virtual machine and releases the compute resources. You
 
     are not billed for the compute resources that this virtual machine
@@ -337,10 +341,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns OperationStatusResponse'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -355,12 +359,12 @@ items:
   name: delete
   source:
     id: delete
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 228
+    startLine: 227
   summary: 'The operation to delete a virtual machine.
 
     '
@@ -398,10 +402,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns OperationStatusResponse'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -416,12 +420,12 @@ items:
   name: generalize
   source:
     id: generalize
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 556
+    startLine: 555
   summary: 'Sets the state of the virtual machine to generalized.
 
     '
@@ -465,8 +469,8 @@ items:
       id: operation_config
     return:
       type:
-      - OperationStatusResponse
-      - 'ClientRawResponse
+      - azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -481,12 +485,12 @@ items:
   name: get
   source:
     id: get
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 313
+    startLine: 312
   summary: 'Retrieves information about the model view or the instance view of a
 
     virtual machine.
@@ -543,8 +547,8 @@ items:
       id: operation_config
     return:
       type:
-      - VirtualMachine
-      - 'ClientRawResponse
+      - azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -559,12 +563,12 @@ items:
   name: list
   source:
     id: list
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 618
+    startLine: 617
   summary: 'Lists all of the virtual machines in the specified resource group. Use
 
     the nextLink property in the response to get the next page of virtual
@@ -605,7 +609,7 @@ items:
       id: operation_config
     return:
       type:
-      - VirtualMachinePaged
+      - azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachinePaged
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
@@ -618,12 +622,12 @@ items:
   name: list_all
   source:
     id: list_all
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 686
+    startLine: 685
   summary: 'Lists all of the virtual machines in the specified subscription. Use
 
     the nextLink property in the response to get the next page of virtual
@@ -658,7 +662,7 @@ items:
       id: operation_config
     return:
       type:
-      - VirtualMachinePaged
+      - azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachinePaged
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
@@ -671,12 +675,12 @@ items:
   name: list_available_sizes
   source:
     id: list_available_sizes
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 751
+    startLine: 750
   summary: 'Lists all available virtual machine sizes to which the specified
 
     virtual machine can be resized.
@@ -722,7 +726,7 @@ items:
       id: operation_config
     return:
       type:
-      - VirtualMachineSizePaged
+      - azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineSizePaged
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
@@ -735,12 +739,12 @@ items:
   name: power_off
   source:
     id: power_off
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 821
+    startLine: 820
   summary: 'The operation to power off (stop) a virtual machine. The virtual
 
     machine can be restarted with the same provisioned resources. You are
@@ -782,10 +786,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns OperationStatusResponse'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -800,12 +804,12 @@ items:
   name: redeploy
   source:
     id: redeploy
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1078
+    startLine: 1077
   summary: 'The operation to redeploy a virtual machine.
 
     '
@@ -843,10 +847,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns OperationStatusResponse'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -861,12 +865,12 @@ items:
   name: restart
   source:
     id: restart
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 908
+    startLine: 907
   summary: 'The operation to restart a virtual machine.
 
     '
@@ -904,10 +908,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns OperationStatusResponse'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
@@ -922,12 +926,12 @@ items:
   name: start
   source:
     id: start
-    path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
     remote:
       branch: master
-      path: azure_mgmt_compute-1.0.0-py3.5.egg\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 993
+    startLine: 992
   summary: 'The operation to start a virtual machine.
 
     '
@@ -964,10 +968,10 @@ items:
       - bool
     return:
       type:
-      - 'AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        instance that returns OperationStatusResponse'
-      - 'ClientRawResponse
+        instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse'
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
