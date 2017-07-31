@@ -17,14 +17,6 @@ ms.service: service-bus
 
 Microsoft Azure Service Bus supports a set of cloud-based, message-oriented middleware technologies including reliable message queuing and durable publish/subscribe messaging. 
 
-## Install the libraries
-```bash
-pip install azure-mgmt-servicebus
-```
-
-## Example
-Send messages to a queue.
-
 ```python
 from azure.servicebus import Message
 
