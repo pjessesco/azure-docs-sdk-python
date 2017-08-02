@@ -56,7 +56,7 @@ on_success:
     - call build.bat
     
     # Move rst file to doc path
-    - ps: Copy-Item c:/projects/azure-sdk-for-python/doc/ref/*.rst -Destination c:/projects/azure-sdk-for-python/doc
+    - ps: Move-Item c:/projects/azure-sdk-for-python/doc/ref/*.rst -Destination c:/projects/azure-sdk-for-python/doc
     
     # Generate yml
     - cd c:/projects/azure-sdk-for-python/doc
