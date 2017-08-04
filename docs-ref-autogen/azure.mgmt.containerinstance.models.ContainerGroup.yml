@@ -33,7 +33,7 @@ items:
   syntax:
     content: ContainerGroup(location, tags=None, containers=None, image_registry_credentials=None,
       restart_policy=None, ip_address=None, os_type=None, volumes=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource location
 
         '
@@ -94,7 +94,7 @@ items:
       - 'list of @azure.mgmt.containerinstance.models.Volume
 
         '
-    variables: &id002
+    variables:
     - description: 'Resource Id
 
         '
@@ -127,42 +127,6 @@ items:
       id: state
       type:
       - str
-  type: class
-  uid: azure.mgmt.containerinstance.models.ContainerGroup
-- children: []
-  class: azure.mgmt.containerinstance.models.ContainerGroup
-  fullName: azure.mgmt.containerinstance.models.ContainerGroup
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.containerinstance.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.containerinstance.models
-  name: ContainerGroup
-  source:
-    id: ContainerGroup
-    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\models\container_group.py
-    remote:
-      branch: master
-      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\models\container_group.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'A container group.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: ContainerGroup(location, tags=None, containers=None, image_registry_credentials=None,
-      restart_policy=None, ip_address=None, os_type=None, volumes=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.containerinstance.models.ContainerGroup
 references: []

@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-  - azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
   class: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
   fullName: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
   inheritance:
@@ -27,7 +26,7 @@ items:
   syntax:
     content: AvailablePrivateAccessServicesOperations(client, config, serializer,
       deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -44,7 +43,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-06-01".
 
         '
@@ -52,7 +51,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
 - class: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
   langs:
@@ -79,14 +78,14 @@ items:
 
         '
       id: location
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -95,7 +94,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -103,104 +102,12 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.mgmt.network.v2017_06_01.models.PrivateAccessServiceResultPaged
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-- children:
-  - azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-  class: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
-  fullName: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: AvailablePrivateAccessServicesOperations
-  source:
-    id: AvailablePrivateAccessServicesOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\available_private_access_services_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\available_private_access_services_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'AvailablePrivateAccessServicesOperations operations.
-
-
-    '
-  syntax:
-    content: AvailablePrivateAccessServicesOperations(client, config, serializer,
-      deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
-- &id008
-  class: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\available_private_access_services_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\available_private_access_services_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'List what values of private access services are available for use.
-
-    '
-  syntax:
-    content: list(location, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The location to check available private access
-
-        values.
-
-        '
-      id: location
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-- *id008
 references:
-- fullName: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-- fullName: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
 - fullName: azure.mgmt.network.v2017_06_01.operations.AvailablePrivateAccessServicesOperations.list
   isExternal: false
   name: list

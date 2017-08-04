@@ -34,7 +34,7 @@ items:
     content: RedisCreateParameters(location, sku, tags=None, redis_configuration=None,
       enable_non_ssl_port=None, tenant_settings=None, shard_count=None, subnet_id=None,
       static_ip=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource location.
 
         '
@@ -103,7 +103,7 @@ items:
       id: sku
       type:
       - azure.mgmt.redis.models.Sku
-    variables: &id002
+    variables:
     - description: 'Resource ID.
 
         '
@@ -122,43 +122,6 @@ items:
       id: type
       type:
       - str
-  type: class
-  uid: azure.mgmt.redis.models.RedisCreateParameters
-- children: []
-  class: azure.mgmt.redis.models.RedisCreateParameters
-  fullName: azure.mgmt.redis.models.RedisCreateParameters
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.redis.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.redis.models
-  name: RedisCreateParameters
-  source:
-    id: RedisCreateParameters
-    path: azure-mgmt-redis\azure\mgmt\redis\models\redis_create_parameters.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\models\redis_create_parameters.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Parameters supplied to the Create Redis operation.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: RedisCreateParameters(location, sku, tags=None, redis_configuration=None,
-      enable_non_ssl_port=None, tenant_settings=None, shard_count=None, subnet_id=None,
-      static_ip=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.redis.models.RedisCreateParameters
 references: []

@@ -4,8 +4,6 @@ items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
   - azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-  - azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-  - azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
   class: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
   inheritance:
@@ -29,7 +27,7 @@ items:
     '
   syntax:
     content: ProtectionContainersOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -46,7 +44,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -54,7 +52,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
   langs:
@@ -82,7 +80,7 @@ items:
 
         '
       id: vault_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the resource group where the
 
@@ -90,13 +88,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id005
+      type:
       - str
     - description: 'Name of the fabric where the container belongs.
 
         '
       id: fabric_name
-      type: &id006
+      type:
       - str
     - description: 'Name of the container whose details need to be
 
@@ -104,14 +102,14 @@ items:
 
         '
       id: container_name
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -120,7 +118,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -128,16 +126,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.recoveryservicesbackup.models.ProtectionContainerResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
 - class: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
   langs:
@@ -167,7 +165,7 @@ items:
 
         '
       id: vault_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the resource group where the
 
@@ -175,20 +173,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id014
+      type:
       - str
     - description: 'Fabric name associated the container.
 
         '
       id: fabric_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -197,7 +195,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -205,206 +203,15 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-- children:
-  - azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-  - azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-  class: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: ProtectionContainersOperations
-  source:
-    id: ProtectionContainersOperations
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_containers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_containers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ProtectionContainersOperations operations.
-
-
-
-    '
-  syntax:
-    content: ProtectionContainersOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-- &id011
-  class: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  exceptions: *id003
-  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_containers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_containers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets details of the specific container registered to your Recovery
-
-    Services Vault.
-
-    '
-  syntax:
-    content: get(vault_name, resource_group_name, fabric_name, container_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id004
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id005
-    - description: 'Name of the fabric where the container belongs.
-
-        '
-      id: fabric_name
-      type: *id006
-    - description: 'Name of the container whose details need to be
-
-        fetched.
-
-        '
-      id: container_name
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-- *id011
-- &id019
-  class: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  exceptions: *id012
-  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: refresh
-  source:
-    id: refresh
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_containers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_containers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 109
-  summary: 'Discovers all the containers in the subscription that can be backed up
-
-    to Recovery Services Vault. This is an asynchronous operation. To know
-
-    the status of the operation, call GetRefreshOperationResult API.
-
-    '
-  syntax:
-    content: refresh(vault_name, resource_group_name, fabric_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id013
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id014
-    - description: 'Fabric name associated the container.
-
-        '
-      id: fabric_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-- *id019
 references:
-- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-  isExternal: false
-  name: refresh
-  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
-- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
-  isExternal: false
-  name: refresh
-  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh
 - fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.get
   isExternal: false
   name: get

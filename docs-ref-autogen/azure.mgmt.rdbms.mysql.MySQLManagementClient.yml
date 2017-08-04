@@ -25,13 +25,13 @@ items:
     '
   syntax:
     content: MySQLManagementClient(credentials, subscription_id, base_url=None)
-    parameters: &id001
+    parameters:
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - ../msrestazure.azure_active_directory
+      - msrestazure.azure_active_directory
     - description: 'The subscription ID that identifies an Azure
 
         subscription.
@@ -46,7 +46,7 @@ items:
       id: base_url
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Configuration for client.
 
         '
@@ -89,34 +89,6 @@ items:
       id: operations
       type:
       - .operations.Operations
-  type: class
-  uid: azure.mgmt.rdbms.mysql.MySQLManagementClient
-- children: []
-  class: azure.mgmt.rdbms.mysql.MySQLManagementClient
-  fullName: azure.mgmt.rdbms.mysql.MySQLManagementClient
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.rdbms.mysql
-  name: MySQLManagementClient
-  source:
-    id: MySQLManagementClient
-    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\my_sql_management_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\my_sql_management_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 60
-  summary: 'The Microsoft Azure management API provides create, read, update, and
-    delete functionality for Azure MySQL resources including servers, databases, firewall
-    rules, log files and configurations.
-
-    '
-  syntax:
-    content: MySQLManagementClient(credentials, subscription_id, base_url=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.rdbms.mysql.MySQLManagementClient
 references: []

@@ -27,7 +27,7 @@ items:
     content: JobScheduleStatistics(url, start_time, last_update_time, user_cpu_time,
       kernel_cpu_time, wall_clock_time, read_iops, write_iops, read_io_gi_b, write_io_gi_b,
       num_succeeded_tasks, num_failed_tasks, num_task_retries, wait_time)
-    parameters: &id001
+    parameters:
     - description: 'The URL of the statistics.
 
         '
@@ -164,35 +164,6 @@ items:
       id: wait_time
       type:
       - timedelta
-  type: class
-  uid: azure.batch.models.JobScheduleStatistics
-- children: []
-  class: azure.batch.models.JobScheduleStatistics
-  fullName: azure.batch.models.JobScheduleStatistics
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.batch.models
-  name: JobScheduleStatistics
-  source:
-    id: JobScheduleStatistics
-    path: azure-batch\azure\batch\models\job_schedule_statistics.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\models\job_schedule_statistics.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Resource usage statistics for a job schedule.
-
-    '
-  syntax:
-    content: JobScheduleStatistics(url, start_time, last_update_time, user_cpu_time,
-      kernel_cpu_time, wall_clock_time, read_iops, write_iops, read_io_gi_b, write_io_gi_b,
-      num_succeeded_tasks, num_failed_tasks, num_task_retries, wait_time)
-    parameters: *id001
   type: class
   uid: azure.batch.models.JobScheduleStatistics
 references: []

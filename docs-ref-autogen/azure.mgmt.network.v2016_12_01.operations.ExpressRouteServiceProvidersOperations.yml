@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
   class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
   fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: ExpressRouteServiceProvidersOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-12-01".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
 - class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
   langs:
@@ -77,7 +76,7 @@ items:
 
         '
       id: custom_headers
-      type: &id004
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -86,7 +85,7 @@ items:
 
         '
       id: raw
-      type: &id005
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -94,96 +93,12 @@ items:
 
         '
       id: operation_config
-    return: &id006
+    return:
       type:
       - azure.mgmt.network.v2016_12_01.models.ExpressRouteServiceProviderPaged
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-- children:
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-  class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
-  fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: ExpressRouteServiceProvidersOperations
-  source:
-    id: ExpressRouteServiceProvidersOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_service_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_service_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ExpressRouteServiceProvidersOperations operations.
-
-
-    '
-  syntax:
-    content: ExpressRouteServiceProvidersOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
-- &id007
-  class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_service_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_service_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets all the available express route service providers.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id004
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id005
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id006
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-- *id007
 references:
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
 - fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteServiceProvidersOperations.list
   isExternal: false
   name: list

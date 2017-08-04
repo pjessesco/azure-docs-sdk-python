@@ -15,19 +15,6 @@ items:
   - azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
   - azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
   - azure.mgmt.servicebus.operations.NamespacesOperations.update
-  - azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-  - azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-  - azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-  - azure.mgmt.servicebus.operations.NamespacesOperations.delete
-  - azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-  - azure.mgmt.servicebus.operations.NamespacesOperations.get
-  - azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-  - azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-  - azure.mgmt.servicebus.operations.NamespacesOperations.update
   class: azure.mgmt.servicebus.operations.NamespacesOperations
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations
   inheritance:
@@ -62,7 +49,7 @@ items:
     '
   syntax:
     content: NamespacesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -79,7 +66,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-04-01".
 
         '
@@ -87,7 +74,7 @@ items:
   type: class
   uid: azure.mgmt.servicebus.operations.NamespacesOperations
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
   langs:
@@ -119,14 +106,14 @@ items:
 
         '
       id: name
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -135,7 +122,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -143,16 +130,16 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.mgmt.servicebus.models.CheckNameAvailabilityResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id009
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
   langs:
@@ -182,26 +169,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id010
+      type:
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type: &id011
+      type:
       - str
     - description: 'Parameters supplied to create a namespace resource.
 
         '
       id: parameters
-      type: &id012
+      type:
       - azure.mgmt.servicebus.models.SBNamespace
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id013
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -210,20 +197,20 @@ items:
 
         '
       id: raw
-      type: &id014
-      - bool
-    return: &id015
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servicebus.models.SBNamespace'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id017
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
   langs:
@@ -251,26 +238,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id018
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id019
+      type:
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'The rights associated with the rule.
 
         '
       id: rights
-      type: &id021
+      type:
       - 'list of str or @azure.mgmt.servicebus.models.AccessRights
 
         '
@@ -279,7 +266,7 @@ items:
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -288,7 +275,7 @@ items:
 
         '
       id: raw
-      type: &id023
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -296,16 +283,16 @@ items:
 
         '
       id: operation_config
-    return: &id024
+    return:
       type:
       - azure.mgmt.servicebus.models.SBAuthorizationRule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id026
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete
   langs:
@@ -335,20 +322,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id027
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id028
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id029
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -357,20 +344,20 @@ items:
 
         '
       id: raw
-      type: &id030
-      - bool
-    return: &id031
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id033
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
   langs:
@@ -398,26 +385,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id034
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id035
+      type:
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id037
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -426,7 +413,7 @@ items:
 
         '
       id: raw
-      type: &id038
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -434,16 +421,16 @@ items:
 
         '
       id: operation_config
-    return: &id039
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id041
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get
   langs:
@@ -471,20 +458,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id042
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id043
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id044
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -493,7 +480,7 @@ items:
 
         '
       id: raw
-      type: &id045
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -501,16 +488,16 @@ items:
 
         '
       id: operation_config
-    return: &id046
+    return:
       type:
       - azure.mgmt.servicebus.models.SBNamespace
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.get
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id048
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
   langs:
@@ -538,26 +525,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id049
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id050
+      type:
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type: &id051
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id052
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -566,7 +553,7 @@ items:
 
         '
       id: raw
-      type: &id053
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -574,16 +561,16 @@ items:
 
         '
       id: operation_config
-    return: &id054
+    return:
       type:
       - azure.mgmt.servicebus.models.SBAuthorizationRule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id056
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list
   langs:
@@ -611,7 +598,7 @@ items:
 
         '
       id: custom_headers
-      type: &id057
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -620,7 +607,7 @@ items:
 
         '
       id: raw
-      type: &id058
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -628,13 +615,13 @@ items:
 
         '
       id: operation_config
-    return: &id059
+    return:
       type:
       - azure.mgmt.servicebus.models.SBNamespacePaged
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.list
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id061
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
   langs:
@@ -662,20 +649,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id062
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id063
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id064
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -684,7 +671,7 @@ items:
 
         '
       id: raw
-      type: &id065
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -692,13 +679,13 @@ items:
 
         '
       id: operation_config
-    return: &id066
+    return:
       type:
       - azure.mgmt.servicebus.models.SBAuthorizationRulePaged
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id068
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
   langs:
@@ -726,14 +713,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id069
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id070
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -742,7 +729,7 @@ items:
 
         '
       id: raw
-      type: &id071
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -750,13 +737,13 @@ items:
 
         '
       id: operation_config
-    return: &id072
+    return:
       type:
       - azure.mgmt.servicebus.models.SBNamespacePaged
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id074
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
   langs:
@@ -784,26 +771,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id075
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id076
+      type:
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type: &id077
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id078
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -812,7 +799,7 @@ items:
 
         '
       id: raw
-      type: &id079
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -820,16 +807,16 @@ items:
 
         '
       id: operation_config
-    return: &id080
+    return:
       type:
       - azure.mgmt.servicebus.models.AccessKeys
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id082
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
   langs:
@@ -859,19 +846,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id083
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id084
+      type:
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type: &id085
+      type:
       - str
     - description: 'The access key to regenerate. Possible values
 
@@ -879,7 +866,7 @@ items:
 
         '
       id: key_type
-      type: &id086
+      type:
       - 'str or @azure.mgmt.servicebus.models.KeyType
 
         '
@@ -890,14 +877,14 @@ items:
 
         '
       id: key
-      type: &id087
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id088
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -906,7 +893,7 @@ items:
 
         '
       id: raw
-      type: &id089
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -914,16 +901,16 @@ items:
 
         '
       id: operation_config
-    return: &id090
+    return:
       type:
       - azure.mgmt.servicebus.models.AccessKeys
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
 - class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: &id092
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.NamespacesOperations.update
   langs:
@@ -953,26 +940,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id093
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id094
+      type:
       - str
     - description: 'Parameters supplied to update a namespace resource.
 
         '
       id: parameters
-      type: &id095
+      type:
       - azure.mgmt.servicebus.models.SBNamespaceUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id096
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -981,7 +968,7 @@ items:
 
         '
       id: raw
-      type: &id097
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -989,999 +976,15 @@ items:
 
         '
       id: operation_config
-    return: &id098
+    return:
       type:
       - azure.mgmt.servicebus.models.SBNamespace
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.NamespacesOperations.update
-- children:
-  - azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-  - azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-  - azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-  - azure.mgmt.servicebus.operations.NamespacesOperations.delete
-  - azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-  - azure.mgmt.servicebus.operations.NamespacesOperations.get
-  - azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-  - azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-  - azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-  - azure.mgmt.servicebus.operations.NamespacesOperations.update
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: NamespacesOperations
-  source:
-    id: NamespacesOperations
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'NamespacesOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: NamespacesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations
-- &id008
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: check_name_availability_method
-  source:
-    id: check_name_availability_method
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Check the give namespace name availability.
-
-    '
-  syntax:
-    content: check_name_availability_method(name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The Name to check the namespce name availability and The
-
-        namespace name can contain only letters, numbers, and hyphens. The
-
-        namespace must start with a letter, and it must end with a letter or
-
-        number.
-
-        '
-      id: name
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-- *id008
-- &id016
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id009
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 233
-  summary: 'Creates or updates a service namespace. Once created, this namespace''s
-
-    resource manifest is immutable. This operation is idempotent.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, namespace_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id010
-    - description: 'The namespace name.
-
-        '
-      id: namespace_name
-      type: *id011
-    - description: 'Parameters supplied to create a namespace resource.
-
-        '
-      id: parameters
-      type: *id012
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id013
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id014
-    return: *id015
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-- *id016
-- &id025
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id017
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: create_or_update_authorization_rule
-  source:
-    id: create_or_update_authorization_rule
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 609
-  summary: 'Creates or updates an authorization rule for a namespace.
-
-    '
-  syntax:
-    content: create_or_update_authorization_rule(resource_group_name, namespace_name,
-      authorization_rule_name, rights=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id018
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id019
-    - description: 'The authorizationrule name.
-
-        '
-      id: authorization_rule_name
-      type: *id020
-    - defaultValue: None
-      description: 'The rights associated with the rule.
-
-        '
-      id: rights
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id024
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-- *id025
-- &id032
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id026
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 328
-  summary: 'Deletes an existing namespace. This operation also removes all
-
-    associated resources under the namespace.
-
-    '
-  syntax:
-    content: delete(resource_group_name, namespace_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id027
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id028
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id029
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id030
-    return: *id031
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete
-- *id032
-- &id040
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id033
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: delete_authorization_rule
-  source:
-    id: delete_authorization_rule
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 683
-  summary: 'Deletes a namespace authorization rule.
-
-    '
-  syntax:
-    content: delete_authorization_rule(resource_group_name, namespace_name, authorization_rule_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id034
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id035
-    - description: 'The authorizationrule name.
-
-        '
-      id: authorization_rule_name
-      type: *id036
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id037
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id038
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id039
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-- *id040
-- &id047
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id041
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 406
-  summary: 'Gets a description for the specified namespace.
-
-    '
-  syntax:
-    content: get(resource_group_name, namespace_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id042
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id043
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id044
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id045
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id046
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.get
-- *id047
-- &id055
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id048
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: get_authorization_rule
-  source:
-    id: get_authorization_rule
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 740
-  summary: 'Gets an authorization rule for a namespace by rule name.
-
-    '
-  syntax:
-    content: get_authorization_rule(resource_group_name, namespace_name, authorization_rule_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id049
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id050
-    - description: 'The authorizationrule name.
-
-        '
-      id: authorization_rule_name
-      type: *id051
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id052
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id053
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id054
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-- *id055
-- &id060
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id056
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 104
-  summary: 'Gets all the available namespaces within the subscription, irrespective
-
-    of the resource groups.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id057
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id058
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id059
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list
-- *id060
-- &id067
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id061
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: list_authorization_rules
-  source:
-    id: list_authorization_rules
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 540
-  summary: 'Gets the authorization rules for a namespace.
-
-    '
-  syntax:
-    content: list_authorization_rules(resource_group_name, namespace_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id062
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id063
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id064
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id065
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id066
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-- *id067
-- &id073
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id068
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 167
-  summary: 'Gets the available namespaces within a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id069
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id070
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id071
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id072
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-- *id073
-- &id081
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id074
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: list_keys
-  source:
-    id: list_keys
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 805
-  summary: 'Gets the primary and secondary connection strings for the namespace.
-
-    '
-  syntax:
-    content: list_keys(resource_group_name, namespace_name, authorization_rule_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id075
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id076
-    - description: 'The authorizationrule name.
-
-        '
-      id: authorization_rule_name
-      type: *id077
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id078
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id079
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id080
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-- *id081
-- &id091
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id082
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: regenerate_keys
-  source:
-    id: regenerate_keys
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 869
-  summary: 'Regenerates the primary or secondary connection strings for the
-
-    namespace.
-
-    '
-  syntax:
-    content: regenerate_keys(resource_group_name, namespace_name, authorization_rule_name,
-      key_type, key=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id083
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id084
-    - description: 'The authorizationrule name.
-
-        '
-      id: authorization_rule_name
-      type: *id085
-    - description: 'The access key to regenerate. Possible values
-
-        include: ''PrimaryKey'', ''SecondaryKey''
-
-        '
-      id: key_type
-      type: *id086
-    - defaultValue: None
-      description: 'Optional, if the key value provided, is reset for KeyType
-
-        value or autogenerate Key value set for keyType
-
-        '
-      id: key
-      type: *id087
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id088
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id089
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id090
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-- *id091
-- &id099
-  class: azure.mgmt.servicebus.operations.NamespacesOperations
-  exceptions: *id092
-  fullName: azure.mgmt.servicebus.operations.NamespacesOperations.update
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\namespaces_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 468
-  summary: 'Updates a service namespace. Once created, this namespace''s resource
-
-    manifest is immutable. This operation is idempotent.
-
-    '
-  syntax:
-    content: update(resource_group_name, namespace_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id093
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id094
-    - description: 'Parameters supplied to update a namespace resource.
-
-        '
-      id: parameters
-      type: *id095
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id096
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id097
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id098
-  type: method
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.update
-- *id099
 references:
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-  isExternal: false
-  name: check_name_availability_method
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-  isExternal: false
-  name: create_or_update_authorization_rule
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-  isExternal: false
-  name: delete_authorization_rule
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.get
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-  isExternal: false
-  name: get_authorization_rule
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-  isExternal: false
-  name: list_authorization_rules
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-  isExternal: false
-  name: list_keys
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-  isExternal: false
-  name: regenerate_keys
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.update
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-  isExternal: false
-  name: check_name_availability_method
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-  isExternal: false
-  name: create_or_update_authorization_rule
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.create_or_update_authorization_rule
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-  isExternal: false
-  name: delete_authorization_rule
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.delete_authorization_rule
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.get
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-  isExternal: false
-  name: get_authorization_rule
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.get_authorization_rule
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-  isExternal: false
-  name: list_authorization_rules
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_authorization_rules
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_by_resource_group
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-  isExternal: false
-  name: list_keys
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.list_keys
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-  isExternal: false
-  name: regenerate_keys
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.regenerate_keys
-- fullName: azure.mgmt.servicebus.operations.NamespacesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.servicebus.operations.NamespacesOperations
-  uid: azure.mgmt.servicebus.operations.NamespacesOperations.update
 - fullName: azure.mgmt.servicebus.operations.NamespacesOperations.check_name_availability_method
   isExternal: false
   name: check_name_availability_method

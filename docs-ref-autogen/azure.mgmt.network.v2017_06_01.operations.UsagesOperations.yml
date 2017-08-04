@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-  - azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
   class: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
   fullName: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: UsagesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-06-01".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
 - class: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
   langs:
@@ -76,14 +75,14 @@ items:
 
         '
       id: location
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -92,7 +91,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -100,101 +99,12 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.mgmt.network.v2017_06_01.models.UsagePaged
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-- children:
-  - azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-  class: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
-  fullName: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: UsagesOperations
-  source:
-    id: UsagesOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\usages_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\usages_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'UsagesOperations operations.
-
-
-    '
-  syntax:
-    content: UsagesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
-- &id008
-  class: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\usages_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\usages_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Lists compute usages for a subscription.
-
-    '
-  syntax:
-    content: list(location, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The location where resource usage is queried.
-
-        '
-      id: location
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-- *id008
 references:
-- fullName: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-- fullName: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_06_01.operations.UsagesOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
 - fullName: azure.mgmt.network.v2017_06_01.operations.UsagesOperations.list
   isExternal: false
   name: list

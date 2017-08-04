@@ -7,11 +7,6 @@ items:
   - azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
   - azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
   - azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
   class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
   fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations
   inheritance:
@@ -38,7 +33,7 @@ items:
     '
   syntax:
     content: FirewallRulesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -55,7 +50,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-11-01".
 
         '
@@ -63,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations
 - class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
   langs:
@@ -95,7 +90,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the Data Lake Store account to add or
 
@@ -103,7 +98,7 @@ items:
 
         '
       id: account_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the firewall rule to create or
 
@@ -111,7 +106,7 @@ items:
 
         '
       id: firewall_rule_name
-      type: &id006
+      type:
       - str
     - description: 'Parameters supplied to create or update the
 
@@ -119,14 +114,14 @@ items:
 
         '
       id: parameters
-      type: &id007
+      type:
       - azure.mgmt.datalake.store.models.FirewallRule
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -135,7 +130,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -143,16 +138,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.datalake.store.models.FirewallRule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
 - class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
   langs:
@@ -182,7 +177,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the Data Lake Store account from
 
@@ -190,20 +185,20 @@ items:
 
         '
       id: account_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the firewall rule to delete.
 
         '
       id: firewall_rule_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -212,7 +207,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -220,16 +215,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
 - class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
   langs:
@@ -257,7 +252,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the Data Lake Store account from
 
@@ -265,20 +260,20 @@ items:
 
         '
       id: account_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the firewall rule to retrieve.
 
         '
       id: firewall_rule_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -287,7 +282,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -295,16 +290,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.datalake.store.models.FirewallRule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
 - class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
   langs:
@@ -334,7 +329,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the Data Lake Store account from
 
@@ -342,14 +337,14 @@ items:
 
         '
       id: account_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -358,7 +353,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -366,13 +361,13 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.mgmt.datalake.store.models.FirewallRulePaged
   type: method
   uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
 - class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: &id035
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
   langs:
@@ -400,7 +395,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id036
+      type:
       - str
     - description: 'The name of the Data Lake Store account to which
 
@@ -408,13 +403,13 @@ items:
 
         '
       id: account_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the firewall rule to update.
 
         '
       id: firewall_rule_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'the start IP address for the firewall rule.
@@ -425,7 +420,7 @@ items:
 
         '
       id: start_ip_address
-      type: &id039
+      type:
       - str
     - defaultValue: None
       description: 'the end IP address for the firewall rule. This
@@ -436,14 +431,14 @@ items:
 
         '
       id: end_ip_address
-      type: &id040
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -452,7 +447,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -460,463 +455,15 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.mgmt.datalake.store.models.FirewallRule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-- children:
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-  - azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-  class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: FirewallRulesOperations
-  source:
-    id: FirewallRulesOperations
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'FirewallRulesOperations operations.
-
-
-
-
-
-
-    '
-  syntax:
-    content: FirewallRulesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-- &id011
-  class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Creates or updates the specified firewall rule. During update, the
-
-    firewall rule with the specified name will be replaced with this new
-
-    firewall rule.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, account_name, firewall_rule_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the Data Lake Store account to add or
-
-        replace the firewall rule.
-
-        '
-      id: account_name
-      type: *id005
-    - description: 'The name of the firewall rule to create or
-
-        update.
-
-        '
-      id: firewall_rule_name
-      type: *id006
-    - description: 'Parameters supplied to create or update the
-
-        firewall rule.
-
-        '
-      id: parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: *id012
-  fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 202
-  summary: 'Deletes the specified firewall rule from the specified Data Lake Store
-
-    account.
-
-    '
-  syntax:
-    content: delete(resource_group_name, account_name, firewall_rule_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the Data Lake Store account from
-
-        which to delete the firewall rule.
-
-        '
-      id: account_name
-      type: *id014
-    - description: 'The name of the firewall rule to delete.
-
-        '
-      id: firewall_rule_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: *id020
-  fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 262
-  summary: 'Gets the specified Data Lake Store firewall rule.
-
-    '
-  syntax:
-    content: get(resource_group_name, account_name, firewall_rule_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the Data Lake Store account from
-
-        which to get the firewall rule.
-
-        '
-      id: account_name
-      type: *id022
-    - description: 'The name of the firewall rule to retrieve.
-
-        '
-      id: firewall_rule_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-- *id027
-- &id034
-  class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: *id028
-  fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: list_by_account
-  source:
-    id: list_by_account
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 329
-  summary: 'Lists the Data Lake Store firewall rules within the specified Data Lake
-
-    Store account.
-
-    '
-  syntax:
-    content: list_by_account(resource_group_name, account_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the Data Lake Store account from
-
-        which to get the firewall rules.
-
-        '
-      id: account_name
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-- *id034
-- &id044
-  class: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  exceptions: *id035
-  fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\firewall_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 116
-  summary: 'Updates the specified firewall rule.
-
-    '
-  syntax:
-    content: update(resource_group_name, account_name, firewall_rule_name, start_ip_address=None,
-      end_ip_address=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id036
-    - description: 'The name of the Data Lake Store account to which
-
-        to update the firewall rule.
-
-        '
-      id: account_name
-      type: *id037
-    - description: 'The name of the firewall rule to update.
-
-        '
-      id: firewall_rule_name
-      type: *id038
-    - defaultValue: None
-      description: 'the start IP address for the firewall rule.
-
-        This can be either ipv4 or ipv6. Start and End should be in the same
-
-        protocol.
-
-        '
-      id: start_ip_address
-      type: *id039
-    - defaultValue: None
-      description: 'the end IP address for the firewall rule. This
-
-        can be either ipv4 or ipv6. Start and End should be in the same
-
-        protocol.
-
-        '
-      id: end_ip_address
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-- *id044
 references:
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.delete
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.get
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.list_by_account
-- fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.store.operations.FirewallRulesOperations
-  uid: azure.mgmt.datalake.store.operations.FirewallRulesOperations.update
 - fullName: azure.mgmt.datalake.store.operations.FirewallRulesOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -13,17 +13,6 @@ items:
   - azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
   - azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
   - azure.mgmt.devtestlabs.operations.LabsOperations.update
-  - azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-  - azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-  - azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.LabsOperations.delete
-  - azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-  - azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-  - azure.mgmt.devtestlabs.operations.LabsOperations.get
-  - azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-  - azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-  - azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-  - azure.mgmt.devtestlabs.operations.LabsOperations.update
   class: azure.mgmt.devtestlabs.operations.LabsOperations
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations
   inheritance:
@@ -56,7 +45,7 @@ items:
     '
   syntax:
     content: LabsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -73,7 +62,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -81,7 +70,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.LabsOperations
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
   langs:
@@ -109,20 +98,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id005
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id006
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -131,20 +120,20 @@ items:
 
         '
       id: raw
-      type: &id007
-      - bool
-    return: &id008
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id010
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
   langs:
@@ -172,13 +161,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id011
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id012
+      type:
       - str
     - description: 'Properties for creating
 
@@ -186,14 +175,14 @@ items:
 
         '
       id: lab_virtual_machine_creation_parameter
-      type: &id013
+      type:
       - azure.mgmt.devtestlabs.models.LabVirtualMachineCreationParameter
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -202,20 +191,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
   langs:
@@ -243,26 +232,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id020
+      type:
       - str
     - description: 'A lab.
 
         '
       id: lab
-      type: &id021
+      type:
       - azure.mgmt.devtestlabs.models.Lab
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -271,20 +260,20 @@ items:
 
         '
       id: raw
-      type: &id023
-      - bool
-    return: &id024
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.devtestlabs.models.Lab'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id026
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.delete
   langs:
@@ -309,20 +298,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id027
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id028
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id029
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -331,20 +320,20 @@ items:
 
         '
       id: raw
-      type: &id030
-      - bool
-    return: &id031
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.delete
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id033
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
   langs:
@@ -372,13 +361,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id034
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'The blob storage absolute sas
@@ -389,7 +378,7 @@ items:
 
         '
       id: blob_storage_absolute_sas_uri
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'The start time of the usage. If not provided,
@@ -398,14 +387,14 @@ items:
 
         '
       id: usage_start_date
-      type: &id037
+      type:
       - datetime
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -414,20 +403,20 @@ items:
 
         '
       id: raw
-      type: &id039
-      - bool
-    return: &id040
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id042
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
   langs:
@@ -453,27 +442,27 @@ items:
 
         '
       id: resource_group_name
-      type: &id043
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id044
+      type:
       - str
     - defaultValue: None
       description: 'The blob name of the upload URI.
 
         '
       id: blob_name
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -482,7 +471,7 @@ items:
 
         '
       id: raw
-      type: &id047
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -490,16 +479,16 @@ items:
 
         '
       id: operation_config
-    return: &id048
+    return:
       type:
       - azure.mgmt.devtestlabs.models.GenerateUploadUriResponse
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id050
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.get
   langs:
@@ -525,13 +514,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id051
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id052
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -540,14 +529,14 @@ items:
 
         '
       id: expand
-      type: &id053
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id054
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -556,7 +545,7 @@ items:
 
         '
       id: raw
-      type: &id055
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -564,16 +553,16 @@ items:
 
         '
       id: operation_config
-    return: &id056
+    return:
       type:
       - azure.mgmt.devtestlabs.models.Lab
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.get
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id058
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
   langs:
@@ -599,7 +588,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id059
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -608,14 +597,14 @@ items:
 
         '
       id: expand
-      type: &id060
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id061
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -624,7 +613,7 @@ items:
 
         '
       id: top
-      type: &id062
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -633,14 +622,14 @@ items:
 
         '
       id: orderby
-      type: &id063
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id064
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -649,7 +638,7 @@ items:
 
         '
       id: raw
-      type: &id065
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -657,13 +646,13 @@ items:
 
         '
       id: operation_config
-    return: &id066
+    return:
       type:
       - azure.mgmt.devtestlabs.models.LabPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id068
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
   langs:
@@ -692,14 +681,14 @@ items:
 
         '
       id: expand
-      type: &id069
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id070
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -708,7 +697,7 @@ items:
 
         '
       id: top
-      type: &id071
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -717,14 +706,14 @@ items:
 
         '
       id: orderby
-      type: &id072
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id073
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -733,7 +722,7 @@ items:
 
         '
       id: raw
-      type: &id074
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -741,13 +730,13 @@ items:
 
         '
       id: operation_config
-    return: &id075
+    return:
       type:
       - azure.mgmt.devtestlabs.models.LabPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id077
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
   langs:
@@ -773,20 +762,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id078
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id079
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id080
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -795,7 +784,7 @@ items:
 
         '
       id: raw
-      type: &id081
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -803,13 +792,13 @@ items:
 
         '
       id: operation_config
-    return: &id082
+    return:
       type:
       - azure.mgmt.devtestlabs.models.LabVhdPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
 - class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: &id084
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.LabsOperations.update
   langs:
@@ -835,26 +824,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id085
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: name
-      type: &id086
+      type:
       - str
     - description: 'A lab.
 
         '
       id: lab
-      type: &id087
+      type:
       - azure.mgmt.devtestlabs.models.LabFragment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id088
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -863,7 +852,7 @@ items:
 
         '
       id: raw
-      type: &id089
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -871,871 +860,15 @@ items:
 
         '
       id: operation_config
-    return: &id090
+    return:
       type:
       - azure.mgmt.devtestlabs.models.Lab
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.LabsOperations.update
-- children:
-  - azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-  - azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-  - azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.LabsOperations.delete
-  - azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-  - azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-  - azure.mgmt.devtestlabs.operations.LabsOperations.get
-  - azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-  - azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-  - azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-  - azure.mgmt.devtestlabs.operations.LabsOperations.update
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: LabsOperations
-  source:
-    id: LabsOperations
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'LabsOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: LabsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations
-- &id009
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: claim_any_vm
-  source:
-    id: claim_any_vm
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 508
-  summary: 'Claim a random claimable virtual machine in the lab. This operation can
-
-    take a while to complete.
-
-    '
-  syntax:
-    content: claim_any_vm(resource_group_name, name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id005
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id006
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id007
-    return: *id008
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-- *id009
-- &id017
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id010
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: create_environment
-  source:
-    id: create_environment
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 586
-  summary: 'Create virtual machines in a lab. This operation can take a while to
-
-    complete.
-
-    '
-  syntax:
-    content: create_environment(resource_group_name, name, lab_virtual_machine_creation_parameter,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id011
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id012
-    - description: 'Properties for creating
-
-        a virtual machine.
-
-        '
-      id: lab_virtual_machine_creation_parameter
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-- *id017
-- &id025
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id018
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 270
-  summary: 'Create or replace an existing lab. This operation can take a while to
-
-    complete.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, name, lab, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id020
-    - description: 'A lab.
-
-        '
-      id: lab
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    return: *id024
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-- *id025
-- &id032
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id026
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 363
-  summary: 'Delete lab. This operation can take a while to complete.
-
-    '
-  syntax:
-    content: delete(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id027
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id028
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id029
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id030
-    return: *id031
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.delete
-- *id032
-- &id041
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id033
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: export_resource_usage
-  source:
-    id: export_resource_usage
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 673
-  summary: 'Exports the lab resource usage into a storage account This operation
-
-    can take a while to complete.
-
-    '
-  syntax:
-    content: export_resource_usage(resource_group_name, name, blob_storage_absolute_sas_uri=None,
-      usage_start_date=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id034
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id035
-    - defaultValue: None
-      description: 'The blob storage absolute sas
-
-        uri with write permission to the container which the usage data needs
-
-        to be uploaded to.
-
-        '
-      id: blob_storage_absolute_sas_uri
-      type: *id036
-    - defaultValue: None
-      description: 'The start time of the usage. If not provided,
-
-        usage will be reported since the beginning of data collection.
-
-        '
-      id: usage_start_date
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    return: *id040
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-- *id041
-- &id049
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id042
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: generate_upload_uri
-  source:
-    id: generate_upload_uri
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 764
-  summary: 'Generate a URI for uploading custom disk images to a Lab.
-
-    '
-  syntax:
-    content: generate_upload_uri(resource_group_name, name, blob_name=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id043
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id044
-    - defaultValue: None
-      description: 'The blob name of the upload URI.
-
-        '
-      id: blob_name
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id048
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-- *id049
-- &id057
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id050
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 204
-  summary: 'Get lab.
-
-    '
-  syntax:
-    content: get(resource_group_name, name, expand=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id051
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id052
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=defaultStorageAccount)''
-
-        '
-      id: expand
-      type: *id053
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id054
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id055
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id056
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.get
-- *id057
-- &id067
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id058
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 120
-  summary: 'List labs in a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, expand=None, filter=None,
-      top=None, orderby=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id059
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=defaultStorageAccount)''
-
-        '
-      id: expand
-      type: *id060
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id061
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id062
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id063
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id064
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id065
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id066
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-- *id067
-- &id076
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id068
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list_by_subscription
-  source:
-    id: list_by_subscription
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'List labs in a subscription.
-
-    '
-  syntax:
-    content: list_by_subscription(expand=None, filter=None, top=None, orderby=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=defaultStorageAccount)''
-
-        '
-      id: expand
-      type: *id069
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id070
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id071
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id072
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id073
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id074
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id075
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-- *id076
-- &id083
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id077
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list_vhds
-  source:
-    id: list_vhds
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 834
-  summary: 'List disk images available for custom image creation.
-
-    '
-  syntax:
-    content: list_vhds(resource_group_name, name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id078
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id079
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id080
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id081
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id082
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-- *id083
-- &id091
-  class: azure.mgmt.devtestlabs.operations.LabsOperations
-  exceptions: *id084
-  fullName: azure.mgmt.devtestlabs.operations.LabsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\labs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 440
-  summary: 'Modify properties of labs.
-
-    '
-  syntax:
-    content: update(resource_group_name, name, lab, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id085
-    - description: 'The name of the lab.
-
-        '
-      id: name
-      type: *id086
-    - description: 'A lab.
-
-        '
-      id: lab
-      type: *id087
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id088
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id089
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id090
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.update
-- *id091
 references:
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-  isExternal: false
-  name: claim_any_vm
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-  isExternal: false
-  name: create_environment
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-  isExternal: false
-  name: export_resource_usage
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-  isExternal: false
-  name: generate_upload_uri
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-  isExternal: false
-  name: list_by_subscription
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-  isExternal: false
-  name: list_vhds
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.update
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-  isExternal: false
-  name: claim_any_vm
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-  isExternal: false
-  name: create_environment
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_environment
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-  isExternal: false
-  name: export_resource_usage
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.export_resource_usage
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-  isExternal: false
-  name: generate_upload_uri
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.generate_upload_uri
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_resource_group
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-  isExternal: false
-  name: list_by_subscription
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_by_subscription
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-  isExternal: false
-  name: list_vhds
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.list_vhds
-- fullName: azure.mgmt.devtestlabs.operations.LabsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.LabsOperations
-  uid: azure.mgmt.devtestlabs.operations.LabsOperations.update
 - fullName: azure.mgmt.devtestlabs.operations.LabsOperations.claim_any_vm
   isExternal: false
   name: claim_any_vm

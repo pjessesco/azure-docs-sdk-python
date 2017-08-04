@@ -13,17 +13,6 @@ items:
   - azure.mgmt.cdn.operations.EndpointsOperations.stop
   - azure.mgmt.cdn.operations.EndpointsOperations.update
   - azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-  - azure.mgmt.cdn.operations.EndpointsOperations.create
-  - azure.mgmt.cdn.operations.EndpointsOperations.delete
-  - azure.mgmt.cdn.operations.EndpointsOperations.get
-  - azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-  - azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-  - azure.mgmt.cdn.operations.EndpointsOperations.load_content
-  - azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-  - azure.mgmt.cdn.operations.EndpointsOperations.start
-  - azure.mgmt.cdn.operations.EndpointsOperations.stop
-  - azure.mgmt.cdn.operations.EndpointsOperations.update
-  - azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
   class: azure.mgmt.cdn.operations.EndpointsOperations
   fullName: azure.mgmt.cdn.operations.EndpointsOperations
   inheritance:
@@ -56,7 +45,7 @@ items:
     '
   syntax:
     content: EndpointsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -73,7 +62,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Version of the API to be used with the client request. Current
         version is 2016-10-02. Constant value: "2016-10-02".
 
@@ -82,7 +71,7 @@ items:
   type: class
   uid: azure.mgmt.cdn.operations.EndpointsOperations
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.create
   langs:
@@ -112,7 +101,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -120,7 +109,7 @@ items:
 
         '
       id: profile_name
-      type: &id005
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -128,20 +117,20 @@ items:
 
         '
       id: endpoint_name
-      type: &id006
+      type:
       - str
     - description: 'Endpoint properties
 
         '
       id: endpoint
-      type: &id007
+      type:
       - azure.mgmt.cdn.models.Endpoint
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -150,20 +139,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.Endpoint'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.create
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id012
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.delete
   langs:
@@ -193,7 +182,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -201,7 +190,7 @@ items:
 
         '
       id: profile_name
-      type: &id014
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -209,14 +198,14 @@ items:
 
         '
       id: endpoint_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -225,20 +214,20 @@ items:
 
         '
       id: raw
-      type: &id017
-      - bool
-    return: &id018
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.delete
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id020
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.get
   langs:
@@ -268,7 +257,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -276,7 +265,7 @@ items:
 
         '
       id: profile_name
-      type: &id022
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -284,14 +273,14 @@ items:
 
         '
       id: endpoint_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -300,7 +289,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -308,16 +297,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.cdn.models.Endpoint
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.get
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id028
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
   langs:
@@ -345,7 +334,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -353,14 +342,14 @@ items:
 
         '
       id: profile_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -369,7 +358,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -377,13 +366,13 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.mgmt.cdn.models.EndpointPaged
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id035
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
   langs:
@@ -413,7 +402,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id036
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -421,7 +410,7 @@ items:
 
         '
       id: profile_name
-      type: &id037
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -429,14 +418,14 @@ items:
 
         '
       id: endpoint_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -445,7 +434,7 @@ items:
 
         '
       id: raw
-      type: &id040
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -453,13 +442,13 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       type:
       - azure.mgmt.cdn.models.ResourceUsagePaged
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id043
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.load_content
   langs:
@@ -487,7 +476,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id044
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -495,7 +484,7 @@ items:
 
         '
       id: profile_name
-      type: &id045
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -503,7 +492,7 @@ items:
 
         '
       id: endpoint_name
-      type: &id046
+      type:
       - str
     - description: 'The path to the content to be loaded. Path
 
@@ -511,14 +500,14 @@ items:
 
         '
       id: content_paths
-      type: &id047
+      type:
       - list of str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id048
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -527,20 +516,20 @@ items:
 
         '
       id: raw
-      type: &id049
-      - bool
-    return: &id050
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.load_content
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id052
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
   langs:
@@ -568,7 +557,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id053
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -576,7 +565,7 @@ items:
 
         '
       id: profile_name
-      type: &id054
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -584,7 +573,7 @@ items:
 
         '
       id: endpoint_name
-      type: &id055
+      type:
       - str
     - description: 'The path to the content to be purged. Can
 
@@ -592,14 +581,14 @@ items:
 
         '
       id: content_paths
-      type: &id056
+      type:
       - list of str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id057
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -608,20 +597,20 @@ items:
 
         '
       id: raw
-      type: &id058
-      - bool
-    return: &id059
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id061
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.start
   langs:
@@ -649,7 +638,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id062
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -657,7 +646,7 @@ items:
 
         '
       id: profile_name
-      type: &id063
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -665,14 +654,14 @@ items:
 
         '
       id: endpoint_name
-      type: &id064
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id065
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -681,20 +670,20 @@ items:
 
         '
       id: raw
-      type: &id066
-      - bool
-    return: &id067
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.Endpoint'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.start
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id069
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.stop
   langs:
@@ -722,7 +711,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id070
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -730,7 +719,7 @@ items:
 
         '
       id: profile_name
-      type: &id071
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -738,14 +727,14 @@ items:
 
         '
       id: endpoint_name
-      type: &id072
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id073
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -754,20 +743,20 @@ items:
 
         '
       id: raw
-      type: &id074
-      - bool
-    return: &id075
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.Endpoint'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.stop
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id077
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.update
   langs:
@@ -803,7 +792,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id078
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -811,7 +800,7 @@ items:
 
         '
       id: profile_name
-      type: &id079
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -819,20 +808,20 @@ items:
 
         '
       id: endpoint_name
-      type: &id080
+      type:
       - str
     - description: 'Endpoint update properties
 
         '
       id: endpoint_update_properties
-      type: &id081
+      type:
       - azure.mgmt.cdn.models.EndpointUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id082
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -841,20 +830,20 @@ items:
 
         '
       id: raw
-      type: &id083
-      - bool
-    return: &id084
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.Endpoint'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.update
 - class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: &id086
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
   langs:
@@ -884,7 +873,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id087
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -892,7 +881,7 @@ items:
 
         '
       id: profile_name
-      type: &id088
+      type:
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -900,7 +889,7 @@ items:
 
         '
       id: endpoint_name
-      type: &id089
+      type:
       - str
     - description: 'The host name of the custom domain. Must be a domain
 
@@ -908,14 +897,14 @@ items:
 
         '
       id: host_name
-      type: &id090
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id091
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -924,7 +913,7 @@ items:
 
         '
       id: raw
-      type: &id092
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -932,921 +921,15 @@ items:
 
         '
       id: operation_config
-    return: &id093
+    return:
       type:
       - azure.mgmt.cdn.models.ValidateCustomDomainOutput
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-- children:
-  - azure.mgmt.cdn.operations.EndpointsOperations.create
-  - azure.mgmt.cdn.operations.EndpointsOperations.delete
-  - azure.mgmt.cdn.operations.EndpointsOperations.get
-  - azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-  - azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-  - azure.mgmt.cdn.operations.EndpointsOperations.load_content
-  - azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-  - azure.mgmt.cdn.operations.EndpointsOperations.start
-  - azure.mgmt.cdn.operations.EndpointsOperations.stop
-  - azure.mgmt.cdn.operations.EndpointsOperations.update
-  - azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: EndpointsOperations
-  source:
-    id: EndpointsOperations
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'EndpointsOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: EndpointsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.cdn.operations.EndpointsOperations
-- &id011
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.create
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: create
-  source:
-    id: create
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 174
-  summary: 'Creates a new CDN endpoint with the specified endpoint name under the
-
-    specified subscription, resource group and profile.
-
-    '
-  syntax:
-    content: create(resource_group_name, profile_name, endpoint_name, endpoint, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id005
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id006
-    - description: 'Endpoint properties
-
-        '
-      id: endpoint
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.create
-- *id011
-- &id019
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 378
-  summary: 'Deletes an existing CDN endpoint with the specified endpoint name under
-
-    the specified subscription, resource group and profile.
-
-    '
-  syntax:
-    content: delete(resource_group_name, profile_name, endpoint_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id014
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    return: *id018
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 107
-  summary: 'Gets an existing CDN endpoint with the specified endpoint name under
-
-    the specified subscription, resource group and profile.
-
-    '
-  syntax:
-    content: get(resource_group_name, profile_name, endpoint_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id022
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.get
-- *id027
-- &id034
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id028
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: list_by_profile
-  source:
-    id: list_by_profile
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Lists existing CDN endpoints.
-
-    '
-  syntax:
-    content: list_by_profile(resource_group_name, profile_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-- *id034
-- &id042
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id035
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: list_resource_usage
-  source:
-    id: list_resource_usage
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 900
-  summary: 'Checks the quota and usage of geo filters and custom domains under the
-
-    given endpoint.
-
-    '
-  syntax:
-    content: list_resource_usage(resource_group_name, profile_name, endpoint_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id036
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id037
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-- *id042
-- &id051
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id043
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.load_content
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: load_content
-  source:
-    id: load_content
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 732
-  summary: 'Pre-loads a content to CDN. Available for Verizon Profiles.
-
-    '
-  syntax:
-    content: load_content(resource_group_name, profile_name, endpoint_name, content_paths,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id044
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id045
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id046
-    - description: 'The path to the content to be loaded. Path
-
-        should be a relative file URL of the origin.
-
-        '
-      id: content_paths
-      type: *id047
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id048
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id049
-    return: *id050
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.load_content
-- *id051
-- &id060
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id052
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: purge_content
-  source:
-    id: purge_content
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 641
-  summary: 'Removes a content from CDN.
-
-    '
-  syntax:
-    content: purge_content(resource_group_name, profile_name, endpoint_name, content_paths,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id053
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id054
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id055
-    - description: 'The path to the content to be purged. Can
-
-        describe a file path or a wild card directory.
-
-        '
-      id: content_paths
-      type: *id056
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id057
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id058
-    return: *id059
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-- *id060
-- &id068
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id061
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.start
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: start
-  source:
-    id: start
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 461
-  summary: 'Starts an existing CDN endpoint that is on a stopped state.
-
-    '
-  syntax:
-    content: start(resource_group_name, profile_name, endpoint_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id062
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id063
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id064
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id065
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id066
-    return: *id067
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.start
-- *id068
-- &id076
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id069
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.stop
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: stop
-  source:
-    id: stop
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 551
-  summary: 'Stops an existing running CDN endpoint.
-
-    '
-  syntax:
-    content: stop(resource_group_name, profile_name, endpoint_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id070
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id071
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id072
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id073
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id074
-    return: *id075
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.stop
-- *id076
-- &id085
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id077
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 275
-  summary: 'Updates an existing CDN endpoint with the specified endpoint name under
-
-    the specified subscription, resource group and profile. Only tags and
-
-    Origin HostHeader can be updated after creating an endpoint. To update
-
-    origins, use the Update Origin operation. To update custom domains, use
-
-    the Update Custom Domain operation.
-
-    '
-  syntax:
-    content: update(resource_group_name, profile_name, endpoint_name, endpoint_update_properties,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id078
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id079
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id080
-    - description: 'Endpoint update properties
-
-        '
-      id: endpoint_update_properties
-      type: *id081
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id082
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id083
-    return: *id084
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.update
-- *id085
-- &id094
-  class: azure.mgmt.cdn.operations.EndpointsOperations
-  exceptions: *id086
-  fullName: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: validate_custom_domain
-  source:
-    id: validate_custom_domain
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\endpoints_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 823
-  summary: 'Validates the custom domain mapping to ensure it maps to the correct
-
-    CDN endpoint in DNS.
-
-    '
-  syntax:
-    content: validate_custom_domain(resource_group_name, profile_name, endpoint_name,
-      host_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id087
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id088
-    - description: 'Name of the endpoint under the profile which is
-
-        unique globally.
-
-        '
-      id: endpoint_name
-      type: *id089
-    - description: 'The host name of the custom domain. Must be a domain
-
-        name.
-
-        '
-      id: host_name
-      type: *id090
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id091
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id092
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id093
-  type: method
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-- *id094
 references:
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.create
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.delete
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.get
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-  isExternal: false
-  name: list_by_profile
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-  isExternal: false
-  name: list_resource_usage
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.load_content
-  isExternal: false
-  name: load_content
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.load_content
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-  isExternal: false
-  name: purge_content
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.start
-  isExternal: false
-  name: start
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.start
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.stop
-  isExternal: false
-  name: stop
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.stop
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.update
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-  isExternal: false
-  name: validate_custom_domain
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.create
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.delete
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.get
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-  isExternal: false
-  name: list_by_profile
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-  isExternal: false
-  name: list_resource_usage
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.load_content
-  isExternal: false
-  name: load_content
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.load_content
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-  isExternal: false
-  name: purge_content
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.purge_content
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.start
-  isExternal: false
-  name: start
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.start
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.stop
-  isExternal: false
-  name: stop
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.stop
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.update
-- fullName: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
-  isExternal: false
-  name: validate_custom_domain
-  parent: azure.mgmt.cdn.operations.EndpointsOperations
-  uid: azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain
 - fullName: azure.mgmt.cdn.operations.EndpointsOperations.create
   isExternal: false
   name: create

@@ -5,9 +5,6 @@ items:
   - azure.mgmt.resource.policy.PolicyClient.models
   - azure.mgmt.resource.policy.PolicyClient.policy_assignments
   - azure.mgmt.resource.policy.PolicyClient.policy_definitions
-  - azure.mgmt.resource.policy.PolicyClient.models
-  - azure.mgmt.resource.policy.PolicyClient.policy_assignments
-  - azure.mgmt.resource.policy.PolicyClient.policy_definitions
   class: azure.mgmt.resource.policy.PolicyClient
   fullName: azure.mgmt.resource.policy.PolicyClient
   inheritance:
@@ -34,13 +31,13 @@ items:
   syntax:
     content: PolicyClient(credentials, subscription_id, api_version='2016-12-01',
       base_url=None)
-    parameters: &id001
+    parameters:
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - ../msrestazure.azure_active_directory
+      - msrestazure.azure_active_directory
     - description: 'The ID of the target subscription.
 
         '
@@ -53,7 +50,7 @@ items:
       id: base_url
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Configuration for client.
 
         '
@@ -76,9 +73,9 @@ items:
       path: azure-mgmt-resource\azure\mgmt\resource\policy\policy_client.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
     startLine: 77
-  summary: "Module depends on the API version:\n\n* 2015-10-01-preview: @../azure.mgmt.resource.policy.v2015_10_01_preview.models\
-    \ \n\n* 2016-04-01: @../azure.mgmt.resource.policy.v2016_04_01.models \n\n* 2016-12-01:\
-    \ @../azure.mgmt.resource.policy.v2016_12_01.models \n"
+  summary: "Module depends on the API version:\n\n* 2015-10-01-preview: @azure.mgmt.resource.policy.v2015_10_01_preview.models\
+    \ \n\n* 2016-04-01: @azure.mgmt.resource.policy.v2016_04_01.models \n\n* 2016-12-01:\
+    \ @azure.mgmt.resource.policy.v2016_12_01.models \n"
   syntax:
     content: models(api_version='2016-12-01')
     parameters:
@@ -129,144 +126,7 @@ items:
   syntax: {}
   type: attribute
   uid: azure.mgmt.resource.policy.PolicyClient.policy_definitions
-- children:
-  - azure.mgmt.resource.policy.PolicyClient.models
-  - azure.mgmt.resource.policy.PolicyClient.policy_assignments
-  - azure.mgmt.resource.policy.PolicyClient.policy_definitions
-  class: azure.mgmt.resource.policy.PolicyClient
-  fullName: azure.mgmt.resource.policy.PolicyClient
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.resource.policy
-  name: PolicyClient
-  source:
-    id: PolicyClient
-    path: azure-mgmt-resource\azure\mgmt\resource\policy\policy_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\policy\policy_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 52
-  summary: 'To manage and control access to your resources, you can define customized
-    policies and assign them at a scope.
-
-
-
-
-    '
-  syntax:
-    content: PolicyClient(credentials, subscription_id, api_version='2016-12-01',
-      base_url=None)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.resource.policy.PolicyClient
-- &id003
-  class: azure.mgmt.resource.policy.PolicyClient
-  fullName: azure.mgmt.resource.policy.PolicyClient.models
-  langs:
-  - python
-  module: azure.mgmt.resource.policy
-  name: models
-  source:
-    id: models
-    path: azure-mgmt-resource\azure\mgmt\resource\policy\policy_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\policy\policy_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 77
-  summary: "Module depends on the API version:\n\n* 2015-10-01-preview: @../azure.mgmt.resource.policy.v2015_10_01_preview.models\
-    \ \n\n* 2016-04-01: @../azure.mgmt.resource.policy.v2016_04_01.models \n\n* 2016-12-01:\
-    \ @../azure.mgmt.resource.policy.v2016_12_01.models \n"
-  syntax:
-    content: models(api_version='2016-12-01')
-    parameters:
-    - id: cls
-    - defaultValue: '2016-12-01'
-      id: api_version
-  type: method
-  uid: azure.mgmt.resource.policy.PolicyClient.models
-- *id003
-- &id004
-  class: azure.mgmt.resource.policy.PolicyClient
-  fullName: azure.mgmt.resource.policy.PolicyClient.policy_assignments
-  langs:
-  - python
-  module: azure.mgmt.resource.policy
-  name: policy_assignments
-  source:
-    id: policy_assignments
-    path: null
-    remote:
-      branch: master
-      path: null
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: null
-  summary: "*Instance depends on the API version* --\n\n* 2015-10-01-preview: @azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyAssignmentsOperations\
-    \ \n\n* 2016-04-01: @azure.mgmt.resource.policy.v2016_04_01.operations.PolicyAssignmentsOperations\
-    \ \n\n* 2016-12-01: @azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations\
-    \ \n"
-  syntax: {}
-  type: attribute
-  uid: azure.mgmt.resource.policy.PolicyClient.policy_assignments
-- *id004
-- &id005
-  class: azure.mgmt.resource.policy.PolicyClient
-  fullName: azure.mgmt.resource.policy.PolicyClient.policy_definitions
-  langs:
-  - python
-  module: azure.mgmt.resource.policy
-  name: policy_definitions
-  source:
-    id: policy_definitions
-    path: null
-    remote:
-      branch: master
-      path: null
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: null
-  summary: "*Instance depends on the API version* --\n\n* 2015-10-01-preview: @azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyDefinitionsOperations\
-    \ \n\n* 2016-04-01: @azure.mgmt.resource.policy.v2016_04_01.operations.PolicyDefinitionsOperations\
-    \ \n\n* 2016-12-01: @azure.mgmt.resource.policy.v2016_12_01.operations.PolicyDefinitionsOperations\
-    \ \n"
-  syntax: {}
-  type: attribute
-  uid: azure.mgmt.resource.policy.PolicyClient.policy_definitions
-- *id005
 references:
-- fullName: azure.mgmt.resource.policy.PolicyClient.models
-  isExternal: false
-  name: models
-  parent: azure.mgmt.resource.policy.PolicyClient
-  uid: azure.mgmt.resource.policy.PolicyClient.models
-- fullName: azure.mgmt.resource.policy.PolicyClient.policy_assignments
-  isExternal: false
-  name: policy_assignments
-  parent: azure.mgmt.resource.policy.PolicyClient
-  uid: azure.mgmt.resource.policy.PolicyClient.policy_assignments
-- fullName: azure.mgmt.resource.policy.PolicyClient.policy_definitions
-  isExternal: false
-  name: policy_definitions
-  parent: azure.mgmt.resource.policy.PolicyClient
-  uid: azure.mgmt.resource.policy.PolicyClient.policy_definitions
-- fullName: azure.mgmt.resource.policy.PolicyClient.models
-  isExternal: false
-  name: models
-  parent: azure.mgmt.resource.policy.PolicyClient
-  uid: azure.mgmt.resource.policy.PolicyClient.models
-- fullName: azure.mgmt.resource.policy.PolicyClient.policy_assignments
-  isExternal: false
-  name: policy_assignments
-  parent: azure.mgmt.resource.policy.PolicyClient
-  uid: azure.mgmt.resource.policy.PolicyClient.policy_assignments
-- fullName: azure.mgmt.resource.policy.PolicyClient.policy_definitions
-  isExternal: false
-  name: policy_definitions
-  parent: azure.mgmt.resource.policy.PolicyClient
-  uid: azure.mgmt.resource.policy.PolicyClient.policy_definitions
 - fullName: azure.mgmt.resource.policy.PolicyClient.models
   isExternal: false
   name: models

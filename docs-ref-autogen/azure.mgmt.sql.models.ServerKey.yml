@@ -35,7 +35,7 @@ items:
   syntax:
     content: ServerKey(kind=None, server_key_type=None, uri=None, thumbprint=None,
       creation_date=None)
-    parameters: &id001
+    parameters:
     - description: 'Kind of encryption protector. This is metadata used for the
 
         Azure portal experience. Possible values include: '''', ''azurekeyvault'',
@@ -45,7 +45,7 @@ items:
         '
       id: kind
       type:
-      - 'str or @../azure.mgmt.sql.models.enum
+      - 'str or @azure.mgmt.sql.models.enum
 
         '
     - description: 'The server key type like ''ServiceManaged'',
@@ -78,7 +78,7 @@ items:
       id: creation_date
       type:
       - datetime
-    variables: &id002
+    variables:
     - description: 'Resource ID.
 
         '
@@ -109,44 +109,6 @@ items:
       id: subregion
       type:
       - str
-  type: class
-  uid: azure.mgmt.sql.models.ServerKey
-- children: []
-  class: azure.mgmt.sql.models.ServerKey
-  fullName: azure.mgmt.sql.models.ServerKey
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - inheritance:
-        - type: builtins.object
-        type: msrest.serialization.Model
-      type: azure.mgmt.sql.models.resource.Resource
-    type: azure.mgmt.sql.models.proxy_resource.ProxyResource
-  langs:
-  - python
-  module: azure.mgmt.sql.models
-  name: ServerKey
-  source:
-    id: ServerKey
-    path: azure-mgmt-sql\azure\mgmt\sql\models\server_key.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\models\server_key.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'A server key.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: ServerKey(kind=None, server_key_type=None, uri=None, thumbprint=None,
-      creation_date=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.sql.models.ServerKey
 references: []

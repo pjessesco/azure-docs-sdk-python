@@ -10,14 +10,6 @@ items:
   - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
   - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
   - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
   class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
   inheritance:
@@ -47,7 +39,7 @@ items:
     '
   syntax:
     content: ExpressRouteCircuitsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -64,7 +56,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2015-06-15".
 
         '
@@ -72,7 +64,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
   langs:
@@ -98,13 +90,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the circuit.
 
         '
       id: circuit_name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the create or update express
 
@@ -112,14 +104,14 @@ items:
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuit
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -128,20 +120,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuit'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
   langs:
@@ -167,20 +159,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -189,20 +181,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
   langs:
@@ -228,20 +220,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of express route circuit.
 
         '
       id: circuit_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -250,7 +242,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -258,16 +250,16 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuit
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
   langs:
@@ -292,14 +284,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -308,7 +300,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -316,13 +308,13 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitPaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
   langs:
@@ -348,7 +340,7 @@ items:
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -357,7 +349,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -365,13 +357,13 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitPaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
   langs:
@@ -401,20 +393,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the circuit.
 
         '
       id: circuit_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -423,7 +415,7 @@ items:
 
         '
       id: raw
-      type: &id040
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -431,13 +423,13 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitArpTablePaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id043
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
   langs:
@@ -467,20 +459,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id044
+      type:
       - str
     - description: 'The name of the circuit.
 
         '
       id: circuit_name
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -489,7 +481,7 @@ items:
 
         '
       id: raw
-      type: &id047
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -497,13 +489,13 @@ items:
 
         '
       id: operation_config
-    return: &id048
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitRoutesTablePaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
 - class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: &id050
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
   langs:
@@ -531,20 +523,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id051
+      type:
       - str
     - description: 'The name of the loadBalancer.
 
         '
       id: circuit_name
-      type: &id052
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id053
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -553,7 +545,7 @@ items:
 
         '
       id: raw
-      type: &id054
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -561,578 +553,12 @@ items:
 
         '
       id: operation_config
-    return: &id055
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitStatsPaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-- children:
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-  - azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: ExpressRouteCircuitsOperations
-  source:
-    id: ExpressRouteCircuitsOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'ExpressRouteCircuitsOperations operations.
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ExpressRouteCircuitsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-- &id010
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 178
-  summary: 'Creates or updates an express route circuit.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, circuit_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the circuit.
-
-        '
-      id: circuit_name
-      type: *id005
-    - description: 'Parameters supplied to the create or update express
-
-        route circuit operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id011
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes the specified express route circuit.
-
-    '
-  syntax:
-    content: delete(resource_group_name, circuit_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the express route circuit.
-
-        '
-      id: circuit_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id018
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 116
-  summary: 'Gets information about the specified express route circuit.
-
-    '
-  syntax:
-    content: get(resource_group_name, circuit_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of express route circuit.
-
-        '
-      id: circuit_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-- *id024
-- &id030
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id025
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 485
-  summary: 'Gets all the express route circuits in a resource group.
-
-    '
-  syntax:
-    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-- *id030
-- &id035
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id031
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list_all
-  source:
-    id: list_all
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 551
-  summary: 'Gets all the express route circuits in a subscription.
-
-    '
-  syntax:
-    content: list_all(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-- *id035
-- &id042
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id036
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list_arp_table
-  source:
-    id: list_arp_table
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 273
-  summary: 'The ListArpTable from ExpressRouteCircuit opertion retrieves the
-
-    currently advertised arp table associated with the ExpressRouteCircuits
-
-    in a resource group.
-
-    '
-  syntax:
-    content: list_arp_table(resource_group_name, circuit_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - description: 'The name of the circuit.
-
-        '
-      id: circuit_name
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-- *id042
-- &id049
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id043
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list_routes_table
-  source:
-    id: list_routes_table
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 344
-  summary: 'The ListRoutesTable from ExpressRouteCircuit opertion retrieves the
-
-    currently advertised routes table associated with the
-
-    ExpressRouteCircuits in a resource group.
-
-    '
-  syntax:
-    content: list_routes_table(resource_group_name, circuit_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id044
-    - description: 'The name of the circuit.
-
-        '
-      id: circuit_name
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id048
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-- *id049
-- &id056
-  class: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  exceptions: *id050
-  fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list_stats
-  source:
-    id: list_stats
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\express_route_circuits_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 415
-  summary: 'The Liststats ExpressRouteCircuit opertion retrieves all the stats from
-
-    a ExpressRouteCircuits in a resource group.
-
-    '
-  syntax:
-    content: list_stats(resource_group_name, circuit_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id051
-    - description: 'The name of the loadBalancer.
-
-        '
-      id: circuit_name
-      type: *id052
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id053
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id054
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id055
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-- *id056
 references:
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-  isExternal: false
-  name: list_arp_table
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-  isExternal: false
-  name: list_routes_table
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-  isExternal: false
-  name: list_stats
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.delete
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.get
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_all
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-  isExternal: false
-  name: list_arp_table
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_arp_table
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-  isExternal: false
-  name: list_routes_table
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_routes_table
-- fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
-  isExternal: false
-  name: list_stats
-  parent: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.list_stats
 - fullName: azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations.create_or_update
   isExternal: false
   name: create_or_update

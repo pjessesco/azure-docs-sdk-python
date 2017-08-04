@@ -34,7 +34,7 @@ items:
     content: InboundNatRule(id=None, frontend_ip_configuration=None, protocol=None,
       frontend_port=None, backend_port=None, idle_timeout_in_minutes=None, enable_floating_ip=None,
       provisioning_state=None, name=None, etag=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource ID.
 
         '
@@ -123,7 +123,7 @@ items:
       id: etag
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'A reference to a private IP address
 
         defined on a network interface of a VM. Traffic sent to the frontend port
@@ -136,43 +136,6 @@ items:
       - '@azure.mgmt.network.v2017_06_01.models.NetworkInterfaceIPConfiguration
 
         '
-  type: class
-  uid: azure.mgmt.network.v2017_06_01.models.InboundNatRule
-- children: []
-  class: azure.mgmt.network.v2017_06_01.models.InboundNatRule
-  fullName: azure.mgmt.network.v2017_06_01.models.InboundNatRule
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.network.v2017_06_01.models.sub_resource.SubResource
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.models
-  name: InboundNatRule
-  source:
-    id: InboundNatRule
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\models\inbound_nat_rule.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\models\inbound_nat_rule.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Inbound NAT rule of the load balancer.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: InboundNatRule(id=None, frontend_ip_configuration=None, protocol=None,
-      frontend_port=None, backend_port=None, idle_timeout_in_minutes=None, enable_floating_ip=None,
-      provisioning_state=None, name=None, etag=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.network.v2017_06_01.models.InboundNatRule
 references: []

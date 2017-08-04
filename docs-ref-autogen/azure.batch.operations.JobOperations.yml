@@ -15,19 +15,6 @@ items:
   - azure.batch.operations.JobOperations.patch
   - azure.batch.operations.JobOperations.terminate
   - azure.batch.operations.JobOperations.update
-  - azure.batch.operations.JobOperations.add
-  - azure.batch.operations.JobOperations.delete
-  - azure.batch.operations.JobOperations.disable
-  - azure.batch.operations.JobOperations.enable
-  - azure.batch.operations.JobOperations.get
-  - azure.batch.operations.JobOperations.get_all_lifetime_statistics
-  - azure.batch.operations.JobOperations.get_task_counts
-  - azure.batch.operations.JobOperations.list
-  - azure.batch.operations.JobOperations.list_from_job_schedule
-  - azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-  - azure.batch.operations.JobOperations.patch
-  - azure.batch.operations.JobOperations.terminate
-  - azure.batch.operations.JobOperations.update
   class: azure.batch.operations.JobOperations
   fullName: azure.batch.operations.JobOperations
   inheritance:
@@ -62,7 +49,7 @@ items:
     '
   syntax:
     content: JobOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -79,7 +66,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API Version. Constant value: "2017-06-01.5.1".
 
         '
@@ -87,7 +74,7 @@ items:
   type: class
   uid: azure.batch.operations.JobOperations
 - class: azure.batch.operations.JobOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.add
   langs:
@@ -133,21 +120,21 @@ items:
 
         '
       id: job
-      type: &id004
+      type:
       - azure.batch.models.JobAddParameter
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_add_options
-      type: &id005
+      type:
       - azure.batch.models.JobAddOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id006
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -156,7 +143,7 @@ items:
 
         '
       id: raw
-      type: &id007
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -164,16 +151,16 @@ items:
 
         '
       id: operation_config
-    return: &id008
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.add
 - class: azure.batch.operations.JobOperations
-  exceptions: &id010
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.delete
   langs:
@@ -210,21 +197,21 @@ items:
 
         '
       id: job_id
-      type: &id011
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_delete_options
-      type: &id012
+      type:
       - azure.batch.models.JobDeleteOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id013
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -233,7 +220,7 @@ items:
 
         '
       id: raw
-      type: &id014
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -241,16 +228,16 @@ items:
 
         '
       id: operation_config
-    return: &id015
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.delete
 - class: azure.batch.operations.JobOperations
-  exceptions: &id017
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.disable
   langs:
@@ -295,7 +282,7 @@ items:
 
         '
       id: job_id
-      type: &id018
+      type:
       - str
     - description: 'What to do with active tasks associated with the
 
@@ -311,7 +298,7 @@ items:
 
         '
       id: disable_tasks
-      type: &id019
+      type:
       - 'str or @azure.batch.models.DisableJobOption
 
         '
@@ -320,14 +307,14 @@ items:
 
         '
       id: job_disable_options
-      type: &id020
+      type:
       - azure.batch.models.JobDisableOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -336,7 +323,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -344,16 +331,16 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.disable
 - class: azure.batch.operations.JobOperations
-  exceptions: &id025
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.enable
   langs:
@@ -392,21 +379,21 @@ items:
 
         '
       id: job_id
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_enable_options
-      type: &id027
+      type:
       - azure.batch.models.JobEnableOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id028
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -415,7 +402,7 @@ items:
 
         '
       id: raw
-      type: &id029
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -423,16 +410,16 @@ items:
 
         '
       id: operation_config
-    return: &id030
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.enable
 - class: azure.batch.operations.JobOperations
-  exceptions: &id032
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.get
   langs:
@@ -457,21 +444,21 @@ items:
 
         '
       id: job_id
-      type: &id033
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_get_options
-      type: &id034
+      type:
       - azure.batch.models.JobGetOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id035
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -480,7 +467,7 @@ items:
 
         '
       id: raw
-      type: &id036
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -488,16 +475,16 @@ items:
 
         '
       id: operation_config
-    return: &id037
+    return:
       type:
       - azure.batch.models.CloudJob
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.get
 - class: azure.batch.operations.JobOperations
-  exceptions: &id039
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.get_all_lifetime_statistics
   langs:
@@ -535,14 +522,14 @@ items:
 
         '
       id: job_get_all_lifetime_statistics_options
-      type: &id040
+      type:
       - azure.batch.models.JobGetAllLifetimeStatisticsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -551,7 +538,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -559,16 +546,16 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.batch.models.JobStatistics
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.get_all_lifetime_statistics
 - class: azure.batch.operations.JobOperations
-  exceptions: &id045
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.get_task_counts
   langs:
@@ -609,7 +596,7 @@ items:
 
         '
       id: job_id
-      type: &id046
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -618,14 +605,14 @@ items:
 
         '
       id: job_get_task_counts_options
-      type: &id047
+      type:
       - azure.batch.models.JobGetTaskCountsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id048
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -634,7 +621,7 @@ items:
 
         '
       id: raw
-      type: &id049
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -642,16 +629,16 @@ items:
 
         '
       id: operation_config
-    return: &id050
+    return:
       type:
       - azure.batch.models.TaskCounts
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.get_task_counts
 - class: azure.batch.operations.JobOperations
-  exceptions: &id052
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.list
   langs:
@@ -677,14 +664,14 @@ items:
 
         '
       id: job_list_options
-      type: &id053
+      type:
       - azure.batch.models.JobListOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id054
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -693,7 +680,7 @@ items:
 
         '
       id: raw
-      type: &id055
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -701,13 +688,13 @@ items:
 
         '
       id: operation_config
-    return: &id056
+    return:
       type:
       - azure.batch.models.CloudJobPaged
   type: method
   uid: azure.batch.operations.JobOperations.list
 - class: azure.batch.operations.JobOperations
-  exceptions: &id058
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.list_from_job_schedule
   langs:
@@ -735,7 +722,7 @@ items:
 
         '
       id: job_schedule_id
-      type: &id059
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -744,14 +731,14 @@ items:
 
         '
       id: job_list_from_job_schedule_options
-      type: &id060
+      type:
       - azure.batch.models.JobListFromJobScheduleOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id061
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -760,7 +747,7 @@ items:
 
         '
       id: raw
-      type: &id062
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -768,13 +755,13 @@ items:
 
         '
       id: operation_config
-    return: &id063
+    return:
       type:
       - azure.batch.models.CloudJobPaged
   type: method
   uid: azure.batch.operations.JobOperations.list_from_job_schedule
 - class: azure.batch.operations.JobOperations
-  exceptions: &id065
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
   langs:
@@ -809,21 +796,21 @@ items:
 
         '
       id: job_id
-      type: &id066
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_list_preparation_and_release_task_status_options
-      type: &id067
+      type:
       - azure.batch.models.JobListPreparationAndReleaseTaskStatusOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id068
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -832,7 +819,7 @@ items:
 
         '
       id: raw
-      type: &id069
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -840,13 +827,13 @@ items:
 
         '
       id: operation_config
-    return: &id070
+    return:
       type:
       - azure.batch.models.JobPreparationAndReleaseTaskExecutionInformationPaged
   type: method
   uid: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
 - class: azure.batch.operations.JobOperations
-  exceptions: &id072
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.patch
   langs:
@@ -879,27 +866,27 @@ items:
 
         '
       id: job_id
-      type: &id073
+      type:
       - str
     - description: 'The parameters for the request.
 
         '
       id: job_patch_parameter
-      type: &id074
+      type:
       - azure.batch.models.JobPatchParameter
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_patch_options
-      type: &id075
+      type:
       - azure.batch.models.JobPatchOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id076
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -908,7 +895,7 @@ items:
 
         '
       id: raw
-      type: &id077
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -916,16 +903,16 @@ items:
 
         '
       id: operation_config
-    return: &id078
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.patch
 - class: azure.batch.operations.JobOperations
-  exceptions: &id080
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.terminate
   langs:
@@ -960,14 +947,14 @@ items:
 
         '
       id: job_id
-      type: &id081
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_terminate_options
-      type: &id082
+      type:
       - azure.batch.models.JobTerminateOptions
     - defaultValue: None
       description: 'The text you want to appear as the job''s
@@ -976,14 +963,14 @@ items:
 
         '
       id: terminate_reason
-      type: &id083
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id084
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -992,7 +979,7 @@ items:
 
         '
       id: raw
-      type: &id085
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -1000,16 +987,16 @@ items:
 
         '
       id: operation_config
-    return: &id086
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.terminate
 - class: azure.batch.operations.JobOperations
-  exceptions: &id088
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobOperations.update
   langs:
@@ -1044,27 +1031,27 @@ items:
 
         '
       id: job_id
-      type: &id089
+      type:
       - str
     - description: 'The parameters for the request.
 
         '
       id: job_update_parameter
-      type: &id090
+      type:
       - azure.batch.models.JobUpdateParameter
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: job_update_options
-      type: &id091
+      type:
       - azure.batch.models.JobUpdateOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id092
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1073,7 +1060,7 @@ items:
 
         '
       id: raw
-      type: &id093
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -1081,1101 +1068,15 @@ items:
 
         '
       id: operation_config
-    return: &id094
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobOperations.update
-- children:
-  - azure.batch.operations.JobOperations.add
-  - azure.batch.operations.JobOperations.delete
-  - azure.batch.operations.JobOperations.disable
-  - azure.batch.operations.JobOperations.enable
-  - azure.batch.operations.JobOperations.get
-  - azure.batch.operations.JobOperations.get_all_lifetime_statistics
-  - azure.batch.operations.JobOperations.get_task_counts
-  - azure.batch.operations.JobOperations.list
-  - azure.batch.operations.JobOperations.list_from_job_schedule
-  - azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-  - azure.batch.operations.JobOperations.patch
-  - azure.batch.operations.JobOperations.terminate
-  - azure.batch.operations.JobOperations.update
-  class: azure.batch.operations.JobOperations
-  fullName: azure.batch.operations.JobOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.batch.operations
-  name: JobOperations
-  source:
-    id: JobOperations
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'JobOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: JobOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.batch.operations.JobOperations
-- &id009
-  class: azure.batch.operations.JobOperations
-  exceptions: *id003
-  fullName: azure.batch.operations.JobOperations.add
-  langs:
-  - python
-  module: azure.batch.operations
-  name: add
-  source:
-    id: add
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 918
-  summary: 'Adds a job to the specified account.
-
-
-    The Batch service supports two ways to control the work done as part of
-
-    a job. In the first approach, the user specifies a Job Manager task.
-
-    The Batch service launches this task when it is ready to start the job.
-
-    The Job Manager task controls all other tasks that run under this job,
-
-    by using the Task APIs. In the second approach, the user directly
-
-    controls the execution of tasks under an active job, by using the Task
-
-    APIs. Also note: when naming jobs, avoid including sensitive
-
-    information such as user names or secret project names. This
-
-    information may appear in telemetry logs accessible to Microsoft
-
-    Support engineers.
-
-    '
-  syntax:
-    content: add(job, job_add_options=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The job to be added.
-
-        '
-      id: job
-      type: *id004
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_add_options
-      type: *id005
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id006
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id007
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id008
-  type: method
-  uid: azure.batch.operations.JobOperations.add
-- *id009
-- &id016
-  class: azure.batch.operations.JobOperations
-  exceptions: *id010
-  fullName: azure.batch.operations.JobOperations.delete
-  langs:
-  - python
-  module: azure.batch.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 126
-  summary: 'Deletes a job.
-
-
-    Deleting a job also deletes all tasks that are part of that job, and
-
-    all job statistics. This also overrides the retention period for task
-
-    data; that is, if the job contains tasks which are still retained on
-
-    compute nodes, the Batch services deletes those tasks'' working
-
-    directories and all their contents.
-
-    '
-  syntax:
-    content: delete(job_id, job_delete_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The ID of the job to delete.
-
-        '
-      id: job_id
-      type: *id011
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_delete_options
-      type: *id012
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id013
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id014
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id015
-  type: method
-  uid: azure.batch.operations.JobOperations.delete
-- *id016
-- &id024
-  class: azure.batch.operations.JobOperations
-  exceptions: *id017
-  fullName: azure.batch.operations.JobOperations.disable
-  langs:
-  - python
-  module: azure.batch.operations
-  name: disable
-  source:
-    id: disable
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 570
-  summary: 'Disables the specified job, preventing new tasks from running.
-
-
-    The Batch Service immediately moves the job to the disabling state.
-
-    Batch then uses the disableTasks parameter to determine what to do with
-
-    the currently running tasks of the job. The job remains in the
-
-    disabling state until the disable operation is completed and all tasks
-
-    have been dealt with according to the disableTasks option; the job then
-
-    moves to the disabled state. No new tasks are started under the job
-
-    until it moves back to active state. If you try to disable a job that
-
-    is in any state other than active, disabling, or disabled, the request
-
-    fails with status code 409.
-
-    '
-  syntax:
-    content: disable(job_id, disable_tasks, job_disable_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job to disable.
-
-        '
-      id: job_id
-      type: *id018
-    - description: 'What to do with active tasks associated with the
-
-        job. requeue - Terminate running tasks and requeue them. The tasks
-
-        will run again when the job is enabled. terminate - Terminate running
-
-        tasks. The tasks will not run again. wait - Allow currently running
-
-        tasks to complete. Possible values include: ''requeue'', ''terminate'',
-
-        ''wait''
-
-        '
-      id: disable_tasks
-      type: *id019
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_disable_options
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.batch.operations.JobOperations.disable
-- *id024
-- &id031
-  class: azure.batch.operations.JobOperations
-  exceptions: *id025
-  fullName: azure.batch.operations.JobOperations.enable
-  langs:
-  - python
-  module: azure.batch.operations
-  name: enable
-  source:
-    id: enable
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 693
-  summary: 'Enables the specified job, allowing new tasks to run.
-
-
-    When you call this API, the Batch service sets a disabled job to the
-
-    enabling state. After the this operation is completed, the job moves to
-
-    the active state, and scheduling of new tasks under the job resumes.
-
-    The Batch service does not allow a task to remain in the active state
-
-    for more than 7 days. Therefore, if you enable a job containing active
-
-    tasks which were added more than 7 days ago, those tasks will not run.
-
-    '
-  syntax:
-    content: enable(job_id, job_enable_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The ID of the job to enable.
-
-        '
-      id: job_id
-      type: *id026
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_enable_options
-      type: *id027
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id028
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id029
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id030
-  type: method
-  uid: azure.batch.operations.JobOperations.enable
-- *id031
-- &id038
-  class: azure.batch.operations.JobOperations
-  exceptions: *id032
-  fullName: azure.batch.operations.JobOperations.get
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get
-  source:
-    id: get
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 229
-  summary: 'Gets information about the specified job.
-
-    '
-  syntax:
-    content: get(job_id, job_get_options=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job.
-
-        '
-      id: job_id
-      type: *id033
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_get_options
-      type: *id034
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id035
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id036
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id037
-  type: method
-  uid: azure.batch.operations.JobOperations.get
-- *id038
-- &id044
-  class: azure.batch.operations.JobOperations
-  exceptions: *id039
-  fullName: azure.batch.operations.JobOperations.get_all_lifetime_statistics
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_all_lifetime_statistics
-  source:
-    id: get_all_lifetime_statistics
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Gets lifetime summary statistics for all of the jobs in the specified
-
-    account.
-
-
-    Statistics are aggregated across all jobs that have ever existed in the
-
-    account, from account creation to the last update time of the
-
-    statistics.
-
-    '
-  syntax:
-    content: get_all_lifetime_statistics(job_get_all_lifetime_statistics_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'Additional parameters
-
-        for the operation
-
-        '
-      id: job_get_all_lifetime_statistics_options
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.batch.operations.JobOperations.get_all_lifetime_statistics
-- *id044
-- &id051
-  class: azure.batch.operations.JobOperations
-  exceptions: *id045
-  fullName: azure.batch.operations.JobOperations.get_task_counts
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_task_counts
-  source:
-    id: get_task_counts
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1331
-  summary: 'Gets the task counts for the specified job.
-
-
-    Task counts provide a count of the tasks by active, running or
-
-    completed task state, and a count of tasks which succeeded or failed.
-
-    Tasks in the preparing state are counted as running. If the
-
-    validationStatus is unvalidated, then the Batch service has not been
-
-    able to check state counts against the task states as reported in the
-
-    List Tasks API. The validationStatus may be unvalidated if the job
-
-    contains more than 200,000 tasks.
-
-    '
-  syntax:
-    content: get_task_counts(job_id, job_get_task_counts_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job.
-
-        '
-      id: job_id
-      type: *id046
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_get_task_counts_options
-      type: *id047
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id048
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id049
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id050
-  type: method
-  uid: azure.batch.operations.JobOperations.get_task_counts
-- *id051
-- &id057
-  class: azure.batch.operations.JobOperations
-  exceptions: *id052
-  fullName: azure.batch.operations.JobOperations.list
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list
-  source:
-    id: list
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1010
-  summary: 'Lists all of the jobs in the specified account.
-
-    '
-  syntax:
-    content: list(job_list_options=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_list_options
-      type: *id053
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id054
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id055
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id056
-  type: method
-  uid: azure.batch.operations.JobOperations.list
-- *id057
-- &id064
-  class: azure.batch.operations.JobOperations
-  exceptions: *id058
-  fullName: azure.batch.operations.JobOperations.list_from_job_schedule
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list_from_job_schedule
-  source:
-    id: list_from_job_schedule
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1111
-  summary: 'Lists the jobs that have been created under the specified job schedule.
-
-    '
-  syntax:
-    content: list_from_job_schedule(job_schedule_id, job_list_from_job_schedule_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule from which you want
-
-        to get a list of jobs.
-
-        '
-      id: job_schedule_id
-      type: *id059
-    - defaultValue: None
-      description: 'Additional parameters for
-
-        the operation
-
-        '
-      id: job_list_from_job_schedule_options
-      type: *id060
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id061
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id062
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id063
-  type: method
-  uid: azure.batch.operations.JobOperations.list_from_job_schedule
-- *id064
-- &id071
-  class: azure.batch.operations.JobOperations
-  exceptions: *id065
-  fullName: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list_preparation_and_release_task_status
-  source:
-    id: list_preparation_and_release_task_status
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1221
-  summary: 'Lists the execution status of the Job Preparation and Job Release task
-
-    for the specified job across the compute nodes where the job has run.
-
-
-    This API returns the Job Preparation and Job Release task status on all
-
-    compute nodes that have run the Job Preparation or Job Release task.
-
-    This includes nodes which have since been removed from the pool. .
-
-    '
-  syntax:
-    content: list_preparation_and_release_task_status(job_id, job_list_preparation_and_release_task_status_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job.
-
-        '
-      id: job_id
-      type: *id066
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_list_preparation_and_release_task_status_options
-      type: *id067
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id068
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id069
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id070
-  type: method
-  uid: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-- *id071
-- &id079
-  class: azure.batch.operations.JobOperations
-  exceptions: *id072
-  fullName: azure.batch.operations.JobOperations.patch
-  langs:
-  - python
-  module: azure.batch.operations
-  name: patch
-  source:
-    id: patch
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 347
-  summary: 'Updates the properties of the specified job.
-
-
-    This replaces only the job properties specified in the request. For
-
-    example, if the job has constraints, and a request does not specify the
-
-    constraints element, then the job keeps the existing constraints.
-
-    '
-  syntax:
-    content: patch(job_id, job_patch_parameter, job_patch_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job whose properties you want to update.
-
-        '
-      id: job_id
-      type: *id073
-    - description: 'The parameters for the request.
-
-        '
-      id: job_patch_parameter
-      type: *id074
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_patch_options
-      type: *id075
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id076
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id077
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id078
-  type: method
-  uid: azure.batch.operations.JobOperations.patch
-- *id079
-- &id087
-  class: azure.batch.operations.JobOperations
-  exceptions: *id080
-  fullName: azure.batch.operations.JobOperations.terminate
-  langs:
-  - python
-  module: azure.batch.operations
-  name: terminate
-  source:
-    id: terminate
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 800
-  summary: 'Terminates the specified job, marking it as completed.
-
-
-    When a Terminate Job request is received, the Batch service sets the
-
-    job to the terminating state. The Batch service then terminates any
-
-    active or running tasks associated with the job, and runs any required
-
-    Job Release tasks. The job then moves into the completed state.
-
-    '
-  syntax:
-    content: terminate(job_id, job_terminate_options=None, terminate_reason=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job to terminate.
-
-        '
-      id: job_id
-      type: *id081
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_terminate_options
-      type: *id082
-    - defaultValue: None
-      description: 'The text you want to appear as the job''s
-
-        TerminateReason. The default is ''UserTerminate''.
-
-        '
-      id: terminate_reason
-      type: *id083
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id084
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id085
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id086
-  type: method
-  uid: azure.batch.operations.JobOperations.terminate
-- *id087
-- &id095
-  class: azure.batch.operations.JobOperations
-  exceptions: *id088
-  fullName: azure.batch.operations.JobOperations.update
-  langs:
-  - python
-  module: azure.batch.operations
-  name: update
-  source:
-    id: update
-    path: azure-batch\azure\batch\operations\job_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 458
-  summary: 'Updates the properties of the specified job.
-
-
-    This fully replaces all the updateable properties of the job. For
-
-    example, if the job has constraints associated with it and if
-
-    constraints is not specified with this request, then the Batch service
-
-    will remove the existing constraints.
-
-    '
-  syntax:
-    content: update(job_id, job_update_parameter, job_update_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job whose properties you want to update.
-
-        '
-      id: job_id
-      type: *id089
-    - description: 'The parameters for the request.
-
-        '
-      id: job_update_parameter
-      type: *id090
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: job_update_options
-      type: *id091
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id092
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id093
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id094
-  type: method
-  uid: azure.batch.operations.JobOperations.update
-- *id095
 references:
-- fullName: azure.batch.operations.JobOperations.add
-  isExternal: false
-  name: add
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.add
-- fullName: azure.batch.operations.JobOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.delete
-- fullName: azure.batch.operations.JobOperations.disable
-  isExternal: false
-  name: disable
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.disable
-- fullName: azure.batch.operations.JobOperations.enable
-  isExternal: false
-  name: enable
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.enable
-- fullName: azure.batch.operations.JobOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.get
-- fullName: azure.batch.operations.JobOperations.get_all_lifetime_statistics
-  isExternal: false
-  name: get_all_lifetime_statistics
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.get_all_lifetime_statistics
-- fullName: azure.batch.operations.JobOperations.get_task_counts
-  isExternal: false
-  name: get_task_counts
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.get_task_counts
-- fullName: azure.batch.operations.JobOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.list
-- fullName: azure.batch.operations.JobOperations.list_from_job_schedule
-  isExternal: false
-  name: list_from_job_schedule
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.list_from_job_schedule
-- fullName: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-  isExternal: false
-  name: list_preparation_and_release_task_status
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-- fullName: azure.batch.operations.JobOperations.patch
-  isExternal: false
-  name: patch
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.patch
-- fullName: azure.batch.operations.JobOperations.terminate
-  isExternal: false
-  name: terminate
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.terminate
-- fullName: azure.batch.operations.JobOperations.update
-  isExternal: false
-  name: update
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.update
-- fullName: azure.batch.operations.JobOperations.add
-  isExternal: false
-  name: add
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.add
-- fullName: azure.batch.operations.JobOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.delete
-- fullName: azure.batch.operations.JobOperations.disable
-  isExternal: false
-  name: disable
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.disable
-- fullName: azure.batch.operations.JobOperations.enable
-  isExternal: false
-  name: enable
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.enable
-- fullName: azure.batch.operations.JobOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.get
-- fullName: azure.batch.operations.JobOperations.get_all_lifetime_statistics
-  isExternal: false
-  name: get_all_lifetime_statistics
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.get_all_lifetime_statistics
-- fullName: azure.batch.operations.JobOperations.get_task_counts
-  isExternal: false
-  name: get_task_counts
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.get_task_counts
-- fullName: azure.batch.operations.JobOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.list
-- fullName: azure.batch.operations.JobOperations.list_from_job_schedule
-  isExternal: false
-  name: list_from_job_schedule
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.list_from_job_schedule
-- fullName: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-  isExternal: false
-  name: list_preparation_and_release_task_status
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.list_preparation_and_release_task_status
-- fullName: azure.batch.operations.JobOperations.patch
-  isExternal: false
-  name: patch
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.patch
-- fullName: azure.batch.operations.JobOperations.terminate
-  isExternal: false
-  name: terminate
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.terminate
-- fullName: azure.batch.operations.JobOperations.update
-  isExternal: false
-  name: update
-  parent: azure.batch.operations.JobOperations
-  uid: azure.batch.operations.JobOperations.update
 - fullName: azure.batch.operations.JobOperations.add
   isExternal: false
   name: add

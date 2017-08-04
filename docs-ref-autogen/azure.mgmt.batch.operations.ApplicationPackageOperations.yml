@@ -6,10 +6,6 @@ items:
   - azure.mgmt.batch.operations.ApplicationPackageOperations.create
   - azure.mgmt.batch.operations.ApplicationPackageOperations.delete
   - azure.mgmt.batch.operations.ApplicationPackageOperations.get
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.create
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.get
   class: azure.mgmt.batch.operations.ApplicationPackageOperations
   fullName: azure.mgmt.batch.operations.ApplicationPackageOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: ApplicationPackageOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version to be used with the HTTP request. Constant value:
         "2017-05-01".
 
@@ -61,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.batch.operations.ApplicationPackageOperations
 - class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
   langs:
@@ -89,38 +85,38 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the Batch account.
 
         '
       id: account_name
-      type: &id005
+      type:
       - str
     - description: 'The ID of the application.
 
         '
       id: application_id
-      type: &id006
+      type:
       - str
     - description: 'The version of the application to activate.
 
         '
       id: version
-      type: &id007
+      type:
       - str
     - description: 'The format of the application package binary file.
 
         '
       id: format
-      type: &id008
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -129,7 +125,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -137,10 +133,10 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       description: 'None or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -148,11 +144,11 @@ items:
       type:
       - 'None or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
 - class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: &id013
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.create
   langs:
@@ -180,32 +176,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the Batch account.
 
         '
       id: account_name
-      type: &id015
+      type:
       - str
     - description: 'The ID of the application.
 
         '
       id: application_id
-      type: &id016
+      type:
       - str
     - description: 'The version of the application.
 
         '
       id: version
-      type: &id017
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id018
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -214,7 +210,7 @@ items:
 
         '
       id: raw
-      type: &id019
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -222,10 +218,10 @@ items:
 
         '
       id: operation_config
-    return: &id020
+    return:
       description: '@azure.mgmt.batch.models.ApplicationPackage or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -233,11 +229,11 @@ items:
       type:
       - 'azure.mgmt.batch.models.ApplicationPackage or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.batch.operations.ApplicationPackageOperations.create
 - class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: &id022
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
   langs:
@@ -265,32 +261,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id023
+      type:
       - str
     - description: 'The name of the Batch account.
 
         '
       id: account_name
-      type: &id024
+      type:
       - str
     - description: 'The ID of the application.
 
         '
       id: application_id
-      type: &id025
+      type:
       - str
     - description: 'The version of the application to delete.
 
         '
       id: version
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -299,7 +295,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -307,10 +303,10 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       description: 'None or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -318,11 +314,11 @@ items:
       type:
       - 'None or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
 - class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.get
   langs:
@@ -350,32 +346,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id032
+      type:
       - str
     - description: 'The name of the Batch account.
 
         '
       id: account_name
-      type: &id033
+      type:
       - str
     - description: 'The ID of the application.
 
         '
       id: application_id
-      type: &id034
+      type:
       - str
     - description: 'The version of the application.
 
         '
       id: version
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id036
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -384,7 +380,7 @@ items:
 
         '
       id: raw
-      type: &id037
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -392,10 +388,10 @@ items:
 
         '
       id: operation_config
-    return: &id038
+    return:
       description: '@azure.mgmt.batch.models.ApplicationPackage or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -403,365 +399,10 @@ items:
       type:
       - 'azure.mgmt.batch.models.ApplicationPackage or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.batch.operations.ApplicationPackageOperations.get
-- children:
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.create
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-  - azure.mgmt.batch.operations.ApplicationPackageOperations.get
-  class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  fullName: azure.mgmt.batch.operations.ApplicationPackageOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.batch.operations
-  name: ApplicationPackageOperations
-  source:
-    id: ApplicationPackageOperations
-    path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ApplicationPackageOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: ApplicationPackageOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations
-- &id012
-  class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: *id003
-  fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-  langs:
-  - python
-  module: azure.mgmt.batch.operations
-  name: activate
-  source:
-    id: activate
-    path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Activates the specified application package.
-
-    '
-  syntax:
-    content: activate(resource_group_name, account_name, application_id, version,
-      format, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the Batch account.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the Batch account.
-
-        '
-      id: account_name
-      type: *id005
-    - description: 'The ID of the application.
-
-        '
-      id: application_id
-      type: *id006
-    - description: 'The version of the application to activate.
-
-        '
-      id: version
-      type: *id007
-    - description: 'The format of the application package binary file.
-
-        '
-      id: format
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-- *id012
-- &id021
-  class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: *id013
-  fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.create
-  langs:
-  - python
-  module: azure.mgmt.batch.operations
-  name: create
-  source:
-    id: create
-    path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 109
-  summary: 'Creates an application package record.
-
-    '
-  syntax:
-    content: create(resource_group_name, account_name, application_id, version, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the Batch account.
-
-        '
-      id: resource_group_name
-      type: *id014
-    - description: 'The name of the Batch account.
-
-        '
-      id: account_name
-      type: *id015
-    - description: 'The ID of the application.
-
-        '
-      id: application_id
-      type: *id016
-    - description: 'The version of the application.
-
-        '
-      id: version
-      type: *id017
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id018
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id019
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id020
-  type: method
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.create
-- *id021
-- &id030
-  class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: *id022
-  fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.batch.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 181
-  summary: 'Deletes an application package record and its associated binary file.
-
-    '
-  syntax:
-    content: delete(resource_group_name, account_name, application_id, version, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the Batch account.
-
-        '
-      id: resource_group_name
-      type: *id023
-    - description: 'The name of the Batch account.
-
-        '
-      id: account_name
-      type: *id024
-    - description: 'The ID of the application.
-
-        '
-      id: application_id
-      type: *id025
-    - description: 'The version of the application to delete.
-
-        '
-      id: version
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-- *id030
-- &id039
-  class: azure.mgmt.batch.operations.ApplicationPackageOperations
-  exceptions: *id031
-  fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.get
-  langs:
-  - python
-  module: azure.mgmt.batch.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-batch\azure\mgmt\batch\operations\application_package_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 244
-  summary: 'Gets information about the specified application package.
-
-    '
-  syntax:
-    content: get(resource_group_name, account_name, application_id, version, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the Batch account.
-
-        '
-      id: resource_group_name
-      type: *id032
-    - description: 'The name of the Batch account.
-
-        '
-      id: account_name
-      type: *id033
-    - description: 'The ID of the application.
-
-        '
-      id: application_id
-      type: *id034
-    - description: 'The version of the application.
-
-        '
-      id: version
-      type: *id035
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id036
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id037
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id038
-  type: method
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.get
-- *id039
 references:
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-  isExternal: false
-  name: activate
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.create
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.get
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-  isExternal: false
-  name: activate
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.create
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.delete
-- fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.batch.operations.ApplicationPackageOperations
-  uid: azure.mgmt.batch.operations.ApplicationPackageOperations.get
 - fullName: azure.mgmt.batch.operations.ApplicationPackageOperations.activate
   isExternal: false
   name: activate

@@ -34,7 +34,7 @@ items:
     '
   syntax:
     content: SBNamespace(location, tags=None, sku=None)
-    parameters: &id001
+    parameters:
     - description: 'The Geo-location where the resource live
 
         '
@@ -53,7 +53,7 @@ items:
       id: sku
       type:
       - azure.mgmt.servicebus.models.SBSku
-    variables: &id002
+    variables:
     - description: 'Resource Id
 
         '
@@ -104,43 +104,6 @@ items:
       id: metric_id
       type:
       - str
-  type: class
-  uid: azure.mgmt.servicebus.models.SBNamespace
-- children: []
-  class: azure.mgmt.servicebus.models.SBNamespace
-  fullName: azure.mgmt.servicebus.models.SBNamespace
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - inheritance:
-        - type: builtins.object
-        type: msrest.serialization.Model
-      type: azure.mgmt.servicebus.models.resource.Resource
-    type: azure.mgmt.servicebus.models.tracked_resource.TrackedResource
-  langs:
-  - python
-  module: azure.mgmt.servicebus.models
-  name: SBNamespace
-  source:
-    id: SBNamespace
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sb_namespace.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sb_namespace.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Description of a namespace resource.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: SBNamespace(location, tags=None, sku=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.servicebus.models.SBNamespace
 references: []

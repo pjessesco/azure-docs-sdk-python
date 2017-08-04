@@ -37,7 +37,7 @@ items:
       gateway_site_name=None, client_affinity_enabled=None, client_cert_enabled=None,
       host_names_disabled=None, container_size=None, daily_memory_time_quota=None,
       cloning_info=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource Name.
 
         '
@@ -200,7 +200,7 @@ items:
       id: cloning_info
       type:
       - azure.mgmt.web.models.CloningInfo
-    variables: &id002
+    variables:
     - description: 'Resource Id.
 
         '
@@ -349,46 +349,6 @@ items:
       - '@azure.mgmt.web.models.SlotSwapStatus
 
         '
-  type: class
-  uid: azure.mgmt.web.models.DeletedSite
-- children: []
-  class: azure.mgmt.web.models.DeletedSite
-  fullName: azure.mgmt.web.models.DeletedSite
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.web.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.web.models
-  name: DeletedSite
-  source:
-    id: DeletedSite
-    path: azure-mgmt-web\azure\mgmt\web\models\deleted_site.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\models\deleted_site.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'A deleted app.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: DeletedSite(location, name=None, kind=None, type=None, tags=None, enabled=None,
-      host_name_ssl_states=None, server_farm_id=None, reserved=False, site_config=None,
-      scm_site_also_stopped=False, hosting_environment_profile=None, micro_service='WebSites',
-      gateway_site_name=None, client_affinity_enabled=None, client_cert_enabled=None,
-      host_names_disabled=None, container_size=None, daily_memory_time_quota=None,
-      cloning_info=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.web.models.DeletedSite
 references: []

@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.cdn.operations.EdgeNodesOperations.list
-  - azure.mgmt.cdn.operations.EdgeNodesOperations.list
   class: azure.mgmt.cdn.operations.EdgeNodesOperations
   fullName: azure.mgmt.cdn.operations.EdgeNodesOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: EdgeNodesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Version of the API to be used with the client request. Current
         version is 2016-10-02. Constant value: "2016-10-02".
 
@@ -52,7 +51,7 @@ items:
   type: class
   uid: azure.mgmt.cdn.operations.EdgeNodesOperations
 - class: azure.mgmt.cdn.operations.EdgeNodesOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.EdgeNodesOperations.list
   langs:
@@ -78,7 +77,7 @@ items:
 
         '
       id: custom_headers
-      type: &id004
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -87,7 +86,7 @@ items:
 
         '
       id: raw
-      type: &id005
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -95,96 +94,12 @@ items:
 
         '
       id: operation_config
-    return: &id006
+    return:
       type:
       - azure.mgmt.cdn.models.EdgeNodePaged
   type: method
   uid: azure.mgmt.cdn.operations.EdgeNodesOperations.list
-- children:
-  - azure.mgmt.cdn.operations.EdgeNodesOperations.list
-  class: azure.mgmt.cdn.operations.EdgeNodesOperations
-  fullName: azure.mgmt.cdn.operations.EdgeNodesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: EdgeNodesOperations
-  source:
-    id: EdgeNodesOperations
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\edge_nodes_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\edge_nodes_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'EdgeNodesOperations operations.
-
-
-    '
-  syntax:
-    content: EdgeNodesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.cdn.operations.EdgeNodesOperations
-- &id007
-  class: azure.mgmt.cdn.operations.EdgeNodesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.cdn.operations.EdgeNodesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\edge_nodes_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\edge_nodes_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Lists all the edge nodes of a CDN service.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id004
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id005
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id006
-  type: method
-  uid: azure.mgmt.cdn.operations.EdgeNodesOperations.list
-- *id007
 references:
-- fullName: azure.mgmt.cdn.operations.EdgeNodesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.cdn.operations.EdgeNodesOperations
-  uid: azure.mgmt.cdn.operations.EdgeNodesOperations.list
-- fullName: azure.mgmt.cdn.operations.EdgeNodesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.cdn.operations.EdgeNodesOperations
-  uid: azure.mgmt.cdn.operations.EdgeNodesOperations.list
 - fullName: azure.mgmt.cdn.operations.EdgeNodesOperations.list
   isExternal: false
   name: list

@@ -31,7 +31,7 @@ items:
   syntax:
     content: AlertRuleResourcePatch(name, is_enabled, condition, tags=None, description=None,
       actions=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource tags
 
         '
@@ -78,47 +78,13 @@ items:
       - 'list of @azure.mgmt.monitor.models.RuleAction
 
         '
-    variables: &id002
+    variables:
     - description: 'Last time the rule was updated in ISO8601 format.
 
         '
       id: last_updated_time
       type:
       - datetime
-  type: class
-  uid: azure.mgmt.monitor.models.AlertRuleResourcePatch
-- children: []
-  class: azure.mgmt.monitor.models.AlertRuleResourcePatch
-  fullName: azure.mgmt.monitor.models.AlertRuleResourcePatch
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.mgmt.monitor.models
-  name: AlertRuleResourcePatch
-  source:
-    id: AlertRuleResourcePatch
-    path: azure-mgmt-monitor\azure\mgmt\monitor\models\alert_rule_resource_patch.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\models\alert_rule_resource_patch.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'The alert rule object for patch operations.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: AlertRuleResourcePatch(name, is_enabled, condition, tags=None, description=None,
-      actions=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.monitor.models.AlertRuleResourcePatch
 references: []

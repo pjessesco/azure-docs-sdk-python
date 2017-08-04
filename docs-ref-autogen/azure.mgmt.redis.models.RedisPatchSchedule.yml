@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: RedisPatchSchedule(schedule_entries)
-    parameters: &id001
+    parameters:
     - description: 'List of patch schedules for a Redis cache.
 
         '
@@ -39,7 +39,7 @@ items:
       - 'list of @azure.mgmt.redis.models.ScheduleEntry
 
         '
-    variables: &id002
+    variables:
     - description: 'Resource ID.
 
         '
@@ -64,39 +64,6 @@ items:
       id: location
       type:
       - str
-  type: class
-  uid: azure.mgmt.redis.models.RedisPatchSchedule
-- children: []
-  class: azure.mgmt.redis.models.RedisPatchSchedule
-  fullName: azure.mgmt.redis.models.RedisPatchSchedule
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.mgmt.redis.models
-  name: RedisPatchSchedule
-  source:
-    id: RedisPatchSchedule
-    path: azure-mgmt-redis\azure\mgmt\redis\models\redis_patch_schedule.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\models\redis_patch_schedule.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Response to put/get patch schedules for Redis cache.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: RedisPatchSchedule(schedule_entries)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.redis.models.RedisPatchSchedule
 references: []

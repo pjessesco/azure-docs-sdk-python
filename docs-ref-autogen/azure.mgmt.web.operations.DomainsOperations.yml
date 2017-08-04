@@ -15,19 +15,6 @@ items:
   - azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
   - azure.mgmt.web.operations.DomainsOperations.list_recommendations
   - azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-  - azure.mgmt.web.operations.DomainsOperations.check_availability
-  - azure.mgmt.web.operations.DomainsOperations.create_or_update
-  - azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-  - azure.mgmt.web.operations.DomainsOperations.delete
-  - azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-  - azure.mgmt.web.operations.DomainsOperations.get
-  - azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-  - azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-  - azure.mgmt.web.operations.DomainsOperations.list
-  - azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-  - azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-  - azure.mgmt.web.operations.DomainsOperations.list_recommendations
-  - azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
   class: azure.mgmt.web.operations.DomainsOperations
   fullName: azure.mgmt.web.operations.DomainsOperations
   inheritance:
@@ -62,7 +49,7 @@ items:
     '
   syntax:
     content: DomainsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -79,7 +66,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'API Version. Constant value: "2015-04-01".
 
         '
@@ -87,7 +74,7 @@ items:
   type: class
   uid: azure.mgmt.web.operations.DomainsOperations
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.check_availability
   langs:
@@ -116,14 +103,14 @@ items:
 
         '
       id: name
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -132,7 +119,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -140,16 +127,16 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.mgmt.web.models.DomainAvailablilityCheckResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.check_availability
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id009
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update
   langs:
@@ -180,26 +167,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id010
+      type:
       - str
     - description: 'Name of the domain.
 
         '
       id: domain_name
-      type: &id011
+      type:
       - str
     - description: 'Domain registration information.
 
         '
       id: domain
-      type: &id012
+      type:
       - azure.mgmt.web.models.Domain
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id013
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -208,20 +195,20 @@ items:
 
         '
       id: raw
-      type: &id014
-      - bool
-    return: &id015
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.web.models.Domain'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.create_or_update
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id017
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
   langs:
@@ -256,19 +243,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id018
+      type:
       - str
     - description: 'Name of domain.
 
         '
       id: domain_name
-      type: &id019
+      type:
       - str
     - description: 'Name of identifier.
 
         '
       id: name
-      type: &id020
+      type:
       - str
     - description: 'A JSON representation of the
 
@@ -276,14 +263,14 @@ items:
 
         '
       id: domain_ownership_identifier
-      type: &id021
+      type:
       - azure.mgmt.web.models.DomainOwnershipIdentifier
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -292,7 +279,7 @@ items:
 
         '
       id: raw
-      type: &id023
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -300,16 +287,16 @@ items:
 
         '
       id: operation_config
-    return: &id024
+    return:
       type:
       - azure.mgmt.web.models.DomainOwnershipIdentifier
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id026
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.delete
   langs:
@@ -340,13 +327,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id027
+      type:
       - str
     - description: 'Name of the domain.
 
         '
       id: domain_name
-      type: &id028
+      type:
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to delete
@@ -357,14 +344,14 @@ items:
 
         '
       id: force_hard_delete_domain
-      type: &id029
+      type:
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -373,7 +360,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -381,16 +368,16 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.delete
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id034
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
   langs:
@@ -421,26 +408,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id035
+      type:
       - str
     - description: 'Name of domain.
 
         '
       id: domain_name
-      type: &id036
+      type:
       - str
     - description: 'Name of identifier.
 
         '
       id: name
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -449,7 +436,7 @@ items:
 
         '
       id: raw
-      type: &id039
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -457,16 +444,16 @@ items:
 
         '
       id: operation_config
-    return: &id040
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id042
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.get
   langs:
@@ -497,20 +484,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id043
+      type:
       - str
     - description: 'Name of the domain.
 
         '
       id: domain_name
-      type: &id044
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id045
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -519,7 +506,7 @@ items:
 
         '
       id: raw
-      type: &id046
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -527,16 +514,16 @@ items:
 
         '
       id: operation_config
-    return: &id047
+    return:
       type:
       - azure.mgmt.web.models.Domain
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.get
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id049
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
   langs:
@@ -565,7 +552,7 @@ items:
 
         '
       id: custom_headers
-      type: &id050
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -574,7 +561,7 @@ items:
 
         '
       id: raw
-      type: &id051
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -582,16 +569,16 @@ items:
 
         '
       id: operation_config
-    return: &id052
+    return:
       type:
       - azure.mgmt.web.models.DomainControlCenterSsoRequest
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id054
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
   langs:
@@ -622,26 +609,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id055
+      type:
       - str
     - description: 'Name of domain.
 
         '
       id: domain_name
-      type: &id056
+      type:
       - str
     - description: 'Name of identifier.
 
         '
       id: name
-      type: &id057
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id058
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -650,7 +637,7 @@ items:
 
         '
       id: raw
-      type: &id059
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -658,16 +645,16 @@ items:
 
         '
       id: operation_config
-    return: &id060
+    return:
       type:
       - azure.mgmt.web.models.DomainOwnershipIdentifier
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id062
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.list
   langs:
@@ -696,7 +683,7 @@ items:
 
         '
       id: custom_headers
-      type: &id063
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -705,7 +692,7 @@ items:
 
         '
       id: raw
-      type: &id064
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -713,13 +700,13 @@ items:
 
         '
       id: operation_config
-    return: &id065
+    return:
       type:
       - azure.mgmt.web.models.DomainPaged
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.list
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id067
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
   langs:
@@ -750,14 +737,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id068
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id069
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -766,7 +753,7 @@ items:
 
         '
       id: raw
-      type: &id070
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -774,13 +761,13 @@ items:
 
         '
       id: operation_config
-    return: &id071
+    return:
       type:
       - azure.mgmt.web.models.DomainPaged
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id073
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
   langs:
@@ -811,20 +798,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id074
+      type:
       - str
     - description: 'Name of domain.
 
         '
       id: domain_name
-      type: &id075
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id076
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -833,7 +820,7 @@ items:
 
         '
       id: raw
-      type: &id077
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -841,13 +828,13 @@ items:
 
         '
       id: operation_config
-    return: &id078
+    return:
       type:
       - azure.mgmt.web.models.DomainOwnershipIdentifierPaged
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id080
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.list_recommendations
   langs:
@@ -879,21 +866,21 @@ items:
 
         '
       id: keywords
-      type: &id081
+      type:
       - str
     - defaultValue: None
       description: 'Maximum number of recommendations.
 
         '
       id: max_domain_recommendations
-      type: &id082
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id083
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -902,7 +889,7 @@ items:
 
         '
       id: raw
-      type: &id084
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -910,13 +897,13 @@ items:
 
         '
       id: operation_config
-    return: &id085
+    return:
       type:
       - azure.mgmt.web.models.NameIdentifierPaged
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.list_recommendations
 - class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: &id087
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
   langs:
@@ -951,19 +938,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id088
+      type:
       - str
     - description: 'Name of domain.
 
         '
       id: domain_name
-      type: &id089
+      type:
       - str
     - description: 'Name of identifier.
 
         '
       id: name
-      type: &id090
+      type:
       - str
     - description: 'A JSON representation of the
 
@@ -971,14 +958,14 @@ items:
 
         '
       id: domain_ownership_identifier
-      type: &id091
+      type:
       - azure.mgmt.web.models.DomainOwnershipIdentifier
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id092
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -987,7 +974,7 @@ items:
 
         '
       id: raw
-      type: &id093
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -995,1018 +982,15 @@ items:
 
         '
       id: operation_config
-    return: &id094
+    return:
       type:
       - azure.mgmt.web.models.DomainOwnershipIdentifier
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-- children:
-  - azure.mgmt.web.operations.DomainsOperations.check_availability
-  - azure.mgmt.web.operations.DomainsOperations.create_or_update
-  - azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-  - azure.mgmt.web.operations.DomainsOperations.delete
-  - azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-  - azure.mgmt.web.operations.DomainsOperations.get
-  - azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-  - azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-  - azure.mgmt.web.operations.DomainsOperations.list
-  - azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-  - azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-  - azure.mgmt.web.operations.DomainsOperations.list_recommendations
-  - azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-  class: azure.mgmt.web.operations.DomainsOperations
-  fullName: azure.mgmt.web.operations.DomainsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: DomainsOperations
-  source:
-    id: DomainsOperations
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'DomainsOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: DomainsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.web.operations.DomainsOperations
-- &id008
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.web.operations.DomainsOperations.check_availability
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: check_availability
-  source:
-    id: check_availability
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Check if a domain is available for registration.
-
-
-    Check if a domain is available for registration.
-
-    '
-  syntax:
-    content: check_availability(name=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'Name of the object.
-
-        '
-      id: name
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.check_availability
-- *id008
-- &id016
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id009
-  fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 434
-  summary: 'Creates or updates a domain.
-
-
-    Creates or updates a domain.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, domain_name, domain, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id010
-    - description: 'Name of the domain.
-
-        '
-      id: domain_name
-      type: *id011
-    - description: 'Domain registration information.
-
-        '
-      id: domain
-      type: *id012
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id013
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id014
-    return: *id015
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.create_or_update
-- *id016
-- &id025
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id017
-  fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: create_or_update_ownership_identifier
-  source:
-    id: create_or_update_ownership_identifier
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 732
-  summary: 'Creates an ownership identifier for a domain or updates identifier
-
-    details for an existing identifer.
-
-
-    Creates an ownership identifier for a domain or updates identifier
-
-    details for an existing identifer.
-
-    '
-  syntax:
-    content: create_or_update_ownership_identifier(resource_group_name, domain_name,
-      name, domain_ownership_identifier, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id018
-    - description: 'Name of domain.
-
-        '
-      id: domain_name
-      type: *id019
-    - description: 'Name of identifier.
-
-        '
-      id: name
-      type: *id020
-    - description: 'A JSON representation of the
-
-        domain ownership properties.
-
-        '
-      id: domain_ownership_identifier
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id024
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-- *id025
-- &id033
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id026
-  fullName: azure.mgmt.web.operations.DomainsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 529
-  summary: 'Delete a domain.
-
-
-    Delete a domain.
-
-    '
-  syntax:
-    content: delete(resource_group_name, domain_name, force_hard_delete_domain=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id027
-    - description: 'Name of the domain.
-
-        '
-      id: domain_name
-      type: *id028
-    - defaultValue: None
-      description: 'Specify <code>true</code> to delete
-
-        the domain immediately. The default is <code>false</code> which
-
-        deletes the domain after 24 hours.
-
-        '
-      id: force_hard_delete_domain
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.delete
-- *id033
-- &id041
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id034
-  fullName: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: delete_ownership_identifier
-  source:
-    id: delete_ownership_identifier
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 810
-  summary: 'Delete ownership identifier for domain.
-
-
-    Delete ownership identifier for domain.
-
-    '
-  syntax:
-    content: delete_ownership_identifier(resource_group_name, domain_name, name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id035
-    - description: 'Name of domain.
-
-        '
-      id: domain_name
-      type: *id036
-    - description: 'Name of identifier.
-
-        '
-      id: name
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id040
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-- *id041
-- &id048
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id042
-  fullName: azure.mgmt.web.operations.DomainsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 370
-  summary: 'Get a domain.
-
-
-    Get a domain.
-
-    '
-  syntax:
-    content: get(resource_group_name, domain_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id043
-    - description: 'Name of the domain.
-
-        '
-      id: domain_name
-      type: *id044
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id045
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id046
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id047
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.get
-- *id048
-- &id053
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id049
-  fullName: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: get_control_center_sso_request
-  source:
-    id: get_control_center_sso_request
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 169
-  summary: 'Generate a single sign-on request for the domain management portal.
-
-
-    Generate a single sign-on request for the domain management portal.
-
-    '
-  syntax:
-    content: get_control_center_sso_request(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id050
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id051
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id052
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-- *id053
-- &id061
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id054
-  fullName: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: get_ownership_identifier
-  source:
-    id: get_ownership_identifier
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 664
-  summary: 'Get ownership identifier for domain.
-
-
-    Get ownership identifier for domain.
-
-    '
-  syntax:
-    content: get_ownership_identifier(resource_group_name, domain_name, name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id055
-    - description: 'Name of domain.
-
-        '
-      id: domain_name
-      type: *id056
-    - description: 'Name of identifier.
-
-        '
-      id: name
-      type: *id057
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id058
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id059
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id060
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-- *id061
-- &id066
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id062
-  fullName: azure.mgmt.web.operations.DomainsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 105
-  summary: 'Get all domains in a subscription.
-
-
-    Get all domains in a subscription.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id063
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id064
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id065
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.list
-- *id066
-- &id072
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id067
-  fullName: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 302
-  summary: 'Get all domains in a resource group.
-
-
-    Get all domains in a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id068
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id069
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id070
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id071
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-- *id072
-- &id079
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id073
-  fullName: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: list_ownership_identifiers
-  source:
-    id: list_ownership_identifiers
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 592
-  summary: 'Lists domain ownership identifiers.
-
-
-    Lists domain ownership identifiers.
-
-    '
-  syntax:
-    content: list_ownership_identifiers(resource_group_name, domain_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id074
-    - description: 'Name of domain.
-
-        '
-      id: domain_name
-      type: *id075
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id076
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id077
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id078
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-- *id079
-- &id086
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id080
-  fullName: azure.mgmt.web.operations.DomainsOperations.list_recommendations
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: list_recommendations
-  source:
-    id: list_recommendations
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 227
-  summary: 'Get domain name recommendations based on keywords.
-
-
-    Get domain name recommendations based on keywords.
-
-    '
-  syntax:
-    content: list_recommendations(keywords=None, max_domain_recommendations=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'Keywords to be used for generating domain
-
-        recommendations.
-
-        '
-      id: keywords
-      type: *id081
-    - defaultValue: None
-      description: 'Maximum number of recommendations.
-
-        '
-      id: max_domain_recommendations
-      type: *id082
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id083
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id084
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id085
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.list_recommendations
-- *id086
-- &id095
-  class: azure.mgmt.web.operations.DomainsOperations
-  exceptions: *id087
-  fullName: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: update_ownership_identifier
-  source:
-    id: update_ownership_identifier
-    path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\domains_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 870
-  summary: 'Creates an ownership identifier for a domain or updates identifier
-
-    details for an existing identifer.
-
-
-    Creates an ownership identifier for a domain or updates identifier
-
-    details for an existing identifer.
-
-    '
-  syntax:
-    content: update_ownership_identifier(resource_group_name, domain_name, name, domain_ownership_identifier,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id088
-    - description: 'Name of domain.
-
-        '
-      id: domain_name
-      type: *id089
-    - description: 'Name of identifier.
-
-        '
-      id: name
-      type: *id090
-    - description: 'A JSON representation of the
-
-        domain ownership properties.
-
-        '
-      id: domain_ownership_identifier
-      type: *id091
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id092
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id093
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id094
-  type: method
-  uid: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-- *id095
 references:
-- fullName: azure.mgmt.web.operations.DomainsOperations.check_availability
-  isExternal: false
-  name: check_availability
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.check_availability
-- fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.create_or_update
-- fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-  isExternal: false
-  name: create_or_update_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-- fullName: azure.mgmt.web.operations.DomainsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.delete
-- fullName: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-  isExternal: false
-  name: delete_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-- fullName: azure.mgmt.web.operations.DomainsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.get
-- fullName: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-  isExternal: false
-  name: get_control_center_sso_request
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-- fullName: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-  isExternal: false
-  name: get_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-- fullName: azure.mgmt.web.operations.DomainsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list
-- fullName: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-- fullName: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-  isExternal: false
-  name: list_ownership_identifiers
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-- fullName: azure.mgmt.web.operations.DomainsOperations.list_recommendations
-  isExternal: false
-  name: list_recommendations
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list_recommendations
-- fullName: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-  isExternal: false
-  name: update_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-- fullName: azure.mgmt.web.operations.DomainsOperations.check_availability
-  isExternal: false
-  name: check_availability
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.check_availability
-- fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.create_or_update
-- fullName: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-  isExternal: false
-  name: create_or_update_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.create_or_update_ownership_identifier
-- fullName: azure.mgmt.web.operations.DomainsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.delete
-- fullName: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-  isExternal: false
-  name: delete_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.delete_ownership_identifier
-- fullName: azure.mgmt.web.operations.DomainsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.get
-- fullName: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-  isExternal: false
-  name: get_control_center_sso_request
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.get_control_center_sso_request
-- fullName: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-  isExternal: false
-  name: get_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.get_ownership_identifier
-- fullName: azure.mgmt.web.operations.DomainsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list
-- fullName: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list_by_resource_group
-- fullName: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-  isExternal: false
-  name: list_ownership_identifiers
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list_ownership_identifiers
-- fullName: azure.mgmt.web.operations.DomainsOperations.list_recommendations
-  isExternal: false
-  name: list_recommendations
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.list_recommendations
-- fullName: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
-  isExternal: false
-  name: update_ownership_identifier
-  parent: azure.mgmt.web.operations.DomainsOperations
-  uid: azure.mgmt.web.operations.DomainsOperations.update_ownership_identifier
 - fullName: azure.mgmt.web.operations.DomainsOperations.check_availability
   isExternal: false
   name: check_availability

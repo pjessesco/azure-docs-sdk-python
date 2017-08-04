@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: Registry(location, sku, tags=None, admin_user_enabled=False, storage_account=None)
-    parameters: &id001
+    parameters:
     - description: 'The location of the resource. This cannot be changed
 
         after the resource is created.
@@ -69,7 +69,7 @@ items:
       id: storage_account
       type:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.StorageAccountProperties
-    variables: &id002
+    variables:
     - description: 'The resource ID.
 
         '
@@ -126,41 +126,6 @@ items:
       - '@azure.mgmt.containerregistry.v2017_06_01_preview.models.Status
 
         '
-  type: class
-  uid: azure.mgmt.containerregistry.v2017_06_01_preview.models.Registry
-- children: []
-  class: azure.mgmt.containerregistry.v2017_06_01_preview.models.Registry
-  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.models.Registry
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.containerregistry.v2017_06_01_preview.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_06_01_preview.models
-  name: Registry
-  source:
-    id: Registry
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\models\registry.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\models\registry.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'An object that represents a container registry.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: Registry(location, sku, tags=None, admin_user_enabled=False, storage_account=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.models.Registry
 references: []

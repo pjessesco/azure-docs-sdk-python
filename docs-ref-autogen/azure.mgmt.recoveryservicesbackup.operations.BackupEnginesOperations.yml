@@ -4,8 +4,6 @@ items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
   - azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-  - azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-  - azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
   class: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
   inheritance:
@@ -29,7 +27,7 @@ items:
     '
   syntax:
     content: BackupEnginesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -46,7 +44,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -54,7 +52,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
   langs:
@@ -80,7 +78,7 @@ items:
 
         '
       id: vault_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the resource group where the
 
@@ -88,34 +86,34 @@ items:
 
         '
       id: resource_group_name
-      type: &id005
+      type:
       - str
     - description: 'Name of the backup management server.
 
         '
       id: backup_engine_name
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'OData filter options.
 
         '
       id: filter
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'skipToken Filter.
 
         '
       id: skip_token
-      type: &id008
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -124,7 +122,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -132,16 +130,16 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       type:
       - azure.mgmt.recoveryservicesbackup.models.BackupEngineBaseResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
 - class: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  exceptions: &id013
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
   langs:
@@ -169,7 +167,7 @@ items:
 
         '
       id: vault_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the resource group where the
 
@@ -177,28 +175,28 @@ items:
 
         '
       id: resource_group_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'OData filter options.
 
         '
       id: filter
-      type: &id016
+      type:
       - str
     - defaultValue: None
       description: 'skipToken Filter.
 
         '
       id: skip_token
-      type: &id017
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id018
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -207,7 +205,7 @@ items:
 
         '
       id: raw
-      type: &id019
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -215,211 +213,12 @@ items:
 
         '
       id: operation_config
-    return: &id020
+    return:
       type:
       - azure.mgmt.recoveryservicesbackup.models.BackupEngineBaseResourcePaged
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-- children:
-  - azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-  - azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-  class: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: BackupEnginesOperations
-  source:
-    id: BackupEnginesOperations
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_engines_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_engines_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'BackupEnginesOperations operations.
-
-
-
-    '
-  syntax:
-    content: BackupEnginesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-- &id012
-  class: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_engines_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_engines_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 117
-  summary: 'Returns backup management server registered to Recovery Services Vault.
-
-    '
-  syntax:
-    content: get(vault_name, resource_group_name, backup_engine_name, filter=None,
-      skip_token=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id004
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id005
-    - description: 'Name of the backup management server.
-
-        '
-      id: backup_engine_name
-      type: *id006
-    - defaultValue: None
-      description: 'OData filter options.
-
-        '
-      id: filter
-      type: *id007
-    - defaultValue: None
-      description: 'skipToken Filter.
-
-        '
-      id: skip_token
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-- *id012
-- &id021
-  class: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  exceptions: *id013
-  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_engines_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_engines_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Backup management servers registered to Recovery Services Vault.
-
-    Returns a pageable list of servers.
-
-    '
-  syntax:
-    content: list(vault_name, resource_group_name, filter=None, skip_token=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id014
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id015
-    - defaultValue: None
-      description: 'OData filter options.
-
-        '
-      id: filter
-      type: *id016
-    - defaultValue: None
-      description: 'skipToken Filter.
-
-        '
-      id: skip_token
-      type: *id017
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id018
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id019
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id020
-  type: method
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-- *id021
 references:
-- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
-- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.list
 - fullName: azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.get
   isExternal: false
   name: get

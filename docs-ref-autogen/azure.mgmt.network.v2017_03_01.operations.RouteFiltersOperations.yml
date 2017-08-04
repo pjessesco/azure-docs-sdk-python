@@ -8,12 +8,6 @@ items:
   - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
   - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
   - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
   class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
   fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: RouteFiltersOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-03-01".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
 - class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
   langs:
@@ -92,13 +86,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the route filter.
 
         '
       id: route_filter_name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the create or
 
@@ -106,14 +100,14 @@ items:
 
         '
       id: route_filter_parameters
-      type: &id006
+      type:
       - azure.mgmt.network.v2017_03_01.models.RouteFilter
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,20 +116,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.RouteFilter'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
 - class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
   langs:
@@ -161,20 +155,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the route filter.
 
         '
       id: route_filter_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -183,20 +177,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
 - class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
   langs:
@@ -222,27 +216,27 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the route filter.
 
         '
       id: route_filter_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'Expands referenced express route bgp peering resources.
 
         '
       id: expand
-      type: &id021
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -251,7 +245,7 @@ items:
 
         '
       id: raw
-      type: &id023
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -259,16 +253,16 @@ items:
 
         '
       id: operation_config
-    return: &id024
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.RouteFilter
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
 - class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: &id026
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
   langs:
@@ -294,7 +288,7 @@ items:
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -303,7 +297,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -311,13 +305,13 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.RouteFilterPaged
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
 - class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
   langs:
@@ -343,14 +337,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id033
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -359,7 +353,7 @@ items:
 
         '
       id: raw
-      type: &id034
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -367,13 +361,13 @@ items:
 
         '
       id: operation_config
-    return: &id035
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.RouteFilterPaged
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
 - class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: &id037
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
   langs:
@@ -399,13 +393,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id038
+      type:
       - str
     - description: 'The name of the route filter.
 
         '
       id: route_filter_name
-      type: &id039
+      type:
       - str
     - description: 'Parameters supplied to the update
 
@@ -413,14 +407,14 @@ items:
 
         '
       id: route_filter_parameters
-      type: &id040
+      type:
       - azure.mgmt.network.v2017_03_01.models.PatchRouteFilter
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -429,445 +423,19 @@ items:
 
         '
       id: raw
-      type: &id042
-      - bool
-    return: &id043
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.RouteFilter'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-- children:
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-  - azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-  class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: RouteFiltersOperations
-  source:
-    id: RouteFiltersOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'RouteFiltersOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: RouteFiltersOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-- &id010
-  class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 182
-  summary: 'Creates or updates a route filter in a specified resource group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, route_filter_name, route_filter_parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the route filter.
-
-        '
-      id: route_filter_name
-      type: *id005
-    - description: 'Parameters supplied to the create or
-
-        update route filter operation.
-
-        '
-      id: route_filter_parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: *id011
-  fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes the specified route filter.
-
-    '
-  syntax:
-    content: delete(resource_group_name, route_filter_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the route filter.
-
-        '
-      id: route_filter_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-- *id017
-- &id025
-  class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: *id018
-  fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 116
-  summary: 'Gets the specified route filter.
-
-    '
-  syntax:
-    content: get(resource_group_name, route_filter_name, expand=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the route filter.
-
-        '
-      id: route_filter_name
-      type: *id020
-    - defaultValue: None
-      description: 'Expands referenced express route bgp peering resources.
-
-        '
-      id: expand
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id024
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-- *id025
-- &id030
-  class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: *id026
-  fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 436
-  summary: 'Gets all route filters in a subscription.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-- *id030
-- &id036
-  class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: *id031
-  fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 370
-  summary: 'Gets all route filters in a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id032
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id033
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id034
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id035
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-- *id036
-- &id044
-  class: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  exceptions: *id037
-  fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\route_filters_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 277
-  summary: 'Updates a route filter in a specified resource group.
-
-    '
-  syntax:
-    content: update(resource_group_name, route_filter_name, route_filter_parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id038
-    - description: 'The name of the route filter.
-
-        '
-      id: route_filter_name
-      type: *id039
-    - description: 'Parameters supplied to the update
-
-        route filter operation.
-
-        '
-      id: route_filter_parameters
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    return: *id043
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-- *id044
 references:
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.delete
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.get
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.list_by_resource_group
-- fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.update
 - fullName: azure.mgmt.network.v2017_03_01.operations.RouteFiltersOperations.create_or_update
   isExternal: false
   name: create_or_update

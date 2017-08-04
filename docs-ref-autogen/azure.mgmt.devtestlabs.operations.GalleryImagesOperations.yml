@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-  - azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
   class: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
   fullName: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: GalleryImagesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
 - class: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
   langs:
@@ -77,13 +76,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id005
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -92,14 +91,14 @@ items:
 
         '
       id: expand
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -108,7 +107,7 @@ items:
 
         '
       id: top
-      type: &id008
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -117,14 +116,14 @@ items:
 
         '
       id: orderby
-      type: &id009
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id010
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -133,7 +132,7 @@ items:
 
         '
       id: raw
-      type: &id011
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -141,137 +140,12 @@ items:
 
         '
       id: operation_config
-    return: &id012
+    return:
       type:
       - azure.mgmt.devtestlabs.models.GalleryImagePaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-- children:
-  - azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-  class: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
-  fullName: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: GalleryImagesOperations
-  source:
-    id: GalleryImagesOperations
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\gallery_images_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\gallery_images_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'GalleryImagesOperations operations.
-
-
-    '
-  syntax:
-    content: GalleryImagesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
-- &id013
-  class: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\gallery_images_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\gallery_images_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'List gallery images in a given lab.
-
-    '
-  syntax:
-    content: list(resource_group_name, lab_name, expand=None, filter=None, top=None,
-      orderby=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id005
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=author)''
-
-        '
-      id: expand
-      type: *id006
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id007
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id008
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id009
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id010
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id011
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id012
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-- *id013
 references:
-- fullName: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
-  uid: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.GalleryImagesOperations
-  uid: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
 - fullName: azure.mgmt.devtestlabs.operations.GalleryImagesOperations.list
   isExternal: false
   name: list

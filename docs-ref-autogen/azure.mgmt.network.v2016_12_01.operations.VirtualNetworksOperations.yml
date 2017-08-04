@@ -8,12 +8,6 @@ items:
   - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
   - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
   - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
   class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: VirtualNetworksOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-12-01".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
   langs:
@@ -92,27 +86,27 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id005
+      type:
       - str
     - defaultValue: None
       description: 'The private IP address to be verified.
 
         '
       id: ip_address
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -121,7 +115,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -129,16 +123,16 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       type:
       - azure.mgmt.network.v2016_12_01.models.IPAddressAvailabilityResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
   langs:
@@ -164,13 +158,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id013
+      type:
       - str
     - description: 'Parameters supplied to the create or update virtual
 
@@ -178,14 +172,14 @@ items:
 
         '
       id: parameters
-      type: &id014
+      type:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetwork
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id015
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -194,20 +188,20 @@ items:
 
         '
       id: raw
-      type: &id016
-      - bool
-    return: &id017
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_12_01.models.VirtualNetwork'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: &id019
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
   langs:
@@ -233,20 +227,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id020
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id021
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -255,20 +249,20 @@ items:
 
         '
       id: raw
-      type: &id023
-      - bool
-    return: &id024
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: &id026
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
   langs:
@@ -294,27 +288,27 @@ items:
 
         '
       id: resource_group_name
-      type: &id027
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id028
+      type:
       - str
     - defaultValue: None
       description: 'Expands referenced resources.
 
         '
       id: expand
-      type: &id029
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -323,7 +317,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -331,16 +325,16 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetwork
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: &id034
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
   langs:
@@ -365,14 +359,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id036
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -381,7 +375,7 @@ items:
 
         '
       id: raw
-      type: &id037
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -389,13 +383,13 @@ items:
 
         '
       id: operation_config
-    return: &id038
+    return:
       type:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkPaged
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: &id040
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
   langs:
@@ -421,7 +415,7 @@ items:
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -430,7 +424,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -438,442 +432,12 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkPaged
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-- children:
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: VirtualNetworksOperations
-  source:
-    id: VirtualNetworksOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'VirtualNetworksOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: VirtualNetworksOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-- &id010
-  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: check_ip_address_availability
-  source:
-    id: check_ip_address_availability
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 406
-  summary: 'Checks whether a private IP address is available for use.
-
-    '
-  syntax:
-    content: check_ip_address_availability(resource_group_name, virtual_network_name,
-      ip_address=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id005
-    - defaultValue: None
-      description: 'The private IP address to be verified.
-
-        '
-      id: ip_address
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-- *id010
-- &id018
-  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: *id011
-  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 182
-  summary: 'Creates or updates a virtual network in the specified resource group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, virtual_network_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id013
-    - description: 'Parameters supplied to the create or update virtual
-
-        network operation
-
-        '
-      id: parameters
-      type: *id014
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id015
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id016
-    return: *id017
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-- *id018
-- &id025
-  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: *id019
-  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes the specified virtual network.
-
-    '
-  syntax:
-    content: delete(resource_group_name, virtual_network_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id020
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    return: *id024
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-- *id025
-- &id033
-  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: *id026
-  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 116
-  summary: 'Gets the specified virtual network by resource group.
-
-    '
-  syntax:
-    content: get(resource_group_name, virtual_network_name, expand=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id027
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id028
-    - defaultValue: None
-      description: 'Expands referenced resources.
-
-        '
-      id: expand
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-- *id033
-- &id039
-  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: *id034
-  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 340
-  summary: 'Gets all virtual networks in a resource group.
-
-    '
-  syntax:
-    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id035
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id036
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id037
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id038
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-- *id039
-- &id044
-  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  exceptions: *id040
-  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: list_all
-  source:
-    id: list_all
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 277
-  summary: 'Gets all virtual networks in a subscription.
-
-    '
-  syntax:
-    content: list_all(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-- *id044
 references:
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-  isExternal: false
-  name: check_ip_address_availability
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-  isExternal: false
-  name: check_ip_address_availability
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.delete
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.get
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list
-- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.list_all
 - fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworksOperations.check_ip_address_availability
   isExternal: false
   name: check_ip_address_availability

@@ -30,7 +30,7 @@ items:
       recovery_point_additional_info=None, source_vm_storage_type=None, is_source_vm_encrypted=None,
       key_and_secret=None, is_instant_ilr_session_active=None, recovery_point_tier_details=None,
       is_managed_virtual_machine=None, virtual_machine_size=None)
-    parameters: &id001
+    parameters:
     - description: 'Polymorphic Discriminator
 
         '
@@ -111,38 +111,6 @@ items:
       id: virtual_machine_size
       type:
       - str
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.models.IaasVMRecoveryPoint
-- children: []
-  class: azure.mgmt.recoveryservicesbackup.models.IaasVMRecoveryPoint
-  fullName: azure.mgmt.recoveryservicesbackup.models.IaasVMRecoveryPoint
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.recoveryservicesbackup.models.recovery_point.RecoveryPoint
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.models
-  name: IaasVMRecoveryPoint
-  source:
-    id: IaasVMRecoveryPoint
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\iaas_vm_recovery_point.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\iaas_vm_recovery_point.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'IaaS VM workload specific backup copy.
-
-    '
-  syntax:
-    content: IaasVMRecoveryPoint(recovery_point_type=None, recovery_point_time=None,
-      recovery_point_additional_info=None, source_vm_storage_type=None, is_source_vm_encrypted=None,
-      key_and_secret=None, is_instant_ilr_session_active=None, recovery_point_tier_details=None,
-      is_managed_virtual_machine=None, virtual_machine_size=None)
-    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.IaasVMRecoveryPoint
 references: []

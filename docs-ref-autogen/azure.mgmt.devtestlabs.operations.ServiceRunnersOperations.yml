@@ -6,10 +6,6 @@ items:
   - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
   - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
   - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
   class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
   fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: ServiceRunnersOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
 - class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
   langs:
@@ -86,19 +82,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the service runner.
 
         '
       id: name
-      type: &id006
+      type:
       - str
     - description: 'A container for a managed identity to execute
 
@@ -106,14 +102,14 @@ items:
 
         '
       id: service_runner
-      type: &id007
+      type:
       - azure.mgmt.devtestlabs.models.ServiceRunner
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,7 +118,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -130,16 +126,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.devtestlabs.models.ServiceRunner
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
   langs:
@@ -165,26 +161,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the service runner.
 
         '
       id: name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -193,7 +189,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -201,16 +197,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
 - class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
   langs:
@@ -236,26 +232,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the service runner.
 
         '
       id: name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -264,7 +260,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -272,16 +268,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.devtestlabs.models.ServiceRunner
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
 - class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
   langs:
@@ -307,20 +303,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -329,7 +325,7 @@ items:
 
         '
       id: top
-      type: &id032
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -338,14 +334,14 @@ items:
 
         '
       id: orderby
-      type: &id033
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id034
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -354,7 +350,7 @@ items:
 
         '
       id: raw
-      type: &id035
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -362,358 +358,12 @@ items:
 
         '
       id: operation_config
-    return: &id036
+    return:
       type:
       - azure.mgmt.devtestlabs.models.ServiceRunnerPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-- children:
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-  - azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-  class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: ServiceRunnersOperations
-  source:
-    id: ServiceRunnersOperations
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ServiceRunnersOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: ServiceRunnersOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-- &id011
-  class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: *id003
-  fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 186
-  summary: 'Create or replace an existing Service runner.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, lab_name, name, service_runner,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id005
-    - description: 'The name of the service runner.
-
-        '
-      id: name
-      type: *id006
-    - description: 'A container for a managed identity to execute
-
-        DevTest lab services.
-
-        '
-      id: service_runner
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: *id012
-  fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 261
-  summary: 'Delete service runner.
-
-    '
-  syntax:
-    content: delete(resource_group_name, lab_name, name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id014
-    - description: 'The name of the service runner.
-
-        '
-      id: name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: *id020
-  fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 121
-  summary: 'Get service runner.
-
-    '
-  syntax:
-    content: get(resource_group_name, lab_name, name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id022
-    - description: 'The name of the service runner.
-
-        '
-      id: name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-- *id027
-- &id037
-  class: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  exceptions: *id028
-  fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\service_runners_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'List service runners in a given lab.
-
-    '
-  syntax:
-    content: list(resource_group_name, lab_name, filter=None, top=None, orderby=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id030
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id031
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id032
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id033
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id034
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id035
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id036
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-- *id037
 references:
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations
-  uid: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.list
 - fullName: azure.mgmt.devtestlabs.operations.ServiceRunnersOperations.create_or_update
   isExternal: false
   name: create_or_update

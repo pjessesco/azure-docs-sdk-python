@@ -5,9 +5,6 @@ items:
   - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
   - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
   - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-  - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-  - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-  - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
   class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
   fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
   inheritance:
@@ -32,7 +29,7 @@ items:
     '
   syntax:
     content: VaultExtendedInfoOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -49,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-06-01".
 
         '
@@ -57,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
 - class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
   langs:
@@ -85,26 +82,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the recovery services vault.
 
         '
       id: vault_name
-      type: &id005
+      type:
       - str
     - description: 'resourceResourceExtendedInfoDetails
 
         '
       id: resource_resource_extended_info_details
-      type: &id006
+      type:
       - azure.mgmt.recoveryservices.models.VaultExtendedInfoResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -113,7 +110,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -121,11 +118,11 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       description: '@azure.mgmt.recoveryservices.models.VaultExtendedInfoResource
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -133,11 +130,11 @@ items:
       type:
       - 'azure.mgmt.recoveryservices.models.VaultExtendedInfoResource or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
 - class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
   langs:
@@ -165,20 +162,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the recovery services vault.
 
         '
       id: vault_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -187,7 +184,7 @@ items:
 
         '
       id: raw
-      type: &id015
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -195,11 +192,11 @@ items:
 
         '
       id: operation_config
-    return: &id016
+    return:
       description: '@azure.mgmt.recoveryservices.models.VaultExtendedInfoResource
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -207,11 +204,11 @@ items:
       type:
       - 'azure.mgmt.recoveryservices.models.VaultExtendedInfoResource or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
 - class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
   langs:
@@ -239,26 +236,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the recovery services vault.
 
         '
       id: vault_name
-      type: &id020
+      type:
       - str
     - description: 'resourceResourceExtendedInfoDetails
 
         '
       id: resource_resource_extended_info_details
-      type: &id021
+      type:
       - azure.mgmt.recoveryservices.models.VaultExtendedInfoResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -267,7 +264,7 @@ items:
 
         '
       id: raw
-      type: &id023
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -275,11 +272,11 @@ items:
 
         '
       id: operation_config
-    return: &id024
+    return:
       description: '@azure.mgmt.recoveryservices.models.VaultExtendedInfoResource
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -287,259 +284,10 @@ items:
       type:
       - 'azure.mgmt.recoveryservices.models.VaultExtendedInfoResource or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-- children:
-  - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-  - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-  - azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-  class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: VaultExtendedInfoOperations
-  source:
-    id: VaultExtendedInfoOperations
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'VaultExtendedInfoOperations operations.
-
-
-
-
-    '
-  syntax:
-    content: VaultExtendedInfoOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-- &id010
-  class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  exceptions: *id003
-  fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 104
-  summary: 'Create vault extended info.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, vault_name, resource_resource_extended_info_details,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id005
-    - description: 'resourceResourceExtendedInfoDetails
-
-        '
-      id: resource_resource_extended_info_details
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  exceptions: *id011
-  fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: get
-  source:
-    id: get
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Get the vault extended info.
-
-    '
-  syntax:
-    content: get(resource_group_name, vault_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id016
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-- *id017
-- &id025
-  class: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  exceptions: *id018
-  fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: update
-  source:
-    id: update
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vault_extended_info_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 179
-  summary: 'Update vault extended info.
-
-    '
-  syntax:
-    content: update(resource_group_name, vault_name, resource_resource_extended_info_details,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id020
-    - description: 'resourceResourceExtendedInfoDetails
-
-        '
-      id: resource_resource_extended_info_details
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id024
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-- *id025
 references:
-- fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-- fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-- fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-- fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
-- fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.get
-- fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.update
 - fullName: azure.mgmt.recoveryservices.operations.VaultExtendedInfoOperations.create_or_update
   isExternal: false
   name: create_or_update

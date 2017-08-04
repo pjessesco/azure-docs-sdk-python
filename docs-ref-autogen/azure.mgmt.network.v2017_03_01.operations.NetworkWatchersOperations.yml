@@ -16,20 +16,6 @@ items:
   - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
   - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
   - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
   class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
   inheritance:
@@ -65,7 +51,7 @@ items:
     '
   syntax:
     content: NetworkWatchersOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -82,7 +68,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-03-01".
 
         '
@@ -90,7 +76,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
   langs:
@@ -123,28 +109,28 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the network watcher resource.
 
         '
       id: network_watcher_name
-      type: &id005
+      type:
       - str
     - description: ''
       id: source
-      type: &id006
+      type:
       - azure.mgmt.network.v2017_03_01.models.ConnectivitySource
     - description: ''
       id: destination
-      type: &id007
+      type:
       - azure.mgmt.network.v2017_03_01.models.ConnectivityDestination
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -153,20 +139,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.ConnectivityInformation'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
   langs:
@@ -192,13 +178,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the network watcher.
 
         '
       id: network_watcher_name
-      type: &id014
+      type:
       - str
     - description: 'Parameters that define the network watcher
 
@@ -206,14 +192,14 @@ items:
 
         '
       id: parameters
-      type: &id015
+      type:
       - azure.mgmt.network.v2017_03_01.models.NetworkWatcher
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -222,7 +208,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -230,16 +216,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.NetworkWatcher
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
   langs:
@@ -265,20 +251,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the network watcher.
 
         '
       id: network_watcher_name
-      type: &id022
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id023
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -287,20 +273,20 @@ items:
 
         '
       id: raw
-      type: &id024
-      - bool
-    return: &id025
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id027
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
   langs:
@@ -326,20 +312,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id028
+      type:
       - str
     - description: 'The name of the network watcher.
 
         '
       id: network_watcher_name
-      type: &id029
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -348,7 +334,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -356,16 +342,16 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.NetworkWatcher
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id034
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
   langs:
@@ -393,13 +379,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id035
+      type:
       - str
     - description: 'The name of the network watcher resource.
 
         '
       id: network_watcher_name
-      type: &id036
+      type:
       - str
     - description: 'The target resource where getting the flow
 
@@ -407,14 +393,14 @@ items:
 
         '
       id: target_resource_id
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -423,20 +409,20 @@ items:
 
         '
       id: raw
-      type: &id039
-      - bool
-    return: &id040
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.FlowLogInformation'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id042
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
   langs:
@@ -462,13 +448,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id043
+      type:
       - str
     - description: 'The name of the network watcher.
 
         '
       id: network_watcher_name
-      type: &id044
+      type:
       - str
     - description: 'Parameters that define the source and destination
 
@@ -476,14 +462,14 @@ items:
 
         '
       id: parameters
-      type: &id045
+      type:
       - azure.mgmt.network.v2017_03_01.models.NextHopParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -492,20 +478,20 @@ items:
 
         '
       id: raw
-      type: &id047
-      - bool
-    return: &id048
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.NextHopResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id050
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
   langs:
@@ -531,13 +517,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id051
+      type:
       - str
     - description: 'The name of the network watcher.
 
         '
       id: network_watcher_name
-      type: &id052
+      type:
       - str
     - description: 'The name of the target resource
 
@@ -545,14 +531,14 @@ items:
 
         '
       id: target_resource_group_name
-      type: &id053
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id054
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -561,7 +547,7 @@ items:
 
         '
       id: raw
-      type: &id055
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -569,16 +555,16 @@ items:
 
         '
       id: operation_config
-    return: &id056
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.Topology
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id058
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
   langs:
@@ -604,13 +590,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id059
+      type:
       - str
     - description: 'The name of the network watcher resource.
 
         '
       id: network_watcher_name
-      type: &id060
+      type:
       - str
     - description: 'Parameters that define the resource to
 
@@ -618,14 +604,14 @@ items:
 
         '
       id: parameters
-      type: &id061
+      type:
       - azure.mgmt.network.v2017_03_01.models.TroubleshootingParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id062
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -634,20 +620,20 @@ items:
 
         '
       id: raw
-      type: &id063
-      - bool
-    return: &id064
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.TroubleshootingResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id066
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
   langs:
@@ -673,13 +659,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id067
+      type:
       - str
     - description: 'The name of the network watcher resource.
 
         '
       id: network_watcher_name
-      type: &id068
+      type:
       - str
     - description: 'The target resource ID to query the
 
@@ -687,14 +673,14 @@ items:
 
         '
       id: target_resource_id
-      type: &id069
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id070
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -703,20 +689,20 @@ items:
 
         '
       id: raw
-      type: &id071
-      - bool
-    return: &id072
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.TroubleshootingResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id074
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
   langs:
@@ -744,26 +730,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id075
+      type:
       - str
     - description: 'The name of the network watcher.
 
         '
       id: network_watcher_name
-      type: &id076
+      type:
       - str
     - description: 'ID of the target VM.
 
         '
       id: target_resource_id
-      type: &id077
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id078
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -772,20 +758,20 @@ items:
 
         '
       id: raw
-      type: &id079
-      - bool
-    return: &id080
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.SecurityGroupViewResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id082
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
   langs:
@@ -810,14 +796,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id083
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id084
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -826,7 +812,7 @@ items:
 
         '
       id: raw
-      type: &id085
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -834,13 +820,13 @@ items:
 
         '
       id: operation_config
-    return: &id086
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.NetworkWatcherPaged
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id088
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
   langs:
@@ -866,7 +852,7 @@ items:
 
         '
       id: custom_headers
-      type: &id089
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -875,7 +861,7 @@ items:
 
         '
       id: raw
-      type: &id090
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -883,13 +869,13 @@ items:
 
         '
       id: operation_config
-    return: &id091
+    return:
       type:
       - azure.mgmt.network.v2017_03_01.models.NetworkWatcherPaged
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id093
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
   langs:
@@ -917,13 +903,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id094
+      type:
       - str
     - description: 'The name of the network watcher resource.
 
         '
       id: network_watcher_name
-      type: &id095
+      type:
       - str
     - description: 'Parameters that define the configuration of flow
 
@@ -931,14 +917,14 @@ items:
 
         '
       id: parameters
-      type: &id096
+      type:
       - azure.mgmt.network.v2017_03_01.models.FlowLogInformation
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id097
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -947,20 +933,20 @@ items:
 
         '
       id: raw
-      type: &id098
-      - bool
-    return: &id099
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.FlowLogInformation'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
 - class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: &id101
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
   langs:
@@ -988,26 +974,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id102
+      type:
       - str
     - description: 'The name of the network watcher.
 
         '
       id: network_watcher_name
-      type: &id103
+      type:
       - str
     - description: 'Parameters that define the IP flow to be verified.
 
         '
       id: parameters
-      type: &id104
+      type:
       - azure.mgmt.network.v2017_03_01.models.VerificationIPFlowParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id105
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1016,1020 +1002,19 @@ items:
 
         '
       id: raw
-      type: &id106
-      - bool
-    return: &id107
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_03_01.models.VerificationIPFlowResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-- children:
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-  - azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: NetworkWatchersOperations
-  source:
-    id: NetworkWatchersOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'NetworkWatchersOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: NetworkWatchersOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-- &id011
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: check_connectivity
-  source:
-    id: check_connectivity
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1120
-  summary: 'Verifies the possibility of establishing a direct TCP connection from
-    a
-
-    virtual machine to a given endpoint including another VM or an
-
-    arbitrary remote server.
-
-    '
-  syntax:
-    content: check_connectivity(resource_group_name, network_watcher_name, source,
-      destination, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the network watcher resource
-
-        group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the network watcher resource.
-
-        '
-      id: network_watcher_name
-      type: *id005
-    - description: ''
-      id: source
-      type: *id006
-    - description: ''
-      id: destination
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-- *id011
-- &id019
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id012
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Creates or updates a network watcher in the specified resource group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, network_watcher_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the network watcher.
-
-        '
-      id: network_watcher_name
-      type: *id014
-    - description: 'Parameters that define the network watcher
-
-        resource.
-
-        '
-      id: parameters
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-- *id019
-- &id026
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id020
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 173
-  summary: 'Deletes the specified network watcher resource.
-
-    '
-  syntax:
-    content: delete(resource_group_name, network_watcher_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the network watcher.
-
-        '
-      id: network_watcher_name
-      type: *id022
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id023
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id024
-    return: *id025
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-- *id026
-- &id033
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id027
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 111
-  summary: 'Gets the specified network watcher by resource group.
-
-    '
-  syntax:
-    content: get(resource_group_name, network_watcher_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id028
-    - description: 'The name of the network watcher.
-
-        '
-      id: network_watcher_name
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-- *id033
-- &id041
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id034
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get_flow_log_status
-  source:
-    id: get_flow_log_status
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1023
-  summary: 'Queries status of flow log on a specified resource.
-
-    '
-  syntax:
-    content: get_flow_log_status(resource_group_name, network_watcher_name, target_resource_id,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the network watcher resource
-
-        group.
-
-        '
-      id: resource_group_name
-      type: *id035
-    - description: 'The name of the network watcher resource.
-
-        '
-      id: network_watcher_name
-      type: *id036
-    - description: 'The target resource where getting the flow
-
-        logging status.
-
-        '
-      id: target_resource_id
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    return: *id040
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-- *id041
-- &id049
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id042
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get_next_hop
-  source:
-    id: get_next_hop
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 545
-  summary: 'Gets the next hop from the specified VM.
-
-    '
-  syntax:
-    content: get_next_hop(resource_group_name, network_watcher_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id043
-    - description: 'The name of the network watcher.
-
-        '
-      id: network_watcher_name
-      type: *id044
-    - description: 'Parameters that define the source and destination
-
-        endpoint.
-
-        '
-      id: parameters
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    return: *id048
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-- *id049
-- &id057
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id050
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get_topology
-  source:
-    id: get_topology
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 379
-  summary: 'Gets the current network topology by resource group.
-
-    '
-  syntax:
-    content: get_topology(resource_group_name, network_watcher_name, target_resource_group_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id051
-    - description: 'The name of the network watcher.
-
-        '
-      id: network_watcher_name
-      type: *id052
-    - description: 'The name of the target resource
-
-        group to perform topology on.
-
-        '
-      id: target_resource_group_name
-      type: *id053
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id054
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id055
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id056
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-- *id057
-- &id065
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id058
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get_troubleshooting
-  source:
-    id: get_troubleshooting
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 736
-  summary: 'Initiate troubleshooting on a specified resource.
-
-    '
-  syntax:
-    content: get_troubleshooting(resource_group_name, network_watcher_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id059
-    - description: 'The name of the network watcher resource.
-
-        '
-      id: network_watcher_name
-      type: *id060
-    - description: 'Parameters that define the resource to
-
-        troubleshoot.
-
-        '
-      id: parameters
-      type: *id061
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id062
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id063
-    return: *id064
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-- *id065
-- &id073
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id066
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get_troubleshooting_result
-  source:
-    id: get_troubleshooting_result
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 831
-  summary: 'Get the last completed troubleshooting result on a specified resource.
-
-    '
-  syntax:
-    content: get_troubleshooting_result(resource_group_name, network_watcher_name,
-      target_resource_id, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id067
-    - description: 'The name of the network watcher resource.
-
-        '
-      id: network_watcher_name
-      type: *id068
-    - description: 'The target resource ID to query the
-
-        troubleshooting result.
-
-        '
-      id: target_resource_id
-      type: *id069
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id070
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id071
-    return: *id072
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-- *id073
-- &id081
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id074
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: get_vm_security_rules
-  source:
-    id: get_vm_security_rules
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 640
-  summary: 'Gets the configured and effective security group rules on the specified
-
-    VM.
-
-    '
-  syntax:
-    content: get_vm_security_rules(resource_group_name, network_watcher_name, target_resource_id,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id075
-    - description: 'The name of the network watcher.
-
-        '
-      id: network_watcher_name
-      type: *id076
-    - description: 'ID of the target VM.
-
-        '
-      id: target_resource_id
-      type: *id077
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id078
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id079
-    return: *id080
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-- *id081
-- &id087
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id082
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 250
-  summary: 'Gets all network watchers by resource group.
-
-    '
-  syntax:
-    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id083
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id084
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id085
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id086
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-- *id087
-- &id092
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id088
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: list_all
-  source:
-    id: list_all
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 316
-  summary: 'Gets all network watchers by subscription.
-
-    '
-  syntax:
-    content: list_all(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id089
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id090
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id091
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-- *id092
-- &id100
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id093
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: set_flow_log_configuration
-  source:
-    id: set_flow_log_configuration
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 927
-  summary: 'Configures flow log on a specified resource.
-
-    '
-  syntax:
-    content: set_flow_log_configuration(resource_group_name, network_watcher_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the network watcher resource
-
-        group.
-
-        '
-      id: resource_group_name
-      type: *id094
-    - description: 'The name of the network watcher resource.
-
-        '
-      id: network_watcher_name
-      type: *id095
-    - description: 'Parameters that define the configuration of flow
-
-        log.
-
-        '
-      id: parameters
-      type: *id096
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id097
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id098
-    return: *id099
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-- *id100
-- &id108
-  class: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  exceptions: *id101
-  fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_03_01.operations
-  name: verify_ip_flow
-  source:
-    id: verify_ip_flow
-    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\operations\network_watchers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 450
-  summary: 'Verify IP flow from the specified VM to a location given the currently
-
-    configured NSG rules.
-
-    '
-  syntax:
-    content: verify_ip_flow(resource_group_name, network_watcher_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id102
-    - description: 'The name of the network watcher.
-
-        '
-      id: network_watcher_name
-      type: *id103
-    - description: 'Parameters that define the IP flow to be verified.
-
-        '
-      id: parameters
-      type: *id104
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id105
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id106
-    return: *id107
-  type: method
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-- *id108
 references:
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-  isExternal: false
-  name: check_connectivity
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-  isExternal: false
-  name: get_flow_log_status
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-  isExternal: false
-  name: get_next_hop
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-  isExternal: false
-  name: get_topology
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-  isExternal: false
-  name: get_troubleshooting
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-  isExternal: false
-  name: get_troubleshooting_result
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-  isExternal: false
-  name: get_vm_security_rules
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-  isExternal: false
-  name: set_flow_log_configuration
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-  isExternal: false
-  name: verify_ip_flow
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-  isExternal: false
-  name: check_connectivity
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.create_or_update
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.delete
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-  isExternal: false
-  name: get_flow_log_status
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_flow_log_status
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-  isExternal: false
-  name: get_next_hop
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_next_hop
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-  isExternal: false
-  name: get_topology
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_topology
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-  isExternal: false
-  name: get_troubleshooting
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-  isExternal: false
-  name: get_troubleshooting_result
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_troubleshooting_result
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-  isExternal: false
-  name: get_vm_security_rules
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.get_vm_security_rules
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.list_all
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-  isExternal: false
-  name: set_flow_log_configuration
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.set_flow_log_configuration
-- fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
-  isExternal: false
-  name: verify_ip_flow
-  parent: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations
-  uid: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.verify_ip_flow
 - fullName: azure.mgmt.network.v2017_03_01.operations.NetworkWatchersOperations.check_connectivity
   isExternal: false
   name: check_connectivity

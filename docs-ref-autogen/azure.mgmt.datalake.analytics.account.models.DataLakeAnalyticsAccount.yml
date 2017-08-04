@@ -38,7 +38,7 @@ items:
       storage_accounts=None, new_tier=None, firewall_state=None, firewall_allow_azure_ips=None,
       firewall_rules=None, max_degree_of_parallelism_per_job=None, min_priority_per_job=None,
       compute_policies=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource location
 
         '
@@ -183,7 +183,7 @@ items:
         @azure.mgmt.datalake.analytics.account.models.ComputePolicyAccountCreateParameters
 
         '
-    variables: &id002
+    variables:
     - description: 'Resource Id
 
         '
@@ -282,47 +282,6 @@ items:
       - 'str or @azure.mgmt.datalake.analytics.account.models.TierType
 
         '
-  type: class
-  uid: azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount
-- children: []
-  class: azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount
-  fullName: azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.datalake.analytics.account.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.models
-  name: DataLakeAnalyticsAccount
-  source:
-    id: DataLakeAnalyticsAccount
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\models\data_lake_analytics_account.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\models\data_lake_analytics_account.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'A Data Lake Analytics account object, containing all information associated
-
-    with the named Data Lake Analytics account.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: DataLakeAnalyticsAccount(location, default_data_lake_store_account, data_lake_store_accounts,
-      tags=None, max_degree_of_parallelism=30, query_store_retention=30, max_job_count=3,
-      storage_accounts=None, new_tier=None, firewall_state=None, firewall_allow_azure_ips=None,
-      firewall_rules=None, max_degree_of_parallelism_per_job=None, min_priority_per_job=None,
-      compute_policies=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount
 references: []

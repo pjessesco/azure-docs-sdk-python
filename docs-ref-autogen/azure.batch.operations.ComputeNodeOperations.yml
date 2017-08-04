@@ -13,17 +13,6 @@ items:
   - azure.batch.operations.ComputeNodeOperations.reboot
   - azure.batch.operations.ComputeNodeOperations.reimage
   - azure.batch.operations.ComputeNodeOperations.update_user
-  - azure.batch.operations.ComputeNodeOperations.add_user
-  - azure.batch.operations.ComputeNodeOperations.delete_user
-  - azure.batch.operations.ComputeNodeOperations.disable_scheduling
-  - azure.batch.operations.ComputeNodeOperations.enable_scheduling
-  - azure.batch.operations.ComputeNodeOperations.get
-  - azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-  - azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-  - azure.batch.operations.ComputeNodeOperations.list
-  - azure.batch.operations.ComputeNodeOperations.reboot
-  - azure.batch.operations.ComputeNodeOperations.reimage
-  - azure.batch.operations.ComputeNodeOperations.update_user
   class: azure.batch.operations.ComputeNodeOperations
   fullName: azure.batch.operations.ComputeNodeOperations
   inheritance:
@@ -56,7 +45,7 @@ items:
     '
   syntax:
     content: ComputeNodeOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -73,7 +62,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API Version. Constant value: "2017-06-01.5.1".
 
         '
@@ -81,7 +70,7 @@ items:
   type: class
   uid: azure.batch.operations.ComputeNodeOperations
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.add_user
   langs:
@@ -112,7 +101,7 @@ items:
 
         '
       id: pool_id
-      type: &id004
+      type:
       - str
     - description: 'The ID of the machine on which you want to create a
 
@@ -120,13 +109,13 @@ items:
 
         '
       id: node_id
-      type: &id005
+      type:
       - str
     - description: 'The user account to be created.
 
         '
       id: user
-      type: &id006
+      type:
       - azure.batch.models.ComputeNodeUser
     - defaultValue: None
       description: 'Additional parameters for the
@@ -135,14 +124,14 @@ items:
 
         '
       id: compute_node_add_user_options
-      type: &id007
+      type:
       - azure.batch.models.ComputeNodeAddUserOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -151,7 +140,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -159,16 +148,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.add_user
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id012
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.delete_user
   langs:
@@ -199,7 +188,7 @@ items:
 
         '
       id: pool_id
-      type: &id013
+      type:
       - str
     - description: 'The ID of the machine on which you want to delete a
 
@@ -207,13 +196,13 @@ items:
 
         '
       id: node_id
-      type: &id014
+      type:
       - str
     - description: 'The name of the user account to delete.
 
         '
       id: user_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -222,14 +211,14 @@ items:
 
         '
       id: compute_node_delete_user_options
-      type: &id016
+      type:
       - azure.batch.models.ComputeNodeDeleteUserOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id017
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -238,7 +227,7 @@ items:
 
         '
       id: raw
-      type: &id018
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -246,16 +235,16 @@ items:
 
         '
       id: operation_config
-    return: &id019
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.delete_user
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id021
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.disable_scheduling
   langs:
@@ -281,7 +270,7 @@ items:
 
         '
       id: pool_id
-      type: &id022
+      type:
       - str
     - description: 'The ID of the compute node on which you want to
 
@@ -289,7 +278,7 @@ items:
 
         '
       id: node_id
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters
@@ -298,7 +287,7 @@ items:
 
         '
       id: compute_node_disable_scheduling_options
-      type: &id024
+      type:
       - azure.batch.models.ComputeNodeDisableSchedulingOptions
     - defaultValue: None
       description: 'What to do with currently
@@ -311,7 +300,7 @@ items:
 
         '
       id: node_disable_scheduling_option
-      type: &id025
+      type:
       - 'str or
 
         @azure.batch.models.DisableComputeNodeSchedulingOption
@@ -322,7 +311,7 @@ items:
 
         '
       id: custom_headers
-      type: &id026
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -331,7 +320,7 @@ items:
 
         '
       id: raw
-      type: &id027
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -339,16 +328,16 @@ items:
 
         '
       id: operation_config
-    return: &id028
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.disable_scheduling
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id030
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.enable_scheduling
   langs:
@@ -374,7 +363,7 @@ items:
 
         '
       id: pool_id
-      type: &id031
+      type:
       - str
     - description: 'The ID of the compute node on which you want to enable
 
@@ -382,7 +371,7 @@ items:
 
         '
       id: node_id
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters
@@ -391,14 +380,14 @@ items:
 
         '
       id: compute_node_enable_scheduling_options
-      type: &id033
+      type:
       - azure.batch.models.ComputeNodeEnableSchedulingOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id034
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -407,7 +396,7 @@ items:
 
         '
       id: raw
-      type: &id035
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -415,16 +404,16 @@ items:
 
         '
       id: operation_config
-    return: &id036
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.enable_scheduling
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id038
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.get
   langs:
@@ -450,7 +439,7 @@ items:
 
         '
       id: pool_id
-      type: &id039
+      type:
       - str
     - description: 'The ID of the compute node that you want to get
 
@@ -458,7 +447,7 @@ items:
 
         '
       id: node_id
-      type: &id040
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -467,14 +456,14 @@ items:
 
         '
       id: compute_node_get_options
-      type: &id041
+      type:
       - azure.batch.models.ComputeNodeGetOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id042
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -483,7 +472,7 @@ items:
 
         '
       id: raw
-      type: &id043
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -491,16 +480,16 @@ items:
 
         '
       id: operation_config
-    return: &id044
+    return:
       type:
       - azure.batch.models.ComputeNode
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.get
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id046
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
   langs:
@@ -533,7 +522,7 @@ items:
 
         '
       id: pool_id
-      type: &id047
+      type:
       - str
     - description: 'The ID of the compute node for which you want to get
 
@@ -541,7 +530,7 @@ items:
 
         '
       id: node_id
-      type: &id048
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters
@@ -550,14 +539,14 @@ items:
 
         '
       id: compute_node_get_remote_desktop_options
-      type: &id049
+      type:
       - azure.batch.models.ComputeNodeGetRemoteDesktopOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id050
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -566,7 +555,7 @@ items:
 
         '
       id: raw
-      type: &id051
+      type:
       - bool
     - defaultValue: None
       description: 'When specified, will be called with each chunk of
@@ -579,7 +568,7 @@ items:
 
         '
       id: callback
-      type: &id052
+      type:
       - Callable[Bytes, response=None]
     - description: '*Operation configuration
 
@@ -587,16 +576,16 @@ items:
 
         '
       id: operation_config
-    return: &id053
+    return:
       type:
       - Generator
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id055
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
   langs:
@@ -631,7 +620,7 @@ items:
 
         '
       id: pool_id
-      type: &id056
+      type:
       - str
     - description: 'The ID of the compute node for which to obtain the
 
@@ -639,7 +628,7 @@ items:
 
         '
       id: node_id
-      type: &id057
+      type:
       - str
     - defaultValue: None
       description: 'Additional
@@ -648,14 +637,14 @@ items:
 
         '
       id: compute_node_get_remote_login_settings_options
-      type: &id058
+      type:
       - azure.batch.models.ComputeNodeGetRemoteLoginSettingsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id059
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -664,7 +653,7 @@ items:
 
         '
       id: raw
-      type: &id060
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -672,16 +661,16 @@ items:
 
         '
       id: operation_config
-    return: &id061
+    return:
       type:
       - azure.batch.models.ComputeNodeGetRemoteLoginSettingsResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id063
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.list
   langs:
@@ -707,7 +696,7 @@ items:
 
         '
       id: pool_id
-      type: &id064
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -716,14 +705,14 @@ items:
 
         '
       id: compute_node_list_options
-      type: &id065
+      type:
       - azure.batch.models.ComputeNodeListOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id066
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -732,7 +721,7 @@ items:
 
         '
       id: raw
-      type: &id067
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -740,13 +729,13 @@ items:
 
         '
       id: operation_config
-    return: &id068
+    return:
       type:
       - azure.batch.models.ComputeNodePaged
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.list
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id070
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.reboot
   langs:
@@ -775,13 +764,13 @@ items:
 
         '
       id: pool_id
-      type: &id071
+      type:
       - str
     - description: 'The ID of the compute node that you want to restart.
 
         '
       id: node_id
-      type: &id072
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -790,7 +779,7 @@ items:
 
         '
       id: compute_node_reboot_options
-      type: &id073
+      type:
       - azure.batch.models.ComputeNodeRebootOptions
     - defaultValue: None
       description: 'When to reboot the compute node and what to
@@ -803,7 +792,7 @@ items:
 
         '
       id: node_reboot_option
-      type: &id074
+      type:
       - 'str or @azure.batch.models.ComputeNodeRebootOption
 
         '
@@ -812,7 +801,7 @@ items:
 
         '
       id: custom_headers
-      type: &id075
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -821,7 +810,7 @@ items:
 
         '
       id: raw
-      type: &id076
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -829,16 +818,16 @@ items:
 
         '
       id: operation_config
-    return: &id077
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.reboot
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id079
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.reimage
   langs:
@@ -871,13 +860,13 @@ items:
 
         '
       id: pool_id
-      type: &id080
+      type:
       - str
     - description: 'The ID of the compute node that you want to restart.
 
         '
       id: node_id
-      type: &id081
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -886,7 +875,7 @@ items:
 
         '
       id: compute_node_reimage_options
-      type: &id082
+      type:
       - azure.batch.models.ComputeNodeReimageOptions
     - defaultValue: None
       description: 'When to reimage the compute node and what
@@ -899,7 +888,7 @@ items:
 
         '
       id: node_reimage_option
-      type: &id083
+      type:
       - 'str or @azure.batch.models.ComputeNodeReimageOption
 
         '
@@ -908,7 +897,7 @@ items:
 
         '
       id: custom_headers
-      type: &id084
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -917,7 +906,7 @@ items:
 
         '
       id: raw
-      type: &id085
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -925,16 +914,16 @@ items:
 
         '
       id: operation_config
-    return: &id086
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.reimage
 - class: azure.batch.operations.ComputeNodeOperations
-  exceptions: &id088
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.ComputeNodeOperations.update_user
   langs:
@@ -973,7 +962,7 @@ items:
 
         '
       id: pool_id
-      type: &id089
+      type:
       - str
     - description: 'The ID of the machine on which you want to update a
 
@@ -981,19 +970,19 @@ items:
 
         '
       id: node_id
-      type: &id090
+      type:
       - str
     - description: 'The name of the user account to update.
 
         '
       id: user_name
-      type: &id091
+      type:
       - str
     - description: 'The parameters for the request.
 
         '
       id: node_update_user_parameter
-      type: &id092
+      type:
       - azure.batch.models.NodeUpdateUserParameter
     - defaultValue: None
       description: 'Additional parameters for the
@@ -1002,14 +991,14 @@ items:
 
         '
       id: compute_node_update_user_options
-      type: &id093
+      type:
       - azure.batch.models.ComputeNodeUpdateUserOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id094
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1018,7 +1007,7 @@ items:
 
         '
       id: raw
-      type: &id095
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -1026,1016 +1015,15 @@ items:
 
         '
       id: operation_config
-    return: &id096
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.ComputeNodeOperations.update_user
-- children:
-  - azure.batch.operations.ComputeNodeOperations.add_user
-  - azure.batch.operations.ComputeNodeOperations.delete_user
-  - azure.batch.operations.ComputeNodeOperations.disable_scheduling
-  - azure.batch.operations.ComputeNodeOperations.enable_scheduling
-  - azure.batch.operations.ComputeNodeOperations.get
-  - azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-  - azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-  - azure.batch.operations.ComputeNodeOperations.list
-  - azure.batch.operations.ComputeNodeOperations.reboot
-  - azure.batch.operations.ComputeNodeOperations.reimage
-  - azure.batch.operations.ComputeNodeOperations.update_user
-  class: azure.batch.operations.ComputeNodeOperations
-  fullName: azure.batch.operations.ComputeNodeOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.batch.operations
-  name: ComputeNodeOperations
-  source:
-    id: ComputeNodeOperations
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'ComputeNodeOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ComputeNodeOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.batch.operations.ComputeNodeOperations
-- &id011
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id003
-  fullName: azure.batch.operations.ComputeNodeOperations.add_user
-  langs:
-  - python
-  module: azure.batch.operations
-  name: add_user
-  source:
-    id: add_user
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Adds a user account to the specified compute node.
-
-
-    You can add a user account to a node only when it is in the idle or
-
-    running state.
-
-    '
-  syntax:
-    content: add_user(pool_id, node_id, user, compute_node_add_user_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id004
-    - description: 'The ID of the machine on which you want to create a
-
-        user account.
-
-        '
-      id: node_id
-      type: *id005
-    - description: 'The user account to be created.
-
-        '
-      id: user
-      type: *id006
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: compute_node_add_user_options
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.add_user
-- *id011
-- &id020
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id012
-  fullName: azure.batch.operations.ComputeNodeOperations.delete_user
-  langs:
-  - python
-  module: azure.batch.operations
-  name: delete_user
-  source:
-    id: delete_user
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 132
-  summary: 'Deletes a user account from the specified compute node.
-
-
-    You can delete a user account to a node only when it is in the idle or
-
-    running state.
-
-    '
-  syntax:
-    content: delete_user(pool_id, node_id, user_name, compute_node_delete_user_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id013
-    - description: 'The ID of the machine on which you want to delete a
-
-        user account.
-
-        '
-      id: node_id
-      type: *id014
-    - description: 'The name of the user account to delete.
-
-        '
-      id: user_name
-      type: *id015
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: compute_node_delete_user_options
-      type: *id016
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id017
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id018
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id019
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.delete_user
-- *id020
-- &id029
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id021
-  fullName: azure.batch.operations.ComputeNodeOperations.disable_scheduling
-  langs:
-  - python
-  module: azure.batch.operations
-  name: disable_scheduling
-  source:
-    id: disable_scheduling
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 628
-  summary: 'Disables task scheduling on the specified compute node.
-
-    '
-  syntax:
-    content: disable_scheduling(pool_id, node_id, compute_node_disable_scheduling_options=None,
-      node_disable_scheduling_option=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id022
-    - description: 'The ID of the compute node on which you want to
-
-        disable task scheduling.
-
-        '
-      id: node_id
-      type: *id023
-    - defaultValue: None
-      description: 'Additional parameters
-
-        for the operation
-
-        '
-      id: compute_node_disable_scheduling_options
-      type: *id024
-    - defaultValue: None
-      description: 'What to do with currently
-
-        running tasks when disabling task scheduling on the compute node. The
-
-        default value is requeue. Possible values include: ''requeue'',
-
-        ''terminate'', ''taskCompletion''
-
-        '
-      id: node_disable_scheduling_option
-      type: *id025
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id026
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id027
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id028
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.disable_scheduling
-- *id029
-- &id037
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id030
-  fullName: azure.batch.operations.ComputeNodeOperations.enable_scheduling
-  langs:
-  - python
-  module: azure.batch.operations
-  name: enable_scheduling
-  source:
-    id: enable_scheduling
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 731
-  summary: 'Enables task scheduling on the specified compute node.
-
-    '
-  syntax:
-    content: enable_scheduling(pool_id, node_id, compute_node_enable_scheduling_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id031
-    - description: 'The ID of the compute node on which you want to enable
-
-        task scheduling.
-
-        '
-      id: node_id
-      type: *id032
-    - defaultValue: None
-      description: 'Additional parameters
-
-        for the operation
-
-        '
-      id: compute_node_enable_scheduling_options
-      type: *id033
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id034
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id035
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id036
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.enable_scheduling
-- *id037
-- &id045
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id038
-  fullName: azure.batch.operations.ComputeNodeOperations.get
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get
-  source:
-    id: get
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 324
-  summary: 'Gets information about the specified compute node.
-
-    '
-  syntax:
-    content: get(pool_id, node_id, compute_node_get_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id039
-    - description: 'The ID of the compute node that you want to get
-
-        information about.
-
-        '
-      id: node_id
-      type: *id040
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: compute_node_get_options
-      type: *id041
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id042
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id043
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id044
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.get
-- *id045
-- &id054
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id046
-  fullName: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_remote_desktop
-  source:
-    id: get_remote_desktop
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 917
-  summary: 'Gets the Remote Desktop Protocol file for the specified compute node.
-
-
-    Before you can access a node by using the RDP file, you must create a
-
-    user account on the node. This API can only be invoked on pools created
-
-    with the cloud service configuration property.
-
-    '
-  syntax:
-    content: get_remote_desktop(pool_id, node_id, compute_node_get_remote_desktop_options=None,
-      custom_headers=None, raw=False, callback=None, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id047
-    - description: 'The ID of the compute node for which you want to get
-
-        the Remote Desktop Protocol file.
-
-        '
-      id: node_id
-      type: *id048
-    - defaultValue: None
-      description: 'Additional parameters
-
-        for the operation
-
-        '
-      id: compute_node_get_remote_desktop_options
-      type: *id049
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id050
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id051
-    - defaultValue: None
-      description: 'When specified, will be called with each chunk of
-
-        data that is streamed. The callback should take two arguments, the
-
-        bytes of the current chunk of data and the response object. If the
-
-        data is uploading, response will be None.
-
-        '
-      id: callback
-      type: *id052
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id053
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-- *id054
-- &id062
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id055
-  fullName: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_remote_login_settings
-  source:
-    id: get_remote_login_settings
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 817
-  summary: 'Gets the settings required for remote login to a compute node.
-
-
-    Before you can remotely login to a node using the remote login
-
-    settings, you must create a user account on the node. This API can be
-
-    invoked only on pools created with the virtual machine configuration
-
-    property.
-
-    '
-  syntax:
-    content: get_remote_login_settings(pool_id, node_id, compute_node_get_remote_login_settings_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id056
-    - description: 'The ID of the compute node for which to obtain the
-
-        remote login settings.
-
-        '
-      id: node_id
-      type: *id057
-    - defaultValue: None
-      description: 'Additional
-
-        parameters for the operation
-
-        '
-      id: compute_node_get_remote_login_settings_options
-      type: *id058
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id059
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id060
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id061
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-- *id062
-- &id069
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id063
-  fullName: azure.batch.operations.ComputeNodeOperations.list
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list
-  source:
-    id: list
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1020
-  summary: 'Lists the compute nodes in the specified pool.
-
-    '
-  syntax:
-    content: list(pool_id, compute_node_list_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The ID of the pool from which you want to list nodes.
-
-        '
-      id: pool_id
-      type: *id064
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: compute_node_list_options
-      type: *id065
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id066
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id067
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id068
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.list
-- *id069
-- &id078
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id070
-  fullName: azure.batch.operations.ComputeNodeOperations.reboot
-  langs:
-  - python
-  module: azure.batch.operations
-  name: reboot
-  source:
-    id: reboot
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 422
-  summary: 'Restarts the specified compute node.
-
-
-    You can restart a node only if it is in an idle or running state.
-
-    '
-  syntax:
-    content: reboot(pool_id, node_id, compute_node_reboot_options=None, node_reboot_option=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id071
-    - description: 'The ID of the compute node that you want to restart.
-
-        '
-      id: node_id
-      type: *id072
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: compute_node_reboot_options
-      type: *id073
-    - defaultValue: None
-      description: 'When to reboot the compute node and what to
-
-        do with currently running tasks. The default value is requeue.
-
-        Possible values include: ''requeue'', ''terminate'', ''taskCompletion'',
-
-        ''retainedData''
-
-        '
-      id: node_reboot_option
-      type: *id074
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id075
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id076
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id077
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.reboot
-- *id078
-- &id087
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id079
-  fullName: azure.batch.operations.ComputeNodeOperations.reimage
-  langs:
-  - python
-  module: azure.batch.operations
-  name: reimage
-  source:
-    id: reimage
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 524
-  summary: 'Reinstalls the operating system on the specified compute node.
-
-
-    You can reinstall the operating system on a node only if it is in an
-
-    idle or running state. This API can be invoked only on pools created
-
-    with the cloud service configuration property.
-
-    '
-  syntax:
-    content: reimage(pool_id, node_id, compute_node_reimage_options=None, node_reimage_option=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id080
-    - description: 'The ID of the compute node that you want to restart.
-
-        '
-      id: node_id
-      type: *id081
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: compute_node_reimage_options
-      type: *id082
-    - defaultValue: None
-      description: 'When to reimage the compute node and what
-
-        to do with currently running tasks. The default value is requeue.
-
-        Possible values include: ''requeue'', ''terminate'', ''taskCompletion'',
-
-        ''retainedData''
-
-        '
-      id: node_reimage_option
-      type: *id083
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id084
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id085
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id086
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.reimage
-- *id087
-- &id097
-  class: azure.batch.operations.ComputeNodeOperations
-  exceptions: *id088
-  fullName: azure.batch.operations.ComputeNodeOperations.update_user
-  langs:
-  - python
-  module: azure.batch.operations
-  name: update_user
-  source:
-    id: update_user
-    path: azure-batch\azure\batch\operations\compute_node_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\compute_node_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 221
-  summary: 'Updates the password or expiration time of a user account on the
-
-    specified compute node.
-
-
-    This operation replaces of all the updateable properties of the
-
-    account. For example, if the expiryTime element is not specified, the
-
-    current value is replaced with the default value, not left unmodified.
-
-    You can update a user account on a node only when it is in the idle or
-
-    running state.
-
-    '
-  syntax:
-    content: update_user(pool_id, node_id, user_name, node_update_user_parameter,
-      compute_node_update_user_options=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id089
-    - description: 'The ID of the machine on which you want to update a
-
-        user account.
-
-        '
-      id: node_id
-      type: *id090
-    - description: 'The name of the user account to update.
-
-        '
-      id: user_name
-      type: *id091
-    - description: 'The parameters for the request.
-
-        '
-      id: node_update_user_parameter
-      type: *id092
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: compute_node_update_user_options
-      type: *id093
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id094
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id095
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id096
-  type: method
-  uid: azure.batch.operations.ComputeNodeOperations.update_user
-- *id097
 references:
-- fullName: azure.batch.operations.ComputeNodeOperations.add_user
-  isExternal: false
-  name: add_user
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.add_user
-- fullName: azure.batch.operations.ComputeNodeOperations.delete_user
-  isExternal: false
-  name: delete_user
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.delete_user
-- fullName: azure.batch.operations.ComputeNodeOperations.disable_scheduling
-  isExternal: false
-  name: disable_scheduling
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.disable_scheduling
-- fullName: azure.batch.operations.ComputeNodeOperations.enable_scheduling
-  isExternal: false
-  name: enable_scheduling
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.enable_scheduling
-- fullName: azure.batch.operations.ComputeNodeOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.get
-- fullName: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-  isExternal: false
-  name: get_remote_desktop
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-- fullName: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-  isExternal: false
-  name: get_remote_login_settings
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-- fullName: azure.batch.operations.ComputeNodeOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.list
-- fullName: azure.batch.operations.ComputeNodeOperations.reboot
-  isExternal: false
-  name: reboot
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.reboot
-- fullName: azure.batch.operations.ComputeNodeOperations.reimage
-  isExternal: false
-  name: reimage
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.reimage
-- fullName: azure.batch.operations.ComputeNodeOperations.update_user
-  isExternal: false
-  name: update_user
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.update_user
-- fullName: azure.batch.operations.ComputeNodeOperations.add_user
-  isExternal: false
-  name: add_user
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.add_user
-- fullName: azure.batch.operations.ComputeNodeOperations.delete_user
-  isExternal: false
-  name: delete_user
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.delete_user
-- fullName: azure.batch.operations.ComputeNodeOperations.disable_scheduling
-  isExternal: false
-  name: disable_scheduling
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.disable_scheduling
-- fullName: azure.batch.operations.ComputeNodeOperations.enable_scheduling
-  isExternal: false
-  name: enable_scheduling
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.enable_scheduling
-- fullName: azure.batch.operations.ComputeNodeOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.get
-- fullName: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-  isExternal: false
-  name: get_remote_desktop
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.get_remote_desktop
-- fullName: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-  isExternal: false
-  name: get_remote_login_settings
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.get_remote_login_settings
-- fullName: azure.batch.operations.ComputeNodeOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.list
-- fullName: azure.batch.operations.ComputeNodeOperations.reboot
-  isExternal: false
-  name: reboot
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.reboot
-- fullName: azure.batch.operations.ComputeNodeOperations.reimage
-  isExternal: false
-  name: reimage
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.reimage
-- fullName: azure.batch.operations.ComputeNodeOperations.update_user
-  isExternal: false
-  name: update_user
-  parent: azure.batch.operations.ComputeNodeOperations
-  uid: azure.batch.operations.ComputeNodeOperations.update_user
 - fullName: azure.batch.operations.ComputeNodeOperations.add_user
   isExternal: false
   name: add_user

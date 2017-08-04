@@ -8,12 +8,6 @@ items:
   - azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
   - azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
   - azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
   class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
   fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: AccountOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-11-01".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations
 - class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
   langs:
@@ -98,7 +92,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account to
 
@@ -106,7 +100,7 @@ items:
 
         '
       id: account_name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the create Data Lake
 
@@ -114,14 +108,14 @@ items:
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -130,20 +124,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
 - class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
   langs:
@@ -173,7 +167,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account to
 
@@ -181,14 +175,14 @@ items:
 
         '
       id: account_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -197,20 +191,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
 - class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
   langs:
@@ -238,7 +232,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account to
 
@@ -246,14 +240,14 @@ items:
 
         '
       id: account_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -262,7 +256,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -270,16 +264,16 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
 - class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
   langs:
@@ -308,14 +302,14 @@ items:
 
         '
       id: filter
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'The number of items to return. Optional.
 
         '
       id: top
-      type: &id027
+      type:
       - int
     - defaultValue: None
       description: 'The number of items to skip over before returning
@@ -324,7 +318,7 @@ items:
 
         '
       id: skip
-      type: &id028
+      type:
       - int
     - defaultValue: None
       description: 'OData Select statement. Limits the properties on each
@@ -335,7 +329,7 @@ items:
 
         '
       id: select
-      type: &id029
+      type:
       - str
     - defaultValue: None
       description: 'OrderBy clause. One or more comma-separated
@@ -348,7 +342,7 @@ items:
 
         '
       id: orderby
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'The Boolean value of true or false to request a count of
@@ -359,14 +353,14 @@ items:
 
         '
       id: count
-      type: &id031
+      type:
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -375,7 +369,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -383,13 +377,13 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountPaged
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
 - class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
   langs:
@@ -419,21 +413,21 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'OData filter. Optional.
 
         '
       id: filter
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'The number of items to return. Optional.
 
         '
       id: top
-      type: &id039
+      type:
       - int
     - defaultValue: None
       description: 'The number of items to skip over before returning
@@ -442,7 +436,7 @@ items:
 
         '
       id: skip
-      type: &id040
+      type:
       - int
     - defaultValue: None
       description: 'OData Select statement. Limits the properties on each
@@ -453,7 +447,7 @@ items:
 
         '
       id: select
-      type: &id041
+      type:
       - str
     - defaultValue: None
       description: 'OrderBy clause. One or more comma-separated
@@ -466,7 +460,7 @@ items:
 
         '
       id: orderby
-      type: &id042
+      type:
       - str
     - defaultValue: None
       description: 'The Boolean value of true or false to request a count of
@@ -477,14 +471,14 @@ items:
 
         '
       id: count
-      type: &id043
+      type:
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id044
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -493,7 +487,7 @@ items:
 
         '
       id: raw
-      type: &id045
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -501,13 +495,13 @@ items:
 
         '
       id: operation_config
-    return: &id046
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountPaged
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
 - class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: &id048
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
   langs:
@@ -537,7 +531,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id049
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account to
 
@@ -545,7 +539,7 @@ items:
 
         '
       id: account_name
-      type: &id050
+      type:
       - str
     - defaultValue: None
       description: 'Parameters supplied to the update Data Lake
@@ -554,14 +548,14 @@ items:
 
         '
       id: parameters
-      type: &id051
+      type:
       - azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id052
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -570,575 +564,19 @@ items:
 
         '
       id: raw
-      type: &id053
-      - bool
-    return: &id054
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-- children:
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-  - azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-  class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: AccountOperations
-  source:
-    id: AccountOperations
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'AccountOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: AccountOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-- &id010
-  class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: *id003
-  fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: create
-  source:
-    id: create
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 379
-  summary: 'Creates the specified Data Lake Analytics account. This supplies the
-
-    user with computation services for Data Lake Analytics workloads.
-
-    '
-  syntax:
-    content: create(resource_group_name, account_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.the account will be
-
-        associated with.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the Data Lake Analytics account to
-
-        create.
-
-        '
-      id: account_name
-      type: *id005
-    - description: 'Parameters supplied to the create Data Lake
-
-        Analytics account operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-- *id010
-- &id017
-  class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: *id011
-  fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 299
-  summary: 'Begins the delete delete process for the Data Lake Analytics account
-
-    object specified by the account name.
-
-    '
-  syntax:
-    content: delete(resource_group_name, account_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the Data Lake Analytics account to
-
-        delete
-
-        '
-      id: account_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: *id018
-  fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 235
-  summary: 'Gets details of the specified Data Lake Analytics account.
-
-    '
-  syntax:
-    content: get(resource_group_name, account_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the Data Lake Analytics account to
-
-        retrieve.
-
-        '
-      id: account_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-- *id024
-- &id035
-  class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: *id025
-  fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 139
-  summary: 'Gets the first page of Data Lake Analytics accounts, if any, within the
-
-    current subscription. This includes a link to the next page, if any.
-
-    '
-  syntax:
-    content: list(filter=None, top=None, skip=None, select=None, orderby=None, count=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'OData filter. Optional.
-
-        '
-      id: filter
-      type: *id026
-    - defaultValue: None
-      description: 'The number of items to return. Optional.
-
-        '
-      id: top
-      type: *id027
-    - defaultValue: None
-      description: 'The number of items to skip over before returning
-
-        elements. Optional.
-
-        '
-      id: skip
-      type: *id028
-    - defaultValue: None
-      description: 'OData Select statement. Limits the properties on each
-
-        entry to just those requested, e.g.
-
-        Categories?$select=CategoryName,Description. Optional.
-
-        '
-      id: select
-      type: *id029
-    - defaultValue: None
-      description: 'OrderBy clause. One or more comma-separated
-
-        expressions with an optional "asc" (the default) or "desc" depending
-
-        on the order you''d like the values sorted, e.g.
-
-        Categories?$orderby=CategoryName desc. Optional.
-
-        '
-      id: orderby
-      type: *id030
-    - defaultValue: None
-      description: 'The Boolean value of true or false to request a count of
-
-        the matching resources included with the resources in the response,
-
-        e.g. Categories?$count=true. Optional.
-
-        '
-      id: count
-      type: *id031
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-- *id035
-- &id047
-  class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: *id036
-  fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Gets the first page of Data Lake Analytics accounts, if any, within a
-
-    specific resource group. This includes a link to the next page, if any.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, filter=None, top=None, skip=None,
-      select=None, orderby=None, count=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - defaultValue: None
-      description: 'OData filter. Optional.
-
-        '
-      id: filter
-      type: *id038
-    - defaultValue: None
-      description: 'The number of items to return. Optional.
-
-        '
-      id: top
-      type: *id039
-    - defaultValue: None
-      description: 'The number of items to skip over before returning
-
-        elements. Optional.
-
-        '
-      id: skip
-      type: *id040
-    - defaultValue: None
-      description: 'OData Select statement. Limits the properties on each
-
-        entry to just those requested, e.g.
-
-        Categories?$select=CategoryName,Description. Optional.
-
-        '
-      id: select
-      type: *id041
-    - defaultValue: None
-      description: 'OrderBy clause. One or more comma-separated
-
-        expressions with an optional "asc" (the default) or "desc" depending
-
-        on the order you''d like the values sorted, e.g.
-
-        Categories?$orderby=CategoryName desc. Optional.
-
-        '
-      id: orderby
-      type: *id042
-    - defaultValue: None
-      description: 'The Boolean value of true or false to request a count of
-
-        the matching resources included with the resources in the response,
-
-        e.g. Categories?$count=true. Optional.
-
-        '
-      id: count
-      type: *id043
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id044
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id045
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id046
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-- *id047
-- &id055
-  class: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  exceptions: *id048
-  fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\account_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 478
-  summary: 'Updates the Data Lake Analytics account object specified by the
-
-    accountName with the contents of the account object.
-
-    '
-  syntax:
-    content: update(resource_group_name, account_name, parameters=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id049
-    - description: 'The name of the Data Lake Analytics account to
-
-        update.
-
-        '
-      id: account_name
-      type: *id050
-    - defaultValue: None
-      description: 'Parameters supplied to the update Data Lake
-
-        Analytics account operation.
-
-        '
-      id: parameters
-      type: *id051
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id052
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id053
-    return: *id054
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-- *id055
 references:
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.delete
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.get
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.list_by_resource_group
-- fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.analytics.account.operations.AccountOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.AccountOperations.update
 - fullName: azure.mgmt.datalake.analytics.account.operations.AccountOperations.create
   isExternal: false
   name: create

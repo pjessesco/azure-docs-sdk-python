@@ -7,11 +7,6 @@ items:
   - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
   - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
   - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
   class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
   fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
   inheritance:
@@ -38,7 +33,7 @@ items:
     '
   syntax:
     content: TrustedIdProvidersOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -55,7 +50,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-11-01".
 
         '
@@ -63,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
 - class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
   langs:
@@ -95,7 +90,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the Data Lake Store account to add or
 
@@ -103,7 +98,7 @@ items:
 
         '
       id: account_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the trusted identity
 
@@ -113,27 +108,27 @@ items:
 
         '
       id: trusted_id_provider_name
-      type: &id006
+      type:
       - str
     - description: 'The URL of this trusted identity provider
 
         '
       id: id_provider
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'Resource name
 
         '
       id: name
-      type: &id008
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -142,7 +137,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -150,16 +145,16 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       type:
       - azure.mgmt.datalake.store.models.TrustedIdProvider
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
 - class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: &id013
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
   langs:
@@ -189,7 +184,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the Data Lake Store account from
 
@@ -197,7 +192,7 @@ items:
 
         '
       id: account_name
-      type: &id015
+      type:
       - str
     - description: 'The name of the trusted identity
 
@@ -205,14 +200,14 @@ items:
 
         '
       id: trusted_id_provider_name
-      type: &id016
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id017
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -221,7 +216,7 @@ items:
 
         '
       id: raw
-      type: &id018
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -229,16 +224,16 @@ items:
 
         '
       id: operation_config
-    return: &id019
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
 - class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: &id021
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
   langs:
@@ -266,7 +261,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the Data Lake Store account from
 
@@ -274,7 +269,7 @@ items:
 
         '
       id: account_name
-      type: &id023
+      type:
       - str
     - description: 'The name of the trusted identity
 
@@ -282,14 +277,14 @@ items:
 
         '
       id: trusted_id_provider_name
-      type: &id024
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id025
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -298,7 +293,7 @@ items:
 
         '
       id: raw
-      type: &id026
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -306,16 +301,16 @@ items:
 
         '
       id: operation_config
-    return: &id027
+    return:
       type:
       - azure.mgmt.datalake.store.models.TrustedIdProvider
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
 - class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: &id029
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
   langs:
@@ -345,7 +340,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id030
+      type:
       - str
     - description: 'The name of the Data Lake Store account from
 
@@ -353,14 +348,14 @@ items:
 
         '
       id: account_name
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -369,7 +364,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -377,13 +372,13 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.datalake.store.models.TrustedIdProviderPaged
   type: method
   uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
 - class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
   langs:
@@ -411,7 +406,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the Data Lake Store account to which
 
@@ -419,7 +414,7 @@ items:
 
         '
       id: account_name
-      type: &id038
+      type:
       - str
     - description: 'The name of the trusted identity
 
@@ -429,21 +424,21 @@ items:
 
         '
       id: trusted_id_provider_name
-      type: &id039
+      type:
       - str
     - defaultValue: None
       description: 'The URL of this trusted identity provider
 
         '
       id: id_provider
-      type: &id040
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -452,7 +447,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -460,463 +455,15 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.mgmt.datalake.store.models.TrustedIdProvider
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-- children:
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-  - azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-  class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: TrustedIdProvidersOperations
-  source:
-    id: TrustedIdProvidersOperations
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'TrustedIdProvidersOperations operations.
-
-
-
-
-
-
-    '
-  syntax:
-    content: TrustedIdProvidersOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-- &id012
-  class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: *id003
-  fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Creates or updates the specified trusted identity provider. During
-
-    update, the trusted identity provider with the specified name will be
-
-    replaced with this new provider.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, account_name, trusted_id_provider_name,
-      id_provider, name=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the Data Lake Store account to add or
-
-        replace the trusted identity provider.
-
-        '
-      id: account_name
-      type: *id005
-    - description: 'The name of the trusted identity
-
-        provider. This is used for differentiation of providers in the
-
-        account.
-
-        '
-      id: trusted_id_provider_name
-      type: *id006
-    - description: 'The URL of this trusted identity provider
-
-        '
-      id: id_provider
-      type: *id007
-    - defaultValue: None
-      description: 'Resource name
-
-        '
-      id: name
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-- *id012
-- &id020
-  class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: *id013
-  fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 201
-  summary: 'Deletes the specified trusted identity provider from the specified Data
-
-    Lake Store account.
-
-    '
-  syntax:
-    content: delete(resource_group_name, account_name, trusted_id_provider_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id014
-    - description: 'The name of the Data Lake Store account from
-
-        which to delete the trusted identity provider.
-
-        '
-      id: account_name
-      type: *id015
-    - description: 'The name of the trusted identity
-
-        provider to delete.
-
-        '
-      id: trusted_id_provider_name
-      type: *id016
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id017
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id018
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id019
-  type: method
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-- *id020
-- &id028
-  class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: *id021
-  fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 262
-  summary: 'Gets the specified Data Lake Store trusted identity provider.
-
-    '
-  syntax:
-    content: get(resource_group_name, account_name, trusted_id_provider_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id022
-    - description: 'The name of the Data Lake Store account from
-
-        which to get the trusted identity provider.
-
-        '
-      id: account_name
-      type: *id023
-    - description: 'The name of the trusted identity
-
-        provider to retrieve.
-
-        '
-      id: trusted_id_provider_name
-      type: *id024
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id025
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id026
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id027
-  type: method
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-- *id028
-- &id035
-  class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: *id029
-  fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: list_by_account
-  source:
-    id: list_by_account
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 330
-  summary: 'Lists the Data Lake Store trusted identity providers within the
-
-    specified Data Lake Store account.
-
-    '
-  syntax:
-    content: list_by_account(resource_group_name, account_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id030
-    - description: 'The name of the Data Lake Store account from
-
-        which to get the trusted identity providers.
-
-        '
-      id: account_name
-      type: *id031
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-- *id035
-- &id044
-  class: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  exceptions: *id036
-  fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\operations\trusted_id_providers_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 119
-  summary: 'Updates the specified trusted identity provider.
-
-    '
-  syntax:
-    content: update(resource_group_name, account_name, trusted_id_provider_name, id_provider=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Store account.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - description: 'The name of the Data Lake Store account to which
-
-        to update the trusted identity provider.
-
-        '
-      id: account_name
-      type: *id038
-    - description: 'The name of the trusted identity
-
-        provider. This is used for differentiation of providers in the
-
-        account.
-
-        '
-      id: trusted_id_provider_name
-      type: *id039
-    - defaultValue: None
-      description: 'The URL of this trusted identity provider
-
-        '
-      id: id_provider
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-- *id044
 references:
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.delete
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.get
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.list_by_account
-- fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations
-  uid: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.update
 - fullName: azure.mgmt.datalake.store.operations.TrustedIdProvidersOperations.create_or_update
   isExternal: false
   name: create_or_update

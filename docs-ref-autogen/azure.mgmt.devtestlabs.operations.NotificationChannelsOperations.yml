@@ -8,12 +8,6 @@ items:
   - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
   - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
   - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
   class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
   fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: NotificationChannelsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
 - class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
   langs:
@@ -92,32 +86,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the notificationChannel.
 
         '
       id: name
-      type: &id006
+      type:
       - str
     - description: 'A notification.
 
         '
       id: notification_channel
-      type: &id007
+      type:
       - azure.mgmt.devtestlabs.models.NotificationChannel
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,7 +120,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -134,16 +128,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.devtestlabs.models.NotificationChannel
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
   langs:
@@ -169,26 +163,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the notificationChannel.
 
         '
       id: name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -197,7 +191,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -205,16 +199,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
 - class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
   langs:
@@ -240,19 +234,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the notificationChannel.
 
         '
       id: name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -261,14 +255,14 @@ items:
 
         '
       id: expand
-      type: &id024
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id025
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -277,7 +271,7 @@ items:
 
         '
       id: raw
-      type: &id026
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -285,16 +279,16 @@ items:
 
         '
       id: operation_config
-    return: &id027
+    return:
       type:
       - azure.mgmt.devtestlabs.models.NotificationChannel
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
 - class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: &id029
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
   langs:
@@ -320,13 +314,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id030
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -335,14 +329,14 @@ items:
 
         '
       id: expand
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id033
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -351,7 +345,7 @@ items:
 
         '
       id: top
-      type: &id034
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -360,14 +354,14 @@ items:
 
         '
       id: orderby
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id036
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -376,7 +370,7 @@ items:
 
         '
       id: raw
-      type: &id037
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -384,13 +378,13 @@ items:
 
         '
       id: operation_config
-    return: &id038
+    return:
       type:
       - azure.mgmt.devtestlabs.models.NotificationChannelPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
 - class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: &id040
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
   langs:
@@ -416,19 +410,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id041
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id042
+      type:
       - str
     - description: 'The name of the notificationChannel.
 
         '
       id: name
-      type: &id043
+      type:
       - str
     - defaultValue: None
       description: 'The type of event (i.e. AutoShutdown, Cost).
@@ -437,7 +431,7 @@ items:
 
         '
       id: event_name
-      type: &id044
+      type:
       - 'str or @azure.mgmt.devtestlabs.models.NotificationChannelEventType
 
         '
@@ -446,14 +440,14 @@ items:
 
         '
       id: json_payload
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -462,7 +456,7 @@ items:
 
         '
       id: raw
-      type: &id047
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -470,16 +464,16 @@ items:
 
         '
       id: operation_config
-    return: &id048
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
 - class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: &id050
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
   langs:
@@ -505,32 +499,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id051
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id052
+      type:
       - str
     - description: 'The name of the notificationChannel.
 
         '
       id: name
-      type: &id053
+      type:
       - str
     - description: 'A notification.
 
         '
       id: notification_channel
-      type: &id054
+      type:
       - azure.mgmt.devtestlabs.models.NotificationChannelFragment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id055
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -539,7 +533,7 @@ items:
 
         '
       id: raw
-      type: &id056
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -547,542 +541,15 @@ items:
 
         '
       id: operation_config
-    return: &id057
+    return:
       type:
       - azure.mgmt.devtestlabs.models.NotificationChannel
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-- children:
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-  - azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-  class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: NotificationChannelsOperations
-  source:
-    id: NotificationChannelsOperations
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'NotificationChannelsOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: NotificationChannelsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-- &id011
-  class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 196
-  summary: 'Create or replace an existing notificationChannel.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, lab_name, name, notification_channel,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id005
-    - description: 'The name of the notificationChannel.
-
-        '
-      id: name
-      type: *id006
-    - description: 'A notification.
-
-        '
-      id: notification_channel
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 270
-  summary: 'Delete notificationchannel.
-
-    '
-  syntax:
-    content: delete(resource_group_name, lab_name, name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id014
-    - description: 'The name of the notificationChannel.
-
-        '
-      id: name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-- *id019
-- &id028
-  class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 126
-  summary: 'Get notificationchannel.
-
-    '
-  syntax:
-    content: get(resource_group_name, lab_name, name, expand=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id022
-    - description: 'The name of the notificationChannel.
-
-        '
-      id: name
-      type: *id023
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=webHookUrl)''
-
-        '
-      id: expand
-      type: *id024
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id025
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id026
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id027
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-- *id028
-- &id039
-  class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: *id029
-  fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'List notificationchannels in a given lab.
-
-    '
-  syntax:
-    content: list(resource_group_name, lab_name, expand=None, filter=None, top=None,
-      orderby=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id030
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id031
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=webHookUrl)''
-
-        '
-      id: expand
-      type: *id032
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id033
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id034
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id035
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id036
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id037
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id038
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-- *id039
-- &id049
-  class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: *id040
-  fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: notify
-  source:
-    id: notify
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 399
-  summary: 'Send notification to provided channel.
-
-    '
-  syntax:
-    content: notify(resource_group_name, lab_name, name, event_name=None, json_payload=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id041
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id042
-    - description: 'The name of the notificationChannel.
-
-        '
-      id: name
-      type: *id043
-    - defaultValue: None
-      description: 'The type of event (i.e. AutoShutdown, Cost).
-
-        Possible values include: ''AutoShutdown'', ''Cost''
-
-        '
-      id: event_name
-      type: *id044
-    - defaultValue: None
-      description: 'Properties for the notification in json format.
-
-        '
-      id: json_payload
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id048
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-- *id049
-- &id058
-  class: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  exceptions: *id050
-  fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\notification_channels_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 327
-  summary: 'Modify properties of notificationchannels.
-
-    '
-  syntax:
-    content: update(resource_group_name, lab_name, name, notification_channel, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id051
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id052
-    - description: 'The name of the notificationChannel.
-
-        '
-      id: name
-      type: *id053
-    - description: 'A notification.
-
-        '
-      id: notification_channel
-      type: *id054
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id055
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id056
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id057
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-- *id058
 references:
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-  isExternal: false
-  name: notify
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-  isExternal: false
-  name: notify
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.notify
-- fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations
-  uid: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.update
 - fullName: azure.mgmt.devtestlabs.operations.NotificationChannelsOperations.create_or_update
   isExternal: false
   name: create_or_update

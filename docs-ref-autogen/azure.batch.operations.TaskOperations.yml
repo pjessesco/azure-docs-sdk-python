@@ -11,15 +11,6 @@ items:
   - azure.batch.operations.TaskOperations.reactivate
   - azure.batch.operations.TaskOperations.terminate
   - azure.batch.operations.TaskOperations.update
-  - azure.batch.operations.TaskOperations.add
-  - azure.batch.operations.TaskOperations.add_collection
-  - azure.batch.operations.TaskOperations.delete
-  - azure.batch.operations.TaskOperations.get
-  - azure.batch.operations.TaskOperations.list
-  - azure.batch.operations.TaskOperations.list_subtasks
-  - azure.batch.operations.TaskOperations.reactivate
-  - azure.batch.operations.TaskOperations.terminate
-  - azure.batch.operations.TaskOperations.update
   class: azure.batch.operations.TaskOperations
   fullName: azure.batch.operations.TaskOperations
   inheritance:
@@ -50,7 +41,7 @@ items:
     '
   syntax:
     content: TaskOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -67,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API Version. Constant value: "2017-06-01.5.1".
 
         '
@@ -75,7 +66,7 @@ items:
   type: class
   uid: azure.batch.operations.TaskOperations
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.add
   langs:
@@ -101,27 +92,27 @@ items:
 
         '
       id: job_id
-      type: &id004
+      type:
       - str
     - description: 'The task to be added.
 
         '
       id: task
-      type: &id005
+      type:
       - azure.batch.models.TaskAddParameter
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: task_add_options
-      type: &id006
+      type:
       - azure.batch.models.TaskAddOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -130,7 +121,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -138,16 +129,16 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.add
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id011
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.add_collection
   langs:
@@ -194,13 +185,13 @@ items:
 
         '
       id: job_id
-      type: &id012
+      type:
       - str
     - description: 'The collection of tasks to add.
 
         '
       id: value
-      type: &id013
+      type:
       - 'list of @azure.batch.models.TaskAddParameter
 
         '
@@ -211,14 +202,14 @@ items:
 
         '
       id: task_add_collection_options
-      type: &id014
+      type:
       - azure.batch.models.TaskAddCollectionOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id015
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -227,7 +218,7 @@ items:
 
         '
       id: raw
-      type: &id016
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -235,16 +226,16 @@ items:
 
         '
       id: operation_config
-    return: &id017
+    return:
       type:
       - azure.batch.models.TaskAddCollectionResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.add_collection
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id019
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.delete
   langs:
@@ -281,27 +272,27 @@ items:
 
         '
       id: job_id
-      type: &id020
+      type:
       - str
     - description: 'The ID of the task to delete.
 
         '
       id: task_id
-      type: &id021
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: task_delete_options
-      type: &id022
+      type:
       - azure.batch.models.TaskDeleteOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id023
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -310,7 +301,7 @@ items:
 
         '
       id: raw
-      type: &id024
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -318,16 +309,16 @@ items:
 
         '
       id: operation_config
-    return: &id025
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.delete
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id027
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.get
   langs:
@@ -360,27 +351,27 @@ items:
 
         '
       id: job_id
-      type: &id028
+      type:
       - str
     - description: 'The ID of the task to get information about.
 
         '
       id: task_id
-      type: &id029
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: task_get_options
-      type: &id030
+      type:
       - azure.batch.models.TaskGetOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -389,7 +380,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -397,16 +388,16 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.batch.models.CloudTask
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.get
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id035
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.list
   langs:
@@ -439,21 +430,21 @@ items:
 
         '
       id: job_id
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: task_list_options
-      type: &id037
+      type:
       - azure.batch.models.TaskListOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -462,7 +453,7 @@ items:
 
         '
       id: raw
-      type: &id039
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -470,13 +461,13 @@ items:
 
         '
       id: operation_config
-    return: &id040
+    return:
       type:
       - azure.batch.models.CloudTaskPaged
   type: method
   uid: azure.batch.operations.TaskOperations.list
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id042
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.list_subtasks
   langs:
@@ -509,13 +500,13 @@ items:
 
         '
       id: job_id
-      type: &id043
+      type:
       - str
     - description: 'The ID of the task.
 
         '
       id: task_id
-      type: &id044
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -524,14 +515,14 @@ items:
 
         '
       id: task_list_subtasks_options
-      type: &id045
+      type:
       - azure.batch.models.TaskListSubtasksOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -540,7 +531,7 @@ items:
 
         '
       id: raw
-      type: &id047
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -548,16 +539,16 @@ items:
 
         '
       id: operation_config
-    return: &id048
+    return:
       type:
       - azure.batch.models.CloudTaskListSubtasksResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.list_subtasks
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id050
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.reactivate
   langs:
@@ -598,13 +589,13 @@ items:
 
         '
       id: job_id
-      type: &id051
+      type:
       - str
     - description: 'The ID of the task to reactivate.
 
         '
       id: task_id
-      type: &id052
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -613,14 +604,14 @@ items:
 
         '
       id: task_reactivate_options
-      type: &id053
+      type:
       - azure.batch.models.TaskReactivateOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id054
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -629,7 +620,7 @@ items:
 
         '
       id: raw
-      type: &id055
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -637,16 +628,16 @@ items:
 
         '
       id: operation_config
-    return: &id056
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.reactivate
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id058
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.terminate
   langs:
@@ -681,27 +672,27 @@ items:
 
         '
       id: job_id
-      type: &id059
+      type:
       - str
     - description: 'The ID of the task to terminate.
 
         '
       id: task_id
-      type: &id060
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: task_terminate_options
-      type: &id061
+      type:
       - azure.batch.models.TaskTerminateOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id062
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -710,7 +701,7 @@ items:
 
         '
       id: raw
-      type: &id063
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -718,16 +709,16 @@ items:
 
         '
       id: operation_config
-    return: &id064
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.terminate
 - class: azure.batch.operations.TaskOperations
-  exceptions: &id066
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.TaskOperations.update
   langs:
@@ -753,20 +744,20 @@ items:
 
         '
       id: job_id
-      type: &id067
+      type:
       - str
     - description: 'The ID of the task to update.
 
         '
       id: task_id
-      type: &id068
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: task_update_options
-      type: &id069
+      type:
       - azure.batch.models.TaskUpdateOptions
     - defaultValue: None
       description: 'Constraints that apply to this task. If omitted,
@@ -775,14 +766,14 @@ items:
 
         '
       id: constraints
-      type: &id070
+      type:
       - azure.batch.models.TaskConstraints
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id071
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -791,7 +782,7 @@ items:
 
         '
       id: raw
-      type: &id072
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -799,802 +790,15 @@ items:
 
         '
       id: operation_config
-    return: &id073
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.TaskOperations.update
-- children:
-  - azure.batch.operations.TaskOperations.add
-  - azure.batch.operations.TaskOperations.add_collection
-  - azure.batch.operations.TaskOperations.delete
-  - azure.batch.operations.TaskOperations.get
-  - azure.batch.operations.TaskOperations.list
-  - azure.batch.operations.TaskOperations.list_subtasks
-  - azure.batch.operations.TaskOperations.reactivate
-  - azure.batch.operations.TaskOperations.terminate
-  - azure.batch.operations.TaskOperations.update
-  class: azure.batch.operations.TaskOperations
-  fullName: azure.batch.operations.TaskOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.batch.operations
-  name: TaskOperations
-  source:
-    id: TaskOperations
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'TaskOperations operations.
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: TaskOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.batch.operations.TaskOperations
-- &id010
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id003
-  fullName: azure.batch.operations.TaskOperations.add
-  langs:
-  - python
-  module: azure.batch.operations
-  name: add
-  source:
-    id: add
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Adds a task to the specified job.
-
-    '
-  syntax:
-    content: add(job_id, task, task_add_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The ID of the job to which the task is to be added.
-
-        '
-      id: job_id
-      type: *id004
-    - description: 'The task to be added.
-
-        '
-      id: task
-      type: *id005
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: task_add_options
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.batch.operations.TaskOperations.add
-- *id010
-- &id018
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id011
-  fullName: azure.batch.operations.TaskOperations.add_collection
-  langs:
-  - python
-  module: azure.batch.operations
-  name: add_collection
-  source:
-    id: add_collection
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 235
-  summary: 'Adds a collection of tasks to the specified job.
-
-
-    Note that each task must have a unique ID. The Batch service may not
-
-    return the results for each task in the same order the tasks were
-
-    submitted in this request. If the server times out or the connection is
-
-    closed during the request, the request may have been partially or fully
-
-    processed, or not at all. In such cases, the user should re-issue the
-
-    request. Note that it is up to the user to correctly handle failures
-
-    when re-issuing a request. For example, you should use the same task
-
-    ids during a retry so that if the prior operation succeeded, the retry
-
-    will not create extra tasks unexpectedly.
-
-    '
-  syntax:
-    content: add_collection(job_id, value, task_add_collection_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job to which the task collection is to be
-
-        added.
-
-        '
-      id: job_id
-      type: *id012
-    - description: 'The collection of tasks to add.
-
-        '
-      id: value
-      type: *id013
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: task_add_collection_options
-      type: *id014
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id015
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id016
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id017
-  type: method
-  uid: azure.batch.operations.TaskOperations.add_collection
-- *id018
-- &id026
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id019
-  fullName: azure.batch.operations.TaskOperations.delete
-  langs:
-  - python
-  module: azure.batch.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 342
-  summary: 'Deletes a task from the specified job.
-
-
-    When a task is deleted, all of the files in its directory on the
-
-    compute node where it ran are also deleted (regardless of the retention
-
-    time). For multi-instance tasks, the delete task operation applies
-
-    synchronously to the primary task; subtasks and their files are then
-
-    deleted asynchronously in the background.
-
-    '
-  syntax:
-    content: delete(job_id, task_id, task_delete_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job from which to delete the task.
-
-        '
-      id: job_id
-      type: *id020
-    - description: 'The ID of the task to delete.
-
-        '
-      id: task_id
-      type: *id021
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: task_delete_options
-      type: *id022
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id023
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id024
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id025
-  type: method
-  uid: azure.batch.operations.TaskOperations.delete
-- *id026
-- &id034
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id027
-  fullName: azure.batch.operations.TaskOperations.get
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get
-  source:
-    id: get
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 448
-  summary: 'Gets information about the specified task.
-
-
-    For multi-instance tasks, information such as affinityId, executionInfo
-
-    and nodeInfo refer to the primary task. Use the list subtasks API to
-
-    retrieve information about subtasks.
-
-    '
-  syntax:
-    content: get(job_id, task_id, task_get_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The ID of the job that contains the task.
-
-        '
-      id: job_id
-      type: *id028
-    - description: 'The ID of the task to get information about.
-
-        '
-      id: task_id
-      type: *id029
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: task_get_options
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.batch.operations.TaskOperations.get
-- *id034
-- &id041
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id035
-  fullName: azure.batch.operations.TaskOperations.list
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list
-  source:
-    id: list
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 124
-  summary: 'Lists all of the tasks that are associated with the specified job.
-
-
-    For multi-instance tasks, information such as affinityId, executionInfo
-
-    and nodeInfo refer to the primary task. Use the list subtasks API to
-
-    retrieve information about subtasks.
-
-    '
-  syntax:
-    content: list(job_id, task_list_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The ID of the job.
-
-        '
-      id: job_id
-      type: *id036
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: task_list_options
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id040
-  type: method
-  uid: azure.batch.operations.TaskOperations.list
-- *id041
-- &id049
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id042
-  fullName: azure.batch.operations.TaskOperations.list_subtasks
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list_subtasks
-  source:
-    id: list_subtasks
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 686
-  summary: 'Lists all of the subtasks that are associated with the specified
-
-    multi-instance task.
-
-
-    If the task is not a multi-instance task then this returns an empty
-
-    collection.
-
-    '
-  syntax:
-    content: list_subtasks(job_id, task_id, task_list_subtasks_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job.
-
-        '
-      id: job_id
-      type: *id043
-    - description: 'The ID of the task.
-
-        '
-      id: task_id
-      type: *id044
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: task_list_subtasks_options
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id048
-  type: method
-  uid: azure.batch.operations.TaskOperations.list_subtasks
-- *id049
-- &id057
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id050
-  fullName: azure.batch.operations.TaskOperations.reactivate
-  langs:
-  - python
-  module: azure.batch.operations
-  name: reactivate
-  source:
-    id: reactivate
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 896
-  summary: 'Reactivates the specified task.
-
-
-    Reactivation makes a task eligible to be retried again up to its
-
-    maximum retry count. The task''s state is changed to active. As the task
-
-    is no longer in the completed state, any previous exit code or
-
-    scheduling error is no longer available after reactivation. This will
-
-    fail for tasks that are not completed or that previously completed
-
-    successfully (with an exit code of 0). Additionally, this will fail if
-
-    the job has completed (or is terminating or deleting).
-
-    '
-  syntax:
-    content: reactivate(job_id, task_id, task_reactivate_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job containing the task.
-
-        '
-      id: job_id
-      type: *id051
-    - description: 'The ID of the task to reactivate.
-
-        '
-      id: task_id
-      type: *id052
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: task_reactivate_options
-      type: *id053
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id054
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id055
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id056
-  type: method
-  uid: azure.batch.operations.TaskOperations.reactivate
-- *id057
-- &id065
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id058
-  fullName: azure.batch.operations.TaskOperations.terminate
-  langs:
-  - python
-  module: azure.batch.operations
-  name: terminate
-  source:
-    id: terminate
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 788
-  summary: 'Terminates the specified task.
-
-
-    When the task has been terminated, it moves to the completed state. For
-
-    multi-instance tasks, the terminate task operation applies
-
-    synchronously to the primary task; subtasks are then terminated
-
-    asynchronously in the background.
-
-    '
-  syntax:
-    content: terminate(job_id, task_id, task_terminate_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job containing the task.
-
-        '
-      id: job_id
-      type: *id059
-    - description: 'The ID of the task to terminate.
-
-        '
-      id: task_id
-      type: *id060
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: task_terminate_options
-      type: *id061
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id062
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id063
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id064
-  type: method
-  uid: azure.batch.operations.TaskOperations.terminate
-- *id065
-- &id074
-  class: azure.batch.operations.TaskOperations
-  exceptions: *id066
-  fullName: azure.batch.operations.TaskOperations.update
-  langs:
-  - python
-  module: azure.batch.operations
-  name: update
-  source:
-    id: update
-    path: azure-batch\azure\batch\operations\task_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\task_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 574
-  summary: 'Updates the properties of the specified task.
-
-    '
-  syntax:
-    content: update(job_id, task_id, task_update_options=None, constraints=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job containing the task.
-
-        '
-      id: job_id
-      type: *id067
-    - description: 'The ID of the task to update.
-
-        '
-      id: task_id
-      type: *id068
-    - defaultValue: None
-      description: 'Additional parameters for the operation
-
-        '
-      id: task_update_options
-      type: *id069
-    - defaultValue: None
-      description: 'Constraints that apply to this task. If omitted,
-
-        the task is given the default constraints.
-
-        '
-      id: constraints
-      type: *id070
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id071
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id072
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id073
-  type: method
-  uid: azure.batch.operations.TaskOperations.update
-- *id074
 references:
-- fullName: azure.batch.operations.TaskOperations.add
-  isExternal: false
-  name: add
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.add
-- fullName: azure.batch.operations.TaskOperations.add_collection
-  isExternal: false
-  name: add_collection
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.add_collection
-- fullName: azure.batch.operations.TaskOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.delete
-- fullName: azure.batch.operations.TaskOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.get
-- fullName: azure.batch.operations.TaskOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.list
-- fullName: azure.batch.operations.TaskOperations.list_subtasks
-  isExternal: false
-  name: list_subtasks
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.list_subtasks
-- fullName: azure.batch.operations.TaskOperations.reactivate
-  isExternal: false
-  name: reactivate
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.reactivate
-- fullName: azure.batch.operations.TaskOperations.terminate
-  isExternal: false
-  name: terminate
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.terminate
-- fullName: azure.batch.operations.TaskOperations.update
-  isExternal: false
-  name: update
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.update
-- fullName: azure.batch.operations.TaskOperations.add
-  isExternal: false
-  name: add
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.add
-- fullName: azure.batch.operations.TaskOperations.add_collection
-  isExternal: false
-  name: add_collection
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.add_collection
-- fullName: azure.batch.operations.TaskOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.delete
-- fullName: azure.batch.operations.TaskOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.get
-- fullName: azure.batch.operations.TaskOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.list
-- fullName: azure.batch.operations.TaskOperations.list_subtasks
-  isExternal: false
-  name: list_subtasks
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.list_subtasks
-- fullName: azure.batch.operations.TaskOperations.reactivate
-  isExternal: false
-  name: reactivate
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.reactivate
-- fullName: azure.batch.operations.TaskOperations.terminate
-  isExternal: false
-  name: terminate
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.terminate
-- fullName: azure.batch.operations.TaskOperations.update
-  isExternal: false
-  name: update
-  parent: azure.batch.operations.TaskOperations
-  uid: azure.batch.operations.TaskOperations.update
 - fullName: azure.batch.operations.TaskOperations.add
   isExternal: false
   name: add

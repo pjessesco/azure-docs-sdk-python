@@ -4,8 +4,6 @@ items:
 - children:
   - azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
   - azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-  - azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-  - azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
   class: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
   fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
   inheritance:
@@ -29,7 +27,7 @@ items:
     '
   syntax:
     content: ProviderOperationsMetadataOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -49,7 +47,7 @@ items:
   type: class
   uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
 - class: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  exceptions: &id002
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
   langs:
@@ -77,27 +75,27 @@ items:
 
         '
       id: resource_provider_namespace
-      type: &id003
+      type:
       - str
     - description: 'The API version to use for the operation.
 
         '
       id: api_version
-      type: &id004
+      type:
       - str
     - defaultValue: resourceTypes
       description: 'Specifies whether to expand the values.
 
         '
       id: expand
-      type: &id005
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id006
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -106,7 +104,7 @@ items:
 
         '
       id: raw
-      type: &id007
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -114,16 +112,16 @@ items:
 
         '
       id: operation_config
-    return: &id008
+    return:
       type:
       - azure.mgmt.authorization.models.ProviderOperationsMetadata
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
 - class: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  exceptions: &id010
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
   langs:
@@ -149,21 +147,21 @@ items:
 
         '
       id: api_version
-      type: &id011
+      type:
       - str
     - defaultValue: resourceTypes
       description: 'Specifies whether to expand the values.
 
         '
       id: expand
-      type: &id012
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id013
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -172,7 +170,7 @@ items:
 
         '
       id: raw
-      type: &id014
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -180,184 +178,12 @@ items:
 
         '
       id: operation_config
-    return: &id015
+    return:
       type:
       - azure.mgmt.authorization.models.ProviderOperationsMetadataPaged
   type: method
   uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-- children:
-  - azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-  - azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-  class: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.authorization.operations
-  name: ProviderOperationsMetadataOperations
-  source:
-    id: ProviderOperationsMetadataOperations
-    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\provider_operations_metadata_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\provider_operations_metadata_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ProviderOperationsMetadataOperations operations.
-
-
-
-    '
-  syntax:
-    content: ProviderOperationsMetadataOperations(client, config, serializer, deserializer)
-    parameters: *id001
-  type: class
-  uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-- &id009
-  class: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  exceptions: *id002
-  fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-  langs:
-  - python
-  module: azure.mgmt.authorization.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\provider_operations_metadata_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\provider_operations_metadata_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 36
-  summary: 'Gets provider operations metadata for the specified resource provider.
-
-    '
-  syntax:
-    content: get(resource_provider_namespace, api_version, expand='resourceTypes',
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The namespace of the resource
-
-        provider.
-
-        '
-      id: resource_provider_namespace
-      type: *id003
-    - description: 'The API version to use for the operation.
-
-        '
-      id: api_version
-      type: *id004
-    - defaultValue: resourceTypes
-      description: 'Specifies whether to expand the values.
-
-        '
-      id: expand
-      type: *id005
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id006
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id007
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id008
-  type: method
-  uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-- *id009
-- &id016
-  class: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  exceptions: *id010
-  fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-  langs:
-  - python
-  module: azure.mgmt.authorization.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\provider_operations_metadata_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\provider_operations_metadata_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 101
-  summary: 'Gets provider operations metadata for all resource providers.
-
-    '
-  syntax:
-    content: list(api_version, expand='resourceTypes', custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The API version to use for this operation.
-
-        '
-      id: api_version
-      type: *id011
-    - defaultValue: resourceTypes
-      description: 'Specifies whether to expand the values.
-
-        '
-      id: expand
-      type: *id012
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id013
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id014
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id015
-  type: method
-  uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-- *id016
 references:
-- fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-- fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-- fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
-- fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations
-  uid: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.list
 - fullName: azure.mgmt.authorization.operations.ProviderOperationsMetadataOperations.get
   isExternal: false
   name: get

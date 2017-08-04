@@ -7,11 +7,6 @@ items:
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
   class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
   inheritance:
@@ -38,7 +33,7 @@ items:
     '
   syntax:
     content: AvailabilitySetsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -55,7 +50,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-04-30-preview".
 
         '
@@ -63,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
   langs:
@@ -89,13 +84,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the availability set.
 
         '
       id: name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the Create Availability Set
 
@@ -103,14 +98,14 @@ items:
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.AvailabilitySet
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -119,7 +114,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -127,10 +122,10 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.AvailabilitySet
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -138,11 +133,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.AvailabilitySet
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
   langs:
@@ -168,20 +163,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the availability set.
 
         '
       id: availability_set_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -190,7 +185,7 @@ items:
 
         '
       id: raw
-      type: &id015
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -198,10 +193,10 @@ items:
 
         '
       id: operation_config
-    return: &id016
+    return:
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -209,11 +204,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
   langs:
@@ -239,20 +234,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the availability set.
 
         '
       id: availability_set_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -261,7 +256,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -269,10 +264,10 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.AvailabilitySet
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -280,11 +275,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.AvailabilitySet
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
   langs:
@@ -309,14 +304,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -325,7 +320,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -333,7 +328,7 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.AvailabilitySet
 
         '
@@ -342,7 +337,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
   langs:
@@ -370,20 +365,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id032
+      type:
       - str
     - description: 'The name of the availability set.
 
         '
       id: availability_set_name
-      type: &id033
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id034
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -392,7 +387,7 @@ items:
 
         '
       id: raw
-      type: &id035
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -400,7 +395,7 @@ items:
 
         '
       id: operation_config
-    return: &id036
+    return:
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineSize
 
         '
@@ -408,381 +403,7 @@ items:
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineSizePaged
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-- children:
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: AvailabilitySetsOperations
-  source:
-    id: AvailabilitySetsOperations
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'AvailabilitySetsOperations operations.
-
-
-
-
-
-
-    '
-  syntax:
-    content: AvailabilitySetsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-- &id010
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Create or update an availability set.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the availability set.
-
-        '
-      id: name
-      type: *id005
-    - description: 'Parameters supplied to the Create Availability Set
-
-        operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: *id011
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 111
-  summary: 'Delete an availability set.
-
-    '
-  syntax:
-    content: delete(resource_group_name, availability_set_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the availability set.
-
-        '
-      id: availability_set_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id016
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: *id018
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 176
-  summary: 'Retrieves information about an availability set.
-
-    '
-  syntax:
-    content: get(resource_group_name, availability_set_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the availability set.
-
-        '
-      id: availability_set_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-- *id024
-- &id030
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: *id025
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 241
-  summary: 'Lists all availability sets in a resource group.
-
-    '
-  syntax:
-    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-- *id030
-- &id037
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  exceptions: *id031
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: list_available_sizes
-  source:
-    id: list_available_sizes
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\availability_sets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 309
-  summary: 'Lists all available virtual machine sizes that can be used to create a
-
-    new virtual machine in an existing availability set.
-
-    '
-  syntax:
-    content: list_available_sizes(resource_group_name, availability_set_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id032
-    - description: 'The name of the availability set.
-
-        '
-      id: availability_set_name
-      type: *id033
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id034
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id035
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id036
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-- *id037
 references:
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-  isExternal: false
-  name: list_available_sizes
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.get
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
-  isExternal: false
-  name: list_available_sizes
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.list_available_sizes
 - fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.AvailabilitySetsOperations.create_or_update
   isExternal: false
   name: create_or_update

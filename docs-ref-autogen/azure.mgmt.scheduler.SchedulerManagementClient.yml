@@ -20,13 +20,13 @@ items:
     startLine: 55
   syntax:
     content: SchedulerManagementClient(credentials, subscription_id, base_url=None)
-    parameters: &id001
+    parameters:
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - ../msrestazure.azure_active_directory
+      - msrestazure.azure_active_directory
     - description: 'The subscription id.
 
         '
@@ -39,7 +39,7 @@ items:
       id: base_url
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Configuration for client.
 
         '
@@ -58,29 +58,6 @@ items:
       id: jobs
       type:
       - .operations.JobsOperations
-  type: class
-  uid: azure.mgmt.scheduler.SchedulerManagementClient
-- children: []
-  class: azure.mgmt.scheduler.SchedulerManagementClient
-  fullName: azure.mgmt.scheduler.SchedulerManagementClient
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.scheduler
-  name: SchedulerManagementClient
-  source:
-    id: SchedulerManagementClient
-    path: azure-mgmt-scheduler\azure\mgmt\scheduler\scheduler_management_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-scheduler\azure\mgmt\scheduler\scheduler_management_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 55
-  syntax:
-    content: SchedulerManagementClient(credentials, subscription_id, base_url=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.scheduler.SchedulerManagementClient
 references: []

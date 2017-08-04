@@ -24,13 +24,13 @@ items:
     '
   syntax:
     content: KeyVaultManagementClient(credentials, subscription_id, base_url=None)
-    parameters: &id001
+    parameters:
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - ../msrestazure.azure_active_directory
+      - msrestazure.azure_active_directory
     - description: 'Gets subscription credentials which uniquely
 
         identify Microsoft Azure subscription. The subscription ID forms part of
@@ -47,7 +47,7 @@ items:
       id: base_url
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Configuration for client.
 
         '
@@ -60,33 +60,6 @@ items:
       id: vaults
       type:
       - azure.mgmt.keyvault.operations.VaultsOperations
-  type: class
-  uid: azure.mgmt.keyvault.KeyVaultManagementClient
-- children: []
-  class: azure.mgmt.keyvault.KeyVaultManagementClient
-  fullName: azure.mgmt.keyvault.KeyVaultManagementClient
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.keyvault
-  name: KeyVaultManagementClient
-  source:
-    id: KeyVaultManagementClient
-    path: azure-mgmt-keyvault\azure\mgmt\keyvault\key_vault_management_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-keyvault\azure\mgmt\keyvault\key_vault_management_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 56
-  summary: 'The Azure management API provides a RESTful set of web services that interact
-    with Azure Key Vault.
-
-    '
-  syntax:
-    content: KeyVaultManagementClient(credentials, subscription_id, base_url=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.keyvault.KeyVaultManagementClient
 references: []

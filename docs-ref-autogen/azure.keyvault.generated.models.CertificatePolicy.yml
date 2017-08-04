@@ -31,7 +31,7 @@ items:
   syntax:
     content: CertificatePolicy(key_properties=None, secret_properties=None, x509_certificate_properties=None,
       lifetime_actions=None, issuer_parameters=None, attributes=None)
-    parameters: &id001
+    parameters:
     - description: 'Properties of the key backing a certificate.
 
         '
@@ -76,47 +76,13 @@ items:
       id: attributes
       type:
       - azure.keyvault.models.CertificateAttributes
-    variables: &id002
+    variables:
     - description: 'The certificate id.
 
         '
       id: id
       type:
       - str
-  type: class
-  uid: azure.keyvault.generated.models.CertificatePolicy
-- children: []
-  class: azure.keyvault.generated.models.CertificatePolicy
-  fullName: azure.keyvault.generated.models.CertificatePolicy
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.keyvault.generated.models
-  name: CertificatePolicy
-  source:
-    id: CertificatePolicy
-    path: azure-keyvault\azure\keyvault\models\certificate_policy.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\models\certificate_policy.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Management policy for a certificate.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: CertificatePolicy(key_properties=None, secret_properties=None, x509_certificate_properties=None,
-      lifetime_actions=None, issuer_parameters=None, attributes=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.keyvault.generated.models.CertificatePolicy
 references: []

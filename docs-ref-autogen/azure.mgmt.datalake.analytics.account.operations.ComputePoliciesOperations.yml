@@ -7,11 +7,6 @@ items:
   - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
   - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
   - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
   class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
   fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
   inheritance:
@@ -38,7 +33,7 @@ items:
     '
   syntax:
     content: ComputePoliciesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -55,7 +50,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-11-01".
 
         '
@@ -63,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
 - class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
   langs:
@@ -95,7 +90,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account to
 
@@ -103,7 +98,7 @@ items:
 
         '
       id: account_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the compute policy to create
 
@@ -111,7 +106,7 @@ items:
 
         '
       id: compute_policy_name
-      type: &id006
+      type:
       - str
     - description: 'Parameters supplied to create or update the compute
 
@@ -121,14 +116,14 @@ items:
 
         '
       id: parameters
-      type: &id007
+      type:
       - azure.mgmt.datalake.analytics.account.models.ComputePolicyCreateOrUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -137,7 +132,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -145,16 +140,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.ComputePolicy
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
 - class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
   langs:
@@ -184,7 +179,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account from
 
@@ -192,20 +187,20 @@ items:
 
         '
       id: account_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the compute policy to delete.
 
         '
       id: compute_policy_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -214,7 +209,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -222,16 +217,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
 - class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
   langs:
@@ -259,7 +254,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account from
 
@@ -267,7 +262,7 @@ items:
 
         '
       id: account_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the compute policy to
 
@@ -275,14 +270,14 @@ items:
 
         '
       id: compute_policy_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -291,7 +286,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -299,16 +294,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.ComputePolicy
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
 - class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
   langs:
@@ -338,7 +333,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account from
 
@@ -346,14 +341,14 @@ items:
 
         '
       id: account_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -362,7 +357,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -370,13 +365,13 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.ComputePolicyPaged
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
 - class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: &id035
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
   langs:
@@ -404,7 +399,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id036
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account to
 
@@ -412,13 +407,13 @@ items:
 
         '
       id: account_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the compute policy to update.
 
         '
       id: compute_policy_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'The maximum degree of
@@ -427,7 +422,7 @@ items:
 
         '
       id: max_degree_of_parallelism_per_job
-      type: &id039
+      type:
       - int
     - defaultValue: None
       description: 'The minimum priority per job this user
@@ -436,14 +431,14 @@ items:
 
         '
       id: min_priority_per_job
-      type: &id040
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -452,7 +447,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -460,463 +455,15 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.ComputePolicy
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-- children:
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-  - azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-  class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: ComputePoliciesOperations
-  source:
-    id: ComputePoliciesOperations
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ComputePoliciesOperations operations.
-
-
-
-
-
-
-    '
-  syntax:
-    content: ComputePoliciesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-- &id011
-  class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Creates or updates the specified compute policy. During update, the
-
-    compute policy with the specified name will be replaced with this new
-
-    compute policy. An account supports, at most, 50 policies.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, account_name, compute_policy_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the Data Lake Analytics account to
-
-        add or replace the compute policy.
-
-        '
-      id: account_name
-      type: *id005
-    - description: 'The name of the compute policy to create
-
-        or update.
-
-        '
-      id: compute_policy_name
-      type: *id006
-    - description: 'Parameters supplied to create or update the compute
-
-        policy. The max degree of parallelism per job property, min priority
-
-        per job property, or both must be present.
-
-        '
-      id: parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: *id012
-  fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 201
-  summary: 'Deletes the specified compute policy from the specified Data Lake
-
-    Analytics account.
-
-    '
-  syntax:
-    content: delete(resource_group_name, account_name, compute_policy_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the Data Lake Analytics account from
-
-        which to delete the compute policy.
-
-        '
-      id: account_name
-      type: *id014
-    - description: 'The name of the compute policy to delete.
-
-        '
-      id: compute_policy_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: *id020
-  fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 261
-  summary: 'Gets the specified Data Lake Analytics compute policy.
-
-    '
-  syntax:
-    content: get(resource_group_name, account_name, compute_policy_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the Data Lake Analytics account from
-
-        which to get the compute policy.
-
-        '
-      id: account_name
-      type: *id022
-    - description: 'The name of the compute policy to
-
-        retrieve.
-
-        '
-      id: compute_policy_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-- *id027
-- &id034
-  class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: *id028
-  fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: list_by_account
-  source:
-    id: list_by_account
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 329
-  summary: 'Lists the Data Lake Analytics compute policies within the specified
-
-    Data Lake Analytics account. An account supports, at most, 50 policies.
-
-    '
-  syntax:
-    content: list_by_account(resource_group_name, account_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the Data Lake Analytics account from
-
-        which to get the compute policies.
-
-        '
-      id: account_name
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-- *id034
-- &id044
-  class: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  exceptions: *id035
-  fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\compute_policies_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 117
-  summary: 'Updates the specified compute policy.
-
-    '
-  syntax:
-    content: update(resource_group_name, account_name, compute_policy_name, max_degree_of_parallelism_per_job=None,
-      min_priority_per_job=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id036
-    - description: 'The name of the Data Lake Analytics account to
-
-        which to update the compute policy.
-
-        '
-      id: account_name
-      type: *id037
-    - description: 'The name of the compute policy to update.
-
-        '
-      id: compute_policy_name
-      type: *id038
-    - defaultValue: None
-      description: 'The maximum degree of
-
-        parallelism per job this user can use to submit jobs.
-
-        '
-      id: max_degree_of_parallelism_per_job
-      type: *id039
-    - defaultValue: None
-      description: 'The minimum priority per job this user
-
-        can use to submit jobs.
-
-        '
-      id: min_priority_per_job
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-- *id044
 references:
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.delete
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.get
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.list_by_account
-- fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.update
 - fullName: azure.mgmt.datalake.analytics.account.operations.ComputePoliciesOperations.create_or_update
   isExternal: false
   name: create_or_update

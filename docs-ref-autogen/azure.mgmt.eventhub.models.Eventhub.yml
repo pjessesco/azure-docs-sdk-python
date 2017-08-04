@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: Eventhub(message_retention_in_days=None, partition_count=None, status=None)
-    parameters: &id001
+    parameters:
     - description: 'Number of days to retain the events for
 
         this Event Hub, value should be 1 to 7 days
@@ -63,7 +63,7 @@ items:
       - 'str or @azure.mgmt.eventhub.models.EntityStatus
 
         '
-    variables: &id002
+    variables:
     - description: 'Resource Id
 
         '
@@ -100,41 +100,6 @@ items:
       id: updated_at
       type:
       - datetime
-  type: class
-  uid: azure.mgmt.eventhub.models.Eventhub
-- children: []
-  class: azure.mgmt.eventhub.models.Eventhub
-  fullName: azure.mgmt.eventhub.models.Eventhub
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.eventhub.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.eventhub.models
-  name: Eventhub
-  source:
-    id: Eventhub
-    path: azure-mgmt-eventhub\azure\mgmt\eventhub\models\eventhub.py
-    remote:
-      branch: master
-      path: azure-mgmt-eventhub\azure\mgmt\eventhub\models\eventhub.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Single item in List or Get Event Hub operation.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: Eventhub(message_retention_in_days=None, partition_count=None, status=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.eventhub.models.Eventhub
 references: []

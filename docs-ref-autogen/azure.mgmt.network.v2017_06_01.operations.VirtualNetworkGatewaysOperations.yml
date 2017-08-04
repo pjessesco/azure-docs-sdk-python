@@ -12,16 +12,6 @@ items:
   - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
   - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
   - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
   class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
   inheritance:
@@ -53,7 +43,7 @@ items:
     '
   syntax:
     content: VirtualNetworkGatewaysOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -70,7 +60,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-06-01".
 
         '
@@ -78,7 +68,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
   langs:
@@ -106,7 +96,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -114,7 +104,7 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to create or update virtual
 
@@ -122,14 +112,14 @@ items:
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.network.v2017_06_01.models.VirtualNetworkGateway
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -138,20 +128,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_06_01.models.VirtualNetworkGateway'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
   langs:
@@ -177,7 +167,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -185,14 +175,14 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -201,20 +191,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
   langs:
@@ -244,7 +234,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -252,7 +242,7 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id020
+      type:
       - str
     - description: 'Parameters supplied to the generate virtual network
 
@@ -260,14 +250,14 @@ items:
 
         '
       id: parameters
-      type: &id021
+      type:
       - azure.mgmt.network.v2017_06_01.models.VpnClientParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -276,20 +266,20 @@ items:
 
         '
       id: raw
-      type: &id023
-      - bool
-    return: &id024
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns str'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id026
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
   langs:
@@ -317,7 +307,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id027
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -325,7 +315,7 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id028
+      type:
       - str
     - description: 'Parameters supplied to the generate virtual network
 
@@ -333,14 +323,14 @@ items:
 
         '
       id: parameters
-      type: &id029
+      type:
       - azure.mgmt.network.v2017_06_01.models.VpnClientParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -349,20 +339,20 @@ items:
 
         '
       id: raw
-      type: &id031
-      - bool
-    return: &id032
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns str'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id034
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
   langs:
@@ -388,7 +378,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id035
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -396,14 +386,14 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id037
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -412,7 +402,7 @@ items:
 
         '
       id: raw
-      type: &id038
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -420,16 +410,16 @@ items:
 
         '
       id: operation_config
-    return: &id039
+    return:
       type:
       - azure.mgmt.network.v2017_06_01.models.VirtualNetworkGateway
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id041
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
   langs:
@@ -457,7 +447,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id042
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -465,20 +455,20 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id043
+      type:
       - str
     - description: 'The IP address of the peer
 
         '
       id: peer
-      type: &id044
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id045
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -487,20 +477,20 @@ items:
 
         '
       id: raw
-      type: &id046
-      - bool
-    return: &id047
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_06_01.models.GatewayRouteListResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id049
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
   langs:
@@ -526,7 +516,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id050
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -534,21 +524,21 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id051
+      type:
       - str
     - defaultValue: None
       description: 'The IP address of the peer to retrieve the status of.
 
         '
       id: peer
-      type: &id052
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id053
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -557,20 +547,20 @@ items:
 
         '
       id: raw
-      type: &id054
-      - bool
-    return: &id055
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_06_01.models.BgpPeerStatusListResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id057
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
   langs:
@@ -598,7 +588,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id058
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -606,14 +596,14 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id059
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id060
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -622,20 +612,20 @@ items:
 
         '
       id: raw
-      type: &id061
-      - bool
-    return: &id062
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_06_01.models.GatewayRouteListResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id064
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
   langs:
@@ -660,14 +650,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id065
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id066
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -676,7 +666,7 @@ items:
 
         '
       id: raw
-      type: &id067
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -684,13 +674,13 @@ items:
 
         '
       id: operation_config
-    return: &id068
+    return:
       type:
       - azure.mgmt.network.v2017_06_01.models.VirtualNetworkGatewayPaged
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
 - class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: &id070
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
   langs:
@@ -718,7 +708,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id071
+      type:
       - str
     - description: 'The name of the virtual network
 
@@ -726,7 +716,7 @@ items:
 
         '
       id: virtual_network_gateway_name
-      type: &id072
+      type:
       - str
     - defaultValue: None
       description: 'Virtual network gateway vip address supplied to
@@ -735,14 +725,14 @@ items:
 
         '
       id: gateway_vip
-      type: &id073
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id074
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -751,753 +741,19 @@ items:
 
         '
       id: raw
-      type: &id075
-      - bool
-    return: &id076
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2017_06_01.models.VirtualNetworkGateway'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-- children:
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-  - azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: VirtualNetworkGatewaysOperations
-  source:
-    id: VirtualNetworkGatewaysOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'VirtualNetworkGatewaysOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: VirtualNetworkGatewaysOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-- &id010
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Creates or updates a virtual network gateway in the specified resource
-
-    group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, virtual_network_gateway_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id005
-    - description: 'Parameters supplied to create or update virtual
-
-        network gateway operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id011
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 199
-  summary: 'Deletes the specified virtual network gateway.
-
-    '
-  syntax:
-    content: delete(resource_group_name, virtual_network_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-- *id017
-- &id025
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id018
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: generate_vpn_profile
-  source:
-    id: generate_vpn_profile
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 529
-  summary: 'Generates VPN profile for P2S client of the virtual network gateway in
-
-    the specified resource group. Used for IKEV2 and radius based
-
-    authentication.
-
-    '
-  syntax:
-    content: generate_vpn_profile(resource_group_name, virtual_network_gateway_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id020
-    - description: 'Parameters supplied to the generate virtual network
-
-        gateway VPN client package operation.
-
-        '
-      id: parameters
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    return: *id024
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-- *id025
-- &id033
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id026
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: generatevpnclientpackage
-  source:
-    id: generatevpnclientpackage
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 435
-  summary: 'Generates VPN client package for P2S client of the virtual network
-
-    gateway in the specified resource group.
-
-    '
-  syntax:
-    content: generatevpnclientpackage(resource_group_name, virtual_network_gateway_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id027
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id028
-    - description: 'Parameters supplied to the generate virtual network
-
-        gateway VPN client package operation.
-
-        '
-      id: parameters
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    return: *id032
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-- *id033
-- &id040
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id034
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 136
-  summary: 'Gets the specified virtual network gateway by resource group.
-
-    '
-  syntax:
-    content: get(resource_group_name, virtual_network_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id035
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id036
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id037
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id038
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id039
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-- *id040
-- &id048
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id041
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: get_advertised_routes
-  source:
-    id: get_advertised_routes
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 801
-  summary: 'This operation retrieves a list of routes the virtual network gateway
-
-    is advertising to the specified peer.
-
-    '
-  syntax:
-    content: get_advertised_routes(resource_group_name, virtual_network_gateway_name,
-      peer, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id042
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id043
-    - description: 'The IP address of the peer
-
-        '
-      id: peer
-      type: *id044
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id045
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id046
-    return: *id047
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-- *id048
-- &id056
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id049
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: get_bgp_peer_status
-  source:
-    id: get_bgp_peer_status
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 624
-  summary: 'The GetBgpPeerStatus operation retrieves the status of all BGP peers.
-
-    '
-  syntax:
-    content: get_bgp_peer_status(resource_group_name, virtual_network_gateway_name,
-      peer=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id050
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id051
-    - defaultValue: None
-      description: 'The IP address of the peer to retrieve the status of.
-
-        '
-      id: peer
-      type: *id052
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id053
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id054
-    return: *id055
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-- *id056
-- &id063
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id057
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: get_learned_routes
-  source:
-    id: get_learned_routes
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 714
-  summary: 'This operation retrieves a list of routes the virtual network gateway
-
-    has learned, including routes learned from BGP peers.
-
-    '
-  syntax:
-    content: get_learned_routes(resource_group_name, virtual_network_gateway_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id058
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id059
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id060
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id061
-    return: *id062
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-- *id063
-- &id069
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id064
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 277
-  summary: 'Gets all virtual network gateways by resource group.
-
-    '
-  syntax:
-    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id065
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id066
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id067
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id068
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-- *id069
-- &id077
-  class: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  exceptions: *id070
-  fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-  langs:
-  - python
-  module: azure.mgmt.network.v2017_06_01.operations
-  name: reset
-  source:
-    id: reset
-    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\virtual_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 343
-  summary: 'Resets the primary of the virtual network gateway in the specified
-
-    resource group.
-
-    '
-  syntax:
-    content: reset(resource_group_name, virtual_network_gateway_name, gateway_vip=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id071
-    - description: 'The name of the virtual network
-
-        gateway.
-
-        '
-      id: virtual_network_gateway_name
-      type: *id072
-    - defaultValue: None
-      description: 'Virtual network gateway vip address supplied to
-
-        the begin reset of the active-active feature enabled gateway.
-
-        '
-      id: gateway_vip
-      type: *id073
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id074
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id075
-    return: *id076
-  type: method
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-- *id077
 references:
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-  isExternal: false
-  name: generate_vpn_profile
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-  isExternal: false
-  name: generatevpnclientpackage
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-  isExternal: false
-  name: get_advertised_routes
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-  isExternal: false
-  name: get_bgp_peer_status
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-  isExternal: false
-  name: get_learned_routes
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-  isExternal: false
-  name: reset
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.delete
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-  isExternal: false
-  name: generate_vpn_profile
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generate_vpn_profile
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-  isExternal: false
-  name: generatevpnclientpackage
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.generatevpnclientpackage
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-  isExternal: false
-  name: get_advertised_routes
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_advertised_routes
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-  isExternal: false
-  name: get_bgp_peer_status
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_bgp_peer_status
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-  isExternal: false
-  name: get_learned_routes
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.get_learned_routes
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.list
-- fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
-  isExternal: false
-  name: reset
-  parent: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.reset
 - fullName: azure.mgmt.network.v2017_06_01.operations.VirtualNetworkGatewaysOperations.create_or_update
   isExternal: false
   name: create_or_update

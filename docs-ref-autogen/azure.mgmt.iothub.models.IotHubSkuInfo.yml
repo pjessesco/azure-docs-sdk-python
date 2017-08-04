@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: IotHubSkuInfo(name, capacity)
-    parameters: &id001
+    parameters:
     - description: 'The name of the SKU. Possible values include: ''F1'', ''S1'',
 
         ''S2'', ''S3''
@@ -49,7 +49,7 @@ items:
       id: capacity
       type:
       - long
-    variables: &id002
+    variables:
     - description: 'The billing tier for the IoT hub. Possible values include:
 
         ''Free'', ''Standard''
@@ -60,39 +60,6 @@ items:
       - 'str or @azure.mgmt.iothub.models.IotHubSkuTier
 
         '
-  type: class
-  uid: azure.mgmt.iothub.models.IotHubSkuInfo
-- children: []
-  class: azure.mgmt.iothub.models.IotHubSkuInfo
-  fullName: azure.mgmt.iothub.models.IotHubSkuInfo
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.mgmt.iothub.models
-  name: IotHubSkuInfo
-  source:
-    id: IotHubSkuInfo
-    path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_sku_info.py
-    remote:
-      branch: master
-      path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_sku_info.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Information about the SKU of the IoT hub.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: IotHubSkuInfo(name, capacity)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.iothub.models.IotHubSkuInfo
 references: []

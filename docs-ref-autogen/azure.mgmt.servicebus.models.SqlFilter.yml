@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: SqlFilter(sql_expression=None, requires_preprocessing=True)
-    parameters: &id001
+    parameters:
     - description: 'The SQL expression. e.g. MyProperty=''ABC''
 
         '
@@ -47,7 +47,7 @@ items:
       id: requires_preprocessing
       type:
       - bool
-    variables: &id002
+    variables:
     - description: 'This property is reserved for future use. An
 
         integer value showing the compatibility level, currently hard-coded to 20.
@@ -58,41 +58,6 @@ items:
       id: compatibility_level
       type:
       - int
-  type: class
-  uid: azure.mgmt.servicebus.models.SqlFilter
-- children: []
-  class: azure.mgmt.servicebus.models.SqlFilter
-  fullName: azure.mgmt.servicebus.models.SqlFilter
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.mgmt.servicebus.models
-  name: SqlFilter
-  source:
-    id: SqlFilter
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sql_filter.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sql_filter.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Represents a filter which is a composition of an expression and an action
-
-    that is executed in the pub/sub pipeline.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: SqlFilter(sql_expression=None, requires_preprocessing=True)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.servicebus.models.SqlFilter
 references: []

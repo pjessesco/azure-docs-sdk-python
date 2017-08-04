@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-  - azure.mgmt.commerce.operations.UsageAggregatesOperations.list
   class: azure.mgmt.commerce.operations.UsageAggregatesOperations
   fullName: azure.mgmt.commerce.operations.UsageAggregatesOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: UsageAggregatesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2015-06-01-preview".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.commerce.operations.UsageAggregatesOperations
 - class: azure.mgmt.commerce.operations.UsageAggregatesOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.mgmt.commerce.models.ErrorResponseException
   fullName: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
   langs:
@@ -79,7 +78,7 @@ items:
 
         '
       id: reported_start_time
-      type: &id004
+      type:
       - datetime
     - description: 'The end of the time range to retrieve data
 
@@ -87,7 +86,7 @@ items:
 
         '
       id: reported_end_time
-      type: &id005
+      type:
       - datetime
     - defaultValue: None
       description: '*True* returns usage data in instance-level
@@ -106,7 +105,7 @@ items:
 
         '
       id: show_details
-      type: &id006
+      type:
       - bool
     - defaultValue: Daily
       description: '*Daily* (default) returns the data in
@@ -117,7 +116,7 @@ items:
 
         '
       id: aggregation_granularity
-      type: &id007
+      type:
       - 'str or @azure.mgmt.commerce.models.AggregationGranularity
 
         '
@@ -132,14 +131,14 @@ items:
 
         '
       id: continuation_token
-      type: &id008
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -148,7 +147,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -156,151 +155,12 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       type:
       - azure.mgmt.commerce.models.UsageAggregationPaged
   type: method
   uid: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-- children:
-  - azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-  class: azure.mgmt.commerce.operations.UsageAggregatesOperations
-  fullName: azure.mgmt.commerce.operations.UsageAggregatesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.commerce.operations
-  name: UsageAggregatesOperations
-  source:
-    id: UsageAggregatesOperations
-    path: azure-mgmt-commerce\azure\mgmt\commerce\operations\usage_aggregates_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-commerce\azure\mgmt\commerce\operations\usage_aggregates_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'UsageAggregatesOperations operations.
-
-
-    '
-  syntax:
-    content: UsageAggregatesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.commerce.operations.UsageAggregatesOperations
-- &id012
-  class: azure.mgmt.commerce.operations.UsageAggregatesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.commerce.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-commerce\azure\mgmt\commerce\operations\usage_aggregates_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-commerce\azure\mgmt\commerce\operations\usage_aggregates_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Query aggregated Azure subscription consumption data for a date range.
-
-    '
-  syntax:
-    content: list(reported_start_time, reported_end_time, show_details=None, aggregation_granularity='Daily',
-      continuation_token=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The start of the time range to retrieve
-
-        data for.
-
-        '
-      id: reported_start_time
-      type: *id004
-    - description: 'The end of the time range to retrieve data
-
-        for.
-
-        '
-      id: reported_end_time
-      type: *id005
-    - defaultValue: None
-      description: '*True* returns usage data in instance-level
-
-        detail, *false* causes server-side aggregation with fewer details. For
-
-        example, if you have 3 website instances, by default you will get 3
-
-        line items for website consumption. If you specify showDetails =
-
-        false, the data will be aggregated as a single line item for website
-
-        consumption within the time period (for the given subscriptionId,
-
-        meterId, usageStartTime and usageEndTime).
-
-        '
-      id: show_details
-      type: *id006
-    - defaultValue: Daily
-      description: '*Daily* (default) returns the data in
-
-        daily granularity, *Hourly* returns the data in hourly granularity.
-
-        Possible values include: ''Daily'', ''Hourly''
-
-        '
-      id: aggregation_granularity
-      type: *id007
-    - defaultValue: None
-      description: 'Used when a continuation token string is
-
-        provided in the response body of the previous call, enabling paging
-
-        through a large result set. If not present, the data is retrieved from
-
-        the beginning of the day/hour (based on the granularity) passed in.
-
-        '
-      id: continuation_token
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-- *id012
 references:
-- fullName: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.commerce.operations.UsageAggregatesOperations
-  uid: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-- fullName: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.commerce.operations.UsageAggregatesOperations
-  uid: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
 - fullName: azure.mgmt.commerce.operations.UsageAggregatesOperations.list
   isExternal: false
   name: list

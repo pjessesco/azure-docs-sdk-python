@@ -10,14 +10,6 @@ items:
   - azure.batch.operations.FileOperations.get_properties_from_task
   - azure.batch.operations.FileOperations.list_from_compute_node
   - azure.batch.operations.FileOperations.list_from_task
-  - azure.batch.operations.FileOperations.delete_from_compute_node
-  - azure.batch.operations.FileOperations.delete_from_task
-  - azure.batch.operations.FileOperations.get_from_compute_node
-  - azure.batch.operations.FileOperations.get_from_task
-  - azure.batch.operations.FileOperations.get_properties_from_compute_node
-  - azure.batch.operations.FileOperations.get_properties_from_task
-  - azure.batch.operations.FileOperations.list_from_compute_node
-  - azure.batch.operations.FileOperations.list_from_task
   class: azure.batch.operations.FileOperations
   fullName: azure.batch.operations.FileOperations
   inheritance:
@@ -47,7 +39,7 @@ items:
     '
   syntax:
     content: FileOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -64,7 +56,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API Version. Constant value: "2017-06-01.5.1".
 
         '
@@ -72,7 +64,7 @@ items:
   type: class
   uid: azure.batch.operations.FileOperations
 - class: azure.batch.operations.FileOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.delete_from_compute_node
   langs:
@@ -99,7 +91,7 @@ items:
 
         '
       id: pool_id
-      type: &id004
+      type:
       - str
     - description: 'The ID of the compute node from which you want to
 
@@ -107,13 +99,13 @@ items:
 
         '
       id: node_id
-      type: &id005
+      type:
       - str
     - description: 'The path to the file that you want to delete.
 
         '
       id: file_path
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'Whether to delete children of a directory. If the
@@ -128,7 +120,7 @@ items:
 
         '
       id: recursive
-      type: &id007
+      type:
       - bool
     - defaultValue: None
       description: 'Additional parameters
@@ -137,14 +129,14 @@ items:
 
         '
       id: file_delete_from_compute_node_options
-      type: &id008
+      type:
       - azure.batch.models.FileDeleteFromComputeNodeOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -153,7 +145,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -161,16 +153,16 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.FileOperations.delete_from_compute_node
 - class: azure.batch.operations.FileOperations
-  exceptions: &id013
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.delete_from_task
   langs:
@@ -198,19 +190,19 @@ items:
 
         '
       id: job_id
-      type: &id014
+      type:
       - str
     - description: 'The ID of the task whose file you want to delete.
 
         '
       id: task_id
-      type: &id015
+      type:
       - str
     - description: 'The path to the task file that you want to delete.
 
         '
       id: file_path
-      type: &id016
+      type:
       - str
     - defaultValue: None
       description: 'Whether to delete children of a directory. If the
@@ -225,7 +217,7 @@ items:
 
         '
       id: recursive
-      type: &id017
+      type:
       - bool
     - defaultValue: None
       description: 'Additional parameters for the
@@ -234,14 +226,14 @@ items:
 
         '
       id: file_delete_from_task_options
-      type: &id018
+      type:
       - azure.batch.models.FileDeleteFromTaskOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id019
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -250,7 +242,7 @@ items:
 
         '
       id: raw
-      type: &id020
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -258,16 +250,16 @@ items:
 
         '
       id: operation_config
-    return: &id021
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.FileOperations.delete_from_task
 - class: azure.batch.operations.FileOperations
-  exceptions: &id023
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.get_from_compute_node
   langs:
@@ -293,13 +285,13 @@ items:
 
         '
       id: pool_id
-      type: &id024
+      type:
       - str
     - description: 'The ID of the compute node that contains the file.
 
         '
       id: node_id
-      type: &id025
+      type:
       - str
     - description: 'The path to the compute node file that you want to
 
@@ -307,7 +299,7 @@ items:
 
         '
       id: file_path
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -316,14 +308,14 @@ items:
 
         '
       id: file_get_from_compute_node_options
-      type: &id027
+      type:
       - azure.batch.models.FileGetFromComputeNodeOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id028
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -332,7 +324,7 @@ items:
 
         '
       id: raw
-      type: &id029
+      type:
       - bool
     - defaultValue: None
       description: 'When specified, will be called with each chunk of
@@ -345,7 +337,7 @@ items:
 
         '
       id: callback
-      type: &id030
+      type:
       - Callable[Bytes, response=None]
     - description: '*Operation configuration
 
@@ -353,16 +345,16 @@ items:
 
         '
       id: operation_config
-    return: &id031
+    return:
       type:
       - Generator
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.FileOperations.get_from_compute_node
 - class: azure.batch.operations.FileOperations
-  exceptions: &id033
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.get_from_task
   langs:
@@ -388,13 +380,13 @@ items:
 
         '
       id: job_id
-      type: &id034
+      type:
       - str
     - description: 'The ID of the task whose file you want to retrieve.
 
         '
       id: task_id
-      type: &id035
+      type:
       - str
     - description: 'The path to the task file that you want to get the
 
@@ -402,7 +394,7 @@ items:
 
         '
       id: file_path
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -411,14 +403,14 @@ items:
 
         '
       id: file_get_from_task_options
-      type: &id037
+      type:
       - azure.batch.models.FileGetFromTaskOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -427,7 +419,7 @@ items:
 
         '
       id: raw
-      type: &id039
+      type:
       - bool
     - defaultValue: None
       description: 'When specified, will be called with each chunk of
@@ -440,7 +432,7 @@ items:
 
         '
       id: callback
-      type: &id040
+      type:
       - Callable[Bytes, response=None]
     - description: '*Operation configuration
 
@@ -448,16 +440,16 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       type:
       - Generator
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.FileOperations.get_from_task
 - class: azure.batch.operations.FileOperations
-  exceptions: &id043
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.get_properties_from_compute_node
   langs:
@@ -483,13 +475,13 @@ items:
 
         '
       id: pool_id
-      type: &id044
+      type:
       - str
     - description: 'The ID of the compute node that contains the file.
 
         '
       id: node_id
-      type: &id045
+      type:
       - str
     - description: 'The path to the compute node file that you want to
 
@@ -497,7 +489,7 @@ items:
 
         '
       id: file_path
-      type: &id046
+      type:
       - str
     - defaultValue: None
       description: 'Additional
@@ -506,14 +498,14 @@ items:
 
         '
       id: file_get_properties_from_compute_node_options
-      type: &id047
+      type:
       - azure.batch.models.FileGetPropertiesFromComputeNodeOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id048
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -522,7 +514,7 @@ items:
 
         '
       id: raw
-      type: &id049
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -530,16 +522,16 @@ items:
 
         '
       id: operation_config
-    return: &id050
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.FileOperations.get_properties_from_compute_node
 - class: azure.batch.operations.FileOperations
-  exceptions: &id052
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.get_properties_from_task
   langs:
@@ -565,7 +557,7 @@ items:
 
         '
       id: job_id
-      type: &id053
+      type:
       - str
     - description: 'The ID of the task whose file you want to get the
 
@@ -573,7 +565,7 @@ items:
 
         '
       id: task_id
-      type: &id054
+      type:
       - str
     - description: 'The path to the task file that you want to get the
 
@@ -581,7 +573,7 @@ items:
 
         '
       id: file_path
-      type: &id055
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters
@@ -590,14 +582,14 @@ items:
 
         '
       id: file_get_properties_from_task_options
-      type: &id056
+      type:
       - azure.batch.models.FileGetPropertiesFromTaskOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id057
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -606,7 +598,7 @@ items:
 
         '
       id: raw
-      type: &id058
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -614,16 +606,16 @@ items:
 
         '
       id: operation_config
-    return: &id059
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.FileOperations.get_properties_from_task
 - class: azure.batch.operations.FileOperations
-  exceptions: &id061
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.list_from_compute_node
   langs:
@@ -651,7 +643,7 @@ items:
 
         '
       id: pool_id
-      type: &id062
+      type:
       - str
     - description: 'The ID of the compute node whose files you want to
 
@@ -659,14 +651,14 @@ items:
 
         '
       id: node_id
-      type: &id063
+      type:
       - str
     - defaultValue: None
       description: 'Whether to list children of a directory.
 
         '
       id: recursive
-      type: &id064
+      type:
       - bool
     - defaultValue: None
       description: 'Additional parameters for
@@ -675,14 +667,14 @@ items:
 
         '
       id: file_list_from_compute_node_options
-      type: &id065
+      type:
       - azure.batch.models.FileListFromComputeNodeOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id066
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -691,7 +683,7 @@ items:
 
         '
       id: raw
-      type: &id067
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -699,13 +691,13 @@ items:
 
         '
       id: operation_config
-    return: &id068
+    return:
       type:
       - azure.batch.models.NodeFilePaged
   type: method
   uid: azure.batch.operations.FileOperations.list_from_compute_node
 - class: azure.batch.operations.FileOperations
-  exceptions: &id070
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.FileOperations.list_from_task
   langs:
@@ -731,13 +723,13 @@ items:
 
         '
       id: job_id
-      type: &id071
+      type:
       - str
     - description: 'The ID of the task whose files you want to list.
 
         '
       id: task_id
-      type: &id072
+      type:
       - str
     - defaultValue: None
       description: 'Whether to list children of a directory. This
@@ -748,7 +740,7 @@ items:
 
         '
       id: recursive
-      type: &id073
+      type:
       - bool
     - defaultValue: None
       description: 'Additional parameters for the
@@ -757,14 +749,14 @@ items:
 
         '
       id: file_list_from_task_options
-      type: &id074
+      type:
       - azure.batch.models.FileListFromTaskOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id075
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -773,7 +765,7 @@ items:
 
         '
       id: raw
-      type: &id076
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -781,771 +773,12 @@ items:
 
         '
       id: operation_config
-    return: &id077
+    return:
       type:
       - azure.batch.models.NodeFilePaged
   type: method
   uid: azure.batch.operations.FileOperations.list_from_task
-- children:
-  - azure.batch.operations.FileOperations.delete_from_compute_node
-  - azure.batch.operations.FileOperations.delete_from_task
-  - azure.batch.operations.FileOperations.get_from_compute_node
-  - azure.batch.operations.FileOperations.get_from_task
-  - azure.batch.operations.FileOperations.get_properties_from_compute_node
-  - azure.batch.operations.FileOperations.get_properties_from_task
-  - azure.batch.operations.FileOperations.list_from_compute_node
-  - azure.batch.operations.FileOperations.list_from_task
-  class: azure.batch.operations.FileOperations
-  fullName: azure.batch.operations.FileOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.batch.operations
-  name: FileOperations
-  source:
-    id: FileOperations
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'FileOperations operations.
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: FileOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.batch.operations.FileOperations
-- &id012
-  class: azure.batch.operations.FileOperations
-  exceptions: *id003
-  fullName: azure.batch.operations.FileOperations.delete_from_compute_node
-  langs:
-  - python
-  module: azure.batch.operations
-  name: delete_from_compute_node
-  source:
-    id: delete_from_compute_node
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 357
-  summary: 'Deletes the specified file from the compute node.
-
-    '
-  syntax:
-    content: delete_from_compute_node(pool_id, node_id, file_path, recursive=None,
-      file_delete_from_compute_node_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id004
-    - description: 'The ID of the compute node from which you want to
-
-        delete the file.
-
-        '
-      id: node_id
-      type: *id005
-    - description: 'The path to the file that you want to delete.
-
-        '
-      id: file_path
-      type: *id006
-    - defaultValue: None
-      description: 'Whether to delete children of a directory. If the
-
-        filePath parameter represents a directory instead of a file, you can
-
-        set recursive to true to delete the directory and all of the files and
-
-        subdirectories in it. If recursive is false then the directory must be
-
-        empty or deletion will fail.
-
-        '
-      id: recursive
-      type: *id007
-    - defaultValue: None
-      description: 'Additional parameters
-
-        for the operation
-
-        '
-      id: file_delete_from_compute_node_options
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.batch.operations.FileOperations.delete_from_compute_node
-- *id012
-- &id022
-  class: azure.batch.operations.FileOperations
-  exceptions: *id013
-  fullName: azure.batch.operations.FileOperations.delete_from_task
-  langs:
-  - python
-  module: azure.batch.operations
-  name: delete_from_task
-  source:
-    id: delete_from_task
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Deletes the specified task file from the compute node where the task
-
-    ran.
-
-    '
-  syntax:
-    content: delete_from_task(job_id, task_id, file_path, recursive=None, file_delete_from_task_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job that contains the task.
-
-        '
-      id: job_id
-      type: *id014
-    - description: 'The ID of the task whose file you want to delete.
-
-        '
-      id: task_id
-      type: *id015
-    - description: 'The path to the task file that you want to delete.
-
-        '
-      id: file_path
-      type: *id016
-    - defaultValue: None
-      description: 'Whether to delete children of a directory. If the
-
-        filePath parameter represents a directory instead of a file, you can
-
-        set recursive to true to delete the directory and all of the files and
-
-        subdirectories in it. If recursive is false then the directory must be
-
-        empty or deletion will fail.
-
-        '
-      id: recursive
-      type: *id017
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: file_delete_from_task_options
-      type: *id018
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id019
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id020
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id021
-  type: method
-  uid: azure.batch.operations.FileOperations.delete_from_task
-- *id022
-- &id032
-  class: azure.batch.operations.FileOperations
-  exceptions: *id023
-  fullName: azure.batch.operations.FileOperations.get_from_compute_node
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_from_compute_node
-  source:
-    id: get_from_compute_node
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 451
-  summary: 'Returns the content of the specified compute node file.
-
-    '
-  syntax:
-    content: get_from_compute_node(pool_id, node_id, file_path, file_get_from_compute_node_options=None,
-      custom_headers=None, raw=False, callback=None, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id024
-    - description: 'The ID of the compute node that contains the file.
-
-        '
-      id: node_id
-      type: *id025
-    - description: 'The path to the compute node file that you want to
-
-        get the content of.
-
-        '
-      id: file_path
-      type: *id026
-    - defaultValue: None
-      description: 'Additional parameters for
-
-        the operation
-
-        '
-      id: file_get_from_compute_node_options
-      type: *id027
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id028
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id029
-    - defaultValue: None
-      description: 'When specified, will be called with each chunk of
-
-        data that is streamed. The callback should take two arguments, the
-
-        bytes of the current chunk of data and the response object. If the
-
-        data is uploading, response will be None.
-
-        '
-      id: callback
-      type: *id030
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id031
-  type: method
-  uid: azure.batch.operations.FileOperations.get_from_compute_node
-- *id032
-- &id042
-  class: azure.batch.operations.FileOperations
-  exceptions: *id033
-  fullName: azure.batch.operations.FileOperations.get_from_task
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_from_task
-  source:
-    id: get_from_task
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 130
-  summary: 'Returns the content of the specified task file.
-
-    '
-  syntax:
-    content: get_from_task(job_id, task_id, file_path, file_get_from_task_options=None,
-      custom_headers=None, raw=False, callback=None, **operation_config)
-    parameters:
-    - description: 'The ID of the job that contains the task.
-
-        '
-      id: job_id
-      type: *id034
-    - description: 'The ID of the task whose file you want to retrieve.
-
-        '
-      id: task_id
-      type: *id035
-    - description: 'The path to the task file that you want to get the
-
-        content of.
-
-        '
-      id: file_path
-      type: *id036
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: file_get_from_task_options
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    - defaultValue: None
-      description: 'When specified, will be called with each chunk of
-
-        data that is streamed. The callback should take two arguments, the
-
-        bytes of the current chunk of data and the response object. If the
-
-        data is uploading, response will be None.
-
-        '
-      id: callback
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.batch.operations.FileOperations.get_from_task
-- *id042
-- &id051
-  class: azure.batch.operations.FileOperations
-  exceptions: *id043
-  fullName: azure.batch.operations.FileOperations.get_properties_from_compute_node
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_properties_from_compute_node
-  source:
-    id: get_properties_from_compute_node
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 574
-  summary: 'Gets the properties of the specified compute node file.
-
-    '
-  syntax:
-    content: get_properties_from_compute_node(pool_id, node_id, file_path, file_get_properties_from_compute_node_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id044
-    - description: 'The ID of the compute node that contains the file.
-
-        '
-      id: node_id
-      type: *id045
-    - description: 'The path to the compute node file that you want to
-
-        get the properties of.
-
-        '
-      id: file_path
-      type: *id046
-    - defaultValue: None
-      description: 'Additional
-
-        parameters for the operation
-
-        '
-      id: file_get_properties_from_compute_node_options
-      type: *id047
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id048
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id049
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id050
-  type: method
-  uid: azure.batch.operations.FileOperations.get_properties_from_compute_node
-- *id051
-- &id060
-  class: azure.batch.operations.FileOperations
-  exceptions: *id052
-  fullName: azure.batch.operations.FileOperations.get_properties_from_task
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get_properties_from_task
-  source:
-    id: get_properties_from_task
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 252
-  summary: 'Gets the properties of the specified task file.
-
-    '
-  syntax:
-    content: get_properties_from_task(job_id, task_id, file_path, file_get_properties_from_task_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job that contains the task.
-
-        '
-      id: job_id
-      type: *id053
-    - description: 'The ID of the task whose file you want to get the
-
-        properties of.
-
-        '
-      id: task_id
-      type: *id054
-    - description: 'The path to the task file that you want to get the
-
-        properties of.
-
-        '
-      id: file_path
-      type: *id055
-    - defaultValue: None
-      description: 'Additional parameters
-
-        for the operation
-
-        '
-      id: file_get_properties_from_task_options
-      type: *id056
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id057
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id058
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id059
-  type: method
-  uid: azure.batch.operations.FileOperations.get_properties_from_task
-- *id060
-- &id069
-  class: azure.batch.operations.FileOperations
-  exceptions: *id061
-  fullName: azure.batch.operations.FileOperations.list_from_compute_node
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list_from_compute_node
-  source:
-    id: list_from_compute_node
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 785
-  summary: 'Lists all of the files in task directories on the specified compute
-
-    node.
-
-    '
-  syntax:
-    content: list_from_compute_node(pool_id, node_id, recursive=None, file_list_from_compute_node_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the pool that contains the compute node.
-
-        '
-      id: pool_id
-      type: *id062
-    - description: 'The ID of the compute node whose files you want to
-
-        list.
-
-        '
-      id: node_id
-      type: *id063
-    - defaultValue: None
-      description: 'Whether to list children of a directory.
-
-        '
-      id: recursive
-      type: *id064
-    - defaultValue: None
-      description: 'Additional parameters for
-
-        the operation
-
-        '
-      id: file_list_from_compute_node_options
-      type: *id065
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id066
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id067
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id068
-  type: method
-  uid: azure.batch.operations.FileOperations.list_from_compute_node
-- *id069
-- &id078
-  class: azure.batch.operations.FileOperations
-  exceptions: *id070
-  fullName: azure.batch.operations.FileOperations.list_from_task
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list_from_task
-  source:
-    id: list_from_task
-    path: azure-batch\azure\batch\operations\file_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\file_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 678
-  summary: 'Lists the files in a task''s directory on its compute node.
-
-    '
-  syntax:
-    content: list_from_task(job_id, task_id, recursive=None, file_list_from_task_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job that contains the task.
-
-        '
-      id: job_id
-      type: *id071
-    - description: 'The ID of the task whose files you want to list.
-
-        '
-      id: task_id
-      type: *id072
-    - defaultValue: None
-      description: 'Whether to list children of a directory. This
-
-        parameter can be used in combination with the filter parameter to list
-
-        specific type of files.
-
-        '
-      id: recursive
-      type: *id073
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: file_list_from_task_options
-      type: *id074
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id075
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id076
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id077
-  type: method
-  uid: azure.batch.operations.FileOperations.list_from_task
-- *id078
 references:
-- fullName: azure.batch.operations.FileOperations.delete_from_compute_node
-  isExternal: false
-  name: delete_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.delete_from_compute_node
-- fullName: azure.batch.operations.FileOperations.delete_from_task
-  isExternal: false
-  name: delete_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.delete_from_task
-- fullName: azure.batch.operations.FileOperations.get_from_compute_node
-  isExternal: false
-  name: get_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_from_compute_node
-- fullName: azure.batch.operations.FileOperations.get_from_task
-  isExternal: false
-  name: get_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_from_task
-- fullName: azure.batch.operations.FileOperations.get_properties_from_compute_node
-  isExternal: false
-  name: get_properties_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_properties_from_compute_node
-- fullName: azure.batch.operations.FileOperations.get_properties_from_task
-  isExternal: false
-  name: get_properties_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_properties_from_task
-- fullName: azure.batch.operations.FileOperations.list_from_compute_node
-  isExternal: false
-  name: list_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.list_from_compute_node
-- fullName: azure.batch.operations.FileOperations.list_from_task
-  isExternal: false
-  name: list_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.list_from_task
-- fullName: azure.batch.operations.FileOperations.delete_from_compute_node
-  isExternal: false
-  name: delete_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.delete_from_compute_node
-- fullName: azure.batch.operations.FileOperations.delete_from_task
-  isExternal: false
-  name: delete_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.delete_from_task
-- fullName: azure.batch.operations.FileOperations.get_from_compute_node
-  isExternal: false
-  name: get_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_from_compute_node
-- fullName: azure.batch.operations.FileOperations.get_from_task
-  isExternal: false
-  name: get_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_from_task
-- fullName: azure.batch.operations.FileOperations.get_properties_from_compute_node
-  isExternal: false
-  name: get_properties_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_properties_from_compute_node
-- fullName: azure.batch.operations.FileOperations.get_properties_from_task
-  isExternal: false
-  name: get_properties_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.get_properties_from_task
-- fullName: azure.batch.operations.FileOperations.list_from_compute_node
-  isExternal: false
-  name: list_from_compute_node
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.list_from_compute_node
-- fullName: azure.batch.operations.FileOperations.list_from_task
-  isExternal: false
-  name: list_from_task
-  parent: azure.batch.operations.FileOperations
-  uid: azure.batch.operations.FileOperations.list_from_task
 - fullName: azure.batch.operations.FileOperations.delete_from_compute_node
   isExternal: false
   name: delete_from_compute_node

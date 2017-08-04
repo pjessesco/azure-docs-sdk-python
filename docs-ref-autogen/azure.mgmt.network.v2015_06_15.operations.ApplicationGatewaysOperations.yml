@@ -9,13 +9,6 @@ items:
   - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
   - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
   - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
   class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
   inheritance:
@@ -44,7 +37,7 @@ items:
     '
   syntax:
     content: ApplicationGatewaysOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -61,7 +54,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2015-06-15".
 
         '
@@ -69,7 +62,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
 - class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
   langs:
@@ -95,13 +88,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the application gateway.
 
         '
       id: application_gateway_name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the create or update
 
@@ -109,14 +102,14 @@ items:
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.network.v2015_06_15.models.ApplicationGateway
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -125,20 +118,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2015_06_15.models.ApplicationGateway'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
 - class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
   langs:
@@ -164,20 +157,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the application gateway.
 
         '
       id: application_gateway_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -186,20 +179,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
 - class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
   langs:
@@ -225,20 +218,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the application gateway.
 
         '
       id: application_gateway_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -247,7 +240,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -255,16 +248,16 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ApplicationGateway
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
 - class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
   langs:
@@ -289,14 +282,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -305,7 +298,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -313,13 +306,13 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ApplicationGatewayPaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
 - class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
   langs:
@@ -345,7 +338,7 @@ items:
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -354,7 +347,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -362,13 +355,13 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.ApplicationGatewayPaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
 - class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
   langs:
@@ -394,20 +387,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the application gateway.
 
         '
       id: application_gateway_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -416,20 +409,20 @@ items:
 
         '
       id: raw
-      type: &id040
-      - bool
-    return: &id041
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
 - class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: &id043
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
   langs:
@@ -455,20 +448,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id044
+      type:
       - str
     - description: 'The name of the application gateway.
 
         '
       id: application_gateway_name
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -477,494 +470,19 @@ items:
 
         '
       id: raw
-      type: &id047
-      - bool
-    return: &id048
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-- children:
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-  - azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: ApplicationGatewaysOperations
-  source:
-    id: ApplicationGatewaysOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'ApplicationGatewaysOperations operations.
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ApplicationGatewaysOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-- &id010
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 178
-  summary: 'Creates or updates the specified application gateway.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, application_gateway_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the application gateway.
-
-        '
-      id: application_gateway_name
-      type: *id005
-    - description: 'Parameters supplied to the create or update
-
-        application gateway operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: *id011
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes the specified application gateway.
-
-    '
-  syntax:
-    content: delete(resource_group_name, application_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the application gateway.
-
-        '
-      id: application_gateway_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: *id018
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 116
-  summary: 'Gets the specified application gateway.
-
-    '
-  syntax:
-    content: get(resource_group_name, application_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the application gateway.
-
-        '
-      id: application_gateway_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-- *id024
-- &id030
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: *id025
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 273
-  summary: 'Lists all application gateways in a resource group.
-
-    '
-  syntax:
-    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-- *id030
-- &id035
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: *id031
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list_all
-  source:
-    id: list_all
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 339
-  summary: 'Gets all the application gateways in a subscription.
-
-    '
-  syntax:
-    content: list_all(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-- *id035
-- &id042
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: *id036
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: start
-  source:
-    id: start
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 402
-  summary: 'Starts the specified application gateway.
-
-    '
-  syntax:
-    content: start(resource_group_name, application_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - description: 'The name of the application gateway.
-
-        '
-      id: application_gateway_name
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    return: *id041
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-- *id042
-- &id049
-  class: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  exceptions: *id043
-  fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: stop
-  source:
-    id: stop
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\application_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 479
-  summary: 'Stops the specified application gateway in a resource group.
-
-    '
-  syntax:
-    content: stop(resource_group_name, application_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id044
-    - description: 'The name of the application gateway.
-
-        '
-      id: application_gateway_name
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    return: *id048
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-- *id049
 references:
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-  isExternal: false
-  name: start
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-  isExternal: false
-  name: stop
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.delete
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.get
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-  isExternal: false
-  name: list_all
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.list_all
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-  isExternal: false
-  name: start
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.start
-- fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
-  isExternal: false
-  name: stop
-  parent: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.stop
 - fullName: azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations.create_or_update
   isExternal: false
   name: create_or_update

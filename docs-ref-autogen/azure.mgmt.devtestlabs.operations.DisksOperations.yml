@@ -8,12 +8,6 @@ items:
   - azure.mgmt.devtestlabs.operations.DisksOperations.detach
   - azure.mgmt.devtestlabs.operations.DisksOperations.get
   - azure.mgmt.devtestlabs.operations.DisksOperations.list
-  - azure.mgmt.devtestlabs.operations.DisksOperations.attach
-  - azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.DisksOperations.delete
-  - azure.mgmt.devtestlabs.operations.DisksOperations.detach
-  - azure.mgmt.devtestlabs.operations.DisksOperations.get
-  - azure.mgmt.devtestlabs.operations.DisksOperations.list
   class: azure.mgmt.devtestlabs.operations.DisksOperations
   fullName: azure.mgmt.devtestlabs.operations.DisksOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: DisksOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.DisksOperations
 - class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.DisksOperations.attach
   langs:
@@ -94,25 +88,25 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the user profile.
 
         '
       id: user_name
-      type: &id006
+      type:
       - str
     - description: 'The name of the disk.
 
         '
       id: name
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'The resource ID of the Lab virtual machine
@@ -121,14 +115,14 @@ items:
 
         '
       id: leased_by_lab_vm_id
-      type: &id008
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -137,20 +131,20 @@ items:
 
         '
       id: raw
-      type: &id010
-      - bool
-    return: &id011
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.DisksOperations.attach
 - class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: &id013
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
   langs:
@@ -178,38 +172,38 @@ items:
 
         '
       id: resource_group_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id015
+      type:
       - str
     - description: 'The name of the user profile.
 
         '
       id: user_name
-      type: &id016
+      type:
       - str
     - description: 'The name of the disk.
 
         '
       id: name
-      type: &id017
+      type:
       - str
     - description: 'A Disk.
 
         '
       id: disk
-      type: &id018
+      type:
       - azure.mgmt.devtestlabs.models.Disk
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id019
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -218,20 +212,20 @@ items:
 
         '
       id: raw
-      type: &id020
-      - bool
-    return: &id021
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.devtestlabs.models.Disk'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: &id023
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.DisksOperations.delete
   langs:
@@ -257,32 +251,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id024
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id025
+      type:
       - str
     - description: 'The name of the user profile.
 
         '
       id: user_name
-      type: &id026
+      type:
       - str
     - description: 'The name of the disk.
 
         '
       id: name
-      type: &id027
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id028
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -291,20 +285,20 @@ items:
 
         '
       id: raw
-      type: &id029
-      - bool
-    return: &id030
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.DisksOperations.delete
 - class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: &id032
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.DisksOperations.detach
   langs:
@@ -332,25 +326,25 @@ items:
 
         '
       id: resource_group_name
-      type: &id033
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id034
+      type:
       - str
     - description: 'The name of the user profile.
 
         '
       id: user_name
-      type: &id035
+      type:
       - str
     - description: 'The name of the disk.
 
         '
       id: name
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'The resource ID of the Lab VM to which the
@@ -359,14 +353,14 @@ items:
 
         '
       id: leased_by_lab_vm_id
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -375,20 +369,20 @@ items:
 
         '
       id: raw
-      type: &id039
-      - bool
-    return: &id040
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.DisksOperations.detach
 - class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: &id042
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.DisksOperations.get
   langs:
@@ -414,25 +408,25 @@ items:
 
         '
       id: resource_group_name
-      type: &id043
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id044
+      type:
       - str
     - description: 'The name of the user profile.
 
         '
       id: user_name
-      type: &id045
+      type:
       - str
     - description: 'The name of the disk.
 
         '
       id: name
-      type: &id046
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -441,14 +435,14 @@ items:
 
         '
       id: expand
-      type: &id047
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id048
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -457,7 +451,7 @@ items:
 
         '
       id: raw
-      type: &id049
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -465,16 +459,16 @@ items:
 
         '
       id: operation_config
-    return: &id050
+    return:
       type:
       - azure.mgmt.devtestlabs.models.Disk
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.DisksOperations.get
 - class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: &id052
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.DisksOperations.list
   langs:
@@ -500,19 +494,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id053
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id054
+      type:
       - str
     - description: 'The name of the user profile.
 
         '
       id: user_name
-      type: &id055
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -521,14 +515,14 @@ items:
 
         '
       id: expand
-      type: &id056
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id057
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -537,7 +531,7 @@ items:
 
         '
       id: top
-      type: &id058
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -546,14 +540,14 @@ items:
 
         '
       id: orderby
-      type: &id059
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id060
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -562,7 +556,7 @@ items:
 
         '
       id: raw
-      type: &id061
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -570,548 +564,12 @@ items:
 
         '
       id: operation_config
-    return: &id062
+    return:
       type:
       - azure.mgmt.devtestlabs.models.DiskPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.DisksOperations.list
-- children:
-  - azure.mgmt.devtestlabs.operations.DisksOperations.attach
-  - azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.DisksOperations.delete
-  - azure.mgmt.devtestlabs.operations.DisksOperations.detach
-  - azure.mgmt.devtestlabs.operations.DisksOperations.get
-  - azure.mgmt.devtestlabs.operations.DisksOperations.list
-  class: azure.mgmt.devtestlabs.operations.DisksOperations
-  fullName: azure.mgmt.devtestlabs.operations.DisksOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: DisksOperations
-  source:
-    id: DisksOperations
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'DisksOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: DisksOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations
-- &id012
-  class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: *id003
-  fullName: azure.mgmt.devtestlabs.operations.DisksOperations.attach
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: attach
-  source:
-    id: attach
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 384
-  summary: 'Attach and create the lease of the disk to the virtual machine. This
-
-    operation can take a while to complete.
-
-    '
-  syntax:
-    content: attach(resource_group_name, lab_name, user_name, name, leased_by_lab_vm_id=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id005
-    - description: 'The name of the user profile.
-
-        '
-      id: user_name
-      type: *id006
-    - description: 'The name of the disk.
-
-        '
-      id: name
-      type: *id007
-    - defaultValue: None
-      description: 'The resource ID of the Lab virtual machine
-
-        to which the disk is attached.
-
-        '
-      id: leased_by_lab_vm_id
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    return: *id011
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.attach
-- *id012
-- &id022
-  class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: *id013
-  fullName: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 201
-  summary: 'Create or replace an existing disk. This operation can take a while to
-
-    complete.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, lab_name, user_name, name, disk,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id014
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id015
-    - description: 'The name of the user profile.
-
-        '
-      id: user_name
-      type: *id016
-    - description: 'The name of the disk.
-
-        '
-      id: name
-      type: *id017
-    - description: 'A Disk.
-
-        '
-      id: disk
-      type: *id018
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id019
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id020
-    return: *id021
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-- *id022
-- &id031
-  class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: *id023
-  fullName: azure.mgmt.devtestlabs.operations.DisksOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 301
-  summary: 'Delete disk. This operation can take a while to complete.
-
-    '
-  syntax:
-    content: delete(resource_group_name, lab_name, user_name, name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id024
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id025
-    - description: 'The name of the user profile.
-
-        '
-      id: user_name
-      type: *id026
-    - description: 'The name of the disk.
-
-        '
-      id: name
-      type: *id027
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id028
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id029
-    return: *id030
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.delete
-- *id031
-- &id041
-  class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: *id032
-  fullName: azure.mgmt.devtestlabs.operations.DisksOperations.detach
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: detach
-  source:
-    id: detach
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 477
-  summary: 'Detach and break the lease of the disk attached to the virtual machine.
-
-    This operation can take a while to complete.
-
-    '
-  syntax:
-    content: detach(resource_group_name, lab_name, user_name, name, leased_by_lab_vm_id=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id033
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id034
-    - description: 'The name of the user profile.
-
-        '
-      id: user_name
-      type: *id035
-    - description: 'The name of the disk.
-
-        '
-      id: name
-      type: *id036
-    - defaultValue: None
-      description: 'The resource ID of the Lab VM to which the
-
-        disk is attached.
-
-        '
-      id: leased_by_lab_vm_id
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    return: *id040
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.detach
-- *id041
-- &id051
-  class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: *id042
-  fullName: azure.mgmt.devtestlabs.operations.DisksOperations.get
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 129
-  summary: 'Get disk.
-
-    '
-  syntax:
-    content: get(resource_group_name, lab_name, user_name, name, expand=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id043
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id044
-    - description: 'The name of the user profile.
-
-        '
-      id: user_name
-      type: *id045
-    - description: 'The name of the disk.
-
-        '
-      id: name
-      type: *id046
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=diskType)''
-
-        '
-      id: expand
-      type: *id047
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id048
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id049
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id050
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.get
-- *id051
-- &id063
-  class: azure.mgmt.devtestlabs.operations.DisksOperations
-  exceptions: *id052
-  fullName: azure.mgmt.devtestlabs.operations.DisksOperations.list
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\disks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'List disks in a given user profile.
-
-    '
-  syntax:
-    content: list(resource_group_name, lab_name, user_name, expand=None, filter=None,
-      top=None, orderby=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id053
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id054
-    - description: 'The name of the user profile.
-
-        '
-      id: user_name
-      type: *id055
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=diskType)''
-
-        '
-      id: expand
-      type: *id056
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id057
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id058
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id059
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id060
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id061
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id062
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.list
-- *id063
 references:
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.attach
-  isExternal: false
-  name: attach
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.attach
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.detach
-  isExternal: false
-  name: detach
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.detach
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.attach
-  isExternal: false
-  name: attach
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.attach
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.detach
-  isExternal: false
-  name: detach
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.detach
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.DisksOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.DisksOperations
-  uid: azure.mgmt.devtestlabs.operations.DisksOperations.list
 - fullName: azure.mgmt.devtestlabs.operations.DisksOperations.attach
   isExternal: false
   name: attach

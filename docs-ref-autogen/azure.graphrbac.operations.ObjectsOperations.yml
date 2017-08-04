@@ -4,8 +4,6 @@ items:
 - children:
   - azure.graphrbac.operations.ObjectsOperations.get_current_user
   - azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-  - azure.graphrbac.operations.ObjectsOperations.get_current_user
-  - azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
   class: azure.graphrbac.operations.ObjectsOperations
   fullName: azure.graphrbac.operations.ObjectsOperations
   inheritance:
@@ -29,7 +27,7 @@ items:
     '
   syntax:
     content: ObjectsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -46,7 +44,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "1.6".
 
         '
@@ -54,7 +52,7 @@ items:
   type: class
   uid: azure.graphrbac.operations.ObjectsOperations
 - class: azure.graphrbac.operations.ObjectsOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ObjectsOperations.get_current_user
   langs:
@@ -80,7 +78,7 @@ items:
 
         '
       id: custom_headers
-      type: &id004
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -89,7 +87,7 @@ items:
 
         '
       id: raw
-      type: &id005
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -97,16 +95,16 @@ items:
 
         '
       id: operation_config
-    return: &id006
+    return:
       type:
       - azure.graphrbac.models.AADObject
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.ObjectsOperations.get_current_user
 - class: azure.graphrbac.operations.ObjectsOperations
-  exceptions: &id008
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
   langs:
@@ -132,14 +130,14 @@ items:
 
         '
       id: parameters
-      type: &id009
+      type:
       - azure.graphrbac.models.GetObjectsParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id010
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -148,7 +146,7 @@ items:
 
         '
       id: raw
-      type: &id011
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -156,160 +154,12 @@ items:
 
         '
       id: operation_config
-    return: &id012
+    return:
       type:
       - azure.graphrbac.models.AADObjectPaged
   type: method
   uid: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-- children:
-  - azure.graphrbac.operations.ObjectsOperations.get_current_user
-  - azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-  class: azure.graphrbac.operations.ObjectsOperations
-  fullName: azure.graphrbac.operations.ObjectsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: ObjectsOperations
-  source:
-    id: ObjectsOperations
-    path: azure-graphrbac\azure\graphrbac\operations\objects_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\objects_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ObjectsOperations operations.
-
-
-
-    '
-  syntax:
-    content: ObjectsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.graphrbac.operations.ObjectsOperations
-- &id007
-  class: azure.graphrbac.operations.ObjectsOperations
-  exceptions: *id003
-  fullName: azure.graphrbac.operations.ObjectsOperations.get_current_user
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: get_current_user
-  source:
-    id: get_current_user
-    path: azure-graphrbac\azure\graphrbac\operations\objects_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\objects_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets the details for the currently logged-in user.
-
-    '
-  syntax:
-    content: get_current_user(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id004
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id005
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id006
-  type: method
-  uid: azure.graphrbac.operations.ObjectsOperations.get_current_user
-- *id007
-- &id013
-  class: azure.graphrbac.operations.ObjectsOperations
-  exceptions: *id008
-  fullName: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: get_objects_by_object_ids
-  source:
-    id: get_objects_by_object_ids
-    path: azure-graphrbac\azure\graphrbac\operations\objects_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\objects_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 92
-  summary: 'Gets AD group membership for the specified AD object IDs.
-
-    '
-  syntax:
-    content: get_objects_by_object_ids(parameters, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Objects filtering parameters.
-
-        '
-      id: parameters
-      type: *id009
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id010
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id011
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id012
-  type: method
-  uid: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-- *id013
 references:
-- fullName: azure.graphrbac.operations.ObjectsOperations.get_current_user
-  isExternal: false
-  name: get_current_user
-  parent: azure.graphrbac.operations.ObjectsOperations
-  uid: azure.graphrbac.operations.ObjectsOperations.get_current_user
-- fullName: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-  isExternal: false
-  name: get_objects_by_object_ids
-  parent: azure.graphrbac.operations.ObjectsOperations
-  uid: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-- fullName: azure.graphrbac.operations.ObjectsOperations.get_current_user
-  isExternal: false
-  name: get_current_user
-  parent: azure.graphrbac.operations.ObjectsOperations
-  uid: azure.graphrbac.operations.ObjectsOperations.get_current_user
-- fullName: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
-  isExternal: false
-  name: get_objects_by_object_ids
-  parent: azure.graphrbac.operations.ObjectsOperations
-  uid: azure.graphrbac.operations.ObjectsOperations.get_objects_by_object_ids
 - fullName: azure.graphrbac.operations.ObjectsOperations.get_current_user
   isExternal: false
   name: get_current_user

@@ -35,7 +35,7 @@ items:
       health_status=None, can_re_register=None, container_id=None, protected_item_count=None,
       dpm_agent_version=None, dpm_servers=None, upgrade_available=None, protection_status=None,
       extended_info=None)
-    parameters: &id001
+    parameters:
     - description: 'Friendly name of the container.
 
         '
@@ -122,7 +122,7 @@ items:
       id: extended_info
       type:
       - azure.mgmt.recoveryservicesbackup.models.DPMContainerExtendedInfo
-    variables: &id002
+    variables:
     - description: 'Type of the container. The value of this property
 
         for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2. Classic
@@ -145,44 +145,6 @@ items:
       - 'str or @azure.mgmt.recoveryservicesbackup.models.ContainerType
 
         '
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.models.DpmContainer
-- children: []
-  class: azure.mgmt.recoveryservicesbackup.models.DpmContainer
-  fullName: azure.mgmt.recoveryservicesbackup.models.DpmContainer
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.recoveryservicesbackup.models.protection_container.ProtectionContainer
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.models
-  name: DpmContainer
-  source:
-    id: DpmContainer
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\dpm_container.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\dpm_container.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'DPM workload-specific protection container.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: DpmContainer(friendly_name=None, backup_management_type=None, registration_status=None,
-      health_status=None, can_re_register=None, container_id=None, protected_item_count=None,
-      dpm_agent_version=None, dpm_servers=None, upgrade_available=None, protection_status=None,
-      extended_info=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.DpmContainer
 references: []

@@ -4,8 +4,6 @@ items:
 - children:
   - azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
   - azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-  - azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-  - azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
   class: azure.mgmt.authorization.operations.PermissionsOperations
   fullName: azure.mgmt.authorization.operations.PermissionsOperations
   inheritance:
@@ -29,7 +27,7 @@ items:
     '
   syntax:
     content: PermissionsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -46,7 +44,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version to use for this operation. Constant value: "2015-07-01".
 
         '
@@ -54,7 +52,7 @@ items:
   type: class
   uid: azure.mgmt.authorization.operations.PermissionsOperations
 - class: azure.mgmt.authorization.operations.PermissionsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
   langs:
@@ -82,7 +80,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The namespace of the resource
 
@@ -90,19 +88,19 @@ items:
 
         '
       id: resource_provider_namespace
-      type: &id005
+      type:
       - str
     - description: 'The parent resource identity.
 
         '
       id: parent_resource_path
-      type: &id006
+      type:
       - str
     - description: 'The resource type of the resource.
 
         '
       id: resource_type
-      type: &id007
+      type:
       - str
     - description: 'The name of the resource to get the permissions
 
@@ -110,14 +108,14 @@ items:
 
         '
       id: resource_name
-      type: &id008
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,7 +124,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -134,13 +132,13 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       type:
       - azure.mgmt.authorization.models.PermissionPaged
   type: method
   uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
 - class: azure.mgmt.authorization.operations.PermissionsOperations
-  exceptions: &id013
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
   langs:
@@ -168,14 +166,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id014
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id015
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -184,7 +182,7 @@ items:
 
         '
       id: raw
-      type: &id016
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -192,194 +190,12 @@ items:
 
         '
       id: operation_config
-    return: &id017
+    return:
       type:
       - azure.mgmt.authorization.models.PermissionPaged
   type: method
   uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-- children:
-  - azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-  - azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-  class: azure.mgmt.authorization.operations.PermissionsOperations
-  fullName: azure.mgmt.authorization.operations.PermissionsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.authorization.operations
-  name: PermissionsOperations
-  source:
-    id: PermissionsOperations
-    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\permissions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\permissions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'PermissionsOperations operations.
-
-
-
-    '
-  syntax:
-    content: PermissionsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.authorization.operations.PermissionsOperations
-- &id012
-  class: azure.mgmt.authorization.operations.PermissionsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-  langs:
-  - python
-  module: azure.mgmt.authorization.operations
-  name: list_for_resource
-  source:
-    id: list_for_resource
-    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\permissions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\permissions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 105
-  summary: 'Gets all permissions the caller has for a resource.
-
-    '
-  syntax:
-    content: list_for_resource(resource_group_name, resource_provider_namespace, parent_resource_path,
-      resource_type, resource_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group containing
-
-        the resource. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The namespace of the resource
-
-        provider.
-
-        '
-      id: resource_provider_namespace
-      type: *id005
-    - description: 'The parent resource identity.
-
-        '
-      id: parent_resource_path
-      type: *id006
-    - description: 'The resource type of the resource.
-
-        '
-      id: resource_type
-      type: *id007
-    - description: 'The name of the resource to get the permissions
-
-        for.
-
-        '
-      id: resource_name
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-- *id012
-- &id018
-  class: azure.mgmt.authorization.operations.PermissionsOperations
-  exceptions: *id013
-  fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-  langs:
-  - python
-  module: azure.mgmt.authorization.operations
-  name: list_for_resource_group
-  source:
-    id: list_for_resource_group
-    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\permissions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\permissions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets all permissions the caller has for a resource group.
-
-    '
-  syntax:
-    content: list_for_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group to get the
-
-        permissions for. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id014
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id015
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id016
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id017
-  type: method
-  uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-- *id018
 references:
-- fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-  isExternal: false
-  name: list_for_resource
-  parent: azure.mgmt.authorization.operations.PermissionsOperations
-  uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-- fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-  isExternal: false
-  name: list_for_resource_group
-  parent: azure.mgmt.authorization.operations.PermissionsOperations
-  uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-- fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-  isExternal: false
-  name: list_for_resource
-  parent: azure.mgmt.authorization.operations.PermissionsOperations
-  uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
-- fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
-  isExternal: false
-  name: list_for_resource_group
-  parent: azure.mgmt.authorization.operations.PermissionsOperations
-  uid: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource_group
 - fullName: azure.mgmt.authorization.operations.PermissionsOperations.list_for_resource
   isExternal: false
   name: list_for_resource

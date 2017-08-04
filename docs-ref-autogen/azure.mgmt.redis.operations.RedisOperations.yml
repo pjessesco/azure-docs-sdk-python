@@ -13,17 +13,6 @@ items:
   - azure.mgmt.redis.operations.RedisOperations.list_keys
   - azure.mgmt.redis.operations.RedisOperations.regenerate_key
   - azure.mgmt.redis.operations.RedisOperations.update
-  - azure.mgmt.redis.operations.RedisOperations.create
-  - azure.mgmt.redis.operations.RedisOperations.delete
-  - azure.mgmt.redis.operations.RedisOperations.export_data
-  - azure.mgmt.redis.operations.RedisOperations.force_reboot
-  - azure.mgmt.redis.operations.RedisOperations.get
-  - azure.mgmt.redis.operations.RedisOperations.import_data
-  - azure.mgmt.redis.operations.RedisOperations.list
-  - azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-  - azure.mgmt.redis.operations.RedisOperations.list_keys
-  - azure.mgmt.redis.operations.RedisOperations.regenerate_key
-  - azure.mgmt.redis.operations.RedisOperations.update
   class: azure.mgmt.redis.operations.RedisOperations
   fullName: azure.mgmt.redis.operations.RedisOperations
   inheritance:
@@ -56,7 +45,7 @@ items:
     '
   syntax:
     content: RedisOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -73,7 +62,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-04-01".
 
         '
@@ -81,7 +70,7 @@ items:
   type: class
   uid: azure.mgmt.redis.operations.RedisOperations
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.create
   langs:
@@ -109,26 +98,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the Create Redis operation.
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.redis.models.RedisCreateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -137,20 +126,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.redis.models.RedisResource'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.create
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.delete
   langs:
@@ -175,20 +164,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -197,20 +186,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.delete
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.export_data
   langs:
@@ -236,26 +225,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id020
+      type:
       - str
     - description: 'Parameters for Redis export operation.
 
         '
       id: parameters
-      type: &id021
+      type:
       - azure.mgmt.redis.models.ExportRDBParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -264,20 +253,20 @@ items:
 
         '
       id: raw
-      type: &id023
-      - bool
-    return: &id024
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.export_data
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id026
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.force_reboot
   langs:
@@ -305,13 +294,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id027
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id028
+      type:
       - str
     - description: 'Which Redis node(s) to reboot. Depending on this
 
@@ -321,7 +310,7 @@ items:
 
         '
       id: reboot_type
-      type: &id029
+      type:
       - 'str or @azure.mgmt.redis.models.RebootType
 
         '
@@ -332,14 +321,14 @@ items:
 
         '
       id: shard_id
-      type: &id030
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -348,7 +337,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -356,16 +345,16 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.mgmt.redis.models.RedisForceRebootResponse
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.force_reboot
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id035
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.get
   langs:
@@ -390,20 +379,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id036
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -412,7 +401,7 @@ items:
 
         '
       id: raw
-      type: &id039
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -420,16 +409,16 @@ items:
 
         '
       id: operation_config
-    return: &id040
+    return:
       type:
       - azure.mgmt.redis.models.RedisResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.get
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id042
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.import_data
   langs:
@@ -455,33 +444,33 @@ items:
 
         '
       id: resource_group_name
-      type: &id043
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id044
+      type:
       - str
     - description: 'files to import.
 
         '
       id: files
-      type: &id045
+      type:
       - list of str
     - defaultValue: None
       description: 'File format.
 
         '
       id: format
-      type: &id046
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id047
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -490,20 +479,20 @@ items:
 
         '
       id: raw
-      type: &id048
-      - bool
-    return: &id049
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.import_data
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id051
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.list
   langs:
@@ -529,7 +518,7 @@ items:
 
         '
       id: custom_headers
-      type: &id052
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -538,7 +527,7 @@ items:
 
         '
       id: raw
-      type: &id053
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -546,13 +535,13 @@ items:
 
         '
       id: operation_config
-    return: &id054
+    return:
       type:
       - azure.mgmt.redis.models.RedisResourcePaged
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.list
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id056
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
   langs:
@@ -578,14 +567,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id057
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id058
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -594,7 +583,7 @@ items:
 
         '
       id: raw
-      type: &id059
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -602,13 +591,13 @@ items:
 
         '
       id: operation_config
-    return: &id060
+    return:
       type:
       - azure.mgmt.redis.models.RedisResourcePaged
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id062
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.list_keys
   langs:
@@ -636,20 +625,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id063
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id064
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id065
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -658,7 +647,7 @@ items:
 
         '
       id: raw
-      type: &id066
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -666,16 +655,16 @@ items:
 
         '
       id: operation_config
-    return: &id067
+    return:
       type:
       - azure.mgmt.redis.models.RedisAccessKeys
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.list_keys
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id069
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.regenerate_key
   langs:
@@ -703,13 +692,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id070
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id071
+      type:
       - str
     - description: 'The Redis access key to regenerate. Possible values
 
@@ -717,7 +706,7 @@ items:
 
         '
       id: key_type
-      type: &id072
+      type:
       - 'str or @azure.mgmt.redis.models.RedisKeyType
 
         '
@@ -726,7 +715,7 @@ items:
 
         '
       id: custom_headers
-      type: &id073
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -735,7 +724,7 @@ items:
 
         '
       id: raw
-      type: &id074
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -743,16 +732,16 @@ items:
 
         '
       id: operation_config
-    return: &id075
+    return:
       type:
       - azure.mgmt.redis.models.RedisAccessKeys
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.regenerate_key
 - class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: &id077
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisOperations.update
   langs:
@@ -778,26 +767,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id078
+      type:
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: name
-      type: &id079
+      type:
       - str
     - description: 'Parameters supplied to the Update Redis operation.
 
         '
       id: parameters
-      type: &id080
+      type:
       - azure.mgmt.redis.models.RedisUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id081
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -806,7 +795,7 @@ items:
 
         '
       id: raw
-      type: &id082
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -814,816 +803,15 @@ items:
 
         '
       id: operation_config
-    return: &id083
+    return:
       type:
       - azure.mgmt.redis.models.RedisResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisOperations.update
-- children:
-  - azure.mgmt.redis.operations.RedisOperations.create
-  - azure.mgmt.redis.operations.RedisOperations.delete
-  - azure.mgmt.redis.operations.RedisOperations.export_data
-  - azure.mgmt.redis.operations.RedisOperations.force_reboot
-  - azure.mgmt.redis.operations.RedisOperations.get
-  - azure.mgmt.redis.operations.RedisOperations.import_data
-  - azure.mgmt.redis.operations.RedisOperations.list
-  - azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-  - azure.mgmt.redis.operations.RedisOperations.list_keys
-  - azure.mgmt.redis.operations.RedisOperations.regenerate_key
-  - azure.mgmt.redis.operations.RedisOperations.update
-  class: azure.mgmt.redis.operations.RedisOperations
-  fullName: azure.mgmt.redis.operations.RedisOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: RedisOperations
-  source:
-    id: RedisOperations
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'RedisOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: RedisOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.redis.operations.RedisOperations
-- &id010
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id003
-  fullName: azure.mgmt.redis.operations.RedisOperations.create
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: create
-  source:
-    id: create
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Create or replace (overwrite/recreate, with potential downtime) an
-
-    existing Redis cache.
-
-    '
-  syntax:
-    content: create(resource_group_name, name, parameters, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id005
-    - description: 'Parameters supplied to the Create Redis operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.create
-- *id010
-- &id017
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id011
-  fullName: azure.mgmt.redis.operations.RedisOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 202
-  summary: 'Deletes a Redis cache.
-
-    '
-  syntax:
-    content: delete(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.delete
-- *id017
-- &id025
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id018
-  fullName: azure.mgmt.redis.operations.RedisOperations.export_data
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: export_data
-  source:
-    id: export_data
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 769
-  summary: 'Export data from the redis cache to blobs in a container.
-
-    '
-  syntax:
-    content: export_data(resource_group_name, name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id020
-    - description: 'Parameters for Redis export operation.
-
-        '
-      id: parameters
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    return: *id024
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.export_data
-- *id025
-- &id034
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id026
-  fullName: azure.mgmt.redis.operations.RedisOperations.force_reboot
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: force_reboot
-  source:
-    id: force_reboot
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 605
-  summary: 'Reboot specified Redis node(s). This operation requires write
-
-    permission to the cache resource. There can be potential data loss.
-
-    '
-  syntax:
-    content: force_reboot(resource_group_name, name, reboot_type, shard_id=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id027
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id028
-    - description: 'Which Redis node(s) to reboot. Depending on this
-
-        value data loss is possible. Possible values include: ''PrimaryNode'',
-
-        ''SecondaryNode'', ''AllNodes''
-
-        '
-      id: reboot_type
-      type: *id029
-    - defaultValue: None
-      description: 'If clustering is enabled, the ID of the shard to be
-
-        rebooted.
-
-        '
-      id: shard_id
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.force_reboot
-- *id034
-- &id041
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id035
-  fullName: azure.mgmt.redis.operations.RedisOperations.get
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 279
-  summary: 'Gets a Redis cache (resource description).
-
-    '
-  syntax:
-    content: get(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id036
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id040
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.get
-- *id041
-- &id050
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id042
-  fullName: azure.mgmt.redis.operations.RedisOperations.import_data
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: import_data
-  source:
-    id: import_data
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 682
-  summary: 'Import data into Redis cache.
-
-    '
-  syntax:
-    content: import_data(resource_group_name, name, files, format=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id043
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id044
-    - description: 'files to import.
-
-        '
-      id: files
-      type: *id045
-    - defaultValue: None
-      description: 'File format.
-
-        '
-      id: format
-      type: *id046
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id047
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id048
-    return: *id049
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.import_data
-- *id050
-- &id055
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id051
-  fullName: azure.mgmt.redis.operations.RedisOperations.list
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 406
-  summary: 'Gets all Redis caches in the specified subscription.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id052
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id053
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id054
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.list
-- *id055
-- &id061
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id056
-  fullName: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 340
-  summary: 'Lists all Redis caches in a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id057
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id058
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id059
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id060
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-- *id061
-- &id068
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id062
-  fullName: azure.mgmt.redis.operations.RedisOperations.list_keys
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: list_keys
-  source:
-    id: list_keys
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 469
-  summary: 'Retrieve a Redis cache''s access keys. This operation requires write
-
-    permission to the cache resource.
-
-    '
-  syntax:
-    content: list_keys(resource_group_name, name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id063
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id064
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id065
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id066
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id067
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.list_keys
-- *id068
-- &id076
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id069
-  fullName: azure.mgmt.redis.operations.RedisOperations.regenerate_key
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: regenerate_key
-  source:
-    id: regenerate_key
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 532
-  summary: 'Regenerate Redis cache''s access keys. This operation requires write
-
-    permission to the cache resource.
-
-    '
-  syntax:
-    content: regenerate_key(resource_group_name, name, key_type, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id070
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id071
-    - description: 'The Redis access key to regenerate. Possible values
-
-        include: ''Primary'', ''Secondary''
-
-        '
-      id: key_type
-      type: *id072
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id073
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id074
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id075
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.regenerate_key
-- *id076
-- &id084
-  class: azure.mgmt.redis.operations.RedisOperations
-  exceptions: *id077
-  fullName: azure.mgmt.redis.operations.RedisOperations.update
-  langs:
-  - python
-  module: azure.mgmt.redis.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 134
-  summary: 'Update an existing Redis cache.
-
-    '
-  syntax:
-    content: update(resource_group_name, name, parameters, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id078
-    - description: 'The name of the Redis cache.
-
-        '
-      id: name
-      type: *id079
-    - description: 'Parameters supplied to the Update Redis operation.
-
-        '
-      id: parameters
-      type: *id080
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id081
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id082
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id083
-  type: method
-  uid: azure.mgmt.redis.operations.RedisOperations.update
-- *id084
 references:
-- fullName: azure.mgmt.redis.operations.RedisOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.create
-- fullName: azure.mgmt.redis.operations.RedisOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.delete
-- fullName: azure.mgmt.redis.operations.RedisOperations.export_data
-  isExternal: false
-  name: export_data
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.export_data
-- fullName: azure.mgmt.redis.operations.RedisOperations.force_reboot
-  isExternal: false
-  name: force_reboot
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.force_reboot
-- fullName: azure.mgmt.redis.operations.RedisOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.get
-- fullName: azure.mgmt.redis.operations.RedisOperations.import_data
-  isExternal: false
-  name: import_data
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.import_data
-- fullName: azure.mgmt.redis.operations.RedisOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.list
-- fullName: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-- fullName: azure.mgmt.redis.operations.RedisOperations.list_keys
-  isExternal: false
-  name: list_keys
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.list_keys
-- fullName: azure.mgmt.redis.operations.RedisOperations.regenerate_key
-  isExternal: false
-  name: regenerate_key
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.regenerate_key
-- fullName: azure.mgmt.redis.operations.RedisOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.update
-- fullName: azure.mgmt.redis.operations.RedisOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.create
-- fullName: azure.mgmt.redis.operations.RedisOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.delete
-- fullName: azure.mgmt.redis.operations.RedisOperations.export_data
-  isExternal: false
-  name: export_data
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.export_data
-- fullName: azure.mgmt.redis.operations.RedisOperations.force_reboot
-  isExternal: false
-  name: force_reboot
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.force_reboot
-- fullName: azure.mgmt.redis.operations.RedisOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.get
-- fullName: azure.mgmt.redis.operations.RedisOperations.import_data
-  isExternal: false
-  name: import_data
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.import_data
-- fullName: azure.mgmt.redis.operations.RedisOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.list
-- fullName: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.list_by_resource_group
-- fullName: azure.mgmt.redis.operations.RedisOperations.list_keys
-  isExternal: false
-  name: list_keys
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.list_keys
-- fullName: azure.mgmt.redis.operations.RedisOperations.regenerate_key
-  isExternal: false
-  name: regenerate_key
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.regenerate_key
-- fullName: azure.mgmt.redis.operations.RedisOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.redis.operations.RedisOperations
-  uid: azure.mgmt.redis.operations.RedisOperations.update
 - fullName: azure.mgmt.redis.operations.RedisOperations.create
   isExternal: false
   name: create

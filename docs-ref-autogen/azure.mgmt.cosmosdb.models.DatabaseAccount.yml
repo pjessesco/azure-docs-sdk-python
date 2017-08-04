@@ -33,7 +33,7 @@ items:
   syntax:
     content: DatabaseAccount(location, tags=None, kind='GlobalDocumentDB', provisioning_state=None,
       ip_range_filter=None, enable_automatic_failover=None, consistency_policy=None)
-    parameters: &id001
+    parameters:
     - description: 'The location of the resource group to which the resource
 
         belongs.
@@ -94,7 +94,7 @@ items:
       id: consistency_policy
       type:
       - azure.mgmt.cosmosdb.models.ConsistencyPolicy
-    variables: &id002
+    variables:
     - description: 'The unique resource identifier of the database account.
 
         '
@@ -165,42 +165,6 @@ items:
       - 'list of @azure.mgmt.cosmosdb.models.FailoverPolicy
 
         '
-  type: class
-  uid: azure.mgmt.cosmosdb.models.DatabaseAccount
-- children: []
-  class: azure.mgmt.cosmosdb.models.DatabaseAccount
-  fullName: azure.mgmt.cosmosdb.models.DatabaseAccount
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.cosmosdb.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.cosmosdb.models
-  name: DatabaseAccount
-  source:
-    id: DatabaseAccount
-    path: azure_mgmt_cosmosdb-0.2.0-py3.5.egg\azure\mgmt\cosmosdb\models\database_account.py
-    remote:
-      branch: master
-      path: azure_mgmt_cosmosdb-0.2.0-py3.5.egg\azure\mgmt\cosmosdb\models\database_account.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'An Azure Cosmos DB database account.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: DatabaseAccount(location, tags=None, kind='GlobalDocumentDB', provisioning_state=None,
-      ip_range_filter=None, enable_automatic_failover=None, consistency_policy=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.cosmosdb.models.DatabaseAccount
 references: []

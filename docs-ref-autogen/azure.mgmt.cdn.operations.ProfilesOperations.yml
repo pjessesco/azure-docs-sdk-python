@@ -10,14 +10,6 @@ items:
   - azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
   - azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
   - azure.mgmt.cdn.operations.ProfilesOperations.update
-  - azure.mgmt.cdn.operations.ProfilesOperations.create
-  - azure.mgmt.cdn.operations.ProfilesOperations.delete
-  - azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-  - azure.mgmt.cdn.operations.ProfilesOperations.get
-  - azure.mgmt.cdn.operations.ProfilesOperations.list
-  - azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-  - azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-  - azure.mgmt.cdn.operations.ProfilesOperations.update
   class: azure.mgmt.cdn.operations.ProfilesOperations
   fullName: azure.mgmt.cdn.operations.ProfilesOperations
   inheritance:
@@ -47,7 +39,7 @@ items:
     '
   syntax:
     content: ProfilesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -64,7 +56,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Version of the API to be used with the client request. Current
         version is 2016-10-02. Constant value: "2016-10-02".
 
@@ -73,7 +65,7 @@ items:
   type: class
   uid: azure.mgmt.cdn.operations.ProfilesOperations
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.create
   langs:
@@ -103,7 +95,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -111,20 +103,20 @@ items:
 
         '
       id: profile_name
-      type: &id005
+      type:
       - str
     - description: 'Profile properties needed to create a new profile.
 
         '
       id: profile
-      type: &id006
+      type:
       - azure.mgmt.cdn.models.Profile
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -133,20 +125,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.Profile'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.create
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id011
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.delete
   langs:
@@ -178,7 +170,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -186,14 +178,14 @@ items:
 
         '
       id: profile_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -202,20 +194,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.delete
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id018
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
   langs:
@@ -253,7 +245,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -261,14 +253,14 @@ items:
 
         '
       id: profile_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -277,7 +269,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -285,16 +277,16 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       type:
       - azure.mgmt.cdn.models.SsoUri
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id025
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.get
   langs:
@@ -324,7 +316,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -332,14 +324,14 @@ items:
 
         '
       id: profile_name
-      type: &id027
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id028
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -348,7 +340,7 @@ items:
 
         '
       id: raw
-      type: &id029
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -356,16 +348,16 @@ items:
 
         '
       id: operation_config
-    return: &id030
+    return:
       type:
       - azure.mgmt.cdn.models.Profile
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.get
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id032
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.list
   langs:
@@ -391,7 +383,7 @@ items:
 
         '
       id: custom_headers
-      type: &id033
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -400,7 +392,7 @@ items:
 
         '
       id: raw
-      type: &id034
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -408,13 +400,13 @@ items:
 
         '
       id: operation_config
-    return: &id035
+    return:
       type:
       - azure.mgmt.cdn.models.ProfilePaged
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.list
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id037
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
   langs:
@@ -442,14 +434,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -458,7 +450,7 @@ items:
 
         '
       id: raw
-      type: &id040
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -466,13 +458,13 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       type:
       - azure.mgmt.cdn.models.ProfilePaged
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id043
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
   langs:
@@ -502,7 +494,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id044
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -510,14 +502,14 @@ items:
 
         '
       id: profile_name
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -526,7 +518,7 @@ items:
 
         '
       id: raw
-      type: &id047
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -534,13 +526,13 @@ items:
 
         '
       id: operation_config
-    return: &id048
+    return:
       type:
       - azure.mgmt.cdn.models.ResourceUsagePaged
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
 - class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: &id050
+  exceptions:
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.ProfilesOperations.update
   langs:
@@ -570,7 +562,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id051
+      type:
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -578,20 +570,20 @@ items:
 
         '
       id: profile_name
-      type: &id052
+      type:
       - str
     - description: 'Profile tags
 
         '
       id: tags
-      type: &id053
+      type:
       - dict
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id054
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -600,621 +592,19 @@ items:
 
         '
       id: raw
-      type: &id055
-      - bool
-    return: &id056
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.Profile'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.ProfilesOperations.update
-- children:
-  - azure.mgmt.cdn.operations.ProfilesOperations.create
-  - azure.mgmt.cdn.operations.ProfilesOperations.delete
-  - azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-  - azure.mgmt.cdn.operations.ProfilesOperations.get
-  - azure.mgmt.cdn.operations.ProfilesOperations.list
-  - azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-  - azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-  - azure.mgmt.cdn.operations.ProfilesOperations.update
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: ProfilesOperations
-  source:
-    id: ProfilesOperations
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ProfilesOperations operations.
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ProfilesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.cdn.operations.ProfilesOperations
-- &id010
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.create
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: create
-  source:
-    id: create
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 227
-  summary: 'Creates a new CDN profile with a profile name under the specified
-
-    subscription and resource group.
-
-    '
-  syntax:
-    content: create(resource_group_name, profile_name, profile, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id005
-    - description: 'Profile properties needed to create a new profile.
-
-        '
-      id: profile
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.create
-- *id010
-- &id017
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id011
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 419
-  summary: 'Deletes an existing CDN profile with the specified parameters. Deleting
-
-    a profile will result in the deletion of all of the sub-resources
-
-    including endpoints, origins and custom domains.
-
-    '
-  syntax:
-    content: delete(resource_group_name, profile_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id018
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: generate_sso_uri
-  source:
-    id: generate_sso_uri
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 499
-  summary: 'Generates a dynamic SSO URI used to sign in to the CDN supplemental
-
-    portal. Supplemnetal portal is used to configure advanced feature
-
-    capabilities that are not yet available in the Azure portal, such as
-
-    core reports in a standard profile; rules engine, advanced HTTP
-
-    reports, and real-time stats and alerts in a premium profile. The SSO
-
-    URI changes approximately every 10 minutes.
-
-    '
-  syntax:
-    content: generate_sso_uri(resource_group_name, profile_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-- *id024
-- &id031
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id025
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 164
-  summary: 'Gets a CDN profile with the specified profile name under the specified
-
-    subscription and resource group.
-
-    '
-  syntax:
-    content: get(resource_group_name, profile_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id027
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id028
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id029
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id030
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.get
-- *id031
-- &id036
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id032
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Lists all of the CDN profiles within an Azure subscription.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id033
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id034
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id035
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list
-- *id036
-- &id042
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id037
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 99
-  summary: 'Lists all of the CDN profiles within a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-- *id042
-- &id049
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id043
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: list_resource_usage
-  source:
-    id: list_resource_usage
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 566
-  summary: 'Checks the quota and actual usage of endpoints under the given CDN
-
-    profile.
-
-    '
-  syntax:
-    content: list_resource_usage(resource_group_name, profile_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id044
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id048
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-- *id049
-- &id057
-  class: azure.mgmt.cdn.operations.ProfilesOperations
-  exceptions: *id050
-  fullName: azure.mgmt.cdn.operations.ProfilesOperations.update
-  langs:
-  - python
-  module: azure.mgmt.cdn.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 323
-  summary: 'Updates an existing CDN profile with the specified profile name under
-
-    the specified subscription and resource group.
-
-    '
-  syntax:
-    content: update(resource_group_name, profile_name, tags, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id051
-    - description: 'Name of the CDN profile which is unique within
-
-        the resource group.
-
-        '
-      id: profile_name
-      type: *id052
-    - description: 'Profile tags
-
-        '
-      id: tags
-      type: *id053
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id054
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id055
-    return: *id056
-  type: method
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.update
-- *id057
 references:
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.create
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.delete
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-  isExternal: false
-  name: generate_sso_uri
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.get
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-  isExternal: false
-  name: list_resource_usage
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.update
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.create
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.delete
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-  isExternal: false
-  name: generate_sso_uri
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.get
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-  isExternal: false
-  name: list_resource_usage
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage
-- fullName: azure.mgmt.cdn.operations.ProfilesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.cdn.operations.ProfilesOperations
-  uid: azure.mgmt.cdn.operations.ProfilesOperations.update
 - fullName: azure.mgmt.cdn.operations.ProfilesOperations.create
   isExternal: false
   name: create

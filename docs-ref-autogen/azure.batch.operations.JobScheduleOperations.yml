@@ -12,16 +12,6 @@ items:
   - azure.batch.operations.JobScheduleOperations.patch
   - azure.batch.operations.JobScheduleOperations.terminate
   - azure.batch.operations.JobScheduleOperations.update
-  - azure.batch.operations.JobScheduleOperations.add
-  - azure.batch.operations.JobScheduleOperations.delete
-  - azure.batch.operations.JobScheduleOperations.disable
-  - azure.batch.operations.JobScheduleOperations.enable
-  - azure.batch.operations.JobScheduleOperations.exists
-  - azure.batch.operations.JobScheduleOperations.get
-  - azure.batch.operations.JobScheduleOperations.list
-  - azure.batch.operations.JobScheduleOperations.patch
-  - azure.batch.operations.JobScheduleOperations.terminate
-  - azure.batch.operations.JobScheduleOperations.update
   class: azure.batch.operations.JobScheduleOperations
   fullName: azure.batch.operations.JobScheduleOperations
   inheritance:
@@ -53,7 +43,7 @@ items:
     '
   syntax:
     content: JobScheduleOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -70,7 +60,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API Version. Constant value: "2017-06-01.5.1".
 
         '
@@ -78,7 +68,7 @@ items:
   type: class
   uid: azure.batch.operations.JobScheduleOperations
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.add
   langs:
@@ -104,7 +94,7 @@ items:
 
         '
       id: cloud_job_schedule
-      type: &id004
+      type:
       - azure.batch.models.JobScheduleAddParameter
     - defaultValue: None
       description: 'Additional parameters for the
@@ -113,14 +103,14 @@ items:
 
         '
       id: job_schedule_add_options
-      type: &id005
+      type:
       - azure.batch.models.JobScheduleAddOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id006
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -129,7 +119,7 @@ items:
 
         '
       id: raw
-      type: &id007
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -137,16 +127,16 @@ items:
 
         '
       id: operation_config
-    return: &id008
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.add
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id010
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.delete
   langs:
@@ -185,7 +175,7 @@ items:
 
         '
       id: job_schedule_id
-      type: &id011
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -194,14 +184,14 @@ items:
 
         '
       id: job_schedule_delete_options
-      type: &id012
+      type:
       - azure.batch.models.JobScheduleDeleteOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id013
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -210,7 +200,7 @@ items:
 
         '
       id: raw
-      type: &id014
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -218,16 +208,16 @@ items:
 
         '
       id: operation_config
-    return: &id015
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.delete
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id017
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.disable
   langs:
@@ -256,7 +246,7 @@ items:
 
         '
       id: job_schedule_id
-      type: &id018
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -265,14 +255,14 @@ items:
 
         '
       id: job_schedule_disable_options
-      type: &id019
+      type:
       - azure.batch.models.JobScheduleDisableOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id020
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -281,7 +271,7 @@ items:
 
         '
       id: raw
-      type: &id021
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -289,16 +279,16 @@ items:
 
         '
       id: operation_config
-    return: &id022
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.disable
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id024
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.enable
   langs:
@@ -324,7 +314,7 @@ items:
 
         '
       id: job_schedule_id
-      type: &id025
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -333,14 +323,14 @@ items:
 
         '
       id: job_schedule_enable_options
-      type: &id026
+      type:
       - azure.batch.models.JobScheduleEnableOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -349,7 +339,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -357,16 +347,16 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.enable
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id031
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.exists
   langs:
@@ -394,7 +384,7 @@ items:
 
         '
       id: job_schedule_id
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -403,14 +393,14 @@ items:
 
         '
       id: job_schedule_exists_options
-      type: &id033
+      type:
       - azure.batch.models.JobScheduleExistsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id034
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -419,7 +409,7 @@ items:
 
         '
       id: raw
-      type: &id035
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -427,16 +417,16 @@ items:
 
         '
       id: operation_config
-    return: &id036
+    return:
       type:
       - bool
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.exists
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id038
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.get
   langs:
@@ -462,7 +452,7 @@ items:
 
         '
       id: job_schedule_id
-      type: &id039
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -471,14 +461,14 @@ items:
 
         '
       id: job_schedule_get_options
-      type: &id040
+      type:
       - azure.batch.models.JobScheduleGetOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -487,7 +477,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -495,16 +485,16 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.batch.models.CloudJobSchedule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.get
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id045
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.list
   langs:
@@ -533,14 +523,14 @@ items:
 
         '
       id: job_schedule_list_options
-      type: &id046
+      type:
       - azure.batch.models.JobScheduleListOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id047
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -549,7 +539,7 @@ items:
 
         '
       id: raw
-      type: &id048
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -557,13 +547,13 @@ items:
 
         '
       id: operation_config
-    return: &id049
+    return:
       type:
       - azure.batch.models.CloudJobSchedulePaged
   type: method
   uid: azure.batch.operations.JobScheduleOperations.list
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id051
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.patch
   langs:
@@ -602,13 +592,13 @@ items:
 
         '
       id: job_schedule_id
-      type: &id052
+      type:
       - str
     - description: 'The parameters for the request.
 
         '
       id: job_schedule_patch_parameter
-      type: &id053
+      type:
       - azure.batch.models.JobSchedulePatchParameter
     - defaultValue: None
       description: 'Additional parameters for the
@@ -617,14 +607,14 @@ items:
 
         '
       id: job_schedule_patch_options
-      type: &id054
+      type:
       - azure.batch.models.JobSchedulePatchOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id055
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -633,7 +623,7 @@ items:
 
         '
       id: raw
-      type: &id056
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -641,16 +631,16 @@ items:
 
         '
       id: operation_config
-    return: &id057
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.patch
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id059
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.terminate
   langs:
@@ -676,7 +666,7 @@ items:
 
         '
       id: job_schedule_id
-      type: &id060
+      type:
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -685,14 +675,14 @@ items:
 
         '
       id: job_schedule_terminate_options
-      type: &id061
+      type:
       - azure.batch.models.JobScheduleTerminateOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id062
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -701,7 +691,7 @@ items:
 
         '
       id: raw
-      type: &id063
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -709,16 +699,16 @@ items:
 
         '
       id: operation_config
-    return: &id064
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.terminate
 - class: azure.batch.operations.JobScheduleOperations
-  exceptions: &id066
+  exceptions:
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.JobScheduleOperations.update
   langs:
@@ -757,13 +747,13 @@ items:
 
         '
       id: job_schedule_id
-      type: &id067
+      type:
       - str
     - description: 'The parameters for the request.
 
         '
       id: job_schedule_update_parameter
-      type: &id068
+      type:
       - azure.batch.models.JobScheduleUpdateParameter
     - defaultValue: None
       description: 'Additional parameters for the
@@ -772,14 +762,14 @@ items:
 
         '
       id: job_schedule_update_options
-      type: &id069
+      type:
       - azure.batch.models.JobScheduleUpdateOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id070
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -788,7 +778,7 @@ items:
 
         '
       id: raw
-      type: &id071
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -796,810 +786,15 @@ items:
 
         '
       id: operation_config
-    return: &id072
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.JobScheduleOperations.update
-- children:
-  - azure.batch.operations.JobScheduleOperations.add
-  - azure.batch.operations.JobScheduleOperations.delete
-  - azure.batch.operations.JobScheduleOperations.disable
-  - azure.batch.operations.JobScheduleOperations.enable
-  - azure.batch.operations.JobScheduleOperations.exists
-  - azure.batch.operations.JobScheduleOperations.get
-  - azure.batch.operations.JobScheduleOperations.list
-  - azure.batch.operations.JobScheduleOperations.patch
-  - azure.batch.operations.JobScheduleOperations.terminate
-  - azure.batch.operations.JobScheduleOperations.update
-  class: azure.batch.operations.JobScheduleOperations
-  fullName: azure.batch.operations.JobScheduleOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.batch.operations
-  name: JobScheduleOperations
-  source:
-    id: JobScheduleOperations
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'JobScheduleOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: JobScheduleOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.batch.operations.JobScheduleOperations
-- &id009
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id003
-  fullName: azure.batch.operations.JobScheduleOperations.add
-  langs:
-  - python
-  module: azure.batch.operations
-  name: add
-  source:
-    id: add
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 902
-  summary: 'Adds a job schedule to the specified account.
-
-    '
-  syntax:
-    content: add(cloud_job_schedule, job_schedule_add_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The job schedule to be added.
-
-        '
-      id: cloud_job_schedule
-      type: *id004
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_add_options
-      type: *id005
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id006
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id007
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id008
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.add
-- *id009
-- &id016
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id010
-  fullName: azure.batch.operations.JobScheduleOperations.delete
-  langs:
-  - python
-  module: azure.batch.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 140
-  summary: 'Deletes a job schedule from the specified account.
-
-
-    When you delete a job schedule, this also deletes all jobs and tasks
-
-    under that schedule. When tasks are deleted, all the files in their
-
-    working directories on the compute nodes are also deleted (the
-
-    retention period is ignored). The job schedule statistics are no longer
-
-    accessible once the job schedule is deleted, though they are still
-
-    counted towards account lifetime statistics.
-
-    '
-  syntax:
-    content: delete(job_schedule_id, job_schedule_delete_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule to delete.
-
-        '
-      id: job_schedule_id
-      type: *id011
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_delete_options
-      type: *id012
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id013
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id014
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id015
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.delete
-- *id016
-- &id023
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id017
-  fullName: azure.batch.operations.JobScheduleOperations.disable
-  langs:
-  - python
-  module: azure.batch.operations
-  name: disable
-  source:
-    id: disable
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 596
-  summary: 'Disables a job schedule.
-
-
-    No new jobs will be created until the job schedule is enabled again.
-
-    '
-  syntax:
-    content: disable(job_schedule_id, job_schedule_disable_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule to disable.
-
-        '
-      id: job_schedule_id
-      type: *id018
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_disable_options
-      type: *id019
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id020
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id021
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id022
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.disable
-- *id023
-- &id030
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id024
-  fullName: azure.batch.operations.JobScheduleOperations.enable
-  langs:
-  - python
-  module: azure.batch.operations
-  name: enable
-  source:
-    id: enable
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 699
-  summary: 'Enables a job schedule.
-
-    '
-  syntax:
-    content: enable(job_schedule_id, job_schedule_enable_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule to enable.
-
-        '
-      id: job_schedule_id
-      type: *id025
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_enable_options
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.enable
-- *id030
-- &id037
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id031
-  fullName: azure.batch.operations.JobScheduleOperations.exists
-  langs:
-  - python
-  module: azure.batch.operations
-  name: exists
-  source:
-    id: exists
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Checks the specified job schedule exists.
-
-    '
-  syntax:
-    content: exists(job_schedule_id, job_schedule_exists_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule which you want to
-
-        check.
-
-        '
-      id: job_schedule_id
-      type: *id032
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_exists_options
-      type: *id033
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id034
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id035
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id036
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.exists
-- *id037
-- &id044
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id038
-  fullName: azure.batch.operations.JobScheduleOperations.get
-  langs:
-  - python
-  module: azure.batch.operations
-  name: get
-  source:
-    id: get
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 245
-  summary: 'Gets information about the specified job schedule.
-
-    '
-  syntax:
-    content: get(job_schedule_id, job_schedule_get_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule to get.
-
-        '
-      id: job_schedule_id
-      type: *id039
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_get_options
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.get
-- *id044
-- &id050
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id045
-  fullName: azure.batch.operations.JobScheduleOperations.list
-  langs:
-  - python
-  module: azure.batch.operations
-  name: list
-  source:
-    id: list
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 984
-  summary: 'Lists all of the job schedules in the specified account.
-
-    '
-  syntax:
-    content: list(job_schedule_list_options=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_list_options
-      type: *id046
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id047
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id048
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id049
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.list
-- *id050
-- &id058
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id051
-  fullName: azure.batch.operations.JobScheduleOperations.patch
-  langs:
-  - python
-  module: azure.batch.operations
-  name: patch
-  source:
-    id: patch
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 365
-  summary: 'Updates the properties of the specified job schedule.
-
-
-    This replaces only the job schedule properties specified in the
-
-    request. For example, if the schedule property is not specified with
-
-    this request, then the Batch service will keep the existing schedule.
-
-    Changes to a job schedule only impact jobs created by the schedule
-
-    after the update has taken place; currently running jobs are
-
-    unaffected.
-
-    '
-  syntax:
-    content: patch(job_schedule_id, job_schedule_patch_parameter, job_schedule_patch_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule to update.
-
-        '
-      id: job_schedule_id
-      type: *id052
-    - description: 'The parameters for the request.
-
-        '
-      id: job_schedule_patch_parameter
-      type: *id053
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_patch_options
-      type: *id054
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id055
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id056
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id057
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.patch
-- *id058
-- &id065
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id059
-  fullName: azure.batch.operations.JobScheduleOperations.terminate
-  langs:
-  - python
-  module: azure.batch.operations
-  name: terminate
-  source:
-    id: terminate
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 800
-  summary: 'Terminates a job schedule.
-
-    '
-  syntax:
-    content: terminate(job_schedule_id, job_schedule_terminate_options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule to terminates.
-
-        '
-      id: job_schedule_id
-      type: *id060
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_terminate_options
-      type: *id061
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id062
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id063
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id064
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.terminate
-- *id065
-- &id073
-  class: azure.batch.operations.JobScheduleOperations
-  exceptions: *id066
-  fullName: azure.batch.operations.JobScheduleOperations.update
-  langs:
-  - python
-  module: azure.batch.operations
-  name: update
-  source:
-    id: update
-    path: azure-batch\azure\batch\operations\job_schedule_operations.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\operations\job_schedule_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 480
-  summary: 'Updates the properties of the specified job schedule.
-
-
-    This fully replaces all the updateable properties of the job schedule.
-
-    For example, if the schedule property is not specified with this
-
-    request, then the Batch service will remove the existing schedule.
-
-    Changes to a job schedule only impact jobs created by the schedule
-
-    after the update has taken place; currently running jobs are
-
-    unaffected.
-
-    '
-  syntax:
-    content: update(job_schedule_id, job_schedule_update_parameter, job_schedule_update_options=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the job schedule to update.
-
-        '
-      id: job_schedule_id
-      type: *id067
-    - description: 'The parameters for the request.
-
-        '
-      id: job_schedule_update_parameter
-      type: *id068
-    - defaultValue: None
-      description: 'Additional parameters for the
-
-        operation
-
-        '
-      id: job_schedule_update_options
-      type: *id069
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id070
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id071
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id072
-  type: method
-  uid: azure.batch.operations.JobScheduleOperations.update
-- *id073
 references:
-- fullName: azure.batch.operations.JobScheduleOperations.add
-  isExternal: false
-  name: add
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.add
-- fullName: azure.batch.operations.JobScheduleOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.delete
-- fullName: azure.batch.operations.JobScheduleOperations.disable
-  isExternal: false
-  name: disable
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.disable
-- fullName: azure.batch.operations.JobScheduleOperations.enable
-  isExternal: false
-  name: enable
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.enable
-- fullName: azure.batch.operations.JobScheduleOperations.exists
-  isExternal: false
-  name: exists
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.exists
-- fullName: azure.batch.operations.JobScheduleOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.get
-- fullName: azure.batch.operations.JobScheduleOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.list
-- fullName: azure.batch.operations.JobScheduleOperations.patch
-  isExternal: false
-  name: patch
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.patch
-- fullName: azure.batch.operations.JobScheduleOperations.terminate
-  isExternal: false
-  name: terminate
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.terminate
-- fullName: azure.batch.operations.JobScheduleOperations.update
-  isExternal: false
-  name: update
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.update
-- fullName: azure.batch.operations.JobScheduleOperations.add
-  isExternal: false
-  name: add
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.add
-- fullName: azure.batch.operations.JobScheduleOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.delete
-- fullName: azure.batch.operations.JobScheduleOperations.disable
-  isExternal: false
-  name: disable
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.disable
-- fullName: azure.batch.operations.JobScheduleOperations.enable
-  isExternal: false
-  name: enable
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.enable
-- fullName: azure.batch.operations.JobScheduleOperations.exists
-  isExternal: false
-  name: exists
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.exists
-- fullName: azure.batch.operations.JobScheduleOperations.get
-  isExternal: false
-  name: get
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.get
-- fullName: azure.batch.operations.JobScheduleOperations.list
-  isExternal: false
-  name: list
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.list
-- fullName: azure.batch.operations.JobScheduleOperations.patch
-  isExternal: false
-  name: patch
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.patch
-- fullName: azure.batch.operations.JobScheduleOperations.terminate
-  isExternal: false
-  name: terminate
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.terminate
-- fullName: azure.batch.operations.JobScheduleOperations.update
-  isExternal: false
-  name: update
-  parent: azure.batch.operations.JobScheduleOperations
-  uid: azure.batch.operations.JobScheduleOperations.update
 - fullName: azure.batch.operations.JobScheduleOperations.add
   isExternal: false
   name: add

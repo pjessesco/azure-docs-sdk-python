@@ -11,15 +11,6 @@ items:
   - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
   - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
   - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
   class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
   inheritance:
@@ -50,7 +41,7 @@ items:
     '
   syntax:
     content: RegistriesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -67,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The client API version. Constant value: "2017-03-01".
 
         '
@@ -75,7 +66,7 @@ items:
   type: class
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
   langs:
@@ -104,14 +95,14 @@ items:
 
         '
       id: name
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -120,7 +111,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -128,16 +119,16 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameStatus
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id009
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
   langs:
@@ -165,13 +156,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id010
+      type:
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type: &id011
+      type:
       - str
     - description: 'The parameters for creating a
 
@@ -179,14 +170,14 @@ items:
 
         '
       id: registry_create_parameters
-      type: &id012
+      type:
       - azure.mgmt.containerregistry.v2017_03_01.models.RegistryCreateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id013
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -195,20 +186,20 @@ items:
 
         '
       id: raw
-      type: &id014
-      - bool
-    return: &id015
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.containerregistry.v2017_03_01.models.Registry'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id017
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
   langs:
@@ -236,20 +227,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id018
+      type:
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type: &id019
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id020
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -258,7 +249,7 @@ items:
 
         '
       id: raw
-      type: &id021
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -266,16 +257,16 @@ items:
 
         '
       id: operation_config
-    return: &id022
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id024
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
   langs:
@@ -303,20 +294,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id025
+      type:
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -325,7 +316,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -333,16 +324,16 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - azure.mgmt.containerregistry.v2017_03_01.models.Registry
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
   langs:
@@ -368,7 +359,7 @@ items:
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -377,7 +368,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -385,13 +376,13 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.containerregistry.v2017_03_01.models.RegistryPaged
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
   langs:
@@ -419,14 +410,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id038
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -435,7 +426,7 @@ items:
 
         '
       id: raw
-      type: &id039
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -443,13 +434,13 @@ items:
 
         '
       id: operation_config
-    return: &id040
+    return:
       type:
       - azure.mgmt.containerregistry.v2017_03_01.models.RegistryPaged
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id042
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
   langs:
@@ -477,20 +468,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id043
+      type:
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type: &id044
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id045
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -499,7 +490,7 @@ items:
 
         '
       id: raw
-      type: &id046
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -507,16 +498,16 @@ items:
 
         '
       id: operation_config
-    return: &id047
+    return:
       type:
       - azure.mgmt.containerregistry.v2017_03_01.models.RegistryListCredentialsResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id049
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
   langs:
@@ -546,13 +537,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id050
+      type:
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type: &id051
+      type:
       - str
     - description: 'Specifies name of the password which should be
 
@@ -562,7 +553,7 @@ items:
 
         '
       id: name
-      type: &id052
+      type:
       - 'str or @azure.mgmt.containerregistry.v2017_03_01.models.PasswordName
 
         '
@@ -571,7 +562,7 @@ items:
 
         '
       id: custom_headers
-      type: &id053
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -580,7 +571,7 @@ items:
 
         '
       id: raw
-      type: &id054
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -588,16 +579,16 @@ items:
 
         '
       id: operation_config
-    return: &id055
+    return:
       type:
       - azure.mgmt.containerregistry.v2017_03_01.models.RegistryListCredentialsResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
 - class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: &id057
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
   langs:
@@ -625,13 +616,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id058
+      type:
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type: &id059
+      type:
       - str
     - description: 'The parameters for updating a
 
@@ -639,14 +630,14 @@ items:
 
         '
       id: registry_update_parameters
-      type: &id060
+      type:
       - azure.mgmt.containerregistry.v2017_03_01.models.RegistryUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id061
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -655,7 +646,7 @@ items:
 
         '
       id: raw
-      type: &id062
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -663,677 +654,15 @@ items:
 
         '
       id: operation_config
-    return: &id063
+    return:
       type:
       - azure.mgmt.containerregistry.v2017_03_01.models.Registry
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-- children:
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-  - azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: RegistriesOperations
-  source:
-    id: RegistriesOperations
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'RegistriesOperations operations.
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: RegistriesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-- &id008
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: check_name_availability
-  source:
-    id: check_name_availability
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Checks whether the container registry name is available for use. The
-
-    name must contain only alphanumeric characters, be globally unique, and
-
-    between 5 and 60 characters in length.
-
-    '
-  syntax:
-    content: check_name_availability(name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the container registry.
-
-        '
-      id: name
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-- *id008
-- &id016
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id009
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: create
-  source:
-    id: create
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 168
-  summary: 'Creates a container registry with the specified parameters.
-
-    '
-  syntax:
-    content: create(resource_group_name, registry_name, registry_create_parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to which
-
-        the container registry belongs.
-
-        '
-      id: resource_group_name
-      type: *id010
-    - description: 'The name of the container registry.
-
-        '
-      id: registry_name
-      type: *id011
-    - description: 'The parameters for creating a
-
-        container registry.
-
-        '
-      id: registry_create_parameters
-      type: *id012
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id013
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id014
-    return: *id015
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-- *id016
-- &id023
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id017
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 262
-  summary: 'Deletes a container registry.
-
-    '
-  syntax:
-    content: delete(resource_group_name, registry_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group to which
-
-        the container registry belongs.
-
-        '
-      id: resource_group_name
-      type: *id018
-    - description: 'The name of the container registry.
-
-        '
-      id: registry_name
-      type: *id019
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id020
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id021
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id022
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-- *id023
-- &id030
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id024
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 105
-  summary: 'Gets the properties of the specified container registry.
-
-    '
-  syntax:
-    content: get(resource_group_name, registry_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group to which
-
-        the container registry belongs.
-
-        '
-      id: resource_group_name
-      type: *id025
-    - description: 'The name of the container registry.
-
-        '
-      id: registry_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-- *id030
-- &id035
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id031
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 455
-  summary: 'Lists all the container registries under the specified subscription.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-- *id035
-- &id041
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id036
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 388
-  summary: 'Lists all the container registries under the specified resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group to which
-
-        the container registry belongs.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id038
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id039
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id040
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-- *id041
-- &id048
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id042
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: list_credentials
-  source:
-    id: list_credentials
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 518
-  summary: 'Lists the login credentials for the specified container registry.
-
-    '
-  syntax:
-    content: list_credentials(resource_group_name, registry_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to which
-
-        the container registry belongs.
-
-        '
-      id: resource_group_name
-      type: *id043
-    - description: 'The name of the container registry.
-
-        '
-      id: registry_name
-      type: *id044
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id045
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id046
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id047
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-- *id048
-- &id056
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id049
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: regenerate_credential
-  source:
-    id: regenerate_credential
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 581
-  summary: 'Regenerates one of the login credentials for the specified container
-
-    registry.
-
-    '
-  syntax:
-    content: regenerate_credential(resource_group_name, registry_name, name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to which
-
-        the container registry belongs.
-
-        '
-      id: resource_group_name
-      type: *id050
-    - description: 'The name of the container registry.
-
-        '
-      id: registry_name
-      type: *id051
-    - description: 'Specifies name of the password which should be
-
-        regenerated -- password or password2. Possible values include:
-
-        ''password'', ''password2''
-
-        '
-      id: name
-      type: *id052
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id053
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id054
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id055
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-- *id056
-- &id064
-  class: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  exceptions: *id057
-  fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-  langs:
-  - python
-  module: azure.mgmt.containerregistry.v2017_03_01.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_03_01\operations\registries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 317
-  summary: 'Updates a container registry with the specified parameters.
-
-    '
-  syntax:
-    content: update(resource_group_name, registry_name, registry_update_parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to which
-
-        the container registry belongs.
-
-        '
-      id: resource_group_name
-      type: *id058
-    - description: 'The name of the container registry.
-
-        '
-      id: registry_name
-      type: *id059
-    - description: 'The parameters for updating a
-
-        container registry.
-
-        '
-      id: registry_update_parameters
-      type: *id060
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id061
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id062
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id063
-  type: method
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-- *id064
 references:
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-  isExternal: false
-  name: check_name_availability
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-  isExternal: false
-  name: list_credentials
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-  isExternal: false
-  name: regenerate_credential
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-  isExternal: false
-  name: check_name_availability
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.create
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.delete
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.get
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_by_resource_group
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-  isExternal: false
-  name: list_credentials
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.list_credentials
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-  isExternal: false
-  name: regenerate_credential
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.regenerate_credential
-- fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations
-  uid: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.update
 - fullName: azure.mgmt.containerregistry.v2017_03_01.operations.RegistriesOperations.check_name_availability
   isExternal: false
   name: check_name_availability

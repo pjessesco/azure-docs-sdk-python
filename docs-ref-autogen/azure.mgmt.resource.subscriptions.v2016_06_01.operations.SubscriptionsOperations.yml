@@ -5,9 +5,6 @@ items:
   - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
   - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
   - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-  - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-  - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-  - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
   class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
   fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
   inheritance:
@@ -32,7 +29,7 @@ items:
     '
   syntax:
     content: SubscriptionsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -49,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version to use for the operation. Constant value: "2016-06-01".
 
         '
@@ -57,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
 - class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
   langs:
@@ -82,14 +79,14 @@ items:
 
         '
       id: subscription_id
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -98,7 +95,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -106,16 +103,16 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.Subscription
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
 - class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  exceptions: &id009
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
   langs:
@@ -141,7 +138,7 @@ items:
 
         '
       id: custom_headers
-      type: &id010
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -150,7 +147,7 @@ items:
 
         '
       id: raw
-      type: &id011
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -158,13 +155,13 @@ items:
 
         '
       id: operation_config
-    return: &id012
+    return:
       type:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionPaged
   type: method
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
 - class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  exceptions: &id014
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
   langs:
@@ -196,14 +193,14 @@ items:
 
         '
       id: subscription_id
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -212,7 +209,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -220,229 +217,12 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.LocationPaged
   type: method
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-- children:
-  - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-  - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-  - azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-  class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.resource.subscriptions.v2016_06_01.operations
-  name: SubscriptionsOperations
-  source:
-    id: SubscriptionsOperations
-    path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'SubscriptionsOperations operations.
-
-
-
-
-    '
-  syntax:
-    content: SubscriptionsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-- &id008
-  class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.resource.subscriptions.v2016_06_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 107
-  summary: 'Gets details about a specified subscription.
-
-    '
-  syntax:
-    content: get(subscription_id, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the target subscription.
-
-        '
-      id: subscription_id
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-- *id008
-- &id013
-  class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  exceptions: *id009
-  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.resource.subscriptions.v2016_06_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 165
-  summary: 'Gets all subscriptions for a tenant.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id010
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id011
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id012
-  type: method
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-- *id013
-- &id019
-  class: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  exceptions: *id014
-  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-  langs:
-  - python
-  module: azure.mgmt.resource.subscriptions.v2016_06_01.operations
-  name: list_locations
-  source:
-    id: list_locations
-    path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\operations\subscriptions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets all available geo-locations.
-
-
-    This operation provides all the locations that are available for
-
-    resource providers; however, each resource provider may support a
-
-    subset of this list.
-
-    '
-  syntax:
-    content: list_locations(subscription_id, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The ID of the target subscription.
-
-        '
-      id: subscription_id
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-- *id019
 references:
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-  isExternal: false
-  name: list_locations
-  parent: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
-  isExternal: false
-  name: list_locations
-  parent: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations
-  uid: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.list_locations
 - fullName: azure.mgmt.resource.subscriptions.v2016_06_01.operations.SubscriptionsOperations.get
   isExternal: false
   name: get

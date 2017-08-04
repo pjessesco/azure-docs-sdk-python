@@ -9,13 +9,6 @@ items:
   - azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
   - azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
   - azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.list
-  - azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-  - azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
   class: azure.mgmt.web.operations.RecommendationsOperations
   fullName: azure.mgmt.web.operations.RecommendationsOperations
   inheritance:
@@ -44,7 +37,7 @@ items:
     '
   syntax:
     content: RecommendationsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -61,7 +54,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'API Version. Constant value: "2016-03-01".
 
         '
@@ -69,7 +62,7 @@ items:
   type: class
   uid: azure.mgmt.web.operations.RecommendationsOperations
 - class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
   langs:
@@ -100,20 +93,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'Name of the app.
 
         '
       id: site_name
-      type: &id005
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id006
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,7 +115,7 @@ items:
 
         '
       id: raw
-      type: &id007
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -130,16 +123,16 @@ items:
 
         '
       id: operation_config
-    return: &id008
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
 - class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: &id010
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
   langs:
@@ -170,19 +163,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id011
+      type:
       - str
     - description: 'Name of the app.
 
         '
       id: site_name
-      type: &id012
+      type:
       - str
     - description: 'Name of the recommendation.
 
         '
       id: name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to update the last-seen
@@ -191,14 +184,14 @@ items:
 
         '
       id: update_seen
-      type: &id014
+      type:
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id015
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -207,7 +200,7 @@ items:
 
         '
       id: raw
-      type: &id016
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -215,16 +208,16 @@ items:
 
         '
       id: operation_config
-    return: &id017
+    return:
       type:
       - azure.mgmt.web.models.RecommendationRule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
 - class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: &id019
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.RecommendationsOperations.list
   langs:
@@ -257,7 +250,7 @@ items:
 
         '
       id: featured
-      type: &id020
+      type:
       - bool
     - defaultValue: None
       description: 'Filter is specified by using OData syntax. Example:
@@ -270,14 +263,14 @@ items:
 
         '
       id: filter
-      type: &id021
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id022
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -286,7 +279,7 @@ items:
 
         '
       id: raw
-      type: &id023
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -294,16 +287,16 @@ items:
 
         '
       id: operation_config
-    return: &id024
+    return:
       type:
       - list of @azure.mgmt.web.models.Recommendation
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.RecommendationsOperations.list
 - class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: &id026
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
   langs:
@@ -338,13 +331,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id027
+      type:
       - str
     - description: 'Name of the app.
 
         '
       id: site_name
-      type: &id028
+      type:
       - str
     - defaultValue: None
       description: 'Filter is specified by using OData syntax. Example:
@@ -357,14 +350,14 @@ items:
 
         '
       id: filter
-      type: &id029
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -373,7 +366,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -381,16 +374,16 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - list of @azure.mgmt.web.models.Recommendation
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
 - class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: &id034
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
   langs:
@@ -421,13 +414,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id035
+      type:
       - str
     - description: 'Name of the app.
 
         '
       id: site_name
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to return only the most
@@ -438,7 +431,7 @@ items:
 
         '
       id: featured
-      type: &id037
+      type:
       - bool
     - defaultValue: None
       description: 'Return only channels specified in the filter. Filter is
@@ -449,14 +442,14 @@ items:
 
         '
       id: filter
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -465,7 +458,7 @@ items:
 
         '
       id: raw
-      type: &id040
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -473,16 +466,16 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       type:
       - list of @azure.mgmt.web.models.Recommendation
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
 - class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: &id043
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
   langs:
@@ -511,7 +504,7 @@ items:
 
         '
       id: custom_headers
-      type: &id044
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -520,7 +513,7 @@ items:
 
         '
       id: raw
-      type: &id045
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -528,16 +521,16 @@ items:
 
         '
       id: operation_config
-    return: &id046
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
 - class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: &id048
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
   langs:
@@ -568,20 +561,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id049
+      type:
       - str
     - description: 'Name of the app.
 
         '
       id: site_name
-      type: &id050
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id051
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -590,7 +583,7 @@ items:
 
         '
       id: raw
-      type: &id052
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -598,604 +591,15 @@ items:
 
         '
       id: operation_config
-    return: &id053
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-- children:
-  - azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.list
-  - azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-  - azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-  - azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  fullName: azure.mgmt.web.operations.RecommendationsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: RecommendationsOperations
-  source:
-    id: RecommendationsOperations
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'RecommendationsOperations operations.
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: RecommendationsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.web.operations.RecommendationsOperations
-- &id009
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: disable_all_for_web_app
-  source:
-    id: disable_all_for_web_app
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 310
-  summary: 'Disable all recommendations for an app.
-
-
-    Disable all recommendations for an app.
-
-    '
-  syntax:
-    content: disable_all_for_web_app(resource_group_name, site_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'Name of the app.
-
-        '
-      id: site_name
-      type: *id005
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id006
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id007
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id008
-  type: method
-  uid: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-- *id009
-- &id018
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: *id010
-  fullName: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: get_rule_details_by_web_app
-  source:
-    id: get_rule_details_by_web_app
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 424
-  summary: 'Get a recommendation rule for an app.
-
-
-    Get a recommendation rule for an app.
-
-    '
-  syntax:
-    content: get_rule_details_by_web_app(resource_group_name, site_name, name, update_seen=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id011
-    - description: 'Name of the app.
-
-        '
-      id: site_name
-      type: *id012
-    - description: 'Name of the recommendation.
-
-        '
-      id: name
-      type: *id013
-    - defaultValue: None
-      description: 'Specify <code>true</code> to update the last-seen
-
-        timestamp of the recommendation object.
-
-        '
-      id: update_seen
-      type: *id014
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id015
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id016
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id017
-  type: method
-  uid: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-- *id018
-- &id025
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: *id019
-  fullName: azure.mgmt.web.operations.RecommendationsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'List all recommendations for a subscription.
-
-
-    List all recommendations for a subscription.
-
-    '
-  syntax:
-    content: list(featured=None, filter=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'Specify <code>true</code> to return only the most
-
-        critical recommendations. The default is <code>false</code>, which
-
-        returns all recommendations.
-
-        '
-      id: featured
-      type: *id020
-    - defaultValue: None
-      description: 'Filter is specified by using OData syntax. Example:
-
-        $filter=channels eq ''Api'' or channel eq ''Notification'' and startTime
-
-        eq ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
-
-        timeGrain eq duration''[PT1H|PT1M|P1D]
-
-        '
-      id: filter
-      type: *id021
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id022
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id023
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id024
-  type: method
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list
-- *id025
-- &id033
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: *id026
-  fullName: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: list_history_for_web_app
-  source:
-    id: list_history_for_web_app
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 159
-  summary: 'Get past recommendations for an app, optionally specified by the time
-
-    range.
-
-
-    Get past recommendations for an app, optionally specified by the time
-
-    range.
-
-    '
-  syntax:
-    content: list_history_for_web_app(resource_group_name, site_name, filter=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id027
-    - description: 'Name of the app.
-
-        '
-      id: site_name
-      type: *id028
-    - defaultValue: None
-      description: 'Filter is specified by using OData syntax. Example:
-
-        $filter=channels eq ''Api'' or channel eq ''Notification'' and startTime
-
-        eq ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
-
-        timeGrain eq duration''[PT1H|PT1M|P1D]
-
-        '
-      id: filter
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-- *id033
-- &id042
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: *id034
-  fullName: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: list_recommended_rules_for_web_app
-  source:
-    id: list_recommended_rules_for_web_app
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 233
-  summary: 'Get all recommendations for an app.
-
-
-    Get all recommendations for an app.
-
-    '
-  syntax:
-    content: list_recommended_rules_for_web_app(resource_group_name, site_name, featured=None,
-      filter=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id035
-    - description: 'Name of the app.
-
-        '
-      id: site_name
-      type: *id036
-    - defaultValue: None
-      description: 'Specify <code>true</code> to return only the most
-
-        critical recommendations. The default is <code>false</code>, which
-
-        returns all recommendations.
-
-        '
-      id: featured
-      type: *id037
-    - defaultValue: None
-      description: 'Return only channels specified in the filter. Filter is
-
-        specified by using OData syntax. Example: $filter=channels eq ''Api'' or
-
-        channel eq ''Notification''
-
-        '
-      id: filter
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-- *id042
-- &id047
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: *id043
-  fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: reset_all_filters
-  source:
-    id: reset_all_filters
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 109
-  summary: 'Reset all recommendation opt-out settings for a subscription.
-
-
-    Reset all recommendation opt-out settings for a subscription.
-
-    '
-  syntax:
-    content: reset_all_filters(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id044
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id045
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id046
-  type: method
-  uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-- *id047
-- &id054
-  class: azure.mgmt.web.operations.RecommendationsOperations
-  exceptions: *id048
-  fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-  langs:
-  - python
-  module: azure.mgmt.web.operations
-  name: reset_all_filters_for_web_app
-  source:
-    id: reset_all_filters_for_web_app
-    path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\operations\recommendations_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 367
-  summary: 'Reset all recommendation opt-out settings for an app.
-
-
-    Reset all recommendation opt-out settings for an app.
-
-    '
-  syntax:
-    content: reset_all_filters_for_web_app(resource_group_name, site_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the resource group to which the
-
-        resource belongs.
-
-        '
-      id: resource_group_name
-      type: *id049
-    - description: 'Name of the app.
-
-        '
-      id: site_name
-      type: *id050
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id051
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id052
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id053
-  type: method
-  uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-- *id054
 references:
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-  isExternal: false
-  name: disable_all_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-  isExternal: false
-  name: get_rule_details_by_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-  isExternal: false
-  name: list_history_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-  isExternal: false
-  name: list_recommended_rules_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-  isExternal: false
-  name: reset_all_filters
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-  isExternal: false
-  name: reset_all_filters_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-  isExternal: false
-  name: disable_all_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-  isExternal: false
-  name: get_rule_details_by_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.get_rule_details_by_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-  isExternal: false
-  name: list_history_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list_history_for_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-  isExternal: false
-  name: list_recommended_rules_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.list_recommended_rules_for_web_app
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-  isExternal: false
-  name: reset_all_filters
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters
-- fullName: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
-  isExternal: false
-  name: reset_all_filters_for_web_app
-  parent: azure.mgmt.web.operations.RecommendationsOperations
-  uid: azure.mgmt.web.operations.RecommendationsOperations.reset_all_filters_for_web_app
 - fullName: azure.mgmt.web.operations.RecommendationsOperations.disable_all_for_web_app
   isExternal: false
   name: disable_all_for_web_app

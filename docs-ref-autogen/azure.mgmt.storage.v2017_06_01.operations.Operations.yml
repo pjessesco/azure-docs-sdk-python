@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.storage.v2017_06_01.operations.Operations.list
-  - azure.mgmt.storage.v2017_06_01.operations.Operations.list
   class: azure.mgmt.storage.v2017_06_01.operations.Operations
   fullName: azure.mgmt.storage.v2017_06_01.operations.Operations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: Operations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2017-06-01".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.storage.v2017_06_01.operations.Operations
 - class: azure.mgmt.storage.v2017_06_01.operations.Operations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2017_06_01.operations.Operations.list
   langs:
@@ -77,7 +76,7 @@ items:
 
         '
       id: custom_headers
-      type: &id004
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -86,7 +85,7 @@ items:
 
         '
       id: raw
-      type: &id005
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -94,7 +93,7 @@ items:
 
         '
       id: operation_config
-    return: &id006
+    return:
       description: 'An iterator like instance of @azure.mgmt.storage.v2017_06_01.models.Operation
 
         '
@@ -102,91 +101,7 @@ items:
       - azure.mgmt.storage.v2017_06_01.models.OperationPaged
   type: method
   uid: azure.mgmt.storage.v2017_06_01.operations.Operations.list
-- children:
-  - azure.mgmt.storage.v2017_06_01.operations.Operations.list
-  class: azure.mgmt.storage.v2017_06_01.operations.Operations
-  fullName: azure.mgmt.storage.v2017_06_01.operations.Operations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.storage.v2017_06_01.operations
-  name: Operations
-  source:
-    id: Operations
-    path: azure-mgmt-storage\azure\mgmt\storage\v2017_06_01\operations\operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2017_06_01\operations\operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'Operations operations.
-
-
-    '
-  syntax:
-    content: Operations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.storage.v2017_06_01.operations.Operations
-- &id007
-  class: azure.mgmt.storage.v2017_06_01.operations.Operations
-  exceptions: *id003
-  fullName: azure.mgmt.storage.v2017_06_01.operations.Operations.list
-  langs:
-  - python
-  module: azure.mgmt.storage.v2017_06_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-storage\azure\mgmt\storage\v2017_06_01\operations\operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2017_06_01\operations\operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Lists all of the available Storage Rest API operations.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id004
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id005
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id006
-  type: method
-  uid: azure.mgmt.storage.v2017_06_01.operations.Operations.list
-- *id007
 references:
-- fullName: azure.mgmt.storage.v2017_06_01.operations.Operations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.storage.v2017_06_01.operations.Operations
-  uid: azure.mgmt.storage.v2017_06_01.operations.Operations.list
-- fullName: azure.mgmt.storage.v2017_06_01.operations.Operations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.storage.v2017_06_01.operations.Operations
-  uid: azure.mgmt.storage.v2017_06_01.operations.Operations.list
 - fullName: azure.mgmt.storage.v2017_06_01.operations.Operations.list
   isExternal: false
   name: list

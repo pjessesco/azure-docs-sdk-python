@@ -6,10 +6,6 @@ items:
   - azure.mgmt.logic.operations.SchemasOperations.delete
   - azure.mgmt.logic.operations.SchemasOperations.get
   - azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-  - azure.mgmt.logic.operations.SchemasOperations.create_or_update
-  - azure.mgmt.logic.operations.SchemasOperations.delete
-  - azure.mgmt.logic.operations.SchemasOperations.get
-  - azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
   class: azure.mgmt.logic.operations.SchemasOperations
   fullName: azure.mgmt.logic.operations.SchemasOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: SchemasOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version. Constant value: "2016-06-01".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.logic.operations.SchemasOperations
 - class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.SchemasOperations.create_or_update
   langs:
@@ -86,32 +82,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The integration account name.
 
         '
       id: integration_account_name
-      type: &id005
+      type:
       - str
     - description: 'The integration account schema name.
 
         '
       id: schema_name
-      type: &id006
+      type:
       - str
     - description: 'The integration account schema.
 
         '
       id: schema
-      type: &id007
+      type:
       - azure.mgmt.logic.models.IntegrationAccountSchema
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -120,7 +116,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -128,16 +124,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.logic.models.IntegrationAccountSchema
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.SchemasOperations.create_or_update
 - class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.SchemasOperations.delete
   langs:
@@ -163,26 +159,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The integration account name.
 
         '
       id: integration_account_name
-      type: &id014
+      type:
       - str
     - description: 'The integration account schema name.
 
         '
       id: schema_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -191,7 +187,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -199,16 +195,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.SchemasOperations.delete
 - class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.SchemasOperations.get
   langs:
@@ -234,26 +230,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The integration account name.
 
         '
       id: integration_account_name
-      type: &id022
+      type:
       - str
     - description: 'The integration account schema name.
 
         '
       id: schema_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -262,7 +258,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -270,16 +266,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.logic.models.IntegrationAccountSchema
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.SchemasOperations.get
 - class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
   langs:
@@ -305,34 +301,34 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The integration account name.
 
         '
       id: integration_account_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'The number of items to be included in the result.
 
         '
       id: top
-      type: &id031
+      type:
       - int
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id033
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -341,7 +337,7 @@ items:
 
         '
       id: raw
-      type: &id034
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -349,346 +345,12 @@ items:
 
         '
       id: operation_config
-    return: &id035
+    return:
       type:
       - azure.mgmt.logic.models.IntegrationAccountSchemaPaged
   type: method
   uid: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-- children:
-  - azure.mgmt.logic.operations.SchemasOperations.create_or_update
-  - azure.mgmt.logic.operations.SchemasOperations.delete
-  - azure.mgmt.logic.operations.SchemasOperations.get
-  - azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-  class: azure.mgmt.logic.operations.SchemasOperations
-  fullName: azure.mgmt.logic.operations.SchemasOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: SchemasOperations
-  source:
-    id: SchemasOperations
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'SchemasOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: SchemasOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.logic.operations.SchemasOperations
-- &id011
-  class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: *id003
-  fullName: azure.mgmt.logic.operations.SchemasOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 180
-  summary: 'Creates or updates an integration account schema.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, integration_account_name, schema_name,
-      schema, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The integration account name.
-
-        '
-      id: integration_account_name
-      type: *id005
-    - description: 'The integration account schema name.
-
-        '
-      id: schema_name
-      type: *id006
-    - description: 'The integration account schema.
-
-        '
-      id: schema
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.logic.operations.SchemasOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: *id012
-  fullName: azure.mgmt.logic.operations.SchemasOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 254
-  summary: 'Deletes an integration account schema.
-
-    '
-  syntax:
-    content: delete(resource_group_name, integration_account_name, schema_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The integration account name.
-
-        '
-      id: integration_account_name
-      type: *id014
-    - description: 'The integration account schema name.
-
-        '
-      id: schema_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.logic.operations.SchemasOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: *id020
-  fullName: azure.mgmt.logic.operations.SchemasOperations.get
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 115
-  summary: 'Gets an integration account schema.
-
-    '
-  syntax:
-    content: get(resource_group_name, integration_account_name, schema_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The integration account name.
-
-        '
-      id: integration_account_name
-      type: *id022
-    - description: 'The integration account schema name.
-
-        '
-      id: schema_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.logic.operations.SchemasOperations.get
-- *id027
-- &id036
-  class: azure.mgmt.logic.operations.SchemasOperations
-  exceptions: *id028
-  fullName: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: list_by_integration_accounts
-  source:
-    id: list_by_integration_accounts
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\schemas_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets a list of integration account schemas.
-
-    '
-  syntax:
-    content: list_by_integration_accounts(resource_group_name, integration_account_name,
-      top=None, filter=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The integration account name.
-
-        '
-      id: integration_account_name
-      type: *id030
-    - defaultValue: None
-      description: 'The number of items to be included in the result.
-
-        '
-      id: top
-      type: *id031
-    - defaultValue: None
-      description: 'The filter to apply on the operation.
-
-        '
-      id: filter
-      type: *id032
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id033
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id034
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id035
-  type: method
-  uid: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-- *id036
 references:
-- fullName: azure.mgmt.logic.operations.SchemasOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.create_or_update
-- fullName: azure.mgmt.logic.operations.SchemasOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.delete
-- fullName: azure.mgmt.logic.operations.SchemasOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.get
-- fullName: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-  isExternal: false
-  name: list_by_integration_accounts
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-- fullName: azure.mgmt.logic.operations.SchemasOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.create_or_update
-- fullName: azure.mgmt.logic.operations.SchemasOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.delete
-- fullName: azure.mgmt.logic.operations.SchemasOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.get
-- fullName: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
-  isExternal: false
-  name: list_by_integration_accounts
-  parent: azure.mgmt.logic.operations.SchemasOperations
-  uid: azure.mgmt.logic.operations.SchemasOperations.list_by_integration_accounts
 - fullName: azure.mgmt.logic.operations.SchemasOperations.create_or_update
   isExternal: false
   name: create_or_update

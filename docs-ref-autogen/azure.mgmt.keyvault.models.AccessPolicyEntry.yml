@@ -27,7 +27,7 @@ items:
     '
   syntax:
     content: AccessPolicyEntry(tenant_id, object_id, permissions, application_id=None)
-    parameters: &id001
+    parameters:
     - description: 'The Azure Active Directory tenant ID that should be used
 
         for authenticating requests to the key vault.
@@ -62,35 +62,6 @@ items:
       id: permissions
       type:
       - azure.mgmt.keyvault.models.Permissions
-  type: class
-  uid: azure.mgmt.keyvault.models.AccessPolicyEntry
-- children: []
-  class: azure.mgmt.keyvault.models.AccessPolicyEntry
-  fullName: azure.mgmt.keyvault.models.AccessPolicyEntry
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.mgmt.keyvault.models
-  name: AccessPolicyEntry
-  source:
-    id: AccessPolicyEntry
-    path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\access_policy_entry.py
-    remote:
-      branch: master
-      path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\access_policy_entry.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'An identity that have access to the key vault. All identities in the array
-
-    must use the same tenant ID as the key vault''s tenant ID.
-
-    '
-  syntax:
-    content: AccessPolicyEntry(tenant_id, object_id, permissions, application_id=None)
-    parameters: *id001
   type: class
   uid: azure.mgmt.keyvault.models.AccessPolicyEntry
 references: []

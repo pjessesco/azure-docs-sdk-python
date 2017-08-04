@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: NetworkSecurityGroupRule(priority, access, source_address_prefix)
-    parameters: &id001
+    parameters:
     - description: 'The priority for this rule. Priorities within a pool must
 
         be unique and are evaluated in order of priority. The lower the number the
@@ -66,33 +66,6 @@ items:
       id: source_address_prefix
       type:
       - str
-  type: class
-  uid: azure.batch.models.NetworkSecurityGroupRule
-- children: []
-  class: azure.batch.models.NetworkSecurityGroupRule
-  fullName: azure.batch.models.NetworkSecurityGroupRule
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.batch.models
-  name: NetworkSecurityGroupRule
-  source:
-    id: NetworkSecurityGroupRule
-    path: azure-batch\azure\batch\models\network_security_group_rule.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\models\network_security_group_rule.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'A network security group rule to apply to an inbound endpoint.
-
-    '
-  syntax:
-    content: NetworkSecurityGroupRule(priority, access, source_address_prefix)
-    parameters: *id001
   type: class
   uid: azure.batch.models.NetworkSecurityGroupRule
 references: []

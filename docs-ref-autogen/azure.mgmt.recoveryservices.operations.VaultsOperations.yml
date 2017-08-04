@@ -8,12 +8,6 @@ items:
   - azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
   - azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
   - azure.mgmt.recoveryservices.operations.VaultsOperations.update
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.get
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.update
   class: azure.mgmt.recoveryservices.operations.VaultsOperations
   fullName: azure.mgmt.recoveryservices.operations.VaultsOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: VaultsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-06-01".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservices.operations.VaultsOperations
 - class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
   langs:
@@ -94,26 +88,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the recovery services vault.
 
         '
       id: vault_name
-      type: &id005
+      type:
       - str
     - description: 'Recovery Services Vault to be created.
 
         '
       id: vault
-      type: &id006
+      type:
       - azure.mgmt.recoveryservices.models.Vault
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,7 +116,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -130,10 +124,10 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       description: '@azure.mgmt.recoveryservices.models.Vault or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -141,11 +135,11 @@ items:
       type:
       - 'azure.mgmt.recoveryservices.models.Vault or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
 - class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
   langs:
@@ -173,20 +167,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the recovery services vault.
 
         '
       id: vault_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -195,7 +189,7 @@ items:
 
         '
       id: raw
-      type: &id015
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -203,10 +197,10 @@ items:
 
         '
       id: operation_config
-    return: &id016
+    return:
       description: 'None or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -214,11 +208,11 @@ items:
       type:
       - 'None or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
 - class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.get
   langs:
@@ -246,20 +240,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the recovery services vault.
 
         '
       id: vault_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -268,7 +262,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -276,10 +270,10 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       description: '@azure.mgmt.recoveryservices.models.Vault or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -287,11 +281,11 @@ items:
       type:
       - 'azure.mgmt.recoveryservices.models.Vault or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultsOperations.get
 - class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
   langs:
@@ -319,14 +313,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -335,7 +329,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -343,7 +337,7 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       description: 'An iterator like instance of @azure.mgmt.recoveryservices.models.Vault
 
         '
@@ -352,7 +346,7 @@ items:
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
 - class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
   langs:
@@ -378,7 +372,7 @@ items:
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -387,7 +381,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -395,7 +389,7 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       description: 'An iterator like instance of @azure.mgmt.recoveryservices.models.Vault
 
         '
@@ -404,7 +398,7 @@ items:
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
 - class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.update
   langs:
@@ -432,26 +426,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the recovery services vault.
 
         '
       id: vault_name
-      type: &id038
+      type:
       - str
     - description: 'Recovery Services Vault to be created.
 
         '
       id: vault
-      type: &id039
+      type:
       - azure.mgmt.recoveryservices.models.Vault
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id040
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -460,7 +454,7 @@ items:
 
         '
       id: raw
-      type: &id041
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -468,10 +462,10 @@ items:
 
         '
       id: operation_config
-    return: &id042
+    return:
       description: '@azure.mgmt.recoveryservices.models.Vault or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -479,454 +473,10 @@ items:
       type:
       - 'azure.mgmt.recoveryservices.models.Vault or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.recoveryservices.operations.VaultsOperations.update
-- children:
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.get
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-  - azure.mgmt.recoveryservices.operations.VaultsOperations.update
-  class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  fullName: azure.mgmt.recoveryservices.operations.VaultsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: VaultsOperations
-  source:
-    id: VaultsOperations
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'VaultsOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: VaultsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations
-- &id010
-  class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 236
-  summary: 'Creates or updates a Recovery Services vault.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, vault_name, vault, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id005
-    - description: 'Recovery Services Vault to be created.
-
-        '
-      id: vault
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: *id011
-  fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: delete
-  source:
-    id: delete
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 308
-  summary: 'Deletes a vault.
-
-    '
-  syntax:
-    content: delete(resource_group_name, vault_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id016
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: *id018
-  fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: get
-  source:
-    id: get
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 172
-  summary: 'Get the Vault details.
-
-    '
-  syntax:
-    content: get(resource_group_name, vault_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.get
-- *id024
-- &id030
-  class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: *id025
-  fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 103
-  summary: 'Retrieve a list of Vaults.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-- *id030
-- &id035
-  class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: *id031
-  fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: list_by_subscription_id
-  source:
-    id: list_by_subscription_id
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Fetches all the resources of the specified type in the subscription.
-
-    '
-  syntax:
-    content: list_by_subscription_id(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-- *id035
-- &id043
-  class: azure.mgmt.recoveryservices.operations.VaultsOperations
-  exceptions: *id036
-  fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.recoveryservices.operations
-  name: update
-  source:
-    id: update
-    path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_recoveryservices-0.1.0-py3.5.egg\azure\mgmt\recoveryservices\operations\vaults_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 365
-  summary: 'Updates the vault.
-
-    '
-  syntax:
-    content: update(resource_group_name, vault_name, vault, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id038
-    - description: 'Recovery Services Vault to be created.
-
-        '
-      id: vault
-      type: *id039
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id040
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id041
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id042
-  type: method
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.update
-- *id043
 references:
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.get
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-  isExternal: false
-  name: list_by_subscription_id
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.update
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.delete
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.get
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_resource_group
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-  isExternal: false
-  name: list_by_subscription_id
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.list_by_subscription_id
-- fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.recoveryservices.operations.VaultsOperations
-  uid: azure.mgmt.recoveryservices.operations.VaultsOperations.update
 - fullName: azure.mgmt.recoveryservices.operations.VaultsOperations.create_or_update
   isExternal: false
   name: create_or_update

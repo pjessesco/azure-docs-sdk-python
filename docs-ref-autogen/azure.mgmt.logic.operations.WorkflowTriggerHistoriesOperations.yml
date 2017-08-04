@@ -5,9 +5,6 @@ items:
   - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
   - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
   - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-  - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-  - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-  - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
   class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
   fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
   inheritance:
@@ -32,7 +29,7 @@ items:
     '
   syntax:
     content: WorkflowTriggerHistoriesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -49,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version. Constant value: "2016-06-01".
 
         '
@@ -57,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
 - class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
   langs:
@@ -83,19 +80,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type: &id005
+      type:
       - str
     - description: 'The workflow trigger name.
 
         '
       id: trigger_name
-      type: &id006
+      type:
       - str
     - description: 'The workflow trigger history name. Corresponds to
 
@@ -103,14 +100,14 @@ items:
 
         '
       id: history_name
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -119,7 +116,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -127,16 +124,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.logic.models.WorkflowTriggerHistory
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
 - class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
   langs:
@@ -162,40 +159,40 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type: &id014
+      type:
       - str
     - description: 'The workflow trigger name.
 
         '
       id: trigger_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'The number of items to be included in the result.
 
         '
       id: top
-      type: &id016
+      type:
       - int
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type: &id017
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id018
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -204,7 +201,7 @@ items:
 
         '
       id: raw
-      type: &id019
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -212,13 +209,13 @@ items:
 
         '
       id: operation_config
-    return: &id020
+    return:
       type:
       - azure.mgmt.logic.models.WorkflowTriggerHistoryPaged
   type: method
   uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
 - class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  exceptions: &id022
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
   langs:
@@ -244,19 +241,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id023
+      type:
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type: &id024
+      type:
       - str
     - description: 'The workflow trigger name.
 
         '
       id: trigger_name
-      type: &id025
+      type:
       - str
     - description: 'The workflow trigger history name. Corresponds to
 
@@ -264,14 +261,14 @@ items:
 
         '
       id: history_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -280,7 +277,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -288,289 +285,15 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-- children:
-  - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-  - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-  - azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-  class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: WorkflowTriggerHistoriesOperations
-  source:
-    id: WorkflowTriggerHistoriesOperations
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'WorkflowTriggerHistoriesOperations operations.
-
-
-
-
-    '
-  syntax:
-    content: WorkflowTriggerHistoriesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-- &id011
-  class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 118
-  summary: 'Gets a workflow trigger history.
-
-    '
-  syntax:
-    content: get(resource_group_name, workflow_name, trigger_name, history_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The workflow name.
-
-        '
-      id: workflow_name
-      type: *id005
-    - description: 'The workflow trigger name.
-
-        '
-      id: trigger_name
-      type: *id006
-    - description: 'The workflow trigger history name. Corresponds to
-
-        the run name for triggers that resulted in a run.
-
-        '
-      id: history_name
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-- *id011
-- &id021
-  class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  exceptions: *id012
-  fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets a list of workflow trigger histories.
-
-    '
-  syntax:
-    content: list(resource_group_name, workflow_name, trigger_name, top=None, filter=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The workflow name.
-
-        '
-      id: workflow_name
-      type: *id014
-    - description: 'The workflow trigger name.
-
-        '
-      id: trigger_name
-      type: *id015
-    - defaultValue: None
-      description: 'The number of items to be included in the result.
-
-        '
-      id: top
-      type: *id016
-    - defaultValue: None
-      description: 'The filter to apply on the operation.
-
-        '
-      id: filter
-      type: *id017
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id018
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id019
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id020
-  type: method
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-- *id021
-- &id030
-  class: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  exceptions: *id022
-  fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: resubmit
-  source:
-    id: resubmit
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_trigger_histories_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 187
-  summary: 'Resubmits a workflow run based on the trigger history.
-
-    '
-  syntax:
-    content: resubmit(resource_group_name, workflow_name, trigger_name, history_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id023
-    - description: 'The workflow name.
-
-        '
-      id: workflow_name
-      type: *id024
-    - description: 'The workflow trigger name.
-
-        '
-      id: trigger_name
-      type: *id025
-    - description: 'The workflow trigger history name. Corresponds to
-
-        the run name for triggers that resulted in a run.
-
-        '
-      id: history_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-- *id030
 references:
-- fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-- fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-- fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-  isExternal: false
-  name: resubmit
-  parent: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-- fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
-- fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.list
-- fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
-  isExternal: false
-  name: resubmit
-  parent: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations
-  uid: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.resubmit
 - fullName: azure.mgmt.logic.operations.WorkflowTriggerHistoriesOperations.get
   isExternal: false
   name: get

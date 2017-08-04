@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: ConsumerGroup(user_metadata=None)
-    parameters: &id001
+    parameters:
     - description: 'Usermetadata is a placeholder to store user-defined
 
         string data with maximum length 1024. e.g. it can be used to store
@@ -45,7 +45,7 @@ items:
       id: user_metadata
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Resource Id
 
         '
@@ -76,41 +76,6 @@ items:
       id: updated_at
       type:
       - datetime
-  type: class
-  uid: azure.mgmt.eventhub.models.ConsumerGroup
-- children: []
-  class: azure.mgmt.eventhub.models.ConsumerGroup
-  fullName: azure.mgmt.eventhub.models.ConsumerGroup
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.eventhub.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.eventhub.models
-  name: ConsumerGroup
-  source:
-    id: ConsumerGroup
-    path: azure-mgmt-eventhub\azure\mgmt\eventhub\models\consumer_group.py
-    remote:
-      branch: master
-      path: azure-mgmt-eventhub\azure\mgmt\eventhub\models\consumer_group.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Single item in List or Get Consumer group operation.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: ConsumerGroup(user_metadata=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.eventhub.models.ConsumerGroup
 references: []

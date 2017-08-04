@@ -30,7 +30,7 @@ items:
       registration_status=None, backup_engine_state=None, health_status=None, can_re_register=None,
       backup_engine_id=None, dpm_version=None, azure_backup_agent_version=None, is_azure_backup_agent_upgrade_available=None,
       is_dpm_upgrade_available=None, extended_info=None)
-    parameters: &id001
+    parameters:
     - description: 'Friendly name of the backup engine.
 
         '
@@ -125,38 +125,6 @@ items:
       id: backup_engine_type
       type:
       - str
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.models.AzureBackupServerEngine
-- children: []
-  class: azure.mgmt.recoveryservicesbackup.models.AzureBackupServerEngine
-  fullName: azure.mgmt.recoveryservicesbackup.models.AzureBackupServerEngine
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.recoveryservicesbackup.models.backup_engine_base.BackupEngineBase
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.models
-  name: AzureBackupServerEngine
-  source:
-    id: AzureBackupServerEngine
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\azure_backup_server_engine.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\azure_backup_server_engine.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Backup engine type when Azure Backup Server is used to manage the backups.
-
-    '
-  syntax:
-    content: AzureBackupServerEngine(friendly_name=None, backup_management_type=None,
-      registration_status=None, backup_engine_state=None, health_status=None, can_re_register=None,
-      backup_engine_id=None, dpm_version=None, azure_backup_agent_version=None, is_azure_backup_agent_upgrade_available=None,
-      is_dpm_upgrade_available=None, extended_info=None)
-    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.AzureBackupServerEngine
 references: []

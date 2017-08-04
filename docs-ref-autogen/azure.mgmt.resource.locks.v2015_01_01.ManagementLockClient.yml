@@ -20,13 +20,13 @@ items:
     startLine: 56
   syntax:
     content: ManagementLockClient(credentials, subscription_id, base_url=None)
-    parameters: &id001
+    parameters:
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - ../msrestazure.azure_active_directory
+      - msrestazure.azure_active_directory
     - description: 'Gets subscription credentials which uniquely
 
         identify Microsoft Azure subscription. The subscription ID forms part of
@@ -43,7 +43,7 @@ items:
       id: base_url
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Configuration for client.
 
         '
@@ -56,29 +56,6 @@ items:
       id: management_locks
       type:
       - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  type: class
-  uid: azure.mgmt.resource.locks.v2015_01_01.ManagementLockClient
-- children: []
-  class: azure.mgmt.resource.locks.v2015_01_01.ManagementLockClient
-  fullName: azure.mgmt.resource.locks.v2015_01_01.ManagementLockClient
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01
-  name: ManagementLockClient
-  source:
-    id: ManagementLockClient
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\management_lock_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\management_lock_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 56
-  syntax:
-    content: ManagementLockClient(credentials, subscription_id, base_url=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.resource.locks.v2015_01_01.ManagementLockClient
 references: []

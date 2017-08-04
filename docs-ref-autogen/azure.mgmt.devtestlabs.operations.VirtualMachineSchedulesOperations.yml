@@ -8,12 +8,6 @@ items:
   - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
   - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
   - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
   class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: VirtualMachineSchedulesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
 - class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
   langs:
@@ -92,38 +86,38 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: virtual_machine_name
-      type: &id006
+      type:
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type: &id007
+      type:
       - str
     - description: 'A schedule.
 
         '
       id: schedule
-      type: &id008
+      type:
       - azure.mgmt.devtestlabs.models.Schedule
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -132,7 +126,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -140,16 +134,16 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       type:
       - azure.mgmt.devtestlabs.models.Schedule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: &id013
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
   langs:
@@ -175,32 +169,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id015
+      type:
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: virtual_machine_name
-      type: &id016
+      type:
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type: &id017
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id018
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -209,7 +203,7 @@ items:
 
         '
       id: raw
-      type: &id019
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -217,16 +211,16 @@ items:
 
         '
       id: operation_config
-    return: &id020
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
 - class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: &id022
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
   langs:
@@ -252,32 +246,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id023
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id024
+      type:
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: virtual_machine_name
-      type: &id025
+      type:
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -286,20 +280,20 @@ items:
 
         '
       id: raw
-      type: &id028
-      - bool
-    return: &id029
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
 - class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: &id031
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
   langs:
@@ -325,25 +319,25 @@ items:
 
         '
       id: resource_group_name
-      type: &id032
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id033
+      type:
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: virtual_machine_name
-      type: &id034
+      type:
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -352,14 +346,14 @@ items:
 
         '
       id: expand
-      type: &id036
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id037
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -368,7 +362,7 @@ items:
 
         '
       id: raw
-      type: &id038
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -376,16 +370,16 @@ items:
 
         '
       id: operation_config
-    return: &id039
+    return:
       type:
       - azure.mgmt.devtestlabs.models.Schedule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
 - class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: &id041
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
   langs:
@@ -411,19 +405,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id042
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id043
+      type:
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: virtual_machine_name
-      type: &id044
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -432,14 +426,14 @@ items:
 
         '
       id: expand
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id046
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -448,7 +442,7 @@ items:
 
         '
       id: top
-      type: &id047
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -457,14 +451,14 @@ items:
 
         '
       id: orderby
-      type: &id048
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id049
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -473,7 +467,7 @@ items:
 
         '
       id: raw
-      type: &id050
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -481,13 +475,13 @@ items:
 
         '
       id: operation_config
-    return: &id051
+    return:
       type:
       - azure.mgmt.devtestlabs.models.SchedulePaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
 - class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: &id053
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
   langs:
@@ -513,38 +507,38 @@ items:
 
         '
       id: resource_group_name
-      type: &id054
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id055
+      type:
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: virtual_machine_name
-      type: &id056
+      type:
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type: &id057
+      type:
       - str
     - description: 'A schedule.
 
         '
       id: schedule
-      type: &id058
+      type:
       - azure.mgmt.devtestlabs.models.ScheduleFragment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id059
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -553,7 +547,7 @@ items:
 
         '
       id: raw
-      type: &id060
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -561,552 +555,15 @@ items:
 
         '
       id: operation_config
-    return: &id061
+    return:
       type:
       - azure.mgmt.devtestlabs.models.Schedule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-- children:
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-  - azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-  class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: VirtualMachineSchedulesOperations
-  source:
-    id: VirtualMachineSchedulesOperations
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'VirtualMachineSchedulesOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: VirtualMachineSchedulesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-- &id012
-  class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 202
-  summary: 'Create or replace an existing schedule.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, lab_name, virtual_machine_name,
-      name, schedule, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id005
-    - description: 'The name of the virtual machine.
-
-        '
-      id: virtual_machine_name
-      type: *id006
-    - description: 'The name of the schedule.
-
-        '
-      id: name
-      type: *id007
-    - description: 'A schedule.
-
-        '
-      id: schedule
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-- *id012
-- &id021
-  class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: *id013
-  fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 278
-  summary: 'Delete schedule.
-
-    '
-  syntax:
-    content: delete(resource_group_name, lab_name, virtual_machine_name, name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id014
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id015
-    - description: 'The name of the virtual machine.
-
-        '
-      id: virtual_machine_name
-      type: *id016
-    - description: 'The name of the schedule.
-
-        '
-      id: name
-      type: *id017
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id018
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id019
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id020
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-- *id021
-- &id030
-  class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: *id022
-  fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: execute
-  source:
-    id: execute
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 412
-  summary: 'Execute a schedule. This operation can take a while to complete.
-
-    '
-  syntax:
-    content: execute(resource_group_name, lab_name, virtual_machine_name, name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id023
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id024
-    - description: 'The name of the virtual machine.
-
-        '
-      id: virtual_machine_name
-      type: *id025
-    - description: 'The name of the schedule.
-
-        '
-      id: name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    return: *id029
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-- *id030
-- &id040
-  class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: *id031
-  fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 130
-  summary: 'Get schedule.
-
-    '
-  syntax:
-    content: get(resource_group_name, lab_name, virtual_machine_name, name, expand=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id032
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id033
-    - description: 'The name of the virtual machine.
-
-        '
-      id: virtual_machine_name
-      type: *id034
-    - description: 'The name of the schedule.
-
-        '
-      id: name
-      type: *id035
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=status)''
-
-        '
-      id: expand
-      type: *id036
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id037
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id038
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id039
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-- *id040
-- &id052
-  class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: *id041
-  fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'List schedules in a given virtual machine.
-
-    '
-  syntax:
-    content: list(resource_group_name, lab_name, virtual_machine_name, expand=None,
-      filter=None, top=None, orderby=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id042
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id043
-    - description: 'The name of the virtual machine.
-
-        '
-      id: virtual_machine_name
-      type: *id044
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($select=status)''
-
-        '
-      id: expand
-      type: *id045
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id046
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id047
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id048
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id049
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id050
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id051
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-- *id052
-- &id062
-  class: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  exceptions: *id053
-  fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machine_schedules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 338
-  summary: 'Modify properties of schedules.
-
-    '
-  syntax:
-    content: update(resource_group_name, lab_name, virtual_machine_name, name, schedule,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id054
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id055
-    - description: 'The name of the virtual machine.
-
-        '
-      id: virtual_machine_name
-      type: *id056
-    - description: 'The name of the schedule.
-
-        '
-      id: name
-      type: *id057
-    - description: 'A schedule.
-
-        '
-      id: schedule
-      type: *id058
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id059
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id060
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id061
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-- *id062
 references:
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-  isExternal: false
-  name: execute
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-  isExternal: false
-  name: execute
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.execute
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.update
 - fullName: azure.mgmt.devtestlabs.operations.VirtualMachineSchedulesOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -10,14 +10,6 @@ items:
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
   class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
   inheritance:
@@ -47,7 +39,7 @@ items:
     '
   syntax:
     content: SnapshotsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -64,7 +56,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-04-30-preview".
 
         '
@@ -72,7 +64,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
   langs:
@@ -98,7 +90,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the snapshot within the given
 
@@ -106,7 +98,7 @@ items:
 
         '
       id: snapshot_name
-      type: &id005
+      type:
       - str
     - description: 'Snapshot object supplied in the body of the Put disk
 
@@ -114,14 +106,14 @@ items:
 
         '
       id: snapshot
-      type: &id006
+      type:
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.Snapshot
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -130,27 +122,27 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
-    return: &id009
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.Snapshot
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
   langs:
@@ -176,7 +168,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the snapshot within the given
 
@@ -184,14 +176,14 @@ items:
 
         '
       id: snapshot_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -200,26 +192,26 @@ items:
 
         '
       id: raw
-      type: &id015
+      type:
       - bool
-    return: &id016
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
   langs:
@@ -245,7 +237,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the snapshot within the given
 
@@ -253,14 +245,14 @@ items:
 
         '
       id: snapshot_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -269,7 +261,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -277,11 +269,11 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.Snapshot
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -289,11 +281,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.Snapshot or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
   langs:
@@ -319,7 +311,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - description: 'The name of the snapshot within the given
 
@@ -327,13 +319,13 @@ items:
 
         '
       id: snapshot_name
-      type: &id027
+      type:
       - str
     - description: 'Possible values include: ''None'', ''Read''
 
         '
       id: access
-      type: &id028
+      type:
       - 'str or @azure.mgmt.compute.compute.v2016_04_30_preview.models.AccessLevel
 
         '
@@ -343,14 +335,14 @@ items:
 
         '
       id: duration_in_seconds
-      type: &id029
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -359,27 +351,27 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
-    return: &id032
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.AccessUri
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id034
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
   langs:
@@ -405,7 +397,7 @@ items:
 
         '
       id: custom_headers
-      type: &id035
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -414,7 +406,7 @@ items:
 
         '
       id: raw
-      type: &id036
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -422,7 +414,7 @@ items:
 
         '
       id: operation_config
-    return: &id037
+    return:
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.Snapshot
 
         '
@@ -431,7 +423,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id039
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
   langs:
@@ -457,14 +449,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id040
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -473,7 +465,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -481,7 +473,7 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.Snapshot
 
         '
@@ -490,7 +482,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id045
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
   langs:
@@ -516,7 +508,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id046
+      type:
       - str
     - description: 'The name of the snapshot within the given
 
@@ -524,14 +516,14 @@ items:
 
         '
       id: snapshot_name
-      type: &id047
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id048
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -540,26 +532,26 @@ items:
 
         '
       id: raw
-      type: &id049
+      type:
       - bool
-    return: &id050
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: &id052
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
   langs:
@@ -585,7 +577,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id053
+      type:
       - str
     - description: 'The name of the snapshot within the given
 
@@ -593,7 +585,7 @@ items:
 
         '
       id: snapshot_name
-      type: &id054
+      type:
       - str
     - description: 'Snapshot object supplied in the body of the Patch
 
@@ -601,14 +593,14 @@ items:
 
         '
       id: snapshot
-      type: &id055
+      type:
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.SnapshotUpdate
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id056
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -617,596 +609,26 @@ items:
 
         '
       id: raw
-      type: &id057
+      type:
       - bool
-    return: &id058
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.Snapshot
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-- children:
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: SnapshotsOperations
-  source:
-    id: SnapshotsOperations
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'SnapshotsOperations operations.
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: SnapshotsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-- &id010
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Creates or updates a snapshot.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, snapshot_name, snapshot, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the snapshot within the given
-
-        subscription and resource group.
-
-        '
-      id: snapshot_name
-      type: *id005
-    - description: 'Snapshot object supplied in the body of the Put disk
-
-        operation.
-
-        '
-      id: snapshot
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id011
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 303
-  summary: 'Deletes a snapshot.
-
-    '
-  syntax:
-    content: delete(resource_group_name, snapshot_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the snapshot within the given
-
-        subscription and resource group.
-
-        '
-      id: snapshot_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id018
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 237
-  summary: 'Gets information about a snapshot.
-
-    '
-  syntax:
-    content: get(resource_group_name, snapshot_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the snapshot within the given
-
-        subscription and resource group.
-
-        '
-      id: snapshot_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-- *id024
-- &id033
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id025
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: grant_access
-  source:
-    id: grant_access
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 525
-  summary: 'Grants access to a snapshot.
-
-    '
-  syntax:
-    content: grant_access(resource_group_name, snapshot_name, access, duration_in_seconds,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - description: 'The name of the snapshot within the given
-
-        subscription and resource group.
-
-        '
-      id: snapshot_name
-      type: *id027
-    - description: 'Possible values include: ''None'', ''Read''
-
-        '
-      id: access
-      type: *id028
-    - description: 'Time duration in seconds until the SAS
-
-        access expires.
-
-        '
-      id: duration_in_seconds
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    return: *id032
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-- *id033
-- &id038
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id034
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 460
-  summary: 'Lists snapshots under a subscription.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id035
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id036
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id037
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-- *id038
-- &id044
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id039
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 392
-  summary: 'Lists snapshots under a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-- *id044
-- &id051
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id045
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: revoke_access
-  source:
-    id: revoke_access
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 626
-  summary: 'Revokes access to a snapshot.
-
-    '
-  syntax:
-    content: revoke_access(resource_group_name, snapshot_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id046
-    - description: 'The name of the snapshot within the given
-
-        subscription and resource group.
-
-        '
-      id: snapshot_name
-      type: *id047
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id048
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id049
-    return: *id050
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-- *id051
-- &id059
-  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  exceptions: *id052
-  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\snapshots_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 138
-  summary: 'Updates (patches) a snapshot.
-
-    '
-  syntax:
-    content: update(resource_group_name, snapshot_name, snapshot, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id053
-    - description: 'The name of the snapshot within the given
-
-        subscription and resource group.
-
-        '
-      id: snapshot_name
-      type: *id054
-    - description: 'Snapshot object supplied in the body of the Patch
-
-        snapshot operation.
-
-        '
-      id: snapshot
-      type: *id055
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id056
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id057
-    return: *id058
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-- *id059
 references:
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-  isExternal: false
-  name: grant_access
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-  isExternal: false
-  name: revoke_access
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.get
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-  isExternal: false
-  name: grant_access
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.grant_access
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.list_by_resource_group
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-  isExternal: false
-  name: revoke_access
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.revoke_access
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
-  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.update
 - fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations.create_or_update
   isExternal: false
   name: create_or_update

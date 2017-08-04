@@ -24,13 +24,13 @@ items:
     '
   syntax:
     content: PolicyClient(credentials, subscription_id, base_url=None)
-    parameters: &id001
+    parameters:
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - ../msrestazure.azure_active_directory
+      - msrestazure.azure_active_directory
     - description: 'The ID of the target subscription.
 
         '
@@ -43,7 +43,7 @@ items:
       id: base_url
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Configuration for client.
 
         '
@@ -62,33 +62,6 @@ items:
       id: policy_definitions
       type:
       - azure.mgmt.resource.policy.v2016_04_01.operations.PolicyDefinitionsOperations
-  type: class
-  uid: azure.mgmt.resource.policy.v2016_04_01.PolicyClient
-- children: []
-  class: azure.mgmt.resource.policy.v2016_04_01.PolicyClient
-  fullName: azure.mgmt.resource.policy.v2016_04_01.PolicyClient
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.resource.policy.v2016_04_01
-  name: PolicyClient
-  source:
-    id: PolicyClient
-    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_04_01\policy_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_04_01\policy_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 55
-  summary: 'To manage and control access to your resources, you can define customized
-    policies and assign them at a scope.
-
-    '
-  syntax:
-    content: PolicyClient(credentials, subscription_id, base_url=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.resource.policy.v2016_04_01.PolicyClient
 references: []

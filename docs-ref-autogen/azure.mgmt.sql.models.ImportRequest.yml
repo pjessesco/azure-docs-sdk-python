@@ -29,7 +29,7 @@ items:
     content: ImportRequest(storage_key_type, storage_key, storage_uri, administrator_login,
       administrator_login_password, database_name, edition, service_objective_name,
       max_size_bytes, authentication_type='SQL')
-    parameters: &id001
+    parameters:
     - description: 'The type of the storage key to use. Possible
 
         values include: ''StorageAccessKey'', ''SharedAccessKey''
@@ -118,37 +118,6 @@ items:
       id: max_size_bytes
       type:
       - str
-  type: class
-  uid: azure.mgmt.sql.models.ImportRequest
-- children: []
-  class: azure.mgmt.sql.models.ImportRequest
-  fullName: azure.mgmt.sql.models.ImportRequest
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.sql.models.export_request.ExportRequest
-  langs:
-  - python
-  module: azure.mgmt.sql.models
-  name: ImportRequest
-  source:
-    id: ImportRequest
-    path: azure-mgmt-sql\azure\mgmt\sql\models\import_request.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\models\import_request.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Import database parameters.
-
-    '
-  syntax:
-    content: ImportRequest(storage_key_type, storage_key, storage_uri, administrator_login,
-      administrator_login_password, database_name, edition, service_objective_name,
-      max_size_bytes, authentication_type='SQL')
-    parameters: *id001
   type: class
   uid: azure.mgmt.sql.models.ImportRequest
 references: []

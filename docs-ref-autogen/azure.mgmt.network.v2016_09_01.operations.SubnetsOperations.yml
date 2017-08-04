@@ -6,10 +6,6 @@ items:
   - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
   - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
   - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
   class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
   fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: SubnetsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-09-01".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
 - class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
   langs:
@@ -86,19 +82,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the subnet.
 
         '
       id: subnet_name
-      type: &id006
+      type:
       - str
     - description: 'Parameters supplied to the create or update
 
@@ -106,14 +102,14 @@ items:
 
         '
       id: subnet_parameters
-      type: &id007
+      type:
       - azure.mgmt.network.v2016_09_01.models.Subnet
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,20 +118,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.Subnet'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
 - class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
   langs:
@@ -161,26 +157,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the subnet.
 
         '
       id: subnet_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -189,20 +185,20 @@ items:
 
         '
       id: raw
-      type: &id017
-      - bool
-    return: &id018
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
 - class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
   langs:
@@ -228,33 +224,33 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the subnet.
 
         '
       id: subnet_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'Expands referenced resources.
 
         '
       id: expand
-      type: &id024
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id025
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -263,7 +259,7 @@ items:
 
         '
       id: raw
-      type: &id026
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -271,16 +267,16 @@ items:
 
         '
       id: operation_config
-    return: &id027
+    return:
       type:
       - azure.mgmt.network.v2016_09_01.models.Subnet
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
 - class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: &id029
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
   langs:
@@ -306,20 +302,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id030
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -328,7 +324,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -336,330 +332,12 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.network.v2016_09_01.models.SubnetPaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-- children:
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-  - azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-  class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: SubnetsOperations
-  source:
-    id: SubnetsOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'SubnetsOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: SubnetsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-- &id011
-  class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 187
-  summary: 'Creates or updates a subnet in the specified virtual network.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, virtual_network_name, subnet_name,
-      subnet_parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id005
-    - description: 'The name of the subnet.
-
-        '
-      id: subnet_name
-      type: *id006
-    - description: 'Parameters supplied to the create or update
-
-        subnet operation.
-
-        '
-      id: subnet_parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes the specified subnet.
-
-    '
-  syntax:
-    content: delete(resource_group_name, virtual_network_name, subnet_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id014
-    - description: 'The name of the subnet.
-
-        '
-      id: subnet_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    return: *id018
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-- *id019
-- &id028
-  class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 119
-  summary: 'Gets the specified subnet by virtual network and resource group.
-
-    '
-  syntax:
-    content: get(resource_group_name, virtual_network_name, subnet_name, expand=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id022
-    - description: 'The name of the subnet.
-
-        '
-      id: subnet_name
-      type: *id023
-    - defaultValue: None
-      description: 'Expands referenced resources.
-
-        '
-      id: expand
-      type: *id024
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id025
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id026
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id027
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-- *id028
-- &id035
-  class: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  exceptions: *id029
-  fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\subnets_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 285
-  summary: 'Gets all subnets in a virtual network.
-
-    '
-  syntax:
-    content: list(resource_group_name, virtual_network_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id030
-    - description: 'The name of the virtual network.
-
-        '
-      id: virtual_network_name
-      type: *id031
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-- *id035
 references:
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.delete
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.get
-- fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.list
 - fullName: azure.mgmt.network.v2016_09_01.operations.SubnetsOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -33,7 +33,7 @@ items:
   syntax:
     content: LogProfileResource(location, locations, categories, retention_policy,
       tags=None, storage_account_id=None, service_bus_rule_id=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource location
 
         '
@@ -92,7 +92,7 @@ items:
       id: retention_policy
       type:
       - azure.mgmt.monitor.models.RetentionPolicy
-    variables: &id002
+    variables:
     - description: 'Azure resource Id
 
         '
@@ -111,42 +111,6 @@ items:
       id: type
       type:
       - str
-  type: class
-  uid: azure.mgmt.monitor.models.LogProfileResource
-- children: []
-  class: azure.mgmt.monitor.models.LogProfileResource
-  fullName: azure.mgmt.monitor.models.LogProfileResource
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.monitor.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.monitor.models
-  name: LogProfileResource
-  source:
-    id: LogProfileResource
-    path: azure-mgmt-monitor\azure\mgmt\monitor\models\log_profile_resource.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\models\log_profile_resource.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'The log profile resource.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: LogProfileResource(location, locations, categories, retention_policy,
-      tags=None, storage_account_id=None, service_bus_rule_id=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.monitor.models.LogProfileResource
 references: []

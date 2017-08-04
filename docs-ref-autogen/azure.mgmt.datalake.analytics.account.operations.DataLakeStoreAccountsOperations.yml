@@ -6,10 +6,6 @@ items:
   - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
   - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
   - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
   class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
   fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: DataLakeStoreAccountsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-11-01".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
 - class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
   langs:
@@ -90,7 +86,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account to
 
@@ -98,7 +94,7 @@ items:
 
         '
       id: account_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the Data Lake Store
 
@@ -106,21 +102,21 @@ items:
 
         '
       id: data_lake_store_account_name
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'the optional suffix for the Data Lake Store account.
 
         '
       id: suffix
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -129,7 +125,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -137,16 +133,16 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
 - class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
   langs:
@@ -176,7 +172,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account from
 
@@ -184,7 +180,7 @@ items:
 
         '
       id: account_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the Data Lake Store
 
@@ -192,14 +188,14 @@ items:
 
         '
       id: data_lake_store_account_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -208,7 +204,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -216,16 +212,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
 - class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
   langs:
@@ -255,7 +251,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account from
 
@@ -263,7 +259,7 @@ items:
 
         '
       id: account_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the Data Lake Store
 
@@ -271,14 +267,14 @@ items:
 
         '
       id: data_lake_store_account_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -287,7 +283,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -295,16 +291,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInfo
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
 - class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
   langs:
@@ -337,7 +333,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the Data Lake Analytics account for
 
@@ -345,21 +341,21 @@ items:
 
         '
       id: account_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'OData filter. Optional.
 
         '
       id: filter
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'The number of items to return. Optional.
 
         '
       id: top
-      type: &id032
+      type:
       - int
     - defaultValue: None
       description: 'The number of items to skip over before returning
@@ -368,7 +364,7 @@ items:
 
         '
       id: skip
-      type: &id033
+      type:
       - int
     - defaultValue: None
       description: 'OData Select statement. Limits the properties on each
@@ -379,7 +375,7 @@ items:
 
         '
       id: select
-      type: &id034
+      type:
       - str
     - defaultValue: None
       description: 'OrderBy clause. One or more comma-separated
@@ -392,7 +388,7 @@ items:
 
         '
       id: orderby
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'The Boolean value of true or false to request a count of
@@ -403,14 +399,14 @@ items:
 
         '
       id: count
-      type: &id036
+      type:
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id037
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -419,7 +415,7 @@ items:
 
         '
       id: raw
-      type: &id038
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -427,420 +423,12 @@ items:
 
         '
       id: operation_config
-    return: &id039
+    return:
       type:
       - azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInfoPaged
   type: method
   uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-- children:
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-  - azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-  class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: DataLakeStoreAccountsOperations
-  source:
-    id: DataLakeStoreAccountsOperations
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'DataLakeStoreAccountsOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: DataLakeStoreAccountsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-- &id011
-  class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: add
-  source:
-    id: add
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 168
-  summary: 'Updates the specified Data Lake Analytics account to include the
-
-    additional Data Lake Store account.
-
-    '
-  syntax:
-    content: add(resource_group_name, account_name, data_lake_store_account_name,
-      suffix=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the Data Lake Analytics account to
-
-        which to add the Data Lake Store account.
-
-        '
-      id: account_name
-      type: *id005
-    - description: 'The name of the Data Lake Store
-
-        account to add.
-
-        '
-      id: data_lake_store_account_name
-      type: *id006
-    - defaultValue: None
-      description: 'the optional suffix for the Data Lake Store account.
-
-        '
-      id: suffix
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-- *id011
-- &id019
-  class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 107
-  summary: 'Updates the Data Lake Analytics account specified to remove the
-
-    specified Data Lake Store account.
-
-    '
-  syntax:
-    content: delete(resource_group_name, account_name, data_lake_store_account_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the Data Lake Analytics account from
-
-        which to remove the Data Lake Store account.
-
-        '
-      id: account_name
-      type: *id014
-    - description: 'The name of the Data Lake Store
-
-        account to remove
-
-        '
-      id: data_lake_store_account_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets the specified Data Lake Store account details in the specified
-
-    Data Lake Analytics account.
-
-    '
-  syntax:
-    content: get(resource_group_name, account_name, data_lake_store_account_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the Data Lake Analytics account from
-
-        which to retrieve the Data Lake Store account details.
-
-        '
-      id: account_name
-      type: *id022
-    - description: 'The name of the Data Lake Store
-
-        account to retrieve
-
-        '
-      id: data_lake_store_account_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-- *id027
-- &id040
-  class: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  exceptions: *id028
-  fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-  langs:
-  - python
-  module: azure.mgmt.datalake.analytics.account.operations
-  name: list_by_account
-  source:
-    id: list_by_account
-    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\account\operations\data_lake_store_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 242
-  summary: 'Gets the first page of Data Lake Store accounts linked to the specified
-
-    Data Lake Analytics account. The response includes a link to the next
-
-    page, if any.
-
-    '
-  syntax:
-    content: list_by_account(resource_group_name, account_name, filter=None, top=None,
-      skip=None, select=None, orderby=None, count=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the Azure resource group that
-
-        contains the Data Lake Analytics account.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the Data Lake Analytics account for
-
-        which to list Data Lake Store accounts.
-
-        '
-      id: account_name
-      type: *id030
-    - defaultValue: None
-      description: 'OData filter. Optional.
-
-        '
-      id: filter
-      type: *id031
-    - defaultValue: None
-      description: 'The number of items to return. Optional.
-
-        '
-      id: top
-      type: *id032
-    - defaultValue: None
-      description: 'The number of items to skip over before returning
-
-        elements. Optional.
-
-        '
-      id: skip
-      type: *id033
-    - defaultValue: None
-      description: 'OData Select statement. Limits the properties on each
-
-        entry to just those requested, e.g.
-
-        Categories?$select=CategoryName,Description. Optional.
-
-        '
-      id: select
-      type: *id034
-    - defaultValue: None
-      description: 'OrderBy clause. One or more comma-separated
-
-        expressions with an optional "asc" (the default) or "desc" depending
-
-        on the order you''d like the values sorted, e.g.
-
-        Categories?$orderby=CategoryName desc. Optional.
-
-        '
-      id: orderby
-      type: *id035
-    - defaultValue: None
-      description: 'The Boolean value of true or false to request a count of
-
-        the matching resources included with the resources in the response,
-
-        e.g. Categories?$count=true. Optional.
-
-        '
-      id: count
-      type: *id036
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id037
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id038
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id039
-  type: method
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-- *id040
 references:
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-  isExternal: false
-  name: add
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-  isExternal: false
-  name: add
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.delete
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.get
-- fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
-  isExternal: false
-  name: list_by_account
-  parent: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations
-  uid: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.list_by_account
 - fullName: azure.mgmt.datalake.analytics.account.operations.DataLakeStoreAccountsOperations.add
   isExternal: false
   name: add

@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-  - azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
   class: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
   inheritance:
@@ -27,7 +26,7 @@ items:
   syntax:
     content: ProtectionPolicyOperationResultsOperations(client, config, serializer,
       deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -44,7 +43,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -52,7 +51,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
   langs:
@@ -78,7 +77,7 @@ items:
 
         '
       id: vault_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the resource group where the
 
@@ -86,7 +85,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id005
+      type:
       - str
     - description: 'Backup policy name whose operation''s result needs
 
@@ -94,7 +93,7 @@ items:
 
         '
       id: policy_name
-      type: &id006
+      type:
       - str
     - description: 'Operation ID which represents the operation whose
 
@@ -102,14 +101,14 @@ items:
 
         '
       id: operation_id
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -118,7 +117,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -126,127 +125,15 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.recoveryservicesbackup.models.ProtectionPolicyResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-- children:
-  - azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-  class: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
-  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: ProtectionPolicyOperationResultsOperations
-  source:
-    id: ProtectionPolicyOperationResultsOperations
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_policy_operation_results_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_policy_operation_results_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ProtectionPolicyOperationResultsOperations operations.
-
-
-    '
-  syntax:
-    content: ProtectionPolicyOperationResultsOperations(client, config, serializer,
-      deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
-- &id011
-  class: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_policy_operation_results_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protection_policy_operation_results_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Provides the result of an operation.
-
-    '
-  syntax:
-    content: get(vault_name, resource_group_name, policy_name, operation_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id004
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id005
-    - description: 'Backup policy name whose operation''s result needs
-
-        to be fetched.
-
-        '
-      id: policy_name
-      type: *id006
-    - description: 'Operation ID which represents the operation whose
-
-        result needs to be fetched.
-
-        '
-      id: operation_id
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-- *id011
 references:
-- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
 - fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.get
   isExternal: false
   name: get

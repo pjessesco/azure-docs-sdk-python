@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-  - azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
   class: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: BackupUsageSummariesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
   langs:
@@ -77,7 +76,7 @@ items:
 
         '
       id: vault_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the resource group where the
 
@@ -85,28 +84,28 @@ items:
 
         '
       id: resource_group_name
-      type: &id005
+      type:
       - str
     - defaultValue: None
       description: 'OData filter options.
 
         '
       id: filter
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'skipToken Filter.
 
         '
       id: skip_token
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -115,7 +114,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -123,121 +122,12 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       type:
       - azure.mgmt.recoveryservicesbackup.models.BackupManagementUsagePaged
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-- children:
-  - azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-  class: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
-  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: BackupUsageSummariesOperations
-  source:
-    id: BackupUsageSummariesOperations
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_usage_summaries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_usage_summaries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'BackupUsageSummariesOperations operations.
-
-
-    '
-  syntax:
-    content: BackupUsageSummariesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
-- &id011
-  class: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_usage_summaries_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_usage_summaries_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Fetches the backup management usage summaries of the vault.
-
-    '
-  syntax:
-    content: list(vault_name, resource_group_name, filter=None, skip_token=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the recovery services vault.
-
-        '
-      id: vault_name
-      type: *id004
-    - description: 'The name of the resource group where the
-
-        recovery services vault is present.
-
-        '
-      id: resource_group_name
-      type: *id005
-    - defaultValue: None
-      description: 'OData filter options.
-
-        '
-      id: filter
-      type: *id006
-    - defaultValue: None
-      description: 'skipToken Filter.
-
-        '
-      id: skip_token
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-- *id011
 references:
-- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations
-  uid: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
 - fullName: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.list
   isExternal: false
   name: list

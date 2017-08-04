@@ -5,9 +5,6 @@ items:
   - azure.mgmt.logic.operations.WorkflowVersionsOperations.get
   - azure.mgmt.logic.operations.WorkflowVersionsOperations.list
   - azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-  - azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-  - azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-  - azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
   class: azure.mgmt.logic.operations.WorkflowVersionsOperations
   fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations
   inheritance:
@@ -32,7 +29,7 @@ items:
     '
   syntax:
     content: WorkflowVersionsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -49,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version. Constant value: "2016-06-01".
 
         '
@@ -57,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.logic.operations.WorkflowVersionsOperations
 - class: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
   langs:
@@ -83,26 +80,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type: &id005
+      type:
       - str
     - description: 'The workflow versionId.
 
         '
       id: version_id
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -111,7 +108,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -119,16 +116,16 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       type:
       - azure.mgmt.logic.models.WorkflowVersion
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
 - class: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
   langs:
@@ -154,27 +151,27 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'The number of items to be included in the result.
 
         '
       id: top
-      type: &id014
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id015
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -183,7 +180,7 @@ items:
 
         '
       id: raw
-      type: &id016
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -191,13 +188,13 @@ items:
 
         '
       id: operation_config
-    return: &id017
+    return:
       type:
       - azure.mgmt.logic.models.WorkflowVersionPaged
   type: method
   uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
 - class: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  exceptions: &id019
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
   langs:
@@ -223,32 +220,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id020
+      type:
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type: &id021
+      type:
       - str
     - description: 'The workflow versionId.
 
         '
       id: version_id
-      type: &id022
+      type:
       - str
     - description: 'The workflow trigger name.
 
         '
       id: trigger_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'The expiry time.
 
         '
       id: not_after
-      type: &id024
+      type:
       - datetime
     - defaultValue: None
       description: 'The key type. Possible values include:
@@ -257,7 +254,7 @@ items:
 
         '
       id: key_type
-      type: &id025
+      type:
       - 'str or @azure.mgmt.logic.models.KeyType
 
         '
@@ -266,7 +263,7 @@ items:
 
         '
       id: custom_headers
-      type: &id026
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -275,7 +272,7 @@ items:
 
         '
       id: raw
-      type: &id027
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -283,283 +280,15 @@ items:
 
         '
       id: operation_config
-    return: &id028
+    return:
       type:
       - azure.mgmt.logic.models.WorkflowTriggerCallbackUrl
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-- children:
-  - azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-  - azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-  - azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-  class: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: WorkflowVersionsOperations
-  source:
-    id: WorkflowVersionsOperations
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'WorkflowVersionsOperations operations.
-
-
-
-
-    '
-  syntax:
-    content: WorkflowVersionsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations
-- &id010
-  class: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 111
-  summary: 'Gets a workflow version.
-
-    '
-  syntax:
-    content: get(resource_group_name, workflow_name, version_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The workflow name.
-
-        '
-      id: workflow_name
-      type: *id005
-    - description: 'The workflow versionId.
-
-        '
-      id: version_id
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-- *id010
-- &id018
-  class: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  exceptions: *id011
-  fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets a list of workflow versions.
-
-    '
-  syntax:
-    content: list(resource_group_name, workflow_name, top=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The workflow name.
-
-        '
-      id: workflow_name
-      type: *id013
-    - defaultValue: None
-      description: 'The number of items to be included in the result.
-
-        '
-      id: top
-      type: *id014
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id015
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id016
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id017
-  type: method
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-- *id018
-- &id029
-  class: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  exceptions: *id019
-  fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-  langs:
-  - python
-  module: azure.mgmt.logic.operations
-  name: list_callback_url
-  source:
-    id: list_callback_url
-    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_versions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 176
-  summary: 'Lists the callback URL for a trigger of a workflow version.
-
-    '
-  syntax:
-    content: list_callback_url(resource_group_name, workflow_name, version_id, trigger_name,
-      not_after=None, key_type=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id020
-    - description: 'The workflow name.
-
-        '
-      id: workflow_name
-      type: *id021
-    - description: 'The workflow versionId.
-
-        '
-      id: version_id
-      type: *id022
-    - description: 'The workflow trigger name.
-
-        '
-      id: trigger_name
-      type: *id023
-    - defaultValue: None
-      description: 'The expiry time.
-
-        '
-      id: not_after
-      type: *id024
-    - defaultValue: None
-      description: 'The key type. Possible values include:
-
-        ''NotSpecified'', ''Primary'', ''Secondary''
-
-        '
-      id: key_type
-      type: *id025
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id026
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id027
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id028
-  type: method
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-- *id029
 references:
-- fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-- fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-- fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-  isExternal: false
-  name: list_callback_url
-  parent: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-- fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
-- fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list
-- fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
-  isExternal: false
-  name: list_callback_url
-  parent: azure.mgmt.logic.operations.WorkflowVersionsOperations
-  uid: azure.mgmt.logic.operations.WorkflowVersionsOperations.list_callback_url
 - fullName: azure.mgmt.logic.operations.WorkflowVersionsOperations.get
   isExternal: false
   name: get

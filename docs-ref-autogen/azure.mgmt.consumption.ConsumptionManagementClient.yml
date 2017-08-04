@@ -25,13 +25,13 @@ items:
     '
   syntax:
     content: ConsumptionManagementClient(credentials, subscription_id, base_url=None)
-    parameters: &id001
+    parameters:
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - ../msrestazure.azure_active_directory
+      - msrestazure.azure_active_directory
     - description: 'Azure Subscription ID.
 
         '
@@ -44,7 +44,7 @@ items:
       id: base_url
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Configuration for client.
 
         '
@@ -63,34 +63,6 @@ items:
       id: operations
       type:
       - azure.mgmt.consumption.operations.Operations
-  type: class
-  uid: azure.mgmt.consumption.ConsumptionManagementClient
-- children: []
-  class: azure.mgmt.consumption.ConsumptionManagementClient
-  fullName: azure.mgmt.consumption.ConsumptionManagementClient
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.consumption
-  name: ConsumptionManagementClient
-  source:
-    id: ConsumptionManagementClient
-    path: azure-mgmt-consumption\azure\mgmt\consumption\consumption_management_client.py
-    remote:
-      branch: master
-      path: azure-mgmt-consumption\azure\mgmt\consumption\consumption_management_client.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 55
-  summary: 'Consumption management client provides access to consumption resources
-    for Azure Web-Direct subscriptions. Other subscription types which were not purchased
-    directly through the Azure web portal are not supported through this preview API.
-
-    '
-  syntax:
-    content: ConsumptionManagementClient(credentials, subscription_id, base_url=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.consumption.ConsumptionManagementClient
 references: []

@@ -14,18 +14,6 @@ items:
   - azure.keyvault.KeyVaultId.parse_key_id
   - azure.keyvault.KeyVaultId.parse_object_id
   - azure.keyvault.KeyVaultId.parse_secret_id
-  - azure.keyvault.KeyVaultId.create_certificate_id
-  - azure.keyvault.KeyVaultId.create_certificate_issuer_id
-  - azure.keyvault.KeyVaultId.create_certificate_operation_id
-  - azure.keyvault.KeyVaultId.create_key_id
-  - azure.keyvault.KeyVaultId.create_object_id
-  - azure.keyvault.KeyVaultId.create_secret_id
-  - azure.keyvault.KeyVaultId.parse_certificate_id
-  - azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-  - azure.keyvault.KeyVaultId.parse_certificate_operation_id
-  - azure.keyvault.KeyVaultId.parse_key_id
-  - azure.keyvault.KeyVaultId.parse_object_id
-  - azure.keyvault.KeyVaultId.parse_secret_id
   class: azure.keyvault.KeyVaultId
   fullName: azure.keyvault.KeyVaultId
   inheritance:
@@ -85,22 +73,22 @@ items:
 
         '
       id: vault
-      type: &id001
+      type:
       - str
     - description: 'The certificate name.
 
         '
       id: name
-      type: &id002
+      type:
       - str
     - defaultValue: None
       description: 'The certificate version.
 
         '
       id: version
-      type: &id003
+      type:
       - str
-    return: &id004
+    return:
       type:
       - KeyVaultId
   type: method
@@ -126,15 +114,15 @@ items:
 
         '
       id: vault
-      type: &id006
+      type:
       - str
     - description: 'The certificate name.
 
         '
       id: name
-      type: &id007
+      type:
       - str
-    return: &id008
+    return:
       type:
       - KeyVaultId
   type: method
@@ -160,15 +148,15 @@ items:
 
         '
       id: vault
-      type: &id010
+      type:
       - str
     - description: 'The certificate name.
 
         '
       id: name
-      type: &id011
+      type:
       - str
-    return: &id012
+    return:
       type:
       - KeyVaultId
   type: method
@@ -194,22 +182,22 @@ items:
 
         '
       id: vault
-      type: &id014
+      type:
       - str
     - description: 'The key name.
 
         '
       id: name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'The key version.
 
         '
       id: version
-      type: &id016
+      type:
       - str
-    return: &id017
+    return:
       type:
       - KeyVaultId
   type: method
@@ -235,27 +223,27 @@ items:
 
         '
       id: collection
-      type: &id019
+      type:
       - str
     - description: 'The vault URI.
 
         '
       id: vault
-      type: &id020
+      type:
       - str
     - description: 'The resource name.
 
         '
       id: name
-      type: &id021
+      type:
       - str
     - description: 'The resource version.
 
         '
       id: version
-      type: &id022
+      type:
       - str
-    return: &id023
+    return:
       type:
       - KeyVaultId
   type: method
@@ -281,22 +269,22 @@ items:
 
         '
       id: vault
-      type: &id025
+      type:
       - str
     - description: 'The secret name.
 
         '
       id: name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'The secret version.
 
         '
       id: version
-      type: &id027
+      type:
       - str
-    return: &id028
+    return:
       type:
       - KeyVaultId
   type: method
@@ -322,9 +310,9 @@ items:
 
         '
       id: id
-      type: &id030
+      type:
       - str
-    return: &id031
+    return:
       type:
       - KeyVaultId
   type: method
@@ -350,9 +338,9 @@ items:
 
         '
       id: id
-      type: &id033
+      type:
       - str
-    return: &id034
+    return:
       type:
       - KeyVaultId
   type: method
@@ -378,9 +366,9 @@ items:
 
         '
       id: id
-      type: &id036
+      type:
       - str
-    return: &id037
+    return:
       type:
       - KeyVaultId
   type: method
@@ -406,9 +394,9 @@ items:
 
         '
       id: id
-      type: &id039
+      type:
       - str
-    return: &id040
+    return:
       type:
       - KeyVaultId
   type: method
@@ -434,15 +422,15 @@ items:
 
         '
       id: collection
-      type: &id042
+      type:
       - str
     - description: 'The resource uri.
 
         '
       id: id
-      type: &id043
+      type:
       - str
-    return: &id044
+    return:
       type:
       - KeyVaultId
   type: method
@@ -468,572 +456,14 @@ items:
 
         '
       id: id
-      type: &id046
+      type:
       - str
-    return: &id047
+    return:
       type:
       - KeyVaultId
   type: method
   uid: azure.keyvault.KeyVaultId.parse_secret_id
-- children:
-  - azure.keyvault.KeyVaultId.create_certificate_id
-  - azure.keyvault.KeyVaultId.create_certificate_issuer_id
-  - azure.keyvault.KeyVaultId.create_certificate_operation_id
-  - azure.keyvault.KeyVaultId.create_key_id
-  - azure.keyvault.KeyVaultId.create_object_id
-  - azure.keyvault.KeyVaultId.create_secret_id
-  - azure.keyvault.KeyVaultId.parse_certificate_id
-  - azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-  - azure.keyvault.KeyVaultId.parse_certificate_operation_id
-  - azure.keyvault.KeyVaultId.parse_key_id
-  - azure.keyvault.KeyVaultId.parse_object_id
-  - azure.keyvault.KeyVaultId.parse_secret_id
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.keyvault
-  name: KeyVaultId
-  source:
-    id: KeyVaultId
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 21
-  summary: 'An identifier for an Azure Key Vault resource.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: KeyVaultId(collection, vault, name, version)
-  type: class
-  uid: azure.keyvault.KeyVaultId
-- &id005
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.create_certificate_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: create_certificate_id
-  source:
-    id: create_certificate_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 134
-  syntax:
-    content: create_certificate_id(vault, name, version=None)
-    parameters:
-    - description: 'The vault uri.
-
-        '
-      id: vault
-      type: *id001
-    - description: 'The certificate name.
-
-        '
-      id: name
-      type: *id002
-    - defaultValue: None
-      description: 'The certificate version.
-
-        '
-      id: version
-      type: *id003
-    return: *id004
-  type: method
-  uid: azure.keyvault.KeyVaultId.create_certificate_id
-- *id005
-- &id009
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.create_certificate_issuer_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: create_certificate_issuer_id
-  source:
-    id: create_certificate_issuer_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 176
-  syntax:
-    content: create_certificate_issuer_id(vault, name)
-    parameters:
-    - description: 'The vault uri.
-
-        '
-      id: vault
-      type: *id006
-    - description: 'The certificate name.
-
-        '
-      id: name
-      type: *id007
-    return: *id008
-  type: method
-  uid: azure.keyvault.KeyVaultId.create_certificate_issuer_id
-- *id009
-- &id013
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.create_certificate_operation_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: create_certificate_operation_id
-  source:
-    id: create_certificate_operation_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 156
-  syntax:
-    content: create_certificate_operation_id(vault, name)
-    parameters:
-    - description: 'The vault uri.
-
-        '
-      id: vault
-      type: *id010
-    - description: 'The certificate name.
-
-        '
-      id: name
-      type: *id011
-    return: *id012
-  type: method
-  uid: azure.keyvault.KeyVaultId.create_certificate_operation_id
-- *id013
-- &id018
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.create_key_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: create_key_id
-  source:
-    id: create_key_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 90
-  syntax:
-    content: create_key_id(vault, name, version=None)
-    parameters:
-    - description: 'The vault uri.
-
-        '
-      id: vault
-      type: *id014
-    - description: 'The key name.
-
-        '
-      id: name
-      type: *id015
-    - defaultValue: None
-      description: 'The key version.
-
-        '
-      id: version
-      type: *id016
-    return: *id017
-  type: method
-  uid: azure.keyvault.KeyVaultId.create_key_id
-- *id018
-- &id024
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.create_object_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: create_object_id
-  source:
-    id: create_object_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 58
-  syntax:
-    content: create_object_id(collection, vault, name, version)
-    parameters:
-    - description: 'The resource collection type.
-
-        '
-      id: collection
-      type: *id019
-    - description: 'The vault URI.
-
-        '
-      id: vault
-      type: *id020
-    - description: 'The resource name.
-
-        '
-      id: name
-      type: *id021
-    - description: 'The resource version.
-
-        '
-      id: version
-      type: *id022
-    return: *id023
-  type: method
-  uid: azure.keyvault.KeyVaultId.create_object_id
-- *id024
-- &id029
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.create_secret_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: create_secret_id
-  source:
-    id: create_secret_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 112
-  syntax:
-    content: create_secret_id(vault, name, version=None)
-    parameters:
-    - description: 'The vault uri.
-
-        '
-      id: vault
-      type: *id025
-    - description: 'The secret name.
-
-        '
-      id: name
-      type: *id026
-    - defaultValue: None
-      description: 'The secret version.
-
-        '
-      id: version
-      type: *id027
-    return: *id028
-  type: method
-  uid: azure.keyvault.KeyVaultId.create_secret_id
-- *id029
-- &id032
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.parse_certificate_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: parse_certificate_id
-  source:
-    id: parse_certificate_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 147
-  syntax:
-    content: parse_certificate_id(id)
-    parameters:
-    - description: 'The resource collection type.
-
-        '
-      id: id
-      type: *id030
-    return: *id031
-  type: method
-  uid: azure.keyvault.KeyVaultId.parse_certificate_id
-- *id032
-- &id035
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: parse_certificate_issuer_id
-  source:
-    id: parse_certificate_issuer_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 187
-  syntax:
-    content: parse_certificate_issuer_id(id)
-    parameters:
-    - description: 'The resource collection type.
-
-        '
-      id: id
-      type: *id033
-    return: *id034
-  type: method
-  uid: azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-- *id035
-- &id038
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.parse_certificate_operation_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: parse_certificate_operation_id
-  source:
-    id: parse_certificate_operation_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 167
-  syntax:
-    content: parse_certificate_operation_id(id)
-    parameters:
-    - description: 'The resource collection type.
-
-        '
-      id: id
-      type: *id036
-    return: *id037
-  type: method
-  uid: azure.keyvault.KeyVaultId.parse_certificate_operation_id
-- *id038
-- &id041
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.parse_key_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: parse_key_id
-  source:
-    id: parse_key_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 103
-  syntax:
-    content: parse_key_id(id)
-    parameters:
-    - description: 'The key uri.
-
-        '
-      id: id
-      type: *id039
-    return: *id040
-  type: method
-  uid: azure.keyvault.KeyVaultId.parse_key_id
-- *id041
-- &id045
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.parse_object_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: parse_object_id
-  source:
-    id: parse_object_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 78
-  syntax:
-    content: parse_object_id(collection, id)
-    parameters:
-    - description: 'The resource collection type.
-
-        '
-      id: collection
-      type: *id042
-    - description: 'The resource uri.
-
-        '
-      id: id
-      type: *id043
-    return: *id044
-  type: method
-  uid: azure.keyvault.KeyVaultId.parse_object_id
-- *id045
-- &id048
-  class: azure.keyvault.KeyVaultId
-  fullName: azure.keyvault.KeyVaultId.parse_secret_id
-  langs:
-  - python
-  module: azure.keyvault
-  name: parse_secret_id
-  source:
-    id: parse_secret_id
-    path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-    remote:
-      branch: master
-      path: azure-keyvault\azure\keyvault\custom\key_vault_id.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 125
-  syntax:
-    content: parse_secret_id(id)
-    parameters:
-    - description: 'The secret uri.
-
-        '
-      id: id
-      type: *id046
-    return: *id047
-  type: method
-  uid: azure.keyvault.KeyVaultId.parse_secret_id
-- *id048
 references:
-- fullName: azure.keyvault.KeyVaultId.create_certificate_id
-  isExternal: false
-  name: create_certificate_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_certificate_id
-- fullName: azure.keyvault.KeyVaultId.create_certificate_issuer_id
-  isExternal: false
-  name: create_certificate_issuer_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_certificate_issuer_id
-- fullName: azure.keyvault.KeyVaultId.create_certificate_operation_id
-  isExternal: false
-  name: create_certificate_operation_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_certificate_operation_id
-- fullName: azure.keyvault.KeyVaultId.create_key_id
-  isExternal: false
-  name: create_key_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_key_id
-- fullName: azure.keyvault.KeyVaultId.create_object_id
-  isExternal: false
-  name: create_object_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_object_id
-- fullName: azure.keyvault.KeyVaultId.create_secret_id
-  isExternal: false
-  name: create_secret_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_secret_id
-- fullName: azure.keyvault.KeyVaultId.parse_certificate_id
-  isExternal: false
-  name: parse_certificate_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_certificate_id
-- fullName: azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-  isExternal: false
-  name: parse_certificate_issuer_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-- fullName: azure.keyvault.KeyVaultId.parse_certificate_operation_id
-  isExternal: false
-  name: parse_certificate_operation_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_certificate_operation_id
-- fullName: azure.keyvault.KeyVaultId.parse_key_id
-  isExternal: false
-  name: parse_key_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_key_id
-- fullName: azure.keyvault.KeyVaultId.parse_object_id
-  isExternal: false
-  name: parse_object_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_object_id
-- fullName: azure.keyvault.KeyVaultId.parse_secret_id
-  isExternal: false
-  name: parse_secret_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_secret_id
-- fullName: azure.keyvault.KeyVaultId.create_certificate_id
-  isExternal: false
-  name: create_certificate_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_certificate_id
-- fullName: azure.keyvault.KeyVaultId.create_certificate_issuer_id
-  isExternal: false
-  name: create_certificate_issuer_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_certificate_issuer_id
-- fullName: azure.keyvault.KeyVaultId.create_certificate_operation_id
-  isExternal: false
-  name: create_certificate_operation_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_certificate_operation_id
-- fullName: azure.keyvault.KeyVaultId.create_key_id
-  isExternal: false
-  name: create_key_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_key_id
-- fullName: azure.keyvault.KeyVaultId.create_object_id
-  isExternal: false
-  name: create_object_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_object_id
-- fullName: azure.keyvault.KeyVaultId.create_secret_id
-  isExternal: false
-  name: create_secret_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.create_secret_id
-- fullName: azure.keyvault.KeyVaultId.parse_certificate_id
-  isExternal: false
-  name: parse_certificate_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_certificate_id
-- fullName: azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-  isExternal: false
-  name: parse_certificate_issuer_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_certificate_issuer_id
-- fullName: azure.keyvault.KeyVaultId.parse_certificate_operation_id
-  isExternal: false
-  name: parse_certificate_operation_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_certificate_operation_id
-- fullName: azure.keyvault.KeyVaultId.parse_key_id
-  isExternal: false
-  name: parse_key_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_key_id
-- fullName: azure.keyvault.KeyVaultId.parse_object_id
-  isExternal: false
-  name: parse_object_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_object_id
-- fullName: azure.keyvault.KeyVaultId.parse_secret_id
-  isExternal: false
-  name: parse_secret_id
-  parent: azure.keyvault.KeyVaultId
-  uid: azure.keyvault.KeyVaultId.parse_secret_id
 - fullName: azure.keyvault.KeyVaultId.create_certificate_id
   isExternal: false
   name: create_certificate_id

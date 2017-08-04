@@ -11,15 +11,6 @@ items:
   - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
   - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
   - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
   class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
   inheritance:
@@ -50,7 +41,7 @@ items:
     '
   syntax:
     content: StorageAccountsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -67,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2015-06-15".
 
         '
@@ -75,7 +66,7 @@ items:
   type: class
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
   langs:
@@ -101,19 +92,19 @@ items:
     parameters:
     - description: ''
       id: name
-      type: &id004
+      type:
       - str
     - defaultValue: Microsoft.Storage/storageAccounts
       description: ''
       id: type
-      type: &id005
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id006
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,7 +113,7 @@ items:
 
         '
       id: raw
-      type: &id007
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -130,10 +121,10 @@ items:
 
         '
       id: operation_config
-    return: &id008
+    return:
       description: '@azure.mgmt.storage.v2015_06_15.models.CheckNameAvailabilityResult
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -141,11 +132,11 @@ items:
       type:
       - 'azure.mgmt.storage.v2015_06_15.models.CheckNameAvailabilityResult
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id010
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
   langs:
@@ -183,7 +174,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id011
+      type:
       - str
     - description: 'The name of the storage account within the
 
@@ -193,20 +184,20 @@ items:
 
         '
       id: account_name
-      type: &id012
+      type:
       - str
     - description: 'The parameters to provide for the created account.
 
         '
       id: parameters
-      type: &id013
+      type:
       - azure.mgmt.storage.v2015_06_15.models.StorageAccountCreateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -215,27 +206,27 @@ items:
 
         '
       id: raw
-      type: &id015
+      type:
       - bool
-    return: &id016
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.storage.v2015_06_15.models.StorageAccount
         or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
   langs:
@@ -263,7 +254,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the storage account within the
 
@@ -273,14 +264,14 @@ items:
 
         '
       id: account_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -289,7 +280,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -297,10 +288,10 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       description: 'None or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -308,11 +299,11 @@ items:
       type:
       - 'None or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
   langs:
@@ -344,7 +335,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - description: 'The name of the storage account within the
 
@@ -354,14 +345,14 @@ items:
 
         '
       id: account_name
-      type: &id027
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id028
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -370,7 +361,7 @@ items:
 
         '
       id: raw
-      type: &id029
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -378,10 +369,10 @@ items:
 
         '
       id: operation_config
-    return: &id030
+    return:
       description: '@azure.mgmt.storage.v2015_06_15.models.StorageAccount or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -389,11 +380,11 @@ items:
       type:
       - 'azure.mgmt.storage.v2015_06_15.models.StorageAccount or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id032
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
   langs:
@@ -423,7 +414,7 @@ items:
 
         '
       id: custom_headers
-      type: &id033
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -432,7 +423,7 @@ items:
 
         '
       id: raw
-      type: &id034
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -440,7 +431,7 @@ items:
 
         '
       id: operation_config
-    return: &id035
+    return:
       description: 'An iterator like instance of @azure.mgmt.storage.v2015_06_15.models.StorageAccount
 
         '
@@ -449,7 +440,7 @@ items:
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id037
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
   langs:
@@ -481,14 +472,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -497,7 +488,7 @@ items:
 
         '
       id: raw
-      type: &id040
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -505,7 +496,7 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       description: 'An iterator like instance of @azure.mgmt.storage.v2015_06_15.models.StorageAccount
 
         '
@@ -514,7 +505,7 @@ items:
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id043
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
   langs:
@@ -542,7 +533,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id044
+      type:
       - str
     - description: 'The name of the storage account within the
 
@@ -552,14 +543,14 @@ items:
 
         '
       id: account_name
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id046
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -568,7 +559,7 @@ items:
 
         '
       id: raw
-      type: &id047
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -576,10 +567,10 @@ items:
 
         '
       id: operation_config
-    return: &id048
+    return:
       description: '@azure.mgmt.storage.v2015_06_15.models.StorageAccountKeys or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -587,11 +578,11 @@ items:
       type:
       - 'azure.mgmt.storage.v2015_06_15.models.StorageAccountKeys or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id050
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
   langs:
@@ -619,7 +610,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id051
+      type:
       - str
     - description: 'The name of the storage account within the
 
@@ -629,18 +620,18 @@ items:
 
         '
       id: account_name
-      type: &id052
+      type:
       - str
     - description: ''
       id: key_name
-      type: &id053
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id054
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -649,7 +640,7 @@ items:
 
         '
       id: raw
-      type: &id055
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -657,10 +648,10 @@ items:
 
         '
       id: operation_config
-    return: &id056
+    return:
       description: '@azure.mgmt.storage.v2015_06_15.models.StorageAccountKeys or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -668,11 +659,11 @@ items:
       type:
       - 'azure.mgmt.storage.v2015_06_15.models.StorageAccountKeys or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
 - class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: &id058
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
   langs:
@@ -718,7 +709,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id059
+      type:
       - str
     - description: 'The name of the storage account within the
 
@@ -728,20 +719,20 @@ items:
 
         '
       id: account_name
-      type: &id060
+      type:
       - str
     - description: 'The parameters to provide for the updated account.
 
         '
       id: parameters
-      type: &id061
+      type:
       - azure.mgmt.storage.v2015_06_15.models.StorageAccountUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id062
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -750,7 +741,7 @@ items:
 
         '
       id: raw
-      type: &id063
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -758,10 +749,10 @@ items:
 
         '
       id: operation_config
-    return: &id064
+    return:
       description: '@azure.mgmt.storage.v2015_06_15.models.StorageAccount or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -769,725 +760,10 @@ items:
       type:
       - 'azure.mgmt.storage.v2015_06_15.models.StorageAccount or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-- children:
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-  - azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: StorageAccountsOperations
-  source:
-    id: StorageAccountsOperations
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'StorageAccountsOperations operations.
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: StorageAccountsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-- &id009
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: check_name_availability
-  source:
-    id: check_name_availability
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Checks that the storage account name is valid and is not already in
-
-    use.
-
-    '
-  syntax:
-    content: check_name_availability(name, type='Microsoft.Storage/storageAccounts',
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: ''
-      id: name
-      type: *id004
-    - defaultValue: Microsoft.Storage/storageAccounts
-      description: ''
-      id: type
-      type: *id005
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id006
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id007
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id008
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-- *id009
-- &id017
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id010
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: create
-  source:
-    id: create
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 109
-  summary: 'Asynchronously creates a new storage account with the specified
-
-    parameters. If an account is already created and a subsequent create
-
-    request is issued with different properties, the account properties
-
-    will be updated. If an account is already created and a subsequent
-
-    create or update request is issued with the exact same set of
-
-    properties, the request will succeed.
-
-    '
-  syntax:
-    content: create(resource_group_name, account_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group within the
-
-        user''s subscription. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id011
-    - description: 'The name of the storage account within the
-
-        specified resource group. Storage account names must be between 3 and
-
-        24 characters in length and use numbers and lower-case letters only.
-
-        '
-      id: account_name
-      type: *id012
-    - description: 'The parameters to provide for the created account.
-
-        '
-      id: parameters
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-- *id017
-- &id024
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id018
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 212
-  summary: 'Deletes a storage account in Microsoft Azure.
-
-    '
-  syntax:
-    content: delete(resource_group_name, account_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group within the
-
-        user''s subscription. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the storage account within the
-
-        specified resource group. Storage account names must be between 3 and
-
-        24 characters in length and use numbers and lower-case letters only.
-
-        '
-      id: account_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-- *id024
-- &id031
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id025
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: get_properties
-  source:
-    id: get_properties
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 271
-  summary: 'Returns the properties for the specified storage account including but
-
-    not limited to name, SKU name, location, and account status. The
-
-    ListKeys operation should be used to retrieve storage keys.
-
-    '
-  syntax:
-    content: get_properties(resource_group_name, account_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group within the
-
-        user''s subscription. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - description: 'The name of the storage account within the
-
-        specified resource group. Storage account names must be between 3 and
-
-        24 characters in length and use numbers and lower-case letters only.
-
-        '
-      id: account_name
-      type: *id027
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id028
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id029
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id030
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-- *id031
-- &id036
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id032
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 425
-  summary: 'Lists all the storage accounts available under the subscription. Note
-
-    that storage keys are not returned; use the ListKeys operation for
-
-    this.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id033
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id034
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id035
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-- *id036
-- &id042
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id037
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 492
-  summary: 'Lists all the storage accounts available under the given resource
-
-    group. Note that storage keys are not returned; use the ListKeys
-
-    operation for this.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group within the
-
-        user''s subscription. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-- *id042
-- &id049
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id043
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: list_keys
-  source:
-    id: list_keys
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 563
-  summary: 'Lists the access keys for the specified storage account.
-
-    '
-  syntax:
-    content: list_keys(resource_group_name, account_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group within the
-
-        user''s subscription. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id044
-    - description: 'The name of the storage account within the
-
-        specified resource group. Storage account names must be between 3 and
-
-        24 characters in length and use numbers and lower-case letters only.
-
-        '
-      id: account_name
-      type: *id045
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id046
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id047
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id048
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-- *id049
-- &id057
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id050
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: regenerate_key
-  source:
-    id: regenerate_key
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 631
-  summary: 'Regenerates one of the access keys for the specified storage account.
-
-    '
-  syntax:
-    content: regenerate_key(resource_group_name, account_name, key_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group within the
-
-        user''s subscription. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id051
-    - description: 'The name of the storage account within the
-
-        specified resource group. Storage account names must be between 3 and
-
-        24 characters in length and use numbers and lower-case letters only.
-
-        '
-      id: account_name
-      type: *id052
-    - description: ''
-      id: key_name
-      type: *id053
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id054
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id055
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id056
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-- *id057
-- &id065
-  class: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  exceptions: *id058
-  fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.storage.v2015_06_15.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\operations\storage_accounts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 341
-  summary: 'The update operation can be used to update the SKU, encryption, access
-
-    tier, or tags for a storage account. It can also be used to map the
-
-    account to a custom domain. Only one custom domain is supported per
-
-    storage account; the replacement/change of custom domain is not
-
-    supported. In order to replace an old custom domain, the old value must
-
-    be cleared/unregistered before a new value can be set. The update of
-
-    multiple properties is supported. This call does not change the storage
-
-    keys for the account. If you want to change the storage account keys,
-
-    use the regenerate keys operation. The location and name of the storage
-
-    account cannot be changed after creation.
-
-    '
-  syntax:
-    content: update(resource_group_name, account_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group within the
-
-        user''s subscription. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id059
-    - description: 'The name of the storage account within the
-
-        specified resource group. Storage account names must be between 3 and
-
-        24 characters in length and use numbers and lower-case letters only.
-
-        '
-      id: account_name
-      type: *id060
-    - description: 'The parameters to provide for the updated account.
-
-        '
-      id: parameters
-      type: *id061
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id062
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id063
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id064
-  type: method
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-- *id065
 references:
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-  isExternal: false
-  name: check_name_availability
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-  isExternal: false
-  name: get_properties
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-  isExternal: false
-  name: list_keys
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-  isExternal: false
-  name: regenerate_key
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-  isExternal: false
-  name: check_name_availability
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-  isExternal: false
-  name: create
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-  isExternal: false
-  name: get_properties
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-  isExternal: false
-  name: list_keys
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-  isExternal: false
-  name: regenerate_key
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key
-- fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations
-  uid: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update
 - fullName: azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability
   isExternal: false
   name: check_name_availability

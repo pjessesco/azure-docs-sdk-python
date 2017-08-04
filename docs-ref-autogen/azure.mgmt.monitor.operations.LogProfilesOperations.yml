@@ -7,11 +7,6 @@ items:
   - azure.mgmt.monitor.operations.LogProfilesOperations.get
   - azure.mgmt.monitor.operations.LogProfilesOperations.list
   - azure.mgmt.monitor.operations.LogProfilesOperations.update
-  - azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-  - azure.mgmt.monitor.operations.LogProfilesOperations.delete
-  - azure.mgmt.monitor.operations.LogProfilesOperations.get
-  - azure.mgmt.monitor.operations.LogProfilesOperations.list
-  - azure.mgmt.monitor.operations.LogProfilesOperations.update
   class: azure.mgmt.monitor.operations.LogProfilesOperations
   fullName: azure.mgmt.monitor.operations.LogProfilesOperations
   inheritance:
@@ -38,7 +33,7 @@ items:
     '
   syntax:
     content: LogProfilesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -55,7 +50,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-03-01".
 
         '
@@ -63,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.monitor.operations.LogProfilesOperations
 - class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
   langs:
@@ -89,20 +84,20 @@ items:
 
         '
       id: log_profile_name
-      type: &id004
+      type:
       - str
     - description: 'Parameters supplied to the operation.
 
         '
       id: parameters
-      type: &id005
+      type:
       - azure.mgmt.monitor.models.LogProfileResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id006
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -111,7 +106,7 @@ items:
 
         '
       id: raw
-      type: &id007
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -119,16 +114,16 @@ items:
 
         '
       id: operation_config
-    return: &id008
+    return:
       type:
       - azure.mgmt.monitor.models.LogProfileResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
 - class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: &id010
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.LogProfilesOperations.delete
   langs:
@@ -153,14 +148,14 @@ items:
 
         '
       id: log_profile_name
-      type: &id011
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id012
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -169,7 +164,7 @@ items:
 
         '
       id: raw
-      type: &id013
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -177,16 +172,16 @@ items:
 
         '
       id: operation_config
-    return: &id014
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.LogProfilesOperations.delete
 - class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: &id016
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.LogProfilesOperations.get
   langs:
@@ -211,14 +206,14 @@ items:
 
         '
       id: log_profile_name
-      type: &id017
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id018
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -227,7 +222,7 @@ items:
 
         '
       id: raw
-      type: &id019
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -235,16 +230,16 @@ items:
 
         '
       id: operation_config
-    return: &id020
+    return:
       type:
       - azure.mgmt.monitor.models.LogProfileResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.LogProfilesOperations.get
 - class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: &id022
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.LogProfilesOperations.list
   langs:
@@ -270,7 +265,7 @@ items:
 
         '
       id: custom_headers
-      type: &id023
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -279,7 +274,7 @@ items:
 
         '
       id: raw
-      type: &id024
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -287,13 +282,13 @@ items:
 
         '
       id: operation_config
-    return: &id025
+    return:
       type:
       - azure.mgmt.monitor.models.LogProfileResourcePaged
   type: method
   uid: azure.mgmt.monitor.operations.LogProfilesOperations.list
 - class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: &id027
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.LogProfilesOperations.update
   langs:
@@ -321,20 +316,20 @@ items:
 
         '
       id: log_profile_name
-      type: &id028
+      type:
       - str
     - description: 'Parameters supplied to the operation.
 
         '
       id: log_profiles_resource
-      type: &id029
+      type:
       - azure.mgmt.monitor.models.LogProfileResourcePatch
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -343,7 +338,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -351,365 +346,15 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - azure.mgmt.monitor.models.LogProfileResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.LogProfilesOperations.update
-- children:
-  - azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-  - azure.mgmt.monitor.operations.LogProfilesOperations.delete
-  - azure.mgmt.monitor.operations.LogProfilesOperations.get
-  - azure.mgmt.monitor.operations.LogProfilesOperations.list
-  - azure.mgmt.monitor.operations.LogProfilesOperations.update
-  class: azure.mgmt.monitor.operations.LogProfilesOperations
-  fullName: azure.mgmt.monitor.operations.LogProfilesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: LogProfilesOperations
-  source:
-    id: LogProfilesOperations
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'LogProfilesOperations operations.
-
-
-
-
-
-
-    '
-  syntax:
-    content: LogProfilesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations
-- &id009
-  class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 147
-  summary: 'Create or update a log profile in Azure Monitoring REST API.
-
-    '
-  syntax:
-    content: create_or_update(log_profile_name, parameters, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the log profile.
-
-        '
-      id: log_profile_name
-      type: *id004
-    - description: 'Parameters supplied to the operation.
-
-        '
-      id: parameters
-      type: *id005
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id006
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id007
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id008
-  type: method
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-- *id009
-- &id015
-  class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: *id010
-  fullName: azure.mgmt.monitor.operations.LogProfilesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Deletes the log profile.
-
-    '
-  syntax:
-    content: delete(log_profile_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the log profile.
-
-        '
-      id: log_profile_name
-      type: *id011
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id012
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id013
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id014
-  type: method
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.delete
-- *id015
-- &id021
-  class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: *id016
-  fullName: azure.mgmt.monitor.operations.LogProfilesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 89
-  summary: 'Gets the log profile.
-
-    '
-  syntax:
-    content: get(log_profile_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the log profile.
-
-        '
-      id: log_profile_name
-      type: *id017
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id018
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id019
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id020
-  type: method
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.get
-- *id021
-- &id026
-  class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: *id022
-  fullName: azure.mgmt.monitor.operations.LogProfilesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 279
-  summary: 'List the log profiles.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id023
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id024
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id025
-  type: method
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.list
-- *id026
-- &id033
-  class: azure.mgmt.monitor.operations.LogProfilesOperations
-  exceptions: *id027
-  fullName: azure.mgmt.monitor.operations.LogProfilesOperations.update
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\log_profiles_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 213
-  summary: 'Updates an existing LogProfilesResource. To update other fields use the
-
-    CreateOrUpdate method.
-
-    '
-  syntax:
-    content: update(log_profile_name, log_profiles_resource, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the log profile.
-
-        '
-      id: log_profile_name
-      type: *id028
-    - description: 'Parameters supplied to the operation.
-
-        '
-      id: log_profiles_resource
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.update
-- *id033
 references:
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.delete
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.get
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.list
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.update
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.delete
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.get
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.list
-- fullName: azure.mgmt.monitor.operations.LogProfilesOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.monitor.operations.LogProfilesOperations
-  uid: azure.mgmt.monitor.operations.LogProfilesOperations.update
 - fullName: azure.mgmt.monitor.operations.LogProfilesOperations.create_or_update
   isExternal: false
   name: create_or_update

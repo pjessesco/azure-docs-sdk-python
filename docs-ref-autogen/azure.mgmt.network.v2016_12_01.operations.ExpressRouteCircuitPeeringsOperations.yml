@@ -6,10 +6,6 @@ items:
   - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
   - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
   - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
   class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
   fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: ExpressRouteCircuitPeeringsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-12-01".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
 - class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
   langs:
@@ -86,19 +82,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the peering.
 
         '
       id: peering_name
-      type: &id006
+      type:
       - str
     - description: 'Parameters supplied to the create or update
 
@@ -106,14 +102,14 @@ items:
 
         '
       id: peering_parameters
-      type: &id007
+      type:
       - azure.mgmt.network.v2016_12_01.models.ExpressRouteCircuitPeering
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,20 +118,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_12_01.models.ExpressRouteCircuitPeering'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
 - class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
   langs:
@@ -161,26 +157,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the peering.
 
         '
       id: peering_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -189,20 +185,20 @@ items:
 
         '
       id: raw
-      type: &id017
-      - bool
-    return: &id018
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
 - class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
   langs:
@@ -230,26 +226,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the peering.
 
         '
       id: peering_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -258,7 +254,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -266,16 +262,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.network.v2016_12_01.models.ExpressRouteCircuitPeering
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
 - class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
   langs:
@@ -301,20 +297,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the express route circuit.
 
         '
       id: circuit_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -323,7 +319,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -331,326 +327,12 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.mgmt.network.v2016_12_01.models.ExpressRouteCircuitPeeringPaged
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-- children:
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-  - azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-  class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: ExpressRouteCircuitPeeringsOperations
-  source:
-    id: ExpressRouteCircuitPeeringsOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'ExpressRouteCircuitPeeringsOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: ExpressRouteCircuitPeeringsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-- &id011
-  class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 185
-  summary: 'Creates or updates a peering in the specified express route circuits.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, circuit_name, peering_name, peering_parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the express route circuit.
-
-        '
-      id: circuit_name
-      type: *id005
-    - description: 'The name of the peering.
-
-        '
-      id: peering_name
-      type: *id006
-    - description: 'Parameters supplied to the create or update
-
-        express route circuit peering operation.
-
-        '
-      id: peering_parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes the specified peering from the specified express route circuit.
-
-    '
-  syntax:
-    content: delete(resource_group_name, circuit_name, peering_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the express route circuit.
-
-        '
-      id: circuit_name
-      type: *id014
-    - description: 'The name of the peering.
-
-        '
-      id: peering_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    return: *id018
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 119
-  summary: 'Gets the specified authorization from the specified express route
-
-    circuit.
-
-    '
-  syntax:
-    content: get(resource_group_name, circuit_name, peering_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the express route circuit.
-
-        '
-      id: circuit_name
-      type: *id022
-    - description: 'The name of the peering.
-
-        '
-      id: peering_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-- *id027
-- &id034
-  class: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  exceptions: *id028
-  fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_12_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\express_route_circuit_peerings_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 283
-  summary: 'Gets all peerings in a specified express route circuit.
-
-    '
-  syntax:
-    content: list(resource_group_name, circuit_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the express route circuit.
-
-        '
-      id: circuit_name
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-- *id034
 references:
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.delete
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.get
-- fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations
-  uid: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.list
 - fullName: azure.mgmt.network.v2016_12_01.operations.ExpressRouteCircuitPeeringsOperations.create_or_update
   isExternal: false
   name: create_or_update

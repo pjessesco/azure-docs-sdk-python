@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: Vault(name, location, properties, tags=None)
-    parameters: &id001
+    parameters:
     - description: 'The name of the key vault.
 
         '
@@ -59,7 +59,7 @@ items:
       id: properties
       type:
       - azure.mgmt.keyvault.models.VaultProperties
-    variables: &id002
+    variables:
     - description: 'The Azure Resource Manager resource ID for the key vault.
 
         '
@@ -72,41 +72,6 @@ items:
       id: type
       type:
       - str
-  type: class
-  uid: azure.mgmt.keyvault.models.Vault
-- children: []
-  class: azure.mgmt.keyvault.models.Vault
-  fullName: azure.mgmt.keyvault.models.Vault
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.keyvault.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.keyvault.models
-  name: Vault
-  source:
-    id: Vault
-    path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\vault.py
-    remote:
-      branch: master
-      path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\vault.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Resource information with extended details.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: Vault(name, location, properties, tags=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.keyvault.models.Vault
 references: []

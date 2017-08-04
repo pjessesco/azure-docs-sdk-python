@@ -10,14 +10,6 @@ items:
   - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
   - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
   - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
   class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
   inheritance:
@@ -47,7 +39,7 @@ items:
     '
   syntax:
     content: ResourceGroupsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -64,7 +56,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-02-01".
 
         '
@@ -72,7 +64,7 @@ items:
   type: class
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
   langs:
@@ -100,14 +92,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -116,7 +108,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -124,16 +116,16 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - bool
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id009
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
   langs:
@@ -161,7 +153,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id010
+      type:
       - str
     - description: 'Parameters supplied to the create or update
 
@@ -169,14 +161,14 @@ items:
 
         '
       id: parameters
-      type: &id011
+      type:
       - azure.mgmt.resource.resources.v2016_02_01.models.ResourceGroup
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id012
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -185,7 +177,7 @@ items:
 
         '
       id: raw
-      type: &id013
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -193,16 +185,16 @@ items:
 
         '
       id: operation_config
-    return: &id014
+    return:
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.ResourceGroup
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id016
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
   langs:
@@ -229,14 +221,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id017
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id018
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -245,20 +237,20 @@ items:
 
         '
       id: raw
-      type: &id019
-      - bool
-    return: &id020
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id022
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
   langs:
@@ -286,7 +278,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'The ids of the resources. The only supported string
@@ -297,7 +289,7 @@ items:
 
         '
       id: resources
-      type: &id024
+      type:
       - list of str
     - defaultValue: None
       description: 'The export template options. Supported values include
@@ -308,14 +300,14 @@ items:
 
         '
       id: options
-      type: &id025
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id026
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -324,7 +316,7 @@ items:
 
         '
       id: raw
-      type: &id027
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -332,16 +324,16 @@ items:
 
         '
       id: operation_config
-    return: &id028
+    return:
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.ResourceGroupExportResult
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id030
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
   langs:
@@ -368,14 +360,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -384,7 +376,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -392,16 +384,16 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.ResourceGroup
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
   langs:
@@ -427,7 +419,7 @@ items:
 
         '
       id: filter
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'Query parameters. If null is passed returns all resource
@@ -436,14 +428,14 @@ items:
 
         '
       id: top
-      type: &id038
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -452,7 +444,7 @@ items:
 
         '
       id: raw
-      type: &id040
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -460,13 +452,13 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.ResourceGroupPaged
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id043
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
   langs:
@@ -494,21 +486,21 @@ items:
 
         '
       id: resource_group_name
-      type: &id044
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type: &id045
+      type:
       - str
     - defaultValue: None
       description: 'The $expand query parameter
 
         '
       id: expand
-      type: &id046
+      type:
       - str
     - defaultValue: None
       description: 'Query parameters. If null is passed returns all resource
@@ -517,14 +509,14 @@ items:
 
         '
       id: top
-      type: &id047
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id048
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -533,7 +525,7 @@ items:
 
         '
       id: raw
-      type: &id049
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -541,13 +533,13 @@ items:
 
         '
       id: operation_config
-    return: &id050
+    return:
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.GenericResourcePaged
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: &id052
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
   langs:
@@ -581,7 +573,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id053
+      type:
       - str
     - description: 'Parameters supplied to the update state resource
 
@@ -589,14 +581,14 @@ items:
 
         '
       id: parameters
-      type: &id054
+      type:
       - azure.mgmt.resource.resources.v2016_02_01.models.ResourceGroup
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id055
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -605,7 +597,7 @@ items:
 
         '
       id: raw
-      type: &id056
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -613,627 +605,15 @@ items:
 
         '
       id: operation_config
-    return: &id057
+    return:
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.ResourceGroup
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-- children:
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-  - azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: ResourceGroupsOperations
-  source:
-    id: ResourceGroupsOperations
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'ResourceGroupsOperations operations.
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ResourceGroupsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-- &id008
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: check_existence
-  source:
-    id: check_existence
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 119
-  summary: 'Checks whether resource group exists.
-
-    '
-  syntax:
-    content: check_existence(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group to check.
-
-        The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-- *id008
-- &id015
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id009
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 173
-  summary: 'Create a resource group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to be
-
-        created or updated.
-
-        '
-      id: resource_group_name
-      type: *id010
-    - description: 'Parameters supplied to the create or update
-
-        resource group service operation.
-
-        '
-      id: parameters
-      type: *id011
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id012
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id013
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id014
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-- *id015
-- &id021
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id016
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 243
-  summary: 'Delete resource group.
-
-    '
-  syntax:
-    content: delete(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to be
-
-        deleted. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id017
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id018
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id019
-    return: *id020
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-- *id021
-- &id029
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id022
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: export_template
-  source:
-    id: export_template
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 449
-  summary: 'Captures the specified resource group as a template.
-
-    '
-  syntax:
-    content: export_template(resource_group_name, resources=None, options=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to be
-
-        created or updated.
-
-        '
-      id: resource_group_name
-      type: *id023
-    - defaultValue: None
-      description: 'The ids of the resources. The only supported string
-
-        currently is ''*'' (all resources). Future api updates will support
-
-        exporting specific resources.
-
-        '
-      id: resources
-      type: *id024
-    - defaultValue: None
-      description: 'The export template options. Supported values include
-
-        ''IncludeParameterDefaultValue'', ''IncludeComments'' or
-
-        ''IncludeParameterDefaultValue, IncludeComments
-
-        '
-      id: options
-      type: *id025
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id026
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id027
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id028
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-- *id029
-- &id035
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id030
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 318
-  summary: 'Get a resource group.
-
-    '
-  syntax:
-    content: get(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group to get. The
-
-        name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id031
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-- *id035
-- &id042
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id036
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 523
-  summary: 'Gets a collection of resource groups.
-
-    '
-  syntax:
-    content: list(filter=None, top=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'The filter to apply on the operation.
-
-        '
-      id: filter
-      type: *id037
-    - defaultValue: None
-      description: 'Query parameters. If null is passed returns all resource
-
-        groups.
-
-        '
-      id: top
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-- *id042
-- &id051
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id043
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: list_resources
-  source:
-    id: list_resources
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Get all of the resources under a subscription.
-
-    '
-  syntax:
-    content: list_resources(resource_group_name, filter=None, expand=None, top=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Query parameters. If null is passed
-
-        returns all resource groups.
-
-        '
-      id: resource_group_name
-      type: *id044
-    - defaultValue: None
-      description: 'The filter to apply on the operation.
-
-        '
-      id: filter
-      type: *id045
-    - defaultValue: None
-      description: 'The $expand query parameter
-
-        '
-      id: expand
-      type: *id046
-    - defaultValue: None
-      description: 'Query parameters. If null is passed returns all resource
-
-        groups.
-
-        '
-      id: top
-      type: *id047
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id048
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id049
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id050
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-- *id051
-- &id058
-  class: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  exceptions: *id052
-  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-  langs:
-  - python
-  module: azure.mgmt.resource.resources.v2016_02_01.operations
-  name: patch
-  source:
-    id: patch
-    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\resource_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 378
-  summary: 'Resource groups can be updated through a simple PATCH operation to a
-
-    group address. The format of the request is the same as that for
-
-    creating a resource groups, though if a field is unspecified current
-
-    value will be carried over. .
-
-    '
-  syntax:
-    content: patch(resource_group_name, parameters, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group to be
-
-        created or updated. The name is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id053
-    - description: 'Parameters supplied to the update state resource
-
-        group service operation.
-
-        '
-      id: parameters
-      type: *id054
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id055
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id056
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id057
-  type: method
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-- *id058
 references:
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-  isExternal: false
-  name: check_existence
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-  isExternal: false
-  name: export_template
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-  isExternal: false
-  name: list_resources
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-  isExternal: false
-  name: patch
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-  isExternal: false
-  name: check_existence
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-  isExternal: false
-  name: export_template
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-  isExternal: false
-  name: list_resources
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources
-- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
-  isExternal: false
-  name: patch
-  parent: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations
-  uid: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch
 - fullName: azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence
   isExternal: false
   name: check_existence

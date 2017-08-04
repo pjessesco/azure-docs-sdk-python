@@ -6,10 +6,6 @@ items:
   - azure.mgmt.servicebus.operations.RulesOperations.delete
   - azure.mgmt.servicebus.operations.RulesOperations.get
   - azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-  - azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-  - azure.mgmt.servicebus.operations.RulesOperations.delete
-  - azure.mgmt.servicebus.operations.RulesOperations.get
-  - azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
   class: azure.mgmt.servicebus.operations.RulesOperations
   fullName: azure.mgmt.servicebus.operations.RulesOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: RulesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-04-01".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.servicebus.operations.RulesOperations
 - class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
   langs:
@@ -88,44 +84,44 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id005
+      type:
       - str
     - description: 'The topic name.
 
         '
       id: topic_name
-      type: &id006
+      type:
       - str
     - description: 'The subscription name.
 
         '
       id: subscription_name
-      type: &id007
+      type:
       - str
     - description: 'The rule name.
 
         '
       id: rule_name
-      type: &id008
+      type:
       - str
     - description: 'Parameters supplied to create a rule.
 
         '
       id: parameters
-      type: &id009
+      type:
       - azure.mgmt.servicebus.models.Rule
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id010
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -134,7 +130,7 @@ items:
 
         '
       id: raw
-      type: &id011
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -142,16 +138,16 @@ items:
 
         '
       id: operation_config
-    return: &id012
+    return:
       type:
       - azure.mgmt.servicebus.models.Rule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
 - class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: &id014
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.RulesOperations.delete
   langs:
@@ -179,38 +175,38 @@ items:
 
         '
       id: resource_group_name
-      type: &id015
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id016
+      type:
       - str
     - description: 'The topic name.
 
         '
       id: topic_name
-      type: &id017
+      type:
       - str
     - description: 'The subscription name.
 
         '
       id: subscription_name
-      type: &id018
+      type:
       - str
     - description: 'The rule name.
 
         '
       id: rule_name
-      type: &id019
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id020
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -219,7 +215,7 @@ items:
 
         '
       id: raw
-      type: &id021
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -227,16 +223,16 @@ items:
 
         '
       id: operation_config
-    return: &id022
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.RulesOperations.delete
 - class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: &id024
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.RulesOperations.get
   langs:
@@ -264,38 +260,38 @@ items:
 
         '
       id: resource_group_name
-      type: &id025
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id026
+      type:
       - str
     - description: 'The topic name.
 
         '
       id: topic_name
-      type: &id027
+      type:
       - str
     - description: 'The subscription name.
 
         '
       id: subscription_name
-      type: &id028
+      type:
       - str
     - description: 'The rule name.
 
         '
       id: rule_name
-      type: &id029
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -304,7 +300,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -312,16 +308,16 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - azure.mgmt.servicebus.models.Rule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.RulesOperations.get
 - class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: &id034
+  exceptions:
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
   langs:
@@ -349,32 +345,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id035
+      type:
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type: &id036
+      type:
       - str
     - description: 'The topic name.
 
         '
       id: topic_name
-      type: &id037
+      type:
       - str
     - description: 'The subscription name.
 
         '
       id: subscription_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id039
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -383,7 +379,7 @@ items:
 
         '
       id: raw
-      type: &id040
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -391,382 +387,12 @@ items:
 
         '
       id: operation_config
-    return: &id041
+    return:
       type:
       - azure.mgmt.servicebus.models.RulePaged
   type: method
   uid: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-- children:
-  - azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-  - azure.mgmt.servicebus.operations.RulesOperations.delete
-  - azure.mgmt.servicebus.operations.RulesOperations.get
-  - azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-  class: azure.mgmt.servicebus.operations.RulesOperations
-  fullName: azure.mgmt.servicebus.operations.RulesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: RulesOperations
-  source:
-    id: RulesOperations
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'RulesOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: RulesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.servicebus.operations.RulesOperations
-- &id013
-  class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 111
-  summary: 'Creates a new rule and updates an existing rule.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, namespace_name, topic_name, subscription_name,
-      rule_name, parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id005
-    - description: 'The topic name.
-
-        '
-      id: topic_name
-      type: *id006
-    - description: 'The subscription name.
-
-        '
-      id: subscription_name
-      type: *id007
-    - description: 'The rule name.
-
-        '
-      id: rule_name
-      type: *id008
-    - description: 'Parameters supplied to create a rule.
-
-        '
-      id: parameters
-      type: *id009
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id010
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id011
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id012
-  type: method
-  uid: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-- *id013
-- &id023
-  class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: *id014
-  fullName: azure.mgmt.servicebus.operations.RulesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 187
-  summary: 'Deletes an existing rule.
-
-    '
-  syntax:
-    content: delete(resource_group_name, namespace_name, topic_name, subscription_name,
-      rule_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id015
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id016
-    - description: 'The topic name.
-
-        '
-      id: topic_name
-      type: *id017
-    - description: 'The subscription name.
-
-        '
-      id: subscription_name
-      type: *id018
-    - description: 'The rule name.
-
-        '
-      id: rule_name
-      type: *id019
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id020
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id021
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id022
-  type: method
-  uid: azure.mgmt.servicebus.operations.RulesOperations.delete
-- *id023
-- &id033
-  class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: *id024
-  fullName: azure.mgmt.servicebus.operations.RulesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 250
-  summary: 'Retrieves the description for the specified rule.
-
-    '
-  syntax:
-    content: get(resource_group_name, namespace_name, topic_name, subscription_name,
-      rule_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id025
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id026
-    - description: 'The topic name.
-
-        '
-      id: topic_name
-      type: *id027
-    - description: 'The subscription name.
-
-        '
-      id: subscription_name
-      type: *id028
-    - description: 'The rule name.
-
-        '
-      id: rule_name
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.mgmt.servicebus.operations.RulesOperations.get
-- *id033
-- &id042
-  class: azure.mgmt.servicebus.operations.RulesOperations
-  exceptions: *id034
-  fullName: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-  langs:
-  - python
-  module: azure.mgmt.servicebus.operations
-  name: list_by_subscriptions
-  source:
-    id: list_by_subscriptions
-    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'List all the rules within given topic-subscription.
-
-    '
-  syntax:
-    content: list_by_subscriptions(resource_group_name, namespace_name, topic_name,
-      subscription_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the Resource group within the
-
-        Azure subscription.
-
-        '
-      id: resource_group_name
-      type: *id035
-    - description: 'The namespace name
-
-        '
-      id: namespace_name
-      type: *id036
-    - description: 'The topic name.
-
-        '
-      id: topic_name
-      type: *id037
-    - description: 'The subscription name.
-
-        '
-      id: subscription_name
-      type: *id038
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id039
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id040
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id041
-  type: method
-  uid: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-- *id042
 references:
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.delete
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.get
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-  isExternal: false
-  name: list_by_subscriptions
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.delete
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.get
-- fullName: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
-  isExternal: false
-  name: list_by_subscriptions
-  parent: azure.mgmt.servicebus.operations.RulesOperations
-  uid: azure.mgmt.servicebus.operations.RulesOperations.list_by_subscriptions
 - fullName: azure.mgmt.servicebus.operations.RulesOperations.create_or_update
   isExternal: false
   name: create_or_update

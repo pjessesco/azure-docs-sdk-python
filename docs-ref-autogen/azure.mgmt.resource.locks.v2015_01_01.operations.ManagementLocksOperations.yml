@@ -13,17 +13,6 @@ items:
   - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
   - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
   - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
   class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
   inheritance:
@@ -56,7 +45,7 @@ items:
     '
   syntax:
     content: ManagementLocksOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -73,7 +62,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2015-01-01".
 
         '
@@ -81,7 +70,7 @@ items:
   type: class
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
   langs:
@@ -107,26 +96,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The lock name.
 
         '
       id: lock_name
-      type: &id005
+      type:
       - str
     - description: 'The management lock parameters.
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -135,7 +124,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -143,16 +132,16 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
   langs:
@@ -181,50 +170,50 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_provider_namespace
-      type: &id013
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: parent_resource_path
-      type: &id014
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_type
-      type: &id015
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_name
-      type: &id016
+      type:
       - str
     - description: 'The name of lock.
 
         '
       id: lock_name
-      type: &id017
+      type:
       - str
     - description: 'Create or update management lock parameters.
 
         '
       id: parameters
-      type: &id018
+      type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id019
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -233,7 +222,7 @@ items:
 
         '
       id: raw
-      type: &id020
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -241,16 +230,16 @@ items:
 
         '
       id: operation_config
-    return: &id021
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id023
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
   langs:
@@ -276,20 +265,20 @@ items:
 
         '
       id: lock_name
-      type: &id024
+      type:
       - str
     - description: 'The management lock parameters.
 
         '
       id: parameters
-      type: &id025
+      type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id026
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -298,7 +287,7 @@ items:
 
         '
       id: raw
-      type: &id027
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -306,16 +295,16 @@ items:
 
         '
       id: operation_config
-    return: &id028
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id030
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
   langs:
@@ -341,20 +330,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id031
+      type:
       - str
     - description: 'The name of lock.
 
         '
       id: lock_name
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id033
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -363,7 +352,7 @@ items:
 
         '
       id: raw
-      type: &id034
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -371,16 +360,16 @@ items:
 
         '
       id: operation_config
-    return: &id035
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id037
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
   langs:
@@ -407,44 +396,44 @@ items:
 
         '
       id: resource_group_name
-      type: &id038
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_provider_namespace
-      type: &id039
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: parent_resource_path
-      type: &id040
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_type
-      type: &id041
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_name
-      type: &id042
+      type:
       - str
     - description: 'The name of lock.
 
         '
       id: lock_name
-      type: &id043
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id044
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -453,7 +442,7 @@ items:
 
         '
       id: raw
-      type: &id045
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -461,16 +450,16 @@ items:
 
         '
       id: operation_config
-    return: &id046
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id048
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
   langs:
@@ -496,14 +485,14 @@ items:
 
         '
       id: lock_name
-      type: &id049
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id050
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -512,7 +501,7 @@ items:
 
         '
       id: raw
-      type: &id051
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -520,16 +509,16 @@ items:
 
         '
       id: operation_config
-    return: &id052
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id054
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
   langs:
@@ -554,14 +543,14 @@ items:
 
         '
       id: lock_name
-      type: &id055
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id056
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -570,7 +559,7 @@ items:
 
         '
       id: raw
-      type: &id057
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -578,16 +567,16 @@ items:
 
         '
       id: operation_config
-    return: &id058
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id060
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
   langs:
@@ -613,20 +602,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id061
+      type:
       - str
     - description: 'The lock name.
 
         '
       id: lock_name
-      type: &id062
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id063
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -635,7 +624,7 @@ items:
 
         '
       id: raw
-      type: &id064
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -643,16 +632,16 @@ items:
 
         '
       id: operation_config
-    return: &id065
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObject
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id067
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
   langs:
@@ -678,21 +667,21 @@ items:
 
         '
       id: resource_group_name
-      type: &id068
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type: &id069
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id070
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -701,7 +690,7 @@ items:
 
         '
       id: raw
-      type: &id071
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -709,13 +698,13 @@ items:
 
         '
       id: operation_config
-    return: &id072
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObjectPaged
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id074
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
   langs:
@@ -746,45 +735,45 @@ items:
 
         '
       id: resource_group_name
-      type: &id075
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_provider_namespace
-      type: &id076
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: parent_resource_path
-      type: &id077
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_type
-      type: &id078
+      type:
       - str
     - description: 'Resource identity.
 
         '
       id: resource_name
-      type: &id079
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type: &id080
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id081
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -793,7 +782,7 @@ items:
 
         '
       id: raw
-      type: &id082
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -801,13 +790,13 @@ items:
 
         '
       id: operation_config
-    return: &id083
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObjectPaged
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
 - class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: &id085
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
   langs:
@@ -834,14 +823,14 @@ items:
 
         '
       id: filter
-      type: &id086
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id087
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -850,7 +839,7 @@ items:
 
         '
       id: raw
-      type: &id088
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -858,863 +847,12 @@ items:
 
         '
       id: operation_config
-    return: &id089
+    return:
       type:
       - azure.mgmt.resource.locks.v2015_01_01.models.ManagementLockObjectPaged
   type: method
   uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-- children:
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-  - azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: ManagementLocksOperations
-  source:
-    id: ManagementLocksOperations
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ManagementLocksOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ManagementLocksOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-- &id010
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id003
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: create_or_update_at_resource_group_level
-  source:
-    id: create_or_update_at_resource_group_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Create or update a management lock at the resource group level.
-
-    '
-  syntax:
-    content: create_or_update_at_resource_group_level(resource_group_name, lock_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The lock name.
-
-        '
-      id: lock_name
-      type: *id005
-    - description: 'The management lock parameters.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-- *id010
-- &id022
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id011
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: create_or_update_at_resource_level
-  source:
-    id: create_or_update_at_resource_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 225
-  summary: 'Create or update a management lock at the resource level or any level
-
-    below resource.
-
-    '
-  syntax:
-    content: create_or_update_at_resource_level(resource_group_name, resource_provider_namespace,
-      parent_resource_path, resource_type, resource_name, lock_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'Resource identity.
-
-        '
-      id: resource_provider_namespace
-      type: *id013
-    - description: 'Resource identity.
-
-        '
-      id: parent_resource_path
-      type: *id014
-    - description: 'Resource identity.
-
-        '
-      id: resource_type
-      type: *id015
-    - description: 'Resource identity.
-
-        '
-      id: resource_name
-      type: *id016
-    - description: 'The name of lock.
-
-        '
-      id: lock_name
-      type: *id017
-    - description: 'Create or update management lock parameters.
-
-        '
-      id: parameters
-      type: *id018
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id019
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id020
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id021
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-- *id022
-- &id029
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id023
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: create_or_update_at_subscription_level
-  source:
-    id: create_or_update_at_subscription_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 375
-  summary: 'Create or update a management lock at the subscription level.
-
-    '
-  syntax:
-    content: create_or_update_at_subscription_level(lock_name, parameters, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of lock.
-
-        '
-      id: lock_name
-      type: *id024
-    - description: 'The management lock parameters.
-
-        '
-      id: parameters
-      type: *id025
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id026
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id027
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id028
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-- *id029
-- &id036
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id030
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: delete_at_resource_group_level
-  source:
-    id: delete_at_resource_group_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 109
-  summary: 'Deletes the management lock of a resource group.
-
-    '
-  syntax:
-    content: delete_at_resource_group_level(resource_group_name, lock_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id031
-    - description: 'The name of lock.
-
-        '
-      id: lock_name
-      type: *id032
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id033
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id034
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id035
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-- *id036
-- &id047
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id037
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: delete_at_resource_level
-  source:
-    id: delete_at_resource_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 309
-  summary: 'Deletes the management lock of a resource or any level below resource.
-
-    '
-  syntax:
-    content: delete_at_resource_level(resource_group_name, resource_provider_namespace,
-      parent_resource_path, resource_type, resource_name, lock_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id038
-    - description: 'Resource identity.
-
-        '
-      id: resource_provider_namespace
-      type: *id039
-    - description: 'Resource identity.
-
-        '
-      id: parent_resource_path
-      type: *id040
-    - description: 'Resource identity.
-
-        '
-      id: resource_type
-      type: *id041
-    - description: 'Resource identity.
-
-        '
-      id: resource_name
-      type: *id042
-    - description: 'The name of lock.
-
-        '
-      id: lock_name
-      type: *id043
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id044
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id045
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id046
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-- *id047
-- &id053
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id048
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: delete_at_subscription_level
-  source:
-    id: delete_at_subscription_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 443
-  summary: 'Deletes the management lock of a subscription.
-
-    '
-  syntax:
-    content: delete_at_subscription_level(lock_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of lock.
-
-        '
-      id: lock_name
-      type: *id049
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id050
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id051
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id052
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-- *id053
-- &id059
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id054
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 494
-  summary: 'Gets the management lock of a scope.
-
-    '
-  syntax:
-    content: get(lock_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Name of the management lock.
-
-        '
-      id: lock_name
-      type: *id055
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id056
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id057
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id058
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-- *id059
-- &id066
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id060
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: get_at_resource_group_level
-  source:
-    id: get_at_resource_group_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 163
-  summary: 'Gets a management lock at the resource group level.
-
-    '
-  syntax:
-    content: get_at_resource_group_level(resource_group_name, lock_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The resource group name.
-
-        '
-      id: resource_group_name
-      type: *id061
-    - description: 'The lock name.
-
-        '
-      id: lock_name
-      type: *id062
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id063
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id064
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id065
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-- *id066
-- &id073
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id067
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: list_at_resource_group_level
-  source:
-    id: list_at_resource_group_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 553
-  summary: 'Gets all the management locks of a resource group.
-
-    '
-  syntax:
-    content: list_at_resource_group_level(resource_group_name, filter=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'Resource group name.
-
-        '
-      id: resource_group_name
-      type: *id068
-    - defaultValue: None
-      description: 'The filter to apply on the operation.
-
-        '
-      id: filter
-      type: *id069
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id070
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id071
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id072
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-- *id073
-- &id084
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id074
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: list_at_resource_level
-  source:
-    id: list_at_resource_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 623
-  summary: 'Gets all the management locks of a resource or any level below
-
-    resource.
-
-    '
-  syntax:
-    content: list_at_resource_level(resource_group_name, resource_provider_namespace,
-      parent_resource_path, resource_type, resource_name, filter=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group. The name
-
-        is case insensitive.
-
-        '
-      id: resource_group_name
-      type: *id075
-    - description: 'Resource identity.
-
-        '
-      id: resource_provider_namespace
-      type: *id076
-    - description: 'Resource identity.
-
-        '
-      id: parent_resource_path
-      type: *id077
-    - description: 'Resource identity.
-
-        '
-      id: resource_type
-      type: *id078
-    - description: 'Resource identity.
-
-        '
-      id: resource_name
-      type: *id079
-    - defaultValue: None
-      description: 'The filter to apply on the operation.
-
-        '
-      id: filter
-      type: *id080
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id081
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id082
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id083
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-- *id084
-- &id090
-  class: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  exceptions: *id085
-  fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-  langs:
-  - python
-  module: azure.mgmt.resource.locks.v2015_01_01.operations
-  name: list_at_subscription_level
-  source:
-    id: list_at_subscription_level
-    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2015_01_01\operations\management_locks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 707
-  summary: 'Gets all the management locks of a subscription.
-
-    '
-  syntax:
-    content: list_at_subscription_level(filter=None, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'The filter to apply on the operation.
-
-        '
-      id: filter
-      type: *id086
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id087
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id088
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id089
-  type: method
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-- *id090
 references:
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-  isExternal: false
-  name: create_or_update_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-  isExternal: false
-  name: create_or_update_at_resource_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-  isExternal: false
-  name: create_or_update_at_subscription_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-  isExternal: false
-  name: delete_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-  isExternal: false
-  name: delete_at_resource_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-  isExternal: false
-  name: delete_at_subscription_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-  isExternal: false
-  name: get_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-  isExternal: false
-  name: list_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-  isExternal: false
-  name: list_at_resource_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-  isExternal: false
-  name: list_at_subscription_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-  isExternal: false
-  name: create_or_update_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-  isExternal: false
-  name: create_or_update_at_resource_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-  isExternal: false
-  name: create_or_update_at_subscription_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_subscription_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-  isExternal: false
-  name: delete_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-  isExternal: false
-  name: delete_at_resource_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_resource_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-  isExternal: false
-  name: delete_at_subscription_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.delete_at_subscription_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-  isExternal: false
-  name: get_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.get_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-  isExternal: false
-  name: list_at_resource_group_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_group_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-  isExternal: false
-  name: list_at_resource_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_resource_level
-- fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
-  isExternal: false
-  name: list_at_subscription_level
-  parent: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations
-  uid: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.list_at_subscription_level
 - fullName: azure.mgmt.resource.locks.v2015_01_01.operations.ManagementLocksOperations.create_or_update_at_resource_group_level
   isExternal: false
   name: create_or_update_at_resource_group_level

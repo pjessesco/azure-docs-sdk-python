@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-  - azure.mgmt.notificationhubs.operations.NameOperations.check_availability
   class: azure.mgmt.notificationhubs.operations.NameOperations
   fullName: azure.mgmt.notificationhubs.operations.NameOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: NameOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2017-04-01".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.notificationhubs.operations.NameOperations
 - class: azure.mgmt.notificationhubs.operations.NameOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
   langs:
@@ -80,14 +79,14 @@ items:
 
         '
       id: name
-      type: &id004
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -96,7 +95,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -104,108 +103,15 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.mgmt.notificationhubs.models.CheckNameAvailabilityResponse
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-- children:
-  - azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-  class: azure.mgmt.notificationhubs.operations.NameOperations
-  fullName: azure.mgmt.notificationhubs.operations.NameOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.notificationhubs.operations
-  name: NameOperations
-  source:
-    id: NameOperations
-    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\name_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\name_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'NameOperations operations.
-
-
-    '
-  syntax:
-    content: NameOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.notificationhubs.operations.NameOperations
-- &id008
-  class: azure.mgmt.notificationhubs.operations.NameOperations
-  exceptions: *id003
-  fullName: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-  langs:
-  - python
-  module: azure.mgmt.notificationhubs.operations
-  name: check_availability
-  source:
-    id: check_availability
-    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\name_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\name_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Checks the availability of the given service namespace across all Azure
-
-    subscriptions. This is useful because the domain name is created based
-
-    on the service namespace name.
-
-    '
-  syntax:
-    content: check_availability(name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Resource name
-
-        '
-      id: name
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-- *id008
 references:
-- fullName: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-  isExternal: false
-  name: check_availability
-  parent: azure.mgmt.notificationhubs.operations.NameOperations
-  uid: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-- fullName: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
-  isExternal: false
-  name: check_availability
-  parent: azure.mgmt.notificationhubs.operations.NameOperations
-  uid: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
 - fullName: azure.mgmt.notificationhubs.operations.NameOperations.check_availability
   isExternal: false
   name: check_availability

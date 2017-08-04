@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: Resource(location, tags=None)
-    parameters: &id001
+    parameters:
     - description: 'The geographic location of the resource. This must be one
 
         of the supported and registered Azure Geo Regions (for example, West US,
@@ -47,7 +47,7 @@ items:
       id: tags
       type:
       - dict
-    variables: &id002
+    variables:
     - description: 'The ID of the resource. This can be used with the Azure Resource
 
         Manager to link resources together.
@@ -68,39 +68,6 @@ items:
       id: type
       type:
       - str
-  type: class
-  uid: azure.mgmt.search.models.Resource
-- children: []
-  class: azure.mgmt.search.models.Resource
-  fullName: azure.mgmt.search.models.Resource
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.mgmt.search.models
-  name: Resource
-  source:
-    id: Resource
-    path: azure-mgmt-search\azure\mgmt\search\models\resource.py
-    remote:
-      branch: master
-      path: azure-mgmt-search\azure\mgmt\search\models\resource.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Base type for all Azure resources.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: Resource(location, tags=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.search.models.Resource
 references: []

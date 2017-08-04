@@ -6,10 +6,6 @@ items:
   - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
   - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
   - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
   class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
   fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: SecurityRulesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2015-06-15".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
 - class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
   langs:
@@ -88,7 +84,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the network security
 
@@ -96,13 +92,13 @@ items:
 
         '
       id: network_security_group_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the security rule.
 
         '
       id: security_rule_name
-      type: &id006
+      type:
       - str
     - description: 'Parameters supplied to the create or
 
@@ -110,14 +106,14 @@ items:
 
         '
       id: security_rule_parameters
-      type: &id007
+      type:
       - azure.mgmt.network.v2015_06_15.models.SecurityRule
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,20 +122,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2015_06_15.models.SecurityRule'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
 - class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
   langs:
@@ -165,7 +161,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the network security
 
@@ -173,20 +169,20 @@ items:
 
         '
       id: network_security_group_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the security rule.
 
         '
       id: security_rule_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -195,20 +191,20 @@ items:
 
         '
       id: raw
-      type: &id017
-      - bool
-    return: &id018
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
 - class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
   langs:
@@ -234,7 +230,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the network security
 
@@ -242,20 +238,20 @@ items:
 
         '
       id: network_security_group_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the security rule.
 
         '
       id: security_rule_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -264,7 +260,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -272,16 +268,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.SecurityRule
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
 - class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
   langs:
@@ -307,7 +303,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the network security
 
@@ -315,14 +311,14 @@ items:
 
         '
       id: network_security_group_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -331,7 +327,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -339,334 +335,12 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.mgmt.network.v2015_06_15.models.SecurityRulePaged
   type: method
   uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-- children:
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-  - azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-  class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: SecurityRulesOperations
-  source:
-    id: SecurityRulesOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'SecurityRulesOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: SecurityRulesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-- &id011
-  class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 186
-  summary: 'Creates or updates a security rule in the specified network security
-
-    group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, network_security_group_name, security_rule_name,
-      security_rule_parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the network security
-
-        group.
-
-        '
-      id: network_security_group_name
-      type: *id005
-    - description: 'The name of the security rule.
-
-        '
-      id: security_rule_name
-      type: *id006
-    - description: 'Parameters supplied to the create or
-
-        update network security rule operation.
-
-        '
-      id: security_rule_parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: *id012
-  fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes the specified network security rule.
-
-    '
-  syntax:
-    content: delete(resource_group_name, network_security_group_name, security_rule_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the network security
-
-        group.
-
-        '
-      id: network_security_group_name
-      type: *id014
-    - description: 'The name of the security rule.
-
-        '
-      id: security_rule_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    return: *id018
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: *id020
-  fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 120
-  summary: 'Get the specified network security rule.
-
-    '
-  syntax:
-    content: get(resource_group_name, network_security_group_name, security_rule_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the network security
-
-        group.
-
-        '
-      id: network_security_group_name
-      type: *id022
-    - description: 'The name of the security rule.
-
-        '
-      id: security_rule_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-- *id027
-- &id034
-  class: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  exceptions: *id028
-  fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2015_06_15.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\operations\security_rules_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 286
-  summary: 'Gets all security rules in a network security group.
-
-    '
-  syntax:
-    content: list(resource_group_name, network_security_group_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the network security
-
-        group.
-
-        '
-      id: network_security_group_name
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-- *id034
 references:
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.delete
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.get
-- fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations
-  uid: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.list
 - fullName: azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations.create_or_update
   isExternal: false
   name: create_or_update

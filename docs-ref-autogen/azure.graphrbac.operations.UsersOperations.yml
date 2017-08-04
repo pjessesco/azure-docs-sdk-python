@@ -8,12 +8,6 @@ items:
   - azure.graphrbac.operations.UsersOperations.get_member_groups
   - azure.graphrbac.operations.UsersOperations.list
   - azure.graphrbac.operations.UsersOperations.update
-  - azure.graphrbac.operations.UsersOperations.create
-  - azure.graphrbac.operations.UsersOperations.delete
-  - azure.graphrbac.operations.UsersOperations.get
-  - azure.graphrbac.operations.UsersOperations.get_member_groups
-  - azure.graphrbac.operations.UsersOperations.list
-  - azure.graphrbac.operations.UsersOperations.update
   class: azure.graphrbac.operations.UsersOperations
   fullName: azure.graphrbac.operations.UsersOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: UsersOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "1.6".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.graphrbac.operations.UsersOperations
 - class: azure.graphrbac.operations.UsersOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.UsersOperations.create
   langs:
@@ -91,14 +85,14 @@ items:
 
         '
       id: parameters
-      type: &id004
+      type:
       - azure.graphrbac.models.UserCreateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id005
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -107,7 +101,7 @@ items:
 
         '
       id: raw
-      type: &id006
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -115,16 +109,16 @@ items:
 
         '
       id: operation_config
-    return: &id007
+    return:
       type:
       - azure.graphrbac.models.User
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.UsersOperations.create
 - class: azure.graphrbac.operations.UsersOperations
-  exceptions: &id009
+  exceptions:
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.UsersOperations.delete
   langs:
@@ -151,14 +145,14 @@ items:
 
         '
       id: upn_or_object_id
-      type: &id010
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id011
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -167,7 +161,7 @@ items:
 
         '
       id: raw
-      type: &id012
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -175,16 +169,16 @@ items:
 
         '
       id: operation_config
-    return: &id013
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.UsersOperations.delete
 - class: azure.graphrbac.operations.UsersOperations
-  exceptions: &id015
+  exceptions:
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.UsersOperations.get
   langs:
@@ -211,14 +205,14 @@ items:
 
         '
       id: upn_or_object_id
-      type: &id016
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id017
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -227,7 +221,7 @@ items:
 
         '
       id: raw
-      type: &id018
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -235,16 +229,16 @@ items:
 
         '
       id: operation_config
-    return: &id019
+    return:
       type:
       - azure.graphrbac.models.User
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.UsersOperations.get
 - class: azure.graphrbac.operations.UsersOperations
-  exceptions: &id021
+  exceptions:
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.UsersOperations.get_member_groups
   langs:
@@ -274,7 +268,7 @@ items:
 
         '
       id: object_id
-      type: &id022
+      type:
       - str
     - description: 'If true, only membership in
 
@@ -284,14 +278,14 @@ items:
 
         '
       id: security_enabled_only
-      type: &id023
+      type:
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -300,7 +294,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -308,13 +302,13 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.graphrbac.models.StrPaged
   type: method
   uid: azure.graphrbac.operations.UsersOperations.get_member_groups
 - class: azure.graphrbac.operations.UsersOperations
-  exceptions: &id028
+  exceptions:
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.UsersOperations.list
   langs:
@@ -340,14 +334,14 @@ items:
 
         '
       id: filter
-      type: &id029
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -356,7 +350,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -364,13 +358,13 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - azure.graphrbac.models.UserPaged
   type: method
   uid: azure.graphrbac.operations.UsersOperations.list
 - class: azure.graphrbac.operations.UsersOperations
-  exceptions: &id034
+  exceptions:
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.UsersOperations.update
   langs:
@@ -398,20 +392,20 @@ items:
 
         '
       id: upn_or_object_id
-      type: &id035
+      type:
       - str
     - description: 'Parameters to update an existing user.
 
         '
       id: parameters
-      type: &id036
+      type:
       - azure.graphrbac.models.UserUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id037
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -420,7 +414,7 @@ items:
 
         '
       id: raw
-      type: &id038
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -428,446 +422,15 @@ items:
 
         '
       id: operation_config
-    return: &id039
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.UsersOperations.update
-- children:
-  - azure.graphrbac.operations.UsersOperations.create
-  - azure.graphrbac.operations.UsersOperations.delete
-  - azure.graphrbac.operations.UsersOperations.get
-  - azure.graphrbac.operations.UsersOperations.get_member_groups
-  - azure.graphrbac.operations.UsersOperations.list
-  - azure.graphrbac.operations.UsersOperations.update
-  class: azure.graphrbac.operations.UsersOperations
-  fullName: azure.graphrbac.operations.UsersOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: UsersOperations
-  source:
-    id: UsersOperations
-    path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'UsersOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: UsersOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.graphrbac.operations.UsersOperations
-- &id008
-  class: azure.graphrbac.operations.UsersOperations
-  exceptions: *id003
-  fullName: azure.graphrbac.operations.UsersOperations.create
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: create
-  source:
-    id: create
-    path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Create a new user.
-
-    '
-  syntax:
-    content: create(parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Parameters to create a user.
-
-        '
-      id: parameters
-      type: *id004
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id005
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id006
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id007
-  type: method
-  uid: azure.graphrbac.operations.UsersOperations.create
-- *id008
-- &id014
-  class: azure.graphrbac.operations.UsersOperations
-  exceptions: *id009
-  fullName: azure.graphrbac.operations.UsersOperations.delete
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 285
-  summary: 'Delete a user.
-
-    '
-  syntax:
-    content: delete(upn_or_object_id, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The object ID or principal name of the user
-
-        to delete.
-
-        '
-      id: upn_or_object_id
-      type: *id010
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id011
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id012
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id013
-  type: method
-  uid: azure.graphrbac.operations.UsersOperations.delete
-- *id014
-- &id020
-  class: azure.graphrbac.operations.UsersOperations
-  exceptions: *id015
-  fullName: azure.graphrbac.operations.UsersOperations.get
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: get
-  source:
-    id: get
-    path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 169
-  summary: 'Gets user information from the directory.
-
-    '
-  syntax:
-    content: get(upn_or_object_id, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The object ID or principal name of the user
-
-        for which to get information.
-
-        '
-      id: upn_or_object_id
-      type: *id016
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id017
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id018
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id019
-  type: method
-  uid: azure.graphrbac.operations.UsersOperations.get
-- *id020
-- &id027
-  class: azure.graphrbac.operations.UsersOperations
-  exceptions: *id021
-  fullName: azure.graphrbac.operations.UsersOperations.get_member_groups
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: get_member_groups
-  source:
-    id: get_member_groups
-    path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 336
-  summary: 'Gets a collection that contains the object IDs of the groups of which
-
-    the user is a member.
-
-    '
-  syntax:
-    content: get_member_groups(object_id, security_enabled_only, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The object ID of the user for which to get group
-
-        membership.
-
-        '
-      id: object_id
-      type: *id022
-    - description: 'If true, only membership in
-
-        security-enabled groups should be checked. Otherwise, membership in
-
-        all groups should be checked.
-
-        '
-      id: security_enabled_only
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.graphrbac.operations.UsersOperations.get_member_groups
-- *id027
-- &id033
-  class: azure.graphrbac.operations.UsersOperations
-  exceptions: *id028
-  fullName: azure.graphrbac.operations.UsersOperations.list
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: list
-  source:
-    id: list
-    path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 98
-  summary: 'Gets list of users for the current tenant.
-
-    '
-  syntax:
-    content: list(filter=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.graphrbac.operations.UsersOperations.list
-- *id033
-- &id040
-  class: azure.graphrbac.operations.UsersOperations
-  exceptions: *id034
-  fullName: azure.graphrbac.operations.UsersOperations.update
-  langs:
-  - python
-  module: azure.graphrbac.operations
-  name: update
-  source:
-    id: update
-    path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-    remote:
-      branch: master
-      path: azure-graphrbac\azure\graphrbac\operations\users_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 227
-  summary: 'Updates a user.
-
-    '
-  syntax:
-    content: update(upn_or_object_id, parameters, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The object ID or principal name of the user
-
-        to update.
-
-        '
-      id: upn_or_object_id
-      type: *id035
-    - description: 'Parameters to update an existing user.
-
-        '
-      id: parameters
-      type: *id036
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id037
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id038
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id039
-  type: method
-  uid: azure.graphrbac.operations.UsersOperations.update
-- *id040
 references:
-- fullName: azure.graphrbac.operations.UsersOperations.create
-  isExternal: false
-  name: create
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.create
-- fullName: azure.graphrbac.operations.UsersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.delete
-- fullName: azure.graphrbac.operations.UsersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.get
-- fullName: azure.graphrbac.operations.UsersOperations.get_member_groups
-  isExternal: false
-  name: get_member_groups
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.get_member_groups
-- fullName: azure.graphrbac.operations.UsersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.list
-- fullName: azure.graphrbac.operations.UsersOperations.update
-  isExternal: false
-  name: update
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.update
-- fullName: azure.graphrbac.operations.UsersOperations.create
-  isExternal: false
-  name: create
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.create
-- fullName: azure.graphrbac.operations.UsersOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.delete
-- fullName: azure.graphrbac.operations.UsersOperations.get
-  isExternal: false
-  name: get
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.get
-- fullName: azure.graphrbac.operations.UsersOperations.get_member_groups
-  isExternal: false
-  name: get_member_groups
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.get_member_groups
-- fullName: azure.graphrbac.operations.UsersOperations.list
-  isExternal: false
-  name: list
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.list
-- fullName: azure.graphrbac.operations.UsersOperations.update
-  isExternal: false
-  name: update
-  parent: azure.graphrbac.operations.UsersOperations
-  uid: azure.graphrbac.operations.UsersOperations.update
 - fullName: azure.graphrbac.operations.UsersOperations.create
   isExternal: false
   name: create

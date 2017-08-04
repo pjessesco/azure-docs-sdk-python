@@ -29,7 +29,7 @@ items:
     content: RampUpRule(action_host_name=None, reroute_percentage=None, change_step=None,
       change_interval_in_minutes=None, min_reroute_percentage=None, max_reroute_percentage=None,
       change_decision_callback_url=None, name=None)
-    parameters: &id001
+    parameters:
     - description: 'Hostname of a slot to which the traffic will be
 
         redirected if decided to. E.g. myapp-stage.azurewebsites.net.
@@ -108,37 +108,6 @@ items:
       id: name
       type:
       - str
-  type: class
-  uid: azure.mgmt.web.models.RampUpRule
-- children: []
-  class: azure.mgmt.web.models.RampUpRule
-  fullName: azure.mgmt.web.models.RampUpRule
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.mgmt.web.models
-  name: RampUpRule
-  source:
-    id: RampUpRule
-    path: azure-mgmt-web\azure\mgmt\web\models\ramp_up_rule.py
-    remote:
-      branch: master
-      path: azure-mgmt-web\azure\mgmt\web\models\ramp_up_rule.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Routing rules for ramp up testing. This rule allows to redirect static
-
-    traffic % to a slot or to gradually change routing % based on performance.
-
-    '
-  syntax:
-    content: RampUpRule(action_host_name=None, reroute_percentage=None, change_step=None,
-      change_interval_in_minutes=None, min_reroute_percentage=None, max_reroute_percentage=None,
-      change_decision_callback_url=None, name=None)
-    parameters: *id001
   type: class
   uid: azure.mgmt.web.models.RampUpRule
 references: []

@@ -39,7 +39,7 @@ items:
     '
   syntax:
     content: Origin(location, host_name, tags=None, http_port=None, https_port=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource location.
 
         '
@@ -74,7 +74,7 @@ items:
       id: https_port
       type:
       - int
-    variables: &id002
+    variables:
     - description: 'Resource ID.
 
         '
@@ -109,48 +109,6 @@ items:
       id: provisioning_state
       type:
       - str
-  type: class
-  uid: azure.mgmt.cdn.models.Origin
-- children: []
-  class: azure.mgmt.cdn.models.Origin
-  fullName: azure.mgmt.cdn.models.Origin
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.cdn.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.cdn.models
-  name: Origin
-  source:
-    id: Origin
-    path: azure-mgmt-cdn\azure\mgmt\cdn\models\origin.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\models\origin.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'CDN origin is the source of the content being delivered via CDN. When
-    the
-
-    edge nodes represented by an endpoint do not have the requested content
-
-    cached, they attempt to fetch it from one or more of the configured
-
-    origins.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: Origin(location, host_name, tags=None, http_port=None, https_port=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.cdn.models.Origin
 references: []

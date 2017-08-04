@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-  - azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
   class: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
   fullName: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: UsageOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
 - class: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
   langs:
@@ -79,7 +78,7 @@ items:
 
         '
       id: custom_headers
-      type: &id004
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -88,7 +87,7 @@ items:
 
         '
       id: raw
-      type: &id005
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -96,7 +95,7 @@ items:
 
         '
       id: operation_config
-    return: &id006
+    return:
       description: 'An iterator like instance of @azure.mgmt.storage.v2016_12_01.models.Usage
 
         '
@@ -104,93 +103,7 @@ items:
       - azure.mgmt.storage.v2016_12_01.models.UsagePaged
   type: method
   uid: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-- children:
-  - azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-  class: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
-  fullName: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.storage.v2016_12_01.operations
-  name: UsageOperations
-  source:
-    id: UsageOperations
-    path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\operations\usage_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\operations\usage_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'UsageOperations operations.
-
-
-    '
-  syntax:
-    content: UsageOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
-- &id007
-  class: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
-  exceptions: *id003
-  fullName: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-  langs:
-  - python
-  module: azure.mgmt.storage.v2016_12_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\operations\usage_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\operations\usage_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Gets the current usage count and the limit for the resources under the
-
-    subscription.
-
-    '
-  syntax:
-    content: list(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id004
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id005
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id006
-  type: method
-  uid: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-- *id007
 references:
-- fullName: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
-  uid: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-- fullName: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.storage.v2016_12_01.operations.UsageOperations
-  uid: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
 - fullName: azure.mgmt.storage.v2016_12_01.operations.UsageOperations.list
   isExternal: false
   name: list

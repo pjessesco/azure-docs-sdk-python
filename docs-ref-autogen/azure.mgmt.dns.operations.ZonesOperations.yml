@@ -7,11 +7,6 @@ items:
   - azure.mgmt.dns.operations.ZonesOperations.get
   - azure.mgmt.dns.operations.ZonesOperations.list
   - azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-  - azure.mgmt.dns.operations.ZonesOperations.create_or_update
-  - azure.mgmt.dns.operations.ZonesOperations.delete
-  - azure.mgmt.dns.operations.ZonesOperations.get
-  - azure.mgmt.dns.operations.ZonesOperations.list
-  - azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
   class: azure.mgmt.dns.operations.ZonesOperations
   fullName: azure.mgmt.dns.operations.ZonesOperations
   inheritance:
@@ -38,7 +33,7 @@ items:
     '
   syntax:
     content: ZonesOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -55,7 +50,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Specifies the API version. Constant value: "2016-04-01".
 
         '
@@ -63,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.dns.operations.ZonesOperations
 - class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.ZonesOperations.create_or_update
   langs:
@@ -91,7 +86,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -99,7 +94,7 @@ items:
 
         '
       id: zone_name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the CreateOrUpdate
 
@@ -107,7 +102,7 @@ items:
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.dns.models.Zone
     - defaultValue: None
       description: 'The etag of the DNS zone. Omit this value to always
@@ -118,7 +113,7 @@ items:
 
         '
       id: if_match
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'Set to ''*'' to allow a new DNS zone to be
@@ -129,14 +124,14 @@ items:
 
         '
       id: if_none_match
-      type: &id008
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id009
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -145,7 +140,7 @@ items:
 
         '
       id: raw
-      type: &id010
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -153,16 +148,16 @@ items:
 
         '
       id: operation_config
-    return: &id011
+    return:
       type:
       - azure.mgmt.dns.models.Zone
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.dns.operations.ZonesOperations.create_or_update
 - class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: &id013
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.ZonesOperations.delete
   langs:
@@ -190,7 +185,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -198,7 +193,7 @@ items:
 
         '
       id: zone_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'The etag of the DNS zone. Omit this value to always
@@ -209,14 +204,14 @@ items:
 
         '
       id: if_match
-      type: &id016
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id017
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -225,20 +220,20 @@ items:
 
         '
       id: raw
-      type: &id018
-      - bool
-    return: &id019
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.dns.models.ZoneDeleteResult'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.dns.operations.ZonesOperations.delete
 - class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: &id021
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.ZonesOperations.get
   langs:
@@ -265,7 +260,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -273,14 +268,14 @@ items:
 
         '
       id: zone_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -289,7 +284,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -297,16 +292,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.dns.models.Zone
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.dns.operations.ZonesOperations.get
 - class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.ZonesOperations.list
   langs:
@@ -334,14 +329,14 @@ items:
 
         '
       id: top
-      type: &id029
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id030
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -350,7 +345,7 @@ items:
 
         '
       id: raw
-      type: &id031
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -358,13 +353,13 @@ items:
 
         '
       id: operation_config
-    return: &id032
+    return:
       type:
       - azure.mgmt.dns.models.ZonePaged
   type: method
   uid: azure.mgmt.dns.operations.ZonesOperations.list
 - class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: &id034
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
   langs:
@@ -390,7 +385,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of record sets to return. If not
@@ -399,14 +394,14 @@ items:
 
         '
       id: top
-      type: &id036
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id037
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -415,7 +410,7 @@ items:
 
         '
       id: raw
-      type: &id038
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -423,425 +418,12 @@ items:
 
         '
       id: operation_config
-    return: &id039
+    return:
       type:
       - azure.mgmt.dns.models.ZonePaged
   type: method
   uid: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-- children:
-  - azure.mgmt.dns.operations.ZonesOperations.create_or_update
-  - azure.mgmt.dns.operations.ZonesOperations.delete
-  - azure.mgmt.dns.operations.ZonesOperations.get
-  - azure.mgmt.dns.operations.ZonesOperations.list
-  - azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-  class: azure.mgmt.dns.operations.ZonesOperations
-  fullName: azure.mgmt.dns.operations.ZonesOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.dns.operations
-  name: ZonesOperations
-  source:
-    id: ZonesOperations
-    path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'ZonesOperations operations.
-
-
-
-
-
-
-    '
-  syntax:
-    content: ZonesOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.dns.operations.ZonesOperations
-- &id012
-  class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: *id003
-  fullName: azure.mgmt.dns.operations.ZonesOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.dns.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Creates or updates a DNS zone. Does not modify DNS records within the
-
-    zone.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, zone_name, parameters, if_match=None,
-      if_none_match=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the DNS zone (without a terminating
-
-        dot).
-
-        '
-      id: zone_name
-      type: *id005
-    - description: 'Parameters supplied to the CreateOrUpdate
-
-        operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'The etag of the DNS zone. Omit this value to always
-
-        overwrite the current zone. Specify the last-seen etag value to
-
-        prevent accidentally overwritting any concurrent changes.
-
-        '
-      id: if_match
-      type: *id007
-    - defaultValue: None
-      description: 'Set to ''*'' to allow a new DNS zone to be
-
-        created, but to prevent updating an existing zone. Other values will
-
-        be ignored.
-
-        '
-      id: if_none_match
-      type: *id008
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id009
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id010
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id011
-  type: method
-  uid: azure.mgmt.dns.operations.ZonesOperations.create_or_update
-- *id012
-- &id020
-  class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: *id013
-  fullName: azure.mgmt.dns.operations.ZonesOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.dns.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 123
-  summary: 'Deletes a DNS zone. WARNING: All DNS records in the zone will also be
-
-    deleted. This operation cannot be undone.
-
-    '
-  syntax:
-    content: delete(resource_group_name, zone_name, if_match=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id014
-    - description: 'The name of the DNS zone (without a terminating
-
-        dot).
-
-        '
-      id: zone_name
-      type: *id015
-    - defaultValue: None
-      description: 'The etag of the DNS zone. Omit this value to always
-
-        delete the current zone. Specify the last-seen etag value to prevent
-
-        accidentally deleting any concurrent changes.
-
-        '
-      id: if_match
-      type: *id016
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id017
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id018
-    return: *id019
-  type: method
-  uid: azure.mgmt.dns.operations.ZonesOperations.delete
-- *id020
-- &id027
-  class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: *id021
-  fullName: azure.mgmt.dns.operations.ZonesOperations.get
-  langs:
-  - python
-  module: azure.mgmt.dns.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 216
-  summary: 'Gets a DNS zone. Retrieves the zone properties, but not the record sets
-
-    within the zone.
-
-    '
-  syntax:
-    content: get(resource_group_name, zone_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id022
-    - description: 'The name of the DNS zone (without a terminating
-
-        dot).
-
-        '
-      id: zone_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.dns.operations.ZonesOperations.get
-- *id027
-- &id033
-  class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: *id028
-  fullName: azure.mgmt.dns.operations.ZonesOperations.list
-  langs:
-  - python
-  module: azure.mgmt.dns.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 349
-  summary: 'Lists the DNS zones in all resource groups in a subscription.
-
-    '
-  syntax:
-    content: list(top=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'The maximum number of DNS zones to return. If not
-
-        specified, returns up to 100 zones.
-
-        '
-      id: top
-      type: *id029
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id030
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id031
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id032
-  type: method
-  uid: azure.mgmt.dns.operations.ZonesOperations.list
-- *id033
-- &id040
-  class: azure.mgmt.dns.operations.ZonesOperations
-  exceptions: *id034
-  fullName: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.dns.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-dns\azure\mgmt\dns\operations\zones_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 279
-  summary: 'Lists the DNS zones within a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, top=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id035
-    - defaultValue: None
-      description: 'The maximum number of record sets to return. If not
-
-        specified, returns up to 100 record sets.
-
-        '
-      id: top
-      type: *id036
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id037
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id038
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id039
-  type: method
-  uid: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-- *id040
 references:
-- fullName: azure.mgmt.dns.operations.ZonesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.create_or_update
-- fullName: azure.mgmt.dns.operations.ZonesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.delete
-- fullName: azure.mgmt.dns.operations.ZonesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.get
-- fullName: azure.mgmt.dns.operations.ZonesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.list
-- fullName: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-- fullName: azure.mgmt.dns.operations.ZonesOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.create_or_update
-- fullName: azure.mgmt.dns.operations.ZonesOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.delete
-- fullName: azure.mgmt.dns.operations.ZonesOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.get
-- fullName: azure.mgmt.dns.operations.ZonesOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.list
-- fullName: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.dns.operations.ZonesOperations
-  uid: azure.mgmt.dns.operations.ZonesOperations.list_by_resource_group
 - fullName: azure.mgmt.dns.operations.ZonesOperations.create_or_update
   isExternal: false
   name: create_or_update

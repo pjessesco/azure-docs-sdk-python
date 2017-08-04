@@ -34,7 +34,7 @@ items:
       network_configuration=None, start_task=None, certificate_references=None, application_package_references=None,
       application_licenses=None, max_tasks_per_node=None, task_scheduling_policy=None,
       user_accounts=None, metadata=None, stats=None)
-    parameters: &id001
+    parameters:
     - description: 'A string that uniquely identifies the pool within the account.
 
         The ID can contain any combination of alphanumeric characters including
@@ -441,42 +441,6 @@ items:
       id: stats
       type:
       - azure.batch.models.PoolStatistics
-  type: class
-  uid: azure.batch.models.CloudPool
-- children: []
-  class: azure.batch.models.CloudPool
-  fullName: azure.batch.models.CloudPool
-  inheritance:
-  - inheritance:
-    - type: builtins.object
-    type: msrest.serialization.Model
-  langs:
-  - python
-  module: azure.batch.models
-  name: CloudPool
-  source:
-    id: CloudPool
-    path: azure-batch\azure\batch\models\cloud_pool.py
-    remote:
-      branch: master
-      path: azure-batch\azure\batch\models\cloud_pool.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'A pool in the Azure Batch service.
-
-    '
-  syntax:
-    content: CloudPool(id=None, display_name=None, url=None, e_tag=None, last_modified=None,
-      creation_time=None, state=None, state_transition_time=None, allocation_state=None,
-      allocation_state_transition_time=None, vm_size=None, cloud_service_configuration=None,
-      virtual_machine_configuration=None, resize_timeout=None, resize_errors=None,
-      current_dedicated_nodes=None, current_low_priority_nodes=None, target_dedicated_nodes=None,
-      target_low_priority_nodes=None, enable_auto_scale=None, auto_scale_formula=None,
-      auto_scale_evaluation_interval=None, auto_scale_run=None, enable_inter_node_communication=None,
-      network_configuration=None, start_task=None, certificate_references=None, application_package_references=None,
-      application_licenses=None, max_tasks_per_node=None, task_scheduling_policy=None,
-      user_accounts=None, metadata=None, stats=None)
-    parameters: *id001
   type: class
   uid: azure.batch.models.CloudPool
 references: []

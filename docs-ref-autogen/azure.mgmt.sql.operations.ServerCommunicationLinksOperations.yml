@@ -6,10 +6,6 @@ items:
   - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
   - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
   - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
   class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
   fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: ServerCommunicationLinksOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version to use for the request. Constant value: "2014-04-01".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
 - class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
   langs:
@@ -90,13 +86,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the server communication
 
@@ -104,20 +100,20 @@ items:
 
         '
       id: communication_link_name
-      type: &id006
+      type:
       - str
     - description: 'The name of the partner server.
 
         '
       id: partner_server
-      type: &id007
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,20 +122,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.ServerCommunicationLink'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
 - class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
   langs:
@@ -169,13 +165,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the server communication
 
@@ -183,14 +179,14 @@ items:
 
         '
       id: communication_link_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -199,7 +195,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -207,16 +203,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
 - class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
   langs:
@@ -246,13 +242,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the server communication
 
@@ -260,14 +256,14 @@ items:
 
         '
       id: communication_link_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -276,7 +272,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -284,16 +280,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.sql.models.ServerCommunicationLink
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
 - class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
   langs:
@@ -323,20 +319,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -345,7 +341,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -353,350 +349,12 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       type:
       - azure.mgmt.sql.models.ServerCommunicationLinkPaged
   type: method
   uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-- children:
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-  - azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-  class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: ServerCommunicationLinksOperations
-  source:
-    id: ServerCommunicationLinksOperations
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'ServerCommunicationLinksOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: ServerCommunicationLinksOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-- &id011
-  class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: *id003
-  fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 167
-  summary: 'Creates a server communication link.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, server_name, communication_link_name,
-      partner_server, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id005
-    - description: 'The name of the server communication
-
-        link.
-
-        '
-      id: communication_link_name
-      type: *id006
-    - description: 'The name of the partner server.
-
-        '
-      id: partner_server
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: *id012
-  fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Deletes a server communication link.
-
-    '
-  syntax:
-    content: delete(resource_group_name, server_name, communication_link_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id014
-    - description: 'The name of the server communication
-
-        link.
-
-        '
-      id: communication_link_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: *id020
-  fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 99
-  summary: 'Returns a server communication link.
-
-    '
-  syntax:
-    content: get(resource_group_name, server_name, communication_link_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id022
-    - description: 'The name of the server communication
-
-        link.
-
-        '
-      id: communication_link_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-- *id027
-- &id034
-  class: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  exceptions: *id028
-  fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_by_server
-  source:
-    id: list_by_server
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_communication_links_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 266
-  summary: 'Gets a list of server communication links.
-
-    '
-  syntax:
-    content: list_by_server(resource_group_name, server_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-- *id034
 references:
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-  isExternal: false
-  name: list_by_server
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.delete
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.get
-- fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
-  isExternal: false
-  name: list_by_server
-  parent: azure.mgmt.sql.operations.ServerCommunicationLinksOperations
-  uid: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.list_by_server
 - fullName: azure.mgmt.sql.operations.ServerCommunicationLinksOperations.create_or_update
   isExternal: false
   name: create_or_update

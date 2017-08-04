@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: FirewallRule(start_ip_address, end_ip_address)
-    parameters: &id001
+    parameters:
     - description: 'The start IP address of the server firewall rule.
 
         Must be IPv4 format.
@@ -49,7 +49,7 @@ items:
       id: end_ip_address
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Resource ID
 
         '
@@ -68,41 +68,6 @@ items:
       id: type
       type:
       - str
-  type: class
-  uid: azure.mgmt.rdbms.postgresql.models.FirewallRule
-- children: []
-  class: azure.mgmt.rdbms.postgresql.models.FirewallRule
-  fullName: azure.mgmt.rdbms.postgresql.models.FirewallRule
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.rdbms.postgresql.models.proxy_resource.ProxyResource
-  langs:
-  - python
-  module: azure.mgmt.rdbms.postgresql.models
-  name: FirewallRule
-  source:
-    id: FirewallRule
-    path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\models\firewall_rule.py
-    remote:
-      branch: master
-      path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\models\firewall_rule.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Represents a server firewall rule.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: FirewallRule(start_ip_address, end_ip_address)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.rdbms.postgresql.models.FirewallRule
 references: []

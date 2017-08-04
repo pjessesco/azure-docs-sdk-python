@@ -8,12 +8,6 @@ items:
   - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
   - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
   - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
   class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
   fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
   inheritance:
@@ -41,7 +35,7 @@ items:
     '
   syntax:
     content: ActivityLogAlertsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -58,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2017-04-01".
 
         '
@@ -66,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
 - class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: &id003
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
   langs:
@@ -92,13 +86,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the activity log alert.
 
         '
       id: activity_log_alert_name
-      type: &id005
+      type:
       - str
     - description: 'The activity log alert to create or use for
 
@@ -106,14 +100,14 @@ items:
 
         '
       id: activity_log_alert
-      type: &id006
+      type:
       - azure.mgmt.monitor.models.ActivityLogAlertResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,7 +116,7 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -130,16 +124,16 @@ items:
 
         '
       id: operation_config
-    return: &id009
+    return:
       type:
       - azure.mgmt.monitor.models.ActivityLogAlertResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
 - class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: &id011
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
   langs:
@@ -165,20 +159,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the activity log alert.
 
         '
       id: activity_log_alert_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -187,7 +181,7 @@ items:
 
         '
       id: raw
-      type: &id015
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -195,16 +189,16 @@ items:
 
         '
       id: operation_config
-    return: &id016
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
 - class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: &id018
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
   langs:
@@ -230,20 +224,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the activity log alert.
 
         '
       id: activity_log_alert_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -252,7 +246,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -260,16 +254,16 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       type:
       - azure.mgmt.monitor.models.ActivityLogAlertResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
 - class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: &id025
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
   langs:
@@ -295,14 +289,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -311,7 +305,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -319,13 +313,13 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - azure.mgmt.monitor.models.ActivityLogAlertResourcePaged
   type: method
   uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
 - class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: &id031
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
   langs:
@@ -351,7 +345,7 @@ items:
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -360,7 +354,7 @@ items:
 
         '
       id: raw
-      type: &id033
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -368,13 +362,13 @@ items:
 
         '
       id: operation_config
-    return: &id034
+    return:
       type:
       - azure.mgmt.monitor.models.ActivityLogAlertResourcePaged
   type: method
   uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
 - class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: &id036
+  exceptions:
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
   langs:
@@ -402,20 +396,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the activity log alert.
 
         '
       id: activity_log_alert_name
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'Resource tags
 
         '
       id: tags
-      type: &id039
+      type:
       - dict
     - defaultValue: 'True'
       description: 'Indicates whether this activity log alert is enabled.
@@ -426,14 +420,14 @@ items:
 
         '
       id: enabled
-      type: &id040
+      type:
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -442,7 +436,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -450,464 +444,15 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.mgmt.monitor.models.ActivityLogAlertResource
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-- children:
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-  - azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-  class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: ActivityLogAlertsOperations
-  source:
-    id: ActivityLogAlertsOperations
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 18
-  summary: 'ActivityLogAlertsOperations operations.
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ActivityLogAlertsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-- &id010
-  class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 37
-  summary: 'Create a new activity log alert or update an existing one.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, activity_log_alert_name, activity_log_alert,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the activity log alert.
-
-        '
-      id: activity_log_alert_name
-      type: *id005
-    - description: 'The activity log alert to create or use for
-
-        the update.
-
-        '
-      id: activity_log_alert
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id009
-  type: method
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: *id011
-  fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 169
-  summary: 'Delete an activity log alert.
-
-    '
-  syntax:
-    content: delete(resource_group_name, activity_log_alert_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the activity log alert.
-
-        '
-      id: activity_log_alert_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id016
-  type: method
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: *id018
-  fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 108
-  summary: 'Get an activity log alert.
-
-    '
-  syntax:
-    content: get(resource_group_name, activity_log_alert_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the activity log alert.
-
-        '
-      id: activity_log_alert_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-- *id024
-- &id030
-  class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: *id025
-  fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: list_by_resource_group
-  source:
-    id: list_by_resource_group
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 358
-  summary: 'Get a list of all activity log alerts in a resource group.
-
-    '
-  syntax:
-    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-- *id030
-- &id035
-  class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: *id031
-  fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: list_by_subscription_id
-  source:
-    id: list_by_subscription_id
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 296
-  summary: 'Get a list of all activity log alerts in a subscription.
-
-    '
-  syntax:
-    content: list_by_subscription_id(custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id034
-  type: method
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-- *id035
-- &id044
-  class: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  exceptions: *id036
-  fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.monitor.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\activity_log_alerts_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 222
-  summary: 'Updates an existing ActivityLogAlertResource''s tags. To update other
-
-    fields use the CreateOrUpdate method.
-
-    '
-  syntax:
-    content: update(resource_group_name, activity_log_alert_name, tags=None, enabled=True,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - description: 'The name of the activity log alert.
-
-        '
-      id: activity_log_alert_name
-      type: *id038
-    - defaultValue: None
-      description: 'Resource tags
-
-        '
-      id: tags
-      type: *id039
-    - defaultValue: 'True'
-      description: 'Indicates whether this activity log alert is enabled.
-
-        If an activity log alert is not enabled, then none of its actions will
-
-        be activated.
-
-        '
-      id: enabled
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-- *id044
 references:
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-  isExternal: false
-  name: list_by_subscription_id
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.delete
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.get
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-  isExternal: false
-  name: list_by_resource_group
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_resource_group
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-  isExternal: false
-  name: list_by_subscription_id
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.list_by_subscription_id
-- fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.monitor.operations.ActivityLogAlertsOperations
-  uid: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.update
 - fullName: azure.mgmt.monitor.operations.ActivityLogAlertsOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: FirewallRule(start_ip_address, end_ip_address, name=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource name
 
         '
@@ -55,7 +55,7 @@ items:
       id: end_ip_address
       type:
       - str
-    variables: &id002
+    variables:
     - description: 'Resource Id
 
         '
@@ -68,41 +68,6 @@ items:
       id: type
       type:
       - str
-  type: class
-  uid: azure.mgmt.datalake.store.models.FirewallRule
-- children: []
-  class: azure.mgmt.datalake.store.models.FirewallRule
-  fullName: azure.mgmt.datalake.store.models.FirewallRule
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.datalake.store.models.sub_resource.SubResource
-  langs:
-  - python
-  module: azure.mgmt.datalake.store.models
-  name: FirewallRule
-  source:
-    id: FirewallRule
-    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\models\firewall_rule.py
-    remote:
-      branch: master
-      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\models\firewall_rule.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'Data Lake Store firewall rule information.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: FirewallRule(start_ip_address, end_ip_address, name=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.datalake.store.models.FirewallRule
 references: []

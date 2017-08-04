@@ -12,16 +12,6 @@ items:
   - azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
   - azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
   - azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.get
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
   class: azure.mgmt.sql.operations.ElasticPoolsOperations
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations
   inheritance:
@@ -53,7 +43,7 @@ items:
     '
   syntax:
     content: ElasticPoolsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -70,7 +60,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version to use for the request. Constant value: "2014-04-01".
 
         '
@@ -78,7 +68,7 @@ items:
   type: class
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
   langs:
@@ -108,13 +98,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the elastic pool to be operated
 
@@ -122,7 +112,7 @@ items:
 
         '
       id: elastic_pool_name
-      type: &id006
+      type:
       - str
     - description: 'The required parameters for creating or updating an
 
@@ -130,14 +120,14 @@ items:
 
         '
       id: parameters
-      type: &id007
+      type:
       - azure.mgmt.sql.models.ElasticPool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -146,20 +136,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.ElasticPool'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
   langs:
@@ -189,26 +179,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the elastic pool to be deleted.
 
         '
       id: elastic_pool_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -217,7 +207,7 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -225,16 +215,16 @@ items:
 
         '
       id: operation_config
-    return: &id018
+    return:
       type:
       - None
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get
   langs:
@@ -264,13 +254,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the elastic pool to be
 
@@ -278,14 +268,14 @@ items:
 
         '
       id: elastic_pool_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -294,7 +284,7 @@ items:
 
         '
       id: raw
-      type: &id025
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -302,16 +292,16 @@ items:
 
         '
       id: operation_config
-    return: &id026
+    return:
       type:
       - azure.mgmt.sql.models.ElasticPool
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
   langs:
@@ -341,13 +331,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id030
+      type:
       - str
     - description: 'The name of the elastic pool to be
 
@@ -355,20 +345,20 @@ items:
 
         '
       id: elastic_pool_name
-      type: &id031
+      type:
       - str
     - description: 'The name of the database to be retrieved.
 
         '
       id: database_name
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id033
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -377,7 +367,7 @@ items:
 
         '
       id: raw
-      type: &id034
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -385,16 +375,16 @@ items:
 
         '
       id: operation_config
-    return: &id035
+    return:
       type:
       - azure.mgmt.sql.models.Database
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id037
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
   langs:
@@ -424,13 +414,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id038
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id039
+      type:
       - str
     - description: 'The name of the elastic pool for which to
 
@@ -438,14 +428,14 @@ items:
 
         '
       id: elastic_pool_name
-      type: &id040
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -454,7 +444,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -462,13 +452,13 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       type:
       - azure.mgmt.sql.models.ElasticPoolActivityPaged
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id045
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
   langs:
@@ -498,20 +488,20 @@ items:
 
         '
       id: resource_group_name
-      type: &id046
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id047
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id048
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -520,7 +510,7 @@ items:
 
         '
       id: raw
-      type: &id049
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -528,13 +518,13 @@ items:
 
         '
       id: operation_config
-    return: &id050
+    return:
       type:
       - azure.mgmt.sql.models.ElasticPoolPaged
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id052
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
   langs:
@@ -564,26 +554,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id053
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id054
+      type:
       - str
     - description: 'The name of the elastic pool.
 
         '
       id: elastic_pool_name
-      type: &id055
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id056
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -592,7 +582,7 @@ items:
 
         '
       id: raw
-      type: &id057
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -600,13 +590,13 @@ items:
 
         '
       id: operation_config
-    return: &id058
+    return:
       type:
       - azure.mgmt.sql.models.ElasticPoolDatabaseActivityPaged
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id060
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
   langs:
@@ -636,13 +626,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id061
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id062
+      type:
       - str
     - description: 'The name of the elastic pool to be
 
@@ -650,14 +640,14 @@ items:
 
         '
       id: elastic_pool_name
-      type: &id063
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id064
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -666,7 +656,7 @@ items:
 
         '
       id: raw
-      type: &id065
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -674,13 +664,13 @@ items:
 
         '
       id: operation_config
-    return: &id066
+    return:
       type:
       - azure.mgmt.sql.models.DatabasePaged
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id068
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
   langs:
@@ -710,26 +700,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id069
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id070
+      type:
       - str
     - description: 'The name of the elastic pool.
 
         '
       id: elastic_pool_name
-      type: &id071
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id072
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -738,7 +728,7 @@ items:
 
         '
       id: raw
-      type: &id073
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -746,13 +736,13 @@ items:
 
         '
       id: operation_config
-    return: &id074
+    return:
       type:
       - azure.mgmt.sql.models.MetricDefinitionPaged
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
 - class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: &id076
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
   langs:
@@ -782,19 +772,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id077
+      type:
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type: &id078
+      type:
       - str
     - description: 'The name of the elastic pool.
 
         '
       id: elastic_pool_name
-      type: &id079
+      type:
       - str
     - description: 'An OData filter expression that describes a subset of
 
@@ -802,14 +792,14 @@ items:
 
         '
       id: filter
-      type: &id080
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id081
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -818,7 +808,7 @@ items:
 
         '
       id: raw
-      type: &id082
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -826,836 +816,12 @@ items:
 
         '
       id: operation_config
-    return: &id083
+    return:
       type:
       - azure.mgmt.sql.models.MetricPaged
   type: method
   uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-- children:
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.get
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-  - azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: ElasticPoolsOperations
-  source:
-    id: ElasticPoolsOperations
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'ElasticPoolsOperations operations.
-
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: ElasticPoolsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations
-- &id011
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 190
-  summary: 'Creates a new elastic pool or updates an existing elastic pool.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, server_name, elastic_pool_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id005
-    - description: 'The name of the elastic pool to be operated
-
-        on (updated or created).
-
-        '
-      id: elastic_pool_name
-      type: *id006
-    - description: 'The required parameters for creating or updating an
-
-        elastic pool.
-
-        '
-      id: parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 291
-  summary: 'Deletes the elastic pool.
-
-    '
-  syntax:
-    content: delete(resource_group_name, server_name, elastic_pool_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id014
-    - description: 'The name of the elastic pool to be deleted.
-
-        '
-      id: elastic_pool_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id018
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 350
-  summary: 'Gets an elastic pool.
-
-    '
-  syntax:
-    content: get(resource_group_name, server_name, elastic_pool_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id022
-    - description: 'The name of the elastic pool to be
-
-        retrieved.
-
-        '
-      id: elastic_pool_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id026
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get
-- *id027
-- &id036
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id028
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: get_database
-  source:
-    id: get_database
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 637
-  summary: 'Gets a database inside of an elastic pool.
-
-    '
-  syntax:
-    content: get_database(resource_group_name, server_name, elastic_pool_name, database_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id030
-    - description: 'The name of the elastic pool to be
-
-        retrieved.
-
-        '
-      id: elastic_pool_name
-      type: *id031
-    - description: 'The name of the database to be retrieved.
-
-        '
-      id: database_name
-      type: *id032
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id033
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id034
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id035
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-- *id036
-- &id044
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id037
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_activity
-  source:
-    id: list_activity
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 488
-  summary: 'Returns elastic pool activities.
-
-    '
-  syntax:
-    content: list_activity(resource_group_name, server_name, elastic_pool_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id038
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id039
-    - description: 'The name of the elastic pool for which to
-
-        get the current activity.
-
-        '
-      id: elastic_pool_name
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-- *id044
-- &id051
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id045
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_by_server
-  source:
-    id: list_by_server
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 417
-  summary: 'Returns a list of elastic pools in a server.
-
-    '
-  syntax:
-    content: list_by_server(resource_group_name, server_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id046
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id047
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id048
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id049
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id050
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-- *id051
-- &id059
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id052
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_database_activity
-  source:
-    id: list_database_activity
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 563
-  summary: 'Returns activity on databases inside of an elastic pool.
-
-    '
-  syntax:
-    content: list_database_activity(resource_group_name, server_name, elastic_pool_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id053
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id054
-    - description: 'The name of the elastic pool.
-
-        '
-      id: elastic_pool_name
-      type: *id055
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id056
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id057
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id058
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-- *id059
-- &id067
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id060
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_databases
-  source:
-    id: list_databases
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 707
-  summary: 'Returns a list of databases in an elastic pool.
-
-    '
-  syntax:
-    content: list_databases(resource_group_name, server_name, elastic_pool_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id061
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id062
-    - description: 'The name of the elastic pool to be
-
-        retrieved.
-
-        '
-      id: elastic_pool_name
-      type: *id063
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id064
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id065
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id066
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-- *id067
-- &id075
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id068
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_metric_definitions
-  source:
-    id: list_metric_definitions
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 116
-  summary: 'Returns elastic pool metric definitions.
-
-    '
-  syntax:
-    content: list_metric_definitions(resource_group_name, server_name, elastic_pool_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id069
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id070
-    - description: 'The name of the elastic pool.
-
-        '
-      id: elastic_pool_name
-      type: *id071
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id072
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id073
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id074
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-- *id075
-- &id084
-  class: azure.mgmt.sql.operations.ElasticPoolsOperations
-  exceptions: *id076
-  fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_metrics
-  source:
-    id: list_metrics
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\elastic_pools_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Returns elastic pool  metrics.
-
-    '
-  syntax:
-    content: list_metrics(resource_group_name, server_name, elastic_pool_name, filter,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id077
-    - description: 'The name of the server.
-
-        '
-      id: server_name
-      type: *id078
-    - description: 'The name of the elastic pool.
-
-        '
-      id: elastic_pool_name
-      type: *id079
-    - description: 'An OData filter expression that describes a subset of
-
-        metrics to return.
-
-        '
-      id: filter
-      type: *id080
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id081
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id082
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id083
-  type: method
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-- *id084
 references:
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-  isExternal: false
-  name: get_database
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-  isExternal: false
-  name: list_activity
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-  isExternal: false
-  name: list_by_server
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-  isExternal: false
-  name: list_database_activity
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-  isExternal: false
-  name: list_databases
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-  isExternal: false
-  name: list_metric_definitions
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-  isExternal: false
-  name: list_metrics
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.delete
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-  isExternal: false
-  name: get_database
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.get_database
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-  isExternal: false
-  name: list_activity
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_activity
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-  isExternal: false
-  name: list_by_server
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_by_server
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-  isExternal: false
-  name: list_database_activity
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_database_activity
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-  isExternal: false
-  name: list_databases
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_databases
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-  isExternal: false
-  name: list_metric_definitions
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metric_definitions
-- fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
-  isExternal: false
-  name: list_metrics
-  parent: azure.mgmt.sql.operations.ElasticPoolsOperations
-  uid: azure.mgmt.sql.operations.ElasticPoolsOperations.list_metrics
 - fullName: azure.mgmt.sql.operations.ElasticPoolsOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -7,11 +7,6 @@ items:
   - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
   - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
   - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
   class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
   fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
   inheritance:
@@ -38,7 +33,7 @@ items:
     '
   syntax:
     content: VirtualNetworksOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -55,7 +50,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -63,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
 - class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
   langs:
@@ -91,32 +86,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: name
-      type: &id006
+      type:
       - str
     - description: 'A virtual network.
 
         '
       id: virtual_network
-      type: &id007
+      type:
       - azure.mgmt.devtestlabs.models.VirtualNetwork
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -125,20 +120,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.devtestlabs.models.VirtualNetwork'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
   langs:
@@ -164,26 +159,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -192,20 +187,20 @@ items:
 
         '
       id: raw
-      type: &id017
-      - bool
-    return: &id018
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
 - class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
   langs:
@@ -231,19 +226,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -252,14 +247,14 @@ items:
 
         '
       id: expand
-      type: &id024
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id025
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -268,7 +263,7 @@ items:
 
         '
       id: raw
-      type: &id026
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -276,16 +271,16 @@ items:
 
         '
       id: operation_config
-    return: &id027
+    return:
       type:
       - azure.mgmt.devtestlabs.models.VirtualNetwork
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
 - class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: &id029
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
   langs:
@@ -311,13 +306,13 @@ items:
 
         '
       id: resource_group_name
-      type: &id030
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -326,14 +321,14 @@ items:
 
         '
       id: expand
-      type: &id032
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id033
+      type:
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -342,7 +337,7 @@ items:
 
         '
       id: top
-      type: &id034
+      type:
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -351,14 +346,14 @@ items:
 
         '
       id: orderby
-      type: &id035
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id036
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -367,7 +362,7 @@ items:
 
         '
       id: raw
-      type: &id037
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -375,13 +370,13 @@ items:
 
         '
       id: operation_config
-    return: &id038
+    return:
       type:
       - azure.mgmt.devtestlabs.models.VirtualNetworkPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
 - class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: &id040
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
   langs:
@@ -407,32 +402,32 @@ items:
 
         '
       id: resource_group_name
-      type: &id041
+      type:
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type: &id042
+      type:
       - str
     - description: 'The name of the virtual network.
 
         '
       id: name
-      type: &id043
+      type:
       - str
     - description: 'A virtual network.
 
         '
       id: virtual_network
-      type: &id044
+      type:
       - azure.mgmt.devtestlabs.models.VirtualNetworkFragment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id045
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -441,7 +436,7 @@ items:
 
         '
       id: raw
-      type: &id046
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -449,444 +444,15 @@ items:
 
         '
       id: operation_config
-    return: &id047
+    return:
       type:
       - azure.mgmt.devtestlabs.models.VirtualNetwork
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-- children:
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-  - azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-  class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: VirtualNetworksOperations
-  source:
-    id: VirtualNetworksOperations
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'VirtualNetworksOperations operations.
-
-
-
-
-
-
-    '
-  syntax:
-    content: VirtualNetworksOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-- &id011
-  class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: *id003
-  fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 197
-  summary: 'Create or replace an existing virtual network. This operation can take
-
-    a while to complete.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, lab_name, name, virtual_network,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id005
-    - description: 'The name of the virtual network.
-
-        '
-      id: name
-      type: *id006
-    - description: 'A virtual network.
-
-        '
-      id: virtual_network
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: *id012
-  fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 295
-  summary: 'Delete virtual network. This operation can take a while to complete.
-
-    '
-  syntax:
-    content: delete(resource_group_name, lab_name, name, custom_headers=None, raw=False,
-      **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id014
-    - description: 'The name of the virtual network.
-
-        '
-      id: name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    return: *id018
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-- *id019
-- &id028
-  class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: *id020
-  fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 127
-  summary: 'Get virtual network.
-
-    '
-  syntax:
-    content: get(resource_group_name, lab_name, name, expand=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id022
-    - description: 'The name of the virtual network.
-
-        '
-      id: name
-      type: *id023
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($expand=externalSubnets)''
-
-        '
-      id: expand
-      type: *id024
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id025
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id026
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id027
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-- *id028
-- &id039
-  class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: *id029
-  fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'List virtual networks in a given lab.
-
-    '
-  syntax:
-    content: list(resource_group_name, lab_name, expand=None, filter=None, top=None,
-      orderby=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id030
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id031
-    - defaultValue: None
-      description: 'Specify the $expand query. Example:
-
-        ''properties($expand=externalSubnets)''
-
-        '
-      id: expand
-      type: *id032
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id033
-    - defaultValue: None
-      description: 'The maximum number of resources to return from the
-
-        operation.
-
-        '
-      id: top
-      type: *id034
-    - defaultValue: None
-      description: 'The ordering expression for the results, using OData
-
-        notation.
-
-        '
-      id: orderby
-      type: *id035
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id036
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id037
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id038
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-- *id039
-- &id048
-  class: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  exceptions: *id040
-  fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-  langs:
-  - python
-  module: azure.mgmt.devtestlabs.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_networks_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 375
-  summary: 'Modify properties of virtual networks.
-
-    '
-  syntax:
-    content: update(resource_group_name, lab_name, name, virtual_network, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id041
-    - description: 'The name of the lab.
-
-        '
-      id: lab_name
-      type: *id042
-    - description: 'The name of the virtual network.
-
-        '
-      id: name
-      type: *id043
-    - description: 'A virtual network.
-
-        '
-      id: virtual_network
-      type: *id044
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id045
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id046
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id047
-  type: method
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-- *id048
 references:
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.delete
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.get
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.list
-- fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations
-  uid: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.update
 - fullName: azure.mgmt.devtestlabs.operations.VirtualNetworksOperations.create_or_update
   isExternal: false
   name: create_or_update

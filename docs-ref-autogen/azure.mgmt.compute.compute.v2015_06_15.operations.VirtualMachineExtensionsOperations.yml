@@ -5,9 +5,6 @@ items:
   - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
   - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
   - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-  - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-  - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-  - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
   class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
   fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
   inheritance:
@@ -32,7 +29,7 @@ items:
     '
   syntax:
     content: VirtualMachineExtensionsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -49,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2015-06-15".
 
         '
@@ -57,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
 - class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
   langs:
@@ -83,7 +80,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the virtual machine where the extension
 
@@ -91,13 +88,13 @@ items:
 
         '
       id: vm_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the virtual machine extension.
 
         '
       id: vm_extension_name
-      type: &id006
+      type:
       - str
     - description: 'Parameters supplied to the Create Virtual
 
@@ -105,14 +102,14 @@ items:
 
         '
       id: extension_parameters
-      type: &id007
+      type:
       - azure.mgmt.compute.compute.v2015_06_15.models.VirtualMachineExtension
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -121,26 +118,26 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
-    return: &id010
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2015_06_15.models.VirtualMachineExtension
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
 - class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
   langs:
@@ -166,7 +163,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the virtual machine where the extension
 
@@ -174,20 +171,20 @@ items:
 
         '
       id: vm_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the virtual machine extension.
 
         '
       id: vm_extension_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -196,26 +193,26 @@ items:
 
         '
       id: raw
-      type: &id017
+      type:
       - bool
-    return: &id018
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2015_06_15.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
 - class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
   langs:
@@ -241,7 +238,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the virtual machine containing the
 
@@ -249,27 +246,27 @@ items:
 
         '
       id: vm_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the virtual machine extension.
 
         '
       id: vm_extension_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'The expand expression to apply on the operation.
 
         '
       id: expand
-      type: &id024
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id025
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -278,7 +275,7 @@ items:
 
         '
       id: raw
-      type: &id026
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -286,10 +283,10 @@ items:
 
         '
       id: operation_config
-    return: &id027
+    return:
       description: '@azure.mgmt.compute.compute.v2015_06_15.models.VirtualMachineExtension
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -297,265 +294,10 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2015_06_15.models.VirtualMachineExtension
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-- children:
-  - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-  - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-  - azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-  class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2015_06_15.operations
-  name: VirtualMachineExtensionsOperations
-  source:
-    id: VirtualMachineExtensionsOperations
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'VirtualMachineExtensionsOperations operations.
-
-
-
-
-    '
-  syntax:
-    content: VirtualMachineExtensionsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-- &id011
-  class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2015_06_15.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'The operation to create or update the extension.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, vm_name, vm_extension_name, extension_parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the virtual machine where the extension
-
-        should be create or updated.
-
-        '
-      id: vm_name
-      type: *id005
-    - description: 'The name of the virtual machine extension.
-
-        '
-      id: vm_extension_name
-      type: *id006
-    - description: 'Parameters supplied to the Create Virtual
-
-        Machine Extension operation.
-
-        '
-      id: extension_parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2015_06_15.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 141
-  summary: 'The operation to delete the extension.
-
-    '
-  syntax:
-    content: delete(resource_group_name, vm_name, vm_extension_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the virtual machine where the extension
-
-        should be deleted.
-
-        '
-      id: vm_name
-      type: *id014
-    - description: 'The name of the virtual machine extension.
-
-        '
-      id: vm_extension_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    return: *id018
-  type: method
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-- *id019
-- &id028
-  class: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2015_06_15.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2015_06_15\operations\virtual_machine_extensions_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 233
-  summary: 'The operation to get the extension.
-
-    '
-  syntax:
-    content: get(resource_group_name, vm_name, vm_extension_name, expand=None, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the virtual machine containing the
-
-        extension.
-
-        '
-      id: vm_name
-      type: *id022
-    - description: 'The name of the virtual machine extension.
-
-        '
-      id: vm_extension_name
-      type: *id023
-    - defaultValue: None
-      description: 'The expand expression to apply on the operation.
-
-        '
-      id: expand
-      type: *id024
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id025
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id026
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id027
-  type: method
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-- *id028
 references:
-- fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-- fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-- fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
-- fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations
-  uid: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.get
 - fullName: azure.mgmt.compute.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations.create_or_update
   isExternal: false
   name: create_or_update

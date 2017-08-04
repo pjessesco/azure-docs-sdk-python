@@ -41,7 +41,7 @@ items:
       content_types_to_compress=None, is_compression_enabled=None, is_http_allowed=None,
       is_https_allowed=None, query_string_caching_behavior=None, optimization_type=None,
       geo_filters=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource location.
 
         '
@@ -154,7 +154,7 @@ items:
       - 'list of @azure.mgmt.cdn.models.DeepCreatedOrigin
 
         '
-    variables: &id002
+    variables:
     - description: 'Resource ID.
 
         '
@@ -199,50 +199,6 @@ items:
       id: provisioning_state
       type:
       - str
-  type: class
-  uid: azure.mgmt.cdn.models.Endpoint
-- children: []
-  class: azure.mgmt.cdn.models.Endpoint
-  fullName: azure.mgmt.cdn.models.Endpoint
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.cdn.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.cdn.models
-  name: Endpoint
-  source:
-    id: Endpoint
-    path: azure-mgmt-cdn\azure\mgmt\cdn\models\endpoint.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\models\endpoint.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'CDN endpoint is the entity within a CDN profile containing configuration
-
-    information such as origin, protocol, content caching and delivery
-
-    behavior. The CDN endpoint uses the URL format
-
-    <endpointname>.azureedge.net.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: Endpoint(location, origins, tags=None, origin_host_header=None, origin_path=None,
-      content_types_to_compress=None, is_compression_enabled=None, is_http_allowed=None,
-      is_https_allowed=None, query_string_caching_behavior=None, optimization_type=None,
-      geo_filters=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.cdn.models.Endpoint
 references: []

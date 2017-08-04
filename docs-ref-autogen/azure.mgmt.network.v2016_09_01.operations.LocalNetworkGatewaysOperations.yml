@@ -6,10 +6,6 @@ items:
   - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
   - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
   - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
   class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
   fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
   inheritance:
@@ -35,7 +31,7 @@ items:
     '
   syntax:
     content: LocalNetworkGatewaysOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -52,7 +48,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2016-09-01".
 
         '
@@ -60,7 +56,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
 - class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
   langs:
@@ -88,7 +84,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the local network
 
@@ -96,7 +92,7 @@ items:
 
         '
       id: local_network_gateway_name
-      type: &id005
+      type:
       - str
     - description: 'Parameters supplied to the create or update local
 
@@ -104,14 +100,14 @@ items:
 
         '
       id: parameters
-      type: &id006
+      type:
       - azure.mgmt.network.v2016_09_01.models.LocalNetworkGateway
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -120,20 +116,20 @@ items:
 
         '
       id: raw
-      type: &id008
-      - bool
-    return: &id009
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.LocalNetworkGateway'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
 - class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
   langs:
@@ -159,7 +155,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the local network
 
@@ -167,14 +163,14 @@ items:
 
         '
       id: local_network_gateway_name
-      type: &id013
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id014
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -183,20 +179,20 @@ items:
 
         '
       id: raw
-      type: &id015
-      - bool
-    return: &id016
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
 - class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: &id018
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
   langs:
@@ -222,7 +218,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id019
+      type:
       - str
     - description: 'The name of the local network
 
@@ -230,14 +226,14 @@ items:
 
         '
       id: local_network_gateway_name
-      type: &id020
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id021
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -246,7 +242,7 @@ items:
 
         '
       id: raw
-      type: &id022
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -254,16 +250,16 @@ items:
 
         '
       id: operation_config
-    return: &id023
+    return:
       type:
       - azure.mgmt.network.v2016_09_01.models.LocalNetworkGateway
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
 - class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: &id025
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
   langs:
@@ -288,14 +284,14 @@ items:
 
         '
       id: resource_group_name
-      type: &id026
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id027
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -304,7 +300,7 @@ items:
 
         '
       id: raw
-      type: &id028
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -312,311 +308,12 @@ items:
 
         '
       id: operation_config
-    return: &id029
+    return:
       type:
       - azure.mgmt.network.v2016_09_01.models.LocalNetworkGatewayPaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-- children:
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-  - azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-  class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: LocalNetworkGatewaysOperations
-  source:
-    id: LocalNetworkGatewaysOperations
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'LocalNetworkGatewaysOperations operations.
-
-
-
-
-
-    '
-  syntax:
-    content: LocalNetworkGatewaysOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-- &id010
-  class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: *id003
-  fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Creates or updates a local network gateway in the specified resource
-
-    group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, local_network_gateway_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the local network
-
-        gateway.
-
-        '
-      id: local_network_gateway_name
-      type: *id005
-    - description: 'Parameters supplied to the create or update local
-
-        network gateway operation.
-
-        '
-      id: parameters
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-- *id010
-- &id017
-  class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: *id011
-  fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 199
-  summary: 'Deletes the specified local network gateway.
-
-    '
-  syntax:
-    content: delete(resource_group_name, local_network_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the local network
-
-        gateway.
-
-        '
-      id: local_network_gateway_name
-      type: *id013
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id014
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id015
-    return: *id016
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-- *id017
-- &id024
-  class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: *id018
-  fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 136
-  summary: 'Gets the specified local network gateway in a resource group.
-
-    '
-  syntax:
-    content: get(resource_group_name, local_network_gateway_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id019
-    - description: 'The name of the local network
-
-        gateway.
-
-        '
-      id: local_network_gateway_name
-      type: *id020
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id021
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id022
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id023
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-- *id024
-- &id030
-  class: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  exceptions: *id025
-  fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-  langs:
-  - python
-  module: azure.mgmt.network.v2016_09_01.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\local_network_gateways_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 277
-  summary: 'Gets all the local network gateways in a resource group.
-
-    '
-  syntax:
-    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id026
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id027
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id028
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id029
-  type: method
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-- *id030
 references:
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.delete
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.get
-- fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations
-  uid: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.list
 - fullName: azure.mgmt.network.v2016_09_01.operations.LocalNetworkGatewaysOperations.create_or_update
   isExternal: false
   name: create_or_update

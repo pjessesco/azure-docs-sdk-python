@@ -39,7 +39,7 @@ items:
     '
   syntax:
     content: Profile(location, sku, tags=None)
-    parameters: &id001
+    parameters:
     - description: 'Resource location.
 
         '
@@ -60,7 +60,7 @@ items:
       id: sku
       type:
       - azure.mgmt.cdn.models.Sku
-    variables: &id002
+    variables:
     - description: 'Resource ID.
 
         '
@@ -95,48 +95,6 @@ items:
       id: provisioning_state
       type:
       - str
-  type: class
-  uid: azure.mgmt.cdn.models.Profile
-- children: []
-  class: azure.mgmt.cdn.models.Profile
-  fullName: azure.mgmt.cdn.models.Profile
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.cdn.models.resource.Resource
-  langs:
-  - python
-  module: azure.mgmt.cdn.models
-  name: Profile
-  source:
-    id: Profile
-    path: azure-mgmt-cdn\azure\mgmt\cdn\models\profile.py
-    remote:
-      branch: master
-      path: azure-mgmt-cdn\azure\mgmt\cdn\models\profile.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'CDN profile represents the top level resource and the entry point into
-    the
-
-    CDN API. This allows users to set up a logical grouping of endpoints in
-
-    addition to creating shared configuration settings and selecting pricing
-
-    tiers and providers.
-
-
-    Variables are only populated by the server, and will be ignored when
-
-    sending a request.
-
-    '
-  syntax:
-    content: Profile(location, sku, tags=None)
-    parameters: *id001
-    variables: *id002
   type: class
   uid: azure.mgmt.cdn.models.Profile
 references: []

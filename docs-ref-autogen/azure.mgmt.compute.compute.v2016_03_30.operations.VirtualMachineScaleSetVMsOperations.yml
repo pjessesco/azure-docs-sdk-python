@@ -11,15 +11,6 @@ items:
   - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
   - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
   - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
   class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
   inheritance:
@@ -50,7 +41,7 @@ items:
     '
   syntax:
     content: VirtualMachineScaleSetVMsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -67,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client Api Version. Constant value: "2016-03-30".
 
         '
@@ -75,7 +66,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
   langs:
@@ -107,26 +98,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id005
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id007
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -135,26 +126,26 @@ items:
 
         '
       id: raw
-      type: &id008
+      type:
       - bool
-    return: &id009
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_03_30.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id011
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
   langs:
@@ -180,26 +171,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id012
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id013
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id014
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id015
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -208,26 +199,26 @@ items:
 
         '
       id: raw
-      type: &id016
+      type:
       - bool
-    return: &id017
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_03_30.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id019
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
   langs:
@@ -253,26 +244,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id020
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id021
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id022
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id023
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -281,7 +272,7 @@ items:
 
         '
       id: raw
-      type: &id024
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -289,10 +280,10 @@ items:
 
         '
       id: operation_config
-    return: &id025
+    return:
       description: '@azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineScaleSetVM
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -300,11 +291,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineScaleSetVM
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id027
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
   langs:
@@ -330,26 +321,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id028
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id029
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id030
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id031
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -358,7 +349,7 @@ items:
 
         '
       id: raw
-      type: &id032
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -366,10 +357,10 @@ items:
 
         '
       id: operation_config
-    return: &id033
+    return:
       description: '@azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineScaleSetVMInstanceView
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -377,11 +368,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineScaleSetVMInstanceView
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id035
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
   langs:
@@ -407,41 +398,41 @@ items:
 
         '
       id: resource_group_name
-      type: &id036
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: virtual_machine_scale_set_name
-      type: &id037
+      type:
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type: &id038
+      type:
       - str
     - defaultValue: None
       description: 'The list parameters.
 
         '
       id: select
-      type: &id039
+      type:
       - str
     - defaultValue: None
       description: 'The expand expression to apply to the operation.
 
         '
       id: expand
-      type: &id040
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id041
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -450,7 +441,7 @@ items:
 
         '
       id: raw
-      type: &id042
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -458,7 +449,7 @@ items:
 
         '
       id: operation_config
-    return: &id043
+    return:
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineScaleSetVM
 
         '
@@ -467,7 +458,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id045
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
   langs:
@@ -499,26 +490,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id046
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id047
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id048
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id049
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -527,26 +518,26 @@ items:
 
         '
       id: raw
-      type: &id050
+      type:
       - bool
-    return: &id051
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_03_30.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id053
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
   langs:
@@ -575,26 +566,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id054
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id055
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id056
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id057
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -603,26 +594,26 @@ items:
 
         '
       id: raw
-      type: &id058
+      type:
       - bool
-    return: &id059
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_03_30.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id061
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
   langs:
@@ -648,26 +639,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id062
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id063
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id064
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id065
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -676,26 +667,26 @@ items:
 
         '
       id: raw
-      type: &id066
+      type:
       - bool
-    return: &id067
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_03_30.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: &id069
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
   langs:
@@ -721,26 +712,26 @@ items:
 
         '
       id: resource_group_name
-      type: &id070
+      type:
       - str
     - description: 'The name of the VM scale set.
 
         '
       id: vm_scale_set_name
-      type: &id071
+      type:
       - str
     - description: 'The instance ID of the virtual machine.
 
         '
       id: instance_id
-      type: &id072
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id073
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -749,709 +740,25 @@ items:
 
         '
       id: raw
-      type: &id074
+      type:
       - bool
-    return: &id075
-      description: '@../msrestazure.azure_operation.AzureOperationPoller
+    return:
+      description: '@msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_03_30.models.OperationStatusResponse
 
-        or @../msrest.pipeline.ClientRawResponse if
+        or @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
-        or @../msrest.pipeline.ClientRawResponse'
+        or @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-- children:
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: VirtualMachineScaleSetVMsOperations
-  source:
-    id: VirtualMachineScaleSetVMsOperations
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'VirtualMachineScaleSetVMsOperations operations.
-
-
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: VirtualMachineScaleSetVMsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-- &id010
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: deallocate
-  source:
-    id: deallocate
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 131
-  summary: 'Deallocates a specific virtual machine in a VM scale set. Shuts down
-
-    the virtual machine and releases the compute resources it uses. You are
-
-    not billed for the compute resources of this virtual machine once it is
-
-    deallocated.
-
-    '
-  syntax:
-    content: deallocate(resource_group_name, vm_scale_set_name, instance_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id005
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id006
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id007
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id008
-    return: *id009
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-- *id010
-- &id018
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id011
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 225
-  summary: 'Deletes a virtual machine from a VM scale set.
-
-    '
-  syntax:
-    content: delete(resource_group_name, vm_scale_set_name, instance_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id012
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id013
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id014
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id015
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id016
-    return: *id017
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-- *id018
-- &id026
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id019
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 316
-  summary: 'Gets a virtual machine from a VM scale set.
-
-    '
-  syntax:
-    content: get(resource_group_name, vm_scale_set_name, instance_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id020
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id021
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id022
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id023
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id024
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id025
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-- *id026
-- &id034
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id027
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: get_instance_view
-  source:
-    id: get_instance_view
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 384
-  summary: 'Gets the status of a virtual machine from a VM scale set.
-
-    '
-  syntax:
-    content: get_instance_view(resource_group_name, vm_scale_set_name, instance_id,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id028
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id029
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id030
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id031
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id032
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id033
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-- *id034
-- &id044
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id035
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: list
-  source:
-    id: list
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 452
-  summary: 'Gets a list of all virtual machines in a VM scale sets.
-
-    '
-  syntax:
-    content: list(resource_group_name, virtual_machine_scale_set_name, filter=None,
-      select=None, expand=None, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id036
-    - description: 'The name of the VM scale set.
-
-        '
-      id: virtual_machine_scale_set_name
-      type: *id037
-    - defaultValue: None
-      description: 'The filter to apply to the operation.
-
-        '
-      id: filter
-      type: *id038
-    - defaultValue: None
-      description: 'The list parameters.
-
-        '
-      id: select
-      type: *id039
-    - defaultValue: None
-      description: 'The expand expression to apply to the operation.
-
-        '
-      id: expand
-      type: *id040
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id041
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id042
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id043
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-- *id044
-- &id052
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id045
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: power_off
-  source:
-    id: power_off
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 535
-  summary: 'Power off (stop) a virtual machine in a VM scale set. Note that
-
-    resources are still attached and you are getting charged for the
-
-    resources. Instead, use deallocate to release resources and avoid
-
-    charges.
-
-    '
-  syntax:
-    content: power_off(resource_group_name, vm_scale_set_name, instance_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id046
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id047
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id048
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id049
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id050
-    return: *id051
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-- *id052
-- &id060
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id053
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: reimage
-  source:
-    id: reimage
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Reimages (upgrade the operating system) a specific virtual machine in
-    a
-
-    VM scale set.
-
-    '
-  syntax:
-    content: reimage(resource_group_name, vm_scale_set_name, instance_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id054
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id055
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id056
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id057
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id058
-    return: *id059
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-- *id060
-- &id068
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id061
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: restart
-  source:
-    id: restart
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 629
-  summary: 'Restarts a virtual machine in a VM scale set.
-
-    '
-  syntax:
-    content: restart(resource_group_name, vm_scale_set_name, instance_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id062
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id063
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id064
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id065
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id066
-    return: *id067
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-- *id068
-- &id076
-  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  exceptions: *id069
-  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-  langs:
-  - python
-  module: azure.mgmt.compute.compute.v2016_03_30.operations
-  name: start
-  source:
-    id: start
-    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_scale_set_vms_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 720
-  summary: 'Starts a virtual machine in a VM scale set.
-
-    '
-  syntax:
-    content: start(resource_group_name, vm_scale_set_name, instance_id, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group.
-
-        '
-      id: resource_group_name
-      type: *id070
-    - description: 'The name of the VM scale set.
-
-        '
-      id: vm_scale_set_name
-      type: *id071
-    - description: 'The instance ID of the virtual machine.
-
-        '
-      id: instance_id
-      type: *id072
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id073
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id074
-    return: *id075
-  type: method
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-- *id076
 references:
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-  isExternal: false
-  name: deallocate
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-  isExternal: false
-  name: get_instance_view
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-  isExternal: false
-  name: power_off
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-  isExternal: false
-  name: reimage
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-  isExternal: false
-  name: restart
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-  isExternal: false
-  name: start
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-  isExternal: false
-  name: deallocate
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.delete
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-  isExternal: false
-  name: get_instance_view
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.get_instance_view
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.list
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-  isExternal: false
-  name: power_off
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.power_off
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-  isExternal: false
-  name: reimage
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.reimage
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-  isExternal: false
-  name: restart
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.restart
-- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
-  isExternal: false
-  name: start
-  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations
-  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.start
 - fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineScaleSetVMsOperations.deallocate
   isExternal: false
   name: deallocate

@@ -3,7 +3,6 @@ api_name: []
 items:
 - children:
   - azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-  - azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
   class: azure.mgmt.containerinstance.operations.ContainerLogsOperations
   fullName: azure.mgmt.containerinstance.operations.ContainerLogsOperations
   inheritance:
@@ -26,7 +25,7 @@ items:
     '
   syntax:
     content: ContainerLogsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -43,7 +42,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'Client API version. Constant value: "2017-08-01-preview".
 
         '
@@ -51,7 +50,7 @@ items:
   type: class
   uid: azure.mgmt.containerinstance.operations.ContainerLogsOperations
 - class: azure.mgmt.containerinstance.operations.ContainerLogsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
   langs:
@@ -77,19 +76,19 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'Container name
 
         '
       id: container_name
-      type: &id005
+      type:
       - str
     - description: 'Container group name
 
         '
       id: container_group_name
-      type: &id006
+      type:
       - str
     - defaultValue: None
       description: 'Only show this number of log lines. If not provided, all
@@ -98,14 +97,14 @@ items:
 
         '
       id: tail
-      type: &id007
+      type:
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -114,7 +113,7 @@ items:
 
         '
       id: raw
-      type: &id009
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -122,10 +121,10 @@ items:
 
         '
       id: operation_config
-    return: &id010
+    return:
       description: '@azure.mgmt.containerinstance.models.Logs or
 
-        @../msrest.pipeline.ClientRawResponse if
+        @msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -133,118 +132,10 @@ items:
       type:
       - 'azure.mgmt.containerinstance.models.Logs or
 
-        @../msrest.pipeline.ClientRawResponse'
+        @msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-- children:
-  - azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-  class: azure.mgmt.containerinstance.operations.ContainerLogsOperations
-  fullName: azure.mgmt.containerinstance.operations.ContainerLogsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.containerinstance.operations
-  name: ContainerLogsOperations
-  source:
-    id: ContainerLogsOperations
-    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_logs_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_logs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 19
-  summary: 'ContainerLogsOperations operations.
-
-
-    '
-  syntax:
-    content: ContainerLogsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.containerinstance.operations.ContainerLogsOperations
-- &id011
-  class: azure.mgmt.containerinstance.operations.ContainerLogsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-  langs:
-  - python
-  module: azure.mgmt.containerinstance.operations
-  name: list
-  source:
-    id: list
-    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_logs_operations.py
-    remote:
-      branch: master
-      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_logs_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 38
-  summary: 'Get the logs for this container.
-
-    '
-  syntax:
-    content: list(resource_group_name, container_name, container_group_name, tail=None,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'Azure resource group name
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'Container name
-
-        '
-      id: container_name
-      type: *id005
-    - description: 'Container group name
-
-        '
-      id: container_group_name
-      type: *id006
-    - defaultValue: None
-      description: 'Only show this number of log lines. If not provided, all
-
-        available logs are shown.
-
-        '
-      id: tail
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id010
-  type: method
-  uid: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-- *id011
 references:
-- fullName: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.containerinstance.operations.ContainerLogsOperations
-  uid: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-- fullName: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
-  isExternal: false
-  name: list
-  parent: azure.mgmt.containerinstance.operations.ContainerLogsOperations
-  uid: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
 - fullName: azure.mgmt.containerinstance.operations.ContainerLogsOperations.list
   isExternal: false
   name: list

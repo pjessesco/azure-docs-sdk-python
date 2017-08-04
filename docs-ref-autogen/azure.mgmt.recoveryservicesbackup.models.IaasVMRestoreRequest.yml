@@ -30,7 +30,7 @@ items:
       target_virtual_machine_id=None, target_resource_group_id=None, storage_account_id=None,
       virtual_network_id=None, subnet_id=None, target_domain_name_id=None, region=None,
       affinity_group=None, create_new_cloud_service=None, encryption_details=None)
-    parameters: &id001
+    parameters:
     - description: 'Polymorphic Discriminator
 
         '
@@ -155,38 +155,6 @@ items:
       id: encryption_details
       type:
       - azure.mgmt.recoveryservicesbackup.models.EncryptionDetails
-  type: class
-  uid: azure.mgmt.recoveryservicesbackup.models.IaasVMRestoreRequest
-- children: []
-  class: azure.mgmt.recoveryservicesbackup.models.IaasVMRestoreRequest
-  fullName: azure.mgmt.recoveryservicesbackup.models.IaasVMRestoreRequest
-  inheritance:
-  - inheritance:
-    - inheritance:
-      - type: builtins.object
-      type: msrest.serialization.Model
-    type: azure.mgmt.recoveryservicesbackup.models.restore_request.RestoreRequest
-  langs:
-  - python
-  module: azure.mgmt.recoveryservicesbackup.models
-  name: IaasVMRestoreRequest
-  source:
-    id: IaasVMRestoreRequest
-    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\iaas_vm_restore_request.py
-    remote:
-      branch: master
-      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\iaas_vm_restore_request.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 15
-  summary: 'IaaS VM workload-specific restore.
-
-    '
-  syntax:
-    content: IaasVMRestoreRequest(recovery_point_id=None, recovery_type=None, source_resource_id=None,
-      target_virtual_machine_id=None, target_resource_group_id=None, storage_account_id=None,
-      virtual_network_id=None, subnet_id=None, target_domain_name_id=None, region=None,
-      affinity_group=None, create_new_cloud_service=None, encryption_details=None)
-    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.IaasVMRestoreRequest
 references: []

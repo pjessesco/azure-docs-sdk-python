@@ -9,13 +9,6 @@ items:
   - azure.mgmt.sql.operations.FailoverGroupsOperations.get
   - azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
   - azure.mgmt.sql.operations.FailoverGroupsOperations.update
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.get
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.update
   class: azure.mgmt.sql.operations.FailoverGroupsOperations
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations
   inheritance:
@@ -44,7 +37,7 @@ items:
     '
   syntax:
     content: FailoverGroupsOperations(client, config, serializer, deserializer)
-    parameters: &id001
+    parameters:
     - description: 'Client for service requests.
 
         '
@@ -61,7 +54,7 @@ items:
 
         '
       id: deserializer
-    variables: &id002
+    variables:
     - description: 'The API version to use for the request. Constant value: "2015-05-01-preview".
 
         '
@@ -69,7 +62,7 @@ items:
   type: class
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations
 - class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: &id003
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
   langs:
@@ -99,7 +92,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id004
+      type:
       - str
     - description: 'The name of the server containing the failover
 
@@ -107,26 +100,26 @@ items:
 
         '
       id: server_name
-      type: &id005
+      type:
       - str
     - description: 'The name of the failover group.
 
         '
       id: failover_group_name
-      type: &id006
+      type:
       - str
     - description: 'The failover group parameters.
 
         '
       id: parameters
-      type: &id007
+      type:
       - azure.mgmt.sql.models.FailoverGroup
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id008
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -135,20 +128,20 @@ items:
 
         '
       id: raw
-      type: &id009
-      - bool
-    return: &id010
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.FailoverGroup'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
 - class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: &id012
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
   langs:
@@ -178,7 +171,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id013
+      type:
       - str
     - description: 'The name of the server containing the failover
 
@@ -186,20 +179,20 @@ items:
 
         '
       id: server_name
-      type: &id014
+      type:
       - str
     - description: 'The name of the failover group.
 
         '
       id: failover_group_name
-      type: &id015
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id016
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -208,20 +201,20 @@ items:
 
         '
       id: raw
-      type: &id017
-      - bool
-    return: &id018
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
 - class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: &id020
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
   langs:
@@ -251,7 +244,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id021
+      type:
       - str
     - description: 'The name of the server containing the failover
 
@@ -259,20 +252,20 @@ items:
 
         '
       id: server_name
-      type: &id022
+      type:
       - str
     - description: 'The name of the failover group.
 
         '
       id: failover_group_name
-      type: &id023
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id024
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -281,20 +274,20 @@ items:
 
         '
       id: raw
-      type: &id025
-      - bool
-    return: &id026
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.FailoverGroup'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
 - class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: &id028
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
   langs:
@@ -326,7 +319,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id029
+      type:
       - str
     - description: 'The name of the server containing the failover
 
@@ -334,20 +327,20 @@ items:
 
         '
       id: server_name
-      type: &id030
+      type:
       - str
     - description: 'The name of the failover group.
 
         '
       id: failover_group_name
-      type: &id031
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id032
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -356,20 +349,20 @@ items:
 
         '
       id: raw
-      type: &id033
-      - bool
-    return: &id034
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.FailoverGroup'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
 - class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: &id036
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.get
   langs:
@@ -399,7 +392,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id037
+      type:
       - str
     - description: 'The name of the server containing the failover
 
@@ -407,20 +400,20 @@ items:
 
         '
       id: server_name
-      type: &id038
+      type:
       - str
     - description: 'The name of the failover group.
 
         '
       id: failover_group_name
-      type: &id039
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id040
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -429,7 +422,7 @@ items:
 
         '
       id: raw
-      type: &id041
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -437,16 +430,16 @@ items:
 
         '
       id: operation_config
-    return: &id042
+    return:
       type:
       - azure.mgmt.sql.models.FailoverGroup
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations.get
 - class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: &id044
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
   langs:
@@ -476,7 +469,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id045
+      type:
       - str
     - description: 'The name of the server containing the failover
 
@@ -484,14 +477,14 @@ items:
 
         '
       id: server_name
-      type: &id046
+      type:
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id047
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -500,7 +493,7 @@ items:
 
         '
       id: raw
-      type: &id048
+      type:
       - bool
     - description: '*Operation configuration
 
@@ -508,13 +501,13 @@ items:
 
         '
       id: operation_config
-    return: &id049
+    return:
       type:
       - azure.mgmt.sql.models.FailoverGroupPaged
   type: method
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
 - class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: &id051
+  exceptions:
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.update
   langs:
@@ -544,7 +537,7 @@ items:
 
         '
       id: resource_group_name
-      type: &id052
+      type:
       - str
     - description: 'The name of the server containing the failover
 
@@ -552,26 +545,26 @@ items:
 
         '
       id: server_name
-      type: &id053
+      type:
       - str
     - description: 'The name of the failover group.
 
         '
       id: failover_group_name
-      type: &id054
+      type:
       - str
     - description: 'The failover group parameters.
 
         '
       id: parameters
-      type: &id055
+      type:
       - azure.mgmt.sql.models.FailoverGroup
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type: &id056
+      type:
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -580,582 +573,19 @@ items:
 
         '
       id: raw
-      type: &id057
-      - bool
-    return: &id058
       type:
-      - '../msrestazure.azure_operation.AzureOperationPoller
+      - bool
+    return:
+      type:
+      - 'msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.FailoverGroup'
-      - '../msrest.pipeline.ClientRawResponse
+      - 'msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.FailoverGroupsOperations.update
-- children:
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.get
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-  - azure.mgmt.sql.operations.FailoverGroupsOperations.update
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations
-  inheritance:
-  - type: builtins.object
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: FailoverGroupsOperations
-  source:
-    id: FailoverGroupsOperations
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 20
-  summary: 'FailoverGroupsOperations operations.
-
-
-
-
-
-
-
-
-    '
-  syntax:
-    content: FailoverGroupsOperations(client, config, serializer, deserializer)
-    parameters: *id001
-    variables: *id002
-  type: class
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations
-- &id011
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: *id003
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: create_or_update
-  source:
-    id: create_or_update
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 106
-  summary: 'Creates or updates a failover group.
-
-    '
-  syntax:
-    content: create_or_update(resource_group_name, server_name, failover_group_name,
-      parameters, custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id004
-    - description: 'The name of the server containing the failover
-
-        group.
-
-        '
-      id: server_name
-      type: *id005
-    - description: 'The name of the failover group.
-
-        '
-      id: failover_group_name
-      type: *id006
-    - description: 'The failover group parameters.
-
-        '
-      id: parameters
-      type: *id007
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id008
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id009
-    return: *id010
-  type: method
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-- *id011
-- &id019
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: *id012
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: delete
-  source:
-    id: delete
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 206
-  summary: 'Deletes a failover group.
-
-    '
-  syntax:
-    content: delete(resource_group_name, server_name, failover_group_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id013
-    - description: 'The name of the server containing the failover
-
-        group.
-
-        '
-      id: server_name
-      type: *id014
-    - description: 'The name of the failover group.
-
-        '
-      id: failover_group_name
-      type: *id015
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id016
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id017
-    return: *id018
-  type: method
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-- *id019
-- &id027
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: *id020
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: failover
-  source:
-    id: failover
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 459
-  summary: 'Fails over from the current primary server to this server.
-
-    '
-  syntax:
-    content: failover(resource_group_name, server_name, failover_group_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id021
-    - description: 'The name of the server containing the failover
-
-        group.
-
-        '
-      id: server_name
-      type: *id022
-    - description: 'The name of the failover group.
-
-        '
-      id: failover_group_name
-      type: *id023
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id024
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id025
-    return: *id026
-  type: method
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-- *id027
-- &id035
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: *id028
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: force_failover_allow_data_loss
-  source:
-    id: force_failover_allow_data_loss
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 550
-  summary: 'Fails over from the current primary server to this server. This
-
-    operation might result in data loss.
-
-    '
-  syntax:
-    content: force_failover_allow_data_loss(resource_group_name, server_name, failover_group_name,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id029
-    - description: 'The name of the server containing the failover
-
-        group.
-
-        '
-      id: server_name
-      type: *id030
-    - description: 'The name of the failover group.
-
-        '
-      id: failover_group_name
-      type: *id031
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id032
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id033
-    return: *id034
-  type: method
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-- *id035
-- &id043
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: *id036
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.get
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: get
-  source:
-    id: get
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 39
-  summary: 'Gets a failover group.
-
-    '
-  syntax:
-    content: get(resource_group_name, server_name, failover_group_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id037
-    - description: 'The name of the server containing the failover
-
-        group.
-
-        '
-      id: server_name
-      type: *id038
-    - description: 'The name of the failover group.
-
-        '
-      id: failover_group_name
-      type: *id039
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id040
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id041
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id042
-  type: method
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.get
-- *id043
-- &id050
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: *id044
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: list_by_server
-  source:
-    id: list_by_server
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 387
-  summary: 'Lists the failover groups in a server.
-
-    '
-  syntax:
-    content: list_by_server(resource_group_name, server_name, custom_headers=None,
-      raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id045
-    - description: 'The name of the server containing the failover
-
-        group.
-
-        '
-      id: server_name
-      type: *id046
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id047
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id048
-    - description: '*Operation configuration
-
-        overrides*.
-
-        '
-      id: operation_config
-    return: *id049
-  type: method
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-- *id050
-- &id059
-  class: azure.mgmt.sql.operations.FailoverGroupsOperations
-  exceptions: *id051
-  fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.update
-  langs:
-  - python
-  module: azure.mgmt.sql.operations
-  name: update
-  source:
-    id: update
-    path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-    remote:
-      branch: master
-      path: azure-mgmt-sql\azure\mgmt\sql\operations\failover_groups_operations.py
-      repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 289
-  summary: 'Updates a failover group.
-
-    '
-  syntax:
-    content: update(resource_group_name, server_name, failover_group_name, parameters,
-      custom_headers=None, raw=False, **operation_config)
-    parameters:
-    - description: 'The name of the resource group that
-
-        contains the resource. You can obtain this value from the Azure
-
-        Resource Manager API or the portal.
-
-        '
-      id: resource_group_name
-      type: *id052
-    - description: 'The name of the server containing the failover
-
-        group.
-
-        '
-      id: server_name
-      type: *id053
-    - description: 'The name of the failover group.
-
-        '
-      id: failover_group_name
-      type: *id054
-    - description: 'The failover group parameters.
-
-        '
-      id: parameters
-      type: *id055
-    - defaultValue: None
-      description: 'headers that will be added to the request
-
-        '
-      id: custom_headers
-      type: *id056
-    - defaultValue: 'False'
-      description: 'returns the direct response alongside the
-
-        deserialized response
-
-        '
-      id: raw
-      type: *id057
-    return: *id058
-  type: method
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.update
-- *id059
 references:
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-  isExternal: false
-  name: failover
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-  isExternal: false
-  name: force_failover_allow_data_loss
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.get
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-  isExternal: false
-  name: list_by_server
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.update
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-  isExternal: false
-  name: create_or_update
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-  isExternal: false
-  name: delete
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.delete
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-  isExternal: false
-  name: failover
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.failover
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-  isExternal: false
-  name: force_failover_allow_data_loss
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.force_failover_allow_data_loss
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.get
-  isExternal: false
-  name: get
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.get
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-  isExternal: false
-  name: list_by_server
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.list_by_server
-- fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.update
-  isExternal: false
-  name: update
-  parent: azure.mgmt.sql.operations.FailoverGroupsOperations
-  uid: azure.mgmt.sql.operations.FailoverGroupsOperations.update
 - fullName: azure.mgmt.sql.operations.FailoverGroupsOperations.create_or_update
   isExternal: false
   name: create_or_update
