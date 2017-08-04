@@ -4,6 +4,8 @@ items:
 - children:
   - azure.mgmt.billing.operations.BillingPeriodsOperations.get
   - azure.mgmt.billing.operations.BillingPeriodsOperations.list
+  - azure.mgmt.billing.operations.BillingPeriodsOperations.get
+  - azure.mgmt.billing.operations.BillingPeriodsOperations.list
   class: azure.mgmt.billing.operations.BillingPeriodsOperations
   fullName: azure.mgmt.billing.operations.BillingPeriodsOperations
   inheritance:
@@ -27,7 +29,7 @@ items:
     '
   syntax:
     content: BillingPeriodsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -44,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Version of the API to be used with the client request. The current
         version is 2017-04-24-preview. Constant value: "2017-04-24-preview".
 
@@ -53,7 +55,7 @@ items:
   type: class
   uid: azure.mgmt.billing.operations.BillingPeriodsOperations
 - class: azure.mgmt.billing.operations.BillingPeriodsOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.billing.models.ErrorResponseException
   fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.get
   langs:
@@ -78,14 +80,14 @@ items:
 
         '
       id: billing_period_name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -94,7 +96,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -102,16 +104,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - azure.mgmt.billing.models.BillingPeriod
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.billing.operations.BillingPeriodsOperations.get
 - class: azure.mgmt.billing.operations.BillingPeriodsOperations
-  exceptions:
+  exceptions: &id009
   - type: azure.mgmt.billing.models.ErrorResponseException
   fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.list
   langs:
@@ -144,7 +146,7 @@ items:
 
         '
       id: filter
-      type:
+      type: &id010
       - str
     - defaultValue: None
       description: 'Skiptoken is only used if a previous operation
@@ -157,7 +159,7 @@ items:
 
         '
       id: skiptoken
-      type:
+      type: &id011
       - str
     - defaultValue: None
       description: 'May be used to limit the number of results to the most
@@ -166,14 +168,14 @@ items:
 
         '
       id: top
-      type:
+      type: &id012
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id013
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -182,7 +184,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id014
       - bool
     - description: '*Operation configuration
 
@@ -190,12 +192,192 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id015
       type:
       - azure.mgmt.billing.models.BillingPeriodPaged
   type: method
   uid: azure.mgmt.billing.operations.BillingPeriodsOperations.list
+- children:
+  - azure.mgmt.billing.operations.BillingPeriodsOperations.get
+  - azure.mgmt.billing.operations.BillingPeriodsOperations.list
+  class: azure.mgmt.billing.operations.BillingPeriodsOperations
+  fullName: azure.mgmt.billing.operations.BillingPeriodsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.billing.operations
+  name: BillingPeriodsOperations
+  source:
+    id: BillingPeriodsOperations
+    path: azure-mgmt-billing\azure\mgmt\billing\operations\billing_periods_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-billing\azure\mgmt\billing\operations\billing_periods_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'BillingPeriodsOperations operations.
+
+
+
+    '
+  syntax:
+    content: BillingPeriodsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.billing.operations.BillingPeriodsOperations
+- &id008
+  class: azure.mgmt.billing.operations.BillingPeriodsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.billing.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-billing\azure\mgmt\billing\operations\billing_periods_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-billing\azure\mgmt\billing\operations\billing_periods_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 118
+  summary: 'Gets a named billing period.
+
+    '
+  syntax:
+    content: get(billing_period_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of a BillingPeriod resource.
+
+        '
+      id: billing_period_name
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.mgmt.billing.operations.BillingPeriodsOperations.get
+- *id008
+- &id016
+  class: azure.mgmt.billing.operations.BillingPeriodsOperations
+  exceptions: *id009
+  fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.billing.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-billing\azure\mgmt\billing\operations\billing_periods_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-billing\azure\mgmt\billing\operations\billing_periods_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Lists the available billing periods for a subscription in reverse
+
+    chronological order.
+
+    '
+  syntax:
+    content: list(filter=None, skiptoken=None, top=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'May be used to filter billing periods by
+
+        billingPeriodEndDate. The filter supports ''eq'', ''lt'', ''gt'', ''le'',
+
+        ''ge'', and ''and''. It does not currently support ''ne'', ''or'', or ''not''.
+
+        '
+      id: filter
+      type: *id010
+    - defaultValue: None
+      description: 'Skiptoken is only used if a previous operation
+
+        returned a partial result. If a previous response contains a nextLink
+
+        element, the value of the nextLink element will include a skiptoken
+
+        parameter that specifies a starting point to use for subsequent calls.
+
+        '
+      id: skiptoken
+      type: *id011
+    - defaultValue: None
+      description: 'May be used to limit the number of results to the most
+
+        recent N billing periods.
+
+        '
+      id: top
+      type: *id012
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id013
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id014
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id015
+  type: method
+  uid: azure.mgmt.billing.operations.BillingPeriodsOperations.list
+- *id016
 references:
+- fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.billing.operations.BillingPeriodsOperations
+  uid: azure.mgmt.billing.operations.BillingPeriodsOperations.get
+- fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.billing.operations.BillingPeriodsOperations
+  uid: azure.mgmt.billing.operations.BillingPeriodsOperations.list
+- fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.billing.operations.BillingPeriodsOperations
+  uid: azure.mgmt.billing.operations.BillingPeriodsOperations.get
+- fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.billing.operations.BillingPeriodsOperations
+  uid: azure.mgmt.billing.operations.BillingPeriodsOperations.list
 - fullName: azure.mgmt.billing.operations.BillingPeriodsOperations.get
   isExternal: false
   name: get

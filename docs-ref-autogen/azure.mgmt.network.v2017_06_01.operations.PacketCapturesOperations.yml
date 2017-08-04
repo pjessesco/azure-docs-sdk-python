@@ -1,0 +1,959 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: PacketCapturesOperations
+  source:
+    id: PacketCapturesOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'PacketCapturesOperations operations.
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: PacketCapturesOperations(client, config, serializer, deserializer)
+    parameters: &id001
+    - description: 'Client for service requests.
+
+        '
+      id: client
+    - description: 'Configuration of service client.
+
+        '
+      id: config
+    - description: 'An object model serializer.
+
+        '
+      id: serializer
+    - description: 'An objec model deserializer.
+
+        '
+      id: deserializer
+    variables: &id002
+    - description: 'Client API version. Constant value: "2017-06-01".
+
+        '
+      id: api_version
+  type: class
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+- class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: &id003
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Create and start a packet capture on the specified VM.
+
+    '
+  syntax:
+    content: create(resource_group_name, network_watcher_name, packet_capture_name,
+      parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id004
+      - str
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: &id005
+      - str
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: &id006
+      - str
+    - description: 'Parameters that define the create packet capture
+
+        operation.
+
+        '
+      id: parameters
+      type: &id007
+      - azure.mgmt.network.v2017_06_01.models.PacketCapture
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id008
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id009
+      - bool
+    return: &id010
+      type:
+      - '../msrestazure.azure_operation.AzureOperationPoller
+
+        instance that returns @azure.mgmt.network.v2017_06_01.models.PacketCaptureResult'
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+- class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: &id012
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 200
+  summary: 'Deletes the specified packet capture session.
+
+    '
+  syntax:
+    content: delete(resource_group_name, network_watcher_name, packet_capture_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id013
+      - str
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: &id014
+      - str
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: &id015
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id016
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id017
+      - bool
+    return: &id018
+      type:
+      - '../msrestazure.azure_operation.AzureOperationPoller
+
+        instance that returns None'
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+- class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: &id020
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 135
+  summary: 'Gets a packet capture session by name.
+
+    '
+  syntax:
+    content: get(resource_group_name, network_watcher_name, packet_capture_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id021
+      - str
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: &id022
+      - str
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: &id023
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id024
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id025
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id026
+      type:
+      - azure.mgmt.network.v2017_06_01.models.PacketCaptureResult
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+- class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: &id028
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: get_status
+  source:
+    id: get_status
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 360
+  summary: 'Query the status of a running packet capture session.
+
+    '
+  syntax:
+    content: get_status(resource_group_name, network_watcher_name, packet_capture_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id029
+      - str
+    - description: 'The name of the Network Watcher resource.
+
+        '
+      id: network_watcher_name
+      type: &id030
+      - str
+    - description: 'The name given to the packet capture
+
+        session.
+
+        '
+      id: packet_capture_name
+      type: &id031
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id032
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id033
+      - bool
+    return: &id034
+      type:
+      - '../msrestazure.azure_operation.AzureOperationPoller
+
+        instance that returns @azure.mgmt.network.v2017_06_01.models.PacketCaptureQueryStatusResult'
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+- class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: &id036
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 451
+  summary: 'Lists all packet capture sessions within the specified resource group.
+
+    '
+  syntax:
+    content: list(resource_group_name, network_watcher_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id037
+      - str
+    - description: 'The name of the Network Watcher resource.
+
+        '
+      id: network_watcher_name
+      type: &id038
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id039
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id040
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id041
+      type:
+      - azure.mgmt.network.v2017_06_01.models.PacketCaptureResultPaged
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+- class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: &id043
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: stop
+  source:
+    id: stop
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 280
+  summary: 'Stops a specified packet capture session.
+
+    '
+  syntax:
+    content: stop(resource_group_name, network_watcher_name, packet_capture_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id044
+      - str
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: &id045
+      - str
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: &id046
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id047
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id048
+      - bool
+    return: &id049
+      type:
+      - '../msrestazure.azure_operation.AzureOperationPoller
+
+        instance that returns None'
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+- children:
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  - azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: PacketCapturesOperations
+  source:
+    id: PacketCapturesOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'PacketCapturesOperations operations.
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: PacketCapturesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+- &id011
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Create and start a packet capture on the specified VM.
+
+    '
+  syntax:
+    content: create(resource_group_name, network_watcher_name, packet_capture_name,
+      parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: *id005
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: *id006
+    - description: 'Parameters that define the create packet capture
+
+        operation.
+
+        '
+      id: parameters
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    return: *id010
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+- *id011
+- &id019
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: *id012
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 200
+  summary: 'Deletes the specified packet capture session.
+
+    '
+  syntax:
+    content: delete(resource_group_name, network_watcher_name, packet_capture_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: *id014
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    return: *id018
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+- *id019
+- &id027
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: *id020
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 135
+  summary: 'Gets a packet capture session by name.
+
+    '
+  syntax:
+    content: get(resource_group_name, network_watcher_name, packet_capture_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: *id022
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+- *id027
+- &id035
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: *id028
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: get_status
+  source:
+    id: get_status
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 360
+  summary: 'Query the status of a running packet capture session.
+
+    '
+  syntax:
+    content: get_status(resource_group_name, network_watcher_name, packet_capture_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The name of the Network Watcher resource.
+
+        '
+      id: network_watcher_name
+      type: *id030
+    - description: 'The name given to the packet capture
+
+        session.
+
+        '
+      id: packet_capture_name
+      type: *id031
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id032
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id033
+    return: *id034
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+- *id035
+- &id042
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: *id036
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 451
+  summary: 'Lists all packet capture sessions within the specified resource group.
+
+    '
+  syntax:
+    content: list(resource_group_name, network_watcher_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id037
+    - description: 'The name of the Network Watcher resource.
+
+        '
+      id: network_watcher_name
+      type: *id038
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id039
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id040
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id041
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+- *id042
+- &id050
+  class: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  exceptions: *id043
+  fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: stop
+  source:
+    id: stop
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\packet_captures_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 280
+  summary: 'Stops a specified packet capture session.
+
+    '
+  syntax:
+    content: stop(resource_group_name, network_watcher_name, packet_capture_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id044
+    - description: 'The name of the network watcher.
+
+        '
+      id: network_watcher_name
+      type: *id045
+    - description: 'The name of the packet capture session.
+
+        '
+      id: packet_capture_name
+      type: *id046
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id047
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id048
+    return: *id049
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+- *id050
+references:
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  isExternal: false
+  name: get_status
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  isExternal: false
+  name: stop
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  isExternal: false
+  name: get_status
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  isExternal: false
+  name: stop
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.create
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.delete
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+  isExternal: false
+  name: get_status
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.get_status
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.list
+- fullName: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop
+  isExternal: false
+  name: stop
+  parent: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.PacketCapturesOperations.stop

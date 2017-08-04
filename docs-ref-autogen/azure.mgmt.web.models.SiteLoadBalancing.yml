@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.SiteLoadBalancing
-- fullName: azure.mgmt.web.models.SiteLoadBalancing.least_requests
+- children:
+  - azure.mgmt.web.models.SiteLoadBalancing.least_requests
+  - azure.mgmt.web.models.SiteLoadBalancing.least_response_time
+  - azure.mgmt.web.models.SiteLoadBalancing.request_hash
+  - azure.mgmt.web.models.SiteLoadBalancing.weighted_round_robin
+  - azure.mgmt.web.models.SiteLoadBalancing.weighted_total_traffic
+  class: azure.mgmt.web.models.SiteLoadBalancing
+  fullName: azure.mgmt.web.models.SiteLoadBalancing
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: SiteLoadBalancing
+  source:
+    id: SiteLoadBalancing
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 199
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.SiteLoadBalancing
+- &id001
+  fullName: azure.mgmt.web.models.SiteLoadBalancing.least_requests
   id: least_requests
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.web.models.SiteLoadBalancing
   type: attribute
   uid: azure.mgmt.web.models.SiteLoadBalancing.least_requests
-- fullName: azure.mgmt.web.models.SiteLoadBalancing.least_response_time
+- &id002
+  fullName: azure.mgmt.web.models.SiteLoadBalancing.least_response_time
   id: least_response_time
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.web.models.SiteLoadBalancing
   type: attribute
   uid: azure.mgmt.web.models.SiteLoadBalancing.least_response_time
-- fullName: azure.mgmt.web.models.SiteLoadBalancing.request_hash
+- &id003
+  fullName: azure.mgmt.web.models.SiteLoadBalancing.request_hash
   id: request_hash
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.web.models.SiteLoadBalancing
   type: attribute
   uid: azure.mgmt.web.models.SiteLoadBalancing.request_hash
-- fullName: azure.mgmt.web.models.SiteLoadBalancing.weighted_round_robin
+- &id004
+  fullName: azure.mgmt.web.models.SiteLoadBalancing.weighted_round_robin
   id: weighted_round_robin
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.web.models.SiteLoadBalancing
   type: attribute
   uid: azure.mgmt.web.models.SiteLoadBalancing.weighted_round_robin
-- fullName: azure.mgmt.web.models.SiteLoadBalancing.weighted_total_traffic
+- &id005
+  fullName: azure.mgmt.web.models.SiteLoadBalancing.weighted_total_traffic
   id: weighted_total_traffic
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.web.models.SiteLoadBalancing
   type: attribute
   uid: azure.mgmt.web.models.SiteLoadBalancing.weighted_total_traffic
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

@@ -28,7 +28,7 @@ items:
   syntax:
     content: StorageAccountUpdateParameters(sku=None, tags=None, custom_domain=None,
       encryption=None, access_tier=None, enable_https_traffic_only=False)
-    parameters:
+    parameters: &id001
     - description: 'Gets or sets the SKU name. Note that the SKU name cannot be
 
         updated to Standard_ZRS or Premium_LRS, nor can accounts of those sku
@@ -93,6 +93,36 @@ items:
       id: enable_https_traffic_only
       type:
       - bool
+  type: class
+  uid: azure.mgmt.storage.v2016_12_01.models.StorageAccountUpdateParameters
+- children: []
+  class: azure.mgmt.storage.v2016_12_01.models.StorageAccountUpdateParameters
+  fullName: azure.mgmt.storage.v2016_12_01.models.StorageAccountUpdateParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.storage.v2016_12_01.models
+  name: StorageAccountUpdateParameters
+  source:
+    id: StorageAccountUpdateParameters
+    path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\storage_account_update_parameters.py
+    remote:
+      branch: master
+      path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\storage_account_update_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The parameters that can be provided when updating the storage account
+
+    properties.
+
+    '
+  syntax:
+    content: StorageAccountUpdateParameters(sku=None, tags=None, custom_domain=None,
+      encryption=None, access_tier=None, enable_https_traffic_only=False)
+    parameters: *id001
   type: class
   uid: azure.mgmt.storage.v2016_12_01.models.StorageAccountUpdateParameters
 references: []

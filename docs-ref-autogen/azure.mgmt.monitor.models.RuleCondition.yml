@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: RuleCondition(data_source=None)
-    parameters:
+    parameters: &id001
     - description: 'the resource from which the rule collects its data.
 
         For this type dataSource will always be of type RuleMetricDataSource.
@@ -40,6 +40,33 @@ items:
       id: odatatype
       type:
       - str
+  type: class
+  uid: azure.mgmt.monitor.models.RuleCondition
+- children: []
+  class: azure.mgmt.monitor.models.RuleCondition
+  fullName: azure.mgmt.monitor.models.RuleCondition
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: RuleCondition
+  source:
+    id: RuleCondition
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\rule_condition.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\rule_condition.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The condition that results in the alert rule being activated.
+
+    '
+  syntax:
+    content: RuleCondition(data_source=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.monitor.models.RuleCondition
 references: []

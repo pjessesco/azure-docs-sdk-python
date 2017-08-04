@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.devtestlabs.models.LinuxOsState
-- fullName: azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_applied
+- children:
+  - azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_applied
+  - azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_requested
+  - azure.mgmt.devtestlabs.models.LinuxOsState.non_deprovisioned
+  class: azure.mgmt.devtestlabs.models.LinuxOsState
+  fullName: azure.mgmt.devtestlabs.models.LinuxOsState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: LinuxOsState
+  source:
+    id: LinuxOsState
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 52
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.devtestlabs.models.LinuxOsState
+- &id001
+  fullName: azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_applied
   id: deprovision_applied
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.devtestlabs.models.LinuxOsState
   type: attribute
   uid: azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_applied
-- fullName: azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_requested
+- &id002
+  fullName: azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_requested
   id: deprovision_requested
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.devtestlabs.models.LinuxOsState
   type: attribute
   uid: azure.mgmt.devtestlabs.models.LinuxOsState.deprovision_requested
-- fullName: azure.mgmt.devtestlabs.models.LinuxOsState.non_deprovisioned
+- &id003
+  fullName: azure.mgmt.devtestlabs.models.LinuxOsState.non_deprovisioned
   id: non_deprovisioned
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.devtestlabs.models.LinuxOsState
   type: attribute
   uid: azure.mgmt.devtestlabs.models.LinuxOsState.non_deprovisioned
+- *id001
+- *id002
+- *id003
 references: []

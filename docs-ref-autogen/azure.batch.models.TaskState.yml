@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.TaskState
-- fullName: azure.batch.models.TaskState.active
+- children:
+  - azure.batch.models.TaskState.active
+  - azure.batch.models.TaskState.completed
+  - azure.batch.models.TaskState.preparing
+  - azure.batch.models.TaskState.running
+  class: azure.batch.models.TaskState
+  fullName: azure.batch.models.TaskState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: TaskState
+  source:
+    id: TaskState
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 191
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.TaskState
+- &id001
+  fullName: azure.batch.models.TaskState.active
   id: active
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.batch.models.TaskState
   type: attribute
   uid: azure.batch.models.TaskState.active
-- fullName: azure.batch.models.TaskState.completed
+- &id002
+  fullName: azure.batch.models.TaskState.completed
   id: completed
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.batch.models.TaskState
   type: attribute
   uid: azure.batch.models.TaskState.completed
-- fullName: azure.batch.models.TaskState.preparing
+- &id003
+  fullName: azure.batch.models.TaskState.preparing
   id: preparing
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.batch.models.TaskState
   type: attribute
   uid: azure.batch.models.TaskState.preparing
-- fullName: azure.batch.models.TaskState.running
+- &id004
+  fullName: azure.batch.models.TaskState.running
   id: running
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.batch.models.TaskState
   type: attribute
   uid: azure.batch.models.TaskState.running
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

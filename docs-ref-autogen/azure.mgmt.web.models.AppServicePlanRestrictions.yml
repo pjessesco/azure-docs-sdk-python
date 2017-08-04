@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.AppServicePlanRestrictions
-- fullName: azure.mgmt.web.models.AppServicePlanRestrictions.basic
+- children:
+  - azure.mgmt.web.models.AppServicePlanRestrictions.basic
+  - azure.mgmt.web.models.AppServicePlanRestrictions.free
+  - azure.mgmt.web.models.AppServicePlanRestrictions.none
+  - azure.mgmt.web.models.AppServicePlanRestrictions.premium
+  - azure.mgmt.web.models.AppServicePlanRestrictions.shared
+  - azure.mgmt.web.models.AppServicePlanRestrictions.standard
+  class: azure.mgmt.web.models.AppServicePlanRestrictions
+  fullName: azure.mgmt.web.models.AppServicePlanRestrictions
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: AppServicePlanRestrictions
+  source:
+    id: AppServicePlanRestrictions
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 294
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.AppServicePlanRestrictions
+- &id001
+  fullName: azure.mgmt.web.models.AppServicePlanRestrictions.basic
   id: basic
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.web.models.AppServicePlanRestrictions
   type: attribute
   uid: azure.mgmt.web.models.AppServicePlanRestrictions.basic
-- fullName: azure.mgmt.web.models.AppServicePlanRestrictions.free
+- &id002
+  fullName: azure.mgmt.web.models.AppServicePlanRestrictions.free
   id: free
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.web.models.AppServicePlanRestrictions
   type: attribute
   uid: azure.mgmt.web.models.AppServicePlanRestrictions.free
-- fullName: azure.mgmt.web.models.AppServicePlanRestrictions.none
+- &id003
+  fullName: azure.mgmt.web.models.AppServicePlanRestrictions.none
   id: none
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.web.models.AppServicePlanRestrictions
   type: attribute
   uid: azure.mgmt.web.models.AppServicePlanRestrictions.none
-- fullName: azure.mgmt.web.models.AppServicePlanRestrictions.premium
+- &id004
+  fullName: azure.mgmt.web.models.AppServicePlanRestrictions.premium
   id: premium
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.web.models.AppServicePlanRestrictions
   type: attribute
   uid: azure.mgmt.web.models.AppServicePlanRestrictions.premium
-- fullName: azure.mgmt.web.models.AppServicePlanRestrictions.shared
+- &id005
+  fullName: azure.mgmt.web.models.AppServicePlanRestrictions.shared
   id: shared
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.web.models.AppServicePlanRestrictions
   type: attribute
   uid: azure.mgmt.web.models.AppServicePlanRestrictions.shared
-- fullName: azure.mgmt.web.models.AppServicePlanRestrictions.standard
+- &id006
+  fullName: azure.mgmt.web.models.AppServicePlanRestrictions.standard
   id: standard
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.web.models.AppServicePlanRestrictions
   type: attribute
   uid: azure.mgmt.web.models.AppServicePlanRestrictions.standard
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

@@ -40,7 +40,47 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus
-- fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelled
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelled
+  - azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelling
+  - azure.mgmt.recoveryservicesbackup.models.JobStatus.completed
+  - azure.mgmt.recoveryservicesbackup.models.JobStatus.completed_with_warnings
+  - azure.mgmt.recoveryservicesbackup.models.JobStatus.failed
+  - azure.mgmt.recoveryservicesbackup.models.JobStatus.in_progress
+  - azure.mgmt.recoveryservicesbackup.models.JobStatus.invalid
+  class: azure.mgmt.recoveryservicesbackup.models.JobStatus
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: JobStatus
+  source:
+    id: JobStatus
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 145
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.JobStatus
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelled
   id: cancelled
   langs:
   - python
@@ -54,7 +94,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.JobStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelled
-- fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelling
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelling
   id: cancelling
   langs:
   - python
@@ -68,7 +109,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.JobStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus.cancelling
-- fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.completed
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.completed
   id: completed
   langs:
   - python
@@ -82,7 +124,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.JobStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus.completed
-- fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.completed_with_warnings
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.completed_with_warnings
   id: completed_with_warnings
   langs:
   - python
@@ -96,7 +139,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.JobStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus.completed_with_warnings
-- fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.failed
+- &id005
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.failed
   id: failed
   langs:
   - python
@@ -110,7 +154,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.JobStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus.failed
-- fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.in_progress
+- &id006
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.in_progress
   id: in_progress
   langs:
   - python
@@ -124,7 +169,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.JobStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus.in_progress
-- fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.invalid
+- &id007
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobStatus.invalid
   id: invalid
   langs:
   - python
@@ -138,4 +184,11 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.JobStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.JobStatus.invalid
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
 references: []

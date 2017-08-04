@@ -35,7 +35,7 @@ items:
   syntax:
     content: ApplicableScheduleFragment(location=None, tags=None, lab_vms_shutdown=None,
       lab_vms_startup=None)
-    parameters:
+    parameters: &id001
     - description: 'The location of the resource.
 
         '
@@ -64,7 +64,7 @@ items:
       id: lab_vms_startup
       type:
       - azure.mgmt.devtestlabs.models.ScheduleFragment
-    variables:
+    variables: &id002
     - description: 'The identifier of the resource.
 
         '
@@ -83,6 +83,44 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.devtestlabs.models.ApplicableScheduleFragment
+- children: []
+  class: azure.mgmt.devtestlabs.models.ApplicableScheduleFragment
+  fullName: azure.mgmt.devtestlabs.models.ApplicableScheduleFragment
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.devtestlabs.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: ApplicableScheduleFragment
+  source:
+    id: ApplicableScheduleFragment
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\applicable_schedule_fragment.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\applicable_schedule_fragment.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Schedules applicable to a virtual machine. The schedules may have been
+
+    defined on a VM or on lab level.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: ApplicableScheduleFragment(location=None, tags=None, lab_vms_shutdown=None,
+      lab_vms_startup=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.devtestlabs.models.ApplicableScheduleFragment
 references: []

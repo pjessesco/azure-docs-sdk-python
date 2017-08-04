@@ -14,6 +14,18 @@ items:
   - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
   - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
   - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
   class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
   inheritance:
@@ -47,7 +59,7 @@ items:
     '
   syntax:
     content: NotificationHubsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -64,7 +76,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2017-04-01".
 
         '
@@ -72,7 +84,7 @@ items:
   type: class
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
   langs:
@@ -98,26 +110,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id005
       - str
     - description: 'The notificationHub name.
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.notificationhubs.models.CheckAvailabilityParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,7 +138,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -134,16 +146,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.notificationhubs.models.CheckAvailabilityResult
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
   langs:
@@ -169,19 +181,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id013
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id014
       - str
     - description: 'Parameters supplied to the create/update a
 
@@ -189,14 +201,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id015
       - azure.mgmt.notificationhubs.models.NotificationHubCreateOrUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -205,7 +217,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -213,16 +225,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - azure.mgmt.notificationhubs.models.NotificationHubResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
   langs:
@@ -249,38 +261,38 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id022
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id023
       - str
     - description: 'Authorization Rule Name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id024
       - str
     - description: 'The shared access authorization rule.
 
         '
       id: parameters
-      type:
+      type: &id025
       - azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleCreateOrUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id026
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -289,7 +301,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id027
       - bool
     - description: '*Operation configuration
 
@@ -297,16 +309,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id028
       type:
       - azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id030
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
   langs:
@@ -332,26 +344,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id031
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id032
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id033
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -360,7 +372,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -368,16 +380,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id038
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
   langs:
@@ -403,32 +415,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id039
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id040
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id041
       - str
     - description: 'Authorization Rule Name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id042
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id043
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -437,7 +449,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id044
       - bool
     - description: '*Operation configuration
 
@@ -445,16 +457,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id045
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id047
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
   langs:
@@ -480,26 +492,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id048
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id049
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id050
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -508,7 +520,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
     - description: '*Operation configuration
 
@@ -516,16 +528,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id053
       type:
       - azure.mgmt.notificationhubs.models.NotificationHubResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id055
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
   langs:
@@ -551,32 +563,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id056
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id057
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id058
       - str
     - description: 'authorization rule name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id059
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id060
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -585,7 +597,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id061
       - bool
     - description: '*Operation configuration
 
@@ -593,16 +605,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id062
       type:
       - azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id064
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
   langs:
@@ -628,26 +640,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id065
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id066
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id067
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id068
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -656,7 +668,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id069
       - bool
     - description: '*Operation configuration
 
@@ -664,16 +676,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id070
       type:
       - azure.mgmt.notificationhubs.models.PnsCredentialsResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id072
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
   langs:
@@ -699,20 +711,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id073
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id074
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id075
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -721,7 +733,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id076
       - bool
     - description: '*Operation configuration
 
@@ -729,13 +741,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id077
       type:
       - azure.mgmt.notificationhubs.models.NotificationHubResourcePaged
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id079
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
   langs:
@@ -761,26 +773,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id080
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id081
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id082
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id083
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -789,7 +801,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id084
       - bool
     - description: '*Operation configuration
 
@@ -797,13 +809,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id085
       type:
       - azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResourcePaged
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id087
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
   langs:
@@ -831,19 +843,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id088
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id089
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id090
       - str
     - description: 'The connection string of the
 
@@ -851,14 +863,14 @@ items:
 
         '
       id: authorization_rule_name
-      type:
+      type: &id091
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id092
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -867,7 +879,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id093
       - bool
     - description: '*Operation configuration
 
@@ -875,16 +887,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id094
       type:
       - azure.mgmt.notificationhubs.models.ResourceListKeys
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
 - class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
-  exceptions:
+  exceptions: &id096
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
   langs:
@@ -912,19 +924,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id097
       - str
     - description: 'The namespace name.
 
         '
       id: namespace_name
-      type:
+      type: &id098
       - str
     - description: 'The notification hub name.
 
         '
       id: notification_hub_name
-      type:
+      type: &id099
       - str
     - description: 'The connection string of the
 
@@ -932,7 +944,7 @@ items:
 
         '
       id: authorization_rule_name
-      type:
+      type: &id100
       - str
     - defaultValue: None
       description: 'Name of the key that has to be regenerated for the
@@ -943,14 +955,14 @@ items:
 
         '
       id: policy_key
-      type:
+      type: &id101
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id102
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -959,7 +971,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id103
       - bool
     - description: '*Operation configuration
 
@@ -967,15 +979,980 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id104
       type:
       - azure.mgmt.notificationhubs.models.ResourceListKeys
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+- children:
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+  - azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: NotificationHubsOperations
+  source:
+    id: NotificationHubsOperations
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'NotificationHubsOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: NotificationHubsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+- &id010
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: check_availability
+  source:
+    id: check_availability
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Checks the availability of the given notificationHub in a namespace.
+
+    '
+  syntax:
+    content: check_availability(resource_group_name, namespace_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id005
+    - description: 'The notificationHub name.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+- *id010
+- &id019
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 107
+  summary: 'Creates/Update a NotificationHub in a namespace.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, namespace_name, notification_hub_name,
+      parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id013
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id014
+    - description: 'Parameters supplied to the create/update a
+
+        NotificationHub Resource.
+
+        '
+      id: parameters
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+- *id019
+- &id029
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id020
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: create_or_update_authorization_rule
+  source:
+    id: create_or_update_authorization_rule
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 304
+  summary: 'Creates/Updates an authorization rule for a NotificationHub.
+
+    '
+  syntax:
+    content: create_or_update_authorization_rule(resource_group_name, namespace_name,
+      notification_hub_name, authorization_rule_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id022
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id023
+    - description: 'Authorization Rule Name.
+
+        '
+      id: authorization_rule_name
+      type: *id024
+    - description: 'The shared access authorization rule.
+
+        '
+      id: parameters
+      type: *id025
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id028
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+- *id029
+- &id037
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id030
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 182
+  summary: 'Deletes a notification hub associated with a namespace.
+
+    '
+  syntax:
+    content: delete(resource_group_name, namespace_name, notification_hub_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id031
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id032
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+- *id037
+- &id046
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id038
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: delete_authorization_rule
+  source:
+    id: delete_authorization_rule
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 380
+  summary: 'Deletes a notificationHub authorization rule.
+
+    '
+  syntax:
+    content: delete_authorization_rule(resource_group_name, namespace_name, notification_hub_name,
+      authorization_rule_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id039
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id040
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id041
+    - description: 'Authorization Rule Name.
+
+        '
+      id: authorization_rule_name
+      type: *id042
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id043
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id044
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id045
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+- *id046
+- &id054
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id047
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 239
+  summary: 'Lists the notification hubs associated with a namespace.
+
+    '
+  syntax:
+    content: get(resource_group_name, namespace_name, notification_hub_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id048
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id049
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id050
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id053
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+- *id054
+- &id063
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id055
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: get_authorization_rule
+  source:
+    id: get_authorization_rule
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 440
+  summary: 'Gets an authorization rule for a NotificationHub by name.
+
+    '
+  syntax:
+    content: get_authorization_rule(resource_group_name, namespace_name, notification_hub_name,
+      authorization_rule_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id056
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id057
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id058
+    - description: 'authorization rule name.
+
+        '
+      id: authorization_rule_name
+      type: *id059
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id060
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id061
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id062
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+- *id063
+- &id071
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id064
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: get_pns_credentials
+  source:
+    id: get_pns_credentials
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 799
+  summary: 'Lists the PNS Credentials associated with a notification hub .
+
+    '
+  syntax:
+    content: get_pns_credentials(resource_group_name, namespace_name, notification_hub_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id065
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id066
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id067
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id068
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id069
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id070
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+- *id071
+- &id078
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id072
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 508
+  summary: 'Lists the notification hubs associated with a namespace.
+
+    '
+  syntax:
+    content: list(resource_group_name, namespace_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id073
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id074
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id075
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id076
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id077
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+- *id078
+- &id086
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id079
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: list_authorization_rules
+  source:
+    id: list_authorization_rules
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 577
+  summary: 'Gets the authorization rules for a NotificationHub.
+
+    '
+  syntax:
+    content: list_authorization_rules(resource_group_name, namespace_name, notification_hub_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id080
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id081
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id082
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id083
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id084
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id085
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+- *id086
+- &id095
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id087
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: list_keys
+  source:
+    id: list_keys
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 649
+  summary: 'Gets the Primary and Secondary ConnectionStrings to the NotificationHub
+
+    .
+
+    '
+  syntax:
+    content: list_keys(resource_group_name, namespace_name, notification_hub_name,
+      authorization_rule_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id088
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id089
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id090
+    - description: 'The connection string of the
+
+        NotificationHub for the specified authorizationRule.
+
+        '
+      id: authorization_rule_name
+      type: *id091
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id092
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id093
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id094
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+- *id095
+- &id105
+  class: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  exceptions: *id096
+  fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.operations
+  name: regenerate_keys
+  source:
+    id: regenerate_keys
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\operations\notification_hubs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 719
+  summary: 'Regenerates the Primary/Secondary Keys to the NotificationHub
+
+    Authorization Rule.
+
+    '
+  syntax:
+    content: regenerate_keys(resource_group_name, namespace_name, notification_hub_name,
+      authorization_rule_name, policy_key=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id097
+    - description: 'The namespace name.
+
+        '
+      id: namespace_name
+      type: *id098
+    - description: 'The notification hub name.
+
+        '
+      id: notification_hub_name
+      type: *id099
+    - description: 'The connection string of the
+
+        NotificationHub for the specified authorizationRule.
+
+        '
+      id: authorization_rule_name
+      type: *id100
+    - defaultValue: None
+      description: 'Name of the key that has to be regenerated for the
+
+        Namespace/Notification Hub Authorization Rule. The value can be
+
+        Primary Key/Secondary Key.
+
+        '
+      id: policy_key
+      type: *id101
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id102
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id103
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id104
+  type: method
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+- *id105
 references:
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+  isExternal: false
+  name: check_availability
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+  isExternal: false
+  name: create_or_update_authorization_rule
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+  isExternal: false
+  name: delete_authorization_rule
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+  isExternal: false
+  name: get_authorization_rule
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+  isExternal: false
+  name: get_pns_credentials
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+  isExternal: false
+  name: list_authorization_rules
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+  isExternal: false
+  name: regenerate_keys
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+  isExternal: false
+  name: check_availability
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+  isExternal: false
+  name: create_or_update_authorization_rule
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.create_or_update_authorization_rule
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+  isExternal: false
+  name: delete_authorization_rule
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.delete_authorization_rule
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+  isExternal: false
+  name: get_authorization_rule
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_authorization_rule
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+  isExternal: false
+  name: get_pns_credentials
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.get_pns_credentials
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+  isExternal: false
+  name: list_authorization_rules
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_authorization_rules
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.list_keys
+- fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
+  isExternal: false
+  name: regenerate_keys
+  parent: azure.mgmt.notificationhubs.operations.NotificationHubsOperations
+  uid: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.regenerate_keys
 - fullName: azure.mgmt.notificationhubs.operations.NotificationHubsOperations.check_availability
   isExternal: false
   name: check_availability

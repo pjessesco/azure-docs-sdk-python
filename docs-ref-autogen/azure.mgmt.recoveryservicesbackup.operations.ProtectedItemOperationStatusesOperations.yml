@@ -3,6 +3,7 @@ api_name: []
 items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
   class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
   inheritance:
@@ -26,7 +27,7 @@ items:
   syntax:
     content: ProtectedItemOperationStatusesOperations(client, config, serializer,
       deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -43,7 +44,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -51,7 +52,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
   langs:
@@ -85,7 +86,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the resource group where the
 
@@ -93,19 +94,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id005
       - str
     - description: 'Fabric name associated with the backup item.
 
         '
       id: fabric_name
-      type:
+      type: &id006
       - str
     - description: 'Container name associated with the backup item.
 
         '
       id: container_name
-      type:
+      type: &id007
       - str
     - description: 'Backup item name whose details are to be
 
@@ -113,7 +114,7 @@ items:
 
         '
       id: protected_item_name
-      type:
+      type: &id008
       - str
     - description: 'OperationID represents the operation whose status
 
@@ -121,14 +122,14 @@ items:
 
         '
       id: operation_id
-      type:
+      type: &id009
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id010
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -137,7 +138,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id011
       - bool
     - description: '*Operation configuration
 
@@ -145,15 +146,145 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id012
       type:
       - azure.mgmt.recoveryservicesbackup.models.OperationStatus
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+- children:
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+  class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: ProtectedItemOperationStatusesOperations
+  source:
+    id: ProtectedItemOperationStatusesOperations
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_item_operation_statuses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_item_operation_statuses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ProtectedItemOperationStatusesOperations operations.
+
+
+    '
+  syntax:
+    content: ProtectedItemOperationStatusesOperations(client, config, serializer,
+      deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
+- &id013
+  class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_item_operation_statuses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_item_operation_statuses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Fetches the status of an operation such as triggering a backup,
+
+    restore. The status can be in progress, completed or failed. You can
+
+    refer to the OperationStatus enum for all the possible states of the
+
+    operation. Some operations create jobs. This method returns the list of
+
+    jobs associated with the operation.
+
+    '
+  syntax:
+    content: get(vault_name, resource_group_name, fabric_name, container_name, protected_item_name,
+      operation_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id004
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id005
+    - description: 'Fabric name associated with the backup item.
+
+        '
+      id: fabric_name
+      type: *id006
+    - description: 'Container name associated with the backup item.
+
+        '
+      id: container_name
+      type: *id007
+    - description: 'Backup item name whose details are to be
+
+        fetched.
+
+        '
+      id: protected_item_name
+      type: *id008
+    - description: 'OperationID represents the operation whose status
+
+        needs to be fetched.
+
+        '
+      id: operation_id
+      type: *id009
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id010
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id011
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id012
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+- *id013
 references:
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
 - fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get
   isExternal: false
   name: get

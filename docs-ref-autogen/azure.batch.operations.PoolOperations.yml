@@ -18,6 +18,22 @@ items:
   - azure.batch.operations.PoolOperations.stop_resize
   - azure.batch.operations.PoolOperations.update_properties
   - azure.batch.operations.PoolOperations.upgrade_os
+  - azure.batch.operations.PoolOperations.add
+  - azure.batch.operations.PoolOperations.delete
+  - azure.batch.operations.PoolOperations.disable_auto_scale
+  - azure.batch.operations.PoolOperations.enable_auto_scale
+  - azure.batch.operations.PoolOperations.evaluate_auto_scale
+  - azure.batch.operations.PoolOperations.exists
+  - azure.batch.operations.PoolOperations.get
+  - azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+  - azure.batch.operations.PoolOperations.list
+  - azure.batch.operations.PoolOperations.list_usage_metrics
+  - azure.batch.operations.PoolOperations.patch
+  - azure.batch.operations.PoolOperations.remove_nodes
+  - azure.batch.operations.PoolOperations.resize
+  - azure.batch.operations.PoolOperations.stop_resize
+  - azure.batch.operations.PoolOperations.update_properties
+  - azure.batch.operations.PoolOperations.upgrade_os
   class: azure.batch.operations.PoolOperations
   fullName: azure.batch.operations.PoolOperations
   inheritance:
@@ -55,7 +71,7 @@ items:
     '
   syntax:
     content: PoolOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -72,7 +88,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API Version. Constant value: "2017-06-01.5.1".
 
         '
@@ -80,7 +96,7 @@ items:
   type: class
   uid: azure.batch.operations.PoolOperations
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.add
   langs:
@@ -112,21 +128,21 @@ items:
 
         '
       id: pool
-      type:
+      type: &id004
       - azure.batch.models.PoolAddParameter
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: pool_add_options
-      type:
+      type: &id005
       - azure.batch.models.PoolAddOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -135,7 +151,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -143,16 +159,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.add
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id010
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.delete
   langs:
@@ -205,21 +221,21 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id011
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: pool_delete_options
-      type:
+      type: &id012
       - azure.batch.models.PoolDeleteOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id013
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -228,7 +244,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id014
       - bool
     - description: '*Operation configuration
 
@@ -236,16 +252,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id015
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.delete
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id017
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.disable_auto_scale
   langs:
@@ -273,7 +289,7 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id018
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -282,14 +298,14 @@ items:
 
         '
       id: pool_disable_auto_scale_options
-      type:
+      type: &id019
       - azure.batch.models.PoolDisableAutoScaleOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id020
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -298,7 +314,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id021
       - bool
     - description: '*Operation configuration
 
@@ -306,16 +322,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id022
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.disable_auto_scale
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id024
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.enable_auto_scale
   langs:
@@ -356,7 +372,7 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id025
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -365,7 +381,7 @@ items:
 
         '
       id: pool_enable_auto_scale_options
-      type:
+      type: &id026
       - azure.batch.models.PoolEnableAutoScaleOptions
     - defaultValue: None
       description: 'The formula for the desired number of
@@ -384,7 +400,7 @@ items:
 
         '
       id: auto_scale_formula
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'The time interval at which to
@@ -411,14 +427,14 @@ items:
 
         '
       id: auto_scale_evaluation_interval
-      type:
+      type: &id028
       - timedelta
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id029
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -427,7 +443,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id030
       - bool
     - description: '*Operation configuration
 
@@ -435,16 +451,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id031
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.enable_auto_scale
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id033
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.evaluate_auto_scale
   langs:
@@ -477,7 +493,7 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id034
       - str
     - description: 'The formula for the desired number of
 
@@ -495,7 +511,7 @@ items:
 
         '
       id: auto_scale_formula
-      type:
+      type: &id035
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -504,14 +520,14 @@ items:
 
         '
       id: pool_evaluate_auto_scale_options
-      type:
+      type: &id036
       - azure.batch.models.PoolEvaluateAutoScaleOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id037
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -520,7 +536,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id038
       - bool
     - description: '*Operation configuration
 
@@ -528,16 +544,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id039
       type:
       - azure.batch.models.AutoScaleRun
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.evaluate_auto_scale
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id041
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.exists
   langs:
@@ -563,21 +579,21 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id042
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: pool_exists_options
-      type:
+      type: &id043
       - azure.batch.models.PoolExistsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id044
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -586,7 +602,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id045
       - bool
     - description: '*Operation configuration
 
@@ -594,16 +610,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id046
       type:
       - bool
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.exists
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id048
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.get
   langs:
@@ -628,21 +644,21 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id049
       - str
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: pool_get_options
-      type:
+      type: &id050
       - azure.batch.models.PoolGetOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -651,7 +667,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
     - description: '*Operation configuration
 
@@ -659,16 +675,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id053
       type:
       - azure.batch.models.CloudPool
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.get
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id055
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
   langs:
@@ -706,14 +722,14 @@ items:
 
         '
       id: pool_get_all_lifetime_statistics_options
-      type:
+      type: &id056
       - azure.batch.models.PoolGetAllLifetimeStatisticsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id057
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -722,7 +738,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id058
       - bool
     - description: '*Operation configuration
 
@@ -730,16 +746,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id059
       type:
       - azure.batch.models.PoolStatistics
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id061
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.list
   langs:
@@ -765,14 +781,14 @@ items:
 
         '
       id: pool_list_options
-      type:
+      type: &id062
       - azure.batch.models.PoolListOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id063
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -781,7 +797,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id064
       - bool
     - description: '*Operation configuration
 
@@ -789,13 +805,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id065
       type:
       - azure.batch.models.CloudPoolPaged
   type: method
   uid: azure.batch.operations.PoolOperations.list
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id067
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.list_usage_metrics
   langs:
@@ -833,14 +849,14 @@ items:
 
         '
       id: pool_list_usage_metrics_options
-      type:
+      type: &id068
       - azure.batch.models.PoolListUsageMetricsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id069
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -849,7 +865,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id070
       - bool
     - description: '*Operation configuration
 
@@ -857,13 +873,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id071
       type:
       - azure.batch.models.PoolUsageMetricsPaged
   type: method
   uid: azure.batch.operations.PoolOperations.list_usage_metrics
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id073
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.patch
   langs:
@@ -898,27 +914,27 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id074
       - str
     - description: 'The parameters for the request.
 
         '
       id: pool_patch_parameter
-      type:
+      type: &id075
       - azure.batch.models.PoolPatchParameter
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: pool_patch_options
-      type:
+      type: &id076
       - azure.batch.models.PoolPatchOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id077
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -927,7 +943,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id078
       - bool
     - description: '*Operation configuration
 
@@ -935,16 +951,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id079
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.patch
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id081
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.remove_nodes
   langs:
@@ -979,13 +995,13 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id082
       - str
     - description: 'The parameters for the request.
 
         '
       id: node_remove_parameter
-      type:
+      type: &id083
       - azure.batch.models.NodeRemoveParameter
     - defaultValue: None
       description: 'Additional parameters for the
@@ -994,14 +1010,14 @@ items:
 
         '
       id: pool_remove_nodes_options
-      type:
+      type: &id084
       - azure.batch.models.PoolRemoveNodesOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id085
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1010,7 +1026,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id086
       - bool
     - description: '*Operation configuration
 
@@ -1018,16 +1034,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id087
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.remove_nodes
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id089
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.resize
   langs:
@@ -1070,27 +1086,27 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id090
       - str
     - description: 'The parameters for the request.
 
         '
       id: pool_resize_parameter
-      type:
+      type: &id091
       - azure.batch.models.PoolResizeParameter
     - defaultValue: None
       description: 'Additional parameters for the operation
 
         '
       id: pool_resize_options
-      type:
+      type: &id092
       - azure.batch.models.PoolResizeOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id093
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1099,7 +1115,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id094
       - bool
     - description: '*Operation configuration
 
@@ -1107,16 +1123,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id095
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.resize
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id097
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.stop_resize
   langs:
@@ -1153,7 +1169,7 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id098
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -1162,14 +1178,14 @@ items:
 
         '
       id: pool_stop_resize_options
-      type:
+      type: &id099
       - azure.batch.models.PoolStopResizeOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id100
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1178,7 +1194,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id101
       - bool
     - description: '*Operation configuration
 
@@ -1186,16 +1202,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id102
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.stop_resize
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id104
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.update_properties
   langs:
@@ -1230,7 +1246,7 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id105
       - str
     - description: 'The parameters for the
 
@@ -1238,7 +1254,7 @@ items:
 
         '
       id: pool_update_properties_parameter
-      type:
+      type: &id106
       - azure.batch.models.PoolUpdatePropertiesParameter
     - defaultValue: None
       description: 'Additional parameters for the
@@ -1247,14 +1263,14 @@ items:
 
         '
       id: pool_update_properties_options
-      type:
+      type: &id107
       - azure.batch.models.PoolUpdatePropertiesOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id108
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1263,7 +1279,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id109
       - bool
     - description: '*Operation configuration
 
@@ -1271,16 +1287,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id110
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.update_properties
 - class: azure.batch.operations.PoolOperations
-  exceptions:
+  exceptions: &id112
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.PoolOperations.upgrade_os
   langs:
@@ -1331,7 +1347,7 @@ items:
 
         '
       id: pool_id
-      type:
+      type: &id113
       - str
     - description: 'The Azure Guest OS version to be installed
 
@@ -1339,7 +1355,7 @@ items:
 
         '
       id: target_os_version
-      type:
+      type: &id114
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -1348,14 +1364,14 @@ items:
 
         '
       id: pool_upgrade_os_options
-      type:
+      type: &id115
       - azure.batch.models.PoolUpgradeOsOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id116
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1364,7 +1380,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id117
       - bool
     - description: '*Operation configuration
 
@@ -1372,15 +1388,1407 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id118
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.PoolOperations.upgrade_os
+- children:
+  - azure.batch.operations.PoolOperations.add
+  - azure.batch.operations.PoolOperations.delete
+  - azure.batch.operations.PoolOperations.disable_auto_scale
+  - azure.batch.operations.PoolOperations.enable_auto_scale
+  - azure.batch.operations.PoolOperations.evaluate_auto_scale
+  - azure.batch.operations.PoolOperations.exists
+  - azure.batch.operations.PoolOperations.get
+  - azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+  - azure.batch.operations.PoolOperations.list
+  - azure.batch.operations.PoolOperations.list_usage_metrics
+  - azure.batch.operations.PoolOperations.patch
+  - azure.batch.operations.PoolOperations.remove_nodes
+  - azure.batch.operations.PoolOperations.resize
+  - azure.batch.operations.PoolOperations.stop_resize
+  - azure.batch.operations.PoolOperations.update_properties
+  - azure.batch.operations.PoolOperations.upgrade_os
+  class: azure.batch.operations.PoolOperations
+  fullName: azure.batch.operations.PoolOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.batch.operations
+  name: PoolOperations
+  source:
+    id: PoolOperations
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'PoolOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: PoolOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.batch.operations.PoolOperations
+- &id009
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id003
+  fullName: azure.batch.operations.PoolOperations.add
+  langs:
+  - python
+  module: azure.batch.operations
+  name: add
+  source:
+    id: add
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 235
+  summary: 'Adds a pool to the specified account.
+
+
+    When naming pools, avoid including sensitive information such as user
+
+    names or secret project names. This information may appear in telemetry
+
+    logs accessible to Microsoft Support engineers.
+
+    '
+  syntax:
+    content: add(pool, pool_add_options=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The pool to be added.
+
+        '
+      id: pool
+      type: *id004
+    - defaultValue: None
+      description: 'Additional parameters for the operation
+
+        '
+      id: pool_add_options
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.batch.operations.PoolOperations.add
+- *id009
+- &id016
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id010
+  fullName: azure.batch.operations.PoolOperations.delete
+  langs:
+  - python
+  module: azure.batch.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 421
+  summary: 'Deletes a pool from the specified account.
+
+
+    When you request that a pool be deleted, the following actions occur:
+
+    the pool state is set to deleting; any ongoing resize operation on the
+
+    pool are stopped; the Batch service starts resizing the pool to zero
+
+    nodes; any tasks running on existing nodes are terminated and requeued
+
+    (as if a resize pool operation had been requested with the default
+
+    requeue option); finally, the pool is removed from the system. Because
+
+    running tasks are requeued, the user can rerun these tasks by updating
+
+    their job to target a different pool. The tasks can then run on the new
+
+    pool. If you want to override the requeue behavior, then you should
+
+    call resize pool explicitly to shrink the pool to zero size before
+
+    deleting the pool. If you call an Update, Patch or Delete API on a pool
+
+    in the deleting state, it will fail with HTTP status code 409 with
+
+    error code PoolBeingDeleted.
+
+    '
+  syntax:
+    content: delete(pool_id, pool_delete_options=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The ID of the pool to delete.
+
+        '
+      id: pool_id
+      type: *id011
+    - defaultValue: None
+      description: 'Additional parameters for the operation
+
+        '
+      id: pool_delete_options
+      type: *id012
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id013
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id014
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id015
+  type: method
+  uid: azure.batch.operations.PoolOperations.delete
+- *id016
+- &id023
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id017
+  fullName: azure.batch.operations.PoolOperations.disable_auto_scale
+  langs:
+  - python
+  module: azure.batch.operations
+  name: disable_auto_scale
+  source:
+    id: disable_auto_scale
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 863
+  summary: 'Disables automatic scaling for a pool.
+
+    '
+  syntax:
+    content: disable_auto_scale(pool_id, pool_disable_auto_scale_options=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool on which to disable automatic
+
+        scaling.
+
+        '
+      id: pool_id
+      type: *id018
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_disable_auto_scale_options
+      type: *id019
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id020
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id021
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id022
+  type: method
+  uid: azure.batch.operations.PoolOperations.disable_auto_scale
+- *id023
+- &id032
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id024
+  fullName: azure.batch.operations.PoolOperations.enable_auto_scale
+  langs:
+  - python
+  module: azure.batch.operations
+  name: enable_auto_scale
+  source:
+    id: enable_auto_scale
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 946
+  summary: 'Enables automatic scaling for a pool.
+
+
+    You cannot enable automatic scaling on a pool if a resize operation is
+
+    in progress on the pool. If automatic scaling of the pool is currently
+
+    disabled, you must specify a valid autoscale formula as part of the
+
+    request. If automatic scaling of the pool is already enabled, you may
+
+    specify a new autoscale formula and/or a new evaluation interval. You
+
+    cannot call this API for the same pool more than once every 30 seconds.
+
+    '
+  syntax:
+    content: enable_auto_scale(pool_id, pool_enable_auto_scale_options=None, auto_scale_formula=None,
+      auto_scale_evaluation_interval=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool on which to enable automatic
+
+        scaling.
+
+        '
+      id: pool_id
+      type: *id025
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_enable_auto_scale_options
+      type: *id026
+    - defaultValue: None
+      description: 'The formula for the desired number of
+
+        compute nodes in the pool. The formula is checked for validity before
+
+        it is applied to the pool. If the formula is not valid, the Batch
+
+        service rejects the request with detailed error information. For more
+
+        information about specifying this formula, see Automatically scale
+
+        compute nodes in an Azure Batch pool
+
+        ([https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling](https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)).
+
+        '
+      id: auto_scale_formula
+      type: *id027
+    - defaultValue: None
+      description: 'The time interval at which to
+
+        automatically adjust the pool size according to the autoscale formula.
+
+        The default value is 15 minutes. The minimum and maximum value are 5
+
+        minutes and 168 hours respectively. If you specify a value less than 5
+
+        minutes or greater than 168 hours, the Batch service rejects the
+
+        request with an invalid property value error; if you are calling the
+
+        REST API directly, the HTTP status code is 400 (Bad Request). If you
+
+        specify a new interval, then the existing autoscale evaluation
+
+        schedule will be stopped and a new autoscale evaluation schedule will
+
+        be started, with its starting time being the time when this request
+
+        was issued.
+
+        '
+      id: auto_scale_evaluation_interval
+      type: *id028
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id029
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id030
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id031
+  type: method
+  uid: azure.batch.operations.PoolOperations.enable_auto_scale
+- *id032
+- &id040
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id033
+  fullName: azure.batch.operations.PoolOperations.evaluate_auto_scale
+  langs:
+  - python
+  module: azure.batch.operations
+  name: evaluate_auto_scale
+  source:
+    id: evaluate_auto_scale
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1081
+  summary: 'Gets the result of evaluating an automatic scaling formula on the pool.
+
+
+    This API is primarily for validating an autoscale formula, as it simply
+
+    returns the result without applying the formula to the pool.
+
+    '
+  syntax:
+    content: evaluate_auto_scale(pool_id, auto_scale_formula, pool_evaluate_auto_scale_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool on which to evaluate the automatic
+
+        scaling formula.
+
+        '
+      id: pool_id
+      type: *id034
+    - description: 'The formula for the desired number of
+
+        compute nodes in the pool. The formula is validated and its results
+
+        calculated, but it is not applied to the pool. To apply the formula to
+
+        the pool, ''Enable automatic scaling on a pool''. For more information
+
+        about specifying this formula, see Automatically scale compute nodes
+
+        in an Azure Batch pool
+
+        ([https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling](https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)).
+
+        '
+      id: auto_scale_formula
+      type: *id035
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_evaluate_auto_scale_options
+      type: *id036
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id037
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id038
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id039
+  type: method
+  uid: azure.batch.operations.PoolOperations.evaluate_auto_scale
+- *id040
+- &id047
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id041
+  fullName: azure.batch.operations.PoolOperations.exists
+  langs:
+  - python
+  module: azure.batch.operations
+  name: exists
+  source:
+    id: exists
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 532
+  summary: 'Gets basic properties of a pool.
+
+    '
+  syntax:
+    content: exists(pool_id, pool_exists_options=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The ID of the pool to get.
+
+        '
+      id: pool_id
+      type: *id042
+    - defaultValue: None
+      description: 'Additional parameters for the operation
+
+        '
+      id: pool_exists_options
+      type: *id043
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id044
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id045
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id046
+  type: method
+  uid: azure.batch.operations.PoolOperations.exists
+- *id047
+- &id054
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id048
+  fullName: azure.batch.operations.PoolOperations.get
+  langs:
+  - python
+  module: azure.batch.operations
+  name: get
+  source:
+    id: get
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 633
+  summary: 'Gets information about the specified pool.
+
+    '
+  syntax:
+    content: get(pool_id, pool_get_options=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool to get.
+
+        '
+      id: pool_id
+      type: *id049
+    - defaultValue: None
+      description: 'Additional parameters for the operation
+
+        '
+      id: pool_get_options
+      type: *id050
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id053
+  type: method
+  uid: azure.batch.operations.PoolOperations.get
+- *id054
+- &id060
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id055
+  fullName: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+  langs:
+  - python
+  module: azure.batch.operations
+  name: get_all_lifetime_statistics
+  source:
+    id: get_all_lifetime_statistics
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 146
+  summary: 'Gets lifetime summary statistics for all of the pools in the specified
+
+    account.
+
+
+    Statistics are aggregated across all pools that have ever existed in
+
+    the account, from account creation to the last update time of the
+
+    statistics.
+
+    '
+  syntax:
+    content: get_all_lifetime_statistics(pool_get_all_lifetime_statistics_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'Additional parameters
+
+        for the operation
+
+        '
+      id: pool_get_all_lifetime_statistics_options
+      type: *id056
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id057
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id058
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id059
+  type: method
+  uid: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+- *id060
+- &id066
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id061
+  fullName: azure.batch.operations.PoolOperations.list
+  langs:
+  - python
+  module: azure.batch.operations
+  name: list
+  source:
+    id: list
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 320
+  summary: 'Lists all of the pools in the specified account.
+
+    '
+  syntax:
+    content: list(pool_list_options=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'Additional parameters for the operation
+
+        '
+      id: pool_list_options
+      type: *id062
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id063
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id064
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id065
+  type: method
+  uid: azure.batch.operations.PoolOperations.list
+- *id066
+- &id072
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id067
+  fullName: azure.batch.operations.PoolOperations.list_usage_metrics
+  langs:
+  - python
+  module: azure.batch.operations
+  name: list_usage_metrics
+  source:
+    id: list_usage_metrics
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Lists the usage metrics, aggregated by pool across individual time
+
+    intervals, for the specified account.
+
+
+    If you do not specify a $filter clause including a poolId, the response
+
+    includes all pools that existed in the account in the time range of the
+
+    returned aggregation intervals.
+
+    '
+  syntax:
+    content: list_usage_metrics(pool_list_usage_metrics_options=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_list_usage_metrics_options
+      type: *id068
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id069
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id070
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id071
+  type: method
+  uid: azure.batch.operations.PoolOperations.list_usage_metrics
+- *id072
+- &id080
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id073
+  fullName: azure.batch.operations.PoolOperations.patch
+  langs:
+  - python
+  module: azure.batch.operations
+  name: patch
+  source:
+    id: patch
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 751
+  summary: 'Updates the properties of the specified pool.
+
+
+    This only replaces the pool properties specified in the request. For
+
+    example, if the pool has a start task associated with it, and a request
+
+    does not specify a start task element, then the pool keeps the existing
+
+    start task.
+
+    '
+  syntax:
+    content: patch(pool_id, pool_patch_parameter, pool_patch_options=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool to update.
+
+        '
+      id: pool_id
+      type: *id074
+    - description: 'The parameters for the request.
+
+        '
+      id: pool_patch_parameter
+      type: *id075
+    - defaultValue: None
+      description: 'Additional parameters for the operation
+
+        '
+      id: pool_patch_options
+      type: *id076
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id077
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id078
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id079
+  type: method
+  uid: azure.batch.operations.PoolOperations.patch
+- *id080
+- &id088
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id081
+  fullName: azure.batch.operations.PoolOperations.remove_nodes
+  langs:
+  - python
+  module: azure.batch.operations
+  name: remove_nodes
+  source:
+    id: remove_nodes
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1630
+  summary: 'Removes compute nodes from the specified pool.
+
+
+    This operation can only run when the allocation state of the pool is
+
+    steady. When this operation runs, the allocation state changes from
+
+    steady to resizing.
+
+    '
+  syntax:
+    content: remove_nodes(pool_id, node_remove_parameter, pool_remove_nodes_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool from which you want to remove
+
+        nodes.
+
+        '
+      id: pool_id
+      type: *id082
+    - description: 'The parameters for the request.
+
+        '
+      id: node_remove_parameter
+      type: *id083
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_remove_nodes_options
+      type: *id084
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id085
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id086
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id087
+  type: method
+  uid: azure.batch.operations.PoolOperations.remove_nodes
+- *id088
+- &id096
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id089
+  fullName: azure.batch.operations.PoolOperations.resize
+  langs:
+  - python
+  module: azure.batch.operations
+  name: resize
+  source:
+    id: resize
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1189
+  summary: 'Changes the number of compute nodes that are assigned to a pool.
+
+
+    You can only resize a pool when its allocation state is steady. If the
+
+    pool is already resizing, the request fails with status code 409. When
+
+    you resize a pool, the pool''s allocation state changes from steady to
+
+    resizing. You cannot resize pools which are configured for automatic
+
+    scaling. If you try to do this, the Batch service returns an error 409.
+
+    If you resize a pool downwards, the Batch service chooses which nodes
+
+    to remove. To remove specific nodes, use the pool remove nodes API
+
+    instead.
+
+    '
+  syntax:
+    content: resize(pool_id, pool_resize_parameter, pool_resize_options=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool to resize.
+
+        '
+      id: pool_id
+      type: *id090
+    - description: 'The parameters for the request.
+
+        '
+      id: pool_resize_parameter
+      type: *id091
+    - defaultValue: None
+      description: 'Additional parameters for the operation
+
+        '
+      id: pool_resize_options
+      type: *id092
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id093
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id094
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id095
+  type: method
+  uid: azure.batch.operations.PoolOperations.resize
+- *id096
+- &id103
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id097
+  fullName: azure.batch.operations.PoolOperations.stop_resize
+  langs:
+  - python
+  module: azure.batch.operations
+  name: stop_resize
+  source:
+    id: stop_resize
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1305
+  summary: 'Stops an ongoing resize operation on the pool.
+
+
+    This does not restore the pool to its previous state before the resize
+
+    operation: it only stops any further changes being made, and the pool
+
+    maintains its current state. A resize operation need not be an explicit
+
+    resize pool request; this API can also be used to halt the initial
+
+    sizing of the pool when it is created.
+
+    '
+  syntax:
+    content: stop_resize(pool_id, pool_stop_resize_options=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool whose resizing you want to stop.
+
+        '
+      id: pool_id
+      type: *id098
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_stop_resize_options
+      type: *id099
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id100
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id101
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id102
+  type: method
+  uid: azure.batch.operations.PoolOperations.stop_resize
+- *id103
+- &id111
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id104
+  fullName: azure.batch.operations.PoolOperations.update_properties
+  langs:
+  - python
+  module: azure.batch.operations
+  name: update_properties
+  source:
+    id: update_properties
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1412
+  summary: 'Updates the properties of the specified pool.
+
+
+    This fully replaces all the updateable properties of the pool. For
+
+    example, if the pool has a start task associated with it and if start
+
+    task is not specified with this request, then the Batch service will
+
+    remove the existing start task.
+
+    '
+  syntax:
+    content: update_properties(pool_id, pool_update_properties_parameter, pool_update_properties_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool to update.
+
+        '
+      id: pool_id
+      type: *id105
+    - description: 'The parameters for the
+
+        request.
+
+        '
+      id: pool_update_properties_parameter
+      type: *id106
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_update_properties_options
+      type: *id107
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id108
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id109
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id110
+  type: method
+  uid: azure.batch.operations.PoolOperations.update_properties
+- *id111
+- &id119
+  class: azure.batch.operations.PoolOperations
+  exceptions: *id112
+  fullName: azure.batch.operations.PoolOperations.upgrade_os
+  langs:
+  - python
+  module: azure.batch.operations
+  name: upgrade_os
+  source:
+    id: upgrade_os
+    path: azure-batch\azure\batch\operations\pool_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\pool_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1508
+  summary: 'Upgrades the operating system of the specified pool.
+
+
+    During an upgrade, the Batch service upgrades each compute node in the
+
+    pool. When a compute node is chosen for upgrade, any tasks running on
+
+    that node are removed from the node and returned to the queue to be
+
+    rerun later (or on a different compute node). The node will be
+
+    unavailable until the upgrade is complete. This operation results in
+
+    temporarily reduced pool capacity as nodes are taken out of service to
+
+    be upgraded. Although the Batch service tries to avoid upgrading all
+
+    compute nodes at the same time, it does not guarantee to do this
+
+    (particularly on small pools); therefore, the pool may be temporarily
+
+    unavailable to run tasks. When this operation runs, the pool state
+
+    changes to upgrading. When all compute nodes have finished upgrading,
+
+    the pool state returns to active.
+
+    '
+  syntax:
+    content: upgrade_os(pool_id, target_os_version, pool_upgrade_os_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the pool to upgrade.
+
+        '
+      id: pool_id
+      type: *id113
+    - description: 'The Azure Guest OS version to be installed
+
+        on the virtual machines in the pool.
+
+        '
+      id: target_os_version
+      type: *id114
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: pool_upgrade_os_options
+      type: *id115
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id116
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id117
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id118
+  type: method
+  uid: azure.batch.operations.PoolOperations.upgrade_os
+- *id119
 references:
+- fullName: azure.batch.operations.PoolOperations.add
+  isExternal: false
+  name: add
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.add
+- fullName: azure.batch.operations.PoolOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.delete
+- fullName: azure.batch.operations.PoolOperations.disable_auto_scale
+  isExternal: false
+  name: disable_auto_scale
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.disable_auto_scale
+- fullName: azure.batch.operations.PoolOperations.enable_auto_scale
+  isExternal: false
+  name: enable_auto_scale
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.enable_auto_scale
+- fullName: azure.batch.operations.PoolOperations.evaluate_auto_scale
+  isExternal: false
+  name: evaluate_auto_scale
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.evaluate_auto_scale
+- fullName: azure.batch.operations.PoolOperations.exists
+  isExternal: false
+  name: exists
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.exists
+- fullName: azure.batch.operations.PoolOperations.get
+  isExternal: false
+  name: get
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.get
+- fullName: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+  isExternal: false
+  name: get_all_lifetime_statistics
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+- fullName: azure.batch.operations.PoolOperations.list
+  isExternal: false
+  name: list
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.list
+- fullName: azure.batch.operations.PoolOperations.list_usage_metrics
+  isExternal: false
+  name: list_usage_metrics
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.list_usage_metrics
+- fullName: azure.batch.operations.PoolOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.patch
+- fullName: azure.batch.operations.PoolOperations.remove_nodes
+  isExternal: false
+  name: remove_nodes
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.remove_nodes
+- fullName: azure.batch.operations.PoolOperations.resize
+  isExternal: false
+  name: resize
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.resize
+- fullName: azure.batch.operations.PoolOperations.stop_resize
+  isExternal: false
+  name: stop_resize
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.stop_resize
+- fullName: azure.batch.operations.PoolOperations.update_properties
+  isExternal: false
+  name: update_properties
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.update_properties
+- fullName: azure.batch.operations.PoolOperations.upgrade_os
+  isExternal: false
+  name: upgrade_os
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.upgrade_os
+- fullName: azure.batch.operations.PoolOperations.add
+  isExternal: false
+  name: add
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.add
+- fullName: azure.batch.operations.PoolOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.delete
+- fullName: azure.batch.operations.PoolOperations.disable_auto_scale
+  isExternal: false
+  name: disable_auto_scale
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.disable_auto_scale
+- fullName: azure.batch.operations.PoolOperations.enable_auto_scale
+  isExternal: false
+  name: enable_auto_scale
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.enable_auto_scale
+- fullName: azure.batch.operations.PoolOperations.evaluate_auto_scale
+  isExternal: false
+  name: evaluate_auto_scale
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.evaluate_auto_scale
+- fullName: azure.batch.operations.PoolOperations.exists
+  isExternal: false
+  name: exists
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.exists
+- fullName: azure.batch.operations.PoolOperations.get
+  isExternal: false
+  name: get
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.get
+- fullName: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+  isExternal: false
+  name: get_all_lifetime_statistics
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.get_all_lifetime_statistics
+- fullName: azure.batch.operations.PoolOperations.list
+  isExternal: false
+  name: list
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.list
+- fullName: azure.batch.operations.PoolOperations.list_usage_metrics
+  isExternal: false
+  name: list_usage_metrics
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.list_usage_metrics
+- fullName: azure.batch.operations.PoolOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.patch
+- fullName: azure.batch.operations.PoolOperations.remove_nodes
+  isExternal: false
+  name: remove_nodes
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.remove_nodes
+- fullName: azure.batch.operations.PoolOperations.resize
+  isExternal: false
+  name: resize
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.resize
+- fullName: azure.batch.operations.PoolOperations.stop_resize
+  isExternal: false
+  name: stop_resize
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.stop_resize
+- fullName: azure.batch.operations.PoolOperations.update_properties
+  isExternal: false
+  name: update_properties
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.update_properties
+- fullName: azure.batch.operations.PoolOperations.upgrade_os
+  isExternal: false
+  name: upgrade_os
+  parent: azure.batch.operations.PoolOperations
+  uid: azure.batch.operations.PoolOperations.upgrade_os
 - fullName: azure.batch.operations.PoolOperations.add
   isExternal: false
   name: add

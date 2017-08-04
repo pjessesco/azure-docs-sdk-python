@@ -34,7 +34,7 @@ items:
     content: GatewayResource(tags=None, etag=None, created=None, updated=None, upgrade_mode=None,
       desired_version=None, instances=None, active_message_count=None, latest_published_msi_version=None,
       published_time_utc=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Manager Resource Tags.
 
         '
@@ -105,7 +105,7 @@ items:
       id: published_time_utc
       type:
       - datetime
-    variables:
+    variables: &id002
     - description: 'Resource Manager Resource ID.
 
         '
@@ -142,6 +142,43 @@ items:
       id: minimum_version
       type:
       - str
+  type: class
+  uid: azure.mgmt.servermanager.models.GatewayResource
+- children: []
+  class: azure.mgmt.servermanager.models.GatewayResource
+  fullName: azure.mgmt.servermanager.models.GatewayResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.servermanager.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.servermanager.models
+  name: GatewayResource
+  source:
+    id: GatewayResource
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\gateway_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\gateway_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Data model for an arm gateway resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: GatewayResource(tags=None, etag=None, created=None, updated=None, upgrade_mode=None,
+      desired_version=None, instances=None, active_message_count=None, latest_published_msi_version=None,
+      published_time_utc=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.servermanager.models.GatewayResource
 references: []

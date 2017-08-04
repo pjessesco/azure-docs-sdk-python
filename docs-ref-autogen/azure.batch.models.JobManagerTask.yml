@@ -28,7 +28,7 @@ items:
       output_files=None, environment_settings=None, constraints=None, kill_job_on_completion=None,
       user_identity=None, run_exclusive=None, application_package_references=None,
       authentication_token_settings=None, allow_low_priority_node=None)
-    parameters:
+    parameters: &id001
     - description: 'A string that uniquely identifies the Job Manager taskwithin
 
         the job. The id can contain any combination of alphanumeric characters
@@ -221,6 +221,36 @@ items:
       id: allow_low_priority_node
       type:
       - bool
+  type: class
+  uid: azure.batch.models.JobManagerTask
+- children: []
+  class: azure.batch.models.JobManagerTask
+  fullName: azure.batch.models.JobManagerTask
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: JobManagerTask
+  source:
+    id: JobManagerTask
+    path: azure-batch\azure\batch\models\job_manager_task.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\job_manager_task.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Specifies details of a Job Manager task.
+
+    '
+  syntax:
+    content: JobManagerTask(id, command_line, display_name=None, resource_files=None,
+      output_files=None, environment_settings=None, constraints=None, kill_job_on_completion=None,
+      user_identity=None, run_exclusive=None, application_package_references=None,
+      authentication_token_settings=None, allow_low_priority_node=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.JobManagerTask
 references: []

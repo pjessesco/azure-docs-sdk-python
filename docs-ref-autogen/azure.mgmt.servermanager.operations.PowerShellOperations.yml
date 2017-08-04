@@ -9,6 +9,13 @@ items:
   - azure.mgmt.servermanager.operations.PowerShellOperations.list_session
   - azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
   - azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+  - azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+  - azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+  - azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+  - azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+  - azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+  - azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+  - azure.mgmt.servermanager.operations.PowerShellOperations.update_command
   class: azure.mgmt.servermanager.operations.PowerShellOperations
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations
   inheritance:
@@ -37,7 +44,7 @@ items:
     '
   syntax:
     content: PowerShellOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -54,7 +61,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API Version. Constant value: "2016-07-01-preview".
 
         '
@@ -62,7 +69,7 @@ items:
   type: class
   uid: azure.mgmt.servermanager.operations.PowerShellOperations
 - class: azure.mgmt.servermanager.operations.PowerShellOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
   langs:
@@ -90,32 +97,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id005
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id006
       - str
     - description: 'The PowerShell sessionId from the user.
 
         '
       id: pssession
-      type:
+      type: &id007
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -124,20 +131,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
-    return:
+    return: &id010
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.PowerShellCommandResults'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
 - class: azure.mgmt.servermanager.operations.PowerShellOperations
-  exceptions:
+  exceptions: &id012
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
   langs:
@@ -165,32 +172,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id014
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id015
       - str
     - description: 'The PowerShell sessionId from the user.
 
         '
       id: pssession
-      type:
+      type: &id016
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id017
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -199,20 +206,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id018
       - bool
-    return:
+    return: &id019
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.PowerShellSessionResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
 - class: azure.mgmt.servermanager.operations.PowerShellOperations
-  exceptions:
+  exceptions: &id021
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
   langs:
@@ -240,25 +247,25 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id022
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id023
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id024
       - str
     - description: 'The PowerShell sessionId from the user.
 
         '
       id: pssession
-      type:
+      type: &id025
       - str
     - defaultValue: None
       description: 'Gets current output from an ongoing call. Possible
@@ -267,7 +274,7 @@ items:
 
         '
       id: expand
-      type:
+      type: &id026
       - 'str or @azure.mgmt.servermanager.models.PowerShellExpandOption
 
         '
@@ -276,7 +283,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id027
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -285,7 +292,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id028
       - bool
     - description: '*Operation configuration
 
@@ -293,16 +300,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id029
       type:
       - azure.mgmt.servermanager.models.PowerShellCommandStatus
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
 - class: azure.mgmt.servermanager.operations.PowerShellOperations
-  exceptions:
+  exceptions: &id031
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
   langs:
@@ -330,39 +337,39 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id032
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id033
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id034
       - str
     - description: 'The PowerShell sessionId from the user.
 
         '
       id: pssession
-      type:
+      type: &id035
       - str
     - defaultValue: None
       description: 'Script to execute.
 
         '
       id: command
-      type:
+      type: &id036
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id037
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -371,20 +378,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id038
       - bool
-    return:
+    return: &id039
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.PowerShellCommandResults'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
 - class: azure.mgmt.servermanager.operations.PowerShellOperations
-  exceptions:
+  exceptions: &id041
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
   langs:
@@ -412,26 +419,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id042
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id043
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id044
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id045
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -440,7 +447,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id046
       - bool
     - description: '*Operation configuration
 
@@ -448,16 +455,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id047
       type:
       - azure.mgmt.servermanager.models.PowerShellSessionResources
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
 - class: azure.mgmt.servermanager.operations.PowerShellOperations
-  exceptions:
+  exceptions: &id049
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
   langs:
@@ -485,39 +492,39 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id050
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id051
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id052
       - str
     - description: 'The PowerShell sessionId from the user.
 
         '
       id: pssession
-      type:
+      type: &id053
       - str
     - defaultValue: None
       description: 'Command to get tab completion for.
 
         '
       id: command
-      type:
+      type: &id054
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id055
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -526,7 +533,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id056
       - bool
     - description: '*Operation configuration
 
@@ -534,16 +541,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id057
       type:
       - azure.mgmt.servermanager.models.PowerShellTabCompletionResults
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
 - class: azure.mgmt.servermanager.operations.PowerShellOperations
-  exceptions:
+  exceptions: &id059
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
   langs:
@@ -571,32 +578,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id060
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id061
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id062
       - str
     - description: 'The PowerShell sessionId from the user.
 
         '
       id: pssession
-      type:
+      type: &id063
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id064
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -605,19 +612,603 @@ items:
 
         '
       id: raw
-      type:
+      type: &id065
       - bool
-    return:
+    return: &id066
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.PowerShellCommandResults'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+- children:
+  - azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+  - azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+  - azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+  - azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+  - azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+  - azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+  - azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: PowerShellOperations
+  source:
+    id: PowerShellOperations
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'PowerShellOperations operations.
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: PowerShellOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations
+- &id011
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  exceptions: *id003
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: cancel_command
+  source:
+    id: cancel_command
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 458
+  summary: 'Cancels a PowerShell command.
+
+    '
+  syntax:
+    content: cancel_command(resource_group_name, node_name, session, pssession, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id005
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id006
+    - description: 'The PowerShell sessionId from the user.
+
+        '
+      id: pssession
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    return: *id010
+  type: method
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+- *id011
+- &id020
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  exceptions: *id012
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: create_session
+  source:
+    id: create_session
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 103
+  summary: 'Creates a PowerShell session.
+
+    '
+  syntax:
+    content: create_session(resource_group_name, node_name, session, pssession, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id014
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id015
+    - description: 'The PowerShell sessionId from the user.
+
+        '
+      id: pssession
+      type: *id016
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id017
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id018
+    return: *id019
+  type: method
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+- *id020
+- &id030
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  exceptions: *id021
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: get_command_status
+  source:
+    id: get_command_status
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 194
+  summary: 'Gets the status of a command.
+
+    '
+  syntax:
+    content: get_command_status(resource_group_name, node_name, session, pssession,
+      expand=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id022
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id023
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id024
+    - description: 'The PowerShell sessionId from the user.
+
+        '
+      id: pssession
+      type: *id025
+    - defaultValue: None
+      description: 'Gets current output from an ongoing call. Possible
+
+        values include: ''output''
+
+        '
+      id: expand
+      type: *id026
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id027
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id028
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id029
+  type: method
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+- *id030
+- &id040
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  exceptions: *id031
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: invoke_command
+  source:
+    id: invoke_command
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 359
+  summary: 'Creates a PowerShell script and invokes it.
+
+    '
+  syntax:
+    content: invoke_command(resource_group_name, node_name, session, pssession, command=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id032
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id033
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id034
+    - description: 'The PowerShell sessionId from the user.
+
+        '
+      id: pssession
+      type: *id035
+    - defaultValue: None
+      description: 'Script to execute.
+
+        '
+      id: command
+      type: *id036
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id037
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id038
+    return: *id039
+  type: method
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+- *id040
+- &id048
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  exceptions: *id041
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: list_session
+  source:
+    id: list_session
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets a list of the active sessions.
+
+    '
+  syntax:
+    content: list_session(resource_group_name, node_name, session, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id042
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id043
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id044
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id045
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id046
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id047
+  type: method
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+- *id048
+- &id058
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  exceptions: *id049
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: tab_completion
+  source:
+    id: tab_completion
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 549
+  summary: 'Gets tab completion values for a command.
+
+    '
+  syntax:
+    content: tab_completion(resource_group_name, node_name, session, pssession, command=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id050
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id051
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id052
+    - description: 'The PowerShell sessionId from the user.
+
+        '
+      id: pssession
+      type: *id053
+    - defaultValue: None
+      description: 'Command to get tab completion for.
+
+        '
+      id: command
+      type: *id054
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id055
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id056
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id057
+  type: method
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+- *id058
+- &id067
+  class: azure.mgmt.servermanager.operations.PowerShellOperations
+  exceptions: *id059
+  fullName: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: update_command
+  source:
+    id: update_command
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\power_shell_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 268
+  summary: 'Updates a running PowerShell command with more data.
+
+    '
+  syntax:
+    content: update_command(resource_group_name, node_name, session, pssession, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id060
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id061
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id062
+    - description: 'The PowerShell sessionId from the user.
+
+        '
+      id: pssession
+      type: *id063
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id064
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id065
+    return: *id066
+  type: method
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+- *id067
 references:
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+  isExternal: false
+  name: cancel_command
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+  isExternal: false
+  name: create_session
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+  isExternal: false
+  name: get_command_status
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+  isExternal: false
+  name: invoke_command
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+  isExternal: false
+  name: list_session
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+  isExternal: false
+  name: tab_completion
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+  isExternal: false
+  name: update_command
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+  isExternal: false
+  name: cancel_command
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+  isExternal: false
+  name: create_session
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.create_session
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+  isExternal: false
+  name: get_command_status
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.get_command_status
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+  isExternal: false
+  name: invoke_command
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.invoke_command
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+  isExternal: false
+  name: list_session
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.list_session
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+  isExternal: false
+  name: tab_completion
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.tab_completion
+- fullName: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
+  isExternal: false
+  name: update_command
+  parent: azure.mgmt.servermanager.operations.PowerShellOperations
+  uid: azure.mgmt.servermanager.operations.PowerShellOperations.update_command
 - fullName: azure.mgmt.servermanager.operations.PowerShellOperations.cancel_command
   isExternal: false
   name: cancel_command

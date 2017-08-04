@@ -30,7 +30,7 @@ items:
       backup_engine_state=None, health_status=None, can_re_register=None, backup_engine_id=None,
       dpm_version=None, azure_backup_agent_version=None, is_azure_backup_agent_upgrade_available=None,
       is_dpm_upgrade_available=None, extended_info=None)
-    parameters:
+    parameters: &id001
     - description: 'Friendly name of the backup engine.
 
         '
@@ -125,6 +125,38 @@ items:
       id: backup_engine_type
       type:
       - str
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.BackupEngineBase
+- children: []
+  class: azure.mgmt.recoveryservicesbackup.models.BackupEngineBase
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupEngineBase
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: BackupEngineBase
+  source:
+    id: BackupEngineBase
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\backup_engine_base.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\backup_engine_base.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The base backup engine class. All workload specific backup engines derive
+
+    from this class.
+
+    '
+  syntax:
+    content: BackupEngineBase(friendly_name=None, backup_management_type=None, registration_status=None,
+      backup_engine_state=None, health_status=None, can_re_register=None, backup_engine_id=None,
+      dpm_version=None, azure_backup_agent_version=None, is_azure_backup_agent_upgrade_available=None,
+      is_dpm_upgrade_available=None, extended_info=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.BackupEngineBase
 references: []

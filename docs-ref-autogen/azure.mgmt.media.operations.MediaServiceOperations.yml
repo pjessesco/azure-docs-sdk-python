@@ -11,6 +11,15 @@ items:
   - azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
   - azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
   - azure.mgmt.media.operations.MediaServiceOperations.update
+  - azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+  - azure.mgmt.media.operations.MediaServiceOperations.create
+  - azure.mgmt.media.operations.MediaServiceOperations.delete
+  - azure.mgmt.media.operations.MediaServiceOperations.get
+  - azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+  - azure.mgmt.media.operations.MediaServiceOperations.list_keys
+  - azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+  - azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+  - azure.mgmt.media.operations.MediaServiceOperations.update
   class: azure.mgmt.media.operations.MediaServiceOperations
   fullName: azure.mgmt.media.operations.MediaServiceOperations
   inheritance:
@@ -41,7 +50,7 @@ items:
     '
   syntax:
     content: MediaServiceOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -58,7 +67,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Version of the API to be used with the client request. Current
         version is 2015-10-01. Constant value: "2015-10-01".
 
@@ -67,7 +76,7 @@ items:
   type: class
   uid: azure.mgmt.media.operations.MediaServiceOperations
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
   langs:
@@ -94,14 +103,14 @@ items:
 
         '
       id: name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -110,7 +119,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -118,16 +127,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - azure.mgmt.media.models.CheckNameAvailabilityOutput
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id009
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.create
   langs:
@@ -155,26 +164,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id010
       - str
     - description: 'Name of the Media Service.
 
         '
       id: media_service_name
-      type:
+      type: &id011
       - str
     - description: 'Media Service properties needed for creation.
 
         '
       id: media_service
-      type:
+      type: &id012
       - azure.mgmt.media.models.MediaService
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id013
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -183,7 +192,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id014
       - bool
     - description: '*Operation configuration
 
@@ -191,16 +200,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id015
       type:
       - azure.mgmt.media.models.MediaService
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.create
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id017
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.delete
   langs:
@@ -228,20 +237,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id018
       - str
     - description: 'Name of the Media Service.
 
         '
       id: media_service_name
-      type:
+      type: &id019
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id020
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -250,7 +259,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id021
       - bool
     - description: '*Operation configuration
 
@@ -258,16 +267,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id022
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.delete
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id024
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.get
   langs:
@@ -295,20 +304,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id025
       - str
     - description: 'Name of the Media Service.
 
         '
       id: media_service_name
-      type:
+      type: &id026
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id027
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -317,7 +326,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id028
       - bool
     - description: '*Operation configuration
 
@@ -325,16 +334,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id029
       type:
       - azure.mgmt.media.models.MediaService
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.get
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id031
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
   langs:
@@ -362,14 +371,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id032
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id033
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -378,7 +387,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id034
       - bool
     - description: '*Operation configuration
 
@@ -386,13 +395,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id035
       type:
       - azure.mgmt.media.models.MediaServicePaged
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id037
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.list_keys
   langs:
@@ -420,20 +429,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id038
       - str
     - description: 'Name of the Media Service.
 
         '
       id: media_service_name
-      type:
+      type: &id039
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id040
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -442,7 +451,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id041
       - bool
     - description: '*Operation configuration
 
@@ -450,16 +459,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id042
       type:
       - azure.mgmt.media.models.ServiceKeys
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.list_keys
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id044
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
   langs:
@@ -487,13 +496,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id045
       - str
     - description: 'Name of the Media Service.
 
         '
       id: media_service_name
-      type:
+      type: &id046
       - str
     - description: 'The keyType indicating which key you want to
 
@@ -503,7 +512,7 @@ items:
 
         '
       id: key_type
-      type:
+      type: &id047
       - 'str or @azure.mgmt.media.models.KeyType
 
         '
@@ -512,7 +521,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id048
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -521,7 +530,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id049
       - bool
     - description: '*Operation configuration
 
@@ -529,16 +538,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id050
       type:
       - azure.mgmt.media.models.RegenerateKeyOutput
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id052
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
   langs:
@@ -568,26 +577,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id053
       - str
     - description: 'Name of the Media Service.
 
         '
       id: media_service_name
-      type:
+      type: &id054
       - str
     - description: 'The id of the storage account resource.
 
         '
       id: id
-      type:
+      type: &id055
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id056
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -596,7 +605,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id057
       - bool
     - description: '*Operation configuration
 
@@ -604,16 +613,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id058
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
 - class: azure.mgmt.media.operations.MediaServiceOperations
-  exceptions:
+  exceptions: &id060
   - type: azure.mgmt.media.models.ApiErrorException
   fullName: azure.mgmt.media.operations.MediaServiceOperations.update
   langs:
@@ -641,26 +650,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id061
       - str
     - description: 'Name of the Media Service.
 
         '
       id: media_service_name
-      type:
+      type: &id062
       - str
     - description: 'Media Service properties needed for update.
 
         '
       id: media_service
-      type:
+      type: &id063
       - azure.mgmt.media.models.MediaService
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id064
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -669,7 +678,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id065
       - bool
     - description: '*Operation configuration
 
@@ -677,15 +686,695 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id066
       type:
       - azure.mgmt.media.models.MediaService
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.media.operations.MediaServiceOperations.update
+- children:
+  - azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+  - azure.mgmt.media.operations.MediaServiceOperations.create
+  - azure.mgmt.media.operations.MediaServiceOperations.delete
+  - azure.mgmt.media.operations.MediaServiceOperations.get
+  - azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+  - azure.mgmt.media.operations.MediaServiceOperations.list_keys
+  - azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+  - azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+  - azure.mgmt.media.operations.MediaServiceOperations.update
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  fullName: azure.mgmt.media.operations.MediaServiceOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: MediaServiceOperations
+  source:
+    id: MediaServiceOperations
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'MediaServiceOperations operations.
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: MediaServiceOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.media.operations.MediaServiceOperations
+- &id008
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id003
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: check_name_availability
+  source:
+    id: check_name_availability
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Checks whether the Media Service resource name is available. The name
+
+    must be globally unique.
+
+    '
+  syntax:
+    content: check_name_availability(name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource. A name must be globally unique.
+
+        '
+      id: name
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+- *id008
+- &id016
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id009
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.create
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 228
+  summary: 'Creates a Media Service.
+
+    '
+  syntax:
+    content: create(resource_group_name, media_service_name, media_service, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id010
+    - description: 'Name of the Media Service.
+
+        '
+      id: media_service_name
+      type: *id011
+    - description: 'Media Service properties needed for creation.
+
+        '
+      id: media_service
+      type: *id012
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id013
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id014
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id015
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.create
+- *id016
+- &id023
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id017
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 296
+  summary: 'Deletes a Media Service.
+
+    '
+  syntax:
+    content: delete(resource_group_name, media_service_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id018
+    - description: 'Name of the Media Service.
+
+        '
+      id: media_service_name
+      type: *id019
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id020
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id021
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id022
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.delete
+- *id023
+- &id030
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id024
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.get
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 167
+  summary: 'Gets a Media Service.
+
+    '
+  syntax:
+    content: get(resource_group_name, media_service_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id025
+    - description: 'Name of the Media Service.
+
+        '
+      id: media_service_name
+      type: *id026
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id027
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id028
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id029
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.get
+- *id030
+- &id036
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id031
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 101
+  summary: 'Lists all of the Media Services in a resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id032
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id033
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id034
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id035
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+- *id036
+- &id043
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id037
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.list_keys
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: list_keys
+  source:
+    id: list_keys
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 491
+  summary: 'Lists the keys for a Media Service.
+
+    '
+  syntax:
+    content: list_keys(resource_group_name, media_service_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id038
+    - description: 'Name of the Media Service.
+
+        '
+      id: media_service_name
+      type: *id039
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id040
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id041
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id042
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.list_keys
+- *id043
+- &id051
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id044
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: regenerate_key
+  source:
+    id: regenerate_key
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 418
+  summary: 'Regenerates a primary or secondary key for a Media Service.
+
+    '
+  syntax:
+    content: regenerate_key(resource_group_name, media_service_name, key_type, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id045
+    - description: 'Name of the Media Service.
+
+        '
+      id: media_service_name
+      type: *id046
+    - description: 'The keyType indicating which key you want to
+
+        regenerate, Primary or Secondary. Possible values include: ''Primary'',
+
+        ''Secondary''
+
+        '
+      id: key_type
+      type: *id047
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id048
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id049
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id050
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+- *id051
+- &id059
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id052
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: sync_storage_keys
+  source:
+    id: sync_storage_keys
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 552
+  summary: 'Synchronizes storage account keys for a storage account associated with
+
+    the Media Service account.
+
+    '
+  syntax:
+    content: sync_storage_keys(resource_group_name, media_service_name, id, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id053
+    - description: 'Name of the Media Service.
+
+        '
+      id: media_service_name
+      type: *id054
+    - description: 'The id of the storage account resource.
+
+        '
+      id: id
+      type: *id055
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id056
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id057
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id058
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+- *id059
+- &id067
+  class: azure.mgmt.media.operations.MediaServiceOperations
+  exceptions: *id060
+  fullName: azure.mgmt.media.operations.MediaServiceOperations.update
+  langs:
+  - python
+  module: azure.mgmt.media.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\operations\media_service_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 350
+  summary: 'Updates a Media Service.
+
+    '
+  syntax:
+    content: update(resource_group_name, media_service_name, media_service, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id061
+    - description: 'Name of the Media Service.
+
+        '
+      id: media_service_name
+      type: *id062
+    - description: 'Media Service properties needed for update.
+
+        '
+      id: media_service
+      type: *id063
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id064
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id065
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id066
+  type: method
+  uid: azure.mgmt.media.operations.MediaServiceOperations.update
+- *id067
 references:
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.create
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.delete
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.get
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.list_keys
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+  isExternal: false
+  name: regenerate_key
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+  isExternal: false
+  name: sync_storage_keys
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.update
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.create
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.delete
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.get
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.list_by_resource_group
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.list_keys
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+  isExternal: false
+  name: regenerate_key
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.regenerate_key
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+  isExternal: false
+  name: sync_storage_keys
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.sync_storage_keys
+- fullName: azure.mgmt.media.operations.MediaServiceOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.media.operations.MediaServiceOperations
+  uid: azure.mgmt.media.operations.MediaServiceOperations.update
 - fullName: azure.mgmt.media.operations.MediaServiceOperations.check_name_availability
   isExternal: false
   name: check_name_availability

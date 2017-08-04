@@ -31,7 +31,7 @@ items:
       enable_inter_node_communication=None, network_configuration=None, start_task=None,
       certificate_references=None, application_package_references=None, application_licenses=None,
       user_accounts=None, metadata=None)
-    parameters:
+    parameters: &id001
     - description: 'The display name for the pool. The display name need
 
         not be unique and can contain any Unicode characters up to a maximum
@@ -320,6 +320,39 @@ items:
       - 'list of @azure.batch.models.MetadataItem
 
         '
+  type: class
+  uid: azure.batch.models.PoolSpecification
+- children: []
+  class: azure.batch.models.PoolSpecification
+  fullName: azure.batch.models.PoolSpecification
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: PoolSpecification
+  source:
+    id: PoolSpecification
+    path: azure-batch\azure\batch\models\pool_specification.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\pool_specification.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Specification for creating a new pool.
+
+    '
+  syntax:
+    content: PoolSpecification(vm_size, display_name=None, cloud_service_configuration=None,
+      virtual_machine_configuration=None, max_tasks_per_node=None, task_scheduling_policy=None,
+      resize_timeout=None, target_dedicated_nodes=None, target_low_priority_nodes=None,
+      enable_auto_scale=None, auto_scale_formula=None, auto_scale_evaluation_interval=None,
+      enable_inter_node_communication=None, network_configuration=None, start_task=None,
+      certificate_references=None, application_package_references=None, application_licenses=None,
+      user_accounts=None, metadata=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.PoolSpecification
 references: []

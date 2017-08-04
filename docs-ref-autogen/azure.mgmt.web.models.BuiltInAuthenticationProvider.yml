@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.BuiltInAuthenticationProvider
-- fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.azure_active_directory
+- children:
+  - azure.mgmt.web.models.BuiltInAuthenticationProvider.azure_active_directory
+  - azure.mgmt.web.models.BuiltInAuthenticationProvider.facebook
+  - azure.mgmt.web.models.BuiltInAuthenticationProvider.google
+  - azure.mgmt.web.models.BuiltInAuthenticationProvider.microsoft_account
+  - azure.mgmt.web.models.BuiltInAuthenticationProvider.twitter
+  class: azure.mgmt.web.models.BuiltInAuthenticationProvider
+  fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: BuiltInAuthenticationProvider
+  source:
+    id: BuiltInAuthenticationProvider
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 387
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.BuiltInAuthenticationProvider
+- &id001
+  fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.azure_active_directory
   id: azure_active_directory
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.web.models.BuiltInAuthenticationProvider
   type: attribute
   uid: azure.mgmt.web.models.BuiltInAuthenticationProvider.azure_active_directory
-- fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.facebook
+- &id002
+  fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.facebook
   id: facebook
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.web.models.BuiltInAuthenticationProvider
   type: attribute
   uid: azure.mgmt.web.models.BuiltInAuthenticationProvider.facebook
-- fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.google
+- &id003
+  fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.google
   id: google
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.web.models.BuiltInAuthenticationProvider
   type: attribute
   uid: azure.mgmt.web.models.BuiltInAuthenticationProvider.google
-- fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.microsoft_account
+- &id004
+  fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.microsoft_account
   id: microsoft_account
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.web.models.BuiltInAuthenticationProvider
   type: attribute
   uid: azure.mgmt.web.models.BuiltInAuthenticationProvider.microsoft_account
-- fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.twitter
+- &id005
+  fullName: azure.mgmt.web.models.BuiltInAuthenticationProvider.twitter
   id: twitter
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.web.models.BuiltInAuthenticationProvider
   type: attribute
   uid: azure.mgmt.web.models.BuiltInAuthenticationProvider.twitter
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

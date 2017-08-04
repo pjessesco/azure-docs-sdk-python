@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.StorageType
-- fullName: azure.mgmt.recoveryservicesbackup.models.StorageType.geo_redundant
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.StorageType.geo_redundant
+  - azure.mgmt.recoveryservicesbackup.models.StorageType.invalid
+  - azure.mgmt.recoveryservicesbackup.models.StorageType.locally_redundant
+  class: azure.mgmt.recoveryservicesbackup.models.StorageType
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: StorageType
+  source:
+    id: StorageType
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 70
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.StorageType
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageType.geo_redundant
   id: geo_redundant
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.StorageType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.StorageType.geo_redundant
-- fullName: azure.mgmt.recoveryservicesbackup.models.StorageType.invalid
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageType.invalid
   id: invalid
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.StorageType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.StorageType.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.StorageType.locally_redundant
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageType.locally_redundant
   id: locally_redundant
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.StorageType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.StorageType.locally_redundant
+- *id001
+- *id002
+- *id003
 references: []

@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: PurgeParameters(content_paths)
-    parameters:
+    parameters: &id001
     - description: 'The path to the content to be purged. Can describe a
 
         file path or a wild card directory.
@@ -34,6 +34,33 @@ items:
       id: content_paths
       type:
       - list of str
+  type: class
+  uid: azure.mgmt.cdn.models.PurgeParameters
+- children: []
+  class: azure.mgmt.cdn.models.PurgeParameters
+  fullName: azure.mgmt.cdn.models.PurgeParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.cdn.models
+  name: PurgeParameters
+  source:
+    id: PurgeParameters
+    path: azure-mgmt-cdn\azure\mgmt\cdn\models\purge_parameters.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\models\purge_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Parameters required for content purge.
+
+    '
+  syntax:
+    content: PurgeParameters(content_paths)
+    parameters: *id001
   type: class
   uid: azure.mgmt.cdn.models.PurgeParameters
 references: []

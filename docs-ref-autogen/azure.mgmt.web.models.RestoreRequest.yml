@@ -35,7 +35,7 @@ items:
       storage_account_url=None, blob_name=None, overwrite=None, site_name=None, databases=None,
       ignore_conflicting_host_names=False, operation_type='Default', adjust_connection_strings=None,
       hosting_environment=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -146,13 +146,51 @@ items:
       id: hosting_environment
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
       id: id
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.RestoreRequest
+- children: []
+  class: azure.mgmt.web.models.RestoreRequest
+  fullName: azure.mgmt.web.models.RestoreRequest
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: RestoreRequest
+  source:
+    id: RestoreRequest
+    path: azure-mgmt-web\azure\mgmt\web\models\restore_request.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\restore_request.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Description of a restore request.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: RestoreRequest(location, name=None, kind=None, type=None, tags=None,
+      storage_account_url=None, blob_name=None, overwrite=None, site_name=None, databases=None,
+      ignore_conflicting_host_names=False, operation_type='Default', adjust_connection_strings=None,
+      hosting_environment=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.RestoreRequest
 references: []

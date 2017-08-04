@@ -28,7 +28,7 @@ items:
   syntax:
     content: ServerPropertiesForRestore(source_server_id, restore_point_in_time, storage_mb=None,
       version=None, ssl_enforcement=None)
-    parameters:
+    parameters: &id001
     - description: 'The maximum storage allowed for a server.
 
         '
@@ -73,6 +73,36 @@ items:
       id: restore_point_in_time
       type:
       - datetime
+  type: class
+  uid: azure.mgmt.rdbms.mysql.models.ServerPropertiesForRestore
+- children: []
+  class: azure.mgmt.rdbms.mysql.models.ServerPropertiesForRestore
+  fullName: azure.mgmt.rdbms.mysql.models.ServerPropertiesForRestore
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.rdbms.mysql.models.server_properties_for_create.ServerPropertiesForCreate
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.models
+  name: ServerPropertiesForRestore
+  source:
+    id: ServerPropertiesForRestore
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\models\server_properties_for_restore.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\models\server_properties_for_restore.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The properties to a new server by restoring from a backup.
+
+    '
+  syntax:
+    content: ServerPropertiesForRestore(source_server_id, restore_point_in_time, storage_mb=None,
+      version=None, ssl_enforcement=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.rdbms.mysql.models.ServerPropertiesForRestore
 references: []

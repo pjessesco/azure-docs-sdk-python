@@ -52,7 +52,59 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.logic.models.WorkflowStatus
-- fullName: azure.mgmt.logic.models.WorkflowStatus.aborted
+- children:
+  - azure.mgmt.logic.models.WorkflowStatus.aborted
+  - azure.mgmt.logic.models.WorkflowStatus.cancelled
+  - azure.mgmt.logic.models.WorkflowStatus.failed
+  - azure.mgmt.logic.models.WorkflowStatus.faulted
+  - azure.mgmt.logic.models.WorkflowStatus.ignored
+  - azure.mgmt.logic.models.WorkflowStatus.not_specified
+  - azure.mgmt.logic.models.WorkflowStatus.paused
+  - azure.mgmt.logic.models.WorkflowStatus.running
+  - azure.mgmt.logic.models.WorkflowStatus.skipped
+  - azure.mgmt.logic.models.WorkflowStatus.succeeded
+  - azure.mgmt.logic.models.WorkflowStatus.suspended
+  - azure.mgmt.logic.models.WorkflowStatus.timed_out
+  - azure.mgmt.logic.models.WorkflowStatus.waiting
+  class: azure.mgmt.logic.models.WorkflowStatus
+  fullName: azure.mgmt.logic.models.WorkflowStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: WorkflowStatus
+  source:
+    id: WorkflowStatus
+    path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 92
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.logic.models.WorkflowStatus
+- &id001
+  fullName: azure.mgmt.logic.models.WorkflowStatus.aborted
   id: aborted
   langs:
   - python
@@ -66,7 +118,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.aborted
-- fullName: azure.mgmt.logic.models.WorkflowStatus.cancelled
+- &id002
+  fullName: azure.mgmt.logic.models.WorkflowStatus.cancelled
   id: cancelled
   langs:
   - python
@@ -80,7 +133,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.cancelled
-- fullName: azure.mgmt.logic.models.WorkflowStatus.failed
+- &id003
+  fullName: azure.mgmt.logic.models.WorkflowStatus.failed
   id: failed
   langs:
   - python
@@ -94,7 +148,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.failed
-- fullName: azure.mgmt.logic.models.WorkflowStatus.faulted
+- &id004
+  fullName: azure.mgmt.logic.models.WorkflowStatus.faulted
   id: faulted
   langs:
   - python
@@ -108,7 +163,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.faulted
-- fullName: azure.mgmt.logic.models.WorkflowStatus.ignored
+- &id005
+  fullName: azure.mgmt.logic.models.WorkflowStatus.ignored
   id: ignored
   langs:
   - python
@@ -122,7 +178,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.ignored
-- fullName: azure.mgmt.logic.models.WorkflowStatus.not_specified
+- &id006
+  fullName: azure.mgmt.logic.models.WorkflowStatus.not_specified
   id: not_specified
   langs:
   - python
@@ -136,7 +193,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.not_specified
-- fullName: azure.mgmt.logic.models.WorkflowStatus.paused
+- &id007
+  fullName: azure.mgmt.logic.models.WorkflowStatus.paused
   id: paused
   langs:
   - python
@@ -150,7 +208,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.paused
-- fullName: azure.mgmt.logic.models.WorkflowStatus.running
+- &id008
+  fullName: azure.mgmt.logic.models.WorkflowStatus.running
   id: running
   langs:
   - python
@@ -164,7 +223,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.running
-- fullName: azure.mgmt.logic.models.WorkflowStatus.skipped
+- &id009
+  fullName: azure.mgmt.logic.models.WorkflowStatus.skipped
   id: skipped
   langs:
   - python
@@ -178,7 +238,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.skipped
-- fullName: azure.mgmt.logic.models.WorkflowStatus.succeeded
+- &id010
+  fullName: azure.mgmt.logic.models.WorkflowStatus.succeeded
   id: succeeded
   langs:
   - python
@@ -192,7 +253,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.succeeded
-- fullName: azure.mgmt.logic.models.WorkflowStatus.suspended
+- &id011
+  fullName: azure.mgmt.logic.models.WorkflowStatus.suspended
   id: suspended
   langs:
   - python
@@ -206,7 +268,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.suspended
-- fullName: azure.mgmt.logic.models.WorkflowStatus.timed_out
+- &id012
+  fullName: azure.mgmt.logic.models.WorkflowStatus.timed_out
   id: timed_out
   langs:
   - python
@@ -220,7 +283,8 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.timed_out
-- fullName: azure.mgmt.logic.models.WorkflowStatus.waiting
+- &id013
+  fullName: azure.mgmt.logic.models.WorkflowStatus.waiting
   id: waiting
   langs:
   - python
@@ -234,4 +298,17 @@ items:
       - azure.mgmt.logic.models.WorkflowStatus
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowStatus.waiting
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
+- *id012
+- *id013
 references: []

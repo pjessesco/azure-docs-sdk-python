@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.FailoverGroupReplicationRole
-- fullName: azure.mgmt.sql.models.FailoverGroupReplicationRole.primary
+- children:
+  - azure.mgmt.sql.models.FailoverGroupReplicationRole.primary
+  - azure.mgmt.sql.models.FailoverGroupReplicationRole.secondary
+  class: azure.mgmt.sql.models.FailoverGroupReplicationRole
+  fullName: azure.mgmt.sql.models.FailoverGroupReplicationRole
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: FailoverGroupReplicationRole
+  source:
+    id: FailoverGroupReplicationRole
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 297
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.FailoverGroupReplicationRole
+- &id001
+  fullName: azure.mgmt.sql.models.FailoverGroupReplicationRole.primary
   id: primary
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.sql.models.FailoverGroupReplicationRole
   type: attribute
   uid: azure.mgmt.sql.models.FailoverGroupReplicationRole.primary
-- fullName: azure.mgmt.sql.models.FailoverGroupReplicationRole.secondary
+- &id002
+  fullName: azure.mgmt.sql.models.FailoverGroupReplicationRole.secondary
   id: secondary
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.sql.models.FailoverGroupReplicationRole
   type: attribute
   uid: azure.mgmt.sql.models.FailoverGroupReplicationRole.secondary
+- *id001
+- *id002
 references: []

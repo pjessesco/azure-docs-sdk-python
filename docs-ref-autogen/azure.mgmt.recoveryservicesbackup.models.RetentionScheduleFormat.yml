@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat
-- fullName: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.daily
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.daily
+  - azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.invalid
+  - azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.weekly
+  class: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat
+  fullName: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: RetentionScheduleFormat
+  source:
+    id: RetentionScheduleFormat
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 179
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.daily
   id: daily
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.daily
-- fullName: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.invalid
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.invalid
   id: invalid
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.weekly
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.weekly
   id: weekly
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.RetentionScheduleFormat.weekly
+- *id001
+- *id002
+- *id003
 references: []

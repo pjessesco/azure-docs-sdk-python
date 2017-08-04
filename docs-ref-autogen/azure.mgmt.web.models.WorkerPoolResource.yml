@@ -34,7 +34,7 @@ items:
     content: WorkerPoolResource(location, name=None, kind=None, type=None, tags=None,
       worker_size_id=None, compute_mode=None, worker_size=None, worker_count=None,
       sku=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -97,7 +97,7 @@ items:
       id: sku
       type:
       - azure.mgmt.web.models.SkuDescription
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
@@ -112,6 +112,43 @@ items:
       id: instance_names
       type:
       - list of str
+  type: class
+  uid: azure.mgmt.web.models.WorkerPoolResource
+- children: []
+  class: azure.mgmt.web.models.WorkerPoolResource
+  fullName: azure.mgmt.web.models.WorkerPoolResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: WorkerPoolResource
+  source:
+    id: WorkerPoolResource
+    path: azure-mgmt-web\azure\mgmt\web\models\worker_pool_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\worker_pool_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Worker pool of an App Service Environment ARM resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: WorkerPoolResource(location, name=None, kind=None, type=None, tags=None,
+      worker_size_id=None, compute_mode=None, worker_size=None, worker_count=None,
+      sku=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.WorkerPoolResource
 references: []

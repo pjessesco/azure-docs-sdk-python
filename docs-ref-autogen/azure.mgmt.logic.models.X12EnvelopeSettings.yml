@@ -33,7 +33,7 @@ items:
       rollover_transaction_set_control_number, overwrite_existing_transaction_set_control_number,
       group_header_date_format, group_header_time_format, usage_indicator, functional_group_id=None,
       transaction_set_control_number_prefix=None, transaction_set_control_number_suffix=None)
-    parameters:
+    parameters: &id001
     - description: 'The controls standards id.
 
         '
@@ -218,6 +218,41 @@ items:
       - 'str or @azure.mgmt.logic.models.UsageIndicator
 
         '
+  type: class
+  uid: azure.mgmt.logic.models.X12EnvelopeSettings
+- children: []
+  class: azure.mgmt.logic.models.X12EnvelopeSettings
+  fullName: azure.mgmt.logic.models.X12EnvelopeSettings
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: X12EnvelopeSettings
+  source:
+    id: X12EnvelopeSettings
+    path: azure-mgmt-logic\azure\mgmt\logic\models\x12_envelope_settings.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\x12_envelope_settings.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The X12 agreement envelope settings.
+
+    '
+  syntax:
+    content: X12EnvelopeSettings(control_standards_id, use_control_standards_id_as_repetition_character,
+      sender_application_id, receiver_application_id, control_version_number, interchange_control_number_lower_bound,
+      interchange_control_number_upper_bound, rollover_interchange_control_number,
+      enable_default_group_headers, group_control_number_lower_bound, group_control_number_upper_bound,
+      rollover_group_control_number, group_header_agency_code, group_header_version,
+      transaction_set_control_number_lower_bound, transaction_set_control_number_upper_bound,
+      rollover_transaction_set_control_number, overwrite_existing_transaction_set_control_number,
+      group_header_date_format, group_header_time_format, usage_indicator, functional_group_id=None,
+      transaction_set_control_number_prefix=None, transaction_set_control_number_suffix=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.X12EnvelopeSettings
 references: []

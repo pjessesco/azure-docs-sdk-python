@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.storage.v2016_12_01.models.ProvisioningState
-- fullName: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.creating
+- children:
+  - azure.mgmt.storage.v2016_12_01.models.ProvisioningState.creating
+  - azure.mgmt.storage.v2016_12_01.models.ProvisioningState.resolving_dns
+  - azure.mgmt.storage.v2016_12_01.models.ProvisioningState.succeeded
+  class: azure.mgmt.storage.v2016_12_01.models.ProvisioningState
+  fullName: azure.mgmt.storage.v2016_12_01.models.ProvisioningState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.storage.v2016_12_01.models
+  name: ProvisioningState
+  source:
+    id: ProvisioningState
+    path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\storage_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\storage_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 48
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.storage.v2016_12_01.models.ProvisioningState
+- &id001
+  fullName: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.creating
   id: creating
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.storage.v2016_12_01.models.ProvisioningState
   type: attribute
   uid: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.creating
-- fullName: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.resolving_dns
+- &id002
+  fullName: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.resolving_dns
   id: resolving_dns
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.storage.v2016_12_01.models.ProvisioningState
   type: attribute
   uid: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.resolving_dns
-- fullName: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.succeeded
+- &id003
+  fullName: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.succeeded
   id: succeeded
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.storage.v2016_12_01.models.ProvisioningState
   type: attribute
   uid: azure.mgmt.storage.v2016_12_01.models.ProvisioningState.succeeded
+- *id001
+- *id002
+- *id003
 references: []

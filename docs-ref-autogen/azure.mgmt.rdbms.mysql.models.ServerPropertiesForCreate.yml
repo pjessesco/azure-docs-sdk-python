@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: ServerPropertiesForCreate(storage_mb=None, version=None, ssl_enforcement=None)
-    parameters:
+    parameters: &id001
     - description: 'The maximum storage allowed for a server.
 
         '
@@ -56,6 +56,33 @@ items:
       id: create_mode
       type:
       - str
+  type: class
+  uid: azure.mgmt.rdbms.mysql.models.ServerPropertiesForCreate
+- children: []
+  class: azure.mgmt.rdbms.mysql.models.ServerPropertiesForCreate
+  fullName: azure.mgmt.rdbms.mysql.models.ServerPropertiesForCreate
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.models
+  name: ServerPropertiesForCreate
+  source:
+    id: ServerPropertiesForCreate
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\models\server_properties_for_create.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\models\server_properties_for_create.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The properties used to create a new server.
+
+    '
+  syntax:
+    content: ServerPropertiesForCreate(storage_mb=None, version=None, ssl_enforcement=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.rdbms.mysql.models.ServerPropertiesForCreate
 references: []

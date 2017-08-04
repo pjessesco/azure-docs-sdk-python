@@ -31,7 +31,7 @@ items:
       primary_azure_port=None, secondary_azure_port=None, shared_key=None, vlan_id=None,
       microsoft_peering_config=None, stats=None, provisioning_state=None, name=None,
       etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Identifier.
 
         '
@@ -146,6 +146,39 @@ items:
       id: etag
       type:
       - str
+  type: class
+  uid: azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitPeering
+- children: []
+  class: azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitPeering
+  fullName: azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitPeering
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.network.v2015_06_15.models.sub_resource.SubResource
+  langs:
+  - python
+  module: azure.mgmt.network.v2015_06_15.models
+  name: ExpressRouteCircuitPeering
+  source:
+    id: ExpressRouteCircuitPeering
+    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\express_route_circuit_peering.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\express_route_circuit_peering.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Peering in an ExpressRouteCircuit resource.
+
+    '
+  syntax:
+    content: ExpressRouteCircuitPeering(id=None, peering_type=None, state=None, azure_asn=None,
+      peer_asn=None, primary_peer_address_prefix=None, secondary_peer_address_prefix=None,
+      primary_azure_port=None, secondary_azure_port=None, shared_key=None, vlan_id=None,
+      microsoft_peering_config=None, stats=None, provisioning_state=None, name=None,
+      etag=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.network.v2015_06_15.models.ExpressRouteCircuitPeering
 references: []

@@ -36,7 +36,7 @@ items:
     content: Endpoint(target_resource_id=None, target=None, endpoint_status=None,
       weight=None, priority=None, endpoint_location=None, endpoint_monitor_status=None,
       min_child_endpoints=None, geo_mapping=None)
-    parameters:
+    parameters: &id001
     - description: 'The Azure Resource URI of the of the endpoint.
 
         Not applicable to endpoints of type ''ExternalEndpoints''.
@@ -118,7 +118,7 @@ items:
       id: geo_mapping
       type:
       - list of str
-    variables:
+    variables: &id002
     - description: 'Fully qualified resource Id for the resource. Ex -
 
         /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
@@ -141,6 +141,45 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.trafficmanager.models.Endpoint
+- children: []
+  class: azure.mgmt.trafficmanager.models.Endpoint
+  fullName: azure.mgmt.trafficmanager.models.Endpoint
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: msrest.serialization.Model
+      type: azure.mgmt.trafficmanager.models.resource.Resource
+    type: azure.mgmt.trafficmanager.models.proxy_resource.ProxyResource
+  langs:
+  - python
+  module: azure.mgmt.trafficmanager.models
+  name: Endpoint
+  source:
+    id: Endpoint
+    path: azure-mgmt-trafficmanager\azure\mgmt\trafficmanager\models\endpoint.py
+    remote:
+      branch: master
+      path: azure-mgmt-trafficmanager\azure\mgmt\trafficmanager\models\endpoint.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Class representing a Traffic Manager endpoint.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: Endpoint(target_resource_id=None, target=None, endpoint_status=None,
+      weight=None, priority=None, endpoint_location=None, endpoint_monitor_status=None,
+      min_child_endpoints=None, geo_mapping=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.trafficmanager.models.Endpoint
 references: []

@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.redis.models.RedisKeyType
-- fullName: azure.mgmt.redis.models.RedisKeyType.primary
+- children:
+  - azure.mgmt.redis.models.RedisKeyType.primary
+  - azure.mgmt.redis.models.RedisKeyType.secondary
+  class: azure.mgmt.redis.models.RedisKeyType
+  fullName: azure.mgmt.redis.models.RedisKeyType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.redis.models
+  name: RedisKeyType
+  source:
+    id: RedisKeyType
+    path: azure-mgmt-redis\azure\mgmt\redis\models\redis_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\models\redis_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 28
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.redis.models.RedisKeyType
+- &id001
+  fullName: azure.mgmt.redis.models.RedisKeyType.primary
   id: primary
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.redis.models.RedisKeyType
   type: attribute
   uid: azure.mgmt.redis.models.RedisKeyType.primary
-- fullName: azure.mgmt.redis.models.RedisKeyType.secondary
+- &id002
+  fullName: azure.mgmt.redis.models.RedisKeyType.secondary
   id: secondary
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.redis.models.RedisKeyType
   type: attribute
   uid: azure.mgmt.redis.models.RedisKeyType.secondary
+- *id001
+- *id002
 references: []

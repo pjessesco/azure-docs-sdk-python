@@ -33,7 +33,7 @@ items:
   syntax:
     content: ActionGroupResource(location, group_short_name, tags=None, enabled=True,
       email_receivers=None, sms_receivers=None, webhook_receivers=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location
 
         '
@@ -94,7 +94,7 @@ items:
       - 'list of @azure.mgmt.monitor.models.WebhookReceiver
 
         '
-    variables:
+    variables: &id002
     - description: 'Azure resource Id
 
         '
@@ -113,6 +113,42 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.monitor.models.ActionGroupResource
+- children: []
+  class: azure.mgmt.monitor.models.ActionGroupResource
+  fullName: azure.mgmt.monitor.models.ActionGroupResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.monitor.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: ActionGroupResource
+  source:
+    id: ActionGroupResource
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\action_group_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\action_group_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An action group resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: ActionGroupResource(location, group_short_name, tags=None, enabled=True,
+      email_receivers=None, sms_receivers=None, webhook_receivers=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.monitor.models.ActionGroupResource
 references: []

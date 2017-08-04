@@ -1,0 +1,780 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: ContainerGroupsOperations
+  source:
+    id: ContainerGroupsOperations
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ContainerGroupsOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: ContainerGroupsOperations(client, config, serializer, deserializer)
+    parameters: &id001
+    - description: 'Client for service requests.
+
+        '
+      id: client
+    - description: 'Configuration of service client.
+
+        '
+      id: config
+    - description: 'An object model serializer.
+
+        '
+      id: serializer
+    - description: 'An objec model deserializer.
+
+        '
+      id: deserializer
+    variables: &id002
+    - description: 'Client API version. Constant value: "2017-08-01-preview".
+
+        '
+      id: api_version
+  type: class
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+- class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: &id003
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 236
+  summary: 'Create or update container groups.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, container_group_name, container_group,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: &id004
+      - str
+    - description: 'Container group name
+
+        '
+      id: container_group_name
+      type: &id005
+      - str
+    - description: 'Definition of the container to be created.
+
+        '
+      id: container_group
+      type: &id006
+      - azure.mgmt.containerinstance.models.ContainerGroup
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id007
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id008
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id009
+      description: '@azure.mgmt.containerinstance.models.ContainerGroup or
+
+        @../msrest.pipeline.ClientRawResponse if
+
+        raw=true
+
+        '
+      type:
+      - 'azure.mgmt.containerinstance.models.ContainerGroup or
+
+        @../msrest.pipeline.ClientRawResponse'
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+- class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: &id011
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: delete
+  source:
+    id: delete
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 310
+  summary: 'Delete container groups.
+
+    '
+  syntax:
+    content: delete(resource_group_name, container_group_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: &id012
+      - str
+    - description: 'Name of the container group to be deleted
+
+        '
+      id: container_group_name
+      type: &id013
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id014
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id015
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id016
+      description: '@azure.mgmt.containerinstance.models.ContainerGroup or
+
+        @../msrest.pipeline.ClientRawResponse if
+
+        raw=true
+
+        '
+      type:
+      - 'azure.mgmt.containerinstance.models.ContainerGroup or
+
+        @../msrest.pipeline.ClientRawResponse'
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+- class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: &id018
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: get
+  source:
+    id: get
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 171
+  summary: 'Get details for this container group.
+
+    '
+  syntax:
+    content: get(resource_group_name, container_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: &id019
+      - str
+    - description: 'Container group name
+
+        '
+      id: container_group_name
+      type: &id020
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id021
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id022
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id023
+      description: '@azure.mgmt.containerinstance.models.ContainerGroup or
+
+        @../msrest.pipeline.ClientRawResponse if
+
+        raw=true
+
+        '
+      type:
+      - 'azure.mgmt.containerinstance.models.ContainerGroup or
+
+        @../msrest.pipeline.ClientRawResponse'
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+- class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: &id025
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: list
+  source:
+    id: list
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Get the list of container groups in a given subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id026
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id027
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id028
+      description: 'An iterator like instance of @azure.mgmt.containerinstance.models.ContainerGroup
+
+        '
+      type:
+      - azure.mgmt.containerinstance.models.ContainerGroupPaged
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+- class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: &id030
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 103
+  summary: 'Get the list of container groups in a given resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: &id031
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id032
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id033
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id034
+      description: 'An iterator like instance of @azure.mgmt.containerinstance.models.ContainerGroup
+
+        '
+      type:
+      - azure.mgmt.containerinstance.models.ContainerGroupPaged
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+- children:
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  - azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: ContainerGroupsOperations
+  source:
+    id: ContainerGroupsOperations
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ContainerGroupsOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: ContainerGroupsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+- &id010
+  class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 236
+  summary: 'Create or update container groups.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, container_group_name, container_group,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'Container group name
+
+        '
+      id: container_group_name
+      type: *id005
+    - description: 'Definition of the container to be created.
+
+        '
+      id: container_group
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: delete
+  source:
+    id: delete
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 310
+  summary: 'Delete container groups.
+
+    '
+  syntax:
+    content: delete(resource_group_name, container_group_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'Name of the container group to be deleted
+
+        '
+      id: container_group_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id016
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: get
+  source:
+    id: get
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 171
+  summary: 'Get details for this container group.
+
+    '
+  syntax:
+    content: get(resource_group_name, container_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'Container group name
+
+        '
+      id: container_group_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+- *id024
+- &id029
+  class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: *id025
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: list
+  source:
+    id: list
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Get the list of container groups in a given subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id028
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+- *id029
+- &id035
+  class: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  exceptions: *id030
+  fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.containerinstance.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+    remote:
+      branch: master
+      path: azure_mgmt_containerinstance-0.1.0-py3.5.egg\azure\mgmt\containerinstance\operations\container_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 103
+  summary: 'Get the list of container groups in a given resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Azure resource group name
+
+        '
+      id: resource_group_name
+      type: *id031
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id032
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id033
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id034
+  type: method
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+- *id035
+references:
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.create_or_update
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.delete
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.get
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list
+- fullName: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.containerinstance.operations.ContainerGroupsOperations
+  uid: azure.mgmt.containerinstance.operations.ContainerGroupsOperations.list_by_resource_group

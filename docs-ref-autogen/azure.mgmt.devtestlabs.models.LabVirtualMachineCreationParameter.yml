@@ -33,7 +33,7 @@ items:
       compute_vm=None, network_interface=None, applicable_schedule=None, expiration_date=None,
       allow_claim=None, storage_type=None, virtual_machine_creation_source=None, environment_id=None,
       provisioning_state=None, unique_identifier=None, name=None, location=None, tags=None)
-    parameters:
+    parameters: &id001
     - description: 'The number of virtual machine instances
 
         to create.
@@ -280,6 +280,41 @@ items:
       id: tags
       type:
       - dict
+  type: class
+  uid: azure.mgmt.devtestlabs.models.LabVirtualMachineCreationParameter
+- children: []
+  class: azure.mgmt.devtestlabs.models.LabVirtualMachineCreationParameter
+  fullName: azure.mgmt.devtestlabs.models.LabVirtualMachineCreationParameter
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: LabVirtualMachineCreationParameter
+  source:
+    id: LabVirtualMachineCreationParameter
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\lab_virtual_machine_creation_parameter.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\lab_virtual_machine_creation_parameter.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Properties for creating a virtual machine.
+
+    '
+  syntax:
+    content: LabVirtualMachineCreationParameter(bulk_creation_parameters=None, notes=None,
+      owner_object_id=None, owner_user_principal_name=None, created_by_user_id=None,
+      created_by_user=None, created_date=None, custom_image_id=None, os_type=None,
+      size=None, user_name=None, password=None, ssh_key=None, is_authentication_with_ssh_key=None,
+      fqdn=None, lab_subnet_name=None, lab_virtual_network_id=None, disallow_public_ip_address=None,
+      artifacts=None, artifact_deployment_status=None, gallery_image_reference=None,
+      compute_vm=None, network_interface=None, applicable_schedule=None, expiration_date=None,
+      allow_claim=None, storage_type=None, virtual_machine_creation_source=None, environment_id=None,
+      provisioning_state=None, unique_identifier=None, name=None, location=None, tags=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.devtestlabs.models.LabVirtualMachineCreationParameter
 references: []

@@ -5,6 +5,9 @@ items:
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
   class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: VirtualMachineExtensionImagesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-04-30-preview".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
   langs:
@@ -78,26 +81,26 @@ items:
     parameters:
     - description: ''
       id: location
-      type:
+      type: &id004
       - str
     - description: ''
       id: publisher_name
-      type:
+      type: &id005
       - str
     - description: ''
       id: type
-      type:
+      type: &id006
       - str
     - description: ''
       id: version
-      type:
+      type: &id007
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -106,7 +109,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
     - description: '*Operation configuration
 
@@ -114,10 +117,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id010
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineExtensionImage
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -125,11 +128,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineExtensionImage
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
   langs:
@@ -153,18 +156,18 @@ items:
     parameters:
     - description: ''
       id: location
-      type:
+      type: &id013
       - str
     - description: ''
       id: publisher_name
-      type:
+      type: &id014
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id015
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -173,7 +176,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id016
       - bool
     - description: '*Operation configuration
 
@@ -181,10 +184,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id017
       description: 'list of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineExtensionImage
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -192,11 +195,11 @@ items:
       type:
       - 'list of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineExtensionImage
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
-  exceptions:
+  exceptions: &id019
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
   langs:
@@ -220,39 +223,39 @@ items:
     parameters:
     - description: ''
       id: location
-      type:
+      type: &id020
       - str
     - description: ''
       id: publisher_name
-      type:
+      type: &id021
       - str
     - description: ''
       id: type
-      type:
+      type: &id022
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: ''
       id: top
-      type:
+      type: &id024
       - int
     - defaultValue: None
       description: ''
       id: orderby
-      type:
+      type: &id025
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id026
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -261,7 +264,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id027
       - bool
     - description: '*Operation configuration
 
@@ -269,10 +272,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id028
       description: 'list of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineExtensionImage
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -280,10 +283,254 @@ items:
       type:
       - 'list of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineExtensionImage
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+- children:
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: VirtualMachineExtensionImagesOperations
+  source:
+    id: VirtualMachineExtensionImagesOperations
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'VirtualMachineExtensionImagesOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: VirtualMachineExtensionImagesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+- &id011
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets a virtual machine extension image.
+
+    '
+  syntax:
+    content: get(location, publisher_name, type, version, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: ''
+      id: location
+      type: *id004
+    - description: ''
+      id: publisher_name
+      type: *id005
+    - description: ''
+      id: type
+      type: *id006
+    - description: ''
+      id: version
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id010
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+- *id011
+- &id018
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  exceptions: *id012
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: list_types
+  source:
+    id: list_types
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 109
+  summary: 'Gets a list of virtual machine extension image types.
+
+    '
+  syntax:
+    content: list_types(location, publisher_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: ''
+      id: location
+      type: *id013
+    - description: ''
+      id: publisher_name
+      type: *id014
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id015
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id016
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id017
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+- *id018
+- &id029
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  exceptions: *id019
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: list_versions
+  source:
+    id: list_versions
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machine_extension_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 174
+  summary: 'Gets a list of virtual machine extension image versions.
+
+    '
+  syntax:
+    content: list_versions(location, publisher_name, type, filter=None, top=None,
+      orderby=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: ''
+      id: location
+      type: *id020
+    - description: ''
+      id: publisher_name
+      type: *id021
+    - description: ''
+      id: type
+      type: *id022
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
+
+        '
+      id: filter
+      type: *id023
+    - defaultValue: None
+      description: ''
+      id: top
+      type: *id024
+    - defaultValue: None
+      description: ''
+      id: orderby
+      type: *id025
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id028
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+- *id029
 references:
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+  isExternal: false
+  name: list_types
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+  isExternal: false
+  name: list_versions
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+  isExternal: false
+  name: list_types
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_types
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
+  isExternal: false
+  name: list_versions
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.list_versions
 - fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachineExtensionImagesOperations.get
   isExternal: false
   name: get

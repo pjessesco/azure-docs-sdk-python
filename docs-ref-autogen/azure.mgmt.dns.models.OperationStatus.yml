@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.dns.models.OperationStatus
-- fullName: azure.mgmt.dns.models.OperationStatus.failed
+- children:
+  - azure.mgmt.dns.models.OperationStatus.failed
+  - azure.mgmt.dns.models.OperationStatus.in_progress
+  - azure.mgmt.dns.models.OperationStatus.succeeded
+  class: azure.mgmt.dns.models.OperationStatus
+  fullName: azure.mgmt.dns.models.OperationStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.dns.models
+  name: OperationStatus
+  source:
+    id: OperationStatus
+    path: azure-mgmt-dns\azure\mgmt\dns\models\dns_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\models\dns_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.dns.models.OperationStatus
+- &id001
+  fullName: azure.mgmt.dns.models.OperationStatus.failed
   id: failed
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.dns.models.OperationStatus
   type: attribute
   uid: azure.mgmt.dns.models.OperationStatus.failed
-- fullName: azure.mgmt.dns.models.OperationStatus.in_progress
+- &id002
+  fullName: azure.mgmt.dns.models.OperationStatus.in_progress
   id: in_progress
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.dns.models.OperationStatus
   type: attribute
   uid: azure.mgmt.dns.models.OperationStatus.in_progress
-- fullName: azure.mgmt.dns.models.OperationStatus.succeeded
+- &id003
+  fullName: azure.mgmt.dns.models.OperationStatus.succeeded
   id: succeeded
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.dns.models.OperationStatus
   type: attribute
   uid: azure.mgmt.dns.models.OperationStatus.succeeded
+- *id001
+- *id002
+- *id003
 references: []

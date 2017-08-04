@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.search.models.SkuName
-- fullName: azure.mgmt.search.models.SkuName.basic
+- children:
+  - azure.mgmt.search.models.SkuName.basic
+  - azure.mgmt.search.models.SkuName.free
+  - azure.mgmt.search.models.SkuName.standard
+  - azure.mgmt.search.models.SkuName.standard2
+  - azure.mgmt.search.models.SkuName.standard3
+  class: azure.mgmt.search.models.SkuName
+  fullName: azure.mgmt.search.models.SkuName
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.search.models
+  name: SkuName
+  source:
+    id: SkuName
+    path: azure-mgmt-search\azure\mgmt\search\models\search_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\models\search_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 21
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.search.models.SkuName
+- &id001
+  fullName: azure.mgmt.search.models.SkuName.basic
   id: basic
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.search.models.SkuName
   type: attribute
   uid: azure.mgmt.search.models.SkuName.basic
-- fullName: azure.mgmt.search.models.SkuName.free
+- &id002
+  fullName: azure.mgmt.search.models.SkuName.free
   id: free
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.search.models.SkuName
   type: attribute
   uid: azure.mgmt.search.models.SkuName.free
-- fullName: azure.mgmt.search.models.SkuName.standard
+- &id003
+  fullName: azure.mgmt.search.models.SkuName.standard
   id: standard
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.search.models.SkuName
   type: attribute
   uid: azure.mgmt.search.models.SkuName.standard
-- fullName: azure.mgmt.search.models.SkuName.standard2
+- &id004
+  fullName: azure.mgmt.search.models.SkuName.standard2
   id: standard2
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.search.models.SkuName
   type: attribute
   uid: azure.mgmt.search.models.SkuName.standard2
-- fullName: azure.mgmt.search.models.SkuName.standard3
+- &id005
+  fullName: azure.mgmt.search.models.SkuName.standard3
   id: standard3
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.search.models.SkuName
   type: attribute
   uid: azure.mgmt.search.models.SkuName.standard3
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

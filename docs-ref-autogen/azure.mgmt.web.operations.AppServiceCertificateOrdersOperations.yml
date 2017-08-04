@@ -20,6 +20,24 @@ items:
   - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
   - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
   - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
   class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
   inheritance:
@@ -59,7 +77,7 @@ items:
     '
   syntax:
     content: AppServiceCertificateOrdersOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -76,7 +94,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'API Version. Constant value: "2015-08-01".
 
         '
@@ -84,7 +102,7 @@ items:
   type: class
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
   langs:
@@ -115,13 +133,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id005
       - str
     - description: 'Distinguished name to to use
 
@@ -129,14 +147,14 @@ items:
 
         '
       id: certificate_distinguished_name
-      type:
+      type: &id006
       - azure.mgmt.web.models.AppServiceCertificateOrder
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -145,20 +163,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.web.models.AppServiceCertificateOrder'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
   langs:
@@ -189,32 +207,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id013
       - str
     - description: 'Name of the certificate.
 
         '
       id: name
-      type:
+      type: &id014
       - str
     - description: 'Key vault certificate resource Id.
 
         '
       id: key_vault_certificate
-      type:
+      type: &id015
       - azure.mgmt.web.models.AppServiceCertificateResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -223,20 +241,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
-    return:
+    return: &id018
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.web.models.AppServiceCertificateResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
   langs:
@@ -267,20 +285,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id022
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id023
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -289,7 +307,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id024
       - bool
     - description: '*Operation configuration
 
@@ -297,16 +315,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id025
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id027
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
   langs:
@@ -337,26 +355,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id028
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id029
       - str
     - description: 'Name of the certificate.
 
         '
       id: name
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -365,7 +383,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -373,16 +391,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id035
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
   langs:
@@ -413,20 +431,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id036
       - str
     - description: 'Name of the certificate order..
 
         '
       id: certificate_order_name
-      type:
+      type: &id037
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id038
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -435,7 +453,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id039
       - bool
     - description: '*Operation configuration
 
@@ -443,16 +461,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id040
       type:
       - azure.mgmt.web.models.AppServiceCertificateOrder
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id042
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
   langs:
@@ -483,26 +501,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id043
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id044
       - str
     - description: 'Name of the certificate.
 
         '
       id: name
-      type:
+      type: &id045
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id046
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -511,7 +529,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id047
       - bool
     - description: '*Operation configuration
 
@@ -519,16 +537,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id048
       type:
       - azure.mgmt.web.models.AppServiceCertificateResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id050
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
   langs:
@@ -557,7 +575,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -566,7 +584,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
     - description: '*Operation configuration
 
@@ -574,13 +592,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id053
       type:
       - azure.mgmt.web.models.AppServiceCertificateOrderPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id055
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
   langs:
@@ -611,14 +629,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id056
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id057
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -627,7 +645,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id058
       - bool
     - description: '*Operation configuration
 
@@ -635,13 +653,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id059
       type:
       - azure.mgmt.web.models.AppServiceCertificateOrderPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id061
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
   langs:
@@ -672,20 +690,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id062
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id063
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id064
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -694,7 +712,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id065
       - bool
     - description: '*Operation configuration
 
@@ -702,13 +720,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id066
       type:
       - azure.mgmt.web.models.AppServiceCertificateResourcePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id068
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
   langs:
@@ -739,26 +757,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id069
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id070
       - str
     - description: 'Parameters for the reissue.
 
         '
       id: reissue_certificate_order_request
-      type:
+      type: &id071
       - azure.mgmt.web.models.ReissueCertificateOrderRequest
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id072
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -767,7 +785,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id073
       - bool
     - description: '*Operation configuration
 
@@ -775,16 +793,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id074
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id076
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
   langs:
@@ -815,26 +833,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id077
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id078
       - str
     - description: 'Renew parameters
 
         '
       id: renew_certificate_order_request
-      type:
+      type: &id079
       - azure.mgmt.web.models.RenewCertificateOrderRequest
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id080
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -843,7 +861,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id081
       - bool
     - description: '*Operation configuration
 
@@ -851,16 +869,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id082
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id084
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
   langs:
@@ -891,20 +909,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id085
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id086
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id087
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -913,7 +931,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id088
       - bool
     - description: '*Operation configuration
 
@@ -921,16 +939,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id089
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id091
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
   langs:
@@ -961,27 +979,27 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id092
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id093
       - str
     - defaultValue: None
       description: 'Name of the object.
 
         '
       id: name
-      type:
+      type: &id094
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id095
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -990,7 +1008,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id096
       - bool
     - description: '*Operation configuration
 
@@ -998,16 +1016,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id097
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id099
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
   langs:
@@ -1038,20 +1056,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id100
       - str
     - description: 'Name of the certificate order.
 
         '
       id: name
-      type:
+      type: &id101
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id102
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1060,7 +1078,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id103
       - bool
     - description: '*Operation configuration
 
@@ -1068,16 +1086,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id104
       type:
       - list of @azure.mgmt.web.models.CertificateOrderAction
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id106
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
   langs:
@@ -1108,20 +1126,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id107
       - str
     - description: 'Name of the certificate order.
 
         '
       id: name
-      type:
+      type: &id108
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id109
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1130,7 +1148,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id110
       - bool
     - description: '*Operation configuration
 
@@ -1138,16 +1156,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id111
       type:
       - list of @azure.mgmt.web.models.CertificateEmail
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id113
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
   langs:
@@ -1178,34 +1196,34 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id114
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id115
       - str
     - defaultValue: None
       description: 'Theme
 
         '
       id: light_theme
-      type:
+      type: &id116
       - bool
     - defaultValue: None
       description: 'Locale
 
         '
       id: locale
-      type:
+      type: &id117
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id118
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1214,7 +1232,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id119
       - bool
     - description: '*Operation configuration
 
@@ -1222,16 +1240,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id120
       type:
       - azure.mgmt.web.models.SiteSeal
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id122
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
   langs:
@@ -1262,14 +1280,14 @@ items:
 
         '
       id: app_service_certificate_order
-      type:
+      type: &id123
       - azure.mgmt.web.models.AppServiceCertificateOrder
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id124
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1278,7 +1296,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id125
       - bool
     - description: '*Operation configuration
 
@@ -1286,16 +1304,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id126
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
 - class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
-  exceptions:
+  exceptions: &id128
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
   langs:
@@ -1326,20 +1344,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id129
       - str
     - description: 'Name of the certificate order.
 
         '
       id: certificate_order_name
-      type:
+      type: &id130
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id131
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1348,7 +1366,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id132
       - bool
     - description: '*Operation configuration
 
@@ -1356,15 +1374,1393 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id133
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+- children:
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+  - azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: AppServiceCertificateOrdersOperations
+  source:
+    id: AppServiceCertificateOrdersOperations
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'AppServiceCertificateOrdersOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: AppServiceCertificateOrdersOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+- &id010
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id003
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 297
+  summary: 'Create or update a certificate purchase order.
+
+
+    Create or update a certificate purchase order.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, certificate_order_name, certificate_distinguished_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id005
+    - description: 'Distinguished name to to use
+
+        for the certificate order.
+
+        '
+      id: certificate_distinguished_name
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+- *id010
+- &id019
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id011
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: create_or_update_certificate
+  source:
+    id: create_or_update_certificate
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 593
+  summary: 'Creates or updates a certificate and associates with key vault secret.
+
+
+    Creates or updates a certificate and associates with key vault secret.
+
+    '
+  syntax:
+    content: create_or_update_certificate(resource_group_name, certificate_order_name,
+      name, key_vault_certificate, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id013
+    - description: 'Name of the certificate.
+
+        '
+      id: name
+      type: *id014
+    - description: 'Key vault certificate resource Id.
+
+        '
+      id: key_vault_certificate
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    return: *id018
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+- *id019
+- &id026
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id020
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 396
+  summary: 'Delete an existing certificate order.
+
+
+    Delete an existing certificate order.
+
+    '
+  syntax:
+    content: delete(resource_group_name, certificate_order_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id022
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id023
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id024
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id025
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+- *id026
+- &id034
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id027
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: delete_certificate
+  source:
+    id: delete_certificate
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 693
+  summary: 'Delete the certificate associated with a certificate order.
+
+
+    Delete the certificate associated with a certificate order.
+
+    '
+  syntax:
+    content: delete_certificate(resource_group_name, certificate_order_name, name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id028
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id029
+    - description: 'Name of the certificate.
+
+        '
+      id: name
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+- *id034
+- &id041
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id035
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 232
+  summary: 'Get a certificate order.
+
+
+    Get a certificate order.
+
+    '
+  syntax:
+    content: get(resource_group_name, certificate_order_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id036
+    - description: 'Name of the certificate order..
+
+        '
+      id: certificate_order_name
+      type: *id037
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id038
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id039
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id040
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+- *id041
+- &id049
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id042
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_certificate
+  source:
+    id: get_certificate
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 525
+  summary: 'Get the certificate associated with a certificate order.
+
+
+    Get the certificate associated with a certificate order.
+
+    '
+  syntax:
+    content: get_certificate(resource_group_name, certificate_order_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id043
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id044
+    - description: 'Name of the certificate.
+
+        '
+      id: name
+      type: *id045
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id046
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id047
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id048
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+- *id049
+- &id054
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id050
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'List all certificate orders in a subscription.
+
+
+    List all certificate orders in a subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id053
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+- *id054
+- &id060
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id055
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 163
+  summary: 'Get certificate orders in a resource group.
+
+
+    Get certificate orders in a resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id056
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id057
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id058
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id059
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+- *id060
+- &id067
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id061
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_certificates
+  source:
+    id: list_certificates
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 453
+  summary: 'List all certificates associated with a certificate order.
+
+
+    List all certificates associated with a certificate order.
+
+    '
+  syntax:
+    content: list_certificates(resource_group_name, certificate_order_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id062
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id063
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id064
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id065
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id066
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+- *id067
+- &id075
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id068
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: reissue
+  source:
+    id: reissue
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 753
+  summary: 'Reissue an existing certificate order.
+
+
+    Reissue an existing certificate order.
+
+    '
+  syntax:
+    content: reissue(resource_group_name, certificate_order_name, reissue_certificate_order_request,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id069
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id070
+    - description: 'Parameters for the reissue.
+
+        '
+      id: reissue_certificate_order_request
+      type: *id071
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id072
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id073
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id074
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+- *id075
+- &id083
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id076
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: renew
+  source:
+    id: renew
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 818
+  summary: 'Renew an existing certificate order.
+
+
+    Renew an existing certificate order.
+
+    '
+  syntax:
+    content: renew(resource_group_name, certificate_order_name, renew_certificate_order_request,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id077
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id078
+    - description: 'Renew parameters
+
+        '
+      id: renew_certificate_order_request
+      type: *id079
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id080
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id081
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id082
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+- *id083
+- &id090
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id084
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: resend_email
+  source:
+    id: resend_email
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 883
+  summary: 'Resend certificate email.
+
+
+    Resend certificate email.
+
+    '
+  syntax:
+    content: resend_email(resource_group_name, certificate_order_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id085
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id086
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id087
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id088
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id089
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+- *id090
+- &id098
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id091
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: resend_request_emails
+  source:
+    id: resend_request_emails
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 940
+  summary: 'Verify domain ownership for this certificate order.
+
+
+    Verify domain ownership for this certificate order.
+
+    '
+  syntax:
+    content: resend_request_emails(resource_group_name, certificate_order_name, name=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id092
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id093
+    - defaultValue: None
+      description: 'Name of the object.
+
+        '
+      id: name
+      type: *id094
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id095
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id096
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id097
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+- *id098
+- &id105
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id099
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: retrieve_certificate_actions
+  source:
+    id: retrieve_certificate_actions
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1136
+  summary: 'Retrieve the list of certificate actions.
+
+
+    Retrieve the list of certificate actions.
+
+    '
+  syntax:
+    content: retrieve_certificate_actions(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id100
+    - description: 'Name of the certificate order.
+
+        '
+      id: name
+      type: *id101
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id102
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id103
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id104
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+- *id105
+- &id112
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id106
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: retrieve_certificate_email_history
+  source:
+    id: retrieve_certificate_email_history
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1201
+  summary: 'Retrieve email history.
+
+
+    Retrieve email history.
+
+    '
+  syntax:
+    content: retrieve_certificate_email_history(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id107
+    - description: 'Name of the certificate order.
+
+        '
+      id: name
+      type: *id108
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id109
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id110
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id111
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+- *id112
+- &id121
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id113
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: retrieve_site_seal
+  source:
+    id: retrieve_site_seal
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1005
+  summary: 'Verify domain ownership for this certificate order.
+
+
+    Verify domain ownership for this certificate order.
+
+    '
+  syntax:
+    content: retrieve_site_seal(resource_group_name, certificate_order_name, light_theme=None,
+      locale=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id114
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id115
+    - defaultValue: None
+      description: 'Theme
+
+        '
+      id: light_theme
+      type: *id116
+    - defaultValue: None
+      description: 'Locale
+
+        '
+      id: locale
+      type: *id117
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id118
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id119
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id120
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+- *id121
+- &id127
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id122
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: validate_purchase_information
+  source:
+    id: validate_purchase_information
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 104
+  summary: 'Validate information for a certificate order.
+
+
+    Validate information for a certificate order.
+
+    '
+  syntax:
+    content: validate_purchase_information(app_service_certificate_order, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Information for a certificate
+
+        order.
+
+        '
+      id: app_service_certificate_order
+      type: *id123
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id124
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id125
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id126
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+- *id127
+- &id134
+  class: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  exceptions: *id128
+  fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: verify_domain_ownership
+  source:
+    id: verify_domain_ownership
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_certificate_orders_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1079
+  summary: 'Verify domain ownership for this certificate order.
+
+
+    Verify domain ownership for this certificate order.
+
+    '
+  syntax:
+    content: verify_domain_ownership(resource_group_name, certificate_order_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id129
+    - description: 'Name of the certificate order.
+
+        '
+      id: certificate_order_name
+      type: *id130
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id131
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id132
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id133
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+- *id134
 references:
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+  isExternal: false
+  name: create_or_update_certificate
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+  isExternal: false
+  name: delete_certificate
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+  isExternal: false
+  name: get_certificate
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+  isExternal: false
+  name: list_certificates
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+  isExternal: false
+  name: reissue
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+  isExternal: false
+  name: renew
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+  isExternal: false
+  name: resend_email
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+  isExternal: false
+  name: resend_request_emails
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+  isExternal: false
+  name: retrieve_certificate_actions
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+  isExternal: false
+  name: retrieve_certificate_email_history
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+  isExternal: false
+  name: retrieve_site_seal
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+  isExternal: false
+  name: validate_purchase_information
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+  isExternal: false
+  name: verify_domain_ownership
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+  isExternal: false
+  name: create_or_update_certificate
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update_certificate
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+  isExternal: false
+  name: delete_certificate
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.delete_certificate
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+  isExternal: false
+  name: get_certificate
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.get_certificate
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_by_resource_group
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+  isExternal: false
+  name: list_certificates
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.list_certificates
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+  isExternal: false
+  name: reissue
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.reissue
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+  isExternal: false
+  name: renew
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.renew
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+  isExternal: false
+  name: resend_email
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_email
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+  isExternal: false
+  name: resend_request_emails
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.resend_request_emails
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+  isExternal: false
+  name: retrieve_certificate_actions
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_actions
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+  isExternal: false
+  name: retrieve_certificate_email_history
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_certificate_email_history
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+  isExternal: false
+  name: retrieve_site_seal
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.retrieve_site_seal
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+  isExternal: false
+  name: validate_purchase_information
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.validate_purchase_information
+- fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
+  isExternal: false
+  name: verify_domain_ownership
+  parent: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations
+  uid: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.verify_domain_ownership
 - fullName: azure.mgmt.web.operations.AppServiceCertificateOrdersOperations.create_or_update
   isExternal: false
   name: create_or_update

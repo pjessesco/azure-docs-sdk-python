@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.servermanager.models.GatewayExpandOption
-- fullName: azure.mgmt.servermanager.models.GatewayExpandOption.download
+- children:
+  - azure.mgmt.servermanager.models.GatewayExpandOption.download
+  - azure.mgmt.servermanager.models.GatewayExpandOption.status
+  class: azure.mgmt.servermanager.models.GatewayExpandOption
+  fullName: azure.mgmt.servermanager.models.GatewayExpandOption
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.servermanager.models
+  name: GatewayExpandOption
+  source:
+    id: GatewayExpandOption
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\server_management_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\server_management_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.servermanager.models.GatewayExpandOption
+- &id001
+  fullName: azure.mgmt.servermanager.models.GatewayExpandOption.download
   id: download
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.servermanager.models.GatewayExpandOption
   type: attribute
   uid: azure.mgmt.servermanager.models.GatewayExpandOption.download
-- fullName: azure.mgmt.servermanager.models.GatewayExpandOption.status
+- &id002
+  fullName: azure.mgmt.servermanager.models.GatewayExpandOption.status
   id: status
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.servermanager.models.GatewayExpandOption
   type: attribute
   uid: azure.mgmt.servermanager.models.GatewayExpandOption.status
+- *id001
+- *id002
 references: []

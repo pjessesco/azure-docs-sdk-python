@@ -28,7 +28,7 @@ items:
       segment_terminator, release_indicator, repetition_separator, character_set,
       decimal_point_indicator, segment_terminator_suffix, service_code_list_directory_version=None,
       character_encoding=None)
-    parameters:
+    parameters: &id001
     - description: 'The service code list
 
         directory version.
@@ -115,6 +115,36 @@ items:
       - 'str or @azure.mgmt.logic.models.SegmentTerminatorSuffix
 
         '
+  type: class
+  uid: azure.mgmt.logic.models.EdifactFramingSettings
+- children: []
+  class: azure.mgmt.logic.models.EdifactFramingSettings
+  fullName: azure.mgmt.logic.models.EdifactFramingSettings
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: EdifactFramingSettings
+  source:
+    id: EdifactFramingSettings
+    path: azure-mgmt-logic\azure\mgmt\logic\models\edifact_framing_settings.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\edifact_framing_settings.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The Edifact agreement framing settings.
+
+    '
+  syntax:
+    content: EdifactFramingSettings(protocol_version, data_element_separator, component_separator,
+      segment_terminator, release_indicator, repetition_separator, character_set,
+      decimal_point_indicator, segment_terminator_suffix, service_code_list_directory_version=None,
+      character_encoding=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.EdifactFramingSettings
 references: []

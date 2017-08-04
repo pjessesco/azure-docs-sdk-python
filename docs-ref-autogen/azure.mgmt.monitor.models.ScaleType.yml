@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.monitor.models.ScaleType
-- fullName: azure.mgmt.monitor.models.ScaleType.change_count
+- children:
+  - azure.mgmt.monitor.models.ScaleType.change_count
+  - azure.mgmt.monitor.models.ScaleType.exact_count
+  - azure.mgmt.monitor.models.ScaleType.percent_change_count
+  class: azure.mgmt.monitor.models.ScaleType
+  fullName: azure.mgmt.monitor.models.ScaleType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: ScaleType
+  source:
+    id: ScaleType
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 49
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.monitor.models.ScaleType
+- &id001
+  fullName: azure.mgmt.monitor.models.ScaleType.change_count
   id: change_count
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.monitor.models.ScaleType
   type: attribute
   uid: azure.mgmt.monitor.models.ScaleType.change_count
-- fullName: azure.mgmt.monitor.models.ScaleType.exact_count
+- &id002
+  fullName: azure.mgmt.monitor.models.ScaleType.exact_count
   id: exact_count
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.monitor.models.ScaleType
   type: attribute
   uid: azure.mgmt.monitor.models.ScaleType.exact_count
-- fullName: azure.mgmt.monitor.models.ScaleType.percent_change_count
+- &id003
+  fullName: azure.mgmt.monitor.models.ScaleType.percent_change_count
   id: percent_change_count
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.monitor.models.ScaleType
   type: attribute
   uid: azure.mgmt.monitor.models.ScaleType.percent_change_count
+- *id001
+- *id002
+- *id003
 references: []

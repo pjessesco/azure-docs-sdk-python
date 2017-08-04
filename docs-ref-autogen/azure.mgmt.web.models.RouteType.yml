@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.RouteType
-- fullName: azure.mgmt.web.models.RouteType.default
+- children:
+  - azure.mgmt.web.models.RouteType.default
+  - azure.mgmt.web.models.RouteType.inherited
+  - azure.mgmt.web.models.RouteType.static
+  class: azure.mgmt.web.models.RouteType
+  fullName: azure.mgmt.web.models.RouteType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: RouteType
+  source:
+    id: RouteType
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 208
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.RouteType
+- &id001
+  fullName: azure.mgmt.web.models.RouteType.default
   id: default
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.web.models.RouteType
   type: attribute
   uid: azure.mgmt.web.models.RouteType.default
-- fullName: azure.mgmt.web.models.RouteType.inherited
+- &id002
+  fullName: azure.mgmt.web.models.RouteType.inherited
   id: inherited
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.web.models.RouteType
   type: attribute
   uid: azure.mgmt.web.models.RouteType.inherited
-- fullName: azure.mgmt.web.models.RouteType.static
+- &id003
+  fullName: azure.mgmt.web.models.RouteType.static
   id: static
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.web.models.RouteType
   type: attribute
   uid: azure.mgmt.web.models.RouteType.static
+- *id001
+- *id002
+- *id003
 references: []

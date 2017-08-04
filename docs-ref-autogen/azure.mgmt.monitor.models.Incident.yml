@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: Incident()
-    variables:
+    variables: &id001
     - description: 'Incident name.
 
         '
@@ -67,6 +67,38 @@ items:
       id: resolved_time
       type:
       - datetime
+  type: class
+  uid: azure.mgmt.monitor.models.Incident
+- children: []
+  class: azure.mgmt.monitor.models.Incident
+  fullName: azure.mgmt.monitor.models.Incident
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: Incident
+  source:
+    id: Incident
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\incident.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\incident.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An alert incident indicates the activation status of an alert rule.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: Incident()
+    variables: *id001
   type: class
   uid: azure.mgmt.monitor.models.Incident
 references: []

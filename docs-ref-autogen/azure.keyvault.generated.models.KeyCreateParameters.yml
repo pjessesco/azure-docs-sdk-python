@@ -26,7 +26,7 @@ items:
   syntax:
     content: KeyCreateParameters(kty, key_size=None, key_ops=None, key_attributes=None,
       tags=None)
-    parameters:
+    parameters: &id001
     - description: 'The type of key to create. For valid key types, see
 
         JsonWebKeyType. Supported JsonWebKey key types (kty) for Elliptic Curve,
@@ -61,6 +61,34 @@ items:
       id: tags
       type:
       - dict
+  type: class
+  uid: azure.keyvault.generated.models.KeyCreateParameters
+- children: []
+  class: azure.keyvault.generated.models.KeyCreateParameters
+  fullName: azure.keyvault.generated.models.KeyCreateParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.generated.models
+  name: KeyCreateParameters
+  source:
+    id: KeyCreateParameters
+    path: azure-keyvault\azure\keyvault\models\key_create_parameters.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\key_create_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The key create parameters.
+
+    '
+  syntax:
+    content: KeyCreateParameters(kty, key_size=None, key_ops=None, key_attributes=None,
+      tags=None)
+    parameters: *id001
   type: class
   uid: azure.keyvault.generated.models.KeyCreateParameters
 references: []

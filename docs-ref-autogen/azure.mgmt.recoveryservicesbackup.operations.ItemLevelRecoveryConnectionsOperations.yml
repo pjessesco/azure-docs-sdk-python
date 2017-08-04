@@ -4,6 +4,8 @@ items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
   - azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+  - azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+  - azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
   class: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
   inheritance:
@@ -27,7 +29,7 @@ items:
     '
   syntax:
     content: ItemLevelRecoveryConnectionsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -44,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -52,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
   langs:
@@ -87,7 +89,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the resource group where the
 
@@ -95,13 +97,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id005
       - str
     - description: 'Fabric name associated with the backed up items.
 
         '
       id: fabric_name
-      type:
+      type: &id006
       - str
     - description: 'Container name associated with the backed up
 
@@ -109,7 +111,7 @@ items:
 
         '
       id: container_name
-      type:
+      type: &id007
       - str
     - description: 'Backed up item name whose files/folders
 
@@ -117,7 +119,7 @@ items:
 
         '
       id: protected_item_name
-      type:
+      type: &id008
       - str
     - description: 'Recovery point ID which represents backed up
 
@@ -125,20 +127,20 @@ items:
 
         '
       id: recovery_point_id
-      type:
+      type: &id009
       - str
     - description: 'resource ILR request
 
         '
       id: parameters
-      type:
+      type: &id010
       - azure.mgmt.recoveryservicesbackup.models.ILRRequestResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id011
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -147,7 +149,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id012
       - bool
     - description: '*Operation configuration
 
@@ -155,16 +157,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id013
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
 - class: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
-  exceptions:
+  exceptions: &id015
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
   langs:
@@ -194,7 +196,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id016
       - str
     - description: 'The name of the resource group where the
 
@@ -202,13 +204,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id017
       - str
     - description: 'Fabric name associated with the backed up items.
 
         '
       id: fabric_name
-      type:
+      type: &id018
       - str
     - description: 'Container name associated with the backed up
 
@@ -216,7 +218,7 @@ items:
 
         '
       id: container_name
-      type:
+      type: &id019
       - str
     - description: 'Backed up item name whose files/folders
 
@@ -224,7 +226,7 @@ items:
 
         '
       id: protected_item_name
-      type:
+      type: &id020
       - str
     - description: 'Recovery point ID which represents backed up
 
@@ -232,14 +234,14 @@ items:
 
         '
       id: recovery_point_id
-      type:
+      type: &id021
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id022
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -248,7 +250,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id023
       - bool
     - description: '*Operation configuration
 
@@ -256,15 +258,253 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id024
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+- children:
+  - azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+  - azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+  class: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: ItemLevelRecoveryConnectionsOperations
+  source:
+    id: ItemLevelRecoveryConnectionsOperations
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\item_level_recovery_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\item_level_recovery_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ItemLevelRecoveryConnectionsOperations operations.
+
+
+
+    '
+  syntax:
+    content: ItemLevelRecoveryConnectionsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+- &id014
+  class: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: provision
+  source:
+    id: provision
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\item_level_recovery_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\item_level_recovery_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Provisions a script which invokes an iSCSI connection to the backup
+
+    data. Executing this script opens a file explorer displaying all the
+
+    recoverable files and folders. This is an asynchronous operation. To
+
+    know the status of provisioning, call GetProtectedItemOperationResult
+
+    API.
+
+    '
+  syntax:
+    content: provision(vault_name, resource_group_name, fabric_name, container_name,
+      protected_item_name, recovery_point_id, parameters, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id004
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id005
+    - description: 'Fabric name associated with the backed up items.
+
+        '
+      id: fabric_name
+      type: *id006
+    - description: 'Container name associated with the backed up
+
+        items.
+
+        '
+      id: container_name
+      type: *id007
+    - description: 'Backed up item name whose files/folders
+
+        are to be restored.
+
+        '
+      id: protected_item_name
+      type: *id008
+    - description: 'Recovery point ID which represents backed up
+
+        data. iSCSI connection will be provisioned for this backed up data.
+
+        '
+      id: recovery_point_id
+      type: *id009
+    - description: 'resource ILR request
+
+        '
+      id: parameters
+      type: *id010
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id011
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id012
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id013
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+- *id014
+- &id025
+  class: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  exceptions: *id015
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: revoke
+  source:
+    id: revoke
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\item_level_recovery_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\item_level_recovery_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 119
+  summary: 'Revokes an iSCSI connection which can be used to download a script.
+
+    Executing this script opens a file explorer displaying all recoverable
+
+    files and folders. This is an asynchronous operation.
+
+    '
+  syntax:
+    content: revoke(vault_name, resource_group_name, fabric_name, container_name,
+      protected_item_name, recovery_point_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id016
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id017
+    - description: 'Fabric name associated with the backed up items.
+
+        '
+      id: fabric_name
+      type: *id018
+    - description: 'Container name associated with the backed up
+
+        items.
+
+        '
+      id: container_name
+      type: *id019
+    - description: 'Backed up item name whose files/folders
+
+        are to be restored.
+
+        '
+      id: protected_item_name
+      type: *id020
+    - description: 'Recovery point ID which represents backed up
+
+        data. iSCSI connection will be revoked for this backed up data.
+
+        '
+      id: recovery_point_id
+      type: *id021
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id022
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id023
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id024
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+- *id025
 references:
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+  isExternal: false
+  name: provision
+  parent: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+  isExternal: false
+  name: revoke
+  parent: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+  isExternal: false
+  name: provision
+  parent: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
+  isExternal: false
+  name: revoke
+  parent: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke
 - fullName: azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision
   isExternal: false
   name: provision

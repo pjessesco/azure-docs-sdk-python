@@ -26,7 +26,7 @@ items:
   syntax:
     content: CertificateImportParameters(base64_encoded_certificate, password=None,
       certificate_policy=None, certificate_attributes=None, tags=None)
-    parameters:
+    parameters: &id001
     - description: 'Base64 encoded representation of the
 
         certificate object to import. This certificate needs to contain the
@@ -65,6 +65,34 @@ items:
       id: tags
       type:
       - dict
+  type: class
+  uid: azure.keyvault.generated.models.CertificateImportParameters
+- children: []
+  class: azure.keyvault.generated.models.CertificateImportParameters
+  fullName: azure.keyvault.generated.models.CertificateImportParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.generated.models
+  name: CertificateImportParameters
+  source:
+    id: CertificateImportParameters
+    path: azure-keyvault\azure\keyvault\models\certificate_import_parameters.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\certificate_import_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The certificate import parameters.
+
+    '
+  syntax:
+    content: CertificateImportParameters(base64_encoded_certificate, password=None,
+      certificate_policy=None, certificate_attributes=None, tags=None)
+    parameters: *id001
   type: class
   uid: azure.keyvault.generated.models.CertificateImportParameters
 references: []

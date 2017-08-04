@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.HostNameType
-- fullName: azure.mgmt.web.models.HostNameType.managed
+- children:
+  - azure.mgmt.web.models.HostNameType.managed
+  - azure.mgmt.web.models.HostNameType.verified
+  class: azure.mgmt.web.models.HostNameType
+  fullName: azure.mgmt.web.models.HostNameType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: HostNameType
+  source:
+    id: HostNameType
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 252
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.HostNameType
+- &id001
+  fullName: azure.mgmt.web.models.HostNameType.managed
   id: managed
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.web.models.HostNameType
   type: attribute
   uid: azure.mgmt.web.models.HostNameType.managed
-- fullName: azure.mgmt.web.models.HostNameType.verified
+- &id002
+  fullName: azure.mgmt.web.models.HostNameType.verified
   id: verified
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.web.models.HostNameType
   type: attribute
   uid: azure.mgmt.web.models.HostNameType.verified
+- *id001
+- *id002
 references: []

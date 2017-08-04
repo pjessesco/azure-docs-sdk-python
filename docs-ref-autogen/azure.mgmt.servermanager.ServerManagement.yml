@@ -23,13 +23,13 @@ items:
     '
   syntax:
     content: ServerManagement(credentials, subscription_id, base_url=None)
-    parameters:
+    parameters: &id001
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - msrestazure.azure_active_directory
+      - ../msrestazure.azure_active_directory
     - description: 'Gets subscription credentials which uniquely
 
         identify Microsoft Azure subscription. The subscription ID forms part of
@@ -46,7 +46,7 @@ items:
       id: base_url
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Configuration for client.
 
         '
@@ -77,6 +77,32 @@ items:
       id: power_shell
       type:
       - azure.mgmt.servermanager.operations.PowerShellOperations
+  type: class
+  uid: azure.mgmt.servermanager.ServerManagement
+- children: []
+  class: azure.mgmt.servermanager.ServerManagement
+  fullName: azure.mgmt.servermanager.ServerManagement
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.servermanager
+  name: ServerManagement
+  source:
+    id: ServerManagement
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\server_management.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\server_management.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 59
+  summary: 'REST API for Azure Server Management Service.
+
+    '
+  syntax:
+    content: ServerManagement(credentials, subscription_id, base_url=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.servermanager.ServerManagement
 references: []

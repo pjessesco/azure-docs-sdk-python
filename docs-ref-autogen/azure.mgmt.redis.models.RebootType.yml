@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.redis.models.RebootType
-- fullName: azure.mgmt.redis.models.RebootType.all_nodes
+- children:
+  - azure.mgmt.redis.models.RebootType.all_nodes
+  - azure.mgmt.redis.models.RebootType.primary_node
+  - azure.mgmt.redis.models.RebootType.secondary_node
+  class: azure.mgmt.redis.models.RebootType
+  fullName: azure.mgmt.redis.models.RebootType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.redis.models
+  name: RebootType
+  source:
+    id: RebootType
+    path: azure-mgmt-redis\azure\mgmt\redis\models\redis_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\models\redis_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 34
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.redis.models.RebootType
+- &id001
+  fullName: azure.mgmt.redis.models.RebootType.all_nodes
   id: all_nodes
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.redis.models.RebootType
   type: attribute
   uid: azure.mgmt.redis.models.RebootType.all_nodes
-- fullName: azure.mgmt.redis.models.RebootType.primary_node
+- &id002
+  fullName: azure.mgmt.redis.models.RebootType.primary_node
   id: primary_node
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.redis.models.RebootType
   type: attribute
   uid: azure.mgmt.redis.models.RebootType.primary_node
-- fullName: azure.mgmt.redis.models.RebootType.secondary_node
+- &id003
+  fullName: azure.mgmt.redis.models.RebootType.secondary_node
   id: secondary_node
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.redis.models.RebootType
   type: attribute
   uid: azure.mgmt.redis.models.RebootType.secondary_node
+- *id001
+- *id002
+- *id003
 references: []

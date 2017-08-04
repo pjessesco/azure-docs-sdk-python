@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.ComputeNodeRebootOption
-- fullName: azure.batch.models.ComputeNodeRebootOption.requeue
+- children:
+  - azure.batch.models.ComputeNodeRebootOption.requeue
+  - azure.batch.models.ComputeNodeRebootOption.retained_data
+  - azure.batch.models.ComputeNodeRebootOption.task_completion
+  - azure.batch.models.ComputeNodeRebootOption.terminate
+  class: azure.batch.models.ComputeNodeRebootOption
+  fullName: azure.batch.models.ComputeNodeRebootOption
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: ComputeNodeRebootOption
+  source:
+    id: ComputeNodeRebootOption
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 257
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.ComputeNodeRebootOption
+- &id001
+  fullName: azure.batch.models.ComputeNodeRebootOption.requeue
   id: requeue
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.batch.models.ComputeNodeRebootOption
   type: attribute
   uid: azure.batch.models.ComputeNodeRebootOption.requeue
-- fullName: azure.batch.models.ComputeNodeRebootOption.retained_data
+- &id002
+  fullName: azure.batch.models.ComputeNodeRebootOption.retained_data
   id: retained_data
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.batch.models.ComputeNodeRebootOption
   type: attribute
   uid: azure.batch.models.ComputeNodeRebootOption.retained_data
-- fullName: azure.batch.models.ComputeNodeRebootOption.task_completion
+- &id003
+  fullName: azure.batch.models.ComputeNodeRebootOption.task_completion
   id: task_completion
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.batch.models.ComputeNodeRebootOption
   type: attribute
   uid: azure.batch.models.ComputeNodeRebootOption.task_completion
-- fullName: azure.batch.models.ComputeNodeRebootOption.terminate
+- &id004
+  fullName: azure.batch.models.ComputeNodeRebootOption.terminate
   id: terminate
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.batch.models.ComputeNodeRebootOption
   type: attribute
   uid: azure.batch.models.ComputeNodeRebootOption.terminate
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

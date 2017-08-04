@@ -35,7 +35,7 @@ items:
       requires_duplicate_detection=None, duplicate_detection_history_time_window=None,
       enable_batched_operations=None, status=None, support_ordering=None, auto_delete_on_idle=None,
       enable_partitioning=None, enable_express=None)
-    parameters:
+    parameters: &id001
     - description: 'ISO 8601 Default message timespan to
 
         live value. This is the duration after which the message expires, starting
@@ -130,7 +130,7 @@ items:
       id: enable_express
       type:
       - bool
-    variables:
+    variables: &id002
     - description: 'Resource Id
 
         '
@@ -189,6 +189,44 @@ items:
       - '@azure.mgmt.servicebus.models.MessageCountDetails
 
         '
+  type: class
+  uid: azure.mgmt.servicebus.models.SBTopic
+- children: []
+  class: azure.mgmt.servicebus.models.SBTopic
+  fullName: azure.mgmt.servicebus.models.SBTopic
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.servicebus.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.servicebus.models
+  name: SBTopic
+  source:
+    id: SBTopic
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sb_topic.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sb_topic.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Description of topic resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: SBTopic(default_message_time_to_live=None, max_size_in_megabytes=None,
+      requires_duplicate_detection=None, duplicate_detection_history_time_window=None,
+      enable_batched_operations=None, status=None, support_ordering=None, auto_delete_on_idle=None,
+      enable_partitioning=None, enable_express=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.servicebus.models.SBTopic
 references: []

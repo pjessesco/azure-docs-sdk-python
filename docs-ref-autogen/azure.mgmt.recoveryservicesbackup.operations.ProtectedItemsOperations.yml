@@ -5,6 +5,9 @@ items:
   - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
   - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
   - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
   class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: ProtectedItemsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
   langs:
@@ -84,7 +87,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the resource group where the
 
@@ -92,38 +95,38 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id005
       - str
     - description: 'Fabric name associated with the backup item.
 
         '
       id: fabric_name
-      type:
+      type: &id006
       - str
     - description: 'Container name associated with the backup item.
 
         '
       id: container_name
-      type:
+      type: &id007
       - str
     - description: 'Item name to be backed up.
 
         '
       id: protected_item_name
-      type:
+      type: &id008
       - str
     - description: 'resource backed up item
 
         '
       id: parameters
-      type:
+      type: &id009
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id010
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -132,7 +135,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id011
       - bool
     - description: '*Operation configuration
 
@@ -140,16 +143,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id012
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
 - class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
-  exceptions:
+  exceptions: &id014
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
   langs:
@@ -179,7 +182,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id015
       - str
     - description: 'The name of the resource group where the
 
@@ -187,13 +190,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id016
       - str
     - description: 'Fabric name associated with the backed up item.
 
         '
       id: fabric_name
-      type:
+      type: &id017
       - str
     - description: 'Container name associated with the backed up
 
@@ -201,20 +204,20 @@ items:
 
         '
       id: container_name
-      type:
+      type: &id018
       - str
     - description: 'Backed up item to be deleted.
 
         '
       id: protected_item_name
-      type:
+      type: &id019
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id020
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -223,7 +226,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id021
       - bool
     - description: '*Operation configuration
 
@@ -231,16 +234,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id022
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
 - class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
-  exceptions:
+  exceptions: &id024
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
   langs:
@@ -270,7 +273,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id025
       - str
     - description: 'The name of the resource group where the
 
@@ -278,13 +281,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id026
       - str
     - description: 'Fabric name associated with the backed up item.
 
         '
       id: fabric_name
-      type:
+      type: &id027
       - str
     - description: 'Container name associated with the backed up
 
@@ -292,7 +295,7 @@ items:
 
         '
       id: container_name
-      type:
+      type: &id028
       - str
     - description: 'Backed up item name whose details are to
 
@@ -300,21 +303,21 @@ items:
 
         '
       id: protected_item_name
-      type:
+      type: &id029
       - str
     - defaultValue: None
       description: 'OData filter options.
 
         '
       id: filter
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -323,7 +326,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -331,15 +334,328 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+- children:
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+  - azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+  class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: ProtectedItemsOperations
+  source:
+    id: ProtectedItemsOperations
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ProtectedItemsOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: ProtectedItemsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+- &id013
+  class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 118
+  summary: 'Enables backup of an item or to modifies the backup policy information
+
+    of an already backed up item. This is an asynchronous operation. To
+
+    know the status of the operation, call the GetItemOperationResult API.
+
+    '
+  syntax:
+    content: create_or_update(vault_name, resource_group_name, fabric_name, container_name,
+      protected_item_name, parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id004
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id005
+    - description: 'Fabric name associated with the backup item.
+
+        '
+      id: fabric_name
+      type: *id006
+    - description: 'Container name associated with the backup item.
+
+        '
+      id: container_name
+      type: *id007
+    - description: 'Item name to be backed up.
+
+        '
+      id: protected_item_name
+      type: *id008
+    - description: 'resource backed up item
+
+        '
+      id: parameters
+      type: *id009
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id010
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id011
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id012
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+- *id013
+- &id023
+  class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  exceptions: *id014
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 191
+  summary: 'Used to disable backup of an item within a container. This is an
+
+    asynchronous operation. To know the status of the request, call the
+
+    GetItemOperationResult API.
+
+    '
+  syntax:
+    content: delete(vault_name, resource_group_name, fabric_name, container_name,
+      protected_item_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id015
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id016
+    - description: 'Fabric name associated with the backed up item.
+
+        '
+      id: fabric_name
+      type: *id017
+    - description: 'Container name associated with the backed up
+
+        item.
+
+        '
+      id: container_name
+      type: *id018
+    - description: 'Backed up item to be deleted.
+
+        '
+      id: protected_item_name
+      type: *id019
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id020
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id021
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id022
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+- *id023
+- &id034
+  class: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  exceptions: *id024
+  fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\protected_items_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Provides the details of the backed up item. This is an asynchronous
+
+    operation. To know the status of the operation, call the
+
+    GetItemOperationResult API.
+
+    '
+  syntax:
+    content: get(vault_name, resource_group_name, fabric_name, container_name, protected_item_name,
+      filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id025
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id026
+    - description: 'Fabric name associated with the backed up item.
+
+        '
+      id: fabric_name
+      type: *id027
+    - description: 'Container name associated with the backed up
+
+        item.
+
+        '
+      id: container_name
+      type: *id028
+    - description: 'Backed up item name whose details are to
+
+        be fetched.
+
+        '
+      id: protected_item_name
+      type: *id029
+    - defaultValue: None
+      description: 'OData filter options.
+
+        '
+      id: filter
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+- *id034
 references:
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete
+- fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get
 - fullName: azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update
   isExternal: false
   name: create_or_update

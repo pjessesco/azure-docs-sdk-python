@@ -8,6 +8,12 @@ items:
   - azure.mgmt.monitor.operations.ActionGroupsOperations.get
   - azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
   - azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.get
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
   class: azure.mgmt.monitor.operations.ActionGroupsOperations
   fullName: azure.mgmt.monitor.operations.ActionGroupsOperations
   inheritance:
@@ -35,7 +41,7 @@ items:
     '
   syntax:
     content: ActionGroupsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -52,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2017-04-01".
 
         '
@@ -60,7 +66,7 @@ items:
   type: class
   uid: azure.mgmt.monitor.operations.ActionGroupsOperations
 - class: azure.mgmt.monitor.operations.ActionGroupsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
   langs:
@@ -86,26 +92,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the action group.
 
         '
       id: action_group_name
-      type:
+      type: &id005
       - str
     - description: 'The action group to create or use for the update.
 
         '
       id: action_group
-      type:
+      type: &id006
       - azure.mgmt.monitor.models.ActionGroupResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -114,7 +120,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -122,16 +128,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.monitor.models.ActionGroupResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
 - class: azure.mgmt.monitor.operations.ActionGroupsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
   langs:
@@ -157,20 +163,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the action group.
 
         '
       id: action_group_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -179,7 +185,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
     - description: '*Operation configuration
 
@@ -187,16 +193,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id016
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
 - class: azure.mgmt.monitor.operations.ActionGroupsOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
   langs:
@@ -224,26 +230,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the action group.
 
         '
       id: action_group_name
-      type:
+      type: &id020
       - str
     - description: 'The name of the receiver to resubscribe.
 
         '
       id: receiver_name
-      type:
+      type: &id021
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id022
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -252,7 +258,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id023
       - bool
     - description: '*Operation configuration
 
@@ -260,16 +266,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id024
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
 - class: azure.mgmt.monitor.operations.ActionGroupsOperations
-  exceptions:
+  exceptions: &id026
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.get
   langs:
@@ -295,20 +301,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id027
       - str
     - description: 'The name of the action group.
 
         '
       id: action_group_name
-      type:
+      type: &id028
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id029
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -317,7 +323,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id030
       - bool
     - description: '*Operation configuration
 
@@ -325,16 +331,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id031
       type:
       - azure.mgmt.monitor.models.ActionGroupResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ActionGroupsOperations.get
 - class: azure.mgmt.monitor.operations.ActionGroupsOperations
-  exceptions:
+  exceptions: &id033
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
   langs:
@@ -360,14 +366,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id034
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id035
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -376,7 +382,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id036
       - bool
     - description: '*Operation configuration
 
@@ -384,13 +390,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id037
       type:
       - azure.mgmt.monitor.models.ActionGroupResourcePaged
   type: method
   uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
 - class: azure.mgmt.monitor.operations.ActionGroupsOperations
-  exceptions:
+  exceptions: &id039
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
   langs:
@@ -416,7 +422,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id040
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -425,7 +431,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id041
       - bool
     - description: '*Operation configuration
 
@@ -433,12 +439,448 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id042
       type:
       - azure.mgmt.monitor.models.ActionGroupResourcePaged
   type: method
   uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+- children:
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.get
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+  - azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+  class: azure.mgmt.monitor.operations.ActionGroupsOperations
+  fullName: azure.mgmt.monitor.operations.ActionGroupsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: ActionGroupsOperations
+  source:
+    id: ActionGroupsOperations
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ActionGroupsOperations operations.
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: ActionGroupsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations
+- &id010
+  class: azure.mgmt.monitor.operations.ActionGroupsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Create a new action group or update an existing one.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, action_group_name, action_group,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the action group.
+
+        '
+      id: action_group_name
+      type: *id005
+    - description: 'The action group to create or use for the update.
+
+        '
+      id: action_group
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.monitor.operations.ActionGroupsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 171
+  summary: 'Delete an action group.
+
+    '
+  syntax:
+    content: delete(resource_group_name, action_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the action group.
+
+        '
+      id: action_group_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id016
+  type: method
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+- *id017
+- &id025
+  class: azure.mgmt.monitor.operations.ActionGroupsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: enable_receiver
+  source:
+    id: enable_receiver
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 354
+  summary: 'Enable a receiver in an action group. This changes the receiver''s
+
+    status from Disabled to Enabled.
+
+    '
+  syntax:
+    content: enable_receiver(resource_group_name, action_group_name, receiver_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the action group.
+
+        '
+      id: action_group_name
+      type: *id020
+    - description: 'The name of the receiver to resubscribe.
+
+        '
+      id: receiver_name
+      type: *id021
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id022
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id023
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id024
+  type: method
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+- *id025
+- &id032
+  class: azure.mgmt.monitor.operations.ActionGroupsOperations
+  exceptions: *id026
+  fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 109
+  summary: 'Get an action group.
+
+    '
+  syntax:
+    content: get(resource_group_name, action_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id027
+    - description: 'The name of the action group.
+
+        '
+      id: action_group_name
+      type: *id028
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id029
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id030
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id031
+  type: method
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.get
+- *id032
+- &id038
+  class: azure.mgmt.monitor.operations.ActionGroupsOperations
+  exceptions: *id033
+  fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 288
+  summary: 'Get a list of all action groups in a resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id034
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id035
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id036
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id037
+  type: method
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+- *id038
+- &id043
+  class: azure.mgmt.monitor.operations.ActionGroupsOperations
+  exceptions: *id039
+  fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: list_by_subscription_id
+  source:
+    id: list_by_subscription_id
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\action_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 225
+  summary: 'Get a list of all action groups in a subscription.
+
+    '
+  syntax:
+    content: list_by_subscription_id(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id040
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id041
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id042
+  type: method
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+- *id043
 references:
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+  isExternal: false
+  name: enable_receiver
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.get
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+  isExternal: false
+  name: list_by_subscription_id
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.delete
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+  isExternal: false
+  name: enable_receiver
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.enable_receiver
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.get
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_resource_group
+- fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
+  isExternal: false
+  name: list_by_subscription_id
+  parent: azure.mgmt.monitor.operations.ActionGroupsOperations
+  uid: azure.mgmt.monitor.operations.ActionGroupsOperations.list_by_subscription_id
 - fullName: azure.mgmt.monitor.operations.ActionGroupsOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -6,6 +6,10 @@ items:
   - azure.mgmt.logic.operations.WorkflowTriggersOperations.list
   - azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
   - azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.run
   class: azure.mgmt.logic.operations.WorkflowTriggersOperations
   fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations
   inheritance:
@@ -31,7 +35,7 @@ items:
     '
   syntax:
     content: WorkflowTriggersOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -48,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version. Constant value: "2016-06-01".
 
         '
@@ -56,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.logic.operations.WorkflowTriggersOperations
 - class: azure.mgmt.logic.operations.WorkflowTriggersOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
   langs:
@@ -82,26 +86,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type:
+      type: &id005
       - str
     - description: 'The workflow trigger name.
 
         '
       id: trigger_name
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -110,7 +114,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -118,16 +122,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.logic.models.WorkflowTrigger
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
 - class: azure.mgmt.logic.operations.WorkflowTriggersOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
   langs:
@@ -153,34 +157,34 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'The number of items to be included in the result.
 
         '
       id: top
-      type:
+      type: &id014
       - int
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -189,7 +193,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -197,13 +201,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - azure.mgmt.logic.models.WorkflowTriggerPaged
   type: method
   uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
 - class: azure.mgmt.logic.operations.WorkflowTriggersOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
   langs:
@@ -229,26 +233,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type:
+      type: &id022
       - str
     - description: 'The workflow trigger name.
 
         '
       id: trigger_name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -257,7 +261,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -265,16 +269,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.logic.models.WorkflowTriggerCallbackUrl
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
 - class: azure.mgmt.logic.operations.WorkflowTriggersOperations
-  exceptions:
+  exceptions: &id028
   - type: msrest.exceptions.HttpOperationError
   fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
   langs:
@@ -300,26 +304,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type:
+      type: &id030
       - str
     - description: 'The workflow trigger name.
 
         '
       id: trigger_name
-      type:
+      type: &id031
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id032
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -328,7 +332,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id033
       - bool
     - description: '*Operation configuration
 
@@ -336,15 +340,344 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id034
       type:
       - object
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+- children:
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+  - azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+  class: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: WorkflowTriggersOperations
+  source:
+    id: WorkflowTriggersOperations
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'WorkflowTriggersOperations operations.
+
+
+
+
+
+    '
+  syntax:
+    content: WorkflowTriggersOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations
+- &id010
+  class: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  exceptions: *id003
+  fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 115
+  summary: 'Gets a workflow trigger.
+
+    '
+  syntax:
+    content: get(resource_group_name, workflow_name, trigger_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The workflow name.
+
+        '
+      id: workflow_name
+      type: *id005
+    - description: 'The workflow trigger name.
+
+        '
+      id: trigger_name
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+- *id010
+- &id019
+  class: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  exceptions: *id011
+  fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets a list of workflow triggers.
+
+    '
+  syntax:
+    content: list(resource_group_name, workflow_name, top=None, filter=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The workflow name.
+
+        '
+      id: workflow_name
+      type: *id013
+    - defaultValue: None
+      description: 'The number of items to be included in the result.
+
+        '
+      id: top
+      type: *id014
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
+
+        '
+      id: filter
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+- *id019
+- &id027
+  class: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  exceptions: *id020
+  fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: list_callback_url
+  source:
+    id: list_callback_url
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 236
+  summary: 'Gets the callback URL for a workflow trigger.
+
+    '
+  syntax:
+    content: list_callback_url(resource_group_name, workflow_name, trigger_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The workflow name.
+
+        '
+      id: workflow_name
+      type: *id022
+    - description: 'The workflow trigger name.
+
+        '
+      id: trigger_name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+- *id027
+- &id035
+  class: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  exceptions: *id028
+  fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: run
+  source:
+    id: run
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_triggers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 180
+  summary: 'Runs a workflow trigger.
+
+    '
+  syntax:
+    content: run(resource_group_name, workflow_name, trigger_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The workflow name.
+
+        '
+      id: workflow_name
+      type: *id030
+    - description: 'The workflow trigger name.
+
+        '
+      id: trigger_name
+      type: *id031
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id032
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id033
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id034
+  type: method
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+- *id035
 references:
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+  isExternal: false
+  name: list_callback_url
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+  isExternal: false
+  name: run
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+  isExternal: false
+  name: list_callback_url
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.list_callback_url
+- fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
+  isExternal: false
+  name: run
+  parent: azure.mgmt.logic.operations.WorkflowTriggersOperations
+  uid: azure.mgmt.logic.operations.WorkflowTriggersOperations.run
 - fullName: azure.mgmt.logic.operations.WorkflowTriggersOperations.get
   isExternal: false
   name: get

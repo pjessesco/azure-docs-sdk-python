@@ -27,7 +27,7 @@ items:
     '
   syntax:
     content: OperationStatusJobsExtendedInfo(job_ids=None, failed_jobs_error=None)
-    parameters:
+    parameters: &id001
     - description: 'Polymorphic Discriminator
 
         '
@@ -48,6 +48,35 @@ items:
       id: failed_jobs_error
       type:
       - dict
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.OperationStatusJobsExtendedInfo
+- children: []
+  class: azure.mgmt.recoveryservicesbackup.models.OperationStatusJobsExtendedInfo
+  fullName: azure.mgmt.recoveryservicesbackup.models.OperationStatusJobsExtendedInfo
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.recoveryservicesbackup.models.operation_status_extended_info.OperationStatusExtendedInfo
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: OperationStatusJobsExtendedInfo
+  source:
+    id: OperationStatusJobsExtendedInfo
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\operation_status_jobs_extended_info.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\operation_status_jobs_extended_info.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Operation status extended info for list of jobs.
+
+    '
+  syntax:
+    content: OperationStatusJobsExtendedInfo(job_ids=None, failed_jobs_error=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.OperationStatusJobsExtendedInfo
 references: []

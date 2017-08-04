@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.datalake.analytics.job.models.JobResourceType
-- fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource
+- children:
+  - azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource
+  - azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource_in_user_folder
+  - azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource
+  - azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource_in_user_folder
+  - azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource
+  - azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource_in_user_folder
+  class: azure.mgmt.datalake.analytics.job.models.JobResourceType
+  fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.datalake.analytics.job.models
+  name: JobResourceType
+  source:
+    id: JobResourceType
+    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\models\data_lake_analytics_job_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\models\data_lake_analytics_job_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.datalake.analytics.job.models.JobResourceType
+- &id001
+  fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource
   id: job_manager_resource
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.datalake.analytics.job.models.JobResourceType
   type: attribute
   uid: azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource
-- fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource_in_user_folder
+- &id002
+  fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource_in_user_folder
   id: job_manager_resource_in_user_folder
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.datalake.analytics.job.models.JobResourceType
   type: attribute
   uid: azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource_in_user_folder
-- fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource
+- &id003
+  fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource
   id: statistics_resource
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.datalake.analytics.job.models.JobResourceType
   type: attribute
   uid: azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource
-- fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource_in_user_folder
+- &id004
+  fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource_in_user_folder
   id: statistics_resource_in_user_folder
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.datalake.analytics.job.models.JobResourceType
   type: attribute
   uid: azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource_in_user_folder
-- fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource
+- &id005
+  fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource
   id: vertex_resource
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.datalake.analytics.job.models.JobResourceType
   type: attribute
   uid: azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource
-- fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource_in_user_folder
+- &id006
+  fullName: azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource_in_user_folder
   id: vertex_resource_in_user_folder
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.datalake.analytics.job.models.JobResourceType
   type: attribute
   uid: azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource_in_user_folder
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

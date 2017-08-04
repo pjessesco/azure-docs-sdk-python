@@ -35,7 +35,7 @@ items:
       weekly_recurrence=None, daily_recurrence=None, hourly_recurrence=None, time_zone_id=None,
       notification_settings=None, target_resource_id=None, provisioning_state=None,
       unique_identifier=None)
-    parameters:
+    parameters: &id001
     - description: 'The location of the resource.
 
         '
@@ -122,7 +122,7 @@ items:
       id: unique_identifier
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'The identifier of the resource.
 
         '
@@ -141,6 +141,44 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.devtestlabs.models.ScheduleFragment
+- children: []
+  class: azure.mgmt.devtestlabs.models.ScheduleFragment
+  fullName: azure.mgmt.devtestlabs.models.ScheduleFragment
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.devtestlabs.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: ScheduleFragment
+  source:
+    id: ScheduleFragment
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\schedule_fragment.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\schedule_fragment.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A schedule.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: ScheduleFragment(location=None, tags=None, status=None, task_type=None,
+      weekly_recurrence=None, daily_recurrence=None, hourly_recurrence=None, time_zone_id=None,
+      notification_settings=None, target_resource_id=None, provisioning_state=None,
+      unique_identifier=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.devtestlabs.models.ScheduleFragment
 references: []

@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.devtestlabs.models.NotificationStatus
-- fullName: azure.mgmt.devtestlabs.models.NotificationStatus.disabled
+- children:
+  - azure.mgmt.devtestlabs.models.NotificationStatus.disabled
+  - azure.mgmt.devtestlabs.models.NotificationStatus.enabled
+  class: azure.mgmt.devtestlabs.models.NotificationStatus
+  fullName: azure.mgmt.devtestlabs.models.NotificationStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: NotificationStatus
+  source:
+    id: NotificationStatus
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 21
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.devtestlabs.models.NotificationStatus
+- &id001
+  fullName: azure.mgmt.devtestlabs.models.NotificationStatus.disabled
   id: disabled
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.devtestlabs.models.NotificationStatus
   type: attribute
   uid: azure.mgmt.devtestlabs.models.NotificationStatus.disabled
-- fullName: azure.mgmt.devtestlabs.models.NotificationStatus.enabled
+- &id002
+  fullName: azure.mgmt.devtestlabs.models.NotificationStatus.enabled
   id: enabled
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.devtestlabs.models.NotificationStatus
   type: attribute
   uid: azure.mgmt.devtestlabs.models.NotificationStatus.enabled
+- *id001
+- *id002
 references: []

@@ -26,7 +26,7 @@ items:
   syntax:
     content: Job(entity_friendly_name=None, backup_management_type=None, operation=None,
       status=None, start_time=None, end_time=None, activity_id=None)
-    parameters:
+    parameters: &id001
     - description: 'Friendly name of the entity on which the
 
         current job is executing.
@@ -83,6 +83,34 @@ items:
       id: job_type
       type:
       - str
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.Job
+- children: []
+  class: azure.mgmt.recoveryservicesbackup.models.Job
+  fullName: azure.mgmt.recoveryservicesbackup.models.Job
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: Job
+  source:
+    id: Job
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\job.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\job.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Defines workload agnostic properties for a job.
+
+    '
+  syntax:
+    content: Job(entity_friendly_name=None, backup_management_type=None, operation=None,
+      status=None, start_time=None, end_time=None, activity_id=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.Job
 references: []

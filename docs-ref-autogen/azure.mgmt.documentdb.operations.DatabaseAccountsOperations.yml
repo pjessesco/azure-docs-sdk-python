@@ -14,6 +14,18 @@ items:
   - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
   - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
   - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
   class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
   inheritance:
@@ -47,7 +59,7 @@ items:
     '
   syntax:
     content: DatabaseAccountsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -64,7 +76,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Version of the API to be used with the client request. The current
         version is 2015-04-08. Constant value: "2015-04-08".
 
@@ -73,7 +85,7 @@ items:
   type: class
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
   langs:
@@ -102,14 +114,14 @@ items:
 
         '
       id: account_name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -118,7 +130,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -126,16 +138,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - bool
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id009
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
   langs:
@@ -161,13 +173,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id010
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id011
       - str
     - description: 'The parameters to provide for the
 
@@ -175,14 +187,14 @@ items:
 
         '
       id: create_update_parameters
-      type:
+      type: &id012
       - azure.mgmt.documentdb.models.DatabaseAccountCreateUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id013
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -191,20 +203,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id014
       - bool
-    return:
+    return: &id015
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.documentdb.models.DatabaseAccount'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id017
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
   langs:
@@ -230,20 +242,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id018
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id019
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id020
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -252,20 +264,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id021
       - bool
-    return:
+    return: &id022
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id024
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
   langs:
@@ -299,20 +311,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id025
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id026
       - str
     - defaultValue: None
       description: 'List of failover policies.
 
         '
       id: failover_policies
-      type:
+      type: &id027
       - 'list of @azure.mgmt.documentdb.models.FailoverPolicy
 
         '
@@ -321,7 +333,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id028
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -330,20 +342,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id029
       - bool
-    return:
+    return: &id030
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id032
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
   langs:
@@ -371,20 +383,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id033
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id034
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id035
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -393,7 +405,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id036
       - bool
     - description: '*Operation configuration
 
@@ -401,16 +413,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id037
       type:
       - azure.mgmt.documentdb.models.DatabaseAccount
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id039
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
   langs:
@@ -438,7 +450,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id040
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -447,7 +459,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id041
       - bool
     - description: '*Operation configuration
 
@@ -455,13 +467,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id042
       type:
       - azure.mgmt.documentdb.models.DatabaseAccountPaged
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id044
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
   langs:
@@ -489,14 +501,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id045
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id046
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -505,7 +517,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id047
       - bool
     - description: '*Operation configuration
 
@@ -513,13 +525,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id048
       type:
       - azure.mgmt.documentdb.models.DatabaseAccountPaged
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id050
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
   langs:
@@ -547,20 +559,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id051
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id052
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id053
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -569,7 +581,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id054
       - bool
     - description: '*Operation configuration
 
@@ -577,16 +589,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id055
       type:
       - azure.mgmt.documentdb.models.DatabaseAccountListConnectionStringsResult
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id057
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
   langs:
@@ -614,20 +626,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id058
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id059
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id060
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -636,7 +648,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id061
       - bool
     - description: '*Operation configuration
 
@@ -644,16 +656,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id062
       type:
       - azure.mgmt.documentdb.models.DatabaseAccountListKeysResult
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id064
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
   langs:
@@ -681,20 +693,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id065
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id066
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id067
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -703,7 +715,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id068
       - bool
     - description: '*Operation configuration
 
@@ -711,16 +723,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id069
       type:
       - azure.mgmt.documentdb.models.DatabaseAccountListReadOnlyKeysResult
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id071
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
   langs:
@@ -748,24 +760,24 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id072
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id073
       - str
     - description: ''
       id: tags
-      type:
+      type: &id074
       - dict
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id075
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -774,20 +786,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id076
       - bool
-    return:
+    return: &id077
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.documentdb.models.DatabaseAccount'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
 - class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
-  exceptions:
+  exceptions: &id079
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
   langs:
@@ -815,13 +827,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id080
       - str
     - description: 'DocumentDB database account name.
 
         '
       id: account_name
-      type:
+      type: &id081
       - str
     - description: 'The access key to regenerate. Possible values
 
@@ -831,7 +843,7 @@ items:
 
         '
       id: key_kind
-      type:
+      type: &id082
       - 'str or @azure.mgmt.documentdb.models.KeyKind
 
         '
@@ -840,7 +852,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id083
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -849,19 +861,874 @@ items:
 
         '
       id: raw
-      type:
+      type: &id084
       - bool
-    return:
+    return: &id085
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+- children:
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+  - azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: DatabaseAccountsOperations
+  source:
+    id: DatabaseAccountsOperations
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'DatabaseAccountsOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: DatabaseAccountsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+- &id008
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: check_name_exists
+  source:
+    id: check_name_exists
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 866
+  summary: 'Checks that the Azure DocumentDB account name already exists. A valid
+
+    account name may contain only lowercase letters, numbers, and the ''-''
+
+    character, and must be between 3 and 50 characters.
+
+    '
+  syntax:
+    content: check_name_exists(account_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+- *id008
+- &id016
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id009
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 196
+  summary: 'Creates or updates an Azure DocumentDB database account.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, account_name, create_update_parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id010
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id011
+    - description: 'The parameters to provide for the
+
+        current database account.
+
+        '
+      id: create_update_parameters
+      type: *id012
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id013
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id014
+    return: *id015
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+- *id016
+- &id023
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id017
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 290
+  summary: 'Deletes an existing Azure DocumentDB database account.
+
+    '
+  syntax:
+    content: delete(resource_group_name, account_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id018
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id019
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id020
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id021
+    return: *id022
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+- *id023
+- &id031
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id024
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: failover_priority_change
+  source:
+    id: failover_priority_change
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 367
+  summary: 'Changes the failover priority for the Azure DocumentDB database
+
+    account. A failover priority of 0 indicates a write region. The maximum
+
+    value for a failover priority = (total number of regions - 1). Failover
+
+    priority values must be unique for each of the regions in which the
+
+    database account exists.
+
+    '
+  syntax:
+    content: failover_priority_change(resource_group_name, account_name, failover_policies=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id025
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id026
+    - defaultValue: None
+      description: 'List of failover policies.
+
+        '
+      id: failover_policies
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    return: *id030
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+- *id031
+- &id038
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id032
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Retrieves the properties of an existing Azure DocumentDB database
+
+    account.
+
+    '
+  syntax:
+    content: get(resource_group_name, account_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id033
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id034
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id035
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id036
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id037
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+- *id038
+- &id043
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id039
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 457
+  summary: 'Lists all the Azure DocumentDB database accounts available under the
+
+    subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id040
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id041
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id042
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+- *id043
+- &id049
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id044
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 521
+  summary: 'Lists all the Azure DocumentDB database accounts available under the
+
+    given resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id045
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id046
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id047
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id048
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+- *id049
+- &id056
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id050
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: list_connection_strings
+  source:
+    id: list_connection_strings
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 651
+  summary: 'Lists the connection strings for the specified Azure DocumentDB
+
+    database account.
+
+    '
+  syntax:
+    content: list_connection_strings(resource_group_name, account_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id051
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id052
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id053
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id054
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id055
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+- *id056
+- &id063
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id057
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: list_keys
+  source:
+    id: list_keys
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 588
+  summary: 'Lists the access keys for the specified Azure DocumentDB database
+
+    account.
+
+    '
+  syntax:
+    content: list_keys(resource_group_name, account_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id058
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id059
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id060
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id061
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id062
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+- *id063
+- &id070
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id064
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: list_read_only_keys
+  source:
+    id: list_read_only_keys
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 714
+  summary: 'Lists the read-only access keys for the specified Azure DocumentDB
+
+    database account.
+
+    '
+  syntax:
+    content: list_read_only_keys(resource_group_name, account_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id065
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id066
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id067
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id068
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id069
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+- *id070
+- &id078
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id071
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: patch
+  source:
+    id: patch
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 102
+  summary: 'Patches the properties of an existing Azure DocumentDB database
+
+    account.
+
+    '
+  syntax:
+    content: patch(resource_group_name, account_name, tags, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id072
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id073
+    - description: ''
+      id: tags
+      type: *id074
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id075
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id076
+    return: *id077
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+- *id078
+- &id086
+  class: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  exceptions: *id079
+  fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+  langs:
+  - python
+  module: azure.mgmt.documentdb.operations
+  name: regenerate_key
+  source:
+    id: regenerate_key
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\operations\database_accounts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 777
+  summary: 'Regenerates an access key for the specified Azure DocumentDB database
+
+    account.
+
+    '
+  syntax:
+    content: regenerate_key(resource_group_name, account_name, key_kind, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of an Azure resource group.
+
+        '
+      id: resource_group_name
+      type: *id080
+    - description: 'DocumentDB database account name.
+
+        '
+      id: account_name
+      type: *id081
+    - description: 'The access key to regenerate. Possible values
+
+        include: ''primary'', ''secondary'', ''primaryReadonly'',
+
+        ''secondaryReadonly''
+
+        '
+      id: key_kind
+      type: *id082
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id083
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id084
+    return: *id085
+  type: method
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+- *id086
 references:
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+  isExternal: false
+  name: check_name_exists
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+  isExternal: false
+  name: failover_priority_change
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+  isExternal: false
+  name: list_connection_strings
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+  isExternal: false
+  name: list_read_only_keys
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+  isExternal: false
+  name: regenerate_key
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+  isExternal: false
+  name: check_name_exists
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.create_or_update
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.delete
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+  isExternal: false
+  name: failover_priority_change
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.failover_priority_change
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.get
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_by_resource_group
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+  isExternal: false
+  name: list_connection_strings
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_connection_strings
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_keys
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+  isExternal: false
+  name: list_read_only_keys
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.list_read_only_keys
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.patch
+- fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
+  isExternal: false
+  name: regenerate_key
+  parent: azure.mgmt.documentdb.operations.DatabaseAccountsOperations
+  uid: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.regenerate_key
 - fullName: azure.mgmt.documentdb.operations.DatabaseAccountsOperations.check_name_exists
   isExternal: false
   name: check_name_exists

@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.DnsVerificationTestResult
-- fullName: azure.mgmt.web.models.DnsVerificationTestResult.failed
+- children:
+  - azure.mgmt.web.models.DnsVerificationTestResult.failed
+  - azure.mgmt.web.models.DnsVerificationTestResult.passed
+  - azure.mgmt.web.models.DnsVerificationTestResult.skipped
+  class: azure.mgmt.web.models.DnsVerificationTestResult
+  fullName: azure.mgmt.web.models.DnsVerificationTestResult
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: DnsVerificationTestResult
+  source:
+    id: DnsVerificationTestResult
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 374
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.DnsVerificationTestResult
+- &id001
+  fullName: azure.mgmt.web.models.DnsVerificationTestResult.failed
   id: failed
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.web.models.DnsVerificationTestResult
   type: attribute
   uid: azure.mgmt.web.models.DnsVerificationTestResult.failed
-- fullName: azure.mgmt.web.models.DnsVerificationTestResult.passed
+- &id002
+  fullName: azure.mgmt.web.models.DnsVerificationTestResult.passed
   id: passed
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.web.models.DnsVerificationTestResult
   type: attribute
   uid: azure.mgmt.web.models.DnsVerificationTestResult.passed
-- fullName: azure.mgmt.web.models.DnsVerificationTestResult.skipped
+- &id003
+  fullName: azure.mgmt.web.models.DnsVerificationTestResult.skipped
   id: skipped
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.web.models.DnsVerificationTestResult
   type: attribute
   uid: azure.mgmt.web.models.DnsVerificationTestResult.skipped
+- *id001
+- *id002
+- *id003
 references: []

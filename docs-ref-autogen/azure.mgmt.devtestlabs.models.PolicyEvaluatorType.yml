@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.devtestlabs.models.PolicyEvaluatorType
-- fullName: azure.mgmt.devtestlabs.models.PolicyEvaluatorType.allowed_values_policy
+- children:
+  - azure.mgmt.devtestlabs.models.PolicyEvaluatorType.allowed_values_policy
+  - azure.mgmt.devtestlabs.models.PolicyEvaluatorType.max_value_policy
+  class: azure.mgmt.devtestlabs.models.PolicyEvaluatorType
+  fullName: azure.mgmt.devtestlabs.models.PolicyEvaluatorType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: PolicyEvaluatorType
+  source:
+    id: PolicyEvaluatorType
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 140
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.devtestlabs.models.PolicyEvaluatorType
+- &id001
+  fullName: azure.mgmt.devtestlabs.models.PolicyEvaluatorType.allowed_values_policy
   id: allowed_values_policy
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.devtestlabs.models.PolicyEvaluatorType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.PolicyEvaluatorType.allowed_values_policy
-- fullName: azure.mgmt.devtestlabs.models.PolicyEvaluatorType.max_value_policy
+- &id002
+  fullName: azure.mgmt.devtestlabs.models.PolicyEvaluatorType.max_value_policy
   id: max_value_policy
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.devtestlabs.models.PolicyEvaluatorType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.PolicyEvaluatorType.max_value_policy
+- *id001
+- *id002
 references: []

@@ -52,7 +52,59 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.ComputeNodeState
-- fullName: azure.batch.models.ComputeNodeState.creating
+- children:
+  - azure.batch.models.ComputeNodeState.creating
+  - azure.batch.models.ComputeNodeState.idle
+  - azure.batch.models.ComputeNodeState.leaving_pool
+  - azure.batch.models.ComputeNodeState.offline
+  - azure.batch.models.ComputeNodeState.preempted
+  - azure.batch.models.ComputeNodeState.rebooting
+  - azure.batch.models.ComputeNodeState.reimaging
+  - azure.batch.models.ComputeNodeState.running
+  - azure.batch.models.ComputeNodeState.start_task_failed
+  - azure.batch.models.ComputeNodeState.starting
+  - azure.batch.models.ComputeNodeState.unknown
+  - azure.batch.models.ComputeNodeState.unusable
+  - azure.batch.models.ComputeNodeState.waiting_for_start_task
+  class: azure.batch.models.ComputeNodeState
+  fullName: azure.batch.models.ComputeNodeState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: ComputeNodeState
+  source:
+    id: ComputeNodeState
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 219
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.ComputeNodeState
+- &id001
+  fullName: azure.batch.models.ComputeNodeState.creating
   id: creating
   langs:
   - python
@@ -66,7 +118,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.creating
-- fullName: azure.batch.models.ComputeNodeState.idle
+- &id002
+  fullName: azure.batch.models.ComputeNodeState.idle
   id: idle
   langs:
   - python
@@ -80,7 +133,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.idle
-- fullName: azure.batch.models.ComputeNodeState.leaving_pool
+- &id003
+  fullName: azure.batch.models.ComputeNodeState.leaving_pool
   id: leaving_pool
   langs:
   - python
@@ -94,7 +148,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.leaving_pool
-- fullName: azure.batch.models.ComputeNodeState.offline
+- &id004
+  fullName: azure.batch.models.ComputeNodeState.offline
   id: offline
   langs:
   - python
@@ -108,7 +163,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.offline
-- fullName: azure.batch.models.ComputeNodeState.preempted
+- &id005
+  fullName: azure.batch.models.ComputeNodeState.preempted
   id: preempted
   langs:
   - python
@@ -122,7 +178,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.preempted
-- fullName: azure.batch.models.ComputeNodeState.rebooting
+- &id006
+  fullName: azure.batch.models.ComputeNodeState.rebooting
   id: rebooting
   langs:
   - python
@@ -136,7 +193,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.rebooting
-- fullName: azure.batch.models.ComputeNodeState.reimaging
+- &id007
+  fullName: azure.batch.models.ComputeNodeState.reimaging
   id: reimaging
   langs:
   - python
@@ -150,7 +208,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.reimaging
-- fullName: azure.batch.models.ComputeNodeState.running
+- &id008
+  fullName: azure.batch.models.ComputeNodeState.running
   id: running
   langs:
   - python
@@ -164,7 +223,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.running
-- fullName: azure.batch.models.ComputeNodeState.start_task_failed
+- &id009
+  fullName: azure.batch.models.ComputeNodeState.start_task_failed
   id: start_task_failed
   langs:
   - python
@@ -178,7 +238,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.start_task_failed
-- fullName: azure.batch.models.ComputeNodeState.starting
+- &id010
+  fullName: azure.batch.models.ComputeNodeState.starting
   id: starting
   langs:
   - python
@@ -192,7 +253,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.starting
-- fullName: azure.batch.models.ComputeNodeState.unknown
+- &id011
+  fullName: azure.batch.models.ComputeNodeState.unknown
   id: unknown
   langs:
   - python
@@ -206,7 +268,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.unknown
-- fullName: azure.batch.models.ComputeNodeState.unusable
+- &id012
+  fullName: azure.batch.models.ComputeNodeState.unusable
   id: unusable
   langs:
   - python
@@ -220,7 +283,8 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.unusable
-- fullName: azure.batch.models.ComputeNodeState.waiting_for_start_task
+- &id013
+  fullName: azure.batch.models.ComputeNodeState.waiting_for_start_task
   id: waiting_for_start_task
   langs:
   - python
@@ -234,4 +298,17 @@ items:
       - azure.batch.models.ComputeNodeState
   type: attribute
   uid: azure.batch.models.ComputeNodeState.waiting_for_start_task
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
+- *id012
+- *id013
 references: []

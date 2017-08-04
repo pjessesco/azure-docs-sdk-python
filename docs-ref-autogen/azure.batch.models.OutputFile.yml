@@ -27,7 +27,7 @@ items:
     '
   syntax:
     content: OutputFile(file_pattern, destination, upload_options)
-    parameters:
+    parameters: &id001
     - description: 'A pattern indicating which file(s) to upload. Both
 
         relative and absolute paths are supported. Relative paths are relative to
@@ -80,6 +80,35 @@ items:
       id: upload_options
       type:
       - azure.batch.models.OutputFileUploadOptions
+  type: class
+  uid: azure.batch.models.OutputFile
+- children: []
+  class: azure.batch.models.OutputFile
+  fullName: azure.batch.models.OutputFile
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: OutputFile
+  source:
+    id: OutputFile
+    path: azure-batch\azure\batch\models\output_file.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\output_file.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A specification for uploading files from an Azure Batch node to another
+
+    location after the Batch service has finished executing the task process.
+
+    '
+  syntax:
+    content: OutputFile(file_pattern, destination, upload_options)
+    parameters: *id001
   type: class
   uid: azure.batch.models.OutputFile
 references: []

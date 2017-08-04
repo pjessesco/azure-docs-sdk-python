@@ -10,6 +10,14 @@ items:
   - azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
   - azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
   - azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+  - azure.graphrbac.operations.ServicePrincipalsOperations.create
+  - azure.graphrbac.operations.ServicePrincipalsOperations.delete
+  - azure.graphrbac.operations.ServicePrincipalsOperations.get
+  - azure.graphrbac.operations.ServicePrincipalsOperations.list
+  - azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+  - azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+  - azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+  - azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
   class: azure.graphrbac.operations.ServicePrincipalsOperations
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations
   inheritance:
@@ -39,7 +47,7 @@ items:
     '
   syntax:
     content: ServicePrincipalsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -56,7 +64,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "1.6".
 
         '
@@ -64,7 +72,7 @@ items:
   type: class
   uid: azure.graphrbac.operations.ServicePrincipalsOperations
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.create
   langs:
@@ -89,14 +97,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id004
       - azure.graphrbac.models.ServicePrincipalCreateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -105,7 +113,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -113,16 +121,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - azure.graphrbac.models.ServicePrincipal
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.create
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id009
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.delete
   langs:
@@ -147,14 +155,14 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id010
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id011
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -163,7 +171,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id012
       - bool
     - description: '*Operation configuration
 
@@ -171,16 +179,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id013
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.delete
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id015
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.get
   langs:
@@ -205,14 +213,14 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id016
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id017
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -221,7 +229,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id018
       - bool
     - description: '*Operation configuration
 
@@ -229,16 +237,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id019
       type:
       - azure.graphrbac.models.ServicePrincipal
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.get
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id021
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list
   langs:
@@ -264,14 +272,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id022
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id023
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -280,7 +288,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id024
       - bool
     - description: '*Operation configuration
 
@@ -288,13 +296,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id025
       type:
       - azure.graphrbac.models.ServicePrincipalPaged
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.list
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id027
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
   langs:
@@ -321,14 +329,14 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id028
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id029
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -337,7 +345,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id030
       - bool
     - description: '*Operation configuration
 
@@ -345,13 +353,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id031
       type:
       - azure.graphrbac.models.KeyCredentialPaged
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id033
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
   langs:
@@ -377,14 +385,14 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id034
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id035
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -393,7 +401,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id036
       - bool
     - description: '*Operation configuration
 
@@ -401,13 +409,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id037
       type:
       - azure.graphrbac.models.PasswordCredentialPaged
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id039
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
   langs:
@@ -435,13 +443,13 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id040
       - str
     - description: 'A collection of KeyCredentials.
 
         '
       id: value
-      type:
+      type: &id041
       - 'list of @azure.graphrbac.models.KeyCredential
 
         '
@@ -450,7 +458,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id042
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -459,7 +467,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id043
       - bool
     - description: '*Operation configuration
 
@@ -467,16 +475,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id044
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
 - class: azure.graphrbac.operations.ServicePrincipalsOperations
-  exceptions:
+  exceptions: &id046
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
   langs:
@@ -502,13 +510,13 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id047
       - str
     - description: 'A collection of PasswordCredentials.
 
         '
       id: value
-      type:
+      type: &id048
       - 'list of @azure.graphrbac.models.PasswordCredential
 
         '
@@ -517,7 +525,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id049
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -526,7 +534,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id050
       - bool
     - description: '*Operation configuration
 
@@ -534,15 +542,563 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id051
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+- children:
+  - azure.graphrbac.operations.ServicePrincipalsOperations.create
+  - azure.graphrbac.operations.ServicePrincipalsOperations.delete
+  - azure.graphrbac.operations.ServicePrincipalsOperations.get
+  - azure.graphrbac.operations.ServicePrincipalsOperations.list
+  - azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+  - azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+  - azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+  - azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: ServicePrincipalsOperations
+  source:
+    id: ServicePrincipalsOperations
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'ServicePrincipalsOperations operations.
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: ServicePrincipalsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations
+- &id008
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id003
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.create
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: create
+  source:
+    id: create
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Creates a service principal in the directory.
+
+    '
+  syntax:
+    content: create(parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Parameters to create a service principal.
+
+        '
+      id: parameters
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.create
+- *id008
+- &id014
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id009
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.delete
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 171
+  summary: 'Deletes a service principal from the directory.
+
+    '
+  syntax:
+    content: delete(object_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the service principal to delete.
+
+        '
+      id: object_id
+      type: *id010
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id011
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id012
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id013
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.delete
+- *id014
+- &id020
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id015
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.get
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: get
+  source:
+    id: get
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 221
+  summary: 'Gets service principal information from the directory.
+
+    '
+  syntax:
+    content: get(object_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the service principal to get.
+
+        '
+      id: object_id
+      type: *id016
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id017
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id018
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id019
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.get
+- *id020
+- &id026
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id021
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: list
+  source:
+    id: list
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 99
+  summary: 'Gets a list of service principals from the current tenant.
+
+    '
+  syntax:
+    content: list(filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'The filter to apply to the operation.
+
+        '
+      id: filter
+      type: *id022
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id023
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id024
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id025
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list
+- *id026
+- &id032
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id027
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: list_key_credentials
+  source:
+    id: list_key_credentials
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 279
+  summary: 'Get the keyCredentials associated with the specified service principal.
+
+    '
+  syntax:
+    content: list_key_credentials(object_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the service principal for which to
+
+        get keyCredentials.
+
+        '
+      id: object_id
+      type: *id028
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id029
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id030
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id031
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+- *id032
+- &id038
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id033
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: list_password_credentials
+  source:
+    id: list_password_credentials
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 405
+  summary: 'Gets the passwordCredentials associated with a service principal.
+
+    '
+  syntax:
+    content: list_password_credentials(object_id, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The object ID of the service principal.
+
+        '
+      id: object_id
+      type: *id034
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id035
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id036
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id037
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+- *id038
+- &id045
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id039
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: update_key_credentials
+  source:
+    id: update_key_credentials
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 345
+  summary: 'Update the keyCredentials associated with a service principal.
+
+    '
+  syntax:
+    content: update_key_credentials(object_id, value, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The object ID for which to get service principal
+
+        information.
+
+        '
+      id: object_id
+      type: *id040
+    - description: 'A collection of KeyCredentials.
+
+        '
+      id: value
+      type: *id041
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id042
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id043
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id044
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+- *id045
+- &id052
+  class: azure.graphrbac.operations.ServicePrincipalsOperations
+  exceptions: *id046
+  fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: update_password_credentials
+  source:
+    id: update_password_credentials
+    path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\service_principals_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 470
+  summary: 'Updates the passwordCredentials associated with a service principal.
+
+    '
+  syntax:
+    content: update_password_credentials(object_id, value, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The object ID of the service principal.
+
+        '
+      id: object_id
+      type: *id047
+    - description: 'A collection of PasswordCredentials.
+
+        '
+      id: value
+      type: *id048
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id049
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id050
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id051
+  type: method
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+- *id052
 references:
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.create
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.delete
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.get
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+  isExternal: false
+  name: list_key_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+  isExternal: false
+  name: list_password_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+  isExternal: false
+  name: update_key_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+  isExternal: false
+  name: update_password_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.create
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.delete
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.get
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+  isExternal: false
+  name: list_key_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_key_credentials
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+  isExternal: false
+  name: list_password_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.list_password_credentials
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+  isExternal: false
+  name: update_key_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_key_credentials
+- fullName: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
+  isExternal: false
+  name: update_password_credentials
+  parent: azure.graphrbac.operations.ServicePrincipalsOperations
+  uid: azure.graphrbac.operations.ServicePrincipalsOperations.update_password_credentials
 - fullName: azure.graphrbac.operations.ServicePrincipalsOperations.create
   isExternal: false
   name: create

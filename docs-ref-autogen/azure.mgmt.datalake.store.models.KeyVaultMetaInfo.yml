@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: KeyVaultMetaInfo(key_vault_resource_id, encryption_key_name, encryption_key_version)
-    parameters:
+    parameters: &id001
     - description: 'The resource identifier for the user managed
 
         Key Vault being used to encrypt.
@@ -48,6 +48,33 @@ items:
       id: encryption_key_version
       type:
       - str
+  type: class
+  uid: azure.mgmt.datalake.store.models.KeyVaultMetaInfo
+- children: []
+  class: azure.mgmt.datalake.store.models.KeyVaultMetaInfo
+  fullName: azure.mgmt.datalake.store.models.KeyVaultMetaInfo
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.datalake.store.models
+  name: KeyVaultMetaInfo
+  source:
+    id: KeyVaultMetaInfo
+    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\models\key_vault_meta_info.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\models\key_vault_meta_info.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Metadata information used by account encryption.
+
+    '
+  syntax:
+    content: KeyVaultMetaInfo(key_vault_resource_id, encryption_key_name, encryption_key_version)
+    parameters: *id001
   type: class
   uid: azure.mgmt.datalake.store.models.KeyVaultMetaInfo
 references: []

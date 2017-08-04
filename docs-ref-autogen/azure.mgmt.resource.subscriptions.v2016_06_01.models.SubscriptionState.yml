@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.deleted
+- children:
+  - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.deleted
+  - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.disabled
+  - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.enabled
+  - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.past_due
+  - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.warned
+  class: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
+  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.resource.subscriptions.v2016_06_01.models
+  name: SubscriptionState
+  source:
+    id: SubscriptionState
+    path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\models\subscription_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\subscriptions\v2016_06_01\models\subscription_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
+- &id001
+  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.deleted
   id: deleted
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
   type: attribute
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.deleted
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.disabled
+- &id002
+  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.disabled
   id: disabled
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
   type: attribute
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.disabled
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.enabled
+- &id003
+  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.enabled
   id: enabled
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
   type: attribute
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.enabled
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.past_due
+- &id004
+  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.past_due
   id: past_due
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
   type: attribute
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.past_due
-- fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.warned
+- &id005
+  fullName: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.warned
   id: warned
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState
   type: attribute
   uid: azure.mgmt.resource.subscriptions.v2016_06_01.models.SubscriptionState.warned
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

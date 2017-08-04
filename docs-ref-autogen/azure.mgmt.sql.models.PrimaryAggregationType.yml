@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.PrimaryAggregationType
-- fullName: azure.mgmt.sql.models.PrimaryAggregationType.average
+- children:
+  - azure.mgmt.sql.models.PrimaryAggregationType.average
+  - azure.mgmt.sql.models.PrimaryAggregationType.count
+  - azure.mgmt.sql.models.PrimaryAggregationType.maximum
+  - azure.mgmt.sql.models.PrimaryAggregationType.minimum
+  - azure.mgmt.sql.models.PrimaryAggregationType.none
+  - azure.mgmt.sql.models.PrimaryAggregationType.total
+  class: azure.mgmt.sql.models.PrimaryAggregationType
+  fullName: azure.mgmt.sql.models.PrimaryAggregationType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: PrimaryAggregationType
+  source:
+    id: PrimaryAggregationType
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 132
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.PrimaryAggregationType
+- &id001
+  fullName: azure.mgmt.sql.models.PrimaryAggregationType.average
   id: average
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.sql.models.PrimaryAggregationType
   type: attribute
   uid: azure.mgmt.sql.models.PrimaryAggregationType.average
-- fullName: azure.mgmt.sql.models.PrimaryAggregationType.count
+- &id002
+  fullName: azure.mgmt.sql.models.PrimaryAggregationType.count
   id: count
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.sql.models.PrimaryAggregationType
   type: attribute
   uid: azure.mgmt.sql.models.PrimaryAggregationType.count
-- fullName: azure.mgmt.sql.models.PrimaryAggregationType.maximum
+- &id003
+  fullName: azure.mgmt.sql.models.PrimaryAggregationType.maximum
   id: maximum
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.sql.models.PrimaryAggregationType
   type: attribute
   uid: azure.mgmt.sql.models.PrimaryAggregationType.maximum
-- fullName: azure.mgmt.sql.models.PrimaryAggregationType.minimum
+- &id004
+  fullName: azure.mgmt.sql.models.PrimaryAggregationType.minimum
   id: minimum
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.sql.models.PrimaryAggregationType
   type: attribute
   uid: azure.mgmt.sql.models.PrimaryAggregationType.minimum
-- fullName: azure.mgmt.sql.models.PrimaryAggregationType.none
+- &id005
+  fullName: azure.mgmt.sql.models.PrimaryAggregationType.none
   id: none
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.sql.models.PrimaryAggregationType
   type: attribute
   uid: azure.mgmt.sql.models.PrimaryAggregationType.none
-- fullName: azure.mgmt.sql.models.PrimaryAggregationType.total
+- &id006
+  fullName: azure.mgmt.sql.models.PrimaryAggregationType.total
   id: total
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.sql.models.PrimaryAggregationType
   type: attribute
   uid: azure.mgmt.sql.models.PrimaryAggregationType.total
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

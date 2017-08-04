@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.cdn.models.SkuName
-- fullName: azure.mgmt.cdn.models.SkuName.custom_verizon
+- children:
+  - azure.mgmt.cdn.models.SkuName.custom_verizon
+  - azure.mgmt.cdn.models.SkuName.premium_verizon
+  - azure.mgmt.cdn.models.SkuName.standard_akamai
+  - azure.mgmt.cdn.models.SkuName.standard_china_cdn
+  - azure.mgmt.cdn.models.SkuName.standard_verizon
+  class: azure.mgmt.cdn.models.SkuName
+  fullName: azure.mgmt.cdn.models.SkuName
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.cdn.models
+  name: SkuName
+  source:
+    id: SkuName
+    path: azure-mgmt-cdn\azure\mgmt\cdn\models\cdn_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\models\cdn_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.cdn.models.SkuName
+- &id001
+  fullName: azure.mgmt.cdn.models.SkuName.custom_verizon
   id: custom_verizon
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.cdn.models.SkuName
   type: attribute
   uid: azure.mgmt.cdn.models.SkuName.custom_verizon
-- fullName: azure.mgmt.cdn.models.SkuName.premium_verizon
+- &id002
+  fullName: azure.mgmt.cdn.models.SkuName.premium_verizon
   id: premium_verizon
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.cdn.models.SkuName
   type: attribute
   uid: azure.mgmt.cdn.models.SkuName.premium_verizon
-- fullName: azure.mgmt.cdn.models.SkuName.standard_akamai
+- &id003
+  fullName: azure.mgmt.cdn.models.SkuName.standard_akamai
   id: standard_akamai
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.cdn.models.SkuName
   type: attribute
   uid: azure.mgmt.cdn.models.SkuName.standard_akamai
-- fullName: azure.mgmt.cdn.models.SkuName.standard_china_cdn
+- &id004
+  fullName: azure.mgmt.cdn.models.SkuName.standard_china_cdn
   id: standard_china_cdn
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.cdn.models.SkuName
   type: attribute
   uid: azure.mgmt.cdn.models.SkuName.standard_china_cdn
-- fullName: azure.mgmt.cdn.models.SkuName.standard_verizon
+- &id005
+  fullName: azure.mgmt.cdn.models.SkuName.standard_verizon
   id: standard_verizon
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.cdn.models.SkuName
   type: attribute
   uid: azure.mgmt.cdn.models.SkuName.standard_verizon
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

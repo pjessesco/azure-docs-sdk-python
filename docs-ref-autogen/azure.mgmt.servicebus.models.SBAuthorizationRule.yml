@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: SBAuthorizationRule(rights=None)
-    parameters:
+    parameters: &id001
     - description: 'The rights associated with the rule.
 
         '
@@ -41,7 +41,7 @@ items:
       - 'list of str or @azure.mgmt.servicebus.models.AccessRights
 
         '
-    variables:
+    variables: &id002
     - description: 'Resource Id
 
         '
@@ -60,6 +60,41 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.servicebus.models.SBAuthorizationRule
+- children: []
+  class: azure.mgmt.servicebus.models.SBAuthorizationRule
+  fullName: azure.mgmt.servicebus.models.SBAuthorizationRule
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.servicebus.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.servicebus.models
+  name: SBAuthorizationRule
+  source:
+    id: SBAuthorizationRule
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sb_authorization_rule.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\sb_authorization_rule.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Description of a namespace authorization rule.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: SBAuthorizationRule(rights=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.servicebus.models.SBAuthorizationRule
 references: []

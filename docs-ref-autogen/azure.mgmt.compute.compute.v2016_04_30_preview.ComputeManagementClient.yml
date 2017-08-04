@@ -23,13 +23,13 @@ items:
     '
   syntax:
     content: ComputeManagementClient(credentials, subscription_id, base_url=None)
-    parameters:
+    parameters: &id001
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - msrestazure.azure_active_directory
+      - ../msrestazure.azure_active_directory
     - description: 'Subscription credentials which uniquely identify
 
         Microsoft Azure subscription. The subscription ID forms part of the URI
@@ -46,7 +46,7 @@ items:
       id: base_url
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Configuration for client.
 
         '
@@ -125,6 +125,32 @@ items:
       id: snapshots
       type:
       - azure.mgmt.compute.compute.v2016_04_30_preview.operations.SnapshotsOperations
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.ComputeManagementClient
+- children: []
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.ComputeManagementClient
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.ComputeManagementClient
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview
+  name: ComputeManagementClient
+  source:
+    id: ComputeManagementClient
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\compute_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\compute_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 67
+  summary: 'Compute Client
+
+    '
+  syntax:
+    content: ComputeManagementClient(credentials, subscription_id, base_url=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.ComputeManagementClient
 references: []

@@ -9,6 +9,13 @@ items:
   - azure.mgmt.scheduler.operations.JobsOperations.list_job_history
   - azure.mgmt.scheduler.operations.JobsOperations.patch
   - azure.mgmt.scheduler.operations.JobsOperations.run
+  - azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+  - azure.mgmt.scheduler.operations.JobsOperations.delete
+  - azure.mgmt.scheduler.operations.JobsOperations.get
+  - azure.mgmt.scheduler.operations.JobsOperations.list
+  - azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+  - azure.mgmt.scheduler.operations.JobsOperations.patch
+  - azure.mgmt.scheduler.operations.JobsOperations.run
   class: azure.mgmt.scheduler.operations.JobsOperations
   fullName: azure.mgmt.scheduler.operations.JobsOperations
   inheritance:
@@ -37,7 +44,7 @@ items:
     '
   syntax:
     content: JobsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -54,7 +61,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version. Constant value: "2016-03-01".
 
         '
@@ -62,7 +69,7 @@ items:
   type: class
   uid: azure.mgmt.scheduler.operations.JobsOperations
 - class: azure.mgmt.scheduler.operations.JobsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
   langs:
@@ -88,33 +95,33 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id005
       - str
     - description: 'The job name.
 
         '
       id: job_name
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'Gets or sets the job properties.
 
         '
       id: properties
-      type:
+      type: &id007
       - azure.mgmt.scheduler.models.JobProperties
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -123,7 +130,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
     - description: '*Operation configuration
 
@@ -131,16 +138,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id010
       type:
       - azure.mgmt.scheduler.models.JobDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
 - class: azure.mgmt.scheduler.operations.JobsOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobsOperations.delete
   langs:
@@ -166,26 +173,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id014
       - str
     - description: 'The job name.
 
         '
       id: job_name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -194,7 +201,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -202,16 +209,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobsOperations.delete
 - class: azure.mgmt.scheduler.operations.JobsOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobsOperations.get
   langs:
@@ -237,26 +244,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id022
       - str
     - description: 'The job name.
 
         '
       id: job_name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -265,7 +272,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -273,16 +280,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.scheduler.models.JobDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobsOperations.get
 - class: azure.mgmt.scheduler.operations.JobsOperations
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobsOperations.list
   langs:
@@ -308,13 +315,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'The number of jobs to request, in the of range of
@@ -323,7 +330,7 @@ items:
 
         '
       id: top
-      type:
+      type: &id031
       - int
     - defaultValue: None
       description: 'The (0-based) index of the job history list from which to
@@ -332,21 +339,21 @@ items:
 
         '
       id: skip
-      type:
+      type: &id032
       - int
     - defaultValue: None
       description: 'The filter to apply on the job state.
 
         '
       id: filter
-      type:
+      type: &id033
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -355,7 +362,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -363,13 +370,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       type:
       - azure.mgmt.scheduler.models.JobDefinitionPaged
   type: method
   uid: azure.mgmt.scheduler.operations.JobsOperations.list
 - class: azure.mgmt.scheduler.operations.JobsOperations
-  exceptions:
+  exceptions: &id038
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
   langs:
@@ -395,19 +402,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id039
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id040
       - str
     - description: 'The job name.
 
         '
       id: job_name
-      type:
+      type: &id041
       - str
     - defaultValue: None
       description: 'the number of job history to request, in the of range of
@@ -416,7 +423,7 @@ items:
 
         '
       id: top
-      type:
+      type: &id042
       - int
     - defaultValue: None
       description: 'The (0-based) index of the job history list from which to
@@ -425,21 +432,21 @@ items:
 
         '
       id: skip
-      type:
+      type: &id043
       - int
     - defaultValue: None
       description: 'The filter to apply on the job state.
 
         '
       id: filter
-      type:
+      type: &id044
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id045
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -448,7 +455,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id046
       - bool
     - description: '*Operation configuration
 
@@ -456,13 +463,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id047
       type:
       - azure.mgmt.scheduler.models.JobHistoryDefinitionPaged
   type: method
   uid: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
 - class: azure.mgmt.scheduler.operations.JobsOperations
-  exceptions:
+  exceptions: &id049
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobsOperations.patch
   langs:
@@ -488,33 +495,33 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id050
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id051
       - str
     - description: 'The job name.
 
         '
       id: job_name
-      type:
+      type: &id052
       - str
     - defaultValue: None
       description: 'Gets or sets the job properties.
 
         '
       id: properties
-      type:
+      type: &id053
       - azure.mgmt.scheduler.models.JobProperties
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id054
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -523,7 +530,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id055
       - bool
     - description: '*Operation configuration
 
@@ -531,16 +538,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id056
       type:
       - azure.mgmt.scheduler.models.JobDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobsOperations.patch
 - class: azure.mgmt.scheduler.operations.JobsOperations
-  exceptions:
+  exceptions: &id058
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobsOperations.run
   langs:
@@ -566,26 +573,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id059
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id060
       - str
     - description: 'The job name.
 
         '
       id: job_name
-      type:
+      type: &id061
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id062
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -594,7 +601,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id063
       - bool
     - description: '*Operation configuration
 
@@ -602,15 +609,610 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id064
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobsOperations.run
+- children:
+  - azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+  - azure.mgmt.scheduler.operations.JobsOperations.delete
+  - azure.mgmt.scheduler.operations.JobsOperations.get
+  - azure.mgmt.scheduler.operations.JobsOperations.list
+  - azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+  - azure.mgmt.scheduler.operations.JobsOperations.patch
+  - azure.mgmt.scheduler.operations.JobsOperations.run
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  fullName: azure.mgmt.scheduler.operations.JobsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: JobsOperations
+  source:
+    id: JobsOperations
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'JobsOperations operations.
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: JobsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.scheduler.operations.JobsOperations
+- &id011
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 103
+  summary: 'Provisions a new job or updates an existing job.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, job_collection_name, job_name,
+      properties=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id005
+    - description: 'The job name.
+
+        '
+      id: job_name
+      type: *id006
+    - defaultValue: None
+      description: 'Gets or sets the job properties.
+
+        '
+      id: properties
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id010
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+- *id011
+- &id019
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  exceptions: *id012
+  fullName: azure.mgmt.scheduler.operations.JobsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 253
+  summary: 'Deletes a job.
+
+    '
+  syntax:
+    content: delete(resource_group_name, job_collection_name, job_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id014
+    - description: 'The job name.
+
+        '
+      id: job_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobsOperations.delete
+- *id019
+- &id027
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  exceptions: *id020
+  fullName: azure.mgmt.scheduler.operations.JobsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets a job.
+
+    '
+  syntax:
+    content: get(resource_group_name, job_collection_name, job_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id022
+    - description: 'The job name.
+
+        '
+      id: job_name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobsOperations.get
+- *id027
+- &id037
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  exceptions: *id028
+  fullName: azure.mgmt.scheduler.operations.JobsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 367
+  summary: 'Lists all jobs under the specified job collection.
+
+    '
+  syntax:
+    content: list(resource_group_name, job_collection_name, top=None, skip=None, filter=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id030
+    - defaultValue: None
+      description: 'The number of jobs to request, in the of range of
+
+        [1..100].
+
+        '
+      id: top
+      type: *id031
+    - defaultValue: None
+      description: 'The (0-based) index of the job history list from which to
+
+        begin requesting entries.
+
+        '
+      id: skip
+      type: *id032
+    - defaultValue: None
+      description: 'The filter to apply on the job state.
+
+        '
+      id: filter
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobsOperations.list
+- *id037
+- &id048
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  exceptions: *id038
+  fullName: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: list_job_history
+  source:
+    id: list_job_history
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 450
+  summary: 'Lists job history.
+
+    '
+  syntax:
+    content: list_job_history(resource_group_name, job_collection_name, job_name,
+      top=None, skip=None, filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id039
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id040
+    - description: 'The job name.
+
+        '
+      id: job_name
+      type: *id041
+    - defaultValue: None
+      description: 'the number of job history to request, in the of range of
+
+        [1..100].
+
+        '
+      id: top
+      type: *id042
+    - defaultValue: None
+      description: 'The (0-based) index of the job history list from which to
+
+        begin requesting entries.
+
+        '
+      id: skip
+      type: *id043
+    - defaultValue: None
+      description: 'The filter to apply on the job state.
+
+        '
+      id: filter
+      type: *id044
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id045
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id046
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id047
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+- *id048
+- &id057
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  exceptions: *id049
+  fullName: azure.mgmt.scheduler.operations.JobsOperations.patch
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: patch
+  source:
+    id: patch
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 179
+  summary: 'Patches an existing job.
+
+    '
+  syntax:
+    content: patch(resource_group_name, job_collection_name, job_name, properties=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id050
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id051
+    - description: 'The job name.
+
+        '
+      id: job_name
+      type: *id052
+    - defaultValue: None
+      description: 'Gets or sets the job properties.
+
+        '
+      id: properties
+      type: *id053
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id054
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id055
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id056
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobsOperations.patch
+- *id057
+- &id065
+  class: azure.mgmt.scheduler.operations.JobsOperations
+  exceptions: *id058
+  fullName: azure.mgmt.scheduler.operations.JobsOperations.run
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: run
+  source:
+    id: run
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\jobs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 310
+  summary: 'Runs a job.
+
+    '
+  syntax:
+    content: run(resource_group_name, job_collection_name, job_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id059
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id060
+    - description: 'The job name.
+
+        '
+      id: job_name
+      type: *id061
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id062
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id063
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id064
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobsOperations.run
+- *id065
 references:
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.delete
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.get
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.list
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+  isExternal: false
+  name: list_job_history
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.patch
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.run
+  isExternal: false
+  name: run
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.run
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.delete
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.get
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.list
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+  isExternal: false
+  name: list_job_history
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.list_job_history
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.patch
+- fullName: azure.mgmt.scheduler.operations.JobsOperations.run
+  isExternal: false
+  name: run
+  parent: azure.mgmt.scheduler.operations.JobsOperations
+  uid: azure.mgmt.scheduler.operations.JobsOperations.run
 - fullName: azure.mgmt.scheduler.operations.JobsOperations.create_or_update
   isExternal: false
   name: create_or_update

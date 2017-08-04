@@ -28,7 +28,7 @@ items:
   syntax:
     content: JobRelationshipProperties(recurrence_id, pipeline_id=None, pipeline_name=None,
       pipeline_uri=None, run_id=None, recurrence_name=None)
-    parameters:
+    parameters: &id001
     - description: 'the job relationship pipeline identifier (a GUID).
 
         '
@@ -77,6 +77,36 @@ items:
       id: recurrence_name
       type:
       - str
+  type: class
+  uid: azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties
+- children: []
+  class: azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties
+  fullName: azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.datalake.analytics.job.models
+  name: JobRelationshipProperties
+  source:
+    id: JobRelationshipProperties
+    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\models\job_relationship_properties.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\models\job_relationship_properties.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Job relationship information properties including pipeline information,
+
+    correlation information, etc.
+
+    '
+  syntax:
+    content: JobRelationshipProperties(recurrence_id, pipeline_id=None, pipeline_name=None,
+      pipeline_uri=None, run_id=None, recurrence_name=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties
 references: []

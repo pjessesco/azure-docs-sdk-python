@@ -33,7 +33,7 @@ items:
     '
   syntax:
     content: EventHubProperties(retention_time_in_days=None, partition_count=None)
-    parameters:
+    parameters: &id001
     - description: 'The retention time for device-to-cloud
 
         messages in days. See:
@@ -54,7 +54,7 @@ items:
       id: partition_count
       type:
       - int
-    variables:
+    variables: &id002
     - description: 'The partition ids in the Event Hub-compatible
 
         endpoint.
@@ -75,6 +75,42 @@ items:
       id: endpoint
       type:
       - str
+  type: class
+  uid: azure.mgmt.iothub.models.EventHubProperties
+- children: []
+  class: azure.mgmt.iothub.models.EventHubProperties
+  fullName: azure.mgmt.iothub.models.EventHubProperties
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.iothub.models
+  name: EventHubProperties
+  source:
+    id: EventHubProperties
+    path: azure-mgmt-iothub\azure\mgmt\iothub\models\event_hub_properties.py
+    remote:
+      branch: master
+      path: azure-mgmt-iothub\azure\mgmt\iothub\models\event_hub_properties.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The properties of the provisioned Event Hub-compatible endpoint used by
+    the
+
+    IoT hub.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: EventHubProperties(retention_time_in_days=None, partition_count=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.iothub.models.EventHubProperties
 references: []

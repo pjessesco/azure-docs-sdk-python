@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.CapabilityStatus
-- fullName: azure.mgmt.sql.models.CapabilityStatus.available
+- children:
+  - azure.mgmt.sql.models.CapabilityStatus.available
+  - azure.mgmt.sql.models.CapabilityStatus.default
+  - azure.mgmt.sql.models.CapabilityStatus.disabled
+  - azure.mgmt.sql.models.CapabilityStatus.visible
+  class: azure.mgmt.sql.models.CapabilityStatus
+  fullName: azure.mgmt.sql.models.CapabilityStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: CapabilityStatus
+  source:
+    id: CapabilityStatus
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 21
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.CapabilityStatus
+- &id001
+  fullName: azure.mgmt.sql.models.CapabilityStatus.available
   id: available
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.sql.models.CapabilityStatus
   type: attribute
   uid: azure.mgmt.sql.models.CapabilityStatus.available
-- fullName: azure.mgmt.sql.models.CapabilityStatus.default
+- &id002
+  fullName: azure.mgmt.sql.models.CapabilityStatus.default
   id: default
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.sql.models.CapabilityStatus
   type: attribute
   uid: azure.mgmt.sql.models.CapabilityStatus.default
-- fullName: azure.mgmt.sql.models.CapabilityStatus.disabled
+- &id003
+  fullName: azure.mgmt.sql.models.CapabilityStatus.disabled
   id: disabled
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.sql.models.CapabilityStatus
   type: attribute
   uid: azure.mgmt.sql.models.CapabilityStatus.disabled
-- fullName: azure.mgmt.sql.models.CapabilityStatus.visible
+- &id004
+  fullName: azure.mgmt.sql.models.CapabilityStatus.visible
   id: visible
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.sql.models.CapabilityStatus
   type: attribute
   uid: azure.mgmt.sql.models.CapabilityStatus.visible
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

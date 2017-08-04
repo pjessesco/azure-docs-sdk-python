@@ -10,6 +10,14 @@ items:
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
   class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
   inheritance:
@@ -39,7 +47,7 @@ items:
     '
   syntax:
     content: DisksOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -56,7 +64,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-04-30-preview".
 
         '
@@ -64,7 +72,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
   langs:
@@ -90,7 +98,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the disk within the given subscription
 
@@ -98,7 +106,7 @@ items:
 
         '
       id: disk_name
-      type:
+      type: &id005
       - str
     - description: 'Disk object supplied in the body of the Put disk
 
@@ -106,14 +114,14 @@ items:
 
         '
       id: disk
-      type:
+      type: &id006
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,27 +130,27 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id009
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
         or
 
-        @msrest.pipeline.ClientRawResponse if
+        @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
   langs:
@@ -168,7 +176,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the disk within the given subscription
 
@@ -176,14 +184,14 @@ items:
 
         '
       id: disk_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -192,26 +200,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id016
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
   langs:
@@ -236,7 +244,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the disk within the given subscription
 
@@ -244,14 +252,14 @@ items:
 
         '
       id: disk_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -260,7 +268,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -268,10 +276,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk or
 
-        @msrest.pipeline.ClientRawResponse if
+        @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -279,11 +287,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk or
 
-        @msrest.pipeline.ClientRawResponse'
+        @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
   langs:
@@ -309,7 +317,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id026
       - str
     - description: 'The name of the disk within the given subscription
 
@@ -317,13 +325,13 @@ items:
 
         '
       id: disk_name
-      type:
+      type: &id027
       - str
     - description: 'Possible values include: ''None'', ''Read''
 
         '
       id: access
-      type:
+      type: &id028
       - 'str or @azure.mgmt.compute.compute.v2016_04_30_preview.models.AccessLevel
 
         '
@@ -333,14 +341,14 @@ items:
 
         '
       id: duration_in_seconds
-      type:
+      type: &id029
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id030
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -349,27 +357,27 @@ items:
 
         '
       id: raw
-      type:
+      type: &id031
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id032
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.AccessUri
         or
 
-        @msrest.pipeline.ClientRawResponse if
+        @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id034
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
   langs:
@@ -395,7 +403,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id035
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -404,7 +412,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id036
       - bool
     - description: '*Operation configuration
 
@@ -412,7 +420,7 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id037
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
 
         '
@@ -421,7 +429,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id039
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
   langs:
@@ -447,14 +455,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id040
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id041
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -463,7 +471,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id042
       - bool
     - description: '*Operation configuration
 
@@ -471,7 +479,7 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id043
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
 
         '
@@ -480,7 +488,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id045
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
   langs:
@@ -506,7 +514,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id046
       - str
     - description: 'The name of the disk within the given subscription
 
@@ -514,14 +522,14 @@ items:
 
         '
       id: disk_name
-      type:
+      type: &id047
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id048
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -530,26 +538,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id049
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id050
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
-  exceptions:
+  exceptions: &id052
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
   langs:
@@ -575,7 +583,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id053
       - str
     - description: 'The name of the disk within the given subscription
 
@@ -583,7 +591,7 @@ items:
 
         '
       id: disk_name
-      type:
+      type: &id054
       - str
     - description: 'Disk object supplied in the body of the Patch disk
 
@@ -591,14 +599,14 @@ items:
 
         '
       id: disk
-      type:
+      type: &id055
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.DiskUpdate
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id056
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -607,26 +615,595 @@ items:
 
         '
       id: raw
-      type:
+      type: &id057
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id058
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
         or
 
-        @msrest.pipeline.ClientRawResponse if
+        @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+- children:
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: DisksOperations
+  source:
+    id: DisksOperations
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'DisksOperations operations.
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: DisksOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+- &id010
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id003
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Creates or updates a disk.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, disk_name, disk, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the disk within the given subscription
+
+        and resource group.
+
+        '
+      id: disk_name
+      type: *id005
+    - description: 'Disk object supplied in the body of the Put disk
+
+        operation.
+
+        '
+      id: disk
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id011
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 303
+  summary: 'Deletes a disk.
+
+    '
+  syntax:
+    content: delete(resource_group_name, disk_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the disk within the given subscription
+
+        and resource group.
+
+        '
+      id: disk_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id018
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 237
+  summary: 'Gets information about a disk.
+
+    '
+  syntax:
+    content: get(resource_group_name, disk_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the disk within the given subscription
+
+        and resource group.
+
+        '
+      id: disk_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+- *id024
+- &id033
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id025
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: grant_access
+  source:
+    id: grant_access
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 525
+  summary: 'Grants access to a disk.
+
+    '
+  syntax:
+    content: grant_access(resource_group_name, disk_name, access, duration_in_seconds,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id026
+    - description: 'The name of the disk within the given subscription
+
+        and resource group.
+
+        '
+      id: disk_name
+      type: *id027
+    - description: 'Possible values include: ''None'', ''Read''
+
+        '
+      id: access
+      type: *id028
+    - description: 'Time duration in seconds until the SAS
+
+        access expires.
+
+        '
+      id: duration_in_seconds
+      type: *id029
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id030
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id031
+    return: *id032
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+- *id033
+- &id038
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id034
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 460
+  summary: 'Lists all the disks under a subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id035
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id036
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id037
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+- *id038
+- &id044
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id039
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 392
+  summary: 'Lists all the disks under a resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id040
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id041
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id042
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id043
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+- *id044
+- &id051
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id045
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: revoke_access
+  source:
+    id: revoke_access
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 626
+  summary: 'Revokes access to a disk.
+
+    '
+  syntax:
+    content: revoke_access(resource_group_name, disk_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id046
+    - description: 'The name of the disk within the given subscription
+
+        and resource group.
+
+        '
+      id: disk_name
+      type: *id047
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id048
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id049
+    return: *id050
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+- *id051
+- &id059
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  exceptions: *id052
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\disks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 138
+  summary: 'Updates (patches) a disk.
+
+    '
+  syntax:
+    content: update(resource_group_name, disk_name, disk, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id053
+    - description: 'The name of the disk within the given subscription
+
+        and resource group.
+
+        '
+      id: disk_name
+      type: *id054
+    - description: 'Disk object supplied in the body of the Patch disk
+
+        operation.
+
+        '
+      id: disk
+      type: *id055
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id056
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id057
+    return: *id058
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+- *id059
 references:
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+  isExternal: false
+  name: grant_access
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+  isExternal: false
+  name: revoke_access
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.delete
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+  isExternal: false
+  name: grant_access
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.grant_access
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.list_by_resource_group
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+  isExternal: false
+  name: revoke_access
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.revoke_access
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.update
 - fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.DisksOperations.create_or_update
   isExternal: false
   name: create_or_update

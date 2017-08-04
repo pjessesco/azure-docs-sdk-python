@@ -30,14 +30,14 @@ items:
     '
   syntax:
     content: IssuerAttributes(enabled=None)
-    parameters:
+    parameters: &id001
     - description: 'Determines whether the issuer is enabled.
 
         '
       id: enabled
       type:
       - bool
-    variables:
+    variables: &id002
     - description: 'Creation time in UTC.
 
         '
@@ -50,6 +50,39 @@ items:
       id: updated
       type:
       - datetime
+  type: class
+  uid: azure.keyvault.generated.models.IssuerAttributes
+- children: []
+  class: azure.keyvault.generated.models.IssuerAttributes
+  fullName: azure.keyvault.generated.models.IssuerAttributes
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.generated.models
+  name: IssuerAttributes
+  source:
+    id: IssuerAttributes
+    path: azure-keyvault\azure\keyvault\models\issuer_attributes.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\issuer_attributes.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The attributes of an issuer managed by the Key Vault service.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: IssuerAttributes(enabled=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.keyvault.generated.models.IssuerAttributes
 references: []

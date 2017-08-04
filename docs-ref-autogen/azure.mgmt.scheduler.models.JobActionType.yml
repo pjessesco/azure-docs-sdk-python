@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.scheduler.models.JobActionType
-- fullName: azure.mgmt.scheduler.models.JobActionType.http
+- children:
+  - azure.mgmt.scheduler.models.JobActionType.http
+  - azure.mgmt.scheduler.models.JobActionType.https
+  - azure.mgmt.scheduler.models.JobActionType.service_bus_queue
+  - azure.mgmt.scheduler.models.JobActionType.service_bus_topic
+  - azure.mgmt.scheduler.models.JobActionType.storage_queue
+  class: azure.mgmt.scheduler.models.JobActionType
+  fullName: azure.mgmt.scheduler.models.JobActionType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.scheduler.models
+  name: JobActionType
+  source:
+    id: JobActionType
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\scheduler_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\scheduler_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 40
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.scheduler.models.JobActionType
+- &id001
+  fullName: azure.mgmt.scheduler.models.JobActionType.http
   id: http
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.scheduler.models.JobActionType
   type: attribute
   uid: azure.mgmt.scheduler.models.JobActionType.http
-- fullName: azure.mgmt.scheduler.models.JobActionType.https
+- &id002
+  fullName: azure.mgmt.scheduler.models.JobActionType.https
   id: https
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.scheduler.models.JobActionType
   type: attribute
   uid: azure.mgmt.scheduler.models.JobActionType.https
-- fullName: azure.mgmt.scheduler.models.JobActionType.service_bus_queue
+- &id003
+  fullName: azure.mgmt.scheduler.models.JobActionType.service_bus_queue
   id: service_bus_queue
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.scheduler.models.JobActionType
   type: attribute
   uid: azure.mgmt.scheduler.models.JobActionType.service_bus_queue
-- fullName: azure.mgmt.scheduler.models.JobActionType.service_bus_topic
+- &id004
+  fullName: azure.mgmt.scheduler.models.JobActionType.service_bus_topic
   id: service_bus_topic
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.scheduler.models.JobActionType
   type: attribute
   uid: azure.mgmt.scheduler.models.JobActionType.service_bus_topic
-- fullName: azure.mgmt.scheduler.models.JobActionType.storage_queue
+- &id005
+  fullName: azure.mgmt.scheduler.models.JobActionType.storage_queue
   id: storage_queue
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.scheduler.models.JobActionType
   type: attribute
   uid: azure.mgmt.scheduler.models.JobActionType.storage_queue
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

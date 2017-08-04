@@ -48,7 +48,55 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.ConnectionStringType
-- fullName: azure.mgmt.web.models.ConnectionStringType.api_hub
+- children:
+  - azure.mgmt.web.models.ConnectionStringType.api_hub
+  - azure.mgmt.web.models.ConnectionStringType.custom
+  - azure.mgmt.web.models.ConnectionStringType.doc_db
+  - azure.mgmt.web.models.ConnectionStringType.event_hub
+  - azure.mgmt.web.models.ConnectionStringType.my_sql
+  - azure.mgmt.web.models.ConnectionStringType.notification_hub
+  - azure.mgmt.web.models.ConnectionStringType.postgre_sql
+  - azure.mgmt.web.models.ConnectionStringType.redis_cache
+  - azure.mgmt.web.models.ConnectionStringType.service_bus
+  - azure.mgmt.web.models.ConnectionStringType.sql_azure
+  - azure.mgmt.web.models.ConnectionStringType.sql_server
+  class: azure.mgmt.web.models.ConnectionStringType
+  fullName: azure.mgmt.web.models.ConnectionStringType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: ConnectionStringType
+  source:
+    id: ConnectionStringType
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 126
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.ConnectionStringType
+- &id001
+  fullName: azure.mgmt.web.models.ConnectionStringType.api_hub
   id: api_hub
   langs:
   - python
@@ -62,7 +110,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.api_hub
-- fullName: azure.mgmt.web.models.ConnectionStringType.custom
+- &id002
+  fullName: azure.mgmt.web.models.ConnectionStringType.custom
   id: custom
   langs:
   - python
@@ -76,7 +125,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.custom
-- fullName: azure.mgmt.web.models.ConnectionStringType.doc_db
+- &id003
+  fullName: azure.mgmt.web.models.ConnectionStringType.doc_db
   id: doc_db
   langs:
   - python
@@ -90,7 +140,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.doc_db
-- fullName: azure.mgmt.web.models.ConnectionStringType.event_hub
+- &id004
+  fullName: azure.mgmt.web.models.ConnectionStringType.event_hub
   id: event_hub
   langs:
   - python
@@ -104,7 +155,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.event_hub
-- fullName: azure.mgmt.web.models.ConnectionStringType.my_sql
+- &id005
+  fullName: azure.mgmt.web.models.ConnectionStringType.my_sql
   id: my_sql
   langs:
   - python
@@ -118,7 +170,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.my_sql
-- fullName: azure.mgmt.web.models.ConnectionStringType.notification_hub
+- &id006
+  fullName: azure.mgmt.web.models.ConnectionStringType.notification_hub
   id: notification_hub
   langs:
   - python
@@ -132,7 +185,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.notification_hub
-- fullName: azure.mgmt.web.models.ConnectionStringType.postgre_sql
+- &id007
+  fullName: azure.mgmt.web.models.ConnectionStringType.postgre_sql
   id: postgre_sql
   langs:
   - python
@@ -146,7 +200,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.postgre_sql
-- fullName: azure.mgmt.web.models.ConnectionStringType.redis_cache
+- &id008
+  fullName: azure.mgmt.web.models.ConnectionStringType.redis_cache
   id: redis_cache
   langs:
   - python
@@ -160,7 +215,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.redis_cache
-- fullName: azure.mgmt.web.models.ConnectionStringType.service_bus
+- &id009
+  fullName: azure.mgmt.web.models.ConnectionStringType.service_bus
   id: service_bus
   langs:
   - python
@@ -174,7 +230,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.service_bus
-- fullName: azure.mgmt.web.models.ConnectionStringType.sql_azure
+- &id010
+  fullName: azure.mgmt.web.models.ConnectionStringType.sql_azure
   id: sql_azure
   langs:
   - python
@@ -188,7 +245,8 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.sql_azure
-- fullName: azure.mgmt.web.models.ConnectionStringType.sql_server
+- &id011
+  fullName: azure.mgmt.web.models.ConnectionStringType.sql_server
   id: sql_server
   langs:
   - python
@@ -202,4 +260,15 @@ items:
       - azure.mgmt.web.models.ConnectionStringType
   type: attribute
   uid: azure.mgmt.web.models.ConnectionStringType.sql_server
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
 references: []

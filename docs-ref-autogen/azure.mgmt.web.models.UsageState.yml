@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.UsageState
-- fullName: azure.mgmt.web.models.UsageState.exceeded
+- children:
+  - azure.mgmt.web.models.UsageState.exceeded
+  - azure.mgmt.web.models.UsageState.normal
+  class: azure.mgmt.web.models.UsageState
+  fullName: azure.mgmt.web.models.UsageState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: UsageState
+  source:
+    id: UsageState
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 163
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.UsageState
+- &id001
+  fullName: azure.mgmt.web.models.UsageState.exceeded
   id: exceeded
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.web.models.UsageState
   type: attribute
   uid: azure.mgmt.web.models.UsageState.exceeded
-- fullName: azure.mgmt.web.models.UsageState.normal
+- &id002
+  fullName: azure.mgmt.web.models.UsageState.normal
   id: normal
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.web.models.UsageState
   type: attribute
   uid: azure.mgmt.web.models.UsageState.normal
+- *id001
+- *id002
 references: []

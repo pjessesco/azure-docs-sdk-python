@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.datalake.store.models.EncryptionConfigType
-- fullName: azure.mgmt.datalake.store.models.EncryptionConfigType.service_managed
+- children:
+  - azure.mgmt.datalake.store.models.EncryptionConfigType.service_managed
+  - azure.mgmt.datalake.store.models.EncryptionConfigType.user_managed
+  class: azure.mgmt.datalake.store.models.EncryptionConfigType
+  fullName: azure.mgmt.datalake.store.models.EncryptionConfigType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.datalake.store.models
+  name: EncryptionConfigType
+  source:
+    id: EncryptionConfigType
+    path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\models\data_lake_store_account_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake-store\azure\mgmt\datalake\store\models\data_lake_store_account_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.datalake.store.models.EncryptionConfigType
+- &id001
+  fullName: azure.mgmt.datalake.store.models.EncryptionConfigType.service_managed
   id: service_managed
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.datalake.store.models.EncryptionConfigType
   type: attribute
   uid: azure.mgmt.datalake.store.models.EncryptionConfigType.service_managed
-- fullName: azure.mgmt.datalake.store.models.EncryptionConfigType.user_managed
+- &id002
+  fullName: azure.mgmt.datalake.store.models.EncryptionConfigType.user_managed
   id: user_managed
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.datalake.store.models.EncryptionConfigType
   type: attribute
   uid: azure.mgmt.datalake.store.models.EncryptionConfigType.user_managed
+- *id001
+- *id002
 references: []

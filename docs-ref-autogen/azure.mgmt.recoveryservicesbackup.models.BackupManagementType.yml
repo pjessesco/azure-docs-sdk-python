@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType
-- fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_backup_server
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_backup_server
+  - azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_iaas_vm
+  - azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_sql
+  - azure.mgmt.recoveryservicesbackup.models.BackupManagementType.dpm
+  - azure.mgmt.recoveryservicesbackup.models.BackupManagementType.invalid
+  - azure.mgmt.recoveryservicesbackup.models.BackupManagementType.mab
+  class: azure.mgmt.recoveryservicesbackup.models.BackupManagementType
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: BackupManagementType
+  source:
+    id: BackupManagementType
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 50
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_backup_server
   id: azure_backup_server
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.BackupManagementType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_backup_server
-- fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_iaas_vm
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_iaas_vm
   id: azure_iaas_vm
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.BackupManagementType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_iaas_vm
-- fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_sql
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_sql
   id: azure_sql
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.BackupManagementType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.azure_sql
-- fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.dpm
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.dpm
   id: dpm
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.BackupManagementType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.dpm
-- fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.invalid
+- &id005
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.invalid
   id: invalid
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.BackupManagementType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.mab
+- &id006
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.mab
   id: mab
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.BackupManagementType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.BackupManagementType.mab
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

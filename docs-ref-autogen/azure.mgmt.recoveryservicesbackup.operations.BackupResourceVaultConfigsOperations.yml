@@ -4,6 +4,8 @@ items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
   - azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+  - azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+  - azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
   class: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
   inheritance:
@@ -27,7 +29,7 @@ items:
     '
   syntax:
     content: BackupResourceVaultConfigsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -44,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -52,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
   langs:
@@ -78,7 +80,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the resource group where the
 
@@ -86,14 +88,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -102,7 +104,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -110,16 +112,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfigResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
 - class: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
-  exceptions:
+  exceptions: &id010
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
   langs:
@@ -145,7 +147,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id011
       - str
     - description: 'The name of the resource group where the
 
@@ -153,20 +155,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'resource config request
 
         '
       id: parameters
-      type:
+      type: &id013
       - azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfigResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -175,7 +177,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
     - description: '*Operation configuration
 
@@ -183,15 +185,188 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id016
       type:
       - azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfigResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+- children:
+  - azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+  - azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+  class: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: BackupResourceVaultConfigsOperations
+  source:
+    id: BackupResourceVaultConfigsOperations
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_resource_vault_configs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_resource_vault_configs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'BackupResourceVaultConfigsOperations operations.
+
+
+
+    '
+  syntax:
+    content: BackupResourceVaultConfigsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+- &id009
+  class: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_resource_vault_configs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_resource_vault_configs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Fetches resource vault config.
+
+    '
+  syntax:
+    content: get(vault_name, resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id004
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+- *id009
+- &id017
+  class: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  exceptions: *id010
+  fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_resource_vault_configs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\backup_resource_vault_configs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 101
+  summary: 'Updates vault security config.
+
+    '
+  syntax:
+    content: update(vault_name, resource_group_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id011
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'resource config request
+
+        '
+      id: parameters
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id016
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+- *id017
 references:
+- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
+- fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.update
 - fullName: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.get
   isExternal: false
   name: get

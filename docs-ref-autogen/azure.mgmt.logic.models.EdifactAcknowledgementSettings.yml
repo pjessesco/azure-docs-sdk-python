@@ -29,7 +29,7 @@ items:
       send_synchronous_acknowledgement, acknowledgement_control_number_lower_bound,
       acknowledgement_control_number_upper_bound, rollover_acknowledgement_control_number,
       acknowledgement_control_number_prefix=None, acknowledgement_control_number_suffix=None)
-    parameters:
+    parameters: &id001
     - description: 'The value indicating whether
 
         technical acknowledgement is needed.
@@ -118,6 +118,37 @@ items:
       id: rollover_acknowledgement_control_number
       type:
       - bool
+  type: class
+  uid: azure.mgmt.logic.models.EdifactAcknowledgementSettings
+- children: []
+  class: azure.mgmt.logic.models.EdifactAcknowledgementSettings
+  fullName: azure.mgmt.logic.models.EdifactAcknowledgementSettings
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: EdifactAcknowledgementSettings
+  source:
+    id: EdifactAcknowledgementSettings
+    path: azure-mgmt-logic\azure\mgmt\logic\models\edifact_acknowledgement_settings.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\edifact_acknowledgement_settings.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The Edifact agreement acknowledgement settings.
+
+    '
+  syntax:
+    content: EdifactAcknowledgementSettings(need_technical_acknowledgement, batch_technical_acknowledgements,
+      need_functional_acknowledgement, batch_functional_acknowledgements, need_loop_for_valid_messages,
+      send_synchronous_acknowledgement, acknowledgement_control_number_lower_bound,
+      acknowledgement_control_number_upper_bound, rollover_acknowledgement_control_number,
+      acknowledgement_control_number_prefix=None, acknowledgement_control_number_suffix=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.EdifactAcknowledgementSettings
 references: []

@@ -3,6 +3,7 @@ api_name: []
 items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+  - azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
   class: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
   inheritance:
@@ -25,7 +26,7 @@ items:
     '
   syntax:
     content: RestoresOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -42,7 +43,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -50,7 +51,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
   langs:
@@ -81,7 +82,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the resource group where the
 
@@ -89,13 +90,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id005
       - str
     - description: 'Fabric name associated with the backed up items.
 
         '
       id: fabric_name
-      type:
+      type: &id006
       - str
     - description: 'Container name associated with the backed up
 
@@ -103,13 +104,13 @@ items:
 
         '
       id: container_name
-      type:
+      type: &id007
       - str
     - description: 'Backed up item to be restored.
 
         '
       id: protected_item_name
-      type:
+      type: &id008
       - str
     - description: 'Recovery point ID which represents the
 
@@ -117,20 +118,20 @@ items:
 
         '
       id: recovery_point_id
-      type:
+      type: &id009
       - str
     - description: 'resource restore request
 
         '
       id: parameters
-      type:
+      type: &id010
       - azure.mgmt.recoveryservicesbackup.models.RestoreRequestResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id011
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -139,7 +140,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id012
       - bool
     - description: '*Operation configuration
 
@@ -147,15 +148,146 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id013
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+- children:
+  - azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+  class: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
+  fullName: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: RestoresOperations
+  source:
+    id: RestoresOperations
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\restores_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\restores_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'RestoresOperations operations.
+
+
+    '
+  syntax:
+    content: RestoresOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
+- &id014
+  class: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
+  exceptions: *id003
+  fullName: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: trigger
+  source:
+    id: trigger
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\restores_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\restores_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Restores the specified backed up data. This is an asynchronous
+
+    operation. To know the status of this API call, use
+
+    GetProtectedItemOperationResult API.
+
+    '
+  syntax:
+    content: trigger(vault_name, resource_group_name, fabric_name, container_name,
+      protected_item_name, recovery_point_id, parameters, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id004
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id005
+    - description: 'Fabric name associated with the backed up items.
+
+        '
+      id: fabric_name
+      type: *id006
+    - description: 'Container name associated with the backed up
+
+        items.
+
+        '
+      id: container_name
+      type: *id007
+    - description: 'Backed up item to be restored.
+
+        '
+      id: protected_item_name
+      type: *id008
+    - description: 'Recovery point ID which represents the
+
+        backed up data to be restored.
+
+        '
+      id: recovery_point_id
+      type: *id009
+    - description: 'resource restore request
+
+        '
+      id: parameters
+      type: *id010
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id011
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id012
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id013
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+- *id014
 references:
+- fullName: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+  isExternal: false
+  name: trigger
+  parent: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+- fullName: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
+  isExternal: false
+  name: trigger
+  parent: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
 - fullName: azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.trigger
   isExternal: false
   name: trigger

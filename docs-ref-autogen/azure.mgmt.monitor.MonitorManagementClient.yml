@@ -23,13 +23,13 @@ items:
     '
   syntax:
     content: MonitorManagementClient(credentials, subscription_id, base_url=None)
-    parameters:
+    parameters: &id001
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - msrestazure.azure_active_directory
+      - ../msrestazure.azure_active_directory
     - description: 'The Azure subscription Id.
 
         '
@@ -42,7 +42,7 @@ items:
       id: base_url
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Configuration for client.
 
         '
@@ -91,6 +91,32 @@ items:
       id: action_groups
       type:
       - azure.mgmt.monitor.operations.ActionGroupsOperations
+  type: class
+  uid: azure.mgmt.monitor.MonitorManagementClient
+- children: []
+  class: azure.mgmt.monitor.MonitorManagementClient
+  fullName: azure.mgmt.monitor.MonitorManagementClient
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.monitor
+  name: MonitorManagementClient
+  source:
+    id: MonitorManagementClient
+    path: azure-mgmt-monitor\azure\mgmt\monitor\monitor_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\monitor_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 60
+  summary: 'Composite Swagger for Monitor Management Client
+
+    '
+  syntax:
+    content: MonitorManagementClient(credentials, subscription_id, base_url=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.monitor.MonitorManagementClient
 references: []

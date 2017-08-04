@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: Port(transport_protocol=None, backend_port=None)
-    parameters:
+    parameters: &id001
     - description: 'Protocol type of the port. Possible values
 
         include: ''Tcp'', ''Udp''
@@ -42,6 +42,33 @@ items:
       id: backend_port
       type:
       - int
+  type: class
+  uid: azure.mgmt.devtestlabs.models.Port
+- children: []
+  class: azure.mgmt.devtestlabs.models.Port
+  fullName: azure.mgmt.devtestlabs.models.Port
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: Port
+  source:
+    id: Port
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\port.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\port.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Properties of a network port.
+
+    '
+  syntax:
+    content: Port(transport_protocol=None, backend_port=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.devtestlabs.models.Port
 references: []

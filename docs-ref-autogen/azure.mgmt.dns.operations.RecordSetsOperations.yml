@@ -8,6 +8,12 @@ items:
   - azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
   - azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
   - azure.mgmt.dns.operations.RecordSetsOperations.update
+  - azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+  - azure.mgmt.dns.operations.RecordSetsOperations.delete
+  - azure.mgmt.dns.operations.RecordSetsOperations.get
+  - azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+  - azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+  - azure.mgmt.dns.operations.RecordSetsOperations.update
   class: azure.mgmt.dns.operations.RecordSetsOperations
   fullName: azure.mgmt.dns.operations.RecordSetsOperations
   inheritance:
@@ -35,7 +41,7 @@ items:
     '
   syntax:
     content: RecordSetsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -52,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Specifies the API version. Constant value: "2016-04-01".
 
         '
@@ -60,7 +66,7 @@ items:
   type: class
   uid: azure.mgmt.dns.operations.RecordSetsOperations
 - class: azure.mgmt.dns.operations.RecordSetsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
   langs:
@@ -87,7 +93,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -95,7 +101,7 @@ items:
 
         '
       id: zone_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the record set, relative
 
@@ -103,7 +109,7 @@ items:
 
         '
       id: relative_record_set_name
-      type:
+      type: &id006
       - str
     - description: 'The type of DNS record in this record set. Record
 
@@ -115,7 +121,7 @@ items:
 
         '
       id: record_type
-      type:
+      type: &id007
       - 'str or @azure.mgmt.dns.models.RecordType
 
         '
@@ -125,7 +131,7 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id008
       - azure.mgmt.dns.models.RecordSet
     - defaultValue: None
       description: 'The etag of the record set. Omit this value to always
@@ -136,7 +142,7 @@ items:
 
         '
       id: if_match
-      type:
+      type: &id009
       - str
     - defaultValue: None
       description: 'Set to ''*'' to allow a new record set to be
@@ -147,14 +153,14 @@ items:
 
         '
       id: if_none_match
-      type:
+      type: &id010
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id011
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -163,7 +169,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id012
       - bool
     - description: '*Operation configuration
 
@@ -171,16 +177,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id013
       type:
       - azure.mgmt.dns.models.RecordSet
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
 - class: azure.mgmt.dns.operations.RecordSetsOperations
-  exceptions:
+  exceptions: &id015
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.RecordSetsOperations.delete
   langs:
@@ -206,7 +212,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id016
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -214,7 +220,7 @@ items:
 
         '
       id: zone_name
-      type:
+      type: &id017
       - str
     - description: 'The name of the record set, relative
 
@@ -222,7 +228,7 @@ items:
 
         '
       id: relative_record_set_name
-      type:
+      type: &id018
       - str
     - description: 'The type of DNS record in this record set. Record
 
@@ -234,7 +240,7 @@ items:
 
         '
       id: record_type
-      type:
+      type: &id019
       - 'str or @azure.mgmt.dns.models.RecordType
 
         '
@@ -247,14 +253,14 @@ items:
 
         '
       id: if_match
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -263,7 +269,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -271,16 +277,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.dns.operations.RecordSetsOperations.delete
 - class: azure.mgmt.dns.operations.RecordSetsOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.RecordSetsOperations.get
   langs:
@@ -306,7 +312,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id026
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -314,7 +320,7 @@ items:
 
         '
       id: zone_name
-      type:
+      type: &id027
       - str
     - description: 'The name of the record set, relative
 
@@ -322,7 +328,7 @@ items:
 
         '
       id: relative_record_set_name
-      type:
+      type: &id028
       - str
     - description: 'The type of DNS record in this record set.
 
@@ -332,7 +338,7 @@ items:
 
         '
       id: record_type
-      type:
+      type: &id029
       - 'str or @azure.mgmt.dns.models.RecordType
 
         '
@@ -341,7 +347,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id030
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -350,7 +356,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id031
       - bool
     - description: '*Operation configuration
 
@@ -358,16 +364,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id032
       type:
       - azure.mgmt.dns.models.RecordSet
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.dns.operations.RecordSetsOperations.get
 - class: azure.mgmt.dns.operations.RecordSetsOperations
-  exceptions:
+  exceptions: &id034
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
   langs:
@@ -393,7 +399,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id035
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -401,7 +407,7 @@ items:
 
         '
       id: zone_name
-      type:
+      type: &id036
       - str
     - defaultValue: None
       description: 'The maximum number of record sets to return. If not
@@ -410,14 +416,14 @@ items:
 
         '
       id: top
-      type:
+      type: &id037
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id038
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -426,7 +432,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id039
       - bool
     - description: '*Operation configuration
 
@@ -434,13 +440,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id040
       type:
       - azure.mgmt.dns.models.RecordSetPaged
   type: method
   uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
 - class: azure.mgmt.dns.operations.RecordSetsOperations
-  exceptions:
+  exceptions: &id042
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
   langs:
@@ -466,7 +472,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id043
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -474,7 +480,7 @@ items:
 
         '
       id: zone_name
-      type:
+      type: &id044
       - str
     - description: 'The type of record sets to enumerate. Possible
 
@@ -485,7 +491,7 @@ items:
 
         '
       id: record_type
-      type:
+      type: &id045
       - 'str or @azure.mgmt.dns.models.RecordType
 
         '
@@ -496,14 +502,14 @@ items:
 
         '
       id: top
-      type:
+      type: &id046
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id047
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -512,7 +518,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id048
       - bool
     - description: '*Operation configuration
 
@@ -520,13 +526,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id049
       type:
       - azure.mgmt.dns.models.RecordSetPaged
   type: method
   uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
 - class: azure.mgmt.dns.operations.RecordSetsOperations
-  exceptions:
+  exceptions: &id051
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.dns.operations.RecordSetsOperations.update
   langs:
@@ -552,7 +558,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id052
       - str
     - description: 'The name of the DNS zone (without a terminating
 
@@ -560,7 +566,7 @@ items:
 
         '
       id: zone_name
-      type:
+      type: &id053
       - str
     - description: 'The name of the record set, relative
 
@@ -568,7 +574,7 @@ items:
 
         '
       id: relative_record_set_name
-      type:
+      type: &id054
       - str
     - description: 'The type of DNS record in this record set.
 
@@ -578,7 +584,7 @@ items:
 
         '
       id: record_type
-      type:
+      type: &id055
       - 'str or @azure.mgmt.dns.models.RecordType
 
         '
@@ -586,7 +592,7 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id056
       - azure.mgmt.dns.models.RecordSet
     - defaultValue: None
       description: 'The etag of the record set. Omit this value to always
@@ -597,14 +603,14 @@ items:
 
         '
       id: if_match
-      type:
+      type: &id057
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id058
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -613,7 +619,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id059
       - bool
     - description: '*Operation configuration
 
@@ -621,15 +627,614 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id060
       type:
       - azure.mgmt.dns.models.RecordSet
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.dns.operations.RecordSetsOperations.update
+- children:
+  - azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+  - azure.mgmt.dns.operations.RecordSetsOperations.delete
+  - azure.mgmt.dns.operations.RecordSetsOperations.get
+  - azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+  - azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+  - azure.mgmt.dns.operations.RecordSetsOperations.update
+  class: azure.mgmt.dns.operations.RecordSetsOperations
+  fullName: azure.mgmt.dns.operations.RecordSetsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.dns.operations
+  name: RecordSetsOperations
+  source:
+    id: RecordSetsOperations
+    path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'RecordSetsOperations operations.
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: RecordSetsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.dns.operations.RecordSetsOperations
+- &id014
+  class: azure.mgmt.dns.operations.RecordSetsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.dns.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 122
+  summary: 'Creates or updates a record set within a DNS zone.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, zone_name, relative_record_set_name,
+      record_type, parameters, if_match=None, if_none_match=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the DNS zone (without a terminating
+
+        dot).
+
+        '
+      id: zone_name
+      type: *id005
+    - description: 'The name of the record set, relative
+
+        to the name of the zone.
+
+        '
+      id: relative_record_set_name
+      type: *id006
+    - description: 'The type of DNS record in this record set. Record
+
+        sets of type SOA can be updated but not created (they are created when
+
+        the DNS zone is created). Possible values include: ''A'', ''AAAA'',
+
+        ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''
+
+        '
+      id: record_type
+      type: *id007
+    - description: 'Parameters supplied to the CreateOrUpdate
+
+        operation.
+
+        '
+      id: parameters
+      type: *id008
+    - defaultValue: None
+      description: 'The etag of the record set. Omit this value to always
+
+        overwrite the current record set. Specify the last-seen etag value to
+
+        prevent accidentally overwritting any concurrent changes.
+
+        '
+      id: if_match
+      type: *id009
+    - defaultValue: None
+      description: 'Set to ''*'' to allow a new record set to be
+
+        created, but to prevent updating an existing record set. Other values
+
+        will be ignored.
+
+        '
+      id: if_none_match
+      type: *id010
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id011
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id012
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id013
+  type: method
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+- *id014
+- &id024
+  class: azure.mgmt.dns.operations.RecordSetsOperations
+  exceptions: *id015
+  fullName: azure.mgmt.dns.operations.RecordSetsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.dns.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 216
+  summary: 'Deletes a record set from a DNS zone. This operation cannot be undone.
+
+    '
+  syntax:
+    content: delete(resource_group_name, zone_name, relative_record_set_name, record_type,
+      if_match=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id016
+    - description: 'The name of the DNS zone (without a terminating
+
+        dot).
+
+        '
+      id: zone_name
+      type: *id017
+    - description: 'The name of the record set, relative
+
+        to the name of the zone.
+
+        '
+      id: relative_record_set_name
+      type: *id018
+    - description: 'The type of DNS record in this record set. Record
+
+        sets of type SOA cannot be deleted (they are deleted when the DNS zone
+
+        is deleted). Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'',
+
+        ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''
+
+        '
+      id: record_type
+      type: *id019
+    - defaultValue: None
+      description: 'The etag of the record set. Omit this value to always
+
+        delete the current record set. Specify the last-seen etag value to
+
+        prevent accidentally deleting any concurrent changes.
+
+        '
+      id: if_match
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.delete
+- *id024
+- &id033
+  class: azure.mgmt.dns.operations.RecordSetsOperations
+  exceptions: *id025
+  fullName: azure.mgmt.dns.operations.RecordSetsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.dns.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 288
+  summary: 'Gets a record set.
+
+    '
+  syntax:
+    content: get(resource_group_name, zone_name, relative_record_set_name, record_type,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id026
+    - description: 'The name of the DNS zone (without a terminating
+
+        dot).
+
+        '
+      id: zone_name
+      type: *id027
+    - description: 'The name of the record set, relative
+
+        to the name of the zone.
+
+        '
+      id: relative_record_set_name
+      type: *id028
+    - description: 'The type of DNS record in this record set.
+
+        Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'',
+
+        ''SOA'', ''SRV'', ''TXT''
+
+        '
+      id: record_type
+      type: *id029
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id030
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id031
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id032
+  type: method
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.get
+- *id033
+- &id041
+  class: azure.mgmt.dns.operations.RecordSetsOperations
+  exceptions: *id034
+  fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+  langs:
+  - python
+  module: azure.mgmt.dns.operations
+  name: list_by_dns_zone
+  source:
+    id: list_by_dns_zone
+    path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 440
+  summary: 'Lists all record sets in a DNS zone.
+
+    '
+  syntax:
+    content: list_by_dns_zone(resource_group_name, zone_name, top=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id035
+    - description: 'The name of the DNS zone (without a terminating
+
+        dot).
+
+        '
+      id: zone_name
+      type: *id036
+    - defaultValue: None
+      description: 'The maximum number of record sets to return. If not
+
+        specified, returns up to 100 record sets.
+
+        '
+      id: top
+      type: *id037
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id038
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id039
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id040
+  type: method
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+- *id041
+- &id050
+  class: azure.mgmt.dns.operations.RecordSetsOperations
+  exceptions: *id042
+  fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+  langs:
+  - python
+  module: azure.mgmt.dns.operations
+  name: list_by_type
+  source:
+    id: list_by_type
+    path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 360
+  summary: 'Lists the record sets of a specified type in a DNS zone.
+
+    '
+  syntax:
+    content: list_by_type(resource_group_name, zone_name, record_type, top=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id043
+    - description: 'The name of the DNS zone (without a terminating
+
+        dot).
+
+        '
+      id: zone_name
+      type: *id044
+    - description: 'The type of record sets to enumerate. Possible
+
+        values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'',
+        ''SRV'',
+
+        ''TXT''
+
+        '
+      id: record_type
+      type: *id045
+    - defaultValue: None
+      description: 'The maximum number of record sets to return. If not
+
+        specified, returns up to 100 record sets.
+
+        '
+      id: top
+      type: *id046
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id047
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id048
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id049
+  type: method
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+- *id050
+- &id061
+  class: azure.mgmt.dns.operations.RecordSetsOperations
+  exceptions: *id051
+  fullName: azure.mgmt.dns.operations.RecordSetsOperations.update
+  langs:
+  - python
+  module: azure.mgmt.dns.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-dns\azure\mgmt\dns\operations\record_sets_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Updates a record set within a DNS zone.
+
+    '
+  syntax:
+    content: update(resource_group_name, zone_name, relative_record_set_name, record_type,
+      parameters, if_match=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id052
+    - description: 'The name of the DNS zone (without a terminating
+
+        dot).
+
+        '
+      id: zone_name
+      type: *id053
+    - description: 'The name of the record set, relative
+
+        to the name of the zone.
+
+        '
+      id: relative_record_set_name
+      type: *id054
+    - description: 'The type of DNS record in this record set.
+
+        Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'',
+
+        ''SOA'', ''SRV'', ''TXT''
+
+        '
+      id: record_type
+      type: *id055
+    - description: 'Parameters supplied to the Update operation.
+
+        '
+      id: parameters
+      type: *id056
+    - defaultValue: None
+      description: 'The etag of the record set. Omit this value to always
+
+        overwrite the current record set. Specify the last-seen etag value to
+
+        prevent accidentally overwritting concurrent changes.
+
+        '
+      id: if_match
+      type: *id057
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id058
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id059
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id060
+  type: method
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.update
+- *id061
 references:
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.delete
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.get
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+  isExternal: false
+  name: list_by_dns_zone
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+  isExternal: false
+  name: list_by_type
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.update
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.delete
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.get
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+  isExternal: false
+  name: list_by_dns_zone
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_dns_zone
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+  isExternal: false
+  name: list_by_type
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.list_by_type
+- fullName: azure.mgmt.dns.operations.RecordSetsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.dns.operations.RecordSetsOperations
+  uid: azure.mgmt.dns.operations.RecordSetsOperations.update
 - fullName: azure.mgmt.dns.operations.RecordSetsOperations.create_or_update
   isExternal: false
   name: create_or_update

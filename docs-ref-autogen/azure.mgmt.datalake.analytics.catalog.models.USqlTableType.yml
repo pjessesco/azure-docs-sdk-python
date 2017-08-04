@@ -37,7 +37,7 @@ items:
       schema_name=None, name=None, type_family=None, c_sharp_name=None, full_csharp_name=None,
       system_type_id=None, user_type_id=None, schema_id=None, principal_id=None, is_nullable=None,
       is_user_defined=None, is_assembly_type=None, is_table_type=None, is_complex_type=None)
-    parameters:
+    parameters: &id001
     - description: 'the name of the Data Lake Analytics account.
 
         '
@@ -150,7 +150,7 @@ items:
       id: is_complex_type
       type:
       - bool
-    variables:
+    variables: &id002
     - description: 'the type field information associated with this table type.
 
         '
@@ -159,6 +159,46 @@ items:
       - 'list of @azure.mgmt.datalake.analytics.catalog.models.TypeFieldInfo
 
         '
+  type: class
+  uid: azure.mgmt.datalake.analytics.catalog.models.USqlTableType
+- children: []
+  class: azure.mgmt.datalake.analytics.catalog.models.USqlTableType
+  fullName: azure.mgmt.datalake.analytics.catalog.models.USqlTableType
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: msrest.serialization.Model
+      type: azure.mgmt.datalake.analytics.catalog.models.catalog_item.CatalogItem
+    type: azure.mgmt.datalake.analytics.catalog.models.usql_type.USqlType
+  langs:
+  - python
+  module: azure.mgmt.datalake.analytics.catalog.models
+  name: USqlTableType
+  source:
+    id: USqlTableType
+    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\catalog\models\usql_table_type.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\catalog\models\usql_table_type.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A Data Lake Analytics catalog U-SQL table type item.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: USqlTableType(compute_account_name=None, version=None, database_name=None,
+      schema_name=None, name=None, type_family=None, c_sharp_name=None, full_csharp_name=None,
+      system_type_id=None, user_type_id=None, schema_id=None, principal_id=None, is_nullable=None,
+      is_user_defined=None, is_assembly_type=None, is_table_type=None, is_complex_type=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.datalake.analytics.catalog.models.USqlTableType
 references: []

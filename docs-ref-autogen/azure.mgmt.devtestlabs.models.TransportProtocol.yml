@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.devtestlabs.models.TransportProtocol
-- fullName: azure.mgmt.devtestlabs.models.TransportProtocol.tcp
+- children:
+  - azure.mgmt.devtestlabs.models.TransportProtocol.tcp
+  - azure.mgmt.devtestlabs.models.TransportProtocol.udp
+  class: azure.mgmt.devtestlabs.models.TransportProtocol
+  fullName: azure.mgmt.devtestlabs.models.TransportProtocol
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: TransportProtocol
+  source:
+    id: TransportProtocol
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 79
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.devtestlabs.models.TransportProtocol
+- &id001
+  fullName: azure.mgmt.devtestlabs.models.TransportProtocol.tcp
   id: tcp
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.devtestlabs.models.TransportProtocol
   type: attribute
   uid: azure.mgmt.devtestlabs.models.TransportProtocol.tcp
-- fullName: azure.mgmt.devtestlabs.models.TransportProtocol.udp
+- &id002
+  fullName: azure.mgmt.devtestlabs.models.TransportProtocol.udp
   id: udp
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.devtestlabs.models.TransportProtocol
   type: attribute
   uid: azure.mgmt.devtestlabs.models.TransportProtocol.udp
+- *id001
+- *id002
 references: []

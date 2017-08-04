@@ -28,7 +28,7 @@ items:
       clone_source_control=None, hosting_environment=None, app_settings_overrides=None,
       configure_load_balancing=None, traffic_manager_profile_id=None, traffic_manager_profile_name=None,
       ignore_quotas=None)
-    parameters:
+    parameters: &id001
     - description: 'Correlation ID of cloning operation. This ID ties
 
         multiple cloning operations
@@ -133,6 +133,36 @@ items:
       id: ignore_quotas
       type:
       - bool
+  type: class
+  uid: azure.mgmt.web.models.CloningInfo
+- children: []
+  class: azure.mgmt.web.models.CloningInfo
+  fullName: azure.mgmt.web.models.CloningInfo
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: CloningInfo
+  source:
+    id: CloningInfo
+    path: azure-mgmt-web\azure\mgmt\web\models\cloning_info.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\cloning_info.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Information needed for cloning operation.
+
+    '
+  syntax:
+    content: CloningInfo(source_web_app_id, correlation_id=None, overwrite=None, clone_custom_host_names=None,
+      clone_source_control=None, hosting_environment=None, app_settings_overrides=None,
+      configure_load_balancing=None, traffic_manager_profile_id=None, traffic_manager_profile_name=None,
+      ignore_quotas=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.web.models.CloningInfo
 references: []

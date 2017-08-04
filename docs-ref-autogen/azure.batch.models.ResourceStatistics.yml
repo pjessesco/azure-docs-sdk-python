@@ -27,7 +27,7 @@ items:
     content: ResourceStatistics(start_time, last_update_time, avg_cpu_percentage,
       avg_memory_gi_b, peak_memory_gi_b, avg_disk_gi_b, peak_disk_gi_b, disk_read_iops,
       disk_write_iops, disk_read_gi_b, disk_write_gi_b, network_read_gi_b, network_write_gi_b)
-    parameters:
+    parameters: &id001
     - description: 'The start time of the time range covered by the
 
         statistics.
@@ -134,6 +134,35 @@ items:
       id: network_write_gi_b
       type:
       - float
+  type: class
+  uid: azure.batch.models.ResourceStatistics
+- children: []
+  class: azure.batch.models.ResourceStatistics
+  fullName: azure.batch.models.ResourceStatistics
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: ResourceStatistics
+  source:
+    id: ResourceStatistics
+    path: azure-batch\azure\batch\models\resource_statistics.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\resource_statistics.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Statistics related to resource consumption by compute nodes in a pool.
+
+    '
+  syntax:
+    content: ResourceStatistics(start_time, last_update_time, avg_cpu_percentage,
+      avg_memory_gi_b, peak_memory_gi_b, avg_disk_gi_b, peak_disk_gi_b, disk_read_iops,
+      disk_write_iops, disk_read_gi_b, disk_write_gi_b, network_read_gi_b, network_write_gi_b)
+    parameters: *id001
   type: class
   uid: azure.batch.models.ResourceStatistics
 references: []

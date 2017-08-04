@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: AccessKeys()
-    variables:
+    variables: &id001
     - description: 'Primary connection string of the created
 
         namespace authorization rule.
@@ -69,6 +69,38 @@ items:
       id: key_name
       type:
       - str
+  type: class
+  uid: azure.mgmt.servicebus.models.AccessKeys
+- children: []
+  class: azure.mgmt.servicebus.models.AccessKeys
+  fullName: azure.mgmt.servicebus.models.AccessKeys
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.servicebus.models
+  name: AccessKeys
+  source:
+    id: AccessKeys
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\access_keys.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\access_keys.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Namespace/ServiceBus Connection String.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: AccessKeys()
+    variables: *id001
   type: class
   uid: azure.mgmt.servicebus.models.AccessKeys
 references: []

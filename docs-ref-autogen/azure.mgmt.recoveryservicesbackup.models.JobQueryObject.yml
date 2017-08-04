@@ -26,7 +26,7 @@ items:
   syntax:
     content: JobQueryObject(status=None, backup_management_type=None, operation=None,
       job_id=None, start_time=None, end_time=None)
-    parameters:
+    parameters: &id001
     - description: 'Status of the job. Possible values include: ''Invalid'',
 
         ''InProgress'', ''Completed'', ''Failed'', ''CompletedWithWarnings'', ''Cancelled'',
@@ -81,6 +81,34 @@ items:
       id: end_time
       type:
       - datetime
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.JobQueryObject
+- children: []
+  class: azure.mgmt.recoveryservicesbackup.models.JobQueryObject
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobQueryObject
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: JobQueryObject
+  source:
+    id: JobQueryObject
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\job_query_object.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\job_query_object.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Filters to list the jobs.
+
+    '
+  syntax:
+    content: JobQueryObject(status=None, backup_management_type=None, operation=None,
+      job_id=None, start_time=None, end_time=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.JobQueryObject
 references: []

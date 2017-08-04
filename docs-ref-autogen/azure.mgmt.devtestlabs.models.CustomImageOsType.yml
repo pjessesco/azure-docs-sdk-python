@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.devtestlabs.models.CustomImageOsType
-- fullName: azure.mgmt.devtestlabs.models.CustomImageOsType.linux
+- children:
+  - azure.mgmt.devtestlabs.models.CustomImageOsType.linux
+  - azure.mgmt.devtestlabs.models.CustomImageOsType.none
+  - azure.mgmt.devtestlabs.models.CustomImageOsType.windows
+  class: azure.mgmt.devtestlabs.models.CustomImageOsType
+  fullName: azure.mgmt.devtestlabs.models.CustomImageOsType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: CustomImageOsType
+  source:
+    id: CustomImageOsType
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 59
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.devtestlabs.models.CustomImageOsType
+- &id001
+  fullName: azure.mgmt.devtestlabs.models.CustomImageOsType.linux
   id: linux
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.devtestlabs.models.CustomImageOsType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.CustomImageOsType.linux
-- fullName: azure.mgmt.devtestlabs.models.CustomImageOsType.none
+- &id002
+  fullName: azure.mgmt.devtestlabs.models.CustomImageOsType.none
   id: none
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.devtestlabs.models.CustomImageOsType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.CustomImageOsType.none
-- fullName: azure.mgmt.devtestlabs.models.CustomImageOsType.windows
+- &id003
+  fullName: azure.mgmt.devtestlabs.models.CustomImageOsType.windows
   id: windows
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.devtestlabs.models.CustomImageOsType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.CustomImageOsType.windows
+- *id001
+- *id002
+- *id003
 references: []

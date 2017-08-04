@@ -34,7 +34,7 @@ items:
     content: LocalNetworkGateway(id=None, location=None, tags=None, local_network_address_space=None,
       gateway_ip_address=None, bgp_settings=None, resource_guid=None, provisioning_state=None,
       etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Identifier.
 
         '
@@ -95,7 +95,7 @@ items:
       id: etag
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource name.
 
         '
@@ -108,6 +108,43 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.network.v2015_06_15.models.LocalNetworkGateway
+- children: []
+  class: azure.mgmt.network.v2015_06_15.models.LocalNetworkGateway
+  fullName: azure.mgmt.network.v2015_06_15.models.LocalNetworkGateway
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.network.v2015_06_15.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.network.v2015_06_15.models
+  name: LocalNetworkGateway
+  source:
+    id: LocalNetworkGateway
+    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\local_network_gateway.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\local_network_gateway.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A common class for general resource information.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: LocalNetworkGateway(id=None, location=None, tags=None, local_network_address_space=None,
+      gateway_ip_address=None, bgp_settings=None, resource_guid=None, provisioning_state=None,
+      etag=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.network.v2015_06_15.models.LocalNetworkGateway
 references: []

@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.cdn.models.QueryStringCachingBehavior
-- fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.bypass_caching
+- children:
+  - azure.mgmt.cdn.models.QueryStringCachingBehavior.bypass_caching
+  - azure.mgmt.cdn.models.QueryStringCachingBehavior.ignore_query_string
+  - azure.mgmt.cdn.models.QueryStringCachingBehavior.not_set
+  - azure.mgmt.cdn.models.QueryStringCachingBehavior.use_query_string
+  class: azure.mgmt.cdn.models.QueryStringCachingBehavior
+  fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.cdn.models
+  name: QueryStringCachingBehavior
+  source:
+    id: QueryStringCachingBehavior
+    path: azure-mgmt-cdn\azure\mgmt\cdn\models\cdn_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\models\cdn_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 42
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.cdn.models.QueryStringCachingBehavior
+- &id001
+  fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.bypass_caching
   id: bypass_caching
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.cdn.models.QueryStringCachingBehavior
   type: attribute
   uid: azure.mgmt.cdn.models.QueryStringCachingBehavior.bypass_caching
-- fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.ignore_query_string
+- &id002
+  fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.ignore_query_string
   id: ignore_query_string
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.cdn.models.QueryStringCachingBehavior
   type: attribute
   uid: azure.mgmt.cdn.models.QueryStringCachingBehavior.ignore_query_string
-- fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.not_set
+- &id003
+  fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.not_set
   id: not_set
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.cdn.models.QueryStringCachingBehavior
   type: attribute
   uid: azure.mgmt.cdn.models.QueryStringCachingBehavior.not_set
-- fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.use_query_string
+- &id004
+  fullName: azure.mgmt.cdn.models.QueryStringCachingBehavior.use_query_string
   id: use_query_string
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.cdn.models.QueryStringCachingBehavior
   type: attribute
   uid: azure.mgmt.cdn.models.QueryStringCachingBehavior.use_query_string
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

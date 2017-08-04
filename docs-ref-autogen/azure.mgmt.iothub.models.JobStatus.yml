@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.iothub.models.JobStatus
-- fullName: azure.mgmt.iothub.models.JobStatus.cancelled
+- children:
+  - azure.mgmt.iothub.models.JobStatus.cancelled
+  - azure.mgmt.iothub.models.JobStatus.completed
+  - azure.mgmt.iothub.models.JobStatus.enqueued
+  - azure.mgmt.iothub.models.JobStatus.failed
+  - azure.mgmt.iothub.models.JobStatus.running
+  - azure.mgmt.iothub.models.JobStatus.unknown
+  class: azure.mgmt.iothub.models.JobStatus
+  fullName: azure.mgmt.iothub.models.JobStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.iothub.models
+  name: JobStatus
+  source:
+    id: JobStatus
+    path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 90
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.iothub.models.JobStatus
+- &id001
+  fullName: azure.mgmt.iothub.models.JobStatus.cancelled
   id: cancelled
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.iothub.models.JobStatus
   type: attribute
   uid: azure.mgmt.iothub.models.JobStatus.cancelled
-- fullName: azure.mgmt.iothub.models.JobStatus.completed
+- &id002
+  fullName: azure.mgmt.iothub.models.JobStatus.completed
   id: completed
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.iothub.models.JobStatus
   type: attribute
   uid: azure.mgmt.iothub.models.JobStatus.completed
-- fullName: azure.mgmt.iothub.models.JobStatus.enqueued
+- &id003
+  fullName: azure.mgmt.iothub.models.JobStatus.enqueued
   id: enqueued
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.iothub.models.JobStatus
   type: attribute
   uid: azure.mgmt.iothub.models.JobStatus.enqueued
-- fullName: azure.mgmt.iothub.models.JobStatus.failed
+- &id004
+  fullName: azure.mgmt.iothub.models.JobStatus.failed
   id: failed
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.iothub.models.JobStatus
   type: attribute
   uid: azure.mgmt.iothub.models.JobStatus.failed
-- fullName: azure.mgmt.iothub.models.JobStatus.running
+- &id005
+  fullName: azure.mgmt.iothub.models.JobStatus.running
   id: running
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.iothub.models.JobStatus
   type: attribute
   uid: azure.mgmt.iothub.models.JobStatus.running
-- fullName: azure.mgmt.iothub.models.JobStatus.unknown
+- &id006
+  fullName: azure.mgmt.iothub.models.JobStatus.unknown
   id: unknown
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.iothub.models.JobStatus
   type: attribute
   uid: azure.mgmt.iothub.models.JobStatus.unknown
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

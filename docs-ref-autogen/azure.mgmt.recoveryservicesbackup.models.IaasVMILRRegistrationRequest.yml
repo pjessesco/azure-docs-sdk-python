@@ -28,7 +28,7 @@ items:
   syntax:
     content: IaasVMILRRegistrationRequest(recovery_point_id=None, virtual_machine_id=None,
       initiator_name=None, renew_existing_registration=None)
-    parameters:
+    parameters: &id001
     - description: 'Polymorphic Discriminator
 
         '
@@ -65,6 +65,36 @@ items:
       id: renew_existing_registration
       type:
       - bool
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.IaasVMILRRegistrationRequest
+- children: []
+  class: azure.mgmt.recoveryservicesbackup.models.IaasVMILRRegistrationRequest
+  fullName: azure.mgmt.recoveryservicesbackup.models.IaasVMILRRegistrationRequest
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.recoveryservicesbackup.models.ilr_request.ILRRequest
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: IaasVMILRRegistrationRequest
+  source:
+    id: IaasVMILRRegistrationRequest
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\iaas_vmilr_registration_request.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\iaas_vmilr_registration_request.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Restore files/folders from a backup copy of IaaS VM.
+
+    '
+  syntax:
+    content: IaasVMILRRegistrationRequest(recovery_point_id=None, virtual_machine_id=None,
+      initiator_name=None, renew_existing_registration=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.IaasVMILRRegistrationRequest
 references: []

@@ -26,7 +26,7 @@ items:
   syntax:
     content: AccountSasParameters(services, resource_types, permissions, shared_access_expiry_time,
       ip_address_or_range=None, protocols=None, shared_access_start_time=None, key_to_sign=None)
-    parameters:
+    parameters: &id001
     - description: 'The signed services accessible with the account SAS.
 
         Possible values include: Blob (b), Queue (q), Table (t), File (f).
@@ -36,7 +36,7 @@ items:
         '
       id: services
       type:
-      - 'str or @azure.mgmt.storage.v2016_12_01.models.enum
+      - 'str or @../azure.mgmt.storage.v2016_12_01.models.enum
 
         '
     - description: 'The signed resource types that are accessible with
@@ -52,7 +52,7 @@ items:
         '
       id: resource_types
       type:
-      - 'str or @azure.mgmt.storage.v2016_12_01.models.enum
+      - 'str or @../azure.mgmt.storage.v2016_12_01.models.enum
 
         '
     - description: 'The signed permissions for the account SAS. Possible
@@ -66,7 +66,7 @@ items:
         '
       id: permissions
       type:
-      - 'str or @azure.mgmt.storage.v2016_12_01.models.enum
+      - 'str or @../azure.mgmt.storage.v2016_12_01.models.enum
 
         '
     - description: 'An IP address or a range of IP addresses from
@@ -107,6 +107,34 @@ items:
       id: key_to_sign
       type:
       - str
+  type: class
+  uid: azure.mgmt.storage.v2016_12_01.models.AccountSasParameters
+- children: []
+  class: azure.mgmt.storage.v2016_12_01.models.AccountSasParameters
+  fullName: azure.mgmt.storage.v2016_12_01.models.AccountSasParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.storage.v2016_12_01.models
+  name: AccountSasParameters
+  source:
+    id: AccountSasParameters
+    path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\account_sas_parameters.py
+    remote:
+      branch: master
+      path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\account_sas_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The parameters to list SAS credentials of a storage account.
+
+    '
+  syntax:
+    content: AccountSasParameters(services, resource_types, permissions, shared_access_expiry_time,
+      ip_address_or_range=None, protocols=None, shared_access_start_time=None, key_to_sign=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.storage.v2016_12_01.models.AccountSasParameters
 references: []

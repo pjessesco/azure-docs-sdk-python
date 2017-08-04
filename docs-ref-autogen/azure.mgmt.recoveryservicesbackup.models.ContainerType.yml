@@ -48,7 +48,55 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_backup_server_container
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_backup_server_container
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_sql_container
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.cluster
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.dpm_container
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_container
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_service_container
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.invalid
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.mab_container
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.unknown
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.vcenter
+  - azure.mgmt.recoveryservicesbackup.models.ContainerType.windows
+  class: azure.mgmt.recoveryservicesbackup.models.ContainerType
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: ContainerType
+  source:
+    id: ContainerType
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 98
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.ContainerType
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_backup_server_container
   id: azure_backup_server_container
   langs:
   - python
@@ -62,7 +110,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_backup_server_container
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_sql_container
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_sql_container
   id: azure_sql_container
   langs:
   - python
@@ -76,7 +125,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.azure_sql_container
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.cluster
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.cluster
   id: cluster
   langs:
   - python
@@ -90,7 +140,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.cluster
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.dpm_container
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.dpm_container
   id: dpm_container
   langs:
   - python
@@ -104,7 +155,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.dpm_container
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_container
+- &id005
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_container
   id: iaas_vm_container
   langs:
   - python
@@ -118,7 +170,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_container
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_service_container
+- &id006
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_service_container
   id: iaas_vm_service_container
   langs:
   - python
@@ -132,7 +185,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.iaas_vm_service_container
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.invalid
+- &id007
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.invalid
   id: invalid
   langs:
   - python
@@ -146,7 +200,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.mab_container
+- &id008
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.mab_container
   id: mab_container
   langs:
   - python
@@ -160,7 +215,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.mab_container
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.unknown
+- &id009
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.unknown
   id: unknown
   langs:
   - python
@@ -174,7 +230,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.unknown
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.vcenter
+- &id010
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.vcenter
   id: vcenter
   langs:
   - python
@@ -188,7 +245,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.vcenter
-- fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.windows
+- &id011
+  fullName: azure.mgmt.recoveryservicesbackup.models.ContainerType.windows
   id: windows
   langs:
   - python
@@ -202,4 +260,15 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ContainerType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ContainerType.windows
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
 references: []

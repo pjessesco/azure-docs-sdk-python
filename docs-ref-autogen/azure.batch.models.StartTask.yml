@@ -28,7 +28,7 @@ items:
   syntax:
     content: StartTask(command_line, resource_files=None, environment_settings=None,
       user_identity=None, max_task_retry_count=None, wait_for_success=None)
-    parameters:
+    parameters: &id001
     - description: 'The command line of the start task. The command line
 
         does not run under a shell, and therefore cannot take advantage of shell
@@ -121,6 +121,36 @@ items:
       id: wait_for_success
       type:
       - bool
+  type: class
+  uid: azure.batch.models.StartTask
+- children: []
+  class: azure.batch.models.StartTask
+  fullName: azure.batch.models.StartTask
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: StartTask
+  source:
+    id: StartTask
+    path: azure-batch\azure\batch\models\start_task.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\start_task.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A task which is run when a compute node joins a pool in the Azure Batch
+
+    service, or when the compute node is rebooted or reimaged.
+
+    '
+  syntax:
+    content: StartTask(command_line, resource_files=None, environment_settings=None,
+      user_identity=None, max_task_retry_count=None, wait_for_success=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.StartTask
 references: []

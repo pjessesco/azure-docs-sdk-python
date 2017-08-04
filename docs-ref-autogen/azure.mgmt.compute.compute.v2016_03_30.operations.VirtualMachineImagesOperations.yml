@@ -7,6 +7,11 @@ items:
   - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
   - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
   - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
   class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: VirtualMachineImagesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-03-30".
 
         '
@@ -58,7 +63,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
   langs:
@@ -84,38 +89,38 @@ items:
 
         '
       id: location
-      type:
+      type: &id004
       - str
     - description: 'A valid image publisher.
 
         '
       id: publisher_name
-      type:
+      type: &id005
       - str
     - description: 'A valid image publisher offer.
 
         '
       id: offer
-      type:
+      type: &id006
       - str
     - description: 'A valid image SKU.
 
         '
       id: skus
-      type:
+      type: &id007
       - str
     - description: 'A valid image SKU version.
 
         '
       id: version
-      type:
+      type: &id008
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id009
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -124,7 +129,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id010
       - bool
     - description: '*Operation configuration
 
@@ -132,10 +137,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id011
       description: '@azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImage
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -143,11 +148,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImage
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
-  exceptions:
+  exceptions: &id013
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
   langs:
@@ -175,49 +180,49 @@ items:
 
         '
       id: location
-      type:
+      type: &id014
       - str
     - description: 'A valid image publisher.
 
         '
       id: publisher_name
-      type:
+      type: &id015
       - str
     - description: 'A valid image publisher offer.
 
         '
       id: offer
-      type:
+      type: &id016
       - str
     - description: 'A valid image SKU.
 
         '
       id: skus
-      type:
+      type: &id017
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type:
+      type: &id018
       - str
     - defaultValue: None
       description: ''
       id: top
-      type:
+      type: &id019
       - int
     - defaultValue: None
       description: ''
       id: orderby
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -226,7 +231,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -234,10 +239,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       description: 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -245,11 +250,11 @@ items:
       type:
       - 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
   langs:
@@ -277,20 +282,20 @@ items:
 
         '
       id: location
-      type:
+      type: &id026
       - str
     - description: 'A valid image publisher.
 
         '
       id: publisher_name
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id028
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -299,7 +304,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id029
       - bool
     - description: '*Operation configuration
 
@@ -307,10 +312,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id030
       description: 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -318,11 +323,11 @@ items:
       type:
       - 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
-  exceptions:
+  exceptions: &id032
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
   langs:
@@ -349,14 +354,14 @@ items:
 
         '
       id: location
-      type:
+      type: &id033
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -365,7 +370,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -373,10 +378,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       description: 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -384,11 +389,11 @@ items:
       type:
       - 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
 - class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
-  exceptions:
+  exceptions: &id038
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
   langs:
@@ -416,26 +421,26 @@ items:
 
         '
       id: location
-      type:
+      type: &id039
       - str
     - description: 'A valid image publisher.
 
         '
       id: publisher_name
-      type:
+      type: &id040
       - str
     - description: 'A valid image publisher offer.
 
         '
       id: offer
-      type:
+      type: &id041
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id042
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -444,7 +449,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id043
       - bool
     - description: '*Operation configuration
 
@@ -452,10 +457,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id044
       description: 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -463,10 +468,427 @@ items:
       type:
       - 'list of @azure.mgmt.compute.compute.v2016_03_30.models.VirtualMachineImageResource
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+- children:
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+  - azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_03_30.operations
+  name: VirtualMachineImagesOperations
+  source:
+    id: VirtualMachineImagesOperations
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'VirtualMachineImagesOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: VirtualMachineImagesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+- &id012
+  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_03_30.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets a virtual machine image.
+
+    '
+  syntax:
+    content: get(location, publisher_name, offer, skus, version, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of a supported Azure region.
+
+        '
+      id: location
+      type: *id004
+    - description: 'A valid image publisher.
+
+        '
+      id: publisher_name
+      type: *id005
+    - description: 'A valid image publisher offer.
+
+        '
+      id: offer
+      type: *id006
+    - description: 'A valid image SKU.
+
+        '
+      id: skus
+      type: *id007
+    - description: 'A valid image SKU version.
+
+        '
+      id: version
+      type: *id008
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id009
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id010
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id011
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+- *id012
+- &id024
+  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  exceptions: *id013
+  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_03_30.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 112
+  summary: 'Gets a list of all virtual machine image versions for the specified
+
+    location, publisher, offer, and SKU.
+
+    '
+  syntax:
+    content: list(location, publisher_name, offer, skus, filter=None, top=None, orderby=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of a supported Azure region.
+
+        '
+      id: location
+      type: *id014
+    - description: 'A valid image publisher.
+
+        '
+      id: publisher_name
+      type: *id015
+    - description: 'A valid image publisher offer.
+
+        '
+      id: offer
+      type: *id016
+    - description: 'A valid image SKU.
+
+        '
+      id: skus
+      type: *id017
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
+
+        '
+      id: filter
+      type: *id018
+    - defaultValue: None
+      description: ''
+      id: top
+      type: *id019
+    - defaultValue: None
+      description: ''
+      id: orderby
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+- *id024
+- &id031
+  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  exceptions: *id025
+  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_03_30.operations
+  name: list_offers
+  source:
+    id: list_offers
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 196
+  summary: 'Gets a list of virtual machine image offers for the specified location
+
+    and publisher.
+
+    '
+  syntax:
+    content: list_offers(location, publisher_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of a supported Azure region.
+
+        '
+      id: location
+      type: *id026
+    - description: 'A valid image publisher.
+
+        '
+      id: publisher_name
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id030
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+- *id031
+- &id037
+  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  exceptions: *id032
+  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_03_30.operations
+  name: list_publishers
+  source:
+    id: list_publishers
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 262
+  summary: 'Gets a list of virtual machine image publishers for the specified Azure
+
+    location.
+
+    '
+  syntax:
+    content: list_publishers(location, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of a supported Azure region.
+
+        '
+      id: location
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+- *id037
+- &id045
+  class: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  exceptions: *id038
+  fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_03_30.operations
+  name: list_skus
+  source:
+    id: list_skus
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_03_30\operations\virtual_machine_images_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 325
+  summary: 'Gets a list of virtual machine image SKUs for the specified location,
+
+    publisher, and offer.
+
+    '
+  syntax:
+    content: list_skus(location, publisher_name, offer, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of a supported Azure region.
+
+        '
+      id: location
+      type: *id039
+    - description: 'A valid image publisher.
+
+        '
+      id: publisher_name
+      type: *id040
+    - description: 'A valid image publisher offer.
+
+        '
+      id: offer
+      type: *id041
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id042
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id043
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id044
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+- *id045
 references:
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+  isExternal: false
+  name: list_offers
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+  isExternal: false
+  name: list_publishers
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+  isExternal: false
+  name: list_skus
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+  isExternal: false
+  name: list_offers
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_offers
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+  isExternal: false
+  name: list_publishers
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_publishers
+- fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
+  isExternal: false
+  name: list_skus
+  parent: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations
+  uid: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.list_skus
 - fullName: azure.mgmt.compute.compute.v2016_03_30.operations.VirtualMachineImagesOperations.get
   isExternal: false
   name: get

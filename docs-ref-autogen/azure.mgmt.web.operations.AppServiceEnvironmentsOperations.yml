@@ -38,6 +38,42 @@ items:
   - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
   - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
   - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
   class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
   inheritance:
@@ -95,7 +131,7 @@ items:
     '
   syntax:
     content: AppServiceEnvironmentsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -112,7 +148,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'API Version. Constant value: "2016-09-01".
 
         '
@@ -120,7 +156,7 @@ items:
   type: class
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
   langs:
@@ -151,13 +187,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id005
       - str
     - description: 'Configuration details of the App
 
@@ -165,14 +201,14 @@ items:
 
         '
       id: hosting_environment_envelope
-      type:
+      type: &id006
       - azure.mgmt.web.models.AppServiceEnvironmentResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -181,20 +217,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.web.models.AppServiceEnvironmentResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
   langs:
@@ -225,26 +261,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id013
       - str
     - description: 'Properties of the multi-role pool.
 
         '
       id: multi_role_pool_envelope
-      type:
+      type: &id014
       - azure.mgmt.web.models.WorkerPoolResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id015
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -253,20 +289,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id016
       - bool
-    return:
+    return: &id017
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.web.models.WorkerPoolResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id019
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
   langs:
@@ -297,32 +333,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id020
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id021
       - str
     - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
-      type:
+      type: &id022
       - str
     - description: 'Properties of the worker pool.
 
         '
       id: worker_pool_envelope
-      type:
+      type: &id023
       - azure.mgmt.web.models.WorkerPoolResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -331,20 +367,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
-    return:
+    return: &id026
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.web.models.WorkerPoolResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
   langs:
@@ -375,13 +411,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to force the deletion
@@ -392,14 +428,14 @@ items:
 
         '
       id: force_delete
-      type:
+      type: &id031
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id032
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -408,20 +444,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id033
       - bool
-    return:
+    return: &id034
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id036
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
   langs:
@@ -451,20 +487,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id037
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id038
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id039
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -473,7 +509,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id040
       - bool
     - description: '*Operation configuration
 
@@ -481,16 +517,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id041
       type:
       - azure.mgmt.web.models.AppServiceEnvironmentResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id043
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
   langs:
@@ -521,26 +557,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id044
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id045
       - str
     - description: 'Name of the diagnostics item.
 
         '
       id: diagnostics_name
-      type:
+      type: &id046
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id047
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -549,7 +585,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id048
       - bool
     - description: '*Operation configuration
 
@@ -557,16 +593,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id049
       type:
       - azure.mgmt.web.models.HostingEnvironmentDiagnostics
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id051
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
   langs:
@@ -597,20 +633,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id052
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id053
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id054
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -619,7 +655,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id055
       - bool
     - description: '*Operation configuration
 
@@ -627,16 +663,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id056
       type:
       - azure.mgmt.web.models.WorkerPoolResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id058
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
   langs:
@@ -667,26 +703,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id059
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id060
       - str
     - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
-      type:
+      type: &id061
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id062
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -695,7 +731,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id063
       - bool
     - description: '*Operation configuration
 
@@ -703,16 +739,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id064
       type:
       - azure.mgmt.web.models.WorkerPoolResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id066
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
   langs:
@@ -741,7 +777,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id067
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -750,7 +786,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id068
       - bool
     - description: '*Operation configuration
 
@@ -758,13 +794,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id069
       type:
       - azure.mgmt.web.models.AppServiceEnvironmentPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id071
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
   langs:
@@ -795,20 +831,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id072
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id073
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id074
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -817,7 +853,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id075
       - bool
     - description: '*Operation configuration
 
@@ -825,13 +861,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id076
       type:
       - azure.mgmt.web.models.AppServicePlanPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id078
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
   langs:
@@ -862,14 +898,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id079
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id080
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -878,7 +914,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id081
       - bool
     - description: '*Operation configuration
 
@@ -886,13 +922,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id082
       type:
       - azure.mgmt.web.models.AppServiceEnvironmentPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id084
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
   langs:
@@ -927,20 +963,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id085
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id086
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id087
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -949,7 +985,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id088
       - bool
     - description: '*Operation configuration
 
@@ -957,13 +993,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id089
       type:
       - azure.mgmt.web.models.StampCapacityPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id091
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
   langs:
@@ -994,20 +1030,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id092
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id093
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id094
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1016,7 +1052,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id095
       - bool
     - description: '*Operation configuration
 
@@ -1024,16 +1060,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id096
       type:
       - list of @azure.mgmt.web.models.HostingEnvironmentDiagnostics
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id098
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
   langs:
@@ -1064,20 +1100,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id099
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id100
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id101
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1086,7 +1122,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id102
       - bool
     - description: '*Operation configuration
 
@@ -1094,16 +1130,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id103
       type:
       - azure.mgmt.web.models.MetricDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id105
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
   langs:
@@ -1134,13 +1170,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id106
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id107
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to include instance details.
@@ -1149,7 +1185,7 @@ items:
 
         '
       id: details
-      type:
+      type: &id108
       - bool
     - defaultValue: None
       description: 'Return only usages/metrics specified in the filter.
@@ -1164,14 +1200,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id109
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id110
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1180,7 +1216,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id111
       - bool
     - description: '*Operation configuration
 
@@ -1188,13 +1224,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id112
       type:
       - azure.mgmt.web.models.ResourceMetricPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id114
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
   langs:
@@ -1229,20 +1265,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id115
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id116
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id117
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1251,7 +1287,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id118
       - bool
     - description: '*Operation configuration
 
@@ -1259,13 +1295,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id119
       type:
       - azure.mgmt.web.models.ResourceMetricDefinitionPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id121
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
   langs:
@@ -1297,34 +1333,34 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id122
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id123
       - str
     - defaultValue: None
       description: 'Beginning time of the metrics query.
 
         '
       id: start_time
-      type:
+      type: &id124
       - str
     - defaultValue: None
       description: 'End time of the metrics query.
 
         '
       id: end_time
-      type:
+      type: &id125
       - str
     - defaultValue: None
       description: 'Time granularity of the metrics query.
 
         '
       id: time_grain
-      type:
+      type: &id126
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to include instance details.
@@ -1333,7 +1369,7 @@ items:
 
         '
       id: details
-      type:
+      type: &id127
       - bool
     - defaultValue: None
       description: 'Return only usages/metrics specified in the filter.
@@ -1348,14 +1384,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id128
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id129
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1364,7 +1400,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id130
       - bool
     - description: '*Operation configuration
 
@@ -1372,13 +1408,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id131
       type:
       - azure.mgmt.web.models.ResourceMetricPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id133
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
   langs:
@@ -1413,26 +1449,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id134
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id135
       - str
     - description: 'Name of the instance in the multi-role pool.
 
         '
       id: instance
-      type:
+      type: &id136
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id137
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1441,7 +1477,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id138
       - bool
     - description: '*Operation configuration
 
@@ -1449,13 +1485,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id139
       type:
       - azure.mgmt.web.models.ResourceMetricDefinitionPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id141
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
   langs:
@@ -1490,19 +1526,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id142
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id143
       - str
     - description: 'Name of the instance in the multi-role pool.
 
         '
       id: instance
-      type:
+      type: &id144
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to include instance details.
@@ -1511,14 +1547,14 @@ items:
 
         '
       id: details
-      type:
+      type: &id145
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id146
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1527,7 +1563,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id147
       - bool
     - description: '*Operation configuration
 
@@ -1535,13 +1571,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id148
       type:
       - azure.mgmt.web.models.ResourceMetricPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id150
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
   langs:
@@ -1572,20 +1608,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id151
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id152
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id153
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1594,7 +1630,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id154
       - bool
     - description: '*Operation configuration
 
@@ -1602,13 +1638,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id155
       type:
       - azure.mgmt.web.models.SkuInfoPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id157
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
   langs:
@@ -1639,20 +1675,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id158
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id159
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id160
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1661,7 +1697,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id161
       - bool
     - description: '*Operation configuration
 
@@ -1669,13 +1705,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id162
       type:
       - azure.mgmt.web.models.WorkerPoolResourcePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id164
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
   langs:
@@ -1706,20 +1742,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id165
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id166
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id167
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1728,7 +1764,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id168
       - bool
     - description: '*Operation configuration
 
@@ -1736,13 +1772,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id169
       type:
       - azure.mgmt.web.models.UsagePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id171
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
   langs:
@@ -1773,20 +1809,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id172
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id173
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id174
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1795,7 +1831,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id175
       - bool
     - description: '*Operation configuration
 
@@ -1803,16 +1839,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id176
       type:
       - list of @azure.mgmt.web.models.Operation
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id178
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
   langs:
@@ -1843,13 +1879,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id179
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id180
       - str
     - defaultValue: None
       description: 'Return only usages/metrics specified in the filter.
@@ -1864,14 +1900,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id181
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id182
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1880,7 +1916,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id183
       - bool
     - description: '*Operation configuration
 
@@ -1888,13 +1924,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id184
       type:
       - azure.mgmt.web.models.CsmUsageQuotaPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id186
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
   langs:
@@ -1925,20 +1961,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id187
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id188
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id189
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1947,7 +1983,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id190
       - bool
     - description: '*Operation configuration
 
@@ -1955,16 +1991,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id191
       type:
       - azure.mgmt.web.models.AddressResponse
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id193
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
   langs:
@@ -1995,13 +2031,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id194
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id195
       - str
     - defaultValue: None
       description: 'Comma separated list of app properties
@@ -2010,14 +2046,14 @@ items:
 
         '
       id: properties_to_include
-      type:
+      type: &id196
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id197
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2026,7 +2062,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id198
       - bool
     - description: '*Operation configuration
 
@@ -2034,13 +2070,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id199
       type:
       - azure.mgmt.web.models.SitePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id201
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
   langs:
@@ -2071,26 +2107,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id202
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id203
       - str
     - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
-      type:
+      type: &id204
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id205
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2099,7 +2135,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id206
       - bool
     - description: '*Operation configuration
 
@@ -2107,13 +2143,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id207
       type:
       - azure.mgmt.web.models.ResourceMetricDefinitionPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id209
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
   langs:
@@ -2148,19 +2184,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id210
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id211
       - str
     - description: 'Name of worker pool
 
         '
       id: worker_pool_name
-      type:
+      type: &id212
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to include instance details.
@@ -2169,7 +2205,7 @@ items:
 
         '
       id: details
-      type:
+      type: &id213
       - bool
     - defaultValue: None
       description: 'Return only usages/metrics specified in the filter.
@@ -2184,14 +2220,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id214
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id215
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2200,7 +2236,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id216
       - bool
     - description: '*Operation configuration
 
@@ -2208,13 +2244,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id217
       type:
       - azure.mgmt.web.models.ResourceMetricPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id219
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
   langs:
@@ -2245,26 +2281,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id220
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id221
       - str
     - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
-      type:
+      type: &id222
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id223
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2273,7 +2309,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id224
       - bool
     - description: '*Operation configuration
 
@@ -2281,13 +2317,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id225
       type:
       - azure.mgmt.web.models.UsagePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id227
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
   langs:
@@ -2322,32 +2358,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id228
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id229
       - str
     - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
-      type:
+      type: &id230
       - str
     - description: 'Name of the instance in the worker pool.
 
         '
       id: instance
-      type:
+      type: &id231
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id232
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2356,7 +2392,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id233
       - bool
     - description: '*Operation configuration
 
@@ -2364,13 +2400,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id234
       type:
       - azure.mgmt.web.models.ResourceMetricDefinitionPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id236
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
   langs:
@@ -2405,25 +2441,25 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id237
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id238
       - str
     - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
-      type:
+      type: &id239
       - str
     - description: 'Name of the instance in the worker pool.
 
         '
       id: instance
-      type:
+      type: &id240
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to include instance details.
@@ -2432,7 +2468,7 @@ items:
 
         '
       id: details
-      type:
+      type: &id241
       - bool
     - defaultValue: None
       description: 'Return only usages/metrics specified in the filter.
@@ -2447,14 +2483,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id242
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id243
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2463,7 +2499,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id244
       - bool
     - description: '*Operation configuration
 
@@ -2471,13 +2507,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id245
       type:
       - azure.mgmt.web.models.ResourceMetricPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id247
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
   langs:
@@ -2508,26 +2544,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id248
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id249
       - str
     - description: 'Name of the worker pool.
 
         '
       id: worker_pool_name
-      type:
+      type: &id250
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id251
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2536,7 +2572,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id252
       - bool
     - description: '*Operation configuration
 
@@ -2544,13 +2580,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id253
       type:
       - azure.mgmt.web.models.SkuInfoPaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id255
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
   langs:
@@ -2581,20 +2617,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id256
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id257
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id258
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2603,7 +2639,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id259
       - bool
     - description: '*Operation configuration
 
@@ -2611,13 +2647,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id260
       type:
       - azure.mgmt.web.models.WorkerPoolResourcePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id262
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
   langs:
@@ -2647,20 +2683,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id263
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id264
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id265
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2669,7 +2705,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id266
       - bool
     - description: '*Operation configuration
 
@@ -2677,16 +2713,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id267
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id269
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
   langs:
@@ -2716,20 +2752,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id270
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id271
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id272
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2738,7 +2774,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id273
       - bool
     - description: '*Operation configuration
 
@@ -2746,13 +2782,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id274
       type:
       - azure.mgmt.web.models.SitePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
 - class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
-  exceptions:
+  exceptions: &id276
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
   langs:
@@ -2782,20 +2818,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id277
       - str
     - description: 'Name of the App Service Environment.
 
         '
       id: name
-      type:
+      type: &id278
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id279
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2804,7 +2840,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id280
       - bool
     - description: '*Operation configuration
 
@@ -2812,12 +2848,2913 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id281
       type:
       - azure.mgmt.web.models.SitePaged
   type: method
   uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+- children:
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+  - azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: AppServiceEnvironmentsOperations
+  source:
+    id: AppServiceEnvironmentsOperations
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'AppServiceEnvironmentsOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: AppServiceEnvironmentsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+- &id010
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 238
+  summary: 'Create or update an App Service Environment.
+
+
+    Create or update an App Service Environment.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, name, hosting_environment_envelope,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id005
+    - description: 'Configuration details of the App
+
+        Service Environment.
+
+        '
+      id: hosting_environment_envelope
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+- *id010
+- &id018
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: create_or_update_multi_role_pool
+  source:
+    id: create_or_update_multi_role_pool
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 982
+  summary: 'Create or update a multi-role pool.
+
+
+    Create or update a multi-role pool.
+
+    '
+  syntax:
+    content: create_or_update_multi_role_pool(resource_group_name, name, multi_role_pool_envelope,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id013
+    - description: 'Properties of the multi-role pool.
+
+        '
+      id: multi_role_pool_envelope
+      type: *id014
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id015
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id016
+    return: *id017
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+- *id018
+- &id027
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id019
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: create_or_update_worker_pool
+  source:
+    id: create_or_update_worker_pool
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2182
+  summary: 'Create or update a worker pool.
+
+
+    Create or update a worker pool.
+
+    '
+  syntax:
+    content: create_or_update_worker_pool(resource_group_name, name, worker_pool_name,
+      worker_pool_envelope, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id020
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id021
+    - description: 'Name of the worker pool.
+
+        '
+      id: worker_pool_name
+      type: *id022
+    - description: 'Properties of the worker pool.
+
+        '
+      id: worker_pool_envelope
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    return: *id026
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+- *id027
+- &id035
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id028
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 337
+  summary: 'Delete an App Service Environment.
+
+
+    Delete an App Service Environment.
+
+    '
+  syntax:
+    content: delete(resource_group_name, name, force_delete=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id030
+    - defaultValue: None
+      description: 'Specify <code>true</code> to force the deletion
+
+        even if the App Service Environment contains resources. The default is
+
+        <code>false</code>.
+
+        '
+      id: force_delete
+      type: *id031
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id032
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id033
+    return: *id034
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+- *id035
+- &id042
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id036
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 173
+  summary: 'Get the properties of an App Service Environment.
+
+
+    Get the properties of an App Service Environment.
+
+    '
+  syntax:
+    content: get(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id037
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id038
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id039
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id040
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id041
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+- *id042
+- &id050
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id043
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_diagnostics_item
+  source:
+    id: get_diagnostics_item
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 627
+  summary: 'Get a diagnostics item for an App Service Environment.
+
+
+    Get a diagnostics item for an App Service Environment.
+
+    '
+  syntax:
+    content: get_diagnostics_item(resource_group_name, name, diagnostics_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id044
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id045
+    - description: 'Name of the diagnostics item.
+
+        '
+      id: diagnostics_name
+      type: *id046
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id047
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id048
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id049
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+- *id050
+- &id057
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id051
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_multi_role_pool
+  source:
+    id: get_multi_role_pool
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 917
+  summary: 'Get properties of a multi-role pool.
+
+
+    Get properties of a multi-role pool.
+
+    '
+  syntax:
+    content: get_multi_role_pool(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id052
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id053
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id054
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id055
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id056
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+- *id057
+- &id065
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id058
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_worker_pool
+  source:
+    id: get_worker_pool
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2114
+  summary: 'Get properties of a worker pool.
+
+
+    Get properties of a worker pool.
+
+    '
+  syntax:
+    content: get_worker_pool(resource_group_name, name, worker_pool_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id059
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id060
+    - description: 'Name of the worker pool.
+
+        '
+      id: worker_pool_name
+      type: *id061
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id062
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id063
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id064
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+- *id065
+- &id070
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id066
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Get all App Service Environments for a subscription.
+
+
+    Get all App Service Environments for a subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id067
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id068
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id069
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+- *id070
+- &id077
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id071
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_app_service_plans
+  source:
+    id: list_app_service_plans
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1743
+  summary: 'Get all App Service plans in an App Service Environment.
+
+
+    Get all App Service plans in an App Service Environment.
+
+    '
+  syntax:
+    content: list_app_service_plans(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id072
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id073
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id074
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id075
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id076
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+- *id077
+- &id083
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id078
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 104
+  summary: 'Get all App Service Environments in a resource group.
+
+
+    Get all App Service Environments in a resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id079
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id080
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id081
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id082
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+- *id083
+- &id090
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id084
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_capacities
+  source:
+    id: list_capacities
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 423
+  summary: 'Get the used, available, and total worker capacity an App Service
+
+    Environment.
+
+
+    Get the used, available, and total worker capacity an App Service
+
+    Environment.
+
+    '
+  syntax:
+    content: list_capacities(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id085
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id086
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id087
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id088
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id089
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+- *id090
+- &id097
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id091
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_diagnostics
+  source:
+    id: list_diagnostics
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 562
+  summary: 'Get diagnostic information for an App Service Environment.
+
+
+    Get diagnostic information for an App Service Environment.
+
+    '
+  syntax:
+    content: list_diagnostics(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id092
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id093
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id094
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id095
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id096
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+- *id097
+- &id104
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id098
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_metric_definitions
+  source:
+    id: list_metric_definitions
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 695
+  summary: 'Get global metric definitions of an App Service Environment.
+
+
+    Get global metric definitions of an App Service Environment.
+
+    '
+  syntax:
+    content: list_metric_definitions(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id099
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id100
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id101
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id102
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id103
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+- *id104
+- &id113
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id105
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_metrics
+  source:
+    id: list_metrics
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 760
+  summary: 'Get global metrics of an App Service Environment.
+
+
+    Get global metrics of an App Service Environment.
+
+    '
+  syntax:
+    content: list_metrics(resource_group_name, name, details=None, filter=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id106
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id107
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
+
+        The default is <code>false</code>.
+
+        '
+      id: details
+      type: *id108
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
+
+        Filter conforms to odata syntax. Example: $filter=(name.value eq
+
+        ''Metric1'' or name.value eq ''Metric2'') and startTime eq
+
+        ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
+
+        timeGrain eq duration''[Hour|Minute|Day]''.
+
+        '
+      id: filter
+      type: *id109
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id110
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id111
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id112
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+- *id113
+- &id120
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id114
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_multi_role_metric_definitions
+  source:
+    id: list_multi_role_metric_definitions
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1238
+  summary: 'Get metric definitions for a multi-role pool of an App Service
+
+    Environment.
+
+
+    Get metric definitions for a multi-role pool of an App Service
+
+    Environment.
+
+    '
+  syntax:
+    content: list_multi_role_metric_definitions(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id115
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id116
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id117
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id118
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id119
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+- *id120
+- &id132
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id121
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_multi_role_metrics
+  source:
+    id: list_multi_role_metrics
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1312
+  summary: 'Get metrics for a multi-role pool of an App Service Environment.
+
+
+    Get metrics for a multi-role pool of an App Service Environment.
+
+    '
+  syntax:
+    content: list_multi_role_metrics(resource_group_name, name, start_time=None, end_time=None,
+      time_grain=None, details=None, filter=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id122
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id123
+    - defaultValue: None
+      description: 'Beginning time of the metrics query.
+
+        '
+      id: start_time
+      type: *id124
+    - defaultValue: None
+      description: 'End time of the metrics query.
+
+        '
+      id: end_time
+      type: *id125
+    - defaultValue: None
+      description: 'Time granularity of the metrics query.
+
+        '
+      id: time_grain
+      type: *id126
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
+
+        The default is <code>false</code>.
+
+        '
+      id: details
+      type: *id127
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
+
+        Filter conforms to odata syntax. Example: $filter=(name.value eq
+
+        ''Metric1'' or name.value eq ''Metric2'') and startTime eq
+
+        ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
+
+        timeGrain eq duration''[Hour|Minute|Day]''.
+
+        '
+      id: filter
+      type: *id128
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id129
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id130
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id131
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+- *id132
+- &id140
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id133
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_multi_role_pool_instance_metric_definitions
+  source:
+    id: list_multi_role_pool_instance_metric_definitions
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1079
+  summary: 'Get metric definitions for a specific instance of a multi-role pool of
+
+    an App Service Environment.
+
+
+    Get metric definitions for a specific instance of a multi-role pool of
+
+    an App Service Environment.
+
+    '
+  syntax:
+    content: list_multi_role_pool_instance_metric_definitions(resource_group_name,
+      name, instance, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id134
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id135
+    - description: 'Name of the instance in the multi-role pool.
+
+        '
+      id: instance
+      type: *id136
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id137
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id138
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id139
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+- *id140
+- &id149
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id141
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_multi_role_pool_instance_metrics
+  source:
+    id: list_multi_role_pool_instance_metrics
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1156
+  summary: 'Get metrics for a specific instance of a multi-role pool of an App
+
+    Service Environment.
+
+
+    Get metrics for a specific instance of a multi-role pool of an App
+
+    Service Environment.
+
+    '
+  syntax:
+    content: list_multi_role_pool_instance_metrics(resource_group_name, name, instance,
+      details=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id142
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id143
+    - description: 'Name of the instance in the multi-role pool.
+
+        '
+      id: instance
+      type: *id144
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
+
+        The default is <code>false</code>.
+
+        '
+      id: details
+      type: *id145
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id146
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id147
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id148
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+- *id149
+- &id156
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id150
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_multi_role_pool_skus
+  source:
+    id: list_multi_role_pool_skus
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1409
+  summary: 'Get available SKUs for scaling a multi-role pool.
+
+
+    Get available SKUs for scaling a multi-role pool.
+
+    '
+  syntax:
+    content: list_multi_role_pool_skus(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id151
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id152
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id153
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id154
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id155
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+- *id156
+- &id163
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id157
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_multi_role_pools
+  source:
+    id: list_multi_role_pools
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 845
+  summary: 'Get all multi-role pools.
+
+
+    Get all multi-role pools.
+
+    '
+  syntax:
+    content: list_multi_role_pools(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id158
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id159
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id160
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id161
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id162
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+- *id163
+- &id170
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id164
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_multi_role_usages
+  source:
+    id: list_multi_role_usages
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1480
+  summary: 'Get usage metrics for a multi-role pool of an App Service Environment.
+
+
+    Get usage metrics for a multi-role pool of an App Service Environment.
+
+    '
+  syntax:
+    content: list_multi_role_usages(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id165
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id166
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id167
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id168
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id169
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+- *id170
+- &id177
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id171
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_operations
+  source:
+    id: list_operations
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1551
+  summary: 'List all currently running operations on the App Service Environment.
+
+
+    List all currently running operations on the App Service Environment.
+
+    '
+  syntax:
+    content: list_operations(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id172
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id173
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id174
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id175
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id176
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+- *id177
+- &id185
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id178
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_usages
+  source:
+    id: list_usages
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1962
+  summary: 'Get global usage metrics of an App Service Environment.
+
+
+    Get global usage metrics of an App Service Environment.
+
+    '
+  syntax:
+    content: list_usages(resource_group_name, name, filter=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id179
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id180
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
+
+        Filter conforms to odata syntax. Example: $filter=(name.value eq
+
+        ''Metric1'' or name.value eq ''Metric2'') and startTime eq
+
+        ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
+
+        timeGrain eq duration''[Hour|Minute|Day]''.
+
+        '
+      id: filter
+      type: *id181
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id182
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id183
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id184
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+- *id185
+- &id192
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id186
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_vips
+  source:
+    id: list_vips
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 497
+  summary: 'Get IP addresses assigned to an App Service Environment.
+
+
+    Get IP addresses assigned to an App Service Environment.
+
+    '
+  syntax:
+    content: list_vips(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id187
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id188
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id189
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id190
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id191
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+- *id192
+- &id200
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id193
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_web_apps
+  source:
+    id: list_web_apps
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1815
+  summary: 'Get all apps in an App Service Environment.
+
+
+    Get all apps in an App Service Environment.
+
+    '
+  syntax:
+    content: list_web_apps(resource_group_name, name, properties_to_include=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id194
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id195
+    - defaultValue: None
+      description: 'Comma separated list of app properties
+
+        to include.
+
+        '
+      id: properties_to_include
+      type: *id196
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id197
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id198
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id199
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+- *id200
+- &id208
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id201
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_web_worker_metric_definitions
+  source:
+    id: list_web_worker_metric_definitions
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2455
+  summary: 'Get metric definitions for a worker pool of an App Service Environment.
+
+
+    Get metric definitions for a worker pool of an App Service Environment.
+
+    '
+  syntax:
+    content: list_web_worker_metric_definitions(resource_group_name, name, worker_pool_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id202
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id203
+    - description: 'Name of the worker pool.
+
+        '
+      id: worker_pool_name
+      type: *id204
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id205
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id206
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id207
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+- *id208
+- &id218
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id209
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_web_worker_metrics
+  source:
+    id: list_web_worker_metrics
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2530
+  summary: 'Get metrics for a worker pool of a AppServiceEnvironment (App Service
+
+    Environment).
+
+
+    Get metrics for a worker pool of a AppServiceEnvironment (App Service
+
+    Environment).
+
+    '
+  syntax:
+    content: list_web_worker_metrics(resource_group_name, name, worker_pool_name,
+      details=None, filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id210
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id211
+    - description: 'Name of worker pool
+
+        '
+      id: worker_pool_name
+      type: *id212
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
+
+        The default is <code>false</code>.
+
+        '
+      id: details
+      type: *id213
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
+
+        Filter conforms to odata syntax. Example: $filter=(name.value eq
+
+        ''Metric1'' or name.value eq ''Metric2'') and startTime eq
+
+        ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
+
+        timeGrain eq duration''[Hour|Minute|Day]''.
+
+        '
+      id: filter
+      type: *id214
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id215
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id216
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id217
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+- *id218
+- &id226
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id219
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_web_worker_usages
+  source:
+    id: list_web_worker_usages
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2694
+  summary: 'Get usage metrics for a worker pool of an App Service Environment.
+
+
+    Get usage metrics for a worker pool of an App Service Environment.
+
+    '
+  syntax:
+    content: list_web_worker_usages(resource_group_name, name, worker_pool_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id220
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id221
+    - description: 'Name of the worker pool.
+
+        '
+      id: worker_pool_name
+      type: *id222
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id223
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id224
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id225
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+- *id226
+- &id235
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id227
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_worker_pool_instance_metric_definitions
+  source:
+    id: list_worker_pool_instance_metric_definitions
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2282
+  summary: 'Get metric definitions for a specific instance of a worker pool of an
+
+    App Service Environment.
+
+
+    Get metric definitions for a specific instance of a worker pool of an
+
+    App Service Environment.
+
+    '
+  syntax:
+    content: list_worker_pool_instance_metric_definitions(resource_group_name, name,
+      worker_pool_name, instance, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id228
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id229
+    - description: 'Name of the worker pool.
+
+        '
+      id: worker_pool_name
+      type: *id230
+    - description: 'Name of the instance in the worker pool.
+
+        '
+      id: instance
+      type: *id231
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id232
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id233
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id234
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+- *id235
+- &id246
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id236
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_worker_pool_instance_metrics
+  source:
+    id: list_worker_pool_instance_metrics
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2362
+  summary: 'Get metrics for a specific instance of a worker pool of an App Service
+
+    Environment.
+
+
+    Get metrics for a specific instance of a worker pool of an App Service
+
+    Environment.
+
+    '
+  syntax:
+    content: list_worker_pool_instance_metrics(resource_group_name, name, worker_pool_name,
+      instance, details=None, filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id237
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id238
+    - description: 'Name of the worker pool.
+
+        '
+      id: worker_pool_name
+      type: *id239
+    - description: 'Name of the instance in the worker pool.
+
+        '
+      id: instance
+      type: *id240
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
+
+        The default is <code>false</code>.
+
+        '
+      id: details
+      type: *id241
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
+
+        Filter conforms to odata syntax. Example: $filter=(name.value eq
+
+        ''Metric1'' or name.value eq ''Metric2'') and startTime eq
+
+        ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
+
+        timeGrain eq duration''[Hour|Minute|Day]''.
+
+        '
+      id: filter
+      type: *id242
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id243
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id244
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id245
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+- *id246
+- &id254
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id247
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_worker_pool_skus
+  source:
+    id: list_worker_pool_skus
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2620
+  summary: 'Get available SKUs for scaling a worker pool.
+
+
+    Get available SKUs for scaling a worker pool.
+
+    '
+  syntax:
+    content: list_worker_pool_skus(resource_group_name, name, worker_pool_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id248
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id249
+    - description: 'Name of the worker pool.
+
+        '
+      id: worker_pool_name
+      type: *id250
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id251
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id252
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id253
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+- *id254
+- &id261
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id255
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_worker_pools
+  source:
+    id: list_worker_pools
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2042
+  summary: 'Get all worker pools of an App Service Environment.
+
+
+    Get all worker pools of an App Service Environment.
+
+    '
+  syntax:
+    content: list_worker_pools(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id256
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id257
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id258
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id259
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id260
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+- *id261
+- &id268
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id262
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: reboot
+  source:
+    id: reboot
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1615
+  summary: 'Reboot all machines in an App Service Environment.
+
+
+    Reboot all machines in an App Service Environment.
+
+    '
+  syntax:
+    content: reboot(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id263
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id264
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id265
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id266
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id267
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+- *id268
+- &id275
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id269
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: resume
+  source:
+    id: resume
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1672
+  summary: 'Resume an App Service Environment.
+
+
+    Resume an App Service Environment.
+
+    '
+  syntax:
+    content: resume(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id270
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id271
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id272
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id273
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id274
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+- *id275
+- &id282
+  class: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  exceptions: *id276
+  fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: suspend
+  source:
+    id: suspend
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_environments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1891
+  summary: 'Suspend an App Service Environment.
+
+
+    Suspend an App Service Environment.
+
+    '
+  syntax:
+    content: suspend(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id277
+    - description: 'Name of the App Service Environment.
+
+        '
+      id: name
+      type: *id278
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id279
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id280
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id281
+  type: method
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+- *id282
 references:
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+  isExternal: false
+  name: create_or_update_multi_role_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+  isExternal: false
+  name: create_or_update_worker_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+  isExternal: false
+  name: get_diagnostics_item
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+  isExternal: false
+  name: get_multi_role_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+  isExternal: false
+  name: get_worker_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+  isExternal: false
+  name: list_app_service_plans
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+  isExternal: false
+  name: list_capacities
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+  isExternal: false
+  name: list_diagnostics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+  isExternal: false
+  name: list_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+  isExternal: false
+  name: list_multi_role_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+  isExternal: false
+  name: list_multi_role_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+  isExternal: false
+  name: list_multi_role_pool_instance_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+  isExternal: false
+  name: list_multi_role_pool_instance_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+  isExternal: false
+  name: list_multi_role_pool_skus
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+  isExternal: false
+  name: list_multi_role_pools
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+  isExternal: false
+  name: list_multi_role_usages
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+  isExternal: false
+  name: list_operations
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+  isExternal: false
+  name: list_usages
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+  isExternal: false
+  name: list_vips
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+  isExternal: false
+  name: list_web_apps
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+  isExternal: false
+  name: list_web_worker_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+  isExternal: false
+  name: list_web_worker_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+  isExternal: false
+  name: list_web_worker_usages
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+  isExternal: false
+  name: list_worker_pool_instance_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+  isExternal: false
+  name: list_worker_pool_instance_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+  isExternal: false
+  name: list_worker_pool_skus
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+  isExternal: false
+  name: list_worker_pools
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+  isExternal: false
+  name: reboot
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+  isExternal: false
+  name: resume
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+  isExternal: false
+  name: suspend
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+  isExternal: false
+  name: create_or_update_multi_role_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_multi_role_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+  isExternal: false
+  name: create_or_update_worker_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update_worker_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.delete
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+  isExternal: false
+  name: get_diagnostics_item
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_diagnostics_item
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+  isExternal: false
+  name: get_multi_role_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_multi_role_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+  isExternal: false
+  name: get_worker_pool
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.get_worker_pool
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+  isExternal: false
+  name: list_app_service_plans
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_app_service_plans
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_by_resource_group
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+  isExternal: false
+  name: list_capacities
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_capacities
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+  isExternal: false
+  name: list_diagnostics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_diagnostics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+  isExternal: false
+  name: list_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+  isExternal: false
+  name: list_multi_role_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+  isExternal: false
+  name: list_multi_role_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+  isExternal: false
+  name: list_multi_role_pool_instance_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+  isExternal: false
+  name: list_multi_role_pool_instance_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_instance_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+  isExternal: false
+  name: list_multi_role_pool_skus
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pool_skus
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+  isExternal: false
+  name: list_multi_role_pools
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_pools
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+  isExternal: false
+  name: list_multi_role_usages
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_multi_role_usages
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+  isExternal: false
+  name: list_operations
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_operations
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+  isExternal: false
+  name: list_usages
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_usages
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+  isExternal: false
+  name: list_vips
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_vips
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+  isExternal: false
+  name: list_web_apps
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_apps
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+  isExternal: false
+  name: list_web_worker_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+  isExternal: false
+  name: list_web_worker_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+  isExternal: false
+  name: list_web_worker_usages
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_web_worker_usages
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+  isExternal: false
+  name: list_worker_pool_instance_metric_definitions
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metric_definitions
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+  isExternal: false
+  name: list_worker_pool_instance_metrics
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_instance_metrics
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+  isExternal: false
+  name: list_worker_pool_skus
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pool_skus
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+  isExternal: false
+  name: list_worker_pools
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.list_worker_pools
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+  isExternal: false
+  name: reboot
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.reboot
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+  isExternal: false
+  name: resume
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.resume
+- fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
+  isExternal: false
+  name: suspend
+  parent: azure.mgmt.web.operations.AppServiceEnvironmentsOperations
+  uid: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.suspend
 - fullName: azure.mgmt.web.operations.AppServiceEnvironmentsOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: ScaleAction(direction, type, cooldown, value='1')
-    parameters:
+    parameters: &id001
     - description: 'the scale direction. Whether the scaling action
 
         increases or decreases the number of instances. Possible values include:
@@ -70,6 +70,33 @@ items:
       id: cooldown
       type:
       - timedelta
+  type: class
+  uid: azure.mgmt.monitor.models.ScaleAction
+- children: []
+  class: azure.mgmt.monitor.models.ScaleAction
+  fullName: azure.mgmt.monitor.models.ScaleAction
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: ScaleAction
+  source:
+    id: ScaleAction
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\scale_action.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\scale_action.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The parameters for the scaling action.
+
+    '
+  syntax:
+    content: ScaleAction(direction, type, cooldown, value='1')
+    parameters: *id001
   type: class
   uid: azure.mgmt.monitor.models.ScaleAction
 references: []

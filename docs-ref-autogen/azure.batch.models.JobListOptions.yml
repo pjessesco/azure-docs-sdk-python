@@ -26,7 +26,7 @@ items:
   syntax:
     content: JobListOptions(filter=None, select=None, expand=None, max_results=1000,
       timeout=30, client_request_id=None, return_client_request_id=False, ocp_date=None)
-    parameters:
+    parameters: &id001
     - description: 'An OData $filter clause.
 
         '
@@ -89,6 +89,34 @@ items:
       id: ocp_date
       type:
       - datetime
+  type: class
+  uid: azure.batch.models.JobListOptions
+- children: []
+  class: azure.batch.models.JobListOptions
+  fullName: azure.batch.models.JobListOptions
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: JobListOptions
+  source:
+    id: JobListOptions
+    path: azure-batch\azure\batch\models\job_list_options.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\job_list_options.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Additional parameters for the Job_list operation.
+
+    '
+  syntax:
+    content: JobListOptions(filter=None, select=None, expand=None, max_results=1000,
+      timeout=30, client_request_id=None, return_client_request_id=False, ocp_date=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.JobListOptions
 references: []

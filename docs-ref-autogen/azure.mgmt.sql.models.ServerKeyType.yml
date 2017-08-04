@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.ServerKeyType
-- fullName: azure.mgmt.sql.models.ServerKeyType.azure_key_vault
+- children:
+  - azure.mgmt.sql.models.ServerKeyType.azure_key_vault
+  - azure.mgmt.sql.models.ServerKeyType.service_managed
+  class: azure.mgmt.sql.models.ServerKeyType
+  fullName: azure.mgmt.sql.models.ServerKeyType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: ServerKeyType
+  source:
+    id: ServerKeyType
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 308
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.ServerKeyType
+- &id001
+  fullName: azure.mgmt.sql.models.ServerKeyType.azure_key_vault
   id: azure_key_vault
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.sql.models.ServerKeyType
   type: attribute
   uid: azure.mgmt.sql.models.ServerKeyType.azure_key_vault
-- fullName: azure.mgmt.sql.models.ServerKeyType.service_managed
+- &id002
+  fullName: azure.mgmt.sql.models.ServerKeyType.service_managed
   id: service_managed
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.sql.models.ServerKeyType
   type: attribute
   uid: azure.mgmt.sql.models.ServerKeyType.service_managed
+- *id001
+- *id002
 references: []

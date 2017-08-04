@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.DataMaskingState
-- fullName: azure.mgmt.sql.models.DataMaskingState.disabled
+- children:
+  - azure.mgmt.sql.models.DataMaskingState.disabled
+  - azure.mgmt.sql.models.DataMaskingState.enabled
+  class: azure.mgmt.sql.models.DataMaskingState
+  fullName: azure.mgmt.sql.models.DataMaskingState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: DataMaskingState
+  source:
+    id: DataMaskingState
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 49
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.DataMaskingState
+- &id001
+  fullName: azure.mgmt.sql.models.DataMaskingState.disabled
   id: disabled
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.sql.models.DataMaskingState
   type: attribute
   uid: azure.mgmt.sql.models.DataMaskingState.disabled
-- fullName: azure.mgmt.sql.models.DataMaskingState.enabled
+- &id002
+  fullName: azure.mgmt.sql.models.DataMaskingState.enabled
   id: enabled
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.sql.models.DataMaskingState
   type: attribute
   uid: azure.mgmt.sql.models.DataMaskingState.enabled
+- *id001
+- *id002
 references: []

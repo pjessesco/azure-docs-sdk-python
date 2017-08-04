@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.OnAllTasksComplete
-- fullName: azure.batch.models.OnAllTasksComplete.no_action
+- children:
+  - azure.batch.models.OnAllTasksComplete.no_action
+  - azure.batch.models.OnAllTasksComplete.terminate_job
+  class: azure.batch.models.OnAllTasksComplete
+  fullName: azure.batch.models.OnAllTasksComplete
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: OnAllTasksComplete
+  source:
+    id: OnAllTasksComplete
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 115
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.OnAllTasksComplete
+- &id001
+  fullName: azure.batch.models.OnAllTasksComplete.no_action
   id: no_action
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.batch.models.OnAllTasksComplete
   type: attribute
   uid: azure.batch.models.OnAllTasksComplete.no_action
-- fullName: azure.batch.models.OnAllTasksComplete.terminate_job
+- &id002
+  fullName: azure.batch.models.OnAllTasksComplete.terminate_job
   id: terminate_job
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.batch.models.OnAllTasksComplete
   type: attribute
   uid: azure.batch.models.OnAllTasksComplete.terminate_job
+- *id001
+- *id002
 references: []

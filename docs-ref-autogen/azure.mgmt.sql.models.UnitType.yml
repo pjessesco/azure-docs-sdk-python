@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.UnitType
-- fullName: azure.mgmt.sql.models.UnitType.bytes
+- children:
+  - azure.mgmt.sql.models.UnitType.bytes
+  - azure.mgmt.sql.models.UnitType.bytes_per_second
+  - azure.mgmt.sql.models.UnitType.count
+  - azure.mgmt.sql.models.UnitType.count_per_second
+  - azure.mgmt.sql.models.UnitType.percent
+  - azure.mgmt.sql.models.UnitType.seconds
+  class: azure.mgmt.sql.models.UnitType
+  fullName: azure.mgmt.sql.models.UnitType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: UnitType
+  source:
+    id: UnitType
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 122
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.UnitType
+- &id001
+  fullName: azure.mgmt.sql.models.UnitType.bytes
   id: bytes
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.sql.models.UnitType
   type: attribute
   uid: azure.mgmt.sql.models.UnitType.bytes
-- fullName: azure.mgmt.sql.models.UnitType.bytes_per_second
+- &id002
+  fullName: azure.mgmt.sql.models.UnitType.bytes_per_second
   id: bytes_per_second
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.sql.models.UnitType
   type: attribute
   uid: azure.mgmt.sql.models.UnitType.bytes_per_second
-- fullName: azure.mgmt.sql.models.UnitType.count
+- &id003
+  fullName: azure.mgmt.sql.models.UnitType.count
   id: count
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.sql.models.UnitType
   type: attribute
   uid: azure.mgmt.sql.models.UnitType.count
-- fullName: azure.mgmt.sql.models.UnitType.count_per_second
+- &id004
+  fullName: azure.mgmt.sql.models.UnitType.count_per_second
   id: count_per_second
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.sql.models.UnitType
   type: attribute
   uid: azure.mgmt.sql.models.UnitType.count_per_second
-- fullName: azure.mgmt.sql.models.UnitType.percent
+- &id005
+  fullName: azure.mgmt.sql.models.UnitType.percent
   id: percent
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.sql.models.UnitType
   type: attribute
   uid: azure.mgmt.sql.models.UnitType.percent
-- fullName: azure.mgmt.sql.models.UnitType.seconds
+- &id006
+  fullName: azure.mgmt.sql.models.UnitType.seconds
   id: seconds
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.sql.models.UnitType
   type: attribute
   uid: azure.mgmt.sql.models.UnitType.seconds
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

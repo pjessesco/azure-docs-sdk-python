@@ -34,7 +34,7 @@ items:
     content: SiteSourceControl(location, name=None, kind=None, type=None, tags=None,
       repo_url=None, branch=None, is_manual_integration=None, deployment_rollback_enabled=None,
       is_mercurial=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -103,13 +103,50 @@ items:
       id: is_mercurial
       type:
       - bool
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
       id: id
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.SiteSourceControl
+- children: []
+  class: azure.mgmt.web.models.SiteSourceControl
+  fullName: azure.mgmt.web.models.SiteSourceControl
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: SiteSourceControl
+  source:
+    id: SiteSourceControl
+    path: azure-mgmt-web\azure\mgmt\web\models\site_source_control.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\site_source_control.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Source control configuration for an app.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: SiteSourceControl(location, name=None, kind=None, type=None, tags=None,
+      repo_url=None, branch=None, is_manual_integration=None, deployment_rollback_enabled=None,
+      is_mercurial=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.SiteSourceControl
 references: []

@@ -33,7 +33,7 @@ items:
   syntax:
     content: CertificateOrderAction(location, name=None, kind=None, type=None, tags=None,
       certificate_order_action_type=None, created_at=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -90,13 +90,49 @@ items:
       id: created_at
       type:
       - datetime
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
       id: id
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.CertificateOrderAction
+- children: []
+  class: azure.mgmt.web.models.CertificateOrderAction
+  fullName: azure.mgmt.web.models.CertificateOrderAction
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: CertificateOrderAction
+  source:
+    id: CertificateOrderAction
+    path: azure-mgmt-web\azure\mgmt\web\models\certificate_order_action.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\certificate_order_action.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Certificate order action.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: CertificateOrderAction(location, name=None, kind=None, type=None, tags=None,
+      certificate_order_action_type=None, created_at=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.CertificateOrderAction
 references: []

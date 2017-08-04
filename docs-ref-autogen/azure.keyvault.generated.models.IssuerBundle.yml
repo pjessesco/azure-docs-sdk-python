@@ -31,7 +31,7 @@ items:
   syntax:
     content: IssuerBundle(provider=None, credentials=None, organization_details=None,
       attributes=None)
-    parameters:
+    parameters: &id001
     - description: 'The issuer provider.
 
         '
@@ -58,13 +58,47 @@ items:
       id: attributes
       type:
       - azure.keyvault.models.IssuerAttributes
-    variables:
+    variables: &id002
     - description: 'Identifier for the issuer object.
 
         '
       id: id
       type:
       - str
+  type: class
+  uid: azure.keyvault.generated.models.IssuerBundle
+- children: []
+  class: azure.keyvault.generated.models.IssuerBundle
+  fullName: azure.keyvault.generated.models.IssuerBundle
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.generated.models
+  name: IssuerBundle
+  source:
+    id: IssuerBundle
+    path: azure-keyvault\azure\keyvault\models\issuer_bundle.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\issuer_bundle.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The issuer for Key Vault certificate.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: IssuerBundle(provider=None, credentials=None, organization_details=None,
+      attributes=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.keyvault.generated.models.IssuerBundle
 references: []

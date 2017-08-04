@@ -33,7 +33,7 @@ items:
   syntax:
     content: ConnectionStringDictionary(location, name=None, kind=None, type=None,
       tags=None, properties=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -70,13 +70,49 @@ items:
       id: properties
       type:
       - dict
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
       id: id
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.ConnectionStringDictionary
+- children: []
+  class: azure.mgmt.web.models.ConnectionStringDictionary
+  fullName: azure.mgmt.web.models.ConnectionStringDictionary
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: ConnectionStringDictionary
+  source:
+    id: ConnectionStringDictionary
+    path: azure-mgmt-web\azure\mgmt\web\models\connection_string_dictionary.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\connection_string_dictionary.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'String dictionary resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: ConnectionStringDictionary(location, name=None, kind=None, type=None,
+      tags=None, properties=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.ConnectionStringDictionary
 references: []

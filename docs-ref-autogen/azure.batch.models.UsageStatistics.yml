@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: UsageStatistics(start_time, last_update_time, dedicated_core_time)
-    parameters:
+    parameters: &id001
     - description: 'The start time of the time range covered by the
 
         statistics.
@@ -52,6 +52,33 @@ items:
       id: dedicated_core_time
       type:
       - timedelta
+  type: class
+  uid: azure.batch.models.UsageStatistics
+- children: []
+  class: azure.batch.models.UsageStatistics
+  fullName: azure.batch.models.UsageStatistics
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: UsageStatistics
+  source:
+    id: UsageStatistics
+    path: azure-batch\azure\batch\models\usage_statistics.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\usage_statistics.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Statistics related to pool usage information.
+
+    '
+  syntax:
+    content: UsageStatistics(start_time, last_update_time, dedicated_core_time)
+    parameters: *id001
   type: class
   uid: azure.batch.models.UsageStatistics
 references: []

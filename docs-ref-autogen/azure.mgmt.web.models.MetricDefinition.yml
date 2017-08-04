@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: MetricDefinition(location, name=None, kind=None, type=None, tags=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -63,7 +63,7 @@ items:
       id: tags
       type:
       - dict
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
@@ -104,6 +104,41 @@ items:
       id: display_name
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.MetricDefinition
+- children: []
+  class: azure.mgmt.web.models.MetricDefinition
+  fullName: azure.mgmt.web.models.MetricDefinition
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: MetricDefinition
+  source:
+    id: MetricDefinition
+    path: azure-mgmt-web\azure\mgmt\web\models\metric_definition.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\metric_definition.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Metadata for a metric.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: MetricDefinition(location, name=None, kind=None, type=None, tags=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.MetricDefinition
 references: []

@@ -11,6 +11,15 @@ items:
   - azure.graphrbac.operations.GroupsOperations.is_member_of
   - azure.graphrbac.operations.GroupsOperations.list
   - azure.graphrbac.operations.GroupsOperations.remove_member
+  - azure.graphrbac.operations.GroupsOperations.add_member
+  - azure.graphrbac.operations.GroupsOperations.create
+  - azure.graphrbac.operations.GroupsOperations.delete
+  - azure.graphrbac.operations.GroupsOperations.get
+  - azure.graphrbac.operations.GroupsOperations.get_group_members
+  - azure.graphrbac.operations.GroupsOperations.get_member_groups
+  - azure.graphrbac.operations.GroupsOperations.is_member_of
+  - azure.graphrbac.operations.GroupsOperations.list
+  - azure.graphrbac.operations.GroupsOperations.remove_member
   class: azure.graphrbac.operations.GroupsOperations
   fullName: azure.graphrbac.operations.GroupsOperations
   inheritance:
@@ -41,7 +50,7 @@ items:
     '
   syntax:
     content: GroupsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -58,7 +67,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "1.6".
 
         '
@@ -66,7 +75,7 @@ items:
   type: class
   uid: azure.graphrbac.operations.GroupsOperations
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.add_member
   langs:
@@ -93,7 +102,7 @@ items:
 
         '
       id: group_object_id
-      type:
+      type: &id004
       - str
     - description: 'A member object URL, such as
 
@@ -107,14 +116,14 @@ items:
 
         '
       id: url
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -123,7 +132,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -131,16 +140,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.add_member
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id010
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.create
   langs:
@@ -165,20 +174,20 @@ items:
 
         '
       id: display_name
-      type:
+      type: &id011
       - str
     - description: 'Mail nickname
 
         '
       id: mail_nickname
-      type:
+      type: &id012
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id013
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -187,7 +196,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id014
       - bool
     - description: '*Operation configuration
 
@@ -195,16 +204,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id015
       type:
       - azure.graphrbac.models.ADGroup
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.create
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id017
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.delete
   langs:
@@ -229,14 +238,14 @@ items:
 
         '
       id: group_object_id
-      type:
+      type: &id018
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id019
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -245,7 +254,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id020
       - bool
     - description: '*Operation configuration
 
@@ -253,16 +262,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id021
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.delete
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id023
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.get
   langs:
@@ -289,14 +298,14 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id024
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id025
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -305,7 +314,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id026
       - bool
     - description: '*Operation configuration
 
@@ -313,16 +322,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id027
       type:
       - azure.graphrbac.models.ADGroup
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.get
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id029
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.get_group_members
   langs:
@@ -349,14 +358,14 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -365,7 +374,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -373,13 +382,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - azure.graphrbac.models.AADObjectPaged
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.get_group_members
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id035
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.get_member_groups
   langs:
@@ -409,7 +418,7 @@ items:
 
         '
       id: object_id
-      type:
+      type: &id036
       - str
     - description: 'If true, only membership in
 
@@ -419,14 +428,14 @@ items:
 
         '
       id: security_enabled_only
-      type:
+      type: &id037
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id038
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -435,7 +444,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id039
       - bool
     - description: '*Operation configuration
 
@@ -443,13 +452,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id040
       type:
       - azure.graphrbac.models.StrPaged
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.get_member_groups
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id042
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.is_member_of
   langs:
@@ -476,7 +485,7 @@ items:
 
         '
       id: group_id
-      type:
+      type: &id043
       - str
     - description: 'The object ID of the contact, group, user, or
 
@@ -484,14 +493,14 @@ items:
 
         '
       id: member_id
-      type:
+      type: &id044
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id045
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -500,7 +509,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id046
       - bool
     - description: '*Operation configuration
 
@@ -508,16 +517,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id047
       type:
       - azure.graphrbac.models.CheckGroupMembershipResult
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.is_member_of
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id049
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.list
   langs:
@@ -543,14 +552,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id050
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -559,7 +568,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
     - description: '*Operation configuration
 
@@ -567,13 +576,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id053
       type:
       - azure.graphrbac.models.ADGroupPaged
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.list
 - class: azure.graphrbac.operations.GroupsOperations
-  exceptions:
+  exceptions: &id055
   - type: azure.graphrbac.models.GraphErrorException
   fullName: azure.graphrbac.operations.GroupsOperations.remove_member
   langs:
@@ -601,20 +610,20 @@ items:
 
         '
       id: group_object_id
-      type:
+      type: &id056
       - str
     - description: 'Member object id
 
         '
       id: member_object_id
-      type:
+      type: &id057
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id058
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -623,7 +632,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id059
       - bool
     - description: '*Operation configuration
 
@@ -631,15 +640,664 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id060
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.graphrbac.operations.GroupsOperations.remove_member
+- children:
+  - azure.graphrbac.operations.GroupsOperations.add_member
+  - azure.graphrbac.operations.GroupsOperations.create
+  - azure.graphrbac.operations.GroupsOperations.delete
+  - azure.graphrbac.operations.GroupsOperations.get
+  - azure.graphrbac.operations.GroupsOperations.get_group_members
+  - azure.graphrbac.operations.GroupsOperations.get_member_groups
+  - azure.graphrbac.operations.GroupsOperations.is_member_of
+  - azure.graphrbac.operations.GroupsOperations.list
+  - azure.graphrbac.operations.GroupsOperations.remove_member
+  class: azure.graphrbac.operations.GroupsOperations
+  fullName: azure.graphrbac.operations.GroupsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: GroupsOperations
+  source:
+    id: GroupsOperations
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'GroupsOperations operations.
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: GroupsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.graphrbac.operations.GroupsOperations
+- &id009
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id003
+  fullName: azure.graphrbac.operations.GroupsOperations.add_member
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: add_member
+  source:
+    id: add_member
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 158
+  summary: 'Add a member to a group.
+
+    '
+  syntax:
+    content: add_member(group_object_id, url, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the group to which to add the
+
+        member.
+
+        '
+      id: group_object_id
+      type: *id004
+    - description: 'A member object URL, such as
+
+        "[https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd](https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd)",
+
+        where "0b1f9851-1bf0-433f-aec3-cb9272f093dc" is the tenantId and
+
+        "f260bbc4-c254-447b-94cf-293b5ec434dd" is the objectId of the member
+
+        (user, application, servicePrincipal, group) to be added.
+
+        '
+      id: url
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.add_member
+- *id009
+- &id016
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id010
+  fullName: azure.graphrbac.operations.GroupsOperations.create
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: create
+  source:
+    id: create
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 271
+  summary: 'Create a group in the directory.
+
+    '
+  syntax:
+    content: create(display_name, mail_nickname, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Group display name
+
+        '
+      id: display_name
+      type: *id011
+    - description: 'Mail nickname
+
+        '
+      id: mail_nickname
+      type: *id012
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id013
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id014
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id015
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.create
+- *id016
+- &id022
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id017
+  fullName: azure.graphrbac.operations.GroupsOperations.delete
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 221
+  summary: 'Delete a group from the directory.
+
+    '
+  syntax:
+    content: delete(group_object_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the group to delete.
+
+        '
+      id: group_object_id
+      type: *id018
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id019
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id020
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id021
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.delete
+- *id022
+- &id028
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id023
+  fullName: azure.graphrbac.operations.GroupsOperations.get
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: get
+  source:
+    id: get
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 478
+  summary: 'Gets group information from the directory.
+
+    '
+  syntax:
+    content: get(object_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the user for which to get group
+
+        information.
+
+        '
+      id: object_id
+      type: *id024
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id025
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id026
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id027
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.get
+- *id028
+- &id034
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id029
+  fullName: azure.graphrbac.operations.GroupsOperations.get_group_members
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: get_group_members
+  source:
+    id: get_group_members
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 406
+  summary: 'Gets the members of a group.
+
+    '
+  syntax:
+    content: get_group_members(object_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the group whose members should be
+
+        retrieved.
+
+        '
+      id: object_id
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.get_group_members
+- *id034
+- &id041
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id035
+  fullName: azure.graphrbac.operations.GroupsOperations.get_member_groups
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: get_member_groups
+  source:
+    id: get_member_groups
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 536
+  summary: 'Gets a collection of object IDs of groups of which the specified group
+
+    is a member.
+
+    '
+  syntax:
+    content: get_member_groups(object_id, security_enabled_only, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the group for which to get group
+
+        membership.
+
+        '
+      id: object_id
+      type: *id036
+    - description: 'If true, only membership in
+
+        security-enabled groups should be checked. Otherwise, membership in
+
+        all groups should be checked.
+
+        '
+      id: security_enabled_only
+      type: *id037
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id038
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id039
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id040
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.get_member_groups
+- *id041
+- &id048
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id042
+  fullName: azure.graphrbac.operations.GroupsOperations.is_member_of
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: is_member_of
+  source:
+    id: is_member_of
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Checks whether the specified user, group, contact, or service principal
+
+    is a direct or transitive member of the specified group.
+
+    '
+  syntax:
+    content: is_member_of(group_id, member_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the group to check.
+
+        '
+      id: group_id
+      type: *id043
+    - description: 'The object ID of the contact, group, user, or
+
+        service principal to check for membership in the specified group.
+
+        '
+      id: member_id
+      type: *id044
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id045
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id046
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id047
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.is_member_of
+- *id048
+- &id054
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id049
+  fullName: azure.graphrbac.operations.GroupsOperations.list
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: list
+  source:
+    id: list
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 335
+  summary: 'Gets list of groups for the current tenant.
+
+    '
+  syntax:
+    content: list(filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'The filter to apply to the operation.
+
+        '
+      id: filter
+      type: *id050
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id053
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.list
+- *id054
+- &id061
+  class: azure.graphrbac.operations.GroupsOperations
+  exceptions: *id055
+  fullName: azure.graphrbac.operations.GroupsOperations.remove_member
+  langs:
+  - python
+  module: azure.graphrbac.operations
+  name: remove_member
+  source:
+    id: remove_member
+    path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\operations\groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 104
+  summary: 'Remove a member from a group.
+
+    '
+  syntax:
+    content: remove_member(group_object_id, member_object_id, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The object ID of the group from which to
+
+        remove the member.
+
+        '
+      id: group_object_id
+      type: *id056
+    - description: 'Member object id
+
+        '
+      id: member_object_id
+      type: *id057
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id058
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id059
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id060
+  type: method
+  uid: azure.graphrbac.operations.GroupsOperations.remove_member
+- *id061
 references:
+- fullName: azure.graphrbac.operations.GroupsOperations.add_member
+  isExternal: false
+  name: add_member
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.add_member
+- fullName: azure.graphrbac.operations.GroupsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.create
+- fullName: azure.graphrbac.operations.GroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.delete
+- fullName: azure.graphrbac.operations.GroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.get
+- fullName: azure.graphrbac.operations.GroupsOperations.get_group_members
+  isExternal: false
+  name: get_group_members
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.get_group_members
+- fullName: azure.graphrbac.operations.GroupsOperations.get_member_groups
+  isExternal: false
+  name: get_member_groups
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.get_member_groups
+- fullName: azure.graphrbac.operations.GroupsOperations.is_member_of
+  isExternal: false
+  name: is_member_of
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.is_member_of
+- fullName: azure.graphrbac.operations.GroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.list
+- fullName: azure.graphrbac.operations.GroupsOperations.remove_member
+  isExternal: false
+  name: remove_member
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.remove_member
+- fullName: azure.graphrbac.operations.GroupsOperations.add_member
+  isExternal: false
+  name: add_member
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.add_member
+- fullName: azure.graphrbac.operations.GroupsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.create
+- fullName: azure.graphrbac.operations.GroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.delete
+- fullName: azure.graphrbac.operations.GroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.get
+- fullName: azure.graphrbac.operations.GroupsOperations.get_group_members
+  isExternal: false
+  name: get_group_members
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.get_group_members
+- fullName: azure.graphrbac.operations.GroupsOperations.get_member_groups
+  isExternal: false
+  name: get_member_groups
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.get_member_groups
+- fullName: azure.graphrbac.operations.GroupsOperations.is_member_of
+  isExternal: false
+  name: is_member_of
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.is_member_of
+- fullName: azure.graphrbac.operations.GroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.list
+- fullName: azure.graphrbac.operations.GroupsOperations.remove_member
+  isExternal: false
+  name: remove_member
+  parent: azure.graphrbac.operations.GroupsOperations
+  uid: azure.graphrbac.operations.GroupsOperations.remove_member
 - fullName: azure.graphrbac.operations.GroupsOperations.add_member
   isExternal: false
   name: add_member

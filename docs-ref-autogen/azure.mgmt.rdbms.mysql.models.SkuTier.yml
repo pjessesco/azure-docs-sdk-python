@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.rdbms.mysql.models.SkuTier
-- fullName: azure.mgmt.rdbms.mysql.models.SkuTier.basic
+- children:
+  - azure.mgmt.rdbms.mysql.models.SkuTier.basic
+  - azure.mgmt.rdbms.mysql.models.SkuTier.standard
+  class: azure.mgmt.rdbms.mysql.models.SkuTier
+  fullName: azure.mgmt.rdbms.mysql.models.SkuTier
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.models
+  name: SkuTier
+  source:
+    id: SkuTier
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\models\my_sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\models\my_sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 34
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.rdbms.mysql.models.SkuTier
+- &id001
+  fullName: azure.mgmt.rdbms.mysql.models.SkuTier.basic
   id: basic
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.rdbms.mysql.models.SkuTier
   type: attribute
   uid: azure.mgmt.rdbms.mysql.models.SkuTier.basic
-- fullName: azure.mgmt.rdbms.mysql.models.SkuTier.standard
+- &id002
+  fullName: azure.mgmt.rdbms.mysql.models.SkuTier.standard
   id: standard
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.rdbms.mysql.models.SkuTier
   type: attribute
   uid: azure.mgmt.rdbms.mysql.models.SkuTier.standard
+- *id001
+- *id002
 references: []

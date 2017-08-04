@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.DisableComputeNodeSchedulingOption
-- fullName: azure.batch.models.DisableComputeNodeSchedulingOption.requeue
+- children:
+  - azure.batch.models.DisableComputeNodeSchedulingOption.requeue
+  - azure.batch.models.DisableComputeNodeSchedulingOption.task_completion
+  - azure.batch.models.DisableComputeNodeSchedulingOption.terminate
+  class: azure.batch.models.DisableComputeNodeSchedulingOption
+  fullName: azure.batch.models.DisableComputeNodeSchedulingOption
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: DisableComputeNodeSchedulingOption
+  source:
+    id: DisableComputeNodeSchedulingOption
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 273
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.DisableComputeNodeSchedulingOption
+- &id001
+  fullName: azure.batch.models.DisableComputeNodeSchedulingOption.requeue
   id: requeue
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.batch.models.DisableComputeNodeSchedulingOption
   type: attribute
   uid: azure.batch.models.DisableComputeNodeSchedulingOption.requeue
-- fullName: azure.batch.models.DisableComputeNodeSchedulingOption.task_completion
+- &id002
+  fullName: azure.batch.models.DisableComputeNodeSchedulingOption.task_completion
   id: task_completion
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.batch.models.DisableComputeNodeSchedulingOption
   type: attribute
   uid: azure.batch.models.DisableComputeNodeSchedulingOption.task_completion
-- fullName: azure.batch.models.DisableComputeNodeSchedulingOption.terminate
+- &id003
+  fullName: azure.batch.models.DisableComputeNodeSchedulingOption.terminate
   id: terminate
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.batch.models.DisableComputeNodeSchedulingOption
   type: attribute
   uid: azure.batch.models.DisableComputeNodeSchedulingOption.terminate
+- *id001
+- *id002
+- *id003
 references: []

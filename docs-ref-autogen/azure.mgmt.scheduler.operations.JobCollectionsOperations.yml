@@ -10,6 +10,14 @@ items:
   - azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
   - azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
   - azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
   class: azure.mgmt.scheduler.operations.JobCollectionsOperations
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations
   inheritance:
@@ -39,7 +47,7 @@ items:
     '
   syntax:
     content: JobCollectionsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -56,7 +64,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version. Constant value: "2016-03-01".
 
         '
@@ -64,7 +72,7 @@ items:
   type: class
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
   langs:
@@ -90,26 +98,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id005
       - str
     - description: 'The job collection definition.
 
         '
       id: job_collection
-      type:
+      type: &id006
       - azure.mgmt.scheduler.models.JobCollectionDefinition
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -118,7 +126,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -126,16 +134,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.scheduler.models.JobCollectionDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
   langs:
@@ -161,20 +169,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -183,20 +191,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
   langs:
@@ -222,20 +230,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -244,20 +252,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
-    return:
+    return: &id023
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
   langs:
@@ -283,20 +291,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id026
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id028
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -305,20 +313,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id029
       - bool
-    return:
+    return: &id030
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id032
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
   langs:
@@ -344,20 +352,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id033
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id034
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id035
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -366,7 +374,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id036
       - bool
     - description: '*Operation configuration
 
@@ -374,16 +382,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id037
       type:
       - azure.mgmt.scheduler.models.JobCollectionDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id039
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
   langs:
@@ -409,14 +417,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id040
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id041
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -425,7 +433,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id042
       - bool
     - description: '*Operation configuration
 
@@ -433,13 +441,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id043
       type:
       - azure.mgmt.scheduler.models.JobCollectionDefinitionPaged
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id045
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
   langs:
@@ -465,7 +473,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id046
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -474,7 +482,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id047
       - bool
     - description: '*Operation configuration
 
@@ -482,13 +490,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id048
       type:
       - azure.mgmt.scheduler.models.JobCollectionDefinitionPaged
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
 - class: azure.mgmt.scheduler.operations.JobCollectionsOperations
-  exceptions:
+  exceptions: &id050
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
   langs:
@@ -514,26 +522,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id051
       - str
     - description: 'The job collection name.
 
         '
       id: job_collection_name
-      type:
+      type: &id052
       - str
     - description: 'The job collection definition.
 
         '
       id: job_collection
-      type:
+      type: &id053
       - azure.mgmt.scheduler.models.JobCollectionDefinition
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id054
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -542,7 +550,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id055
       - bool
     - description: '*Operation configuration
 
@@ -550,15 +558,569 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id056
       type:
       - azure.mgmt.scheduler.models.JobCollectionDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+- children:
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+  - azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: JobCollectionsOperations
+  source:
+    id: JobCollectionsOperations
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'JobCollectionsOperations operations.
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: JobCollectionsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations
+- &id010
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 230
+  summary: 'Provisions a new job collection or updates an existing job collection.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, job_collection_name, job_collection,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id005
+    - description: 'The job collection definition.
+
+        '
+      id: job_collection
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 370
+  summary: 'Deletes a job collection.
+
+    '
+  syntax:
+    content: delete(resource_group_name, job_collection_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: disable
+  source:
+    id: disable
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 524
+  summary: 'Disables all of the jobs in the job collection.
+
+    '
+  syntax:
+    content: disable(resource_group_name, job_collection_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    return: *id023
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+- *id024
+- &id031
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id025
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: enable
+  source:
+    id: enable
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 447
+  summary: 'Enables all of the jobs in the job collection.
+
+    '
+  syntax:
+    content: enable(resource_group_name, job_collection_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id026
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    return: *id030
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+- *id031
+- &id038
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id032
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 168
+  summary: 'Gets a job collection.
+
+    '
+  syntax:
+    content: get(resource_group_name, job_collection_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id033
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id034
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id035
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id036
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id037
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+- *id038
+- &id044
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id039
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 102
+  summary: 'Gets all job collections under specified resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id040
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id041
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id042
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id043
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+- *id044
+- &id049
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id045
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: list_by_subscription
+  source:
+    id: list_by_subscription
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Gets all job collections under specified subscription.
+
+    '
+  syntax:
+    content: list_by_subscription(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id046
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id047
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id048
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+- *id049
+- &id057
+  class: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  exceptions: *id050
+  fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+  langs:
+  - python
+  module: azure.mgmt.scheduler.operations
+  name: patch
+  source:
+    id: patch
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\operations\job_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 301
+  summary: 'Patches an existing job collection.
+
+    '
+  syntax:
+    content: patch(resource_group_name, job_collection_name, job_collection, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id051
+    - description: 'The job collection name.
+
+        '
+      id: job_collection_name
+      type: *id052
+    - description: 'The job collection definition.
+
+        '
+      id: job_collection
+      type: *id053
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id054
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id055
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id056
+  type: method
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+- *id057
 references:
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+  isExternal: false
+  name: disable
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+  isExternal: false
+  name: enable
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+  isExternal: false
+  name: list_by_subscription
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.delete
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+  isExternal: false
+  name: disable
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.disable
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+  isExternal: false
+  name: enable
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.enable
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.get
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_resource_group
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+  isExternal: false
+  name: list_by_subscription
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.list_by_subscription
+- fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
+  isExternal: false
+  name: patch
+  parent: azure.mgmt.scheduler.operations.JobCollectionsOperations
+  uid: azure.mgmt.scheduler.operations.JobCollectionsOperations.patch
 - fullName: azure.mgmt.scheduler.operations.JobCollectionsOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: AutoHealActions(action_type=None, custom_action=None, min_process_execution_time=None)
-    parameters:
+    parameters: &id001
     - description: 'Predefined action to be taken. Possible values
 
         include: ''Recycle'', ''LogEvent'', ''CustomAction''
@@ -50,6 +50,33 @@ items:
       id: min_process_execution_time
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.AutoHealActions
+- children: []
+  class: azure.mgmt.web.models.AutoHealActions
+  fullName: azure.mgmt.web.models.AutoHealActions
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: AutoHealActions
+  source:
+    id: AutoHealActions
+    path: azure-mgmt-web\azure\mgmt\web\models\auto_heal_actions.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\auto_heal_actions.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Actions which to take by the auto-heal module when a rule is triggered.
+
+    '
+  syntax:
+    content: AutoHealActions(action_type=None, custom_action=None, min_process_execution_time=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.web.models.AutoHealActions
 references: []

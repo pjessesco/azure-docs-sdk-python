@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.StatusOptions
-- fullName: azure.mgmt.web.models.StatusOptions.pending
+- children:
+  - azure.mgmt.web.models.StatusOptions.pending
+  - azure.mgmt.web.models.StatusOptions.ready
+  class: azure.mgmt.web.models.StatusOptions
+  fullName: azure.mgmt.web.models.StatusOptions
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: StatusOptions
+  source:
+    id: StatusOptions
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 113
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.StatusOptions
+- &id001
+  fullName: azure.mgmt.web.models.StatusOptions.pending
   id: pending
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.web.models.StatusOptions
   type: attribute
   uid: azure.mgmt.web.models.StatusOptions.pending
-- fullName: azure.mgmt.web.models.StatusOptions.ready
+- &id002
+  fullName: azure.mgmt.web.models.StatusOptions.ready
   id: ready
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.web.models.StatusOptions
   type: attribute
   uid: azure.mgmt.web.models.StatusOptions.ready
+- *id001
+- *id002
 references: []

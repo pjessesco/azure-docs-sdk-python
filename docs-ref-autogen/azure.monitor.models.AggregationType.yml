@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.monitor.models.AggregationType
-- fullName: azure.monitor.models.AggregationType.average
+- children:
+  - azure.monitor.models.AggregationType.average
+  - azure.monitor.models.AggregationType.count
+  - azure.monitor.models.AggregationType.maximum
+  - azure.monitor.models.AggregationType.minimum
+  - azure.monitor.models.AggregationType.none
+  - azure.monitor.models.AggregationType.total
+  class: azure.monitor.models.AggregationType
+  fullName: azure.monitor.models.AggregationType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.monitor.models
+  name: AggregationType
+  source:
+    id: AggregationType
+    path: azure-monitor\azure\monitor\models\monitor_client_enums.py
+    remote:
+      branch: master
+      path: azure-monitor\azure\monitor\models\monitor_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 35
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.monitor.models.AggregationType
+- &id001
+  fullName: azure.monitor.models.AggregationType.average
   id: average
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.monitor.models.AggregationType
   type: attribute
   uid: azure.monitor.models.AggregationType.average
-- fullName: azure.monitor.models.AggregationType.count
+- &id002
+  fullName: azure.monitor.models.AggregationType.count
   id: count
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.monitor.models.AggregationType
   type: attribute
   uid: azure.monitor.models.AggregationType.count
-- fullName: azure.monitor.models.AggregationType.maximum
+- &id003
+  fullName: azure.monitor.models.AggregationType.maximum
   id: maximum
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.monitor.models.AggregationType
   type: attribute
   uid: azure.monitor.models.AggregationType.maximum
-- fullName: azure.monitor.models.AggregationType.minimum
+- &id004
+  fullName: azure.monitor.models.AggregationType.minimum
   id: minimum
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.monitor.models.AggregationType
   type: attribute
   uid: azure.monitor.models.AggregationType.minimum
-- fullName: azure.monitor.models.AggregationType.none
+- &id005
+  fullName: azure.monitor.models.AggregationType.none
   id: none
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.monitor.models.AggregationType
   type: attribute
   uid: azure.monitor.models.AggregationType.none
-- fullName: azure.monitor.models.AggregationType.total
+- &id006
+  fullName: azure.monitor.models.AggregationType.total
   id: total
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.monitor.models.AggregationType
   type: attribute
   uid: azure.monitor.models.AggregationType.total
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: ActivityLogAlertActionGroup(action_group_id, webhook_properties=None)
-    parameters:
+    parameters: &id001
     - description: 'The resourceId of the action group. This cannot be
 
         null or empty.
@@ -42,6 +42,33 @@ items:
       id: webhook_properties
       type:
       - dict
+  type: class
+  uid: azure.mgmt.monitor.models.ActivityLogAlertActionGroup
+- children: []
+  class: azure.mgmt.monitor.models.ActivityLogAlertActionGroup
+  fullName: azure.mgmt.monitor.models.ActivityLogAlertActionGroup
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: ActivityLogAlertActionGroup
+  source:
+    id: ActivityLogAlertActionGroup
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\activity_log_alert_action_group.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\activity_log_alert_action_group.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A pointer to an Azure Action Group.
+
+    '
+  syntax:
+    content: ActivityLogAlertActionGroup(action_group_id, webhook_properties=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.monitor.models.ActivityLogAlertActionGroup
 references: []

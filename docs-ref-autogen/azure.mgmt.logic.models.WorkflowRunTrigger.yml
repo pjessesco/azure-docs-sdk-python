@@ -30,14 +30,14 @@ items:
     '
   syntax:
     content: WorkflowRunTrigger(correlation=None)
-    parameters:
+    parameters: &id001
     - description: 'The run correlation.
 
         '
       id: correlation
       type:
       - azure.mgmt.logic.models.Correlation
-    variables:
+    variables: &id002
     - description: 'Gets the name.
 
         '
@@ -120,6 +120,39 @@ items:
       id: tracked_properties
       type:
       - object
+  type: class
+  uid: azure.mgmt.logic.models.WorkflowRunTrigger
+- children: []
+  class: azure.mgmt.logic.models.WorkflowRunTrigger
+  fullName: azure.mgmt.logic.models.WorkflowRunTrigger
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: WorkflowRunTrigger
+  source:
+    id: WorkflowRunTrigger
+    path: azure-mgmt-logic\azure\mgmt\logic\models\workflow_run_trigger.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\workflow_run_trigger.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The workflow run trigger.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: WorkflowRunTrigger(correlation=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.logic.models.WorkflowRunTrigger
 references: []

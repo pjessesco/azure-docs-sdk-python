@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: Resource(tags=None, etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Manager Resource Tags.
 
         '
@@ -41,7 +41,7 @@ items:
       id: etag
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource Manager Resource ID.
 
         '
@@ -66,6 +66,39 @@ items:
       id: location
       type:
       - str
+  type: class
+  uid: azure.mgmt.servermanager.models.Resource
+- children: []
+  class: azure.mgmt.servermanager.models.Resource
+  fullName: azure.mgmt.servermanager.models.Resource
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.servermanager.models
+  name: Resource
+  source:
+    id: Resource
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Resource Manager Resource Information.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: Resource(tags=None, etag=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.servermanager.models.Resource
 references: []

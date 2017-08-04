@@ -37,7 +37,7 @@ items:
       gateway_site_name=None, client_affinity_enabled=None, client_cert_enabled=None,
       host_names_disabled=None, container_size=None, daily_memory_time_quota=None,
       cloning_info=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -200,7 +200,7 @@ items:
       id: cloning_info
       type:
       - azure.mgmt.web.models.CloningInfo
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
@@ -343,6 +343,46 @@ items:
       - '@azure.mgmt.web.models.SlotSwapStatus
 
         '
+  type: class
+  uid: azure.mgmt.web.models.Site
+- children: []
+  class: azure.mgmt.web.models.Site
+  fullName: azure.mgmt.web.models.Site
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: Site
+  source:
+    id: Site
+    path: azure-mgmt-web\azure\mgmt\web\models\site.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\site.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A web app, a mobile app backend, or an API app.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: Site(location, name=None, kind=None, type=None, tags=None, enabled=None,
+      host_name_ssl_states=None, server_farm_id=None, reserved=False, site_config=None,
+      scm_site_also_stopped=False, hosting_environment_profile=None, micro_service='WebSites',
+      gateway_site_name=None, client_affinity_enabled=None, client_cert_enabled=None,
+      host_names_disabled=None, container_size=None, daily_memory_time_quota=None,
+      cloning_info=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.Site
 references: []

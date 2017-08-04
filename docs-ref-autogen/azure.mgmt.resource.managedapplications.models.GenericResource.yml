@@ -33,7 +33,7 @@ items:
   syntax:
     content: GenericResource(location=None, tags=None, managed_by=None, sku=None,
       identity=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location
 
         '
@@ -64,7 +64,7 @@ items:
       id: identity
       type:
       - azure.mgmt.resource.managedapplications.models.Identity
-    variables:
+    variables: &id002
     - description: 'Resource ID
 
         '
@@ -83,6 +83,42 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.resource.managedapplications.models.GenericResource
+- children: []
+  class: azure.mgmt.resource.managedapplications.models.GenericResource
+  fullName: azure.mgmt.resource.managedapplications.models.GenericResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.resource.managedapplications.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.models
+  name: GenericResource
+  source:
+    id: GenericResource
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\models\generic_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\models\generic_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Resource information.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: GenericResource(location=None, tags=None, managed_by=None, sku=None,
+      identity=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.resource.managedapplications.models.GenericResource
 references: []

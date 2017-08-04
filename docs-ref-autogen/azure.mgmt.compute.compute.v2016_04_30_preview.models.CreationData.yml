@@ -26,7 +26,7 @@ items:
   syntax:
     content: CreationData(create_option, storage_account_id=None, image_reference=None,
       source_uri=None, source_resource_id=None)
-    parameters:
+    parameters: &id001
     - description: 'Possible values include: ''Empty'', ''Attach'',
 
         ''FromImage'', ''Import'', ''Copy'', ''Restore''
@@ -75,6 +75,34 @@ items:
       id: source_resource_id
       type:
       - str
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.CreationData
+- children: []
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.models.CreationData
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.models.CreationData
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.models
+  name: CreationData
+  source:
+    id: CreationData
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\models\creation_data.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\models\creation_data.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Data used when creating a disk.
+
+    '
+  syntax:
+    content: CreationData(create_option, storage_account_id=None, image_reference=None,
+      source_uri=None, source_resource_id=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.CreationData
 references: []

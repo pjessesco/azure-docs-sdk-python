@@ -4,6 +4,8 @@ items:
 - children:
   - azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
   - azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+  - azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+  - azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
   class: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
   fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
   inheritance:
@@ -27,7 +29,7 @@ items:
     '
   syntax:
     content: RecurrenceOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -44,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-11-01".
 
         '
@@ -52,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
 - class: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
   langs:
@@ -80,13 +82,13 @@ items:
 
         '
       id: account_name
-      type:
+      type: &id004
       - str
     - description: 'Recurrence ID.
 
         '
       id: recurrence_identity
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'The start date for when to get the recurrence
@@ -97,7 +99,7 @@ items:
 
         '
       id: start_date_time
-      type:
+      type: &id006
       - datetime
     - defaultValue: None
       description: 'The end date for when to get recurrence and
@@ -108,14 +110,14 @@ items:
 
         '
       id: end_date_time
-      type:
+      type: &id007
       - datetime
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -124,7 +126,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
     - description: '*Operation configuration
 
@@ -132,16 +134,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id010
       type:
       - azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformation
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
 - class: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
   langs:
@@ -169,7 +171,7 @@ items:
 
         '
       id: account_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'The start date for when to get the list of
@@ -180,7 +182,7 @@ items:
 
         '
       id: start_date_time
-      type:
+      type: &id014
       - datetime
     - defaultValue: None
       description: 'The end date for when to get the list of
@@ -191,14 +193,14 @@ items:
 
         '
       id: end_date_time
-      type:
+      type: &id015
       - datetime
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -207,7 +209,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -215,12 +217,215 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformationPaged
   type: method
   uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+- children:
+  - azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+  - azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+  class: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.datalake.analytics.job.operations
+  name: RecurrenceOperations
+  source:
+    id: RecurrenceOperations
+    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\operations\recurrence_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\operations\recurrence_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'RecurrenceOperations operations.
+
+
+
+    '
+  syntax:
+    content: RecurrenceOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+- &id011
+  class: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  exceptions: *id003
+  fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+  langs:
+  - python
+  module: azure.mgmt.datalake.analytics.job.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\operations\recurrence_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\operations\recurrence_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 117
+  summary: 'Gets the recurrence information for the specified recurrence ID.
+
+    '
+  syntax:
+    content: get(account_name, recurrence_identity, start_date_time=None, end_date_time=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The Azure Data Lake Analytics account to execute
+
+        job operations on.
+
+        '
+      id: account_name
+      type: *id004
+    - description: 'Recurrence ID.
+
+        '
+      id: recurrence_identity
+      type: *id005
+    - defaultValue: None
+      description: 'The start date for when to get the recurrence
+
+        and aggregate its data. The startDateTime and endDateTime can be no
+
+        more than 30 days apart.
+
+        '
+      id: start_date_time
+      type: *id006
+    - defaultValue: None
+      description: 'The end date for when to get recurrence and
+
+        aggregate its data. The startDateTime and endDateTime can be no more
+
+        than 30 days apart.
+
+        '
+      id: end_date_time
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id010
+  type: method
+  uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+- *id011
+- &id019
+  class: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  exceptions: *id012
+  fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+  langs:
+  - python
+  module: azure.mgmt.datalake.analytics.job.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\operations\recurrence_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\job\operations\recurrence_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Lists all recurrences.
+
+    '
+  syntax:
+    content: list(account_name, start_date_time=None, end_date_time=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The Azure Data Lake Analytics account to execute
+
+        job operations on.
+
+        '
+      id: account_name
+      type: *id013
+    - defaultValue: None
+      description: 'The start date for when to get the list of
+
+        recurrences. The startDateTime and endDateTime can be no more than 30
+
+        days apart.
+
+        '
+      id: start_date_time
+      type: *id014
+    - defaultValue: None
+      description: 'The end date for when to get the list of
+
+        recurrences. The startDateTime and endDateTime can be no more than 30
+
+        days apart.
+
+        '
+      id: end_date_time
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+- *id019
 references:
+- fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+- fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+- fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
+- fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations
+  uid: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.list
 - fullName: azure.mgmt.datalake.analytics.job.operations.RecurrenceOperations.get
   isExternal: false
   name: get

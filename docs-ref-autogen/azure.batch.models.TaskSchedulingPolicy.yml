@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: TaskSchedulingPolicy(node_fill_type)
-    parameters:
+    parameters: &id001
     - description: 'How tasks should be distributed across compute
 
         nodes. Possible values include: ''spread'', ''pack''
@@ -36,6 +36,33 @@ items:
       - 'str or @azure.batch.models.ComputeNodeFillType
 
         '
+  type: class
+  uid: azure.batch.models.TaskSchedulingPolicy
+- children: []
+  class: azure.batch.models.TaskSchedulingPolicy
+  fullName: azure.batch.models.TaskSchedulingPolicy
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: TaskSchedulingPolicy
+  source:
+    id: TaskSchedulingPolicy
+    path: azure-batch\azure\batch\models\task_scheduling_policy.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\task_scheduling_policy.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Specifies how tasks should be distributed across compute nodes.
+
+    '
+  syntax:
+    content: TaskSchedulingPolicy(node_fill_type)
+    parameters: *id001
   type: class
   uid: azure.batch.models.TaskSchedulingPolicy
 references: []

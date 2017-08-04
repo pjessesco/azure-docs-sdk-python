@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: CheckGroupMembershipParameters(group_id, member_id)
-    parameters:
+    parameters: &id001
     - description: 'The object ID of the group to check.
 
         '
@@ -40,6 +40,33 @@ items:
       id: member_id
       type:
       - str
+  type: class
+  uid: azure.graphrbac.models.CheckGroupMembershipParameters
+- children: []
+  class: azure.graphrbac.models.CheckGroupMembershipParameters
+  fullName: azure.graphrbac.models.CheckGroupMembershipParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.graphrbac.models
+  name: CheckGroupMembershipParameters
+  source:
+    id: CheckGroupMembershipParameters
+    path: azure-graphrbac\azure\graphrbac\models\check_group_membership_parameters.py
+    remote:
+      branch: master
+      path: azure-graphrbac\azure\graphrbac\models\check_group_membership_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Request parameters for IsMemberOf API call.
+
+    '
+  syntax:
+    content: CheckGroupMembershipParameters(group_id, member_id)
+    parameters: *id001
   type: class
   uid: azure.graphrbac.models.CheckGroupMembershipParameters
 references: []

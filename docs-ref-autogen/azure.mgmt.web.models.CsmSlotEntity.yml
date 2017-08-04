@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: CsmSlotEntity(target_slot, preserve_vnet)
-    parameters:
+    parameters: &id001
     - description: 'Destination deployment slot during swap operation.
 
         '
@@ -40,6 +40,33 @@ items:
       id: preserve_vnet
       type:
       - bool
+  type: class
+  uid: azure.mgmt.web.models.CsmSlotEntity
+- children: []
+  class: azure.mgmt.web.models.CsmSlotEntity
+  fullName: azure.mgmt.web.models.CsmSlotEntity
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: CsmSlotEntity
+  source:
+    id: CsmSlotEntity
+    path: azure-mgmt-web\azure\mgmt\web\models\csm_slot_entity.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\csm_slot_entity.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Deployment slot parameters.
+
+    '
+  syntax:
+    content: CsmSlotEntity(target_slot, preserve_vnet)
+    parameters: *id001
   type: class
   uid: azure.mgmt.web.models.CsmSlotEntity
 references: []

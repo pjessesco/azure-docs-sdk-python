@@ -5,6 +5,9 @@ items:
   - azure.mgmt.servermanager.operations.SessionOperations.create
   - azure.mgmt.servermanager.operations.SessionOperations.delete
   - azure.mgmt.servermanager.operations.SessionOperations.get
+  - azure.mgmt.servermanager.operations.SessionOperations.create
+  - azure.mgmt.servermanager.operations.SessionOperations.delete
+  - azure.mgmt.servermanager.operations.SessionOperations.get
   class: azure.mgmt.servermanager.operations.SessionOperations
   fullName: azure.mgmt.servermanager.operations.SessionOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: SessionOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API Version. Constant value: "2016-07-01-preview".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.servermanager.operations.SessionOperations
 - class: azure.mgmt.servermanager.operations.SessionOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.SessionOperations.create
   langs:
@@ -83,33 +86,33 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id005
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'Encrypted User name to be used to connect to node.
 
         '
       id: user_name
-      type:
+      type: &id007
       - str
     - defaultValue: None
       description: 'Encrypted Password associated with user name.
 
         '
       id: password
-      type:
+      type: &id008
       - str
     - defaultValue: None
       description: 'Session retention period. Possible values
@@ -118,7 +121,7 @@ items:
 
         '
       id: retention_period
-      type:
+      type: &id009
       - 'str or @azure.mgmt.servermanager.models.RetentionPeriod
 
         '
@@ -129,7 +132,7 @@ items:
 
         '
       id: credential_data_format
-      type:
+      type: &id010
       - 'str or @azure.mgmt.servermanager.models.CredentialDataFormat
 
         '
@@ -140,14 +143,14 @@ items:
 
         '
       id: encryption_certificate_thumbprint
-      type:
+      type: &id011
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id012
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -156,20 +159,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id013
       - bool
-    return:
+    return: &id014
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.SessionResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.SessionOperations.create
 - class: azure.mgmt.servermanager.operations.SessionOperations
-  exceptions:
+  exceptions: &id016
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.SessionOperations.delete
   langs:
@@ -197,26 +200,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id017
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id018
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id019
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id020
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -225,7 +228,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id021
       - bool
     - description: '*Operation configuration
 
@@ -233,16 +236,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id022
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.SessionOperations.delete
 - class: azure.mgmt.servermanager.operations.SessionOperations
-  exceptions:
+  exceptions: &id024
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.SessionOperations.get
   langs:
@@ -270,26 +273,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id025
       - str
     - description: 'The node name (256 characters maximum).
 
         '
       id: node_name
-      type:
+      type: &id026
       - str
     - description: 'The sessionId from the user.
 
         '
       id: session
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id028
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -298,7 +301,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id029
       - bool
     - description: '*Operation configuration
 
@@ -306,15 +309,300 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id030
       type:
       - azure.mgmt.servermanager.models.SessionResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.SessionOperations.get
+- children:
+  - azure.mgmt.servermanager.operations.SessionOperations.create
+  - azure.mgmt.servermanager.operations.SessionOperations.delete
+  - azure.mgmt.servermanager.operations.SessionOperations.get
+  class: azure.mgmt.servermanager.operations.SessionOperations
+  fullName: azure.mgmt.servermanager.operations.SessionOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: SessionOperations
+  source:
+    id: SessionOperations
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'SessionOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: SessionOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.servermanager.operations.SessionOperations
+- &id015
+  class: azure.mgmt.servermanager.operations.SessionOperations
+  exceptions: *id003
+  fullName: azure.mgmt.servermanager.operations.SessionOperations.create
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Creates a session for a node.
+
+    '
+  syntax:
+    content: create(resource_group_name, node_name, session, user_name=None, password=None,
+      retention_period=None, credential_data_format=None, encryption_certificate_thumbprint=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id005
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id006
+    - defaultValue: None
+      description: 'Encrypted User name to be used to connect to node.
+
+        '
+      id: user_name
+      type: *id007
+    - defaultValue: None
+      description: 'Encrypted Password associated with user name.
+
+        '
+      id: password
+      type: *id008
+    - defaultValue: None
+      description: 'Session retention period. Possible values
+
+        include: ''Session'', ''Persistent''
+
+        '
+      id: retention_period
+      type: *id009
+    - defaultValue: None
+      description: 'Credential data format. Possible values
+
+        include: ''RsaEncrypted''
+
+        '
+      id: credential_data_format
+      type: *id010
+    - defaultValue: None
+      description: 'Encryption certificate
+
+        thumbprint.
+
+        '
+      id: encryption_certificate_thumbprint
+      type: *id011
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id012
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id013
+    return: *id014
+  type: method
+  uid: azure.mgmt.servermanager.operations.SessionOperations.create
+- *id015
+- &id023
+  class: azure.mgmt.servermanager.operations.SessionOperations
+  exceptions: *id016
+  fullName: azure.mgmt.servermanager.operations.SessionOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 149
+  summary: 'Deletes a session for a node.
+
+    '
+  syntax:
+    content: delete(resource_group_name, node_name, session, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id017
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id018
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id019
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id020
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id021
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id022
+  type: method
+  uid: azure.mgmt.servermanager.operations.SessionOperations.delete
+- *id023
+- &id031
+  class: azure.mgmt.servermanager.operations.SessionOperations
+  exceptions: *id024
+  fullName: azure.mgmt.servermanager.operations.SessionOperations.get
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\session_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 206
+  summary: 'Gets a session for a node.
+
+    '
+  syntax:
+    content: get(resource_group_name, node_name, session, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id025
+    - description: 'The node name (256 characters maximum).
+
+        '
+      id: node_name
+      type: *id026
+    - description: 'The sessionId from the user.
+
+        '
+      id: session
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id030
+  type: method
+  uid: azure.mgmt.servermanager.operations.SessionOperations.get
+- *id031
 references:
+- fullName: azure.mgmt.servermanager.operations.SessionOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.servermanager.operations.SessionOperations
+  uid: azure.mgmt.servermanager.operations.SessionOperations.create
+- fullName: azure.mgmt.servermanager.operations.SessionOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.servermanager.operations.SessionOperations
+  uid: azure.mgmt.servermanager.operations.SessionOperations.delete
+- fullName: azure.mgmt.servermanager.operations.SessionOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.servermanager.operations.SessionOperations
+  uid: azure.mgmt.servermanager.operations.SessionOperations.get
+- fullName: azure.mgmt.servermanager.operations.SessionOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.servermanager.operations.SessionOperations
+  uid: azure.mgmt.servermanager.operations.SessionOperations.create
+- fullName: azure.mgmt.servermanager.operations.SessionOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.servermanager.operations.SessionOperations
+  uid: azure.mgmt.servermanager.operations.SessionOperations.delete
+- fullName: azure.mgmt.servermanager.operations.SessionOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.servermanager.operations.SessionOperations
+  uid: azure.mgmt.servermanager.operations.SessionOperations.get
 - fullName: azure.mgmt.servermanager.operations.SessionOperations.create
   isExternal: false
   name: create

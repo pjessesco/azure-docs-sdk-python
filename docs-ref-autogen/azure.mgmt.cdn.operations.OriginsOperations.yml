@@ -5,6 +5,9 @@ items:
   - azure.mgmt.cdn.operations.OriginsOperations.get
   - azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
   - azure.mgmt.cdn.operations.OriginsOperations.update
+  - azure.mgmt.cdn.operations.OriginsOperations.get
+  - azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+  - azure.mgmt.cdn.operations.OriginsOperations.update
   class: azure.mgmt.cdn.operations.OriginsOperations
   fullName: azure.mgmt.cdn.operations.OriginsOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: OriginsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Version of the API to be used with the client request. Current
         version is 2016-10-02. Constant value: "2016-10-02".
 
@@ -55,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.cdn.operations.OriginsOperations
 - class: azure.mgmt.cdn.operations.OriginsOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.OriginsOperations.get
   langs:
@@ -83,7 +86,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -91,7 +94,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id005
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -99,7 +102,7 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id006
       - str
     - description: 'Name of the origin which is unique within the
 
@@ -107,14 +110,14 @@ items:
 
         '
       id: origin_name
-      type:
+      type: &id007
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -123,7 +126,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
     - description: '*Operation configuration
 
@@ -131,16 +134,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id010
       type:
       - azure.mgmt.cdn.models.Origin
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.OriginsOperations.get
 - class: azure.mgmt.cdn.operations.OriginsOperations
-  exceptions:
+  exceptions: &id012
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
   langs:
@@ -168,7 +171,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -176,7 +179,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id014
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -184,14 +187,14 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -200,7 +203,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -208,13 +211,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - azure.mgmt.cdn.models.OriginPaged
   type: method
   uid: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
 - class: azure.mgmt.cdn.operations.OriginsOperations
-  exceptions:
+  exceptions: &id020
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.OriginsOperations.update
   langs:
@@ -242,7 +245,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -250,7 +253,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id022
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -258,7 +261,7 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id023
       - str
     - description: 'Name of the origin which is unique within the
 
@@ -266,20 +269,20 @@ items:
 
         '
       id: origin_name
-      type:
+      type: &id024
       - str
     - description: 'Origin properties
 
         '
       id: origin_update_properties
-      type:
+      type: &id025
       - azure.mgmt.cdn.models.OriginUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id026
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -288,19 +291,298 @@ items:
 
         '
       id: raw
-      type:
+      type: &id027
       - bool
-    return:
+    return: &id028
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.Origin'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.OriginsOperations.update
+- children:
+  - azure.mgmt.cdn.operations.OriginsOperations.get
+  - azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+  - azure.mgmt.cdn.operations.OriginsOperations.update
+  class: azure.mgmt.cdn.operations.OriginsOperations
+  fullName: azure.mgmt.cdn.operations.OriginsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: OriginsOperations
+  source:
+    id: OriginsOperations
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'OriginsOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: OriginsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.cdn.operations.OriginsOperations
+- &id011
+  class: azure.mgmt.cdn.operations.OriginsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.cdn.operations.OriginsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 111
+  summary: 'Gets an existing origin within an endpoint.
+
+    '
+  syntax:
+    content: get(resource_group_name, profile_name, endpoint_name, origin_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id005
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id006
+    - description: 'Name of the origin which is unique within the
+
+        endpoint.
+
+        '
+      id: origin_name
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id010
+  type: method
+  uid: azure.mgmt.cdn.operations.OriginsOperations.get
+- *id011
+- &id019
+  class: azure.mgmt.cdn.operations.OriginsOperations
+  exceptions: *id012
+  fullName: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: list_by_endpoint
+  source:
+    id: list_by_endpoint
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Lists all of the existing origins within an endpoint.
+
+    '
+  syntax:
+    content: list_by_endpoint(resource_group_name, profile_name, endpoint_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id014
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+- *id019
+- &id029
+  class: azure.mgmt.cdn.operations.OriginsOperations
+  exceptions: *id020
+  fullName: azure.mgmt.cdn.operations.OriginsOperations.update
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\origins_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 181
+  summary: 'Updates an existing origin within an endpoint.
+
+    '
+  syntax:
+    content: update(resource_group_name, profile_name, endpoint_name, origin_name,
+      origin_update_properties, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id022
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id023
+    - description: 'Name of the origin which is unique within the
+
+        endpoint.
+
+        '
+      id: origin_name
+      type: *id024
+    - description: 'Origin properties
+
+        '
+      id: origin_update_properties
+      type: *id025
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    return: *id028
+  type: method
+  uid: azure.mgmt.cdn.operations.OriginsOperations.update
+- *id029
 references:
+- fullName: azure.mgmt.cdn.operations.OriginsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.cdn.operations.OriginsOperations
+  uid: azure.mgmt.cdn.operations.OriginsOperations.get
+- fullName: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+  isExternal: false
+  name: list_by_endpoint
+  parent: azure.mgmt.cdn.operations.OriginsOperations
+  uid: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+- fullName: azure.mgmt.cdn.operations.OriginsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.cdn.operations.OriginsOperations
+  uid: azure.mgmt.cdn.operations.OriginsOperations.update
+- fullName: azure.mgmt.cdn.operations.OriginsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.cdn.operations.OriginsOperations
+  uid: azure.mgmt.cdn.operations.OriginsOperations.get
+- fullName: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+  isExternal: false
+  name: list_by_endpoint
+  parent: azure.mgmt.cdn.operations.OriginsOperations
+  uid: azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint
+- fullName: azure.mgmt.cdn.operations.OriginsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.cdn.operations.OriginsOperations
+  uid: azure.mgmt.cdn.operations.OriginsOperations.update
 - fullName: azure.mgmt.cdn.operations.OriginsOperations.get
   isExternal: false
   name: get

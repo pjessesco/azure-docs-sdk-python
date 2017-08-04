@@ -31,7 +31,7 @@ items:
     '
   syntax:
     content: AutoscaleNotification(email=None, webhooks=None)
-    parameters:
+    parameters: &id001
     - description: 'the email notification.
 
         '
@@ -46,7 +46,7 @@ items:
       - 'list of @azure.mgmt.monitor.models.WebhookNotification
 
         '
-    variables:
+    variables: &id002
     - description: 'the operation associated with the notification and its
 
         value must be "scale". Default value: "Scale" .
@@ -55,6 +55,40 @@ items:
       id: operation
       type:
       - str
+  type: class
+  uid: azure.mgmt.monitor.models.AutoscaleNotification
+- children: []
+  class: azure.mgmt.monitor.models.AutoscaleNotification
+  fullName: azure.mgmt.monitor.models.AutoscaleNotification
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: AutoscaleNotification
+  source:
+    id: AutoscaleNotification
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\autoscale_notification.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\autoscale_notification.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Autoscale notification.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+
+    '
+  syntax:
+    content: AutoscaleNotification(email=None, webhooks=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.monitor.models.AutoscaleNotification
 references: []

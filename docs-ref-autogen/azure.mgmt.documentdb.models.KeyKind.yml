@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.documentdb.models.KeyKind
-- fullName: azure.mgmt.documentdb.models.KeyKind.primary
+- children:
+  - azure.mgmt.documentdb.models.KeyKind.primary
+  - azure.mgmt.documentdb.models.KeyKind.primary_readonly
+  - azure.mgmt.documentdb.models.KeyKind.secondary
+  - azure.mgmt.documentdb.models.KeyKind.secondary_readonly
+  class: azure.mgmt.documentdb.models.KeyKind
+  fullName: azure.mgmt.documentdb.models.KeyKind
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.documentdb.models
+  name: KeyKind
+  source:
+    id: KeyKind
+    path: azure-mgmt-documentdb\azure\mgmt\documentdb\models\document_db_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-documentdb\azure\mgmt\documentdb\models\document_db_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 36
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.documentdb.models.KeyKind
+- &id001
+  fullName: azure.mgmt.documentdb.models.KeyKind.primary
   id: primary
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.documentdb.models.KeyKind
   type: attribute
   uid: azure.mgmt.documentdb.models.KeyKind.primary
-- fullName: azure.mgmt.documentdb.models.KeyKind.primary_readonly
+- &id002
+  fullName: azure.mgmt.documentdb.models.KeyKind.primary_readonly
   id: primary_readonly
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.documentdb.models.KeyKind
   type: attribute
   uid: azure.mgmt.documentdb.models.KeyKind.primary_readonly
-- fullName: azure.mgmt.documentdb.models.KeyKind.secondary
+- &id003
+  fullName: azure.mgmt.documentdb.models.KeyKind.secondary
   id: secondary
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.documentdb.models.KeyKind
   type: attribute
   uid: azure.mgmt.documentdb.models.KeyKind.secondary
-- fullName: azure.mgmt.documentdb.models.KeyKind.secondary_readonly
+- &id004
+  fullName: azure.mgmt.documentdb.models.KeyKind.secondary_readonly
   id: secondary_readonly
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.documentdb.models.KeyKind
   type: attribute
   uid: azure.mgmt.documentdb.models.KeyKind.secondary_readonly
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

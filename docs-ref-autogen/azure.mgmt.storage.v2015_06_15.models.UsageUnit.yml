@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit
-- fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes
+- children:
+  - azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes
+  - azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes_per_second
+  - azure.mgmt.storage.v2015_06_15.models.UsageUnit.count
+  - azure.mgmt.storage.v2015_06_15.models.UsageUnit.counts_per_second
+  - azure.mgmt.storage.v2015_06_15.models.UsageUnit.percent
+  - azure.mgmt.storage.v2015_06_15.models.UsageUnit.seconds
+  class: azure.mgmt.storage.v2015_06_15.models.UsageUnit
+  fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.storage.v2015_06_15.models
+  name: UsageUnit
+  source:
+    id: UsageUnit
+    path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\models\storage_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-storage\azure\mgmt\storage\v2015_06_15\models\storage_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 43
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit
+- &id001
+  fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes
   id: bytes
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.storage.v2015_06_15.models.UsageUnit
   type: attribute
   uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes
-- fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes_per_second
+- &id002
+  fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes_per_second
   id: bytes_per_second
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.storage.v2015_06_15.models.UsageUnit
   type: attribute
   uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit.bytes_per_second
-- fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.count
+- &id003
+  fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.count
   id: count
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.storage.v2015_06_15.models.UsageUnit
   type: attribute
   uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit.count
-- fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.counts_per_second
+- &id004
+  fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.counts_per_second
   id: counts_per_second
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.storage.v2015_06_15.models.UsageUnit
   type: attribute
   uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit.counts_per_second
-- fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.percent
+- &id005
+  fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.percent
   id: percent
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.storage.v2015_06_15.models.UsageUnit
   type: attribute
   uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit.percent
-- fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.seconds
+- &id006
+  fullName: azure.mgmt.storage.v2015_06_15.models.UsageUnit.seconds
   id: seconds
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.storage.v2015_06_15.models.UsageUnit
   type: attribute
   uid: azure.mgmt.storage.v2015_06_15.models.UsageUnit.seconds
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

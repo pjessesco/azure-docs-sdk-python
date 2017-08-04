@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: ImageReference(publisher, offer, sku, version=None)
-    parameters:
+    parameters: &id001
     - description: 'The publisher of the Azure Virtual Machines Marketplace
 
         image. For example, Canonical or MicrosoftWindowsServer.
@@ -65,6 +65,38 @@ items:
       id: version
       type:
       - str
+  type: class
+  uid: azure.batch.models.ImageReference
+- children: []
+  class: azure.batch.models.ImageReference
+  fullName: azure.batch.models.ImageReference
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: ImageReference
+  source:
+    id: ImageReference
+    path: azure-batch\azure\batch\models\image_reference.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\image_reference.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A reference to an Azure Virtual Machines Marketplace image. To get the
+    list
+
+    of all imageReferences verified by Azure Batch, see the ''List supported
+
+    node agent SKUs'' operation.
+
+    '
+  syntax:
+    content: ImageReference(publisher, offer, sku, version=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.ImageReference
 references: []

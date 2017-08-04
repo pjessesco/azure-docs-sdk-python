@@ -7,6 +7,11 @@ items:
   - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
   - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
   - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
   class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
   fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: ContainerServicesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2017-01-31".
 
         '
@@ -58,7 +63,7 @@ items:
   type: class
   uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
 - class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
   langs:
@@ -89,7 +94,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the container service in
 
@@ -97,7 +102,7 @@ items:
 
         '
       id: container_service_name
-      type:
+      type: &id005
       - str
     - description: 'Parameters supplied to the Create or Update a
 
@@ -105,14 +110,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerService
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -121,20 +126,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerService'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
 - class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
   langs:
@@ -173,7 +178,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the container service in
 
@@ -181,14 +186,14 @@ items:
 
         '
       id: container_service_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -197,20 +202,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
 - class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
   langs:
@@ -245,7 +250,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the container service in
 
@@ -253,14 +258,14 @@ items:
 
         '
       id: container_service_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -269,7 +274,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -277,16 +282,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       type:
       - azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerService
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
 - class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
   langs:
@@ -321,7 +326,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id026
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -330,7 +335,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id027
       - bool
     - description: '*Operation configuration
 
@@ -338,13 +343,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id028
       type:
       - azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerServicePaged
   type: method
   uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
 - class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
-  exceptions:
+  exceptions: &id030
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
   langs:
@@ -379,14 +384,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id031
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id032
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -395,7 +400,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id033
       - bool
     - description: '*Operation configuration
 
@@ -403,12 +408,413 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id034
       type:
       - azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerServicePaged
   type: method
   uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+- children:
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+  - azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+  class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.compute.containerservice.v2017_01_31.operations
+  name: ContainerServicesOperations
+  source:
+    id: ContainerServicesOperations
+    path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'ContainerServicesOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: ContainerServicesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+- &id010
+  class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.compute.containerservice.v2017_01_31.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 107
+  summary: 'Creates or updates a container service.
+
+
+    Creates or updates a container service with the specified configuration
+
+    of orchestrator, masters, and agents.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, container_service_name, parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the container service in
+
+        the specified subscription and resource group.
+
+        '
+      id: container_service_name
+      type: *id005
+    - description: 'Parameters supplied to the Create or Update a
+
+        Container Service operation.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  exceptions: *id011
+  fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.compute.containerservice.v2017_01_31.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 276
+  summary: 'Deletes the specified container service.
+
+
+    Deletes the specified container service in the specified subscription
+
+    and resource group. The operation does not delete other resources
+
+    created as part of creating a container service, including storage
+
+    accounts, VMs, and availability sets. All the other resources created
+
+    with the container service are part of the same resource group and can
+
+    be deleted individually.
+
+    '
+  syntax:
+    content: delete(resource_group_name, container_service_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the container service in
+
+        the specified subscription and resource group.
+
+        '
+      id: container_service_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  exceptions: *id018
+  fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.compute.containerservice.v2017_01_31.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 208
+  summary: 'Gets the properties of the specified container service.
+
+
+    Gets the properties of the specified container service in the specified
+
+    subscription and resource group. The operation returns the properties
+
+    including state, orchestrator, number of masters and agents, and FQDNs
+
+    of masters and agents. .
+
+    '
+  syntax:
+    content: get(resource_group_name, container_service_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the container service in
+
+        the specified subscription and resource group.
+
+        '
+      id: container_service_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+- *id024
+- &id029
+  class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  exceptions: *id025
+  fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.compute.containerservice.v2017_01_31.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Gets a list of container services in the specified subscription.
+
+
+    Gets a list of container services in the specified subscription. The
+
+    operation returns properties of each container service including state,
+
+    orchestrator, number of masters and agents, and FQDNs of masters and
+
+    agents.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id028
+  type: method
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+- *id029
+- &id035
+  class: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  exceptions: *id030
+  fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.compute.containerservice.v2017_01_31.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\operations\container_services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 361
+  summary: 'Gets a list of container services in the specified resource group.
+
+
+    Gets a list of container services in the specified subscription and
+
+    resource group. The operation returns properties of each container
+
+    service including state, orchestrator, number of masters and agents,
+
+    and FQDNs of masters and agents.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id031
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id032
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id033
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id034
+  type: method
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+- *id035
 references:
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.delete
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.get
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list
+- fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.list_by_resource_group
 - fullName: azure.mgmt.compute.containerservice.v2017_01_31.operations.ContainerServicesOperations.create_or_update
   isExternal: false
   name: create_or_update

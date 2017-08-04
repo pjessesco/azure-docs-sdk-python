@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.premium_lrs
+- children:
+  - azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.premium_lrs
+  - azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.standard_lrs
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.models
+  name: StorageAccountTypes
+  source:
+    id: StorageAccountTypes
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\models\compute_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\models\compute_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 109
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes
+- &id001
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.premium_lrs
   id: premium_lrs
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes
   type: attribute
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.premium_lrs
-- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.standard_lrs
+- &id002
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.standard_lrs
   id: standard_lrs
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes
   type: attribute
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.StorageAccountTypes.standard_lrs
+- *id001
+- *id002
 references: []

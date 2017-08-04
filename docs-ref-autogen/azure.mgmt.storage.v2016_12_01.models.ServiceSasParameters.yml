@@ -29,7 +29,7 @@ items:
       identifier=None, partition_key_start=None, partition_key_end=None, row_key_start=None,
       row_key_end=None, key_to_sign=None, cache_control=None, content_disposition=None,
       content_encoding=None, content_language=None, content_type=None)
-    parameters:
+    parameters: &id001
     - description: 'The canonical path to the signed resource.
 
         '
@@ -45,7 +45,7 @@ items:
         '
       id: resource
       type:
-      - 'str or @azure.mgmt.storage.v2016_12_01.models.enum
+      - 'str or @../azure.mgmt.storage.v2016_12_01.models.enum
 
         '
     - description: 'The signed permissions for the service SAS. Possible
@@ -59,7 +59,7 @@ items:
         '
       id: permissions
       type:
-      - 'str or @azure.mgmt.storage.v2016_12_01.models.enum
+      - 'str or @../azure.mgmt.storage.v2016_12_01.models.enum
 
         '
     - description: 'An IP address or a range of IP addresses from
@@ -170,6 +170,37 @@ items:
       id: content_type
       type:
       - str
+  type: class
+  uid: azure.mgmt.storage.v2016_12_01.models.ServiceSasParameters
+- children: []
+  class: azure.mgmt.storage.v2016_12_01.models.ServiceSasParameters
+  fullName: azure.mgmt.storage.v2016_12_01.models.ServiceSasParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.storage.v2016_12_01.models
+  name: ServiceSasParameters
+  source:
+    id: ServiceSasParameters
+    path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\service_sas_parameters.py
+    remote:
+      branch: master
+      path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\service_sas_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The parameters to list service SAS credentials of a speicific resource.
+
+    '
+  syntax:
+    content: ServiceSasParameters(canonicalized_resource, resource, permissions=None,
+      ip_address_or_range=None, protocols=None, shared_access_start_time=None, shared_access_expiry_time=None,
+      identifier=None, partition_key_start=None, partition_key_end=None, row_key_start=None,
+      row_key_end=None, key_to_sign=None, cache_control=None, content_disposition=None,
+      content_encoding=None, content_language=None, content_type=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.storage.v2016_12_01.models.ServiceSasParameters
 references: []

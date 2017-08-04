@@ -5,6 +5,9 @@ items:
   - azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
   - azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
   - azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+  - azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+  - azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+  - azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
   class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
   fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: RedisFirewallRuleOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-04-01".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations
 - class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
   langs:
@@ -80,38 +83,38 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: cache_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the firewall rule.
 
         '
       id: rule_name
-      type:
+      type: &id006
       - str
     - description: 'lowest IP address included in the range
 
         '
       id: start_ip
-      type:
+      type: &id007
       - str
     - description: 'highest IP address included in the range
 
         '
       id: end_ip
-      type:
+      type: &id008
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id009
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -120,7 +123,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id010
       - bool
     - description: '*Operation configuration
 
@@ -128,16 +131,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id011
       type:
       - azure.mgmt.redis.models.RedisFirewallRule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
 - class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
-  exceptions:
+  exceptions: &id013
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
   langs:
@@ -163,26 +166,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: cache_name
-      type:
+      type: &id015
       - str
     - description: 'The name of the firewall rule.
 
         '
       id: rule_name
-      type:
+      type: &id016
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id017
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -191,7 +194,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id018
       - bool
     - description: '*Operation configuration
 
@@ -199,16 +202,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id019
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
 - class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
-  exceptions:
+  exceptions: &id021
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
   langs:
@@ -234,26 +237,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the Redis cache.
 
         '
       id: cache_name
-      type:
+      type: &id023
       - str
     - description: 'The name of the firewall rule.
 
         '
       id: rule_name
-      type:
+      type: &id024
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id025
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -262,7 +265,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id026
       - bool
     - description: '*Operation configuration
 
@@ -270,15 +273,273 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id027
       type:
       - azure.mgmt.redis.models.RedisFirewallRule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+- children:
+  - azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+  - azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+  - azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+  class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.redis.operations
+  name: RedisFirewallRuleOperations
+  source:
+    id: RedisFirewallRuleOperations
+    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'RedisFirewallRuleOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: RedisFirewallRuleOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+- &id012
+  class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  exceptions: *id003
+  fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.redis.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Create or update a redis cache firewall rule.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, cache_name, rule_name, start_ip,
+      end_ip, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the Redis cache.
+
+        '
+      id: cache_name
+      type: *id005
+    - description: 'The name of the firewall rule.
+
+        '
+      id: rule_name
+      type: *id006
+    - description: 'lowest IP address included in the range
+
+        '
+      id: start_ip
+      type: *id007
+    - description: 'highest IP address included in the range
+
+        '
+      id: end_ip
+      type: *id008
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id009
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id010
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id011
+  type: method
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+- *id012
+- &id020
+  class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  exceptions: *id013
+  fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.redis.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 180
+  summary: 'Deletes a single firewall rule in a specified redis cache.
+
+    '
+  syntax:
+    content: delete(resource_group_name, cache_name, rule_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id014
+    - description: 'The name of the Redis cache.
+
+        '
+      id: cache_name
+      type: *id015
+    - description: 'The name of the firewall rule.
+
+        '
+      id: rule_name
+      type: *id016
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id017
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id018
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id019
+  type: method
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+- *id020
+- &id028
+  class: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  exceptions: *id021
+  fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+  langs:
+  - python
+  module: azure.mgmt.redis.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\operations\redis_firewall_rule_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 115
+  summary: 'Gets a single firewall rule in a specified redis cache.
+
+    '
+  syntax:
+    content: get(resource_group_name, cache_name, rule_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id022
+    - description: 'The name of the Redis cache.
+
+        '
+      id: cache_name
+      type: *id023
+    - description: 'The name of the firewall rule.
+
+        '
+      id: rule_name
+      type: *id024
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id025
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id026
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id027
+  type: method
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+- *id028
 references:
+- fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+- fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+- fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+- fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
+- fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.delete
+- fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.redis.operations.RedisFirewallRuleOperations
+  uid: azure.mgmt.redis.operations.RedisFirewallRuleOperations.get
 - fullName: azure.mgmt.redis.operations.RedisFirewallRuleOperations.create_or_update
   isExternal: false
   name: create_or_update

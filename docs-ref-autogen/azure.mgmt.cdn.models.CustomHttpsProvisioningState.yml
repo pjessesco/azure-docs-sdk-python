@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.cdn.models.CustomHttpsProvisioningState
-- fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabled
+- children:
+  - azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabled
+  - azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabling
+  - azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabled
+  - azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabling
+  - azure.mgmt.cdn.models.CustomHttpsProvisioningState.failed
+  class: azure.mgmt.cdn.models.CustomHttpsProvisioningState
+  fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.cdn.models
+  name: CustomHttpsProvisioningState
+  source:
+    id: CustomHttpsProvisioningState
+    path: azure-mgmt-cdn\azure\mgmt\cdn\models\cdn_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\models\cdn_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 70
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.cdn.models.CustomHttpsProvisioningState
+- &id001
+  fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabled
   id: disabled
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.cdn.models.CustomHttpsProvisioningState
   type: attribute
   uid: azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabled
-- fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabling
+- &id002
+  fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabling
   id: disabling
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.cdn.models.CustomHttpsProvisioningState
   type: attribute
   uid: azure.mgmt.cdn.models.CustomHttpsProvisioningState.disabling
-- fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabled
+- &id003
+  fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabled
   id: enabled
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.cdn.models.CustomHttpsProvisioningState
   type: attribute
   uid: azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabled
-- fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabling
+- &id004
+  fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabling
   id: enabling
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.cdn.models.CustomHttpsProvisioningState
   type: attribute
   uid: azure.mgmt.cdn.models.CustomHttpsProvisioningState.enabling
-- fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.failed
+- &id005
+  fullName: azure.mgmt.cdn.models.CustomHttpsProvisioningState.failed
   id: failed
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.cdn.models.CustomHttpsProvisioningState
   type: attribute
   uid: azure.mgmt.cdn.models.CustomHttpsProvisioningState.failed
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

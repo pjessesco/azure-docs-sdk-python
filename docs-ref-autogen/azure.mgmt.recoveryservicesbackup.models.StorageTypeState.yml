@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.StorageTypeState
-- fullName: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.invalid
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.StorageTypeState.invalid
+  - azure.mgmt.recoveryservicesbackup.models.StorageTypeState.locked
+  - azure.mgmt.recoveryservicesbackup.models.StorageTypeState.unlocked
+  class: azure.mgmt.recoveryservicesbackup.models.StorageTypeState
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageTypeState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: StorageTypeState
+  source:
+    id: StorageTypeState
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 77
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.StorageTypeState
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.invalid
   id: invalid
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.StorageTypeState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.locked
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.locked
   id: locked
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.StorageTypeState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.locked
-- fullName: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.unlocked
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.unlocked
   id: unlocked
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.StorageTypeState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.StorageTypeState.unlocked
+- *id001
+- *id002
+- *id003
 references: []

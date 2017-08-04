@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.ServerConnectionType
-- fullName: azure.mgmt.sql.models.ServerConnectionType.default
+- children:
+  - azure.mgmt.sql.models.ServerConnectionType.default
+  - azure.mgmt.sql.models.ServerConnectionType.proxy
+  - azure.mgmt.sql.models.ServerConnectionType.redirect
+  class: azure.mgmt.sql.models.ServerConnectionType
+  fullName: azure.mgmt.sql.models.ServerConnectionType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: ServerConnectionType
+  source:
+    id: ServerConnectionType
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 42
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.ServerConnectionType
+- &id001
+  fullName: azure.mgmt.sql.models.ServerConnectionType.default
   id: default
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.sql.models.ServerConnectionType
   type: attribute
   uid: azure.mgmt.sql.models.ServerConnectionType.default
-- fullName: azure.mgmt.sql.models.ServerConnectionType.proxy
+- &id002
+  fullName: azure.mgmt.sql.models.ServerConnectionType.proxy
   id: proxy
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.sql.models.ServerConnectionType
   type: attribute
   uid: azure.mgmt.sql.models.ServerConnectionType.proxy
-- fullName: azure.mgmt.sql.models.ServerConnectionType.redirect
+- &id003
+  fullName: azure.mgmt.sql.models.ServerConnectionType.redirect
   id: redirect
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.sql.models.ServerConnectionType
   type: attribute
   uid: azure.mgmt.sql.models.ServerConnectionType.redirect
+- *id001
+- *id002
+- *id003
 references: []

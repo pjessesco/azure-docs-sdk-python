@@ -26,7 +26,7 @@ items:
   syntax:
     content: EdifactProcessingSettings(mask_security_info, preserve_interchange, suspend_interchange_on_error,
       create_empty_xml_tags_for_trailing_separators, use_dot_as_decimal_separator)
-    parameters:
+    parameters: &id001
     - description: 'The value indicating whether to mask security
 
         information.
@@ -67,6 +67,34 @@ items:
       id: use_dot_as_decimal_separator
       type:
       - bool
+  type: class
+  uid: azure.mgmt.logic.models.EdifactProcessingSettings
+- children: []
+  class: azure.mgmt.logic.models.EdifactProcessingSettings
+  fullName: azure.mgmt.logic.models.EdifactProcessingSettings
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: EdifactProcessingSettings
+  source:
+    id: EdifactProcessingSettings
+    path: azure-mgmt-logic\azure\mgmt\logic\models\edifact_processing_settings.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\edifact_processing_settings.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The Edifact agreement protocol settings.
+
+    '
+  syntax:
+    content: EdifactProcessingSettings(mask_security_info, preserve_interchange, suspend_interchange_on_error,
+      create_empty_xml_tags_for_trailing_separators, use_dot_as_decimal_separator)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.EdifactProcessingSettings
 references: []

@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.monitor.models.ScaleDirection
-- fullName: azure.mgmt.monitor.models.ScaleDirection.decrease
+- children:
+  - azure.mgmt.monitor.models.ScaleDirection.decrease
+  - azure.mgmt.monitor.models.ScaleDirection.increase
+  - azure.mgmt.monitor.models.ScaleDirection.none
+  class: azure.mgmt.monitor.models.ScaleDirection
+  fullName: azure.mgmt.monitor.models.ScaleDirection
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: ScaleDirection
+  source:
+    id: ScaleDirection
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 42
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.monitor.models.ScaleDirection
+- &id001
+  fullName: azure.mgmt.monitor.models.ScaleDirection.decrease
   id: decrease
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.monitor.models.ScaleDirection
   type: attribute
   uid: azure.mgmt.monitor.models.ScaleDirection.decrease
-- fullName: azure.mgmt.monitor.models.ScaleDirection.increase
+- &id002
+  fullName: azure.mgmt.monitor.models.ScaleDirection.increase
   id: increase
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.monitor.models.ScaleDirection
   type: attribute
   uid: azure.mgmt.monitor.models.ScaleDirection.increase
-- fullName: azure.mgmt.monitor.models.ScaleDirection.none
+- &id003
+  fullName: azure.mgmt.monitor.models.ScaleDirection.none
   id: none
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.monitor.models.ScaleDirection
   type: attribute
   uid: azure.mgmt.monitor.models.ScaleDirection.none
+- *id001
+- *id002
+- *id003
 references: []

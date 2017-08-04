@@ -32,7 +32,7 @@ items:
       encryption_certificate_thumbprint=None, secondary_encryption_certificate_thumbprint=None,
       encryption_jwk=None, secondary_encryption_jwk=None, active_message_count=None,
       latest_published_msi_version=None, published_time_utc=None)
-    parameters:
+    parameters: &id001
     - description: 'The available memory on the gateway host
 
         machine in megabytes.
@@ -183,6 +183,40 @@ items:
       id: published_time_utc
       type:
       - datetime
+  type: class
+  uid: azure.mgmt.servermanager.models.GatewayStatus
+- children: []
+  class: azure.mgmt.servermanager.models.GatewayStatus
+  fullName: azure.mgmt.servermanager.models.GatewayStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.servermanager.models
+  name: GatewayStatus
+  source:
+    id: GatewayStatus
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\gateway_status.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\gateway_status.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Expanded gateway status information.
+
+    '
+  syntax:
+    content: GatewayStatus(available_memory_mbyte=None, gateway_cpu_utilization_percent=None,
+      total_cpu_utilization_percent=None, gateway_version=None, friendly_os_name=None,
+      installed_date=None, logical_processor_count=None, name=None, gateway_id=None,
+      gateway_working_set_mbyte=None, status_updated=None, group_policy_error=None,
+      allow_gateway_group_policy_status=None, require_mfa_group_policy_status=None,
+      encryption_certificate_thumbprint=None, secondary_encryption_certificate_thumbprint=None,
+      encryption_jwk=None, secondary_encryption_jwk=None, active_message_count=None,
+      latest_published_msi_version=None, published_time_utc=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.servermanager.models.GatewayStatus
 references: []

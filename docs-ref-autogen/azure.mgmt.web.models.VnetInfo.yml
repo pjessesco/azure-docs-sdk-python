@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: VnetInfo(vnet_resource_id=None, cert_blob=None, dns_servers=None)
-    parameters:
+    parameters: &id001
     - description: 'The Virtual Network''s resource ID.
 
         '
@@ -55,7 +55,7 @@ items:
       id: dns_servers
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'The client certificate thumbprint.
 
         '
@@ -78,6 +78,39 @@ items:
       id: resync_required
       type:
       - bool
+  type: class
+  uid: azure.mgmt.web.models.VnetInfo
+- children: []
+  class: azure.mgmt.web.models.VnetInfo
+  fullName: azure.mgmt.web.models.VnetInfo
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: VnetInfo
+  source:
+    id: VnetInfo
+    path: azure-mgmt-web\azure\mgmt\web\models\vnet_info.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\vnet_info.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Virtual Network information contract.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: VnetInfo(vnet_resource_id=None, cert_blob=None, dns_servers=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.VnetInfo
 references: []

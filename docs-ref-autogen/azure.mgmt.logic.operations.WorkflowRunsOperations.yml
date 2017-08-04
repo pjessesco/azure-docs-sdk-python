@@ -5,6 +5,9 @@ items:
   - azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
   - azure.mgmt.logic.operations.WorkflowRunsOperations.get
   - azure.mgmt.logic.operations.WorkflowRunsOperations.list
+  - azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+  - azure.mgmt.logic.operations.WorkflowRunsOperations.get
+  - azure.mgmt.logic.operations.WorkflowRunsOperations.list
   class: azure.mgmt.logic.operations.WorkflowRunsOperations
   fullName: azure.mgmt.logic.operations.WorkflowRunsOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: WorkflowRunsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version. Constant value: "2016-06-01".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.logic.operations.WorkflowRunsOperations
 - class: azure.mgmt.logic.operations.WorkflowRunsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
   langs:
@@ -80,26 +83,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type:
+      type: &id005
       - str
     - description: 'The workflow run name.
 
         '
       id: run_name
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -108,7 +111,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -116,16 +119,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
 - class: azure.mgmt.logic.operations.WorkflowRunsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.get
   langs:
@@ -151,26 +154,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type:
+      type: &id013
       - str
     - description: 'The workflow run name.
 
         '
       id: run_name
-      type:
+      type: &id014
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id015
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -179,7 +182,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id016
       - bool
     - description: '*Operation configuration
 
@@ -187,16 +190,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id017
       type:
       - azure.mgmt.logic.models.WorkflowRun
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.logic.operations.WorkflowRunsOperations.get
 - class: azure.mgmt.logic.operations.WorkflowRunsOperations
-  exceptions:
+  exceptions: &id019
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.list
   langs:
@@ -222,34 +225,34 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id020
       - str
     - description: 'The workflow name.
 
         '
       id: workflow_name
-      type:
+      type: &id021
       - str
     - defaultValue: None
       description: 'The number of items to be included in the result.
 
         '
       id: top
-      type:
+      type: &id022
       - int
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -258,7 +261,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -266,12 +269,267 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.logic.models.WorkflowRunPaged
   type: method
   uid: azure.mgmt.logic.operations.WorkflowRunsOperations.list
+- children:
+  - azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+  - azure.mgmt.logic.operations.WorkflowRunsOperations.get
+  - azure.mgmt.logic.operations.WorkflowRunsOperations.list
+  class: azure.mgmt.logic.operations.WorkflowRunsOperations
+  fullName: azure.mgmt.logic.operations.WorkflowRunsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: WorkflowRunsOperations
+  source:
+    id: WorkflowRunsOperations
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'WorkflowRunsOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: WorkflowRunsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations
+- &id010
+  class: azure.mgmt.logic.operations.WorkflowRunsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: cancel
+  source:
+    id: cancel
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 179
+  summary: 'Cancels a workflow run.
+
+    '
+  syntax:
+    content: cancel(resource_group_name, workflow_name, run_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The workflow name.
+
+        '
+      id: workflow_name
+      type: *id005
+    - description: 'The workflow run name.
+
+        '
+      id: run_name
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+- *id010
+- &id018
+  class: azure.mgmt.logic.operations.WorkflowRunsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 115
+  summary: 'Gets a workflow run.
+
+    '
+  syntax:
+    content: get(resource_group_name, workflow_name, run_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The workflow name.
+
+        '
+      id: workflow_name
+      type: *id013
+    - description: 'The workflow run name.
+
+        '
+      id: run_name
+      type: *id014
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id015
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id016
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id017
+  type: method
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.get
+- *id018
+- &id027
+  class: azure.mgmt.logic.operations.WorkflowRunsOperations
+  exceptions: *id019
+  fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.logic.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\operations\workflow_runs_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets a list of workflow runs.
+
+    '
+  syntax:
+    content: list(resource_group_name, workflow_name, top=None, filter=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name.
+
+        '
+      id: resource_group_name
+      type: *id020
+    - description: 'The workflow name.
+
+        '
+      id: workflow_name
+      type: *id021
+    - defaultValue: None
+      description: 'The number of items to be included in the result.
+
+        '
+      id: top
+      type: *id022
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
+
+        '
+      id: filter
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.list
+- *id027
 references:
+- fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+  isExternal: false
+  name: cancel
+  parent: azure.mgmt.logic.operations.WorkflowRunsOperations
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+- fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.logic.operations.WorkflowRunsOperations
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.get
+- fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.logic.operations.WorkflowRunsOperations
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.list
+- fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+  isExternal: false
+  name: cancel
+  parent: azure.mgmt.logic.operations.WorkflowRunsOperations
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
+- fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.logic.operations.WorkflowRunsOperations
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.get
+- fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.logic.operations.WorkflowRunsOperations
+  uid: azure.mgmt.logic.operations.WorkflowRunsOperations.list
 - fullName: azure.mgmt.logic.operations.WorkflowRunsOperations.cancel
   isExternal: false
   name: cancel

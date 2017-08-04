@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.keyvault.models.CreateMode
-- fullName: azure.mgmt.keyvault.models.CreateMode.default
+- children:
+  - azure.mgmt.keyvault.models.CreateMode.default
+  - azure.mgmt.keyvault.models.CreateMode.recover
+  class: azure.mgmt.keyvault.models.CreateMode
+  fullName: azure.mgmt.keyvault.models.CreateMode
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.keyvault.models
+  name: CreateMode
+  source:
+    id: CreateMode
+    path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\key_vault_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\key_vault_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 85
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.keyvault.models.CreateMode
+- &id001
+  fullName: azure.mgmt.keyvault.models.CreateMode.default
   id: default
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.keyvault.models.CreateMode
   type: attribute
   uid: azure.mgmt.keyvault.models.CreateMode.default
-- fullName: azure.mgmt.keyvault.models.CreateMode.recover
+- &id002
+  fullName: azure.mgmt.keyvault.models.CreateMode.recover
   id: recover
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.keyvault.models.CreateMode
   type: attribute
   uid: azure.mgmt.keyvault.models.CreateMode.recover
+- *id001
+- *id002
 references: []

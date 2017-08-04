@@ -9,6 +9,13 @@ items:
   - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
   - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
   - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
   class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
   inheritance:
@@ -38,7 +45,7 @@ items:
   syntax:
     content: VirtualNetworkGatewayConnectionsOperations(client, config, serializer,
       deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -55,7 +62,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-12-01".
 
         '
@@ -63,7 +70,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
   langs:
@@ -91,7 +98,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the
 
@@ -99,7 +106,7 @@ items:
 
         '
       id: virtual_network_gateway_connection_name
-      type:
+      type: &id005
       - str
     - description: 'Parameters supplied to the create or update virtual
 
@@ -107,14 +114,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnection
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -123,20 +130,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnection'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
   langs:
@@ -162,7 +169,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the
 
@@ -170,14 +177,14 @@ items:
 
         '
       id: virtual_network_gateway_connection_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -186,20 +193,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
   langs:
@@ -227,7 +234,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the
 
@@ -235,14 +242,14 @@ items:
 
         '
       id: virtual_network_gateway_connection_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -251,7 +258,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -259,16 +266,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       type:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnection
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
   langs:
@@ -298,7 +305,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id026
       - str
     - description: 'The virtual network
 
@@ -306,14 +313,14 @@ items:
 
         '
       id: virtual_network_gateway_connection_name
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id028
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -322,7 +329,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id029
       - bool
     - description: '*Operation configuration
 
@@ -330,16 +337,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id030
       type:
       - azure.mgmt.network.v2016_12_01.models.ConnectionSharedKey
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
-  exceptions:
+  exceptions: &id032
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
   langs:
@@ -366,14 +373,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id033
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -382,7 +389,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -390,13 +397,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       type:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionPaged
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
-  exceptions:
+  exceptions: &id038
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
   langs:
@@ -428,7 +435,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id039
       - str
     - description: 'The virtual network
 
@@ -436,7 +443,7 @@ items:
 
         '
       id: virtual_network_gateway_connection_name
-      type:
+      type: &id040
       - str
     - description: 'The virtual network connection reset shared key
 
@@ -444,14 +451,14 @@ items:
 
         '
       id: key_length
-      type:
+      type: &id041
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id042
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -460,20 +467,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id043
       - bool
-    return:
+    return: &id044
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_12_01.models.ConnectionResetSharedKey'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
 - class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
-  exceptions:
+  exceptions: &id046
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
   langs:
@@ -505,7 +512,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id047
       - str
     - description: 'The virtual network
 
@@ -513,20 +520,20 @@ items:
 
         '
       id: virtual_network_gateway_connection_name
-      type:
+      type: &id048
       - str
     - description: 'The virtual network connection shared key value.
 
         '
       id: value
-      type:
+      type: &id049
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id050
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -535,19 +542,552 @@ items:
 
         '
       id: raw
-      type:
+      type: &id051
       - bool
-    return:
+    return: &id052
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_12_01.models.ConnectionSharedKey'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+- children:
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+  - azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: VirtualNetworkGatewayConnectionsOperations
+  source:
+    id: VirtualNetworkGatewayConnectionsOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'VirtualNetworkGatewayConnectionsOperations operations.
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: VirtualNetworkGatewayConnectionsOperations(client, config, serializer,
+      deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+- &id010
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Creates or updates a virtual network gateway connection in the
+
+    specified resource group.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, virtual_network_gateway_connection_name,
+      parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the
+
+        virtual network gateway connection.
+
+        '
+      id: virtual_network_gateway_connection_name
+      type: *id005
+    - description: 'Parameters supplied to the create or update virtual
+
+        network gateway connection operation.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 200
+  summary: 'Deletes the specified virtual network Gateway connection.
+
+    '
+  syntax:
+    content: delete(resource_group_name, virtual_network_gateway_connection_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the
+
+        virtual network gateway connection.
+
+        '
+      id: virtual_network_gateway_connection_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 136
+  summary: 'Gets the specified virtual network gateway connection by resource
+
+    group.
+
+    '
+  syntax:
+    content: get(resource_group_name, virtual_network_gateway_connection_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the
+
+        virtual network gateway connection.
+
+        '
+      id: virtual_network_gateway_connection_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+- *id024
+- &id031
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  exceptions: *id025
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: get_shared_key
+  source:
+    id: get_shared_key
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 377
+  summary: 'The Get VirtualNetworkGatewayConnectionSharedKey operation retrieves
+
+    information about the specified virtual network gateway connection
+
+    shared key through Network resource provider.
+
+    '
+  syntax:
+    content: get_shared_key(resource_group_name, virtual_network_gateway_connection_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id026
+    - description: 'The virtual network
+
+        gateway connection shared key name.
+
+        '
+      id: virtual_network_gateway_connection_name
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id030
+  type: method
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+- *id031
+- &id037
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  exceptions: *id032
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 442
+  summary: 'The List VirtualNetworkGatewayConnections operation retrieves all the
+
+    virtual network gateways connections created.
+
+    '
+  syntax:
+    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+- *id037
+- &id045
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  exceptions: *id038
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: reset_shared_key
+  source:
+    id: reset_shared_key
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 509
+  summary: 'The VirtualNetworkGatewayConnectionResetSharedKey operation resets the
+
+    virtual network gateway connection shared key for passed virtual
+
+    network gateway connection in the specified resource group through
+
+    Network resource provider.
+
+    '
+  syntax:
+    content: reset_shared_key(resource_group_name, virtual_network_gateway_connection_name,
+      key_length, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id039
+    - description: 'The virtual network
+
+        gateway connection reset shared key Name.
+
+        '
+      id: virtual_network_gateway_connection_name
+      type: *id040
+    - description: 'The virtual network connection reset shared key
+
+        length, should between 1 and 128.
+
+        '
+      id: key_length
+      type: *id041
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id042
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id043
+    return: *id044
+  type: method
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+- *id045
+- &id053
+  class: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  exceptions: *id046
+  fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.operations
+  name: set_shared_key
+  source:
+    id: set_shared_key
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\operations\virtual_network_gateway_connections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 278
+  summary: 'The Put VirtualNetworkGatewayConnectionSharedKey operation sets the
+
+    virtual network gateway connection shared key for passed virtual
+
+    network gateway connection in the specified resource group through
+
+    Network resource provider.
+
+    '
+  syntax:
+    content: set_shared_key(resource_group_name, virtual_network_gateway_connection_name,
+      value, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id047
+    - description: 'The virtual network
+
+        gateway connection name.
+
+        '
+      id: virtual_network_gateway_connection_name
+      type: *id048
+    - description: 'The virtual network connection shared key value.
+
+        '
+      id: value
+      type: *id049
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id050
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id051
+    return: *id052
+  type: method
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+- *id053
 references:
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+  isExternal: false
+  name: get_shared_key
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+  isExternal: false
+  name: reset_shared_key
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+  isExternal: false
+  name: set_shared_key
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.delete
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+  isExternal: false
+  name: get_shared_key
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.get_shared_key
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.list
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+  isExternal: false
+  name: reset_shared_key
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.reset_shared_key
+- fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
+  isExternal: false
+  name: set_shared_key
+  parent: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations
+  uid: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.set_shared_key
 - fullName: azure.mgmt.network.v2016_12_01.operations.VirtualNetworkGatewayConnectionsOperations.create_or_update
   isExternal: false
   name: create_or_update

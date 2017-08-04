@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.CertificateVisibility
-- fullName: azure.batch.models.CertificateVisibility.remote_user
+- children:
+  - azure.batch.models.CertificateVisibility.remote_user
+  - azure.batch.models.CertificateVisibility.start_task
+  - azure.batch.models.CertificateVisibility.task
+  class: azure.batch.models.CertificateVisibility
+  fullName: azure.batch.models.CertificateVisibility
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: CertificateVisibility
+  source:
+    id: CertificateVisibility
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 83
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.CertificateVisibility
+- &id001
+  fullName: azure.batch.models.CertificateVisibility.remote_user
   id: remote_user
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.batch.models.CertificateVisibility
   type: attribute
   uid: azure.batch.models.CertificateVisibility.remote_user
-- fullName: azure.batch.models.CertificateVisibility.start_task
+- &id002
+  fullName: azure.batch.models.CertificateVisibility.start_task
   id: start_task
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.batch.models.CertificateVisibility
   type: attribute
   uid: azure.batch.models.CertificateVisibility.start_task
-- fullName: azure.batch.models.CertificateVisibility.task
+- &id003
+  fullName: azure.batch.models.CertificateVisibility.task
   id: task
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.batch.models.CertificateVisibility
   type: attribute
   uid: azure.batch.models.CertificateVisibility.task
+- *id001
+- *id002
+- *id003
 references: []

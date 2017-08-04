@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.RecoveryType
-- fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.alternate_location
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.RecoveryType.alternate_location
+  - azure.mgmt.recoveryservicesbackup.models.RecoveryType.invalid
+  - azure.mgmt.recoveryservicesbackup.models.RecoveryType.original_location
+  - azure.mgmt.recoveryservicesbackup.models.RecoveryType.restore_disks
+  class: azure.mgmt.recoveryservicesbackup.models.RecoveryType
+  fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: RecoveryType
+  source:
+    id: RecoveryType
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 137
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.RecoveryType
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.alternate_location
   id: alternate_location
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.RecoveryType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.RecoveryType.alternate_location
-- fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.invalid
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.invalid
   id: invalid
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.RecoveryType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.RecoveryType.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.original_location
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.original_location
   id: original_location
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.RecoveryType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.RecoveryType.original_location
-- fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.restore_disks
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.RecoveryType.restore_disks
   id: restore_disks
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.RecoveryType
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.RecoveryType.restore_disks
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

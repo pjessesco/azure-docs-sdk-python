@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier
-- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.basic
+- children:
+  - azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.basic
+  - azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.managed
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.models
+  name: SkuTier
+  source:
+    id: SkuTier
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\models\container_registry_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\models\container_registry_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 23
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier
+- &id001
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.basic
   id: basic
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier
   type: attribute
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.basic
-- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.managed
+- &id002
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.managed
   id: managed
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier
   type: attribute
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.models.SkuTier.managed
+- *id001
+- *id002
 references: []

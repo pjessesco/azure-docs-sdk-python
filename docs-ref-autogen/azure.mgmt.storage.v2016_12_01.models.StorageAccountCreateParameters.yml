@@ -26,7 +26,7 @@ items:
   syntax:
     content: StorageAccountCreateParameters(sku, kind, location, tags=None, custom_domain=None,
       encryption=None, access_tier=None, enable_https_traffic_only=False)
-    parameters:
+    parameters: &id001
     - description: 'Required. Gets or sets the sku name.
 
         '
@@ -113,6 +113,34 @@ items:
       id: enable_https_traffic_only
       type:
       - bool
+  type: class
+  uid: azure.mgmt.storage.v2016_12_01.models.StorageAccountCreateParameters
+- children: []
+  class: azure.mgmt.storage.v2016_12_01.models.StorageAccountCreateParameters
+  fullName: azure.mgmt.storage.v2016_12_01.models.StorageAccountCreateParameters
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.storage.v2016_12_01.models
+  name: StorageAccountCreateParameters
+  source:
+    id: StorageAccountCreateParameters
+    path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\storage_account_create_parameters.py
+    remote:
+      branch: master
+      path: azure-mgmt-storage\azure\mgmt\storage\v2016_12_01\models\storage_account_create_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The parameters used when creating a storage account.
+
+    '
+  syntax:
+    content: StorageAccountCreateParameters(sku, kind, location, tags=None, custom_domain=None,
+      encryption=None, access_tier=None, enable_https_traffic_only=False)
+    parameters: *id001
   type: class
   uid: azure.mgmt.storage.v2016_12_01.models.StorageAccountCreateParameters
 references: []

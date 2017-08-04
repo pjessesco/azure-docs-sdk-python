@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: ResourceUsage(resource_type=None, unit=None, current_value=None, limit=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource type of the usages.
 
         '
@@ -50,6 +50,33 @@ items:
       id: limit
       type:
       - int
+  type: class
+  uid: azure.mgmt.cdn.models.ResourceUsage
+- children: []
+  class: azure.mgmt.cdn.models.ResourceUsage
+  fullName: azure.mgmt.cdn.models.ResourceUsage
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.cdn.models
+  name: ResourceUsage
+  source:
+    id: ResourceUsage
+    path: azure-mgmt-cdn\azure\mgmt\cdn\models\resource_usage.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\models\resource_usage.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Output of check resource usage API.
+
+    '
+  syntax:
+    content: ResourceUsage(resource_type=None, unit=None, current_value=None, limit=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.cdn.models.ResourceUsage
 references: []

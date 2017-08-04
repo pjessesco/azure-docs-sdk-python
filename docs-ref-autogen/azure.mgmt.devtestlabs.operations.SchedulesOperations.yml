@@ -9,6 +9,13 @@ items:
   - azure.mgmt.devtestlabs.operations.SchedulesOperations.list
   - azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
   - azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.update
   class: azure.mgmt.devtestlabs.operations.SchedulesOperations
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations
   inheritance:
@@ -37,7 +44,7 @@ items:
     '
   syntax:
     content: SchedulesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -54,7 +61,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -62,7 +69,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations
 - class: azure.mgmt.devtestlabs.operations.SchedulesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
   langs:
@@ -88,32 +95,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type:
+      type: &id006
       - str
     - description: 'A schedule.
 
         '
       id: schedule
-      type:
+      type: &id007
       - azure.mgmt.devtestlabs.models.Schedule
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,7 +129,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
     - description: '*Operation configuration
 
@@ -130,16 +137,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id010
       type:
       - azure.mgmt.devtestlabs.models.Schedule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.SchedulesOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
   langs:
@@ -165,26 +172,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -193,7 +200,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -201,16 +208,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
 - class: azure.mgmt.devtestlabs.operations.SchedulesOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
   langs:
@@ -236,26 +243,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -264,20 +271,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
-    return:
+    return: &id026
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
 - class: azure.mgmt.devtestlabs.operations.SchedulesOperations
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
   langs:
@@ -303,19 +310,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id030
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type:
+      type: &id031
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -324,14 +331,14 @@ items:
 
         '
       id: expand
-      type:
+      type: &id032
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id033
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -340,7 +347,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id034
       - bool
     - description: '*Operation configuration
 
@@ -348,16 +355,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id035
       type:
       - azure.mgmt.devtestlabs.models.Schedule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
 - class: azure.mgmt.devtestlabs.operations.SchedulesOperations
-  exceptions:
+  exceptions: &id037
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
   langs:
@@ -383,13 +390,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id038
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id039
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -398,14 +405,14 @@ items:
 
         '
       id: expand
-      type:
+      type: &id040
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type:
+      type: &id041
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -414,7 +421,7 @@ items:
 
         '
       id: top
-      type:
+      type: &id042
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -423,14 +430,14 @@ items:
 
         '
       id: orderby
-      type:
+      type: &id043
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id044
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -439,7 +446,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id045
       - bool
     - description: '*Operation configuration
 
@@ -447,13 +454,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id046
       type:
       - azure.mgmt.devtestlabs.models.SchedulePaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
 - class: azure.mgmt.devtestlabs.operations.SchedulesOperations
-  exceptions:
+  exceptions: &id048
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
   langs:
@@ -479,26 +486,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id049
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id050
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type:
+      type: &id051
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id052
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -507,7 +514,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id053
       - bool
     - description: '*Operation configuration
 
@@ -515,13 +522,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id054
       type:
       - azure.mgmt.devtestlabs.models.SchedulePaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
 - class: azure.mgmt.devtestlabs.operations.SchedulesOperations
-  exceptions:
+  exceptions: &id056
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
   langs:
@@ -547,32 +554,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id057
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id058
       - str
     - description: 'The name of the schedule.
 
         '
       id: name
-      type:
+      type: &id059
       - str
     - description: 'A schedule.
 
         '
       id: schedule
-      type:
+      type: &id060
       - azure.mgmt.devtestlabs.models.ScheduleFragment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id061
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -581,7 +588,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id062
       - bool
     - description: '*Operation configuration
 
@@ -589,15 +596,596 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id063
       type:
       - azure.mgmt.devtestlabs.models.Schedule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+- children:
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+  - azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: SchedulesOperations
+  source:
+    id: SchedulesOperations
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'SchedulesOperations operations.
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: SchedulesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations
+- &id011
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 196
+  summary: 'Create or replace an existing schedule.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, lab_name, name, schedule, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id005
+    - description: 'The name of the schedule.
+
+        '
+      id: name
+      type: *id006
+    - description: 'A schedule.
+
+        '
+      id: schedule
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id010
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+- *id011
+- &id019
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  exceptions: *id012
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 269
+  summary: 'Delete schedule.
+
+    '
+  syntax:
+    content: delete(resource_group_name, lab_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id014
+    - description: 'The name of the schedule.
+
+        '
+      id: name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+- *id019
+- &id027
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  exceptions: *id020
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: execute
+  source:
+    id: execute
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 397
+  summary: 'Execute a schedule. This operation can take a while to complete.
+
+    '
+  syntax:
+    content: execute(resource_group_name, lab_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id022
+    - description: 'The name of the schedule.
+
+        '
+      id: name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    return: *id026
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+- *id027
+- &id036
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  exceptions: *id028
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 127
+  summary: 'Get schedule.
+
+    '
+  syntax:
+    content: get(resource_group_name, lab_name, name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id030
+    - description: 'The name of the schedule.
+
+        '
+      id: name
+      type: *id031
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
+
+        ''properties($select=status)''
+
+        '
+      id: expand
+      type: *id032
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id033
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id034
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id035
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+- *id036
+- &id047
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  exceptions: *id037
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'List schedules in a given lab.
+
+    '
+  syntax:
+    content: list(resource_group_name, lab_name, expand=None, filter=None, top=None,
+      orderby=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id038
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id039
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
+
+        ''properties($select=status)''
+
+        '
+      id: expand
+      type: *id040
+    - defaultValue: None
+      description: 'The filter to apply to the operation.
+
+        '
+      id: filter
+      type: *id041
+    - defaultValue: None
+      description: 'The maximum number of resources to return from the
+
+        operation.
+
+        '
+      id: top
+      type: *id042
+    - defaultValue: None
+      description: 'The ordering expression for the results, using OData
+
+        notation.
+
+        '
+      id: orderby
+      type: *id043
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id044
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id045
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id046
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+- *id047
+- &id055
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  exceptions: *id048
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: list_applicable
+  source:
+    id: list_applicable
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 477
+  summary: 'Lists all applicable schedules.
+
+    '
+  syntax:
+    content: list_applicable(resource_group_name, lab_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id049
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id050
+    - description: 'The name of the schedule.
+
+        '
+      id: name
+      type: *id051
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id052
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id053
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id054
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+- *id055
+- &id064
+  class: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  exceptions: *id056
+  fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\schedules_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 326
+  summary: 'Modify properties of schedules.
+
+    '
+  syntax:
+    content: update(resource_group_name, lab_name, name, schedule, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id057
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id058
+    - description: 'The name of the schedule.
+
+        '
+      id: name
+      type: *id059
+    - description: 'A schedule.
+
+        '
+      id: schedule
+      type: *id060
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id061
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id062
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id063
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+- *id064
 references:
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+  isExternal: false
+  name: execute
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+  isExternal: false
+  name: list_applicable
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.delete
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+  isExternal: false
+  name: execute
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.execute
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.get
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+  isExternal: false
+  name: list_applicable
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.list_applicable
+- fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.devtestlabs.operations.SchedulesOperations
+  uid: azure.mgmt.devtestlabs.operations.SchedulesOperations.update
 - fullName: azure.mgmt.devtestlabs.operations.SchedulesOperations.create_or_update
   isExternal: false
   name: create_or_update

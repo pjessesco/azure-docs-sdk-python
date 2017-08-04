@@ -26,7 +26,7 @@ items:
   syntax:
     content: ExitConditions(exit_codes=None, exit_code_ranges=None, pre_processing_error=None,
       file_upload_error=None, default=None)
-    parameters:
+    parameters: &id001
     - description: 'A list of individual task exit codes and how the Batch
 
         service should respond to them.
@@ -87,6 +87,34 @@ items:
       id: default
       type:
       - azure.batch.models.ExitOptions
+  type: class
+  uid: azure.batch.models.ExitConditions
+- children: []
+  class: azure.batch.models.ExitConditions
+  fullName: azure.batch.models.ExitConditions
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: ExitConditions
+  source:
+    id: ExitConditions
+    path: azure-batch\azure\batch\models\exit_conditions.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\exit_conditions.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Specifies how the Batch service should respond when the task completes.
+
+    '
+  syntax:
+    content: ExitConditions(exit_codes=None, exit_code_ranges=None, pre_processing_error=None,
+      file_upload_error=None, default=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.ExitConditions
 references: []

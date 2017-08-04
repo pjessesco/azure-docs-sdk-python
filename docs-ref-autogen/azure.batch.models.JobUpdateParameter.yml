@@ -26,7 +26,7 @@ items:
   syntax:
     content: JobUpdateParameter(pool_info, priority=None, constraints=None, metadata=None,
       on_all_tasks_complete=None)
-    parameters:
+    parameters: &id001
     - description: 'The priority of the job. Priority values can range from
 
         -1000 to 1000, with -1000 being the lowest priority and 1000 being the
@@ -91,6 +91,34 @@ items:
       - 'str or @azure.batch.models.OnAllTasksComplete
 
         '
+  type: class
+  uid: azure.batch.models.JobUpdateParameter
+- children: []
+  class: azure.batch.models.JobUpdateParameter
+  fullName: azure.batch.models.JobUpdateParameter
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: JobUpdateParameter
+  source:
+    id: JobUpdateParameter
+    path: azure-batch\azure\batch\models\job_update_parameter.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\job_update_parameter.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The set of changes to be made to a job.
+
+    '
+  syntax:
+    content: JobUpdateParameter(pool_info, priority=None, constraints=None, metadata=None,
+      on_all_tasks_complete=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.JobUpdateParameter
 references: []

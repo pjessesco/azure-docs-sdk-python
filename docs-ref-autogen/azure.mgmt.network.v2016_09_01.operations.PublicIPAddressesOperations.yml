@@ -7,6 +7,11 @@ items:
   - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
   - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
   - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
   class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
   fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: PublicIPAddressesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-09-01".
 
         '
@@ -58,7 +63,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
 - class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
   langs:
@@ -84,13 +89,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the public IP address.
 
         '
       id: public_ip_address_name
-      type:
+      type: &id005
       - str
     - description: 'Parameters supplied to the create or update public
 
@@ -98,14 +103,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.network.v2016_09_01.models.PublicIPAddress
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -114,20 +119,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.PublicIPAddress'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
 - class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
   langs:
@@ -153,20 +158,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the subnet.
 
         '
       id: public_ip_address_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -175,20 +180,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
 - class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
   langs:
@@ -214,27 +219,27 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the subnet.
 
         '
       id: public_ip_address_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'Expands referenced resources.
 
         '
       id: expand
-      type:
+      type: &id021
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id022
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -243,7 +248,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id023
       - bool
     - description: '*Operation configuration
 
@@ -251,16 +256,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id024
       type:
       - azure.mgmt.network.v2016_09_01.models.PublicIPAddress
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
 - class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
-  exceptions:
+  exceptions: &id026
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
   langs:
@@ -285,14 +290,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id028
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -301,7 +306,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id029
       - bool
     - description: '*Operation configuration
 
@@ -309,13 +314,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id030
       type:
       - azure.mgmt.network.v2016_09_01.models.PublicIPAddressPaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
 - class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
-  exceptions:
+  exceptions: &id032
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
   langs:
@@ -341,7 +346,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id033
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -350,7 +355,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id034
       - bool
     - description: '*Operation configuration
 
@@ -358,12 +363,367 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id035
       type:
       - azure.mgmt.network.v2016_09_01.models.PublicIPAddressPaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+- children:
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+  - azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+  class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: PublicIPAddressesOperations
+  source:
+    id: PublicIPAddressesOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'PublicIPAddressesOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: PublicIPAddressesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+- &id010
+  class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 182
+  summary: 'Creates or updates a static or dynamic public IP address.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, public_ip_address_name, parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the public IP address.
+
+        '
+      id: public_ip_address_name
+      type: *id005
+    - description: 'Parameters supplied to the create or update public
+
+        IP address operation.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  exceptions: *id011
+  fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Deletes the specified public IP address.
+
+    '
+  syntax:
+    content: delete(resource_group_name, public_ip_address_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the subnet.
+
+        '
+      id: public_ip_address_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+- *id017
+- &id025
+  class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  exceptions: *id018
+  fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 116
+  summary: 'Gets the specified public IP address in a specified resource group.
+
+    '
+  syntax:
+    content: get(resource_group_name, public_ip_address_name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the subnet.
+
+        '
+      id: public_ip_address_name
+      type: *id020
+    - defaultValue: None
+      description: 'Expands referenced resources.
+
+        '
+      id: expand
+      type: *id021
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id022
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id023
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id024
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+- *id025
+- &id031
+  class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  exceptions: *id026
+  fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 340
+  summary: 'Gets all public IP addresses in a resource group.
+
+    '
+  syntax:
+    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id030
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+- *id031
+- &id036
+  class: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  exceptions: *id032
+  fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list_all
+  source:
+    id: list_all
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\public_ip_addresses_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 277
+  summary: 'Gets all the public IP addresses in a subscription.
+
+    '
+  syntax:
+    content: list_all(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id033
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id034
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id035
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+- *id036
 references:
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list
+- fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.list_all
 - fullName: azure.mgmt.network.v2016_09_01.operations.PublicIPAddressesOperations.create_or_update
   isExternal: false
   name: create_or_update

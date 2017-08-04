@@ -1,0 +1,767 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: NetworkSecurityGroupsOperations
+  source:
+    id: NetworkSecurityGroupsOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'NetworkSecurityGroupsOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: NetworkSecurityGroupsOperations(client, config, serializer, deserializer)
+    parameters: &id001
+    - description: 'Client for service requests.
+
+        '
+      id: client
+    - description: 'Configuration of service client.
+
+        '
+      id: config
+    - description: 'An object model serializer.
+
+        '
+      id: serializer
+    - description: 'An objec model deserializer.
+
+        '
+      id: deserializer
+    variables: &id002
+    - description: 'Client API version. Constant value: "2017-06-01".
+
+        '
+      id: api_version
+  type: class
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+- class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: &id003
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 184
+  summary: 'Creates or updates a network security group in the specified resource
+
+    group.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, network_security_group_name, parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id004
+      - str
+    - description: 'The name of the network security
+
+        group.
+
+        '
+      id: network_security_group_name
+      type: &id005
+      - str
+    - description: 'Parameters supplied to the create or update network
+
+        security group operation.
+
+        '
+      id: parameters
+      type: &id006
+      - azure.mgmt.network.v2017_06_01.models.NetworkSecurityGroup
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id007
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id008
+      - bool
+    return: &id009
+      type:
+      - '../msrestazure.azure_operation.AzureOperationPoller
+
+        instance that returns @azure.mgmt.network.v2017_06_01.models.NetworkSecurityGroup'
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+- class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: &id011
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Deletes the specified network security group.
+
+    '
+  syntax:
+    content: delete(resource_group_name, network_security_group_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id012
+      - str
+    - description: 'The name of the network security
+
+        group.
+
+        '
+      id: network_security_group_name
+      type: &id013
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id014
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id015
+      - bool
+    return: &id016
+      type:
+      - '../msrestazure.azure_operation.AzureOperationPoller
+
+        instance that returns None'
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+- class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: &id018
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 117
+  summary: 'Gets the specified network security group.
+
+    '
+  syntax:
+    content: get(resource_group_name, network_security_group_name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id019
+      - str
+    - description: 'The name of the network security
+
+        group.
+
+        '
+      id: network_security_group_name
+      type: &id020
+      - str
+    - defaultValue: None
+      description: 'Expands referenced resources.
+
+        '
+      id: expand
+      type: &id021
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id022
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id023
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id024
+      type:
+      - azure.mgmt.network.v2017_06_01.models.NetworkSecurityGroup
+      - '../msrest.pipeline.ClientRawResponse
+
+        if raw=true'
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+- class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: &id026
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 344
+  summary: 'Gets all network security groups in a resource group.
+
+    '
+  syntax:
+    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: &id027
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id028
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id029
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id030
+      type:
+      - azure.mgmt.network.v2017_06_01.models.NetworkSecurityGroupPaged
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+- class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: &id032
+  - type: msrestazure.azure_exceptions.CloudError
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: list_all
+  source:
+    id: list_all
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 281
+  summary: 'Gets all network security groups in a subscription.
+
+    '
+  syntax:
+    content: list_all(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: &id033
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: &id034
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: &id035
+      type:
+      - azure.mgmt.network.v2017_06_01.models.NetworkSecurityGroupPaged
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+- children:
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  - azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: NetworkSecurityGroupsOperations
+  source:
+    id: NetworkSecurityGroupsOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'NetworkSecurityGroupsOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: NetworkSecurityGroupsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+- &id010
+  class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 184
+  summary: 'Creates or updates a network security group in the specified resource
+
+    group.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, network_security_group_name, parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the network security
+
+        group.
+
+        '
+      id: network_security_group_name
+      type: *id005
+    - description: 'Parameters supplied to the create or update network
+
+        security group operation.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Deletes the specified network security group.
+
+    '
+  syntax:
+    content: delete(resource_group_name, network_security_group_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the network security
+
+        group.
+
+        '
+      id: network_security_group_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+- *id017
+- &id025
+  class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 117
+  summary: 'Gets the specified network security group.
+
+    '
+  syntax:
+    content: get(resource_group_name, network_security_group_name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the network security
+
+        group.
+
+        '
+      id: network_security_group_name
+      type: *id020
+    - defaultValue: None
+      description: 'Expands referenced resources.
+
+        '
+      id: expand
+      type: *id021
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id022
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id023
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id024
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+- *id025
+- &id031
+  class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: *id026
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 344
+  summary: 'Gets all network security groups in a resource group.
+
+    '
+  syntax:
+    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id030
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+- *id031
+- &id036
+  class: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  exceptions: *id032
+  fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.operations
+  name: list_all
+  source:
+    id: list_all
+    path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_06_01\operations\network_security_groups_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 281
+  summary: 'Gets all network security groups in a subscription.
+
+    '
+  syntax:
+    content: list_all(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id033
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id034
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id035
+  type: method
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+- *id036
+references:
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.create_or_update
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.delete
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.get
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list
+- fullName: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations
+  uid: azure.mgmt.network.v2017_06_01.operations.NetworkSecurityGroupsOperations.list_all

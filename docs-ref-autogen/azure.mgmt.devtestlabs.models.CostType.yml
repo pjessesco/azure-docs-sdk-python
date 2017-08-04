@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.devtestlabs.models.CostType
-- fullName: azure.mgmt.devtestlabs.models.CostType.projected
+- children:
+  - azure.mgmt.devtestlabs.models.CostType.projected
+  - azure.mgmt.devtestlabs.models.CostType.reported
+  - azure.mgmt.devtestlabs.models.CostType.unavailable
+  class: azure.mgmt.devtestlabs.models.CostType
+  fullName: azure.mgmt.devtestlabs.models.CostType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: CostType
+  source:
+    id: CostType
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 115
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.devtestlabs.models.CostType
+- &id001
+  fullName: azure.mgmt.devtestlabs.models.CostType.projected
   id: projected
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.devtestlabs.models.CostType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.CostType.projected
-- fullName: azure.mgmt.devtestlabs.models.CostType.reported
+- &id002
+  fullName: azure.mgmt.devtestlabs.models.CostType.reported
   id: reported
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.devtestlabs.models.CostType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.CostType.reported
-- fullName: azure.mgmt.devtestlabs.models.CostType.unavailable
+- &id003
+  fullName: azure.mgmt.devtestlabs.models.CostType.unavailable
   id: unavailable
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.devtestlabs.models.CostType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.CostType.unavailable
+- *id001
+- *id002
+- *id003
 references: []

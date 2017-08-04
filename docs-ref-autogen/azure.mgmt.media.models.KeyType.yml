@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.media.models.KeyType
-- fullName: azure.mgmt.media.models.KeyType.primary
+- children:
+  - azure.mgmt.media.models.KeyType.primary
+  - azure.mgmt.media.models.KeyType.secondary
+  class: azure.mgmt.media.models.KeyType
+  fullName: azure.mgmt.media.models.KeyType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.media.models
+  name: KeyType
+  source:
+    id: KeyType
+    path: azure-mgmt-media\azure\mgmt\media\models\media_services_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\models\media_services_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 27
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.media.models.KeyType
+- &id001
+  fullName: azure.mgmt.media.models.KeyType.primary
   id: primary
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.media.models.KeyType
   type: attribute
   uid: azure.mgmt.media.models.KeyType.primary
-- fullName: azure.mgmt.media.models.KeyType.secondary
+- &id002
+  fullName: azure.mgmt.media.models.KeyType.secondary
   id: secondary
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.media.models.KeyType
   type: attribute
   uid: azure.mgmt.media.models.KeyType.secondary
+- *id001
+- *id002
 references: []

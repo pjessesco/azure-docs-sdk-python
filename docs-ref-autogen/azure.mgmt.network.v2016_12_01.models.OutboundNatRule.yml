@@ -28,7 +28,7 @@ items:
   syntax:
     content: OutboundNatRule(backend_address_pool, id=None, allocated_outbound_ports=None,
       frontend_ip_configurations=None, provisioning_state=None, name=None, etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource ID.
 
         '
@@ -85,6 +85,36 @@ items:
       id: etag
       type:
       - str
+  type: class
+  uid: azure.mgmt.network.v2016_12_01.models.OutboundNatRule
+- children: []
+  class: azure.mgmt.network.v2016_12_01.models.OutboundNatRule
+  fullName: azure.mgmt.network.v2016_12_01.models.OutboundNatRule
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.network.v2016_12_01.models.sub_resource.SubResource
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.models
+  name: OutboundNatRule
+  source:
+    id: OutboundNatRule
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\outbound_nat_rule.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\outbound_nat_rule.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Outbound NAT pool of the load balancer.
+
+    '
+  syntax:
+    content: OutboundNatRule(backend_address_pool, id=None, allocated_outbound_ports=None,
+      frontend_ip_configurations=None, provisioning_state=None, name=None, etag=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.network.v2016_12_01.models.OutboundNatRule
 references: []

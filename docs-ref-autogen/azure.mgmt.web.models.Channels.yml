@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.Channels
-- fullName: azure.mgmt.web.models.Channels.all
+- children:
+  - azure.mgmt.web.models.Channels.all
+  - azure.mgmt.web.models.Channels.api
+  - azure.mgmt.web.models.Channels.email
+  - azure.mgmt.web.models.Channels.notification
+  - azure.mgmt.web.models.Channels.webhook
+  class: azure.mgmt.web.models.Channels
+  fullName: azure.mgmt.web.models.Channels
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: Channels
+  source:
+    id: Channels
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 285
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.Channels
+- &id001
+  fullName: azure.mgmt.web.models.Channels.all
   id: all
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.web.models.Channels
   type: attribute
   uid: azure.mgmt.web.models.Channels.all
-- fullName: azure.mgmt.web.models.Channels.api
+- &id002
+  fullName: azure.mgmt.web.models.Channels.api
   id: api
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.web.models.Channels
   type: attribute
   uid: azure.mgmt.web.models.Channels.api
-- fullName: azure.mgmt.web.models.Channels.email
+- &id003
+  fullName: azure.mgmt.web.models.Channels.email
   id: email
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.web.models.Channels
   type: attribute
   uid: azure.mgmt.web.models.Channels.email
-- fullName: azure.mgmt.web.models.Channels.notification
+- &id004
+  fullName: azure.mgmt.web.models.Channels.notification
   id: notification
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.web.models.Channels
   type: attribute
   uid: azure.mgmt.web.models.Channels.notification
-- fullName: azure.mgmt.web.models.Channels.webhook
+- &id005
+  fullName: azure.mgmt.web.models.Channels.webhook
   id: webhook
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.web.models.Channels
   type: attribute
   uid: azure.mgmt.web.models.Channels.webhook
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

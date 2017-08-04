@@ -7,6 +7,11 @@ items:
   - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
   - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
   - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
   class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
   fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: RecommendedElasticPoolsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for the request. Constant value: "2014-04-01".
 
         '
@@ -58,7 +63,7 @@ items:
   type: class
   uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
 - class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
   langs:
@@ -88,13 +93,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the recommended
 
@@ -102,14 +107,14 @@ items:
 
         '
       id: recommended_elastic_pool_name
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -118,7 +123,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -126,16 +131,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.sql.models.RecommendedElasticPool
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
 - class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
   langs:
@@ -165,13 +170,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the elastic pool to
 
@@ -179,20 +184,20 @@ items:
 
         '
       id: recommended_elastic_pool_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the database to be retrieved.
 
         '
       id: database_name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -201,7 +206,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -209,16 +214,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - azure.mgmt.sql.models.Database
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
 - class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
   langs:
@@ -248,20 +253,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id022
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id023
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -270,7 +275,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id024
       - bool
     - description: '*Operation configuration
 
@@ -278,13 +283,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id025
       type:
       - azure.mgmt.sql.models.RecommendedElasticPoolPaged
   type: method
   uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
 - class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
-  exceptions:
+  exceptions: &id027
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
   langs:
@@ -314,13 +319,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id028
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id029
       - str
     - description: 'The name of the recommended
 
@@ -328,14 +333,14 @@ items:
 
         '
       id: recommended_elastic_pool_name
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -344,7 +349,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -352,13 +357,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - azure.mgmt.sql.models.DatabasePaged
   type: method
   uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
 - class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
-  exceptions:
+  exceptions: &id035
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
   langs:
@@ -388,13 +393,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id036
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id037
       - str
     - description: 'The name of the recommended
 
@@ -402,14 +407,14 @@ items:
 
         '
       id: recommended_elastic_pool_name
-      type:
+      type: &id038
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id039
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -418,7 +423,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id040
       - bool
     - description: '*Operation configuration
 
@@ -426,12 +431,436 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id041
       type:
       - azure.mgmt.sql.models.RecommendedElasticPoolMetricPaged
   type: method
   uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+- children:
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+  - azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+  class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: RecommendedElasticPoolsOperations
+  source:
+    id: RecommendedElasticPoolsOperations
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'RecommendedElasticPoolsOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: RecommendedElasticPoolsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+- &id010
+  class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets a recommented elastic pool.
+
+    '
+  syntax:
+    content: get(resource_group_name, server_name, recommended_elastic_pool_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id005
+    - description: 'The name of the recommended
+
+        elastic pool to be retrieved.
+
+        '
+      id: recommended_elastic_pool_name
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+- *id010
+- &id019
+  class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_databases
+  source:
+    id: get_databases
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 106
+  summary: 'Gets a database inside of a recommented elastic pool.
+
+    '
+  syntax:
+    content: get_databases(resource_group_name, server_name, recommended_elastic_pool_name,
+      database_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id013
+    - description: 'The name of the elastic pool to
+
+        be retrieved.
+
+        '
+      id: recommended_elastic_pool_name
+      type: *id014
+    - description: 'The name of the database to be retrieved.
+
+        '
+      id: database_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+- *id019
+- &id026
+  class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  exceptions: *id020
+  fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_by_server
+  source:
+    id: list_by_server
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 176
+  summary: 'Returns recommended elastic pools.
+
+    '
+  syntax:
+    content: list_by_server(resource_group_name, server_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id022
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id023
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id024
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id025
+  type: method
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+- *id026
+- &id034
+  class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  exceptions: *id027
+  fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_databases
+  source:
+    id: list_databases
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 247
+  summary: 'Returns a list of databases inside a recommented elastic pool.
+
+    '
+  syntax:
+    content: list_databases(resource_group_name, server_name, recommended_elastic_pool_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id028
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id029
+    - description: 'The name of the recommended
+
+        elastic pool to be retrieved.
+
+        '
+      id: recommended_elastic_pool_name
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+- *id034
+- &id042
+  class: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  exceptions: *id035
+  fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_metrics
+  source:
+    id: list_metrics
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\recommended_elastic_pools_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 321
+  summary: 'Returns a recommented elastic pool metrics.
+
+    '
+  syntax:
+    content: list_metrics(resource_group_name, server_name, recommended_elastic_pool_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id036
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id037
+    - description: 'The name of the recommended
+
+        elastic pool to be retrieved.
+
+        '
+      id: recommended_elastic_pool_name
+      type: *id038
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id039
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id040
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id041
+  type: method
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+- *id042
 references:
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+  isExternal: false
+  name: get_databases
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+  isExternal: false
+  name: list_by_server
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+  isExternal: false
+  name: list_databases
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+  isExternal: false
+  name: get_databases
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get_databases
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+  isExternal: false
+  name: list_by_server
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_by_server
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+  isExternal: false
+  name: list_databases
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_databases
+- fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations
+  uid: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.list_metrics
 - fullName: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations.get
   isExternal: false
   name: get

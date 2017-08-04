@@ -7,6 +7,11 @@ items:
   - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
   - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
   - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
   class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
   fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: TagsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for this operation. Constant value: "2016-09-01".
 
         '
@@ -58,7 +63,7 @@ items:
   type: class
   uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
 - class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
   langs:
@@ -90,14 +95,14 @@ items:
 
         '
       id: tag_name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -106,7 +111,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -114,16 +119,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - azure.mgmt.resource.resources.v2016_09_01.models.TagDetails
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
 - class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
-  exceptions:
+  exceptions: &id009
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
   langs:
@@ -149,20 +154,20 @@ items:
 
         '
       id: tag_name
-      type:
+      type: &id010
       - str
     - description: 'The value of the tag to create.
 
         '
       id: tag_value
-      type:
+      type: &id011
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id012
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -171,7 +176,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id013
       - bool
     - description: '*Operation configuration
 
@@ -179,16 +184,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id014
       type:
       - azure.mgmt.resource.resources.v2016_09_01.models.TagValue
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
 - class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
-  exceptions:
+  exceptions: &id016
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
   langs:
@@ -218,14 +223,14 @@ items:
 
         '
       id: tag_name
-      type:
+      type: &id017
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id018
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -234,7 +239,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id019
       - bool
     - description: '*Operation configuration
 
@@ -242,16 +247,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id020
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
 - class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
-  exceptions:
+  exceptions: &id022
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
   langs:
@@ -276,20 +281,20 @@ items:
 
         '
       id: tag_name
-      type:
+      type: &id023
       - str
     - description: 'The value of the tag to delete.
 
         '
       id: tag_value
-      type:
+      type: &id024
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id025
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -298,7 +303,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id026
       - bool
     - description: '*Operation configuration
 
@@ -306,16 +311,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id027
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
 - class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
-  exceptions:
+  exceptions: &id029
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
   langs:
@@ -343,7 +348,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id030
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -352,7 +357,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id031
       - bool
     - description: '*Operation configuration
 
@@ -360,12 +365,373 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id032
       type:
       - azure.mgmt.resource.resources.v2016_09_01.models.TagDetailsPaged
   type: method
   uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+- children:
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+  - azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+  class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_09_01.operations
+  name: TagsOperations
+  source:
+    id: TagsOperations
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'TagsOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: TagsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+- &id008
+  class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_09_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 156
+  summary: 'Creates a tag in the subscription.
+
+
+    The tag name can have a maximum of 512 characters and is case
+
+    insensitive. Tag names created by Azure have prefixes of microsoft,
+
+    azure, or windows. You cannot create tags with one of these prefixes.
+
+    '
+  syntax:
+    content: create_or_update(tag_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the tag to create.
+
+        '
+      id: tag_name
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+- *id008
+- &id015
+  class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  exceptions: *id009
+  fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_09_01.operations
+  name: create_or_update_value
+  source:
+    id: create_or_update_value
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 92
+  summary: 'Creates a tag value. The name of the tag must already exist.
+
+    '
+  syntax:
+    content: create_or_update_value(tag_name, tag_value, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the tag.
+
+        '
+      id: tag_name
+      type: *id010
+    - description: 'The value of the tag to create.
+
+        '
+      id: tag_value
+      type: *id011
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id012
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id013
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id014
+  type: method
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+- *id015
+- &id021
+  class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  exceptions: *id016
+  fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_09_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 221
+  summary: 'Deletes a tag from the subscription.
+
+
+    You must remove all values from a resource tag before you can delete
+
+    it.
+
+    '
+  syntax:
+    content: delete(tag_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the tag.
+
+        '
+      id: tag_name
+      type: *id017
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id018
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id019
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id020
+  type: method
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+- *id021
+- &id028
+  class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  exceptions: *id022
+  fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_09_01.operations
+  name: delete_value
+  source:
+    id: delete_value
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Deletes a tag value.
+
+    '
+  syntax:
+    content: delete_value(tag_name, tag_value, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the tag.
+
+        '
+      id: tag_name
+      type: *id023
+    - description: 'The value of the tag to delete.
+
+        '
+      id: tag_value
+      type: *id024
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id025
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id026
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id027
+  type: method
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+- *id028
+- &id033
+  class: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  exceptions: *id029
+  fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_09_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_09_01\operations\tags_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 275
+  summary: 'Gets the names and values of all resource tags that are defined in a
+
+    subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id030
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id031
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id032
+  type: method
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+- *id033
 references:
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+  isExternal: false
+  name: create_or_update_value
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+  isExternal: false
+  name: delete_value
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+  isExternal: false
+  name: create_or_update_value
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update_value
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+  isExternal: false
+  name: delete_value
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.delete_value
+- fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations
+  uid: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.list
 - fullName: azure.mgmt.resource.resources.v2016_09_01.operations.TagsOperations.create_or_update
   isExternal: false
   name: create_or_update

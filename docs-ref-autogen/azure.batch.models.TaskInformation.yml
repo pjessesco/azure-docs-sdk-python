@@ -26,7 +26,7 @@ items:
   syntax:
     content: TaskInformation(task_state, task_url=None, job_id=None, task_id=None,
       subtask_id=None, execution_info=None)
-    parameters:
+    parameters: &id001
     - description: 'The URL of the task.
 
         '
@@ -69,6 +69,34 @@ items:
       id: execution_info
       type:
       - azure.batch.models.TaskExecutionInformation
+  type: class
+  uid: azure.batch.models.TaskInformation
+- children: []
+  class: azure.batch.models.TaskInformation
+  fullName: azure.batch.models.TaskInformation
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: TaskInformation
+  source:
+    id: TaskInformation
+    path: azure-batch\azure\batch\models\task_information.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\task_information.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Information about a task running on a compute node.
+
+    '
+  syntax:
+    content: TaskInformation(task_state, task_url=None, job_id=None, task_id=None,
+      subtask_id=None, execution_info=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.TaskInformation
 references: []

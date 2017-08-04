@@ -40,7 +40,47 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.logic.models.DayOfWeek
-- fullName: azure.mgmt.logic.models.DayOfWeek.friday
+- children:
+  - azure.mgmt.logic.models.DayOfWeek.friday
+  - azure.mgmt.logic.models.DayOfWeek.monday
+  - azure.mgmt.logic.models.DayOfWeek.saturday
+  - azure.mgmt.logic.models.DayOfWeek.sunday
+  - azure.mgmt.logic.models.DayOfWeek.thursday
+  - azure.mgmt.logic.models.DayOfWeek.tuesday
+  - azure.mgmt.logic.models.DayOfWeek.wednesday
+  class: azure.mgmt.logic.models.DayOfWeek
+  fullName: azure.mgmt.logic.models.DayOfWeek
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: DayOfWeek
+  source:
+    id: DayOfWeek
+    path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 132
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.logic.models.DayOfWeek
+- &id001
+  fullName: azure.mgmt.logic.models.DayOfWeek.friday
   id: friday
   langs:
   - python
@@ -54,7 +94,8 @@ items:
       - azure.mgmt.logic.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.logic.models.DayOfWeek.friday
-- fullName: azure.mgmt.logic.models.DayOfWeek.monday
+- &id002
+  fullName: azure.mgmt.logic.models.DayOfWeek.monday
   id: monday
   langs:
   - python
@@ -68,7 +109,8 @@ items:
       - azure.mgmt.logic.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.logic.models.DayOfWeek.monday
-- fullName: azure.mgmt.logic.models.DayOfWeek.saturday
+- &id003
+  fullName: azure.mgmt.logic.models.DayOfWeek.saturday
   id: saturday
   langs:
   - python
@@ -82,7 +124,8 @@ items:
       - azure.mgmt.logic.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.logic.models.DayOfWeek.saturday
-- fullName: azure.mgmt.logic.models.DayOfWeek.sunday
+- &id004
+  fullName: azure.mgmt.logic.models.DayOfWeek.sunday
   id: sunday
   langs:
   - python
@@ -96,7 +139,8 @@ items:
       - azure.mgmt.logic.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.logic.models.DayOfWeek.sunday
-- fullName: azure.mgmt.logic.models.DayOfWeek.thursday
+- &id005
+  fullName: azure.mgmt.logic.models.DayOfWeek.thursday
   id: thursday
   langs:
   - python
@@ -110,7 +154,8 @@ items:
       - azure.mgmt.logic.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.logic.models.DayOfWeek.thursday
-- fullName: azure.mgmt.logic.models.DayOfWeek.tuesday
+- &id006
+  fullName: azure.mgmt.logic.models.DayOfWeek.tuesday
   id: tuesday
   langs:
   - python
@@ -124,7 +169,8 @@ items:
       - azure.mgmt.logic.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.logic.models.DayOfWeek.tuesday
-- fullName: azure.mgmt.logic.models.DayOfWeek.wednesday
+- &id007
+  fullName: azure.mgmt.logic.models.DayOfWeek.wednesday
   id: wednesday
   langs:
   - python
@@ -138,4 +184,11 @@ items:
       - azure.mgmt.logic.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.logic.models.DayOfWeek.wednesday
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
 references: []

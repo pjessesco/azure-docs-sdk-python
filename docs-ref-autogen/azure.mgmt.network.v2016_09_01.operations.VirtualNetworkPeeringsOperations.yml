@@ -6,6 +6,10 @@ items:
   - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
   - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
   - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
   class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
   fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
   inheritance:
@@ -31,7 +35,7 @@ items:
     '
   syntax:
     content: VirtualNetworkPeeringsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -48,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-09-01".
 
         '
@@ -56,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
 - class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
   langs:
@@ -82,19 +86,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the peering.
 
         '
       id: virtual_network_peering_name
-      type:
+      type: &id006
       - str
     - description: 'Parameters supplied to the
 
@@ -102,14 +106,14 @@ items:
 
         '
       id: virtual_network_peering_parameters
-      type:
+      type: &id007
       - azure.mgmt.network.v2016_09_01.models.VirtualNetworkPeering
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -118,20 +122,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
-    return:
+    return: &id010
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.VirtualNetworkPeering'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
 - class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
   langs:
@@ -157,13 +161,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the virtual network
 
@@ -171,14 +175,14 @@ items:
 
         '
       id: virtual_network_peering_name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -187,20 +191,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
-    return:
+    return: &id018
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
 - class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
   langs:
@@ -226,13 +230,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the virtual network
 
@@ -240,14 +244,14 @@ items:
 
         '
       id: virtual_network_peering_name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -256,7 +260,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -264,16 +268,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.network.v2016_09_01.models.VirtualNetworkPeering
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
 - class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
   langs:
@@ -299,20 +303,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'The name of the virtual network.
 
         '
       id: virtual_network_name
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -321,7 +325,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -329,12 +333,328 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - azure.mgmt.network.v2016_09_01.models.VirtualNetworkPeeringPaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+- children:
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+  class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: VirtualNetworkPeeringsOperations
+  source:
+    id: VirtualNetworkPeeringsOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'VirtualNetworkPeeringsOperations operations.
+
+
+
+
+
+    '
+  syntax:
+    content: VirtualNetworkPeeringsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+- &id011
+  class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 186
+  summary: 'Creates or updates a peering in the specified virtual network.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, virtual_network_name, virtual_network_peering_name,
+      virtual_network_peering_parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the virtual network.
+
+        '
+      id: virtual_network_name
+      type: *id005
+    - description: 'The name of the peering.
+
+        '
+      id: virtual_network_peering_name
+      type: *id006
+    - description: 'Parameters supplied to the
+
+        create or update virtual network peering operation.
+
+        '
+      id: virtual_network_peering_parameters
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    return: *id010
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+- *id011
+- &id019
+  class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  exceptions: *id012
+  fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Deletes the specified virtual network peering.
+
+    '
+  syntax:
+    content: delete(resource_group_name, virtual_network_name, virtual_network_peering_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the virtual network.
+
+        '
+      id: virtual_network_name
+      type: *id014
+    - description: 'The name of the virtual network
+
+        peering.
+
+        '
+      id: virtual_network_peering_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    return: *id018
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+- *id019
+- &id027
+  class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  exceptions: *id020
+  fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 120
+  summary: 'Gets the specified virtual network peering.
+
+    '
+  syntax:
+    content: get(resource_group_name, virtual_network_name, virtual_network_peering_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The name of the virtual network.
+
+        '
+      id: virtual_network_name
+      type: *id022
+    - description: 'The name of the virtual network
+
+        peering.
+
+        '
+      id: virtual_network_peering_name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+- *id027
+- &id034
+  class: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  exceptions: *id028
+  fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\virtual_network_peerings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 285
+  summary: 'Gets all virtual network peerings in a virtual network.
+
+    '
+  syntax:
+    content: list(resource_group_name, virtual_network_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The name of the virtual network.
+
+        '
+      id: virtual_network_name
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+- *id034
 references:
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.list
 - fullName: azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations.create_or_update
   isExternal: false
   name: create_or_update

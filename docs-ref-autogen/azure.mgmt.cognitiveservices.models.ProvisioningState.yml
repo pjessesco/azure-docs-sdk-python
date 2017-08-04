@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.cognitiveservices.models.ProvisioningState
-- fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.creating
+- children:
+  - azure.mgmt.cognitiveservices.models.ProvisioningState.creating
+  - azure.mgmt.cognitiveservices.models.ProvisioningState.failed
+  - azure.mgmt.cognitiveservices.models.ProvisioningState.resolving_dns
+  - azure.mgmt.cognitiveservices.models.ProvisioningState.succeeded
+  class: azure.mgmt.cognitiveservices.models.ProvisioningState
+  fullName: azure.mgmt.cognitiveservices.models.ProvisioningState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.cognitiveservices.models
+  name: ProvisioningState
+  source:
+    id: ProvisioningState
+    path: azure-mgmt-cognitiveservices\azure\mgmt\cognitiveservices\models\cognitive_services_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-cognitiveservices\azure\mgmt\cognitiveservices\models\cognitive_services_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 59
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.cognitiveservices.models.ProvisioningState
+- &id001
+  fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.creating
   id: creating
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.cognitiveservices.models.ProvisioningState
   type: attribute
   uid: azure.mgmt.cognitiveservices.models.ProvisioningState.creating
-- fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.failed
+- &id002
+  fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.failed
   id: failed
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.cognitiveservices.models.ProvisioningState
   type: attribute
   uid: azure.mgmt.cognitiveservices.models.ProvisioningState.failed
-- fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.resolving_dns
+- &id003
+  fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.resolving_dns
   id: resolving_dns
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.cognitiveservices.models.ProvisioningState
   type: attribute
   uid: azure.mgmt.cognitiveservices.models.ProvisioningState.resolving_dns
-- fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.succeeded
+- &id004
+  fullName: azure.mgmt.cognitiveservices.models.ProvisioningState.succeeded
   id: succeeded
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.cognitiveservices.models.ProvisioningState
   type: attribute
   uid: azure.mgmt.cognitiveservices.models.ProvisioningState.succeeded
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.AllocationState
-- fullName: azure.batch.models.AllocationState.resizing
+- children:
+  - azure.batch.models.AllocationState.resizing
+  - azure.batch.models.AllocationState.steady
+  - azure.batch.models.AllocationState.stopping
+  class: azure.batch.models.AllocationState
+  fullName: azure.batch.models.AllocationState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: AllocationState
+  source:
+    id: AllocationState
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 184
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.AllocationState
+- &id001
+  fullName: azure.batch.models.AllocationState.resizing
   id: resizing
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.batch.models.AllocationState
   type: attribute
   uid: azure.batch.models.AllocationState.resizing
-- fullName: azure.batch.models.AllocationState.steady
+- &id002
+  fullName: azure.batch.models.AllocationState.steady
   id: steady
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.batch.models.AllocationState
   type: attribute
   uid: azure.batch.models.AllocationState.steady
-- fullName: azure.batch.models.AllocationState.stopping
+- &id003
+  fullName: azure.batch.models.AllocationState.stopping
   id: stopping
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.batch.models.AllocationState
   type: attribute
   uid: azure.batch.models.AllocationState.stopping
+- *id001
+- *id002
+- *id003
 references: []

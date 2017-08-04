@@ -34,7 +34,7 @@ items:
     content: NotificationHubResource(location, tags=None, sku=None, notification_hub_resource_name=None,
       registration_ttl=None, authorization_rules=None, apns_credential=None, wns_credential=None,
       gcm_credential=None, mpns_credential=None, adm_credential=None, baidu_credential=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location
 
         '
@@ -117,7 +117,7 @@ items:
       id: baidu_credential
       type:
       - azure.mgmt.notificationhubs.models.BaiduCredential
-    variables:
+    variables: &id002
     - description: 'Resource Id
 
         '
@@ -136,6 +136,43 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.notificationhubs.models.NotificationHubResource
+- children: []
+  class: azure.mgmt.notificationhubs.models.NotificationHubResource
+  fullName: azure.mgmt.notificationhubs.models.NotificationHubResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.notificationhubs.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.models
+  name: NotificationHubResource
+  source:
+    id: NotificationHubResource
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\models\notification_hub_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\models\notification_hub_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Description of a NotificationHub Resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: NotificationHubResource(location, tags=None, sku=None, notification_hub_resource_name=None,
+      registration_ttl=None, authorization_rules=None, apns_credential=None, wns_credential=None,
+      gcm_credential=None, mpns_credential=None, adm_credential=None, baidu_credential=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.notificationhubs.models.NotificationHubResource
 references: []

@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.keyvault.models.SkuName
-- fullName: azure.mgmt.keyvault.models.SkuName.premium
+- children:
+  - azure.mgmt.keyvault.models.SkuName.premium
+  - azure.mgmt.keyvault.models.SkuName.standard
+  class: azure.mgmt.keyvault.models.SkuName
+  fullName: azure.mgmt.keyvault.models.SkuName
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.keyvault.models
+  name: SkuName
+  source:
+    id: SkuName
+    path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\key_vault_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-keyvault\azure\mgmt\keyvault\models\key_vault_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.keyvault.models.SkuName
+- &id001
+  fullName: azure.mgmt.keyvault.models.SkuName.premium
   id: premium
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.keyvault.models.SkuName
   type: attribute
   uid: azure.mgmt.keyvault.models.SkuName.premium
-- fullName: azure.mgmt.keyvault.models.SkuName.standard
+- &id002
+  fullName: azure.mgmt.keyvault.models.SkuName.standard
   id: standard
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.keyvault.models.SkuName
   type: attribute
   uid: azure.mgmt.keyvault.models.SkuName.standard
+- *id001
+- *id002
 references: []

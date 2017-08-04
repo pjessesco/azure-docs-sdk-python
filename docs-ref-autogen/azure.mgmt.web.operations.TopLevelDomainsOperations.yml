@@ -5,6 +5,9 @@ items:
   - azure.mgmt.web.operations.TopLevelDomainsOperations.get
   - azure.mgmt.web.operations.TopLevelDomainsOperations.list
   - azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+  - azure.mgmt.web.operations.TopLevelDomainsOperations.get
+  - azure.mgmt.web.operations.TopLevelDomainsOperations.list
+  - azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
   class: azure.mgmt.web.operations.TopLevelDomainsOperations
   fullName: azure.mgmt.web.operations.TopLevelDomainsOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: TopLevelDomainsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'API Version. Constant value: "2015-04-01".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.web.operations.TopLevelDomainsOperations
 - class: azure.mgmt.web.operations.TopLevelDomainsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.get
   langs:
@@ -82,14 +85,14 @@ items:
 
         '
       id: name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -98,7 +101,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -106,16 +109,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - azure.mgmt.web.models.TopLevelDomain
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.TopLevelDomainsOperations.get
 - class: azure.mgmt.web.operations.TopLevelDomainsOperations
-  exceptions:
+  exceptions: &id009
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list
   langs:
@@ -144,7 +147,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id010
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -153,7 +156,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id011
       - bool
     - description: '*Operation configuration
 
@@ -161,13 +164,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id012
       type:
       - azure.mgmt.web.models.TopLevelDomainPaged
   type: method
   uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list
 - class: azure.mgmt.web.operations.TopLevelDomainsOperations
-  exceptions:
+  exceptions: &id014
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
   langs:
@@ -201,7 +204,7 @@ items:
 
         '
       id: name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'If <code>true</code>, then the list of
@@ -212,7 +215,7 @@ items:
 
         '
       id: include_privacy
-      type:
+      type: &id016
       - bool
     - defaultValue: None
       description: 'If <code>true</code>, then the list of agreements
@@ -223,14 +226,14 @@ items:
 
         '
       id: for_transfer
-      type:
+      type: &id017
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id018
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -239,7 +242,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id019
       - bool
     - description: '*Operation configuration
 
@@ -247,12 +250,257 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id020
       type:
       - azure.mgmt.web.models.TldLegalAgreementPaged
   type: method
   uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+- children:
+  - azure.mgmt.web.operations.TopLevelDomainsOperations.get
+  - azure.mgmt.web.operations.TopLevelDomainsOperations.list
+  - azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+  class: azure.mgmt.web.operations.TopLevelDomainsOperations
+  fullName: azure.mgmt.web.operations.TopLevelDomainsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: TopLevelDomainsOperations
+  source:
+    id: TopLevelDomainsOperations
+    path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'TopLevelDomainsOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: TopLevelDomainsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations
+- &id008
+  class: azure.mgmt.web.operations.TopLevelDomainsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 103
+  summary: 'Get details of a top-level domain.
+
+
+    Get details of a top-level domain.
+
+    '
+  syntax:
+    content: get(name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the top-level domain.
+
+        '
+      id: name
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.get
+- *id008
+- &id013
+  class: azure.mgmt.web.operations.TopLevelDomainsOperations
+  exceptions: *id009
+  fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Get all top-level domains supported for registration.
+
+
+    Get all top-level domains supported for registration.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id010
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id011
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id012
+  type: method
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list
+- *id013
+- &id021
+  class: azure.mgmt.web.operations.TopLevelDomainsOperations
+  exceptions: *id014
+  fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_agreements
+  source:
+    id: list_agreements
+    path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\top_level_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 163
+  summary: 'Gets all legal agreements that user needs to accept before purchasing
+    a
+
+    domain.
+
+
+    Gets all legal agreements that user needs to accept before purchasing a
+
+    domain.
+
+    '
+  syntax:
+    content: list_agreements(name, include_privacy=None, for_transfer=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the top-level domain.
+
+        '
+      id: name
+      type: *id015
+    - defaultValue: None
+      description: 'If <code>true</code>, then the list of
+
+        agreements will include agreements for domain privacy as well;
+
+        otherwise, <code>false</code>.
+
+        '
+      id: include_privacy
+      type: *id016
+    - defaultValue: None
+      description: 'If <code>true</code>, then the list of agreements
+
+        will include agreements for domain transfer as well; otherwise,
+
+        <code>false</code>.
+
+        '
+      id: for_transfer
+      type: *id017
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id018
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id019
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id020
+  type: method
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+- *id021
 references:
+- fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.TopLevelDomainsOperations
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.get
+- fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.TopLevelDomainsOperations
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list
+- fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+  isExternal: false
+  name: list_agreements
+  parent: azure.mgmt.web.operations.TopLevelDomainsOperations
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+- fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.TopLevelDomainsOperations
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.get
+- fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.TopLevelDomainsOperations
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list
+- fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
+  isExternal: false
+  name: list_agreements
+  parent: azure.mgmt.web.operations.TopLevelDomainsOperations
+  uid: azure.mgmt.web.operations.TopLevelDomainsOperations.list_agreements
 - fullName: azure.mgmt.web.operations.TopLevelDomainsOperations.get
   isExternal: false
   name: get

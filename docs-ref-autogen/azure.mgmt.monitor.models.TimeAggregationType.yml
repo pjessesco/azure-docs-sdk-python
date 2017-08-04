@@ -36,7 +36,43 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.monitor.models.TimeAggregationType
-- fullName: azure.mgmt.monitor.models.TimeAggregationType.average
+- children:
+  - azure.mgmt.monitor.models.TimeAggregationType.average
+  - azure.mgmt.monitor.models.TimeAggregationType.count
+  - azure.mgmt.monitor.models.TimeAggregationType.maximum
+  - azure.mgmt.monitor.models.TimeAggregationType.minimum
+  - azure.mgmt.monitor.models.TimeAggregationType.total
+  class: azure.mgmt.monitor.models.TimeAggregationType
+  fullName: azure.mgmt.monitor.models.TimeAggregationType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: TimeAggregationType
+  source:
+    id: TimeAggregationType
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 23
+  summary: 'An enumeration.
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.monitor.models.TimeAggregationType
+- &id001
+  fullName: azure.mgmt.monitor.models.TimeAggregationType.average
   id: average
   langs:
   - python
@@ -50,7 +86,8 @@ items:
       - azure.mgmt.monitor.models.TimeAggregationType
   type: attribute
   uid: azure.mgmt.monitor.models.TimeAggregationType.average
-- fullName: azure.mgmt.monitor.models.TimeAggregationType.count
+- &id002
+  fullName: azure.mgmt.monitor.models.TimeAggregationType.count
   id: count
   langs:
   - python
@@ -64,7 +101,8 @@ items:
       - azure.mgmt.monitor.models.TimeAggregationType
   type: attribute
   uid: azure.mgmt.monitor.models.TimeAggregationType.count
-- fullName: azure.mgmt.monitor.models.TimeAggregationType.maximum
+- &id003
+  fullName: azure.mgmt.monitor.models.TimeAggregationType.maximum
   id: maximum
   langs:
   - python
@@ -78,7 +116,8 @@ items:
       - azure.mgmt.monitor.models.TimeAggregationType
   type: attribute
   uid: azure.mgmt.monitor.models.TimeAggregationType.maximum
-- fullName: azure.mgmt.monitor.models.TimeAggregationType.minimum
+- &id004
+  fullName: azure.mgmt.monitor.models.TimeAggregationType.minimum
   id: minimum
   langs:
   - python
@@ -92,7 +131,8 @@ items:
       - azure.mgmt.monitor.models.TimeAggregationType
   type: attribute
   uid: azure.mgmt.monitor.models.TimeAggregationType.minimum
-- fullName: azure.mgmt.monitor.models.TimeAggregationType.total
+- &id005
+  fullName: azure.mgmt.monitor.models.TimeAggregationType.total
   id: total
   langs:
   - python
@@ -106,4 +146,9 @@ items:
       - azure.mgmt.monitor.models.TimeAggregationType
   type: attribute
   uid: azure.mgmt.monitor.models.TimeAggregationType.total
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
 references: []

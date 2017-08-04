@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit
-- fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes
+  - azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes_per_second
+  - azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count
+  - azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count_per_second
+  - azure.mgmt.recoveryservicesbackup.models.UsagesUnit.percent
+  - azure.mgmt.recoveryservicesbackup.models.UsagesUnit.seconds
+  class: azure.mgmt.recoveryservicesbackup.models.UsagesUnit
+  fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: UsagesUnit
+  source:
+    id: UsagesUnit
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 60
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes
   id: bytes
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.UsagesUnit
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes
-- fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes_per_second
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes_per_second
   id: bytes_per_second
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.UsagesUnit
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.bytes_per_second
-- fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count
   id: count
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.UsagesUnit
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count
-- fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count_per_second
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count_per_second
   id: count_per_second
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.UsagesUnit
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.count_per_second
-- fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.percent
+- &id005
+  fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.percent
   id: percent
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.UsagesUnit
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.percent
-- fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.seconds
+- &id006
+  fullName: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.seconds
   id: seconds
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.UsagesUnit
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.UsagesUnit.seconds
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

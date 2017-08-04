@@ -19,6 +19,23 @@ items:
   - azure.mgmt.sql.operations.ServersOperations.list_service_objectives
   - azure.mgmt.sql.operations.ServersOperations.list_usages
   - azure.mgmt.sql.operations.ServersOperations.update
+  - azure.mgmt.sql.operations.ServersOperations.check_name_availability
+  - azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+  - azure.mgmt.sql.operations.ServersOperations.create_or_update
+  - azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+  - azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+  - azure.mgmt.sql.operations.ServersOperations.delete
+  - azure.mgmt.sql.operations.ServersOperations.get
+  - azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+  - azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+  - azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+  - azure.mgmt.sql.operations.ServersOperations.get_service_objective
+  - azure.mgmt.sql.operations.ServersOperations.list
+  - azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+  - azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+  - azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+  - azure.mgmt.sql.operations.ServersOperations.list_usages
+  - azure.mgmt.sql.operations.ServersOperations.update
   class: azure.mgmt.sql.operations.ServersOperations
   fullName: azure.mgmt.sql.operations.ServersOperations
   inheritance:
@@ -57,7 +74,7 @@ items:
     '
   syntax:
     content: ServersOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -74,7 +91,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The name of the connection policy. Constant value: "default".
 
         '
@@ -92,7 +109,7 @@ items:
   type: class
   uid: azure.mgmt.sql.operations.ServersOperations
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.check_name_availability
   langs:
@@ -117,14 +134,14 @@ items:
 
         '
       id: name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -133,7 +150,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -141,16 +158,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - azure.mgmt.sql.models.CheckNameAvailabilityResponse
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.check_name_availability
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id009
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
   langs:
@@ -180,13 +197,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id010
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id011
       - str
     - description: 'The azure recovery
 
@@ -194,14 +211,14 @@ items:
 
         '
       id: recovery_services_vault_resource_id
-      type:
+      type: &id012
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id013
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -210,20 +227,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id014
       - bool
-    return:
+    return: &id015
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.BackupLongTermRetentionVault'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id017
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update
   langs:
@@ -253,26 +270,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id018
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id019
       - str
     - description: 'The requested server resource state.
 
         '
       id: parameters
-      type:
+      type: &id020
       - azure.mgmt.sql.models.Server
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -281,20 +298,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
-    return:
+    return: &id023
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.Server'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.create_or_update
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
   langs:
@@ -324,13 +341,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id026
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id027
       - str
     - description: 'The server connection type. Possible values
 
@@ -338,7 +355,7 @@ items:
 
         '
       id: connection_type
-      type:
+      type: &id028
       - 'str or @azure.mgmt.sql.models.ServerConnectionType
 
         '
@@ -347,7 +364,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id029
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -356,7 +373,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id030
       - bool
     - description: '*Operation configuration
 
@@ -364,16 +381,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id031
       type:
       - azure.mgmt.sql.models.ServerConnectionPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id033
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
   langs:
@@ -403,26 +420,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id034
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id035
       - str
     - description: 'The requested encryption protector resource state.
 
         '
       id: parameters
-      type:
+      type: &id036
       - azure.mgmt.sql.models.EncryptionProtector
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id037
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -431,20 +448,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id038
       - bool
-    return:
+    return: &id039
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.EncryptionProtector'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id041
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.delete
   langs:
@@ -474,20 +491,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id042
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id043
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id044
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -496,20 +513,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id045
       - bool
-    return:
+    return: &id046
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.delete
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id048
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.get
   langs:
@@ -539,20 +556,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id049
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id050
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -561,7 +578,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
     - description: '*Operation configuration
 
@@ -569,16 +586,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id053
       type:
       - azure.mgmt.sql.models.Server
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.get
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id055
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
   langs:
@@ -608,20 +625,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id056
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id057
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id058
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -630,7 +647,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id059
       - bool
     - description: '*Operation configuration
 
@@ -638,16 +655,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id060
       type:
       - azure.mgmt.sql.models.BackupLongTermRetentionVault
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id062
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
   langs:
@@ -677,20 +694,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id063
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id064
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id065
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -699,7 +716,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id066
       - bool
     - description: '*Operation configuration
 
@@ -707,16 +724,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id067
       type:
       - azure.mgmt.sql.models.ServerConnectionPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id069
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
   langs:
@@ -746,20 +763,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id070
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id071
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id072
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -768,7 +785,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id073
       - bool
     - description: '*Operation configuration
 
@@ -776,16 +793,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id074
       type:
       - azure.mgmt.sql.models.EncryptionProtector
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id076
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.get_service_objective
   langs:
@@ -815,13 +832,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id077
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id078
       - str
     - description: 'The name of the service objective to
 
@@ -829,14 +846,14 @@ items:
 
         '
       id: service_objective_name
-      type:
+      type: &id079
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id080
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -845,7 +862,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id081
       - bool
     - description: '*Operation configuration
 
@@ -853,16 +870,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id082
       type:
       - azure.mgmt.sql.models.ServiceObjective
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.get_service_objective
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id084
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.list
   langs:
@@ -888,7 +905,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id085
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -897,7 +914,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id086
       - bool
     - description: '*Operation configuration
 
@@ -905,13 +922,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id087
       type:
       - azure.mgmt.sql.models.ServerPaged
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.list
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id089
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
   langs:
@@ -941,14 +958,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id090
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id091
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -957,7 +974,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id092
       - bool
     - description: '*Operation configuration
 
@@ -965,13 +982,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id093
       type:
       - azure.mgmt.sql.models.ServerPaged
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id095
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
   langs:
@@ -1001,20 +1018,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id096
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id097
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id098
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1023,7 +1040,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id099
       - bool
     - description: '*Operation configuration
 
@@ -1031,13 +1048,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id100
       type:
       - azure.mgmt.sql.models.EncryptionProtectorPaged
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id102
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
   langs:
@@ -1067,20 +1084,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id103
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id104
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id105
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1089,7 +1106,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id106
       - bool
     - description: '*Operation configuration
 
@@ -1097,13 +1114,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id107
       type:
       - azure.mgmt.sql.models.ServiceObjectivePaged
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id109
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.list_usages
   langs:
@@ -1133,20 +1150,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id110
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id111
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id112
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1155,7 +1172,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id113
       - bool
     - description: '*Operation configuration
 
@@ -1163,13 +1180,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id114
       type:
       - azure.mgmt.sql.models.ServerUsagePaged
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.list_usages
 - class: azure.mgmt.sql.operations.ServersOperations
-  exceptions:
+  exceptions: &id116
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServersOperations.update
   langs:
@@ -1199,26 +1216,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id117
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id118
       - str
     - description: 'The requested server resource state.
 
         '
       id: parameters
-      type:
+      type: &id119
       - azure.mgmt.sql.models.Server
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id120
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1227,19 +1244,1262 @@ items:
 
         '
       id: raw
-      type:
+      type: &id121
       - bool
-    return:
+    return: &id122
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.Server'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServersOperations.update
+- children:
+  - azure.mgmt.sql.operations.ServersOperations.check_name_availability
+  - azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+  - azure.mgmt.sql.operations.ServersOperations.create_or_update
+  - azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+  - azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+  - azure.mgmt.sql.operations.ServersOperations.delete
+  - azure.mgmt.sql.operations.ServersOperations.get
+  - azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+  - azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+  - azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+  - azure.mgmt.sql.operations.ServersOperations.get_service_objective
+  - azure.mgmt.sql.operations.ServersOperations.list
+  - azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+  - azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+  - azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+  - azure.mgmt.sql.operations.ServersOperations.list_usages
+  - azure.mgmt.sql.operations.ServersOperations.update
+  class: azure.mgmt.sql.operations.ServersOperations
+  fullName: azure.mgmt.sql.operations.ServersOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: ServersOperations
+  source:
+    id: ServersOperations
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'ServersOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: ServersOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.sql.operations.ServersOperations
+- &id008
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id003
+  fullName: azure.mgmt.sql.operations.ServersOperations.check_name_availability
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: check_name_availability
+  source:
+    id: check_name_availability
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 189
+  summary: 'Determines whether a resource can be created with the specified name.
+
+    '
+  syntax:
+    content: check_name_availability(name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name whose availability is to be checked.
+
+        '
+      id: name
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.check_name_availability
+- *id008
+- &id016
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id009
+  fullName: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_backup_long_term_retention_vault
+  source:
+    id: create_backup_long_term_retention_vault
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 322
+  summary: 'Updates a server backup long term retention vault.
+
+    '
+  syntax:
+    content: create_backup_long_term_retention_vault(resource_group_name, server_name,
+      recovery_services_vault_resource_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id010
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id011
+    - description: 'The azure recovery
+
+        services vault resource id
+
+        '
+      id: recovery_services_vault_resource_id
+      type: *id012
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id013
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id014
+    return: *id015
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+- *id016
+- &id024
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id017
+  fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 837
+  summary: 'Creates or updates a server.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, server_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id018
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id019
+    - description: 'The requested server resource state.
+
+        '
+      id: parameters
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    return: *id023
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update
+- *id024
+- &id032
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id025
+  fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_connection_policy
+  source:
+    id: create_or_update_connection_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 43
+  summary: 'Creates or updates the server''s connection policy.
+
+    '
+  syntax:
+    content: create_or_update_connection_policy(resource_group_name, server_name,
+      connection_type, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id026
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id027
+    - description: 'The server connection type. Possible values
+
+        include: ''Default'', ''Proxy'', ''Redirect''
+
+        '
+      id: connection_type
+      type: *id028
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id029
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id030
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id031
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+- *id032
+- &id040
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id033
+  fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_encryption_protector
+  source:
+    id: create_or_update_encryption_protector
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1248
+  summary: 'Updates an existing encryption protector.
+
+    '
+  syntax:
+    content: create_or_update_encryption_protector(resource_group_name, server_name,
+      parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id034
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id035
+    - description: 'The requested encryption protector resource state.
+
+        '
+      id: parameters
+      type: *id036
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id037
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id038
+    return: *id039
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+- *id040
+- &id047
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id041
+  fullName: azure.mgmt.sql.operations.ServersOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 933
+  summary: 'Deletes a server.
+
+    '
+  syntax:
+    content: delete(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id042
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id043
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id044
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id045
+    return: *id046
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.delete
+- *id047
+- &id054
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id048
+  fullName: azure.mgmt.sql.operations.ServersOperations.get
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 772
+  summary: 'Gets a server.
+
+    '
+  syntax:
+    content: get(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id049
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id050
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id053
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.get
+- *id054
+- &id061
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id055
+  fullName: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_backup_long_term_retention_vault
+  source:
+    id: get_backup_long_term_retention_vault
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 255
+  summary: 'Gets a server backup long term retention vault.
+
+    '
+  syntax:
+    content: get_backup_long_term_retention_vault(resource_group_name, server_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id056
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id057
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id058
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id059
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id060
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+- *id061
+- &id068
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id062
+  fullName: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_connection_policy
+  source:
+    id: get_connection_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 122
+  summary: 'Gets the server''s secure connection policy.
+
+    '
+  syntax:
+    content: get_connection_policy(resource_group_name, server_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id063
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id064
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id065
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id066
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id067
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+- *id068
+- &id075
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id069
+  fullName: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_encryption_protector
+  source:
+    id: get_encryption_protector
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1181
+  summary: 'Returns the server encryption protector.
+
+    '
+  syntax:
+    content: get_encryption_protector(resource_group_name, server_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id070
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id071
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id072
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id073
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id074
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+- *id075
+- &id083
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id076
+  fullName: azure.mgmt.sql.operations.ServersOperations.get_service_objective
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_service_objective
+  source:
+    id: get_service_objective
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 423
+  summary: 'Gets a database service objective.
+
+    '
+  syntax:
+    content: get_service_objective(resource_group_name, server_name, service_objective_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id077
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id078
+    - description: 'The name of the service objective to
+
+        retrieve.
+
+        '
+      id: service_objective_name
+      type: *id079
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id080
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id081
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id082
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.get_service_objective
+- *id083
+- &id088
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id084
+  fullName: azure.mgmt.sql.operations.ServersOperations.list
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 639
+  summary: 'Returns a list of servers.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id085
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id086
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id087
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.list
+- *id088
+- &id094
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id089
+  fullName: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 703
+  summary: 'Gets a list of servers in a resource groups.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id090
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id091
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id092
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id093
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+- *id094
+- &id101
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id095
+  fullName: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_encryption_protectors
+  source:
+    id: list_encryption_protectors
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1108
+  summary: 'Returns a list of the server encryption protectors.
+
+    '
+  syntax:
+    content: list_encryption_protectors(resource_group_name, server_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id096
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id097
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id098
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id099
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id100
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+- *id101
+- &id108
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id102
+  fullName: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_service_objectives
+  source:
+    id: list_service_objectives
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 493
+  summary: 'Returns database service objectives.
+
+    '
+  syntax:
+    content: list_service_objectives(resource_group_name, server_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id103
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id104
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id105
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id106
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id107
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+- *id108
+- &id115
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id109
+  fullName: azure.mgmt.sql.operations.ServersOperations.list_usages
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_usages
+  source:
+    id: list_usages
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 566
+  summary: 'Returns server usages.
+
+    '
+  syntax:
+    content: list_usages(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id110
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id111
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id112
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id113
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id114
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.list_usages
+- *id115
+- &id123
+  class: azure.mgmt.sql.operations.ServersOperations
+  exceptions: *id116
+  fullName: azure.mgmt.sql.operations.ServersOperations.update
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1014
+  summary: 'Updates a server.
+
+    '
+  syntax:
+    content: update(resource_group_name, server_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id117
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id118
+    - description: 'The requested server resource state.
+
+        '
+      id: parameters
+      type: *id119
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id120
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id121
+    return: *id122
+  type: method
+  uid: azure.mgmt.sql.operations.ServersOperations.update
+- *id123
 references:
+- fullName: azure.mgmt.sql.operations.ServersOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.check_name_availability
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+  isExternal: false
+  name: create_backup_long_term_retention_vault
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+  isExternal: false
+  name: create_or_update_connection_policy
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+  isExternal: false
+  name: create_or_update_encryption_protector
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+- fullName: azure.mgmt.sql.operations.ServersOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.delete
+- fullName: azure.mgmt.sql.operations.ServersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+  isExternal: false
+  name: get_backup_long_term_retention_vault
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+  isExternal: false
+  name: get_connection_policy
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+  isExternal: false
+  name: get_encryption_protector
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_service_objective
+  isExternal: false
+  name: get_service_objective
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_service_objective
+- fullName: azure.mgmt.sql.operations.ServersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+  isExternal: false
+  name: list_encryption_protectors
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+  isExternal: false
+  name: list_service_objectives
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_usages
+  isExternal: false
+  name: list_usages
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_usages
+- fullName: azure.mgmt.sql.operations.ServersOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.update
+- fullName: azure.mgmt.sql.operations.ServersOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.check_name_availability
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+  isExternal: false
+  name: create_backup_long_term_retention_vault
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_backup_long_term_retention_vault
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+  isExternal: false
+  name: create_or_update_connection_policy
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_connection_policy
+- fullName: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+  isExternal: false
+  name: create_or_update_encryption_protector
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.create_or_update_encryption_protector
+- fullName: azure.mgmt.sql.operations.ServersOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.delete
+- fullName: azure.mgmt.sql.operations.ServersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+  isExternal: false
+  name: get_backup_long_term_retention_vault
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_backup_long_term_retention_vault
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+  isExternal: false
+  name: get_connection_policy
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_connection_policy
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+  isExternal: false
+  name: get_encryption_protector
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_encryption_protector
+- fullName: azure.mgmt.sql.operations.ServersOperations.get_service_objective
+  isExternal: false
+  name: get_service_objective
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.get_service_objective
+- fullName: azure.mgmt.sql.operations.ServersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_by_resource_group
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+  isExternal: false
+  name: list_encryption_protectors
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_encryption_protectors
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+  isExternal: false
+  name: list_service_objectives
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_service_objectives
+- fullName: azure.mgmt.sql.operations.ServersOperations.list_usages
+  isExternal: false
+  name: list_usages
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.list_usages
+- fullName: azure.mgmt.sql.operations.ServersOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.sql.operations.ServersOperations
+  uid: azure.mgmt.sql.operations.ServersOperations.update
 - fullName: azure.mgmt.sql.operations.ServersOperations.check_name_availability
   isExternal: false
   name: check_name_availability

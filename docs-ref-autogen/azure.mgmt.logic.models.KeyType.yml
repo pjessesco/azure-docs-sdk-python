@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.logic.models.KeyType
-- fullName: azure.mgmt.logic.models.KeyType.not_specified
+- children:
+  - azure.mgmt.logic.models.KeyType.not_specified
+  - azure.mgmt.logic.models.KeyType.primary
+  - azure.mgmt.logic.models.KeyType.secondary
+  class: azure.mgmt.logic.models.KeyType
+  fullName: azure.mgmt.logic.models.KeyType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: KeyType
+  source:
+    id: KeyType
+    path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 143
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.logic.models.KeyType
+- &id001
+  fullName: azure.mgmt.logic.models.KeyType.not_specified
   id: not_specified
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.logic.models.KeyType
   type: attribute
   uid: azure.mgmt.logic.models.KeyType.not_specified
-- fullName: azure.mgmt.logic.models.KeyType.primary
+- &id002
+  fullName: azure.mgmt.logic.models.KeyType.primary
   id: primary
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.logic.models.KeyType
   type: attribute
   uid: azure.mgmt.logic.models.KeyType.primary
-- fullName: azure.mgmt.logic.models.KeyType.secondary
+- &id003
+  fullName: azure.mgmt.logic.models.KeyType.secondary
   id: secondary
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.logic.models.KeyType
   type: attribute
   uid: azure.mgmt.logic.models.KeyType.secondary
+- *id001
+- *id002
+- *id003
 references: []

@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: CheckAvailabilityResult(location, tags=None, sku=None, is_availiable=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location
 
         '
@@ -59,7 +59,7 @@ items:
       id: is_availiable
       type:
       - bool
-    variables:
+    variables: &id002
     - description: 'Resource Id
 
         '
@@ -78,6 +78,41 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.notificationhubs.models.CheckAvailabilityResult
+- children: []
+  class: azure.mgmt.notificationhubs.models.CheckAvailabilityResult
+  fullName: azure.mgmt.notificationhubs.models.CheckAvailabilityResult
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.notificationhubs.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.models
+  name: CheckAvailabilityResult
+  source:
+    id: CheckAvailabilityResult
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\models\check_availability_result.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\models\check_availability_result.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Description of a CheckAvailibility resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: CheckAvailabilityResult(location, tags=None, sku=None, is_availiable=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.notificationhubs.models.CheckAvailabilityResult
 references: []

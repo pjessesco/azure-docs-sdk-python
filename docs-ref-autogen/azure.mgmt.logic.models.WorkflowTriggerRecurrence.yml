@@ -26,7 +26,7 @@ items:
   syntax:
     content: WorkflowTriggerRecurrence(frequency=None, interval=None, start_time=None,
       end_time=None, time_zone=None, schedule=None)
-    parameters:
+    parameters: &id001
     - description: 'The frequency. Possible values include: ''NotSpecified'',
 
         ''Second'', ''Minute'', ''Hour'', ''Day'', ''Week'', ''Month'', ''Year''
@@ -67,6 +67,34 @@ items:
       id: schedule
       type:
       - azure.mgmt.logic.models.RecurrenceSchedule
+  type: class
+  uid: azure.mgmt.logic.models.WorkflowTriggerRecurrence
+- children: []
+  class: azure.mgmt.logic.models.WorkflowTriggerRecurrence
+  fullName: azure.mgmt.logic.models.WorkflowTriggerRecurrence
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: WorkflowTriggerRecurrence
+  source:
+    id: WorkflowTriggerRecurrence
+    path: azure-mgmt-logic\azure\mgmt\logic\models\workflow_trigger_recurrence.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\workflow_trigger_recurrence.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The workflow trigger recurrence.
+
+    '
+  syntax:
+    content: WorkflowTriggerRecurrence(frequency=None, interval=None, start_time=None,
+      end_time=None, time_zone=None, schedule=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.WorkflowTriggerRecurrence
 references: []

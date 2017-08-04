@@ -5,6 +5,9 @@ items:
   - azure.mgmt.search.operations.QueryKeysOperations.create
   - azure.mgmt.search.operations.QueryKeysOperations.delete
   - azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+  - azure.mgmt.search.operations.QueryKeysOperations.create
+  - azure.mgmt.search.operations.QueryKeysOperations.delete
+  - azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
   class: azure.mgmt.search.operations.QueryKeysOperations
   fullName: azure.mgmt.search.operations.QueryKeysOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: QueryKeysOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for each request. The current version is
         2015-08-19. Constant value: "2015-08-19".
 
@@ -55,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.search.operations.QueryKeysOperations
 - class: azure.mgmt.search.operations.QueryKeysOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.QueryKeysOperations.create
   langs:
@@ -87,7 +90,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the Azure Search service
 
@@ -95,13 +98,13 @@ items:
 
         '
       id: search_service_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the new query API key.
 
         '
       id: name
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -110,14 +113,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id007
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,7 +129,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
     - description: '*Operation configuration
 
@@ -134,16 +137,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id010
       type:
       - azure.mgmt.search.models.QueryKey
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.search.operations.QueryKeysOperations.create
 - class: azure.mgmt.search.operations.QueryKeysOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.QueryKeysOperations.delete
   langs:
@@ -177,7 +180,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the Azure Search service
 
@@ -185,7 +188,7 @@ items:
 
         '
       id: search_service_name
-      type:
+      type: &id014
       - str
     - description: 'The query key to be deleted. Query keys are identified by
 
@@ -193,7 +196,7 @@ items:
 
         '
       id: key
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -202,14 +205,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id016
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id017
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -218,7 +221,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id018
       - bool
     - description: '*Operation configuration
 
@@ -226,16 +229,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id019
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.search.operations.QueryKeysOperations.delete
 - class: azure.mgmt.search.operations.QueryKeysOperations
-  exceptions:
+  exceptions: &id021
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
   langs:
@@ -265,7 +268,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the Azure Search service
 
@@ -273,7 +276,7 @@ items:
 
         '
       id: search_service_name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -282,14 +285,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id024
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id025
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -298,7 +301,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id026
       - bool
     - description: '*Operation configuration
 
@@ -306,12 +309,305 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id027
       type:
       - azure.mgmt.search.models.QueryKeyPaged
   type: method
   uid: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+- children:
+  - azure.mgmt.search.operations.QueryKeysOperations.create
+  - azure.mgmt.search.operations.QueryKeysOperations.delete
+  - azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+  class: azure.mgmt.search.operations.QueryKeysOperations
+  fullName: azure.mgmt.search.operations.QueryKeysOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: QueryKeysOperations
+  source:
+    id: QueryKeysOperations
+    path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'QueryKeysOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: QueryKeysOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.search.operations.QueryKeysOperations
+- &id011
+  class: azure.mgmt.search.operations.QueryKeysOperations
+  exceptions: *id003
+  fullName: azure.mgmt.search.operations.QueryKeysOperations.create
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Generates a new query key for the specified Search service. You can
+
+    create up to 50 query keys per service.
+
+    '
+  syntax:
+    content: create(resource_group_name, search_service_name, name, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group within the
+
+        current subscription. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the Azure Search service
+
+        associated with the specified resource group.
+
+        '
+      id: search_service_name
+      type: *id005
+    - description: 'The name of the new query API key.
+
+        '
+      id: name
+      type: *id006
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id010
+  type: method
+  uid: azure.mgmt.search.operations.QueryKeysOperations.create
+- *id011
+- &id020
+  class: azure.mgmt.search.operations.QueryKeysOperations
+  exceptions: *id012
+  fullName: azure.mgmt.search.operations.QueryKeysOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 200
+  summary: 'Deletes the specified query key. Unlike admin keys, query keys are not
+
+    regenerated. The process for regenerating a query key is to delete and
+
+    then recreate it.
+
+    '
+  syntax:
+    content: delete(resource_group_name, search_service_name, key, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group within the
+
+        current subscription. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the Azure Search service
+
+        associated with the specified resource group.
+
+        '
+      id: search_service_name
+      type: *id014
+    - description: 'The query key to be deleted. Query keys are identified by
+
+        value, not by name.
+
+        '
+      id: key
+      type: *id015
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id016
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id017
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id018
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id019
+  type: method
+  uid: azure.mgmt.search.operations.QueryKeysOperations.delete
+- *id020
+- &id028
+  class: azure.mgmt.search.operations.QueryKeysOperations
+  exceptions: *id021
+  fullName: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: list_by_search_service
+  source:
+    id: list_by_search_service
+    path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\query_keys_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 117
+  summary: 'Returns the list of query API keys for the given Azure Search service.
+
+    '
+  syntax:
+    content: list_by_search_service(resource_group_name, search_service_name, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group within the
+
+        current subscription. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id022
+    - description: 'The name of the Azure Search service
+
+        associated with the specified resource group.
+
+        '
+      id: search_service_name
+      type: *id023
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id024
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id025
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id026
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id027
+  type: method
+  uid: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+- *id028
 references:
+- fullName: azure.mgmt.search.operations.QueryKeysOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.search.operations.QueryKeysOperations
+  uid: azure.mgmt.search.operations.QueryKeysOperations.create
+- fullName: azure.mgmt.search.operations.QueryKeysOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.search.operations.QueryKeysOperations
+  uid: azure.mgmt.search.operations.QueryKeysOperations.delete
+- fullName: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+  isExternal: false
+  name: list_by_search_service
+  parent: azure.mgmt.search.operations.QueryKeysOperations
+  uid: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+- fullName: azure.mgmt.search.operations.QueryKeysOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.search.operations.QueryKeysOperations
+  uid: azure.mgmt.search.operations.QueryKeysOperations.create
+- fullName: azure.mgmt.search.operations.QueryKeysOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.search.operations.QueryKeysOperations
+  uid: azure.mgmt.search.operations.QueryKeysOperations.delete
+- fullName: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
+  isExternal: false
+  name: list_by_search_service
+  parent: azure.mgmt.search.operations.QueryKeysOperations
+  uid: azure.mgmt.search.operations.QueryKeysOperations.list_by_search_service
 - fullName: azure.mgmt.search.operations.QueryKeysOperations.create
   isExternal: false
   name: create

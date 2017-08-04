@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: CustomDomain(location, host_name, tags=None, validation_data=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location.
 
         '
@@ -63,7 +63,7 @@ items:
       id: validation_data
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource ID.
 
         '
@@ -112,6 +112,41 @@ items:
       id: provisioning_state
       type:
       - str
+  type: class
+  uid: azure.mgmt.cdn.models.CustomDomain
+- children: []
+  class: azure.mgmt.cdn.models.CustomDomain
+  fullName: azure.mgmt.cdn.models.CustomDomain
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.cdn.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.cdn.models
+  name: CustomDomain
+  source:
+    id: CustomDomain
+    path: azure-mgmt-cdn\azure\mgmt\cdn\models\custom_domain.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\models\custom_domain.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Customer provided domain for branding purposes, e.g. www.consoto.com.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: CustomDomain(location, host_name, tags=None, validation_data=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.cdn.models.CustomDomain
 references: []

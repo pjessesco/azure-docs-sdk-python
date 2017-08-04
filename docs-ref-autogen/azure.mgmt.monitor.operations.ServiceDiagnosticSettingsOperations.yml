@@ -5,6 +5,9 @@ items:
   - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
   - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
   - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+  - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+  - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+  - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
   class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
   fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: ServiceDiagnosticSettingsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-09-01".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
 - class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
   langs:
@@ -82,20 +85,20 @@ items:
 
         '
       id: resource_uri
-      type:
+      type: &id004
       - str
     - description: 'Parameters supplied to the operation.
 
         '
       id: parameters
-      type:
+      type: &id005
       - azure.mgmt.monitor.models.ServiceDiagnosticSettingsResource
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -104,7 +107,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -112,16 +115,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - azure.mgmt.monitor.models.ServiceDiagnosticSettingsResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
 - class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
-  exceptions:
+  exceptions: &id010
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
   langs:
@@ -148,14 +151,14 @@ items:
 
         '
       id: resource_uri
-      type:
+      type: &id011
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id012
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -164,7 +167,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id013
       - bool
     - description: '*Operation configuration
 
@@ -172,16 +175,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id014
       type:
       - azure.mgmt.monitor.models.ServiceDiagnosticSettingsResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
 - class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
-  exceptions:
+  exceptions: &id016
   - type: azure.mgmt.monitor.models.ErrorResponseException
   fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
   langs:
@@ -211,7 +214,7 @@ items:
 
         '
       id: resource_uri
-      type:
+      type: &id017
       - str
     - description: 'Parameters supplied to
 
@@ -219,14 +222,14 @@ items:
 
         '
       id: service_diagnostic_settings_resource
-      type:
+      type: &id018
       - azure.mgmt.monitor.models.ServiceDiagnosticSettingsResourcePatch
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id019
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -235,7 +238,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id020
       - bool
     - description: '*Operation configuration
 
@@ -243,15 +246,252 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id021
       type:
       - azure.mgmt.monitor.models.ServiceDiagnosticSettingsResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+- children:
+  - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+  - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+  - azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+  class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: ServiceDiagnosticSettingsOperations
+  source:
+    id: ServiceDiagnosticSettingsOperations
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ServiceDiagnosticSettingsOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: ServiceDiagnosticSettingsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+- &id009
+  class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 96
+  summary: 'Create or update new diagnostic settings for the specified resource.
+
+    **WARNING**: This method will be deprecated in future releases.
+
+    '
+  syntax:
+    content: create_or_update(resource_uri, parameters, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The identifier of the resource.
+
+        '
+      id: resource_uri
+      type: *id004
+    - description: 'Parameters supplied to the operation.
+
+        '
+      id: parameters
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+- *id009
+- &id015
+  class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  exceptions: *id010
+  fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets the active diagnostic settings for the specified resource.
+
+    **WARNING**: This method will be deprecated in future releases.
+
+    '
+  syntax:
+    content: get(resource_uri, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The identifier of the resource.
+
+        '
+      id: resource_uri
+      type: *id011
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id012
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id013
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id014
+  type: method
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+- *id015
+- &id022
+  class: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  exceptions: *id016
+  fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+  langs:
+  - python
+  module: azure.mgmt.monitor.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\operations\service_diagnostic_settings_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 162
+  summary: 'Updates an existing ServiceDiagnosticSettingsResource. To update other
+
+    fields use the CreateOrUpdate method. **WARNING**: This method will be
+
+    deprecated in future releases.
+
+    '
+  syntax:
+    content: update(resource_uri, service_diagnostic_settings_resource, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The identifier of the resource.
+
+        '
+      id: resource_uri
+      type: *id017
+    - description: 'Parameters supplied to
+
+        the operation.
+
+        '
+      id: service_diagnostic_settings_resource
+      type: *id018
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id019
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id020
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id021
+  type: method
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+- *id022
 references:
+- fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+- fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+- fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+- fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
+- fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.get
+- fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations
+  uid: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.update
 - fullName: azure.mgmt.monitor.operations.ServiceDiagnosticSettingsOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -8,6 +8,12 @@ items:
   - azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
   - azure.mgmt.cdn.operations.CustomDomainsOperations.get
   - azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.create
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.get
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
   class: azure.mgmt.cdn.operations.CustomDomainsOperations
   fullName: azure.mgmt.cdn.operations.CustomDomainsOperations
   inheritance:
@@ -35,7 +41,7 @@ items:
     '
   syntax:
     content: CustomDomainsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -52,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Version of the API to be used with the client request. Current
         version is 2016-10-02. Constant value: "2016-10-02".
 
@@ -61,7 +67,7 @@ items:
   type: class
   uid: azure.mgmt.cdn.operations.CustomDomainsOperations
 - class: azure.mgmt.cdn.operations.CustomDomainsOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.create
   langs:
@@ -89,7 +95,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -97,7 +103,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id005
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -105,7 +111,7 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id006
       - str
     - description: 'Name of the custom domain within an
 
@@ -113,7 +119,7 @@ items:
 
         '
       id: custom_domain_name
-      type:
+      type: &id007
       - str
     - description: 'The host name of the custom domain. Must be a domain
 
@@ -121,14 +127,14 @@ items:
 
         '
       id: host_name
-      type:
+      type: &id008
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id009
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -137,20 +143,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id010
       - bool
-    return:
+    return: &id011
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.CustomDomain'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.CustomDomainsOperations.create
 - class: azure.mgmt.cdn.operations.CustomDomainsOperations
-  exceptions:
+  exceptions: &id013
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
   langs:
@@ -178,7 +184,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id014
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -186,7 +192,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id015
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -194,7 +200,7 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id016
       - str
     - description: 'Name of the custom domain within an
 
@@ -202,14 +208,14 @@ items:
 
         '
       id: custom_domain_name
-      type:
+      type: &id017
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id018
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -218,20 +224,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id019
       - bool
-    return:
+    return: &id020
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.cdn.models.CustomDomain'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
 - class: azure.mgmt.cdn.operations.CustomDomainsOperations
-  exceptions:
+  exceptions: &id022
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
   langs:
@@ -259,7 +265,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id023
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -267,7 +273,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id024
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -275,7 +281,7 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id025
       - str
     - description: 'Name of the custom domain within an
 
@@ -283,14 +289,14 @@ items:
 
         '
       id: custom_domain_name
-      type:
+      type: &id026
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id027
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -299,7 +305,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id028
       - bool
     - description: '*Operation configuration
 
@@ -307,16 +313,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id029
       type:
       - azure.mgmt.cdn.models.CustomDomain
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
 - class: azure.mgmt.cdn.operations.CustomDomainsOperations
-  exceptions:
+  exceptions: &id031
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
   langs:
@@ -344,7 +350,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id032
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -352,7 +358,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id033
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -360,7 +366,7 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id034
       - str
     - description: 'Name of the custom domain within an
 
@@ -368,14 +374,14 @@ items:
 
         '
       id: custom_domain_name
-      type:
+      type: &id035
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id036
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -384,7 +390,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id037
       - bool
     - description: '*Operation configuration
 
@@ -392,16 +398,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id038
       type:
       - azure.mgmt.cdn.models.CustomDomain
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
 - class: azure.mgmt.cdn.operations.CustomDomainsOperations
-  exceptions:
+  exceptions: &id040
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.get
   langs:
@@ -429,7 +435,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id041
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -437,7 +443,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id042
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -445,7 +451,7 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id043
       - str
     - description: 'Name of the custom domain within an
 
@@ -453,14 +459,14 @@ items:
 
         '
       id: custom_domain_name
-      type:
+      type: &id044
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id045
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -469,7 +475,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id046
       - bool
     - description: '*Operation configuration
 
@@ -477,16 +483,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id047
       type:
       - azure.mgmt.cdn.models.CustomDomain
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.cdn.operations.CustomDomainsOperations.get
 - class: azure.mgmt.cdn.operations.CustomDomainsOperations
-  exceptions:
+  exceptions: &id049
   - type: azure.mgmt.cdn.models.ErrorResponseException
   fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
   langs:
@@ -514,7 +520,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id050
       - str
     - description: 'Name of the CDN profile which is unique within
 
@@ -522,7 +528,7 @@ items:
 
         '
       id: profile_name
-      type:
+      type: &id051
       - str
     - description: 'Name of the endpoint under the profile which is
 
@@ -530,14 +536,14 @@ items:
 
         '
       id: endpoint_name
-      type:
+      type: &id052
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id053
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -546,7 +552,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id054
       - bool
     - description: '*Operation configuration
 
@@ -554,12 +560,548 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id055
       type:
       - azure.mgmt.cdn.models.CustomDomainPaged
   type: method
   uid: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+- children:
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.create
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.get
+  - azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+  class: azure.mgmt.cdn.operations.CustomDomainsOperations
+  fullName: azure.mgmt.cdn.operations.CustomDomainsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: CustomDomainsOperations
+  source:
+    id: CustomDomainsOperations
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'CustomDomainsOperations operations.
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: CustomDomainsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations
+- &id012
+  class: azure.mgmt.cdn.operations.CustomDomainsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.create
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 182
+  summary: 'Creates a new custom domain within an endpoint.
+
+    '
+  syntax:
+    content: create(resource_group_name, profile_name, endpoint_name, custom_domain_name,
+      host_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id005
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id006
+    - description: 'Name of the custom domain within an
+
+        endpoint.
+
+        '
+      id: custom_domain_name
+      type: *id007
+    - description: 'The host name of the custom domain. Must be a domain
+
+        name.
+
+        '
+      id: host_name
+      type: *id008
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id009
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id010
+    return: *id011
+  type: method
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.create
+- *id012
+- &id021
+  class: azure.mgmt.cdn.operations.CustomDomainsOperations
+  exceptions: *id013
+  fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 289
+  summary: 'Deletes an existing custom domain within an endpoint.
+
+    '
+  syntax:
+    content: delete(resource_group_name, profile_name, endpoint_name, custom_domain_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id014
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id015
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id016
+    - description: 'Name of the custom domain within an
+
+        endpoint.
+
+        '
+      id: custom_domain_name
+      type: *id017
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id018
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id019
+    return: *id020
+  type: method
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+- *id021
+- &id030
+  class: azure.mgmt.cdn.operations.CustomDomainsOperations
+  exceptions: *id022
+  fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: disable_custom_https
+  source:
+    id: disable_custom_https
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 383
+  summary: 'Disable https delivery of the custom domain.
+
+    '
+  syntax:
+    content: disable_custom_https(resource_group_name, profile_name, endpoint_name,
+      custom_domain_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id023
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id024
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id025
+    - description: 'Name of the custom domain within an
+
+        endpoint.
+
+        '
+      id: custom_domain_name
+      type: *id026
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id027
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id028
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id029
+  type: method
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+- *id030
+- &id039
+  class: azure.mgmt.cdn.operations.CustomDomainsOperations
+  exceptions: *id031
+  fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: enable_custom_https
+  source:
+    id: enable_custom_https
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 453
+  summary: 'Enable https delivery of the custom domain.
+
+    '
+  syntax:
+    content: enable_custom_https(resource_group_name, profile_name, endpoint_name,
+      custom_domain_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id032
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id033
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id034
+    - description: 'Name of the custom domain within an
+
+        endpoint.
+
+        '
+      id: custom_domain_name
+      type: *id035
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id036
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id037
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id038
+  type: method
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+- *id039
+- &id048
+  class: azure.mgmt.cdn.operations.CustomDomainsOperations
+  exceptions: *id040
+  fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 112
+  summary: 'Gets an exisitng custom domain within an endpoint.
+
+    '
+  syntax:
+    content: get(resource_group_name, profile_name, endpoint_name, custom_domain_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id041
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id042
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id043
+    - description: 'Name of the custom domain within an
+
+        endpoint.
+
+        '
+      id: custom_domain_name
+      type: *id044
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id045
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id046
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id047
+  type: method
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.get
+- *id048
+- &id056
+  class: azure.mgmt.cdn.operations.CustomDomainsOperations
+  exceptions: *id049
+  fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+  langs:
+  - python
+  module: azure.mgmt.cdn.operations
+  name: list_by_endpoint
+  source:
+    id: list_by_endpoint
+    path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\operations\custom_domains_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Lists all of the existing custom domains within an endpoint.
+
+    '
+  syntax:
+    content: list_by_endpoint(resource_group_name, profile_name, endpoint_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id050
+    - description: 'Name of the CDN profile which is unique within
+
+        the resource group.
+
+        '
+      id: profile_name
+      type: *id051
+    - description: 'Name of the endpoint under the profile which is
+
+        unique globally.
+
+        '
+      id: endpoint_name
+      type: *id052
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id053
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id054
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id055
+  type: method
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+- *id056
 references:
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.create
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+  isExternal: false
+  name: disable_custom_https
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+  isExternal: false
+  name: enable_custom_https
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.get
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+  isExternal: false
+  name: list_by_endpoint
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.create
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.delete
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+  isExternal: false
+  name: disable_custom_https
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+  isExternal: false
+  name: enable_custom_https
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.get
+- fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
+  isExternal: false
+  name: list_by_endpoint
+  parent: azure.mgmt.cdn.operations.CustomDomainsOperations
+  uid: azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint
 - fullName: azure.mgmt.cdn.operations.CustomDomainsOperations.create
   isExternal: false
   name: create

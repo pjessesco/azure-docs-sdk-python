@@ -11,6 +11,15 @@ items:
   - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
   - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
   - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
   class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
   inheritance:
@@ -41,7 +50,7 @@ items:
     '
   syntax:
     content: PolicyAssignmentsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -58,7 +67,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for the operation. Constant value: "2016-12-01".
 
         '
@@ -66,7 +75,7 @@ items:
   type: class
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
   langs:
@@ -99,26 +108,26 @@ items:
 
         '
       id: scope
-      type:
+      type: &id004
       - str
     - description: 'The name of the policy assignment.
 
         '
       id: policy_assignment_name
-      type:
+      type: &id005
       - str
     - description: 'Parameters for the policy assignment.
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -127,7 +136,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -135,16 +144,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
   langs:
@@ -191,20 +200,20 @@ items:
 
         '
       id: policy_assignment_id
-      type:
+      type: &id012
       - str
     - description: 'Parameters for policy assignment.
 
         '
       id: parameters
-      type:
+      type: &id013
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -213,7 +222,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
     - description: '*Operation configuration
 
@@ -221,16 +230,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id016
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
   langs:
@@ -256,7 +265,7 @@ items:
 
         '
       id: scope
-      type:
+      type: &id019
       - str
     - description: 'The name of the policy assignment to
 
@@ -264,14 +273,14 @@ items:
 
         '
       id: policy_assignment_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -280,7 +289,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -288,16 +297,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
   langs:
@@ -339,14 +348,14 @@ items:
 
         '
       id: policy_assignment_id
-      type:
+      type: &id026
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id027
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -355,7 +364,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id028
       - bool
     - description: '*Operation configuration
 
@@ -363,16 +372,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id029
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id031
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
   langs:
@@ -397,7 +406,7 @@ items:
 
         '
       id: scope
-      type:
+      type: &id032
       - str
     - description: 'The name of the policy assignment to
 
@@ -405,14 +414,14 @@ items:
 
         '
       id: policy_assignment_name
-      type:
+      type: &id033
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -421,7 +430,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -429,16 +438,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id038
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
   langs:
@@ -480,14 +489,14 @@ items:
 
         '
       id: policy_assignment_id
-      type:
+      type: &id039
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id040
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -496,7 +505,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id041
       - bool
     - description: '*Operation configuration
 
@@ -504,16 +513,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id042
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignment
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id044
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
   langs:
@@ -539,14 +548,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id045
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id046
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -555,7 +564,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id047
       - bool
     - description: '*Operation configuration
 
@@ -563,13 +572,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id048
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignmentPaged
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id050
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
   langs:
@@ -597,7 +606,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id051
       - str
     - description: 'The namespace of the resource
 
@@ -605,19 +614,19 @@ items:
 
         '
       id: resource_provider_namespace
-      type:
+      type: &id052
       - str
     - description: 'The parent resource path.
 
         '
       id: parent_resource_path
-      type:
+      type: &id053
       - str
     - description: 'The resource type.
 
         '
       id: resource_type
-      type:
+      type: &id054
       - str
     - description: 'The name of the resource with policy
 
@@ -625,21 +634,21 @@ items:
 
         '
       id: resource_name
-      type:
+      type: &id055
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type:
+      type: &id056
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id057
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -648,7 +657,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id058
       - bool
     - description: '*Operation configuration
 
@@ -656,13 +665,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id059
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignmentPaged
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
 - class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
-  exceptions:
+  exceptions: &id061
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
   langs:
@@ -690,21 +699,21 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id062
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation.
 
         '
       id: filter
-      type:
+      type: &id063
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id064
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -713,7 +722,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id065
       - bool
     - description: '*Operation configuration
 
@@ -721,12 +730,742 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id066
       type:
       - azure.mgmt.resource.policy.v2016_12_01.models.PolicyAssignmentPaged
   type: method
   uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+- children:
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+  - azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: PolicyAssignmentsOperations
+  source:
+    id: PolicyAssignmentsOperations
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'PolicyAssignmentsOperations operations.
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: PolicyAssignmentsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+- &id010
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 100
+  summary: 'Creates a policy assignment.
+
+
+    Policy assignments are inherited by child resources. For example, when
+
+    you apply a policy to a resource group that policy is assigned to all
+
+    resources in the group.
+
+    '
+  syntax:
+    content: create(scope, policy_assignment_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The scope of the policy assignment.
+
+        '
+      id: scope
+      type: *id004
+    - description: 'The name of the policy assignment.
+
+        '
+      id: policy_assignment_name
+      type: *id005
+    - description: 'Parameters for the policy assignment.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+- *id010
+- &id017
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: create_by_id
+  source:
+    id: create_by_id
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 524
+  summary: 'Creates a policy assignment by ID.
+
+
+    Policy assignments are inherited by child resources. For example, when
+
+    you apply a policy to a resource group that policy is assigned to all
+
+    resources in the group. When providing a scope for the assigment, use
+
+    ''/subscriptions/{subscription-id}/'' for subscriptions,
+
+    ''/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}''
+
+    for resource groups, and
+
+    ''/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/{resource-type}/{resource-name}''
+
+    for resources.
+
+    '
+  syntax:
+    content: create_by_id(policy_assignment_id, parameters, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The ID of the policy assignment to
+
+        create. Use the format
+
+        ''/{scope}/providers/Microsoft.Authorization/policyAssignments/{policy-assignment-name}''.
+
+        '
+      id: policy_assignment_id
+      type: *id012
+    - description: 'Parameters for policy assignment.
+
+        '
+      id: parameters
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id016
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+- *id017
+- &id024
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Deletes a policy assignment.
+
+    '
+  syntax:
+    content: delete(scope, policy_assignment_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The scope of the policy assignment.
+
+        '
+      id: scope
+      type: *id019
+    - description: 'The name of the policy assignment to
+
+        delete.
+
+        '
+      id: policy_assignment_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+- *id024
+- &id030
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id025
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: delete_by_id
+  source:
+    id: delete_by_id
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 457
+  summary: 'Deletes a policy assignment by ID.
+
+
+    When providing a scope for the assigment, use
+
+    ''/subscriptions/{subscription-id}/'' for subscriptions,
+
+    ''/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}''
+
+    for resource groups, and
+
+    ''/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/{resource-type}/{resource-name}''
+
+    for resources.
+
+    '
+  syntax:
+    content: delete_by_id(policy_assignment_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the policy assignment to
+
+        delete. Use the format
+
+        ''/{scope}/providers/Microsoft.Authorization/policyAssignments/{policy-assignment-name}''.
+
+        '
+      id: policy_assignment_id
+      type: *id026
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id027
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id028
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id029
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+- *id030
+- &id037
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id031
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 172
+  summary: 'Gets a policy assignment.
+
+    '
+  syntax:
+    content: get(scope, policy_assignment_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The scope of the policy assignment.
+
+        '
+      id: scope
+      type: *id032
+    - description: 'The name of the policy assignment to
+
+        get.
+
+        '
+      id: policy_assignment_name
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+- *id037
+- &id043
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id038
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: get_by_id
+  source:
+    id: get_by_id
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 600
+  summary: 'Gets a policy assignment by ID.
+
+
+    When providing a scope for the assigment, use
+
+    ''/subscriptions/{subscription-id}/'' for subscriptions,
+
+    ''/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}''
+
+    for resource groups, and
+
+    ''/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/{resource-type}/{resource-name}''
+
+    for resources.
+
+    '
+  syntax:
+    content: get_by_id(policy_assignment_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The ID of the policy assignment to get.
+
+        Use the format
+
+        ''/{scope}/providers/Microsoft.Authorization/policyAssignments/{policy-assignment-name}''.
+
+        '
+      id: policy_assignment_id
+      type: *id039
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id040
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id041
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id042
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+- *id043
+- &id049
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id044
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 390
+  summary: 'Gets all the policy assignments for a subscription.
+
+    '
+  syntax:
+    content: list(filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
+
+        '
+      id: filter
+      type: *id045
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id046
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id047
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id048
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+- *id049
+- &id060
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id050
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: list_for_resource
+  source:
+    id: list_for_resource
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 305
+  summary: 'Gets policy assignments for a resource.
+
+    '
+  syntax:
+    content: list_for_resource(resource_group_name, resource_provider_namespace, parent_resource_path,
+      resource_type, resource_name, filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group containing
+
+        the resource. The name is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id051
+    - description: 'The namespace of the resource
+
+        provider.
+
+        '
+      id: resource_provider_namespace
+      type: *id052
+    - description: 'The parent resource path.
+
+        '
+      id: parent_resource_path
+      type: *id053
+    - description: 'The resource type.
+
+        '
+      id: resource_type
+      type: *id054
+    - description: 'The name of the resource with policy
+
+        assignments.
+
+        '
+      id: resource_name
+      type: *id055
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
+
+        '
+      id: filter
+      type: *id056
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id057
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id058
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id059
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+- *id060
+- &id067
+  class: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  exceptions: *id061
+  fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+  langs:
+  - python
+  module: azure.mgmt.resource.policy.v2016_12_01.operations
+  name: list_for_resource_group
+  source:
+    id: list_for_resource_group
+    path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\policy\v2016_12_01\operations\policy_assignments_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 234
+  summary: 'Gets policy assignments for the resource group.
+
+    '
+  syntax:
+    content: list_for_resource_group(resource_group_name, filter=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains policy assignments.
+
+        '
+      id: resource_group_name
+      type: *id062
+    - defaultValue: None
+      description: 'The filter to apply on the operation.
+
+        '
+      id: filter
+      type: *id063
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id064
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id065
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id066
+  type: method
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+- *id067
 references:
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+  isExternal: false
+  name: create_by_id
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+  isExternal: false
+  name: delete_by_id
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+  isExternal: false
+  name: get_by_id
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+  isExternal: false
+  name: list_for_resource
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+  isExternal: false
+  name: list_for_resource_group
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+  isExternal: false
+  name: create_by_id
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create_by_id
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+  isExternal: false
+  name: delete_by_id
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.delete_by_id
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+  isExternal: false
+  name: get_by_id
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.get_by_id
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+  isExternal: false
+  name: list_for_resource
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource
+- fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
+  isExternal: false
+  name: list_for_resource_group
+  parent: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations
+  uid: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.list_for_resource_group
 - fullName: azure.mgmt.resource.policy.v2016_12_01.operations.PolicyAssignmentsOperations.create
   isExternal: false
   name: create

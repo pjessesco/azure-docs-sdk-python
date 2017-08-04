@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.network.v2015_06_15.models.VpnType
-- fullName: azure.mgmt.network.v2015_06_15.models.VpnType.policy_based
+- children:
+  - azure.mgmt.network.v2015_06_15.models.VpnType.policy_based
+  - azure.mgmt.network.v2015_06_15.models.VpnType.route_based
+  class: azure.mgmt.network.v2015_06_15.models.VpnType
+  fullName: azure.mgmt.network.v2015_06_15.models.VpnType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.network.v2015_06_15.models
+  name: VpnType
+  source:
+    id: VpnType
+    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\network_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\network_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 112
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.network.v2015_06_15.models.VpnType
+- &id001
+  fullName: azure.mgmt.network.v2015_06_15.models.VpnType.policy_based
   id: policy_based
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.network.v2015_06_15.models.VpnType
   type: attribute
   uid: azure.mgmt.network.v2015_06_15.models.VpnType.policy_based
-- fullName: azure.mgmt.network.v2015_06_15.models.VpnType.route_based
+- &id002
+  fullName: azure.mgmt.network.v2015_06_15.models.VpnType.route_based
   id: route_based
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.network.v2015_06_15.models.VpnType
   type: attribute
   uid: azure.mgmt.network.v2015_06_15.models.VpnType.route_based
+- *id001
+- *id002
 references: []

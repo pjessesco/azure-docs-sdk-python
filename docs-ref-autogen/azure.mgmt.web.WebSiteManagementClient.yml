@@ -13,6 +13,17 @@ items:
   - azure.mgmt.web.WebSiteManagementClient.update_source_control
   - azure.mgmt.web.WebSiteManagementClient.validate
   - azure.mgmt.web.WebSiteManagementClient.validate_move
+  - azure.mgmt.web.WebSiteManagementClient.check_name_availability
+  - azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+  - azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+  - azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+  - azure.mgmt.web.WebSiteManagementClient.list_skus
+  - azure.mgmt.web.WebSiteManagementClient.list_source_controls
+  - azure.mgmt.web.WebSiteManagementClient.move
+  - azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+  - azure.mgmt.web.WebSiteManagementClient.update_source_control
+  - azure.mgmt.web.WebSiteManagementClient.validate
+  - azure.mgmt.web.WebSiteManagementClient.validate_move
   class: azure.mgmt.web.WebSiteManagementClient
   fullName: azure.mgmt.web.WebSiteManagementClient
   inheritance:
@@ -45,13 +56,13 @@ items:
     '
   syntax:
     content: WebSiteManagementClient(credentials, subscription_id, base_url=None)
-    parameters:
+    parameters: &id001
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - msrestazure.azure_active_directory
+      - ../msrestazure.azure_active_directory
     - description: 'Your Azure subscription ID. This is a
 
         GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000).
@@ -66,7 +77,7 @@ items:
       id: base_url
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Configuration for client.
 
         '
@@ -136,7 +147,7 @@ items:
   type: class
   uid: azure.mgmt.web.WebSiteManagementClient
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.check_name_availability
   langs:
@@ -165,7 +176,7 @@ items:
 
         '
       id: name
-      type:
+      type: &id004
       - str
     - description: 'Resource type used for verification. Possible values
 
@@ -173,7 +184,7 @@ items:
 
         '
       id: type
-      type:
+      type: &id005
       - 'str or @azure.mgmt.web.models.CheckNameResourceTypes
 
         '
@@ -182,14 +193,14 @@ items:
 
         '
       id: is_fqdn
-      type:
+      type: &id006
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -198,7 +209,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -206,16 +217,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.web.models.ResourceNameAvailability
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.check_name_availability
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
   langs:
@@ -244,7 +255,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id012
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -253,7 +264,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id013
       - bool
     - description: '*Operation configuration
 
@@ -261,16 +272,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id014
       type:
       - azure.mgmt.web.models.User
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id016
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
   langs:
@@ -304,7 +315,7 @@ items:
 
         '
       id: sku
-      type:
+      type: &id017
       - 'str or @azure.mgmt.web.models.SkuName
 
         '
@@ -315,14 +326,14 @@ items:
 
         '
       id: linux_workers_enabled
-      type:
+      type: &id018
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id019
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -331,7 +342,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id020
       - bool
     - description: '*Operation configuration
 
@@ -339,13 +350,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id021
       type:
       - azure.mgmt.web.models.GeoRegionPaged
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id023
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
   langs:
@@ -374,7 +385,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -383,7 +394,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -391,13 +402,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.web.models.PremierAddOnOfferPaged
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.list_skus
   langs:
@@ -426,7 +437,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id029
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -435,7 +446,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id030
       - bool
     - description: '*Operation configuration
 
@@ -443,16 +454,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id031
       type:
       - azure.mgmt.web.models.SkuInfos
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.list_skus
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id033
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.list_source_controls
   langs:
@@ -481,7 +492,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -490,7 +501,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -498,13 +509,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       type:
       - azure.mgmt.web.models.SourceControlPaged
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.list_source_controls
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id038
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.move
   langs:
@@ -535,24 +546,24 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id039
       - str
     - defaultValue: None
       description: ''
       id: target_resource_group
-      type:
+      type: &id040
       - str
     - defaultValue: None
       description: ''
       id: resources
-      type:
+      type: &id041
       - list of str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id042
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -561,7 +572,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id043
       - bool
     - description: '*Operation configuration
 
@@ -569,16 +580,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id044
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.move
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id046
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
   langs:
@@ -607,14 +618,14 @@ items:
 
         '
       id: user_details
-      type:
+      type: &id047
       - azure.mgmt.web.models.User
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id048
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -623,7 +634,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id049
       - bool
     - description: '*Operation configuration
 
@@ -631,16 +642,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id050
       type:
       - azure.mgmt.web.models.User
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id052
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.update_source_control
   langs:
@@ -669,20 +680,20 @@ items:
 
         '
       id: source_control_type
-      type:
+      type: &id053
       - str
     - description: 'Source control token information
 
         '
       id: request_message
-      type:
+      type: &id054
       - azure.mgmt.web.models.SourceControl
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id055
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -691,7 +702,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id056
       - bool
     - description: '*Operation configuration
 
@@ -699,16 +710,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id057
       type:
       - azure.mgmt.web.models.SourceControl
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.update_source_control
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id059
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.validate
   langs:
@@ -739,20 +750,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id060
       - str
     - description: 'Request with the resources to validate.
 
         '
       id: validate_request
-      type:
+      type: &id061
       - azure.mgmt.web.models.ValidateRequest
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id062
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -761,7 +772,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id063
       - bool
     - description: '*Operation configuration
 
@@ -769,16 +780,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id064
       type:
       - azure.mgmt.web.models.ValidateResponse
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.validate
 - class: azure.mgmt.web.WebSiteManagementClient
-  exceptions:
+  exceptions: &id066
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.WebSiteManagementClient.validate_move
   langs:
@@ -809,24 +820,24 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id067
       - str
     - defaultValue: None
       description: ''
       id: target_resource_group
-      type:
+      type: &id068
       - str
     - defaultValue: None
       description: ''
       id: resources
-      type:
+      type: &id069
       - list of str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id070
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -835,7 +846,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id071
       - bool
     - description: '*Operation configuration
 
@@ -843,15 +854,812 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id072
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.WebSiteManagementClient.validate_move
+- children:
+  - azure.mgmt.web.WebSiteManagementClient.check_name_availability
+  - azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+  - azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+  - azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+  - azure.mgmt.web.WebSiteManagementClient.list_skus
+  - azure.mgmt.web.WebSiteManagementClient.list_source_controls
+  - azure.mgmt.web.WebSiteManagementClient.move
+  - azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+  - azure.mgmt.web.WebSiteManagementClient.update_source_control
+  - azure.mgmt.web.WebSiteManagementClient.validate
+  - azure.mgmt.web.WebSiteManagementClient.validate_move
+  class: azure.mgmt.web.WebSiteManagementClient
+  fullName: azure.mgmt.web.WebSiteManagementClient
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: WebSiteManagementClient
+  source:
+    id: WebSiteManagementClient
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 68
+  summary: 'Composite Swagger for WebSite Management Client
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: WebSiteManagementClient(credentials, subscription_id, base_url=None)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.web.WebSiteManagementClient
+- &id010
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id003
+  fullName: azure.mgmt.web.WebSiteManagementClient.check_name_availability
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: check_name_availability
+  source:
+    id: check_name_availability
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 382
+  summary: 'Check if a resource name is available.
+
+
+    Check if a resource name is available.
+
+    '
+  syntax:
+    content: check_name_availability(name, type, is_fqdn=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Resource name to verify.
+
+        '
+      id: name
+      type: *id004
+    - description: 'Resource type used for verification. Possible values
+
+        include: ''Site'', ''Slot'', ''HostingEnvironment''
+
+        '
+      id: type
+      type: *id005
+    - defaultValue: None
+      description: 'Is fully qualified domain name.
+
+        '
+      id: is_fqdn
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.check_name_availability
+- *id010
+- &id015
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id011
+  fullName: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: get_publishing_user
+  source:
+    id: get_publishing_user
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 135
+  summary: 'Gets publishing user.
+
+
+    Gets publishing user.
+
+    '
+  syntax:
+    content: get_publishing_user(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id012
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id013
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id014
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+- *id015
+- &id022
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id016
+  fullName: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: list_geo_regions
+  source:
+    id: list_geo_regions
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 456
+  summary: 'Get a list of available geographical regions.
+
+
+    Get a list of available geographical regions.
+
+    '
+  syntax:
+    content: list_geo_regions(sku=None, linux_workers_enabled=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'Name of SKU used to filter the regions. Possible values
+
+        include: ''Free'', ''Shared'', ''Basic'', ''Standard'', ''Premium'', ''Dynamic'',
+
+        ''Isolated''
+
+        '
+      id: sku
+      type: *id017
+    - defaultValue: None
+      description: 'Specify <code>true</code> if you want to
+
+        filter to only regions that support Linux workers.
+
+        '
+      id: linux_workers_enabled
+      type: *id018
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id019
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id020
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id021
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+- *id022
+- &id027
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id023
+  fullName: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: list_premier_add_on_offers
+  source:
+    id: list_premier_add_on_offers
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 533
+  summary: 'List all premier add-on offers.
+
+
+    List all premier add-on offers.
+
+    '
+  syntax:
+    content: list_premier_add_on_offers(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+- *id027
+- &id032
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id028
+  fullName: azure.mgmt.web.WebSiteManagementClient.list_skus
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: list_skus
+  source:
+    id: list_skus
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 600
+  summary: 'List all SKUs.
+
+
+    List all SKUs.
+
+    '
+  syntax:
+    content: list_skus(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id029
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id030
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id031
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.list_skus
+- *id032
+- &id037
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id033
+  fullName: azure.mgmt.web.WebSiteManagementClient.list_source_controls
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: list_source_controls
+  source:
+    id: list_source_controls
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 251
+  summary: 'Gets the source controls available for Azure websites.
+
+
+    Gets the source controls available for Azure websites.
+
+    '
+  syntax:
+    content: list_source_controls(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.list_source_controls
+- *id037
+- &id045
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id038
+  fullName: azure.mgmt.web.WebSiteManagementClient.move
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: move
+  source:
+    id: move
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 659
+  summary: 'Move resources between resource groups.
+
+
+    Move resources between resource groups.
+
+    '
+  syntax:
+    content: move(resource_group_name, target_resource_group=None, resources=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id039
+    - defaultValue: None
+      description: ''
+      id: target_resource_group
+      type: *id040
+    - defaultValue: None
+      description: ''
+      id: resources
+      type: *id041
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id042
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id043
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id044
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.move
+- *id045
+- &id051
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id046
+  fullName: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: update_publishing_user
+  source:
+    id: update_publishing_user
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 190
+  summary: 'Updates publishing user.
+
+
+    Updates publishing user.
+
+    '
+  syntax:
+    content: update_publishing_user(user_details, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Details of publishing user
+
+        '
+      id: user_details
+      type: *id047
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id048
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id049
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id050
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+- *id051
+- &id058
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id052
+  fullName: azure.mgmt.web.WebSiteManagementClient.update_source_control
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: update_source_control
+  source:
+    id: update_source_control
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 314
+  summary: 'Updates source control token.
+
+
+    Updates source control token.
+
+    '
+  syntax:
+    content: update_source_control(source_control_type, request_message, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Type of source control
+
+        '
+      id: source_control_type
+      type: *id053
+    - description: 'Source control token information
+
+        '
+      id: request_message
+      type: *id054
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id055
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id056
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id057
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.update_source_control
+- *id058
+- &id065
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id059
+  fullName: azure.mgmt.web.WebSiteManagementClient.validate
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: validate
+  source:
+    id: validate
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 725
+  summary: 'Validate if a resource can be created.
+
+
+    Validate if a resource can be created.
+
+    '
+  syntax:
+    content: validate(resource_group_name, validate_request, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id060
+    - description: 'Request with the resources to validate.
+
+        '
+      id: validate_request
+      type: *id061
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id062
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id063
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id064
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.validate
+- *id065
+- &id073
+  class: azure.mgmt.web.WebSiteManagementClient
+  exceptions: *id066
+  fullName: azure.mgmt.web.WebSiteManagementClient.validate_move
+  langs:
+  - python
+  module: azure.mgmt.web
+  name: validate_move
+  source:
+    id: validate_move
+    path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\web_site_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 796
+  summary: 'Validate whether a resource can be moved.
+
+
+    Validate whether a resource can be moved.
+
+    '
+  syntax:
+    content: validate_move(resource_group_name, target_resource_group=None, resources=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id067
+    - defaultValue: None
+      description: ''
+      id: target_resource_group
+      type: *id068
+    - defaultValue: None
+      description: ''
+      id: resources
+      type: *id069
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id070
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id071
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id072
+  type: method
+  uid: azure.mgmt.web.WebSiteManagementClient.validate_move
+- *id073
 references:
+- fullName: azure.mgmt.web.WebSiteManagementClient.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.check_name_availability
+- fullName: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+  isExternal: false
+  name: get_publishing_user
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+  isExternal: false
+  name: list_geo_regions
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+  isExternal: false
+  name: list_premier_add_on_offers
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_skus
+  isExternal: false
+  name: list_skus
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_skus
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_source_controls
+  isExternal: false
+  name: list_source_controls
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_source_controls
+- fullName: azure.mgmt.web.WebSiteManagementClient.move
+  isExternal: false
+  name: move
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.move
+- fullName: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+  isExternal: false
+  name: update_publishing_user
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+- fullName: azure.mgmt.web.WebSiteManagementClient.update_source_control
+  isExternal: false
+  name: update_source_control
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.update_source_control
+- fullName: azure.mgmt.web.WebSiteManagementClient.validate
+  isExternal: false
+  name: validate
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.validate
+- fullName: azure.mgmt.web.WebSiteManagementClient.validate_move
+  isExternal: false
+  name: validate_move
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.validate_move
+- fullName: azure.mgmt.web.WebSiteManagementClient.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.check_name_availability
+- fullName: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+  isExternal: false
+  name: get_publishing_user
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.get_publishing_user
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+  isExternal: false
+  name: list_geo_regions
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_geo_regions
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+  isExternal: false
+  name: list_premier_add_on_offers
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_premier_add_on_offers
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_skus
+  isExternal: false
+  name: list_skus
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_skus
+- fullName: azure.mgmt.web.WebSiteManagementClient.list_source_controls
+  isExternal: false
+  name: list_source_controls
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.list_source_controls
+- fullName: azure.mgmt.web.WebSiteManagementClient.move
+  isExternal: false
+  name: move
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.move
+- fullName: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+  isExternal: false
+  name: update_publishing_user
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.update_publishing_user
+- fullName: azure.mgmt.web.WebSiteManagementClient.update_source_control
+  isExternal: false
+  name: update_source_control
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.update_source_control
+- fullName: azure.mgmt.web.WebSiteManagementClient.validate
+  isExternal: false
+  name: validate
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.validate
+- fullName: azure.mgmt.web.WebSiteManagementClient.validate_move
+  isExternal: false
+  name: validate_move
+  parent: azure.mgmt.web.WebSiteManagementClient
+  uid: azure.mgmt.web.WebSiteManagementClient.validate_move
 - fullName: azure.mgmt.web.WebSiteManagementClient.check_name_availability
   isExternal: false
   name: check_name_availability

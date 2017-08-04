@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.TaskExecutionResult
-- fullName: azure.batch.models.TaskExecutionResult.failure
+- children:
+  - azure.batch.models.TaskExecutionResult.failure
+  - azure.batch.models.TaskExecutionResult.success
+  class: azure.batch.models.TaskExecutionResult
+  fullName: azure.batch.models.TaskExecutionResult
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: TaskExecutionResult
+  source:
+    id: TaskExecutionResult
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 159
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.TaskExecutionResult
+- &id001
+  fullName: azure.batch.models.TaskExecutionResult.failure
   id: failure
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.batch.models.TaskExecutionResult
   type: attribute
   uid: azure.batch.models.TaskExecutionResult.failure
-- fullName: azure.batch.models.TaskExecutionResult.success
+- &id002
+  fullName: azure.batch.models.TaskExecutionResult.success
   id: success
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.batch.models.TaskExecutionResult
   type: attribute
   uid: azure.batch.models.TaskExecutionResult.success
+- *id001
+- *id002
 references: []

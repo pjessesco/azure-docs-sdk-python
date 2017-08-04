@@ -6,6 +6,10 @@ items:
   - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
   - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
   - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
   class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
   fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
   inheritance:
@@ -31,7 +35,7 @@ items:
     '
   syntax:
     content: ServerAzureADAdministratorsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -48,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for the request. Constant value: "2014-04-01".
 
         '
@@ -60,7 +64,7 @@ items:
   type: class
   uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
 - class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
   langs:
@@ -92,13 +96,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id005
       - str
     - description: 'The required parameters for creating or updating an
 
@@ -106,14 +110,14 @@ items:
 
         '
       id: properties
-      type:
+      type: &id006
       - azure.mgmt.sql.models.ServerAzureADAdministrator
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,20 +126,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.ServerAzureADAdministrator'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
 - class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
   langs:
@@ -165,20 +169,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -187,20 +191,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.ServerAzureADAdministrator'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
 - class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
   langs:
@@ -230,20 +234,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -252,7 +256,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -260,16 +264,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       type:
       - azure.mgmt.sql.models.ServerAzureADAdministrator
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
 - class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
   langs:
@@ -299,20 +303,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id026
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id028
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -321,7 +325,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id029
       - bool
     - description: '*Operation configuration
 
@@ -329,12 +333,327 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id030
       type:
       - azure.mgmt.sql.models.ServerAzureADAdministratorPaged
   type: method
   uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+- children:
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+  - azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+  class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: ServerAzureADAdministratorsOperations
+  source:
+    id: ServerAzureADAdministratorsOperations
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'ServerAzureADAdministratorsOperations operations.
+
+
+
+
+
+    '
+  syntax:
+    content: ServerAzureADAdministratorsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+- &id010
+  class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 41
+  summary: 'Creates a new Server Active Directory Administrator or updates an
+
+    existing server Active Directory Administrator.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, server_name, properties, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id005
+    - description: 'The required parameters for creating or updating an
+
+        Active Directory Administrator.
+
+        '
+      id: properties
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 142
+  summary: 'Deletes an existing server Active Directory Administrator.
+
+    '
+  syntax:
+    content: delete(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 234
+  summary: 'Returns an server Administrator.
+
+    '
+  syntax:
+    content: get(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+- *id024
+- &id031
+  class: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  exceptions: *id025
+  fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\server_azure_ad_administrators_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 298
+  summary: 'Returns a list of server Administrators.
+
+    '
+  syntax:
+    content: list(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id026
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id027
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id028
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id029
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id030
+  type: method
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+- *id031
 references:
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.delete
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.get
+- fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations
+  uid: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.list
 - fullName: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations.create_or_update
   isExternal: false
   name: create_or_update

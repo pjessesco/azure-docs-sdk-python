@@ -11,6 +11,15 @@ items:
   - azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
   - azure.mgmt.servermanager.operations.GatewayOperations.update
   - azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+  - azure.mgmt.servermanager.operations.GatewayOperations.create
+  - azure.mgmt.servermanager.operations.GatewayOperations.delete
+  - azure.mgmt.servermanager.operations.GatewayOperations.get
+  - azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+  - azure.mgmt.servermanager.operations.GatewayOperations.list
+  - azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+  - azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+  - azure.mgmt.servermanager.operations.GatewayOperations.update
+  - azure.mgmt.servermanager.operations.GatewayOperations.upgrade
   class: azure.mgmt.servermanager.operations.GatewayOperations
   fullName: azure.mgmt.servermanager.operations.GatewayOperations
   inheritance:
@@ -41,7 +50,7 @@ items:
     '
   syntax:
     content: GatewayOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -58,7 +67,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API Version. Constant value: "2016-07-01-preview".
 
         '
@@ -66,7 +75,7 @@ items:
   type: class
   uid: azure.mgmt.servermanager.operations.GatewayOperations
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.create
   langs:
@@ -94,27 +103,27 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The gateway name (256 characters maximum).
 
         '
       id: gateway_name
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'Location of the resource.
 
         '
       id: location
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'Resource tags.
 
         '
       id: tags
-      type:
+      type: &id007
       - object
     - defaultValue: None
       description: 'The upgradeMode property gives the flexibility to
@@ -127,7 +136,7 @@ items:
 
         '
       id: upgrade_mode
-      type:
+      type: &id008
       - 'str or @azure.mgmt.servermanager.models.UpgradeMode
 
         '
@@ -136,7 +145,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id009
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -145,20 +154,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id010
       - bool
-    return:
+    return: &id011
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.GatewayResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.create
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id013
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.delete
   langs:
@@ -186,20 +195,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id014
       - str
     - description: 'The gateway name (256 characters maximum).
 
         '
       id: gateway_name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -208,7 +217,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -216,16 +225,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.delete
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id020
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.get
   langs:
@@ -253,13 +262,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The gateway name (256 characters maximum)
 
         '
       id: gateway_name
-      type:
+      type: &id022
       - str
     - defaultValue: None
       description: 'Gets subscription credentials which uniquely identify
@@ -272,7 +281,7 @@ items:
 
         '
       id: expand
-      type:
+      type: &id023
       - 'str or @azure.mgmt.servermanager.models.GatewayExpandOption
 
         '
@@ -281,7 +290,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -290,7 +299,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -298,16 +307,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.servermanager.models.GatewayResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.get
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id028
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
   langs:
@@ -335,20 +344,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'The gateway name (256 characters maximum).
 
         '
       id: gateway_name
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -357,20 +366,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
-    return:
+    return: &id033
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.GatewayProfile'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id035
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.list
   langs:
@@ -396,7 +405,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id036
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -405,7 +414,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id037
       - bool
     - description: '*Operation configuration
 
@@ -413,13 +422,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id038
       type:
       - azure.mgmt.servermanager.models.GatewayResourcePaged
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.list
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id040
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
   langs:
@@ -447,14 +456,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id041
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id042
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -463,7 +472,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id043
       - bool
     - description: '*Operation configuration
 
@@ -471,13 +480,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id044
       type:
       - azure.mgmt.servermanager.models.GatewayResourcePaged
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id046
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
   langs:
@@ -505,20 +514,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id047
       - str
     - description: 'The gateway name (256 characters maximum).
 
         '
       id: gateway_name
-      type:
+      type: &id048
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id049
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -527,20 +536,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id050
       - bool
-    return:
+    return: &id051
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id053
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.update
   langs:
@@ -568,27 +577,27 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id054
       - str
     - description: 'The gateway name (256 characters maximum).
 
         '
       id: gateway_name
-      type:
+      type: &id055
       - str
     - defaultValue: None
       description: 'Location of the resource.
 
         '
       id: location
-      type:
+      type: &id056
       - str
     - defaultValue: None
       description: 'Resource tags.
 
         '
       id: tags
-      type:
+      type: &id057
       - object
     - defaultValue: None
       description: 'The upgradeMode property gives the flexibility to
@@ -601,7 +610,7 @@ items:
 
         '
       id: upgrade_mode
-      type:
+      type: &id058
       - 'str or @azure.mgmt.servermanager.models.UpgradeMode
 
         '
@@ -610,7 +619,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id059
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -619,20 +628,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id060
       - bool
-    return:
+    return: &id061
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.servermanager.models.GatewayResource'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.update
 - class: azure.mgmt.servermanager.operations.GatewayOperations
-  exceptions:
+  exceptions: &id063
   - type: azure.mgmt.servermanager.models.ErrorException
   fullName: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
   langs:
@@ -660,20 +669,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id064
       - str
     - description: 'The gateway name (256 characters maximum).
 
         '
       id: gateway_name
-      type:
+      type: &id065
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id066
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -682,19 +691,696 @@ items:
 
         '
       id: raw
-      type:
+      type: &id067
       - bool
-    return:
+    return: &id068
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+- children:
+  - azure.mgmt.servermanager.operations.GatewayOperations.create
+  - azure.mgmt.servermanager.operations.GatewayOperations.delete
+  - azure.mgmt.servermanager.operations.GatewayOperations.get
+  - azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+  - azure.mgmt.servermanager.operations.GatewayOperations.list
+  - azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+  - azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+  - azure.mgmt.servermanager.operations.GatewayOperations.update
+  - azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: GatewayOperations
+  source:
+    id: GatewayOperations
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'GatewayOperations operations.
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: GatewayOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.servermanager.operations.GatewayOperations
+- &id012
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id003
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.create
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Creates or updates a ManagementService gateway.
+
+    '
+  syntax:
+    content: create(resource_group_name, gateway_name, location=None, tags=None, upgrade_mode=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The gateway name (256 characters maximum).
+
+        '
+      id: gateway_name
+      type: *id005
+    - defaultValue: None
+      description: 'Location of the resource.
+
+        '
+      id: location
+      type: *id006
+    - defaultValue: None
+      description: 'Resource tags.
+
+        '
+      id: tags
+      type: *id007
+    - defaultValue: None
+      description: 'The upgradeMode property gives the flexibility to
+
+        gateway to auto upgrade itself. If properties value not specified,
+
+        then we assume upgradeMode = Automatic. Possible values include:
+
+        ''Manual'', ''Automatic''
+
+        '
+      id: upgrade_mode
+      type: *id008
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id009
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id010
+    return: *id011
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.create
+- *id012
+- &id019
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id013
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 242
+  summary: 'Deletes a gateway from a resource group.
+
+    '
+  syntax:
+    content: delete(resource_group_name, gateway_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id014
+    - description: 'The gateway name (256 characters maximum).
+
+        '
+      id: gateway_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.delete
+- *id019
+- &id027
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id020
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.get
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 296
+  summary: 'Gets a gateway.
+
+    '
+  syntax:
+    content: get(resource_group_name, gateway_name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The gateway name (256 characters maximum)
+
+        '
+      id: gateway_name
+      type: *id022
+    - defaultValue: None
+      description: 'Gets subscription credentials which uniquely identify
+
+        Microsoft Azure subscription. The subscription ID forms part of the
+
+        URI for every service call. Possible values include: ''status'',
+
+        ''download''
+
+        '
+      id: expand
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.get
+- *id027
+- &id034
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id028
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: get_profile
+  source:
+    id: get_profile
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 648
+  summary: 'Gets a gateway profile.
+
+    '
+  syntax:
+    content: get_profile(resource_group_name, gateway_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The gateway name (256 characters maximum).
+
+        '
+      id: gateway_name
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    return: *id033
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+- *id034
+- &id039
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id035
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.list
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 366
+  summary: 'Returns gateways in a subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id036
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id037
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id038
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.list
+- *id039
+- &id045
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id040
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: list_for_resource_group
+  source:
+    id: list_for_resource_group
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 428
+  summary: 'Returns gateways in a resource group.
+
+    '
+  syntax:
+    content: list_for_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id041
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id042
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id043
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id044
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+- *id045
+- &id052
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id046
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: regenerate_profile
+  source:
+    id: regenerate_profile
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 571
+  summary: 'Regenerate a gateway''s profile.
+
+    '
+  syntax:
+    content: regenerate_profile(resource_group_name, gateway_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id047
+    - description: 'The gateway name (256 characters maximum).
+
+        '
+      id: gateway_name
+      type: *id048
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id049
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id050
+    return: *id051
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+- *id052
+- &id062
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id053
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.update
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 141
+  summary: 'Updates a gateway belonging to a resource group.
+
+    '
+  syntax:
+    content: update(resource_group_name, gateway_name, location=None, tags=None, upgrade_mode=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id054
+    - description: 'The gateway name (256 characters maximum).
+
+        '
+      id: gateway_name
+      type: *id055
+    - defaultValue: None
+      description: 'Location of the resource.
+
+        '
+      id: location
+      type: *id056
+    - defaultValue: None
+      description: 'Resource tags.
+
+        '
+      id: tags
+      type: *id057
+    - defaultValue: None
+      description: 'The upgradeMode property gives the flexibility to
+
+        gateway to auto upgrade itself. If properties value not specified,
+
+        then we assume upgradeMode = Automatic. Possible values include:
+
+        ''Manual'', ''Automatic''
+
+        '
+      id: upgrade_mode
+      type: *id058
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id059
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id060
+    return: *id061
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.update
+- *id062
+- &id069
+  class: azure.mgmt.servermanager.operations.GatewayOperations
+  exceptions: *id063
+  fullName: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+  langs:
+  - python
+  module: azure.mgmt.servermanager.operations
+  name: upgrade
+  source:
+    id: upgrade
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\operations\gateway_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 494
+  summary: 'Upgrades a gateway.
+
+    '
+  syntax:
+    content: upgrade(resource_group_name, gateway_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The resource group name uniquely
+
+        identifies the resource group within the user subscriptionId.
+
+        '
+      id: resource_group_name
+      type: *id064
+    - description: 'The gateway name (256 characters maximum).
+
+        '
+      id: gateway_name
+      type: *id065
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id066
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id067
+    return: *id068
+  type: method
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+- *id069
 references:
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.create
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.delete
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.get
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+  isExternal: false
+  name: get_profile
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.list
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+  isExternal: false
+  name: list_for_resource_group
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+  isExternal: false
+  name: regenerate_profile
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.update
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+  isExternal: false
+  name: upgrade
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.create
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.delete
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.get
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+  isExternal: false
+  name: get_profile
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.get_profile
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.list
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+  isExternal: false
+  name: list_for_resource_group
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.list_for_resource_group
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+  isExternal: false
+  name: regenerate_profile
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.regenerate_profile
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.update
+- fullName: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
+  isExternal: false
+  name: upgrade
+  parent: azure.mgmt.servermanager.operations.GatewayOperations
+  uid: azure.mgmt.servermanager.operations.GatewayOperations.upgrade
 - fullName: azure.mgmt.servermanager.operations.GatewayOperations.create
   isExternal: false
   name: create

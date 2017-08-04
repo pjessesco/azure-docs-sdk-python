@@ -35,7 +35,7 @@ items:
       host_name_binding_name=None, site_name=None, domain_id=None, azure_resource_name=None,
       azure_resource_type=None, custom_host_name_dns_record_type=None, host_name_type=None,
       ssl_state=None, thumbprint=None, virtual_ip=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -146,13 +146,51 @@ items:
       id: virtual_ip
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
       id: id
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.HostNameBinding
+- children: []
+  class: azure.mgmt.web.models.HostNameBinding
+  fullName: azure.mgmt.web.models.HostNameBinding
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: HostNameBinding
+  source:
+    id: HostNameBinding
+    path: azure-mgmt-web\azure\mgmt\web\models\host_name_binding.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\host_name_binding.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A hostname binding object.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: HostNameBinding(location, name=None, kind=None, type=None, tags=None,
+      host_name_binding_name=None, site_name=None, domain_id=None, azure_resource_name=None,
+      azure_resource_type=None, custom_host_name_dns_record_type=None, host_name_type=None,
+      ssl_state=None, thumbprint=None, virtual_ip=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.HostNameBinding
 references: []

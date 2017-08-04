@@ -33,7 +33,7 @@ items:
   syntax:
     content: BackendAddressPool(id=None, backend_ip_configurations=None, outbound_nat_rule=None,
       provisioning_state=None, name=None, etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Identifier.
 
         '
@@ -84,7 +84,7 @@ items:
       id: etag
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Gets load balancing rules that use this
 
         backend address pool.
@@ -95,6 +95,42 @@ items:
       - 'list of @azure.mgmt.network.v2015_06_15.models.SubResource
 
         '
+  type: class
+  uid: azure.mgmt.network.v2015_06_15.models.BackendAddressPool
+- children: []
+  class: azure.mgmt.network.v2015_06_15.models.BackendAddressPool
+  fullName: azure.mgmt.network.v2015_06_15.models.BackendAddressPool
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.network.v2015_06_15.models.sub_resource.SubResource
+  langs:
+  - python
+  module: azure.mgmt.network.v2015_06_15.models
+  name: BackendAddressPool
+  source:
+    id: BackendAddressPool
+    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\backend_address_pool.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\backend_address_pool.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Pool of backend IP addresses.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: BackendAddressPool(id=None, backend_ip_configurations=None, outbound_nat_rule=None,
+      provisioning_state=None, name=None, etag=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.network.v2015_06_15.models.BackendAddressPool
 references: []

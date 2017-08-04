@@ -10,6 +10,14 @@ items:
   - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
   - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
   - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
   class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
   inheritance:
@@ -39,7 +47,7 @@ items:
     '
   syntax:
     content: WebhooksOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -56,7 +64,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The client API version. Constant value: "2017-06-01-preview".
 
         '
@@ -64,7 +72,7 @@ items:
   type: class
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
   langs:
@@ -94,19 +102,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the webhook.
 
         '
       id: webhook_name
-      type:
+      type: &id006
       - str
     - description: 'The parameters for creating a
 
@@ -114,14 +122,14 @@ items:
 
         '
       id: webhook_create_parameters
-      type:
+      type: &id007
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.WebhookCreateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -130,20 +138,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
-    return:
+    return: &id010
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.containerregistry.v2017_06_01_preview.models.Webhook'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
   langs:
@@ -171,26 +179,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the webhook.
 
         '
       id: webhook_name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -199,20 +207,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
-    return:
+    return: &id018
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
   langs:
@@ -240,26 +248,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the webhook.
 
         '
       id: webhook_name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -268,7 +276,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -276,16 +284,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.Webhook
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
   langs:
@@ -315,26 +323,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id030
       - str
     - description: 'The name of the webhook.
 
         '
       id: webhook_name
-      type:
+      type: &id031
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id032
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -343,7 +351,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id033
       - bool
     - description: '*Operation configuration
 
@@ -351,16 +359,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id034
       type:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.CallbackConfig
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id036
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
   langs:
@@ -388,20 +396,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id037
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id038
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id039
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -410,7 +418,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id040
       - bool
     - description: '*Operation configuration
 
@@ -418,13 +426,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id041
       type:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.WebhookPaged
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id043
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
   langs:
@@ -452,26 +460,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id044
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id045
       - str
     - description: 'The name of the webhook.
 
         '
       id: webhook_name
-      type:
+      type: &id046
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id047
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -480,7 +488,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id048
       - bool
     - description: '*Operation configuration
 
@@ -488,13 +496,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id049
       type:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.EventPaged
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id051
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
   langs:
@@ -522,26 +530,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id052
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id053
       - str
     - description: 'The name of the webhook.
 
         '
       id: webhook_name
-      type:
+      type: &id054
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id055
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -550,7 +558,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id056
       - bool
     - description: '*Operation configuration
 
@@ -558,16 +566,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id057
       type:
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.EventInfo
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
 - class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
-  exceptions:
+  exceptions: &id059
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
   langs:
@@ -595,19 +603,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id060
       - str
     - description: 'The name of the container registry.
 
         '
       id: registry_name
-      type:
+      type: &id061
       - str
     - description: 'The name of the webhook.
 
         '
       id: webhook_name
-      type:
+      type: &id062
       - str
     - description: 'The parameters for updating a
 
@@ -615,14 +623,14 @@ items:
 
         '
       id: webhook_update_parameters
-      type:
+      type: &id063
       - azure.mgmt.containerregistry.v2017_06_01_preview.models.WebhookUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id064
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -631,19 +639,648 @@ items:
 
         '
       id: raw
-      type:
+      type: &id065
       - bool
-    return:
+    return: &id066
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.containerregistry.v2017_06_01_preview.models.Webhook'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+- children:
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+  - azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: WebhooksOperations
+  source:
+    id: WebhooksOperations
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'WebhooksOperations operations.
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: WebhooksOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+- &id011
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id003
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 105
+  summary: 'Creates a webhook for a container registry with the specified
+
+    parameters.
+
+    '
+  syntax:
+    content: create(resource_group_name, registry_name, webhook_name, webhook_create_parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id005
+    - description: 'The name of the webhook.
+
+        '
+      id: webhook_name
+      type: *id006
+    - description: 'The parameters for creating a
+
+        webhook.
+
+        '
+      id: webhook_create_parameters
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    return: *id010
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+- *id011
+- &id019
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id012
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 205
+  summary: 'Deletes a webhook from a container registry.
+
+    '
+  syntax:
+    content: delete(resource_group_name, registry_name, webhook_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id014
+    - description: 'The name of the webhook.
+
+        '
+      id: webhook_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    return: *id018
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+- *id019
+- &id027
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id020
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Gets the properties of the specified webhook.
+
+    '
+  syntax:
+    content: get(resource_group_name, registry_name, webhook_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id022
+    - description: 'The name of the webhook.
+
+        '
+      id: webhook_name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+- *id027
+- &id035
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id028
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: get_callback_config
+  source:
+    id: get_callback_config
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 521
+  summary: 'Gets the configuration of service URI and custom headers for the
+
+    webhook.
+
+    '
+  syntax:
+    content: get_callback_config(resource_group_name, registry_name, webhook_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id030
+    - description: 'The name of the webhook.
+
+        '
+      id: webhook_name
+      type: *id031
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id032
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id033
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id034
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+- *id035
+- &id042
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id036
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 385
+  summary: 'Lists all the webhooks for the specified container registry.
+
+    '
+  syntax:
+    content: list(resource_group_name, registry_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id037
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id038
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id039
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id040
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id041
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+- *id042
+- &id050
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id043
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: list_events
+  source:
+    id: list_events
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 588
+  summary: 'Lists recent events for the specified webhook.
+
+    '
+  syntax:
+    content: list_events(resource_group_name, registry_name, webhook_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id044
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id045
+    - description: 'The name of the webhook.
+
+        '
+      id: webhook_name
+      type: *id046
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id047
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id048
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id049
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+- *id050
+- &id058
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id051
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: ping
+  source:
+    id: ping
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 455
+  summary: 'Triggers a ping event to be sent to the webhook.
+
+    '
+  syntax:
+    content: ping(resource_group_name, registry_name, webhook_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id052
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id053
+    - description: 'The name of the webhook.
+
+        '
+      id: webhook_name
+      type: *id054
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id055
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id056
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id057
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+- *id058
+- &id067
+  class: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  exceptions: *id059
+  fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+  langs:
+  - python
+  module: azure.mgmt.containerregistry.v2017_06_01_preview.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-containerregistry\azure\mgmt\containerregistry\v2017_06_01_preview\operations\webhooks_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 286
+  summary: 'Updates a webhook with the specified parameters.
+
+    '
+  syntax:
+    content: update(resource_group_name, registry_name, webhook_name, webhook_update_parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group to which
+
+        the container registry belongs.
+
+        '
+      id: resource_group_name
+      type: *id060
+    - description: 'The name of the container registry.
+
+        '
+      id: registry_name
+      type: *id061
+    - description: 'The name of the webhook.
+
+        '
+      id: webhook_name
+      type: *id062
+    - description: 'The parameters for updating a
+
+        webhook.
+
+        '
+      id: webhook_update_parameters
+      type: *id063
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id064
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id065
+    return: *id066
+  type: method
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+- *id067
 references:
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+  isExternal: false
+  name: get_callback_config
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+  isExternal: false
+  name: list_events
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+  isExternal: false
+  name: ping
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.delete
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+  isExternal: false
+  name: get_callback_config
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.get_callback_config
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+  isExternal: false
+  name: list_events
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.list_events
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+  isExternal: false
+  name: ping
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.ping
+- fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations
+  uid: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.update
 - fullName: azure.mgmt.containerregistry.v2017_06_01_preview.operations.WebhooksOperations.create
   isExternal: false
   name: create

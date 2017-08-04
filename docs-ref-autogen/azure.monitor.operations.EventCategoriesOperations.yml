@@ -3,6 +3,7 @@ api_name: []
 items:
 - children:
   - azure.monitor.operations.EventCategoriesOperations.list
+  - azure.monitor.operations.EventCategoriesOperations.list
   class: azure.monitor.operations.EventCategoriesOperations
   fullName: azure.monitor.operations.EventCategoriesOperations
   inheritance:
@@ -25,7 +26,7 @@ items:
     '
   syntax:
     content: EventCategoriesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -42,7 +43,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2015-04-01".
 
         '
@@ -50,7 +51,7 @@ items:
   type: class
   uid: azure.monitor.operations.EventCategoriesOperations
 - class: azure.monitor.operations.EventCategoriesOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.monitor.models.ErrorResponseException
   fullName: azure.monitor.operations.EventCategoriesOperations.list
   langs:
@@ -80,7 +81,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id004
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -89,7 +90,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id005
       - bool
     - description: '*Operation configuration
 
@@ -97,12 +98,100 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id006
       type:
       - azure.monitor.models.LocalizableStringPaged
   type: method
   uid: azure.monitor.operations.EventCategoriesOperations.list
+- children:
+  - azure.monitor.operations.EventCategoriesOperations.list
+  class: azure.monitor.operations.EventCategoriesOperations
+  fullName: azure.monitor.operations.EventCategoriesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.monitor.operations
+  name: EventCategoriesOperations
+  source:
+    id: EventCategoriesOperations
+    path: azure-monitor\azure\monitor\operations\event_categories_operations.py
+    remote:
+      branch: master
+      path: azure-monitor\azure\monitor\operations\event_categories_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'EventCategoriesOperations operations.
+
+
+    '
+  syntax:
+    content: EventCategoriesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.monitor.operations.EventCategoriesOperations
+- &id007
+  class: azure.monitor.operations.EventCategoriesOperations
+  exceptions: *id003
+  fullName: azure.monitor.operations.EventCategoriesOperations.list
+  langs:
+  - python
+  module: azure.monitor.operations
+  name: list
+  source:
+    id: list
+    path: azure-monitor\azure\monitor\operations\event_categories_operations.py
+    remote:
+      branch: master
+      path: azure-monitor\azure\monitor\operations\event_categories_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Get the list of available event categories supported in the Activity
+
+    Logs Service.<br>The current list includes the following:
+
+    Aministrative, Security, ServiceHealth, Alert, Recommendation, Policy.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id004
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id005
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id006
+  type: method
+  uid: azure.monitor.operations.EventCategoriesOperations.list
+- *id007
 references:
+- fullName: azure.monitor.operations.EventCategoriesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.monitor.operations.EventCategoriesOperations
+  uid: azure.monitor.operations.EventCategoriesOperations.list
+- fullName: azure.monitor.operations.EventCategoriesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.monitor.operations.EventCategoriesOperations
+  uid: azure.monitor.operations.EventCategoriesOperations.list
 - fullName: azure.monitor.operations.EventCategoriesOperations.list
   isExternal: false
   name: list

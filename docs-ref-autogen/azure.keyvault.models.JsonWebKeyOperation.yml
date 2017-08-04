@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.keyvault.models.JsonWebKeyOperation
-- fullName: azure.keyvault.models.JsonWebKeyOperation.decrypt
+- children:
+  - azure.keyvault.models.JsonWebKeyOperation.decrypt
+  - azure.keyvault.models.JsonWebKeyOperation.encrypt
+  - azure.keyvault.models.JsonWebKeyOperation.sign
+  - azure.keyvault.models.JsonWebKeyOperation.unwrap_key
+  - azure.keyvault.models.JsonWebKeyOperation.verify
+  - azure.keyvault.models.JsonWebKeyOperation.wrap_key
+  class: azure.keyvault.models.JsonWebKeyOperation
+  fullName: azure.keyvault.models.JsonWebKeyOperation
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.keyvault.models
+  name: JsonWebKeyOperation
+  source:
+    id: JsonWebKeyOperation
+    path: azure-keyvault\azure\keyvault\models\key_vault_client_enums.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\key_vault_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 50
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.keyvault.models.JsonWebKeyOperation
+- &id001
+  fullName: azure.keyvault.models.JsonWebKeyOperation.decrypt
   id: decrypt
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.keyvault.models.JsonWebKeyOperation
   type: attribute
   uid: azure.keyvault.models.JsonWebKeyOperation.decrypt
-- fullName: azure.keyvault.models.JsonWebKeyOperation.encrypt
+- &id002
+  fullName: azure.keyvault.models.JsonWebKeyOperation.encrypt
   id: encrypt
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.keyvault.models.JsonWebKeyOperation
   type: attribute
   uid: azure.keyvault.models.JsonWebKeyOperation.encrypt
-- fullName: azure.keyvault.models.JsonWebKeyOperation.sign
+- &id003
+  fullName: azure.keyvault.models.JsonWebKeyOperation.sign
   id: sign
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.keyvault.models.JsonWebKeyOperation
   type: attribute
   uid: azure.keyvault.models.JsonWebKeyOperation.sign
-- fullName: azure.keyvault.models.JsonWebKeyOperation.unwrap_key
+- &id004
+  fullName: azure.keyvault.models.JsonWebKeyOperation.unwrap_key
   id: unwrap_key
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.keyvault.models.JsonWebKeyOperation
   type: attribute
   uid: azure.keyvault.models.JsonWebKeyOperation.unwrap_key
-- fullName: azure.keyvault.models.JsonWebKeyOperation.verify
+- &id005
+  fullName: azure.keyvault.models.JsonWebKeyOperation.verify
   id: verify
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.keyvault.models.JsonWebKeyOperation
   type: attribute
   uid: azure.keyvault.models.JsonWebKeyOperation.verify
-- fullName: azure.keyvault.models.JsonWebKeyOperation.wrap_key
+- &id006
+  fullName: azure.keyvault.models.JsonWebKeyOperation.wrap_key
   id: wrap_key
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.keyvault.models.JsonWebKeyOperation
   type: attribute
   uid: azure.keyvault.models.JsonWebKeyOperation.wrap_key
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

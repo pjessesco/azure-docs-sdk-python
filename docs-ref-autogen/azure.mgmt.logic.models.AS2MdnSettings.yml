@@ -27,7 +27,7 @@ items:
     content: AS2MdnSettings(need_mdn, sign_mdn, send_mdn_asynchronously, sign_outbound_mdn_if_optional,
       send_inbound_mdn_to_message_box, mic_hashing_algorithm, receipt_delivery_url=None,
       disposition_notification_to=None, mdn_text=None)
-    parameters:
+    parameters: &id001
     - description: 'The value indicating whether to send or request a MDN.
 
         '
@@ -98,6 +98,35 @@ items:
       - 'str or @azure.mgmt.logic.models.HashingAlgorithm
 
         '
+  type: class
+  uid: azure.mgmt.logic.models.AS2MdnSettings
+- children: []
+  class: azure.mgmt.logic.models.AS2MdnSettings
+  fullName: azure.mgmt.logic.models.AS2MdnSettings
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: AS2MdnSettings
+  source:
+    id: AS2MdnSettings
+    path: azure-mgmt-logic\azure\mgmt\logic\models\as2_mdn_settings.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\as2_mdn_settings.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The AS2 agreement mdn settings.
+
+    '
+  syntax:
+    content: AS2MdnSettings(need_mdn, sign_mdn, send_mdn_asynchronously, sign_outbound_mdn_if_optional,
+      send_inbound_mdn_to_message_box, mic_hashing_algorithm, receipt_delivery_url=None,
+      disposition_notification_to=None, mdn_text=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.AS2MdnSettings
 references: []

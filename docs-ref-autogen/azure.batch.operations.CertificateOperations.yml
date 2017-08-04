@@ -7,6 +7,11 @@ items:
   - azure.batch.operations.CertificateOperations.delete
   - azure.batch.operations.CertificateOperations.get
   - azure.batch.operations.CertificateOperations.list
+  - azure.batch.operations.CertificateOperations.add
+  - azure.batch.operations.CertificateOperations.cancel_deletion
+  - azure.batch.operations.CertificateOperations.delete
+  - azure.batch.operations.CertificateOperations.get
+  - azure.batch.operations.CertificateOperations.list
   class: azure.batch.operations.CertificateOperations
   fullName: azure.batch.operations.CertificateOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: CertificateOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API Version. Constant value: "2017-06-01.5.1".
 
         '
@@ -58,7 +63,7 @@ items:
   type: class
   uid: azure.batch.operations.CertificateOperations
 - class: azure.batch.operations.CertificateOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.CertificateOperations.add
   langs:
@@ -84,7 +89,7 @@ items:
 
         '
       id: certificate
-      type:
+      type: &id004
       - azure.batch.models.CertificateAddParameter
     - defaultValue: None
       description: 'Additional parameters for the
@@ -93,14 +98,14 @@ items:
 
         '
       id: certificate_add_options
-      type:
+      type: &id005
       - azure.batch.models.CertificateAddOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -109,7 +114,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -117,16 +122,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.CertificateOperations.add
 - class: azure.batch.operations.CertificateOperations
-  exceptions:
+  exceptions: &id010
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.CertificateOperations.cancel_deletion
   langs:
@@ -171,13 +176,13 @@ items:
 
         '
       id: thumbprint_algorithm
-      type:
+      type: &id011
       - str
     - description: 'The thumbprint of the certificate being deleted.
 
         '
       id: thumbprint
-      type:
+      type: &id012
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -186,14 +191,14 @@ items:
 
         '
       id: certificate_cancel_deletion_options
-      type:
+      type: &id013
       - azure.batch.models.CertificateCancelDeletionOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -202,7 +207,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
     - description: '*Operation configuration
 
@@ -210,16 +215,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id016
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.CertificateOperations.cancel_deletion
 - class: azure.batch.operations.CertificateOperations
-  exceptions:
+  exceptions: &id018
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.CertificateOperations.delete
   langs:
@@ -270,13 +275,13 @@ items:
 
         '
       id: thumbprint_algorithm
-      type:
+      type: &id019
       - str
     - description: 'The thumbprint of the certificate to be deleted.
 
         '
       id: thumbprint
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -285,14 +290,14 @@ items:
 
         '
       id: certificate_delete_options
-      type:
+      type: &id021
       - azure.batch.models.CertificateDeleteOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id022
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -301,7 +306,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id023
       - bool
     - description: '*Operation configuration
 
@@ -309,16 +314,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id024
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.CertificateOperations.delete
 - class: azure.batch.operations.CertificateOperations
-  exceptions:
+  exceptions: &id026
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.CertificateOperations.get
   langs:
@@ -346,13 +351,13 @@ items:
 
         '
       id: thumbprint_algorithm
-      type:
+      type: &id027
       - str
     - description: 'The thumbprint of the certificate to get.
 
         '
       id: thumbprint
-      type:
+      type: &id028
       - str
     - defaultValue: None
       description: 'Additional parameters for the
@@ -361,14 +366,14 @@ items:
 
         '
       id: certificate_get_options
-      type:
+      type: &id029
       - azure.batch.models.CertificateGetOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id030
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -377,7 +382,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id031
       - bool
     - description: '*Operation configuration
 
@@ -385,16 +390,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id032
       type:
       - azure.batch.models.Certificate
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.batch.operations.CertificateOperations.get
 - class: azure.batch.operations.CertificateOperations
-  exceptions:
+  exceptions: &id034
   - type: azure.batch.models.BatchErrorException
   fullName: azure.batch.operations.CertificateOperations.list
   langs:
@@ -424,14 +429,14 @@ items:
 
         '
       id: certificate_list_options
-      type:
+      type: &id035
       - azure.batch.models.CertificateListOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id036
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -440,7 +445,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id037
       - bool
     - description: '*Operation configuration
 
@@ -448,12 +453,455 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id038
       type:
       - azure.batch.models.CertificatePaged
   type: method
   uid: azure.batch.operations.CertificateOperations.list
+- children:
+  - azure.batch.operations.CertificateOperations.add
+  - azure.batch.operations.CertificateOperations.cancel_deletion
+  - azure.batch.operations.CertificateOperations.delete
+  - azure.batch.operations.CertificateOperations.get
+  - azure.batch.operations.CertificateOperations.list
+  class: azure.batch.operations.CertificateOperations
+  fullName: azure.batch.operations.CertificateOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.batch.operations
+  name: CertificateOperations
+  source:
+    id: CertificateOperations
+    path: azure-batch\azure\batch\operations\certificate_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\certificate_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'CertificateOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: CertificateOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.batch.operations.CertificateOperations
+- &id009
+  class: azure.batch.operations.CertificateOperations
+  exceptions: *id003
+  fullName: azure.batch.operations.CertificateOperations.add
+  langs:
+  - python
+  module: azure.batch.operations
+  name: add
+  source:
+    id: add
+    path: azure-batch\azure\batch\operations\certificate_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\certificate_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Adds a certificate to the specified account.
+
+    '
+  syntax:
+    content: add(certificate, certificate_add_options=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The certificate to be added.
+
+        '
+      id: certificate
+      type: *id004
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: certificate_add_options
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.batch.operations.CertificateOperations.add
+- *id009
+- &id017
+  class: azure.batch.operations.CertificateOperations
+  exceptions: *id010
+  fullName: azure.batch.operations.CertificateOperations.cancel_deletion
+  langs:
+  - python
+  module: azure.batch.operations
+  name: cancel_deletion
+  source:
+    id: cancel_deletion
+    path: azure-batch\azure\batch\operations\certificate_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\certificate_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 218
+  summary: 'Cancels a failed deletion of a certificate from the specified account.
+
+
+    If you try to delete a certificate that is being used by a pool or
+
+    compute node, the status of the certificate changes to deleteFailed. If
+
+    you decide that you want to continue using the certificate, you can use
+
+    this operation to set the status of the certificate back to active. If
+
+    you intend to delete the certificate, you do not need to run this
+
+    operation after the deletion failed. You must make sure that the
+
+    certificate is not being used by any resources, and then you can try
+
+    again to delete the certificate.
+
+    '
+  syntax:
+    content: cancel_deletion(thumbprint_algorithm, thumbprint, certificate_cancel_deletion_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The algorithm used to derive the
+
+        thumbprint parameter. This must be sha1.
+
+        '
+      id: thumbprint_algorithm
+      type: *id011
+    - description: 'The thumbprint of the certificate being deleted.
+
+        '
+      id: thumbprint
+      type: *id012
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: certificate_cancel_deletion_options
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id016
+  type: method
+  uid: azure.batch.operations.CertificateOperations.cancel_deletion
+- *id017
+- &id025
+  class: azure.batch.operations.CertificateOperations
+  exceptions: *id018
+  fullName: azure.batch.operations.CertificateOperations.delete
+  langs:
+  - python
+  module: azure.batch.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-batch\azure\batch\operations\certificate_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\certificate_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 313
+  summary: 'Deletes a certificate from the specified account.
+
+
+    You cannot delete a certificate if a resource (pool or compute node) is
+
+    using it. Before you can delete a certificate, you must therefore make
+
+    sure that the certificate is not associated with any existing pools,
+
+    the certificate is not installed on any compute nodes (even if you
+
+    remove a certificate from a pool, it is not removed from existing
+
+    compute nodes in that pool until they restart), and no running tasks
+
+    depend on the certificate. If you try to delete a certificate that is
+
+    in use, the deletion fails. The certificate status changes to
+
+    deleteFailed. You can use Cancel Delete Certificate to set the status
+
+    back to active if you decide that you want to continue using the
+
+    certificate.
+
+    '
+  syntax:
+    content: delete(thumbprint_algorithm, thumbprint, certificate_delete_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The algorithm used to derive the
+
+        thumbprint parameter. This must be sha1.
+
+        '
+      id: thumbprint_algorithm
+      type: *id019
+    - description: 'The thumbprint of the certificate to be deleted.
+
+        '
+      id: thumbprint
+      type: *id020
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: certificate_delete_options
+      type: *id021
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id022
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id023
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id024
+  type: method
+  uid: azure.batch.operations.CertificateOperations.delete
+- *id025
+- &id033
+  class: azure.batch.operations.CertificateOperations
+  exceptions: *id026
+  fullName: azure.batch.operations.CertificateOperations.get
+  langs:
+  - python
+  module: azure.batch.operations
+  name: get
+  source:
+    id: get
+    path: azure-batch\azure\batch\operations\certificate_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\certificate_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 409
+  summary: 'Gets information about the specified certificate.
+
+    '
+  syntax:
+    content: get(thumbprint_algorithm, thumbprint, certificate_get_options=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The algorithm used to derive the
+
+        thumbprint parameter. This must be sha1.
+
+        '
+      id: thumbprint_algorithm
+      type: *id027
+    - description: 'The thumbprint of the certificate to get.
+
+        '
+      id: thumbprint
+      type: *id028
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: certificate_get_options
+      type: *id029
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id030
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id031
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id032
+  type: method
+  uid: azure.batch.operations.CertificateOperations.get
+- *id033
+- &id039
+  class: azure.batch.operations.CertificateOperations
+  exceptions: *id034
+  fullName: azure.batch.operations.CertificateOperations.list
+  langs:
+  - python
+  module: azure.batch.operations
+  name: list
+  source:
+    id: list
+    path: azure-batch\azure\batch\operations\certificate_operations.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\operations\certificate_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 119
+  summary: 'Lists all of the certificates that have been added to the specified
+
+    account.
+
+    '
+  syntax:
+    content: list(certificate_list_options=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'Additional parameters for the
+
+        operation
+
+        '
+      id: certificate_list_options
+      type: *id035
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id036
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id037
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id038
+  type: method
+  uid: azure.batch.operations.CertificateOperations.list
+- *id039
 references:
+- fullName: azure.batch.operations.CertificateOperations.add
+  isExternal: false
+  name: add
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.add
+- fullName: azure.batch.operations.CertificateOperations.cancel_deletion
+  isExternal: false
+  name: cancel_deletion
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.cancel_deletion
+- fullName: azure.batch.operations.CertificateOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.delete
+- fullName: azure.batch.operations.CertificateOperations.get
+  isExternal: false
+  name: get
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.get
+- fullName: azure.batch.operations.CertificateOperations.list
+  isExternal: false
+  name: list
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.list
+- fullName: azure.batch.operations.CertificateOperations.add
+  isExternal: false
+  name: add
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.add
+- fullName: azure.batch.operations.CertificateOperations.cancel_deletion
+  isExternal: false
+  name: cancel_deletion
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.cancel_deletion
+- fullName: azure.batch.operations.CertificateOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.delete
+- fullName: azure.batch.operations.CertificateOperations.get
+  isExternal: false
+  name: get
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.get
+- fullName: azure.batch.operations.CertificateOperations.list
+  isExternal: false
+  name: list
+  parent: azure.batch.operations.CertificateOperations
+  uid: azure.batch.operations.CertificateOperations.list
 - fullName: azure.batch.operations.CertificateOperations.add
   isExternal: false
   name: add

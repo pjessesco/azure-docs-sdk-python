@@ -28,7 +28,7 @@ items:
       force_persistence=None, label=None, message_id=None, partition_key=None, reply_to=None,
       reply_to_session_id=None, scheduled_enqueue_time_utc=None, session_id=None,
       time_to_live=None, to=None, via_partition_key=None)
-    parameters:
+    parameters: &id001
     - description: 'Gets or sets the content type.
 
         '
@@ -109,6 +109,36 @@ items:
       id: via_partition_key
       type:
       - str
+  type: class
+  uid: azure.mgmt.scheduler.models.ServiceBusBrokeredMessageProperties
+- children: []
+  class: azure.mgmt.scheduler.models.ServiceBusBrokeredMessageProperties
+  fullName: azure.mgmt.scheduler.models.ServiceBusBrokeredMessageProperties
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.scheduler.models
+  name: ServiceBusBrokeredMessageProperties
+  source:
+    id: ServiceBusBrokeredMessageProperties
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\service_bus_brokered_message_properties.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\service_bus_brokered_message_properties.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'ServiceBusBrokeredMessageProperties.
+
+    '
+  syntax:
+    content: ServiceBusBrokeredMessageProperties(content_type=None, correlation_id=None,
+      force_persistence=None, label=None, message_id=None, partition_key=None, reply_to=None,
+      reply_to_session_id=None, scheduled_enqueue_time_utc=None, session_id=None,
+      time_to_live=None, to=None, via_partition_key=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.scheduler.models.ServiceBusBrokeredMessageProperties
 references: []

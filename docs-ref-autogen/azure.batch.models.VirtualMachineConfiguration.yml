@@ -28,7 +28,7 @@ items:
   syntax:
     content: VirtualMachineConfiguration(node_agent_sku_id, image_reference=None,
       os_disk=None, windows_configuration=None)
-    parameters:
+    parameters: &id001
     - description: 'A reference to the Azure Virtual Machines
 
         Marketplace image to use. This property and osDisk are mutually exclusive
@@ -85,6 +85,36 @@ items:
       id: windows_configuration
       type:
       - azure.batch.models.WindowsConfiguration
+  type: class
+  uid: azure.batch.models.VirtualMachineConfiguration
+- children: []
+  class: azure.batch.models.VirtualMachineConfiguration
+  fullName: azure.batch.models.VirtualMachineConfiguration
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: VirtualMachineConfiguration
+  source:
+    id: VirtualMachineConfiguration
+    path: azure-batch\azure\batch\models\virtual_machine_configuration.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\virtual_machine_configuration.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The configuration for compute nodes in a pool based on the Azure Virtual
+
+    Machines infrastructure.
+
+    '
+  syntax:
+    content: VirtualMachineConfiguration(node_agent_sku_id, image_reference=None,
+      os_disk=None, windows_configuration=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.VirtualMachineConfiguration
 references: []

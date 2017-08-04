@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.devtestlabs.models.StorageType
-- fullName: azure.mgmt.devtestlabs.models.StorageType.premium
+- children:
+  - azure.mgmt.devtestlabs.models.StorageType.premium
+  - azure.mgmt.devtestlabs.models.StorageType.standard
+  class: azure.mgmt.devtestlabs.models.StorageType
+  fullName: azure.mgmt.devtestlabs.models.StorageType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: StorageType
+  source:
+    id: StorageType
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\dev_test_labs_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 33
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.devtestlabs.models.StorageType
+- &id001
+  fullName: azure.mgmt.devtestlabs.models.StorageType.premium
   id: premium
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.devtestlabs.models.StorageType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.StorageType.premium
-- fullName: azure.mgmt.devtestlabs.models.StorageType.standard
+- &id002
+  fullName: azure.mgmt.devtestlabs.models.StorageType.standard
   id: standard
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.devtestlabs.models.StorageType
   type: attribute
   uid: azure.mgmt.devtestlabs.models.StorageType.standard
+- *id001
+- *id002
 references: []

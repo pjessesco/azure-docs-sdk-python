@@ -33,7 +33,7 @@ items:
   syntax:
     content: BackupResourceVaultConfigResource(location=None, tags=None, e_tag=None,
       properties=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location.
 
         '
@@ -58,7 +58,7 @@ items:
       id: properties
       type:
       - azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfig
-    variables:
+    variables: &id002
     - description: 'Resource Id represents the complete path to the resource.
 
         '
@@ -79,6 +79,42 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfigResource
+- children: []
+  class: azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfigResource
+  fullName: azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfigResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.recoveryservicesbackup.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: BackupResourceVaultConfigResource
+  source:
+    id: BackupResourceVaultConfigResource
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\backup_resource_vault_config_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\backup_resource_vault_config_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Backup resource vault config details.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: BackupResourceVaultConfigResource(location=None, tags=None, e_tag=None,
+      properties=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.BackupResourceVaultConfigResource
 references: []

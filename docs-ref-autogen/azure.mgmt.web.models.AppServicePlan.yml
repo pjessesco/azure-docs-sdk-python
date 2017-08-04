@@ -35,7 +35,7 @@ items:
       app_service_plan_name=None, worker_tier_name=None, admin_site_name=None, hosting_environment_profile=None,
       per_site_scaling=False, reserved=False, target_worker_count=None, target_worker_size_id=None,
       sku=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -128,7 +128,7 @@ items:
       id: sku
       type:
       - azure.mgmt.web.models.SkuDescription
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
@@ -189,6 +189,44 @@ items:
       - 'str or @azure.mgmt.web.models.ProvisioningState
 
         '
+  type: class
+  uid: azure.mgmt.web.models.AppServicePlan
+- children: []
+  class: azure.mgmt.web.models.AppServicePlan
+  fullName: azure.mgmt.web.models.AppServicePlan
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: AppServicePlan
+  source:
+    id: AppServicePlan
+    path: azure-mgmt-web\azure\mgmt\web\models\app_service_plan.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\app_service_plan.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'App Service plan.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: AppServicePlan(location, name=None, kind=None, type=None, tags=None,
+      app_service_plan_name=None, worker_tier_name=None, admin_site_name=None, hosting_environment_profile=None,
+      per_site_scaling=False, reserved=False, target_worker_count=None, target_worker_size_id=None,
+      sku=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.AppServicePlan
 references: []

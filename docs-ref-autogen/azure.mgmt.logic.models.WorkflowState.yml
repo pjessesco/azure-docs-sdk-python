@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.logic.models.WorkflowState
-- fullName: azure.mgmt.logic.models.WorkflowState.completed
+- children:
+  - azure.mgmt.logic.models.WorkflowState.completed
+  - azure.mgmt.logic.models.WorkflowState.deleted
+  - azure.mgmt.logic.models.WorkflowState.disabled
+  - azure.mgmt.logic.models.WorkflowState.enabled
+  - azure.mgmt.logic.models.WorkflowState.not_specified
+  - azure.mgmt.logic.models.WorkflowState.suspended
+  class: azure.mgmt.logic.models.WorkflowState
+  fullName: azure.mgmt.logic.models.WorkflowState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: WorkflowState
+  source:
+    id: WorkflowState
+    path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\logic_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.logic.models.WorkflowState
+- &id001
+  fullName: azure.mgmt.logic.models.WorkflowState.completed
   id: completed
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.logic.models.WorkflowState
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowState.completed
-- fullName: azure.mgmt.logic.models.WorkflowState.deleted
+- &id002
+  fullName: azure.mgmt.logic.models.WorkflowState.deleted
   id: deleted
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.logic.models.WorkflowState
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowState.deleted
-- fullName: azure.mgmt.logic.models.WorkflowState.disabled
+- &id003
+  fullName: azure.mgmt.logic.models.WorkflowState.disabled
   id: disabled
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.logic.models.WorkflowState
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowState.disabled
-- fullName: azure.mgmt.logic.models.WorkflowState.enabled
+- &id004
+  fullName: azure.mgmt.logic.models.WorkflowState.enabled
   id: enabled
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.logic.models.WorkflowState
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowState.enabled
-- fullName: azure.mgmt.logic.models.WorkflowState.not_specified
+- &id005
+  fullName: azure.mgmt.logic.models.WorkflowState.not_specified
   id: not_specified
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.logic.models.WorkflowState
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowState.not_specified
-- fullName: azure.mgmt.logic.models.WorkflowState.suspended
+- &id006
+  fullName: azure.mgmt.logic.models.WorkflowState.suspended
   id: suspended
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.logic.models.WorkflowState
   type: attribute
   uid: azure.mgmt.logic.models.WorkflowState.suspended
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

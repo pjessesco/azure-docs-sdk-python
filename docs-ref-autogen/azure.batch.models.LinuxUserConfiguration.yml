@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: LinuxUserConfiguration(uid=None, gid=None, ssh_private_key=None)
-    parameters:
+    parameters: &id001
     - description: 'The user ID of the user account. The uid and gid properties
 
         must be specified together or not at all. If not specified the underlying
@@ -66,6 +66,33 @@ items:
       id: ssh_private_key
       type:
       - str
+  type: class
+  uid: azure.batch.models.LinuxUserConfiguration
+- children: []
+  class: azure.batch.models.LinuxUserConfiguration
+  fullName: azure.batch.models.LinuxUserConfiguration
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: LinuxUserConfiguration
+  source:
+    id: LinuxUserConfiguration
+    path: azure-batch\azure\batch\models\linux_user_configuration.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\linux_user_configuration.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Properties used to create a user account on a Linux node.
+
+    '
+  syntax:
+    content: LinuxUserConfiguration(uid=None, gid=None, ssh_private_key=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.LinuxUserConfiguration
 references: []

@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: NextHopResult(next_hop_type=None, next_hop_ip_address=None, route_table_id=None)
-    parameters:
+    parameters: &id001
     - description: 'Next hop type. Possible values include: ''Internet'',
 
         ''VirtualAppliance'', ''VirtualNetworkGateway'', ''VnetLocal'',
@@ -56,6 +56,33 @@ items:
       id: route_table_id
       type:
       - str
+  type: class
+  uid: azure.mgmt.network.v2016_12_01.models.NextHopResult
+- children: []
+  class: azure.mgmt.network.v2016_12_01.models.NextHopResult
+  fullName: azure.mgmt.network.v2016_12_01.models.NextHopResult
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.models
+  name: NextHopResult
+  source:
+    id: NextHopResult
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\next_hop_result.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\next_hop_result.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The information about next hop from the specified VM.
+
+    '
+  syntax:
+    content: NextHopResult(next_hop_type=None, next_hop_ip_address=None, route_table_id=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.network.v2016_12_01.models.NextHopResult
 references: []

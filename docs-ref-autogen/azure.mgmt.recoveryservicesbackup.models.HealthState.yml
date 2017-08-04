@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.HealthState
-- fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.action_required
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.HealthState.action_required
+  - azure.mgmt.recoveryservicesbackup.models.HealthState.action_suggested
+  - azure.mgmt.recoveryservicesbackup.models.HealthState.invalid
+  - azure.mgmt.recoveryservicesbackup.models.HealthState.passed
+  class: azure.mgmt.recoveryservicesbackup.models.HealthState
+  fullName: azure.mgmt.recoveryservicesbackup.models.HealthState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: HealthState
+  source:
+    id: HealthState
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 332
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.HealthState
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.action_required
   id: action_required
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.HealthState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.HealthState.action_required
-- fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.action_suggested
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.action_suggested
   id: action_suggested
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.HealthState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.HealthState.action_suggested
-- fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.invalid
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.invalid
   id: invalid
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.HealthState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.HealthState.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.passed
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.HealthState.passed
   id: passed
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.HealthState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.HealthState.passed
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

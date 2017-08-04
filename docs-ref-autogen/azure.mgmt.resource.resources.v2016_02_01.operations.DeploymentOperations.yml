@@ -4,6 +4,8 @@ items:
 - children:
   - azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
   - azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+  - azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+  - azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
   class: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
   inheritance:
@@ -27,7 +29,7 @@ items:
     '
   syntax:
     content: DeploymentOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -44,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-02-01".
 
         '
@@ -52,7 +54,7 @@ items:
   type: class
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
   langs:
@@ -80,26 +82,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the deployment.
 
         '
       id: deployment_name
-      type:
+      type: &id005
       - str
     - description: 'Operation Id.
 
         '
       id: operation_id
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -108,7 +110,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -116,16 +118,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.DeploymentOperation
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
 - class: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
   langs:
@@ -153,27 +155,27 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the deployment.
 
         '
       id: deployment_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'Query parameters.
 
         '
       id: top
-      type:
+      type: &id014
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id015
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -182,7 +184,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id016
       - bool
     - description: '*Operation configuration
 
@@ -190,12 +192,191 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id017
       type:
       - azure.mgmt.resource.resources.v2016_02_01.models.DeploymentOperationPaged
   type: method
   uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+- children:
+  - azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+  - azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+  class: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_02_01.operations
+  name: DeploymentOperations
+  source:
+    id: DeploymentOperations
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\deployment_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\deployment_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'DeploymentOperations operations.
+
+
+
+    '
+  syntax:
+    content: DeploymentOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+- &id010
+  class: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  exceptions: *id003
+  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_02_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\deployment_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\deployment_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Get a list of deployments operations.
+
+    '
+  syntax:
+    content: get(resource_group_name, deployment_name, operation_id, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group. The name
+
+        is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the deployment.
+
+        '
+      id: deployment_name
+      type: *id005
+    - description: 'Operation Id.
+
+        '
+      id: operation_id
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+- *id010
+- &id018
+  class: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  exceptions: *id011
+  fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+  langs:
+  - python
+  module: azure.mgmt.resource.resources.v2016_02_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\deployment_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\resources\v2016_02_01\operations\deployment_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 104
+  summary: 'Gets a list of deployments operations.
+
+    '
+  syntax:
+    content: list(resource_group_name, deployment_name, top=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group. The name
+
+        is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the deployment.
+
+        '
+      id: deployment_name
+      type: *id013
+    - defaultValue: None
+      description: 'Query parameters.
+
+        '
+      id: top
+      type: *id014
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id015
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id016
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id017
+  type: method
+  uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+- *id018
 references:
+- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
+- fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations
+  uid: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list
 - fullName: azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get
   isExternal: false
   name: get

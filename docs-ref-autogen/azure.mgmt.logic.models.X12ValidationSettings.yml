@@ -29,7 +29,7 @@ items:
       check_duplicate_transaction_set_control_number, validate_edi_types, validate_xsd_types,
       allow_leading_and_trailing_spaces_and_zeroes, trim_leading_and_trailing_spaces_and_zeroes,
       trailing_separator_policy)
-    parameters:
+    parameters: &id001
     - description: 'The value indicating whether to validate
 
         character set in the message.
@@ -112,6 +112,37 @@ items:
       - 'str or @azure.mgmt.logic.models.TrailingSeparatorPolicy
 
         '
+  type: class
+  uid: azure.mgmt.logic.models.X12ValidationSettings
+- children: []
+  class: azure.mgmt.logic.models.X12ValidationSettings
+  fullName: azure.mgmt.logic.models.X12ValidationSettings
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: X12ValidationSettings
+  source:
+    id: X12ValidationSettings
+    path: azure-mgmt-logic\azure\mgmt\logic\models\x12_validation_settings.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\x12_validation_settings.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The X12 agreement validation settings.
+
+    '
+  syntax:
+    content: X12ValidationSettings(validate_character_set, check_duplicate_interchange_control_number,
+      interchange_control_number_validity_days, check_duplicate_group_control_number,
+      check_duplicate_transaction_set_control_number, validate_edi_types, validate_xsd_types,
+      allow_leading_and_trailing_spaces_and_zeroes, trim_leading_and_trailing_spaces_and_zeroes,
+      trailing_separator_policy)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.X12ValidationSettings
 references: []

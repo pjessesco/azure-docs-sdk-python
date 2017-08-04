@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.network.v2015_06_15.models.TransportProtocol
-- fullName: azure.mgmt.network.v2015_06_15.models.TransportProtocol.tcp
+- children:
+  - azure.mgmt.network.v2015_06_15.models.TransportProtocol.tcp
+  - azure.mgmt.network.v2015_06_15.models.TransportProtocol.udp
+  class: azure.mgmt.network.v2015_06_15.models.TransportProtocol
+  fullName: azure.mgmt.network.v2015_06_15.models.TransportProtocol
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.network.v2015_06_15.models
+  name: TransportProtocol
+  source:
+    id: TransportProtocol
+    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\network_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\models\network_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 33
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.network.v2015_06_15.models.TransportProtocol
+- &id001
+  fullName: azure.mgmt.network.v2015_06_15.models.TransportProtocol.tcp
   id: tcp
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.network.v2015_06_15.models.TransportProtocol
   type: attribute
   uid: azure.mgmt.network.v2015_06_15.models.TransportProtocol.tcp
-- fullName: azure.mgmt.network.v2015_06_15.models.TransportProtocol.udp
+- &id002
+  fullName: azure.mgmt.network.v2015_06_15.models.TransportProtocol.udp
   id: udp
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.network.v2015_06_15.models.TransportProtocol
   type: attribute
   uid: azure.mgmt.network.v2015_06_15.models.TransportProtocol.udp
+- *id001
+- *id002
 references: []

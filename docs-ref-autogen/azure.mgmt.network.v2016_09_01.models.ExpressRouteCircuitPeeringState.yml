@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState
-- fullName: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.disabled
+- children:
+  - azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.disabled
+  - azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.enabled
+  class: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState
+  fullName: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.models
+  name: ExpressRouteCircuitPeeringState
+  source:
+    id: ExpressRouteCircuitPeeringState
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\models\network_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\models\network_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 144
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState
+- &id001
+  fullName: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.disabled
   id: disabled
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState
   type: attribute
   uid: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.disabled
-- fullName: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.enabled
+- &id002
+  fullName: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.enabled
   id: enabled
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState
   type: attribute
   uid: azure.mgmt.network.v2016_09_01.models.ExpressRouteCircuitPeeringState.enabled
+- *id001
+- *id002
 references: []

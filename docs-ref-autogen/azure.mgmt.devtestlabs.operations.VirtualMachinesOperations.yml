@@ -14,6 +14,18 @@ items:
   - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
   - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
   - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
   class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
   inheritance:
@@ -47,7 +59,7 @@ items:
     '
   syntax:
     content: VirtualMachinesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -64,7 +76,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -72,7 +84,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
   langs:
@@ -100,19 +112,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id006
       - str
     - description: 'Request body for adding a new or existing
 
@@ -120,14 +132,14 @@ items:
 
         '
       id: data_disk_properties
-      type:
+      type: &id007
       - azure.mgmt.devtestlabs.models.DataDiskProperties
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -136,20 +148,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
-    return:
+    return: &id010
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
   langs:
@@ -177,26 +189,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'The list of artifacts to apply.
 
         '
       id: artifacts
-      type:
+      type: &id016
       - 'list of @azure.mgmt.devtestlabs.models.ArtifactInstallProperties
 
         '
@@ -205,7 +217,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id017
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -214,20 +226,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id018
       - bool
-    return:
+    return: &id019
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id021
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
   langs:
@@ -256,26 +268,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id023
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id024
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id025
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -284,20 +296,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id026
       - bool
-    return:
+    return: &id027
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id029
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
   langs:
@@ -325,32 +337,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id030
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id031
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id032
       - str
     - description: 'A virtual machine.
 
         '
       id: lab_virtual_machine
-      type:
+      type: &id033
       - azure.mgmt.devtestlabs.models.LabVirtualMachine
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -359,20 +371,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
-    return:
+    return: &id036
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.devtestlabs.models.LabVirtualMachine'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id038
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
   langs:
@@ -398,26 +410,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id039
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id040
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id041
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id042
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -426,20 +438,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id043
       - bool
-    return:
+    return: &id044
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id046
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
   langs:
@@ -467,19 +479,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id047
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id048
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id049
       - str
     - defaultValue: None
       description: 'Specifies the disk resource ID to detach
@@ -488,14 +500,14 @@ items:
 
         '
       id: existing_lab_disk_id
-      type:
+      type: &id050
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -504,20 +516,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
-    return:
+    return: &id053
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id055
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
   langs:
@@ -543,19 +555,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id056
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id057
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id058
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -564,14 +576,14 @@ items:
 
         '
       id: expand
-      type:
+      type: &id059
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id060
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -580,7 +592,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id061
       - bool
     - description: '*Operation configuration
 
@@ -588,16 +600,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id062
       type:
       - azure.mgmt.devtestlabs.models.LabVirtualMachine
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id064
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
   langs:
@@ -623,13 +635,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id065
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id066
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -638,14 +650,14 @@ items:
 
         '
       id: expand
-      type:
+      type: &id067
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type:
+      type: &id068
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -654,7 +666,7 @@ items:
 
         '
       id: top
-      type:
+      type: &id069
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -663,14 +675,14 @@ items:
 
         '
       id: orderby
-      type:
+      type: &id070
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id071
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -679,7 +691,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id072
       - bool
     - description: '*Operation configuration
 
@@ -687,13 +699,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id073
       type:
       - azure.mgmt.devtestlabs.models.LabVirtualMachinePaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id075
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
   langs:
@@ -719,26 +731,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id076
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id077
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id078
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id079
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -747,7 +759,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id080
       - bool
     - description: '*Operation configuration
 
@@ -755,16 +767,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id081
       type:
       - azure.mgmt.devtestlabs.models.ApplicableSchedule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id083
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
   langs:
@@ -790,26 +802,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id084
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id085
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id086
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id087
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -818,20 +830,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id088
       - bool
-    return:
+    return: &id089
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id091
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
   langs:
@@ -857,26 +869,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id092
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id093
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id094
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id095
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -885,20 +897,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id096
       - bool
-    return:
+    return: &id097
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
 - class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id099
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
   langs:
@@ -924,32 +936,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id100
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id101
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: name
-      type:
+      type: &id102
       - str
     - description: 'A virtual machine.
 
         '
       id: lab_virtual_machine
-      type:
+      type: &id103
       - azure.mgmt.devtestlabs.models.LabVirtualMachineFragment
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id104
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -958,7 +970,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id105
       - bool
     - description: '*Operation configuration
 
@@ -966,15 +978,956 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id106
       type:
       - azure.mgmt.devtestlabs.models.LabVirtualMachine
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+- children:
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+  - azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: VirtualMachinesOperations
+  source:
+    id: VirtualMachinesOperations
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'VirtualMachinesOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: VirtualMachinesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+- &id011
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: add_data_disk
+  source:
+    id: add_data_disk
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 447
+  summary: 'Attach a new or existing data disk to virtual machine. This operation
+
+    can take a while to complete.
+
+    '
+  syntax:
+    content: add_data_disk(resource_group_name, lab_name, name, data_disk_properties,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id005
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id006
+    - description: 'Request body for adding a new or existing
+
+        data disk to a virtual machine.
+
+        '
+      id: data_disk_properties
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    return: *id010
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+- *id011
+- &id020
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id012
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: apply_artifacts
+  source:
+    id: apply_artifacts
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 536
+  summary: 'Apply artifacts to virtual machine. This operation can take a while to
+
+    complete.
+
+    '
+  syntax:
+    content: apply_artifacts(resource_group_name, lab_name, name, artifacts=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id014
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id015
+    - defaultValue: None
+      description: 'The list of artifacts to apply.
+
+        '
+      id: artifacts
+      type: *id016
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id017
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id018
+    return: *id019
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+- *id020
+- &id028
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id021
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: claim
+  source:
+    id: claim
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 626
+  summary: 'Take ownership of an existing virtual machine This operation can take
+    a
+
+    while to complete.
+
+    '
+  syntax:
+    content: claim(resource_group_name, lab_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id022
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id023
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id024
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id025
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id026
+    return: *id027
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+- *id028
+- &id037
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id029
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 197
+  summary: 'Create or replace an existing Virtual machine. This operation can take
+
+    a while to complete.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, lab_name, name, lab_virtual_machine,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id030
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id031
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id032
+    - description: 'A virtual machine.
+
+        '
+      id: lab_virtual_machine
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    return: *id036
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+- *id037
+- &id045
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id038
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 295
+  summary: 'Delete virtual machine. This operation can take a while to complete.
+
+    '
+  syntax:
+    content: delete(resource_group_name, lab_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id039
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id040
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id041
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id042
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id043
+    return: *id044
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+- *id045
+- &id054
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id046
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: detach_data_disk
+  source:
+    id: detach_data_disk
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 707
+  summary: 'Detach the specified disk from the virtual machine. This operation can
+
+    take a while to complete.
+
+    '
+  syntax:
+    content: detach_data_disk(resource_group_name, lab_name, name, existing_lab_disk_id=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id047
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id048
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id049
+    - defaultValue: None
+      description: 'Specifies the disk resource ID to detach
+
+        from virtual machine.
+
+        '
+      id: existing_lab_disk_id
+      type: *id050
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    return: *id053
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+- *id054
+- &id063
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id055
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 127
+  summary: 'Get virtual machine.
+
+    '
+  syntax:
+    content: get(resource_group_name, lab_name, name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id056
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id057
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id058
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
+
+        ''properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)''
+
+        '
+      id: expand
+      type: *id059
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id060
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id061
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id062
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+- *id063
+- &id074
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id064
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'List virtual machines in a given lab.
+
+    '
+  syntax:
+    content: list(resource_group_name, lab_name, expand=None, filter=None, top=None,
+      orderby=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id065
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id066
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
+
+        ''properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)''
+
+        '
+      id: expand
+      type: *id067
+    - defaultValue: None
+      description: 'The filter to apply to the operation.
+
+        '
+      id: filter
+      type: *id068
+    - defaultValue: None
+      description: 'The maximum number of resources to return from the
+
+        operation.
+
+        '
+      id: top
+      type: *id069
+    - defaultValue: None
+      description: 'The ordering expression for the results, using OData
+
+        notation.
+
+        '
+      id: orderby
+      type: *id070
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id071
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id072
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id073
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+- *id074
+- &id082
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id075
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: list_applicable_schedules
+  source:
+    id: list_applicable_schedules
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 797
+  summary: 'Lists all applicable schedules.
+
+    '
+  syntax:
+    content: list_applicable_schedules(resource_group_name, lab_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id076
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id077
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id078
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id079
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id080
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id081
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+- *id082
+- &id090
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id083
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: start
+  source:
+    id: start
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 862
+  summary: 'Start a virtual machine. This operation can take a while to complete.
+
+    '
+  syntax:
+    content: start(resource_group_name, lab_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id084
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id085
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id086
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id087
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id088
+    return: *id089
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+- *id090
+- &id098
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id091
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: stop
+  source:
+    id: stop
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 942
+  summary: 'Stop a virtual machine This operation can take a while to complete.
+
+    '
+  syntax:
+    content: stop(resource_group_name, lab_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id092
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id093
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id094
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id095
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id096
+    return: *id097
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+- *id098
+- &id107
+  class: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  exceptions: *id099
+  fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 375
+  summary: 'Modify properties of virtual machines.
+
+    '
+  syntax:
+    content: update(resource_group_name, lab_name, name, lab_virtual_machine, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id100
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id101
+    - description: 'The name of the virtual machine.
+
+        '
+      id: name
+      type: *id102
+    - description: 'A virtual machine.
+
+        '
+      id: lab_virtual_machine
+      type: *id103
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id104
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id105
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id106
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+- *id107
 references:
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+  isExternal: false
+  name: add_data_disk
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+  isExternal: false
+  name: apply_artifacts
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+  isExternal: false
+  name: claim
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+  isExternal: false
+  name: detach_data_disk
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+  isExternal: false
+  name: list_applicable_schedules
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+  isExternal: false
+  name: start
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+  isExternal: false
+  name: stop
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+  isExternal: false
+  name: add_data_disk
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+  isExternal: false
+  name: apply_artifacts
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.apply_artifacts
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+  isExternal: false
+  name: claim
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.claim
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.create_or_update
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.delete
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+  isExternal: false
+  name: detach_data_disk
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.detach_data_disk
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.get
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+  isExternal: false
+  name: list_applicable_schedules
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.list_applicable_schedules
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+  isExternal: false
+  name: start
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.start
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+  isExternal: false
+  name: stop
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.stop
+- fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations
+  uid: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.update
 - fullName: azure.mgmt.devtestlabs.operations.VirtualMachinesOperations.add_data_disk
   isExternal: false
   name: add_data_disk

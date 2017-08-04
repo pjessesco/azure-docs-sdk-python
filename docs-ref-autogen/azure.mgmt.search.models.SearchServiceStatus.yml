@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.search.models.SearchServiceStatus
-- fullName: azure.mgmt.search.models.SearchServiceStatus.degraded
+- children:
+  - azure.mgmt.search.models.SearchServiceStatus.degraded
+  - azure.mgmt.search.models.SearchServiceStatus.deleting
+  - azure.mgmt.search.models.SearchServiceStatus.disabled
+  - azure.mgmt.search.models.SearchServiceStatus.error
+  - azure.mgmt.search.models.SearchServiceStatus.provisioning
+  - azure.mgmt.search.models.SearchServiceStatus.running
+  class: azure.mgmt.search.models.SearchServiceStatus
+  fullName: azure.mgmt.search.models.SearchServiceStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.search.models
+  name: SearchServiceStatus
+  source:
+    id: SearchServiceStatus
+    path: azure-mgmt-search\azure\mgmt\search\models\search_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\models\search_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 36
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.search.models.SearchServiceStatus
+- &id001
+  fullName: azure.mgmt.search.models.SearchServiceStatus.degraded
   id: degraded
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.search.models.SearchServiceStatus
   type: attribute
   uid: azure.mgmt.search.models.SearchServiceStatus.degraded
-- fullName: azure.mgmt.search.models.SearchServiceStatus.deleting
+- &id002
+  fullName: azure.mgmt.search.models.SearchServiceStatus.deleting
   id: deleting
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.search.models.SearchServiceStatus
   type: attribute
   uid: azure.mgmt.search.models.SearchServiceStatus.deleting
-- fullName: azure.mgmt.search.models.SearchServiceStatus.disabled
+- &id003
+  fullName: azure.mgmt.search.models.SearchServiceStatus.disabled
   id: disabled
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.search.models.SearchServiceStatus
   type: attribute
   uid: azure.mgmt.search.models.SearchServiceStatus.disabled
-- fullName: azure.mgmt.search.models.SearchServiceStatus.error
+- &id004
+  fullName: azure.mgmt.search.models.SearchServiceStatus.error
   id: error
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.search.models.SearchServiceStatus
   type: attribute
   uid: azure.mgmt.search.models.SearchServiceStatus.error
-- fullName: azure.mgmt.search.models.SearchServiceStatus.provisioning
+- &id005
+  fullName: azure.mgmt.search.models.SearchServiceStatus.provisioning
   id: provisioning
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.search.models.SearchServiceStatus
   type: attribute
   uid: azure.mgmt.search.models.SearchServiceStatus.provisioning
-- fullName: azure.mgmt.search.models.SearchServiceStatus.running
+- &id006
+  fullName: azure.mgmt.search.models.SearchServiceStatus.running
   id: running
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.search.models.SearchServiceStatus
   type: attribute
   uid: azure.mgmt.search.models.SearchServiceStatus.running
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

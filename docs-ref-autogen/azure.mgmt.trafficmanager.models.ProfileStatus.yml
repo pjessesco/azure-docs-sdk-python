@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.trafficmanager.models.ProfileStatus
-- fullName: azure.mgmt.trafficmanager.models.ProfileStatus.disabled
+- children:
+  - azure.mgmt.trafficmanager.models.ProfileStatus.disabled
+  - azure.mgmt.trafficmanager.models.ProfileStatus.enabled
+  class: azure.mgmt.trafficmanager.models.ProfileStatus
+  fullName: azure.mgmt.trafficmanager.models.ProfileStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.trafficmanager.models
+  name: ProfileStatus
+  source:
+    id: ProfileStatus
+    path: azure-mgmt-trafficmanager\azure\mgmt\trafficmanager\models\traffic_manager_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-trafficmanager\azure\mgmt\trafficmanager\models\traffic_manager_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 47
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.trafficmanager.models.ProfileStatus
+- &id001
+  fullName: azure.mgmt.trafficmanager.models.ProfileStatus.disabled
   id: disabled
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.trafficmanager.models.ProfileStatus
   type: attribute
   uid: azure.mgmt.trafficmanager.models.ProfileStatus.disabled
-- fullName: azure.mgmt.trafficmanager.models.ProfileStatus.enabled
+- &id002
+  fullName: azure.mgmt.trafficmanager.models.ProfileStatus.enabled
   id: enabled
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.trafficmanager.models.ProfileStatus
   type: attribute
   uid: azure.mgmt.trafficmanager.models.ProfileStatus.enabled
+- *id001
+- *id002
 references: []

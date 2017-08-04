@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: ApplicationGatewaySku(name=None, tier=None, capacity=None)
-    parameters:
+    parameters: &id001
     - description: 'Name of an application gateway SKU. Possible values are:
 
         ''Standard_Small'', ''Standard_Medium'', ''Standard_Large'', ''WAF_Medium'',
@@ -57,6 +57,33 @@ items:
       id: capacity
       type:
       - int
+  type: class
+  uid: azure.mgmt.network.v2016_09_01.models.ApplicationGatewaySku
+- children: []
+  class: azure.mgmt.network.v2016_09_01.models.ApplicationGatewaySku
+  fullName: azure.mgmt.network.v2016_09_01.models.ApplicationGatewaySku
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.models
+  name: ApplicationGatewaySku
+  source:
+    id: ApplicationGatewaySku
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\models\application_gateway_sku.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\models\application_gateway_sku.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'SKU of an application gateway.
+
+    '
+  syntax:
+    content: ApplicationGatewaySku(name=None, tier=None, capacity=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.network.v2016_09_01.models.ApplicationGatewaySku
 references: []

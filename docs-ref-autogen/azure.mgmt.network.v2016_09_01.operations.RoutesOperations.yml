@@ -6,6 +6,10 @@ items:
   - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
   - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
   - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
   class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
   fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
   inheritance:
@@ -31,7 +35,7 @@ items:
     '
   syntax:
     content: RoutesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -48,7 +52,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-09-01".
 
         '
@@ -56,7 +60,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
 - class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
   langs:
@@ -82,19 +86,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the route table.
 
         '
       id: route_table_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the route.
 
         '
       id: route_name
-      type:
+      type: &id006
       - str
     - description: 'Parameters supplied to the create or update
 
@@ -102,14 +106,14 @@ items:
 
         '
       id: route_parameters
-      type:
+      type: &id007
       - azure.mgmt.network.v2016_09_01.models.Route
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -118,20 +122,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
-    return:
+    return: &id010
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.Route'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
 - class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
   langs:
@@ -157,26 +161,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the route table.
 
         '
       id: route_table_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the route.
 
         '
       id: route_name
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -185,20 +189,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
-    return:
+    return: &id018
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
 - class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
-  exceptions:
+  exceptions: &id020
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
   langs:
@@ -224,26 +228,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'The name of the route table.
 
         '
       id: route_table_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the route.
 
         '
       id: route_name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -252,7 +256,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -260,16 +264,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - azure.mgmt.network.v2016_09_01.models.Route
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
 - class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
   langs:
@@ -295,20 +299,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'The name of the route table.
 
         '
       id: route_table_name
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -317,7 +321,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -325,12 +329,324 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - azure.mgmt.network.v2016_09_01.models.RoutePaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+- children:
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+  class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: RoutesOperations
+  source:
+    id: RoutesOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'RoutesOperations operations.
+
+
+
+
+
+    '
+  syntax:
+    content: RoutesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+- &id011
+  class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 183
+  summary: 'Creates or updates a route in the specified route table.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, route_table_name, route_name, route_parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the route table.
+
+        '
+      id: route_table_name
+      type: *id005
+    - description: 'The name of the route.
+
+        '
+      id: route_name
+      type: *id006
+    - description: 'Parameters supplied to the create or update
+
+        route operation.
+
+        '
+      id: route_parameters
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    return: *id010
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+- *id011
+- &id019
+  class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  exceptions: *id012
+  fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Deletes the specified route from a route table.
+
+    '
+  syntax:
+    content: delete(resource_group_name, route_table_name, route_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the route table.
+
+        '
+      id: route_table_name
+      type: *id014
+    - description: 'The name of the route.
+
+        '
+      id: route_name
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    return: *id018
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+- *id019
+- &id027
+  class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  exceptions: *id020
+  fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 119
+  summary: 'Gets the specified route from a route table.
+
+    '
+  syntax:
+    content: get(resource_group_name, route_table_name, route_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'The name of the route table.
+
+        '
+      id: route_table_name
+      type: *id022
+    - description: 'The name of the route.
+
+        '
+      id: route_name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+- *id027
+- &id034
+  class: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  exceptions: *id028
+  fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\routes_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 281
+  summary: 'Gets all routes in a route table.
+
+    '
+  syntax:
+    content: list(resource_group_name, route_table_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'The name of the route table.
+
+        '
+      id: route_table_name
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+- *id034
 references:
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.RoutesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.list
 - fullName: azure.mgmt.network.v2016_09_01.operations.RoutesOperations.create_or_update
   isExternal: false
   name: create_or_update

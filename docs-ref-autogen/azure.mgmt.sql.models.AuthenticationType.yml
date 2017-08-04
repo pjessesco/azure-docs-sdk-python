@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.AuthenticationType
-- fullName: azure.mgmt.sql.models.AuthenticationType.ad_password
+- children:
+  - azure.mgmt.sql.models.AuthenticationType.ad_password
+  - azure.mgmt.sql.models.AuthenticationType.sql
+  class: azure.mgmt.sql.models.AuthenticationType
+  fullName: azure.mgmt.sql.models.AuthenticationType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: AuthenticationType
+  source:
+    id: AuthenticationType
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 116
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.AuthenticationType
+- &id001
+  fullName: azure.mgmt.sql.models.AuthenticationType.ad_password
   id: ad_password
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.sql.models.AuthenticationType
   type: attribute
   uid: azure.mgmt.sql.models.AuthenticationType.ad_password
-- fullName: azure.mgmt.sql.models.AuthenticationType.sql
+- &id002
+  fullName: azure.mgmt.sql.models.AuthenticationType.sql
   id: sql
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.sql.models.AuthenticationType
   type: attribute
   uid: azure.mgmt.sql.models.AuthenticationType.sql
+- *id001
+- *id002
 references: []

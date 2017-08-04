@@ -3,6 +3,7 @@ api_name: []
 items:
 - children:
   - azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+  - azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
   class: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
   fullName: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
   inheritance:
@@ -25,7 +26,7 @@ items:
     '
   syntax:
     content: LogFilesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -42,7 +43,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for the request. Constant value: "2017-04-30-preview".
 
         '
@@ -50,7 +51,7 @@ items:
   type: class
   uid: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
 - class: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
   langs:
@@ -80,20 +81,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -102,7 +103,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -110,12 +111,111 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - azure.mgmt.rdbms.postgresql.models.LogFilePaged
   type: method
   uid: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+- children:
+  - azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+  class: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
+  fullName: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.rdbms.postgresql.operations
+  name: LogFilesOperations
+  source:
+    id: LogFilesOperations
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\operations\log_files_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\operations\log_files_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'LogFilesOperations operations.
+
+
+    '
+  syntax:
+    content: LogFilesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
+- &id009
+  class: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+  langs:
+  - python
+  module: azure.mgmt.rdbms.postgresql.operations
+  name: list_by_server
+  source:
+    id: list_by_server
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\operations\log_files_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\operations\log_files_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'List all the log files in a given server.
+
+    '
+  syntax:
+    content: list_by_server(resource_group_name, server_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+- *id009
 references:
+- fullName: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+  isExternal: false
+  name: list_by_server
+  parent: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
+  uid: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+- fullName: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
+  isExternal: false
+  name: list_by_server
+  parent: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations
+  uid: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
 - fullName: azure.mgmt.rdbms.postgresql.operations.LogFilesOperations.list_by_server
   isExternal: false
   name: list_by_server

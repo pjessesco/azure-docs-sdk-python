@@ -33,7 +33,7 @@ items:
   syntax:
     content: Disk(location, creation_data, tags=None, account_type=None, os_type=None,
       disk_size_gb=None, encryption_settings=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location
 
         '
@@ -94,7 +94,7 @@ items:
       id: encryption_settings
       type:
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.EncryptionSettings
-    variables:
+    variables: &id002
     - description: 'Resource Id
 
         '
@@ -133,6 +133,42 @@ items:
       id: provisioning_state
       type:
       - str
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
+- children: []
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.compute.compute.v2016_04_30_preview.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.models
+  name: Disk
+  source:
+    id: Disk
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\models\disk.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\models\disk.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Disk resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: Disk(location, creation_data, tags=None, account_type=None, os_type=None,
+      disk_size_gb=None, encryption_settings=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.models.Disk
 references: []

@@ -7,6 +7,11 @@ items:
   - azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
   - azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
   - azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
   class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
   fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: RoleDefinitionsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for this operation. Constant value: "2015-07-01".
 
         '
@@ -58,7 +63,7 @@ items:
   type: class
   uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations
 - class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
   langs:
@@ -84,26 +89,26 @@ items:
 
         '
       id: scope
-      type:
+      type: &id004
       - str
     - description: 'The ID of the role definition.
 
         '
       id: role_definition_id
-      type:
+      type: &id005
       - str
     - description: 'The values for the role definition.
 
         '
       id: role_definition
-      type:
+      type: &id006
       - azure.mgmt.authorization.models.RoleDefinition
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -112,7 +117,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -120,16 +125,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.authorization.models.RoleDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
 - class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
   langs:
@@ -154,20 +159,20 @@ items:
 
         '
       id: scope
-      type:
+      type: &id012
       - str
     - description: 'The ID of the role definition to delete.
 
         '
       id: role_definition_id
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -176,7 +181,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
     - description: '*Operation configuration
 
@@ -184,16 +189,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id016
       type:
       - azure.mgmt.authorization.models.RoleDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
 - class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
   langs:
@@ -218,20 +223,20 @@ items:
 
         '
       id: scope
-      type:
+      type: &id019
       - str
     - description: 'The ID of the role definition.
 
         '
       id: role_definition_id
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -240,7 +245,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -248,16 +253,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       type:
       - azure.mgmt.authorization.models.RoleDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
 - class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
   langs:
@@ -284,14 +289,14 @@ items:
 
         '
       id: role_definition_id
-      type:
+      type: &id026
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id027
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -300,7 +305,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id028
       - bool
     - description: '*Operation configuration
 
@@ -308,16 +313,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id029
       type:
       - azure.mgmt.authorization.models.RoleDefinition
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
 - class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
-  exceptions:
+  exceptions: &id031
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
   langs:
@@ -342,7 +347,7 @@ items:
 
         '
       id: scope
-      type:
+      type: &id032
       - str
     - defaultValue: None
       description: 'The filter to apply on the operation. Use
@@ -351,14 +356,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id033
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -367,7 +372,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -375,12 +380,384 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       type:
       - azure.mgmt.authorization.models.RoleDefinitionPaged
   type: method
   uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+- children:
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+  - azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+  class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.authorization.operations
+  name: RoleDefinitionsOperations
+  source:
+    id: RoleDefinitionsOperations
+    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'RoleDefinitionsOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: RoleDefinitionsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+- &id010
+  class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.authorization.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 160
+  summary: 'Creates or updates a role definition.
+
+    '
+  syntax:
+    content: create_or_update(scope, role_definition_id, role_definition, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The scope of the role definition.
+
+        '
+      id: scope
+      type: *id004
+    - description: 'The ID of the role definition.
+
+        '
+      id: role_definition_id
+      type: *id005
+    - description: 'The values for the role definition.
+
+        '
+      id: role_definition
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.authorization.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Deletes a role definition.
+
+    '
+  syntax:
+    content: delete(scope, role_definition_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The scope of the role definition.
+
+        '
+      id: scope
+      type: *id012
+    - description: 'The ID of the role definition to delete.
+
+        '
+      id: role_definition_id
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id016
+  type: method
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  exceptions: *id018
+  fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.authorization.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 99
+  summary: 'Get role definition by name (GUID).
+
+    '
+  syntax:
+    content: get(scope, role_definition_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The scope of the role definition.
+
+        '
+      id: scope
+      type: *id019
+    - description: 'The ID of the role definition.
+
+        '
+      id: role_definition_id
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+- *id024
+- &id030
+  class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  exceptions: *id025
+  fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+  langs:
+  - python
+  module: azure.mgmt.authorization.operations
+  name: get_by_id
+  source:
+    id: get_by_id
+    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 228
+  summary: 'Gets a role definition by ID.
+
+    '
+  syntax:
+    content: get_by_id(role_definition_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The fully qualified role definition ID to
+
+        get.
+
+        '
+      id: role_definition_id
+      type: *id026
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id027
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id028
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id029
+  type: method
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+- *id030
+- &id037
+  class: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  exceptions: *id031
+  fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.authorization.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-authorization\azure\mgmt\authorization\operations\role_definitions_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 287
+  summary: 'Get all role definitions that are applicable at scope and above.
+
+    '
+  syntax:
+    content: list(scope, filter=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The scope of the role definition.
+
+        '
+      id: scope
+      type: *id032
+    - defaultValue: None
+      description: 'The filter to apply on the operation. Use
+
+        atScopeAndBelow filter to search below the given scope as well.
+
+        '
+      id: filter
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+- *id037
 references:
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+  isExternal: false
+  name: get_by_id
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.delete
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+  isExternal: false
+  name: get_by_id
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.get_by_id
+- fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.authorization.operations.RoleDefinitionsOperations
+  uid: azure.mgmt.authorization.operations.RoleDefinitionsOperations.list
 - fullName: azure.mgmt.authorization.operations.RoleDefinitionsOperations.create_or_update
   isExternal: false
   name: create_or_update

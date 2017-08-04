@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.MaxSizeUnits
-- fullName: azure.mgmt.sql.models.MaxSizeUnits.gigabytes
+- children:
+  - azure.mgmt.sql.models.MaxSizeUnits.gigabytes
+  - azure.mgmt.sql.models.MaxSizeUnits.megabytes
+  - azure.mgmt.sql.models.MaxSizeUnits.petabytes
+  - azure.mgmt.sql.models.MaxSizeUnits.terabytes
+  class: azure.mgmt.sql.models.MaxSizeUnits
+  fullName: azure.mgmt.sql.models.MaxSizeUnits
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: MaxSizeUnits
+  source:
+    id: MaxSizeUnits
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 29
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.MaxSizeUnits
+- &id001
+  fullName: azure.mgmt.sql.models.MaxSizeUnits.gigabytes
   id: gigabytes
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.sql.models.MaxSizeUnits
   type: attribute
   uid: azure.mgmt.sql.models.MaxSizeUnits.gigabytes
-- fullName: azure.mgmt.sql.models.MaxSizeUnits.megabytes
+- &id002
+  fullName: azure.mgmt.sql.models.MaxSizeUnits.megabytes
   id: megabytes
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.sql.models.MaxSizeUnits
   type: attribute
   uid: azure.mgmt.sql.models.MaxSizeUnits.megabytes
-- fullName: azure.mgmt.sql.models.MaxSizeUnits.petabytes
+- &id003
+  fullName: azure.mgmt.sql.models.MaxSizeUnits.petabytes
   id: petabytes
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.sql.models.MaxSizeUnits
   type: attribute
   uid: azure.mgmt.sql.models.MaxSizeUnits.petabytes
-- fullName: azure.mgmt.sql.models.MaxSizeUnits.terabytes
+- &id004
+  fullName: azure.mgmt.sql.models.MaxSizeUnits.terabytes
   id: terabytes
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.sql.models.MaxSizeUnits
   type: attribute
   uid: azure.mgmt.sql.models.MaxSizeUnits.terabytes
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: CertificateBundle(cer=None, content_type=None, attributes=None, tags=None)
-    parameters:
+    parameters: &id001
     - description: 'CER contents of x509 certificate.
 
         '
@@ -55,7 +55,7 @@ items:
       id: tags
       type:
       - dict
-    variables:
+    variables: &id002
     - description: 'The certificate id.
 
         '
@@ -88,6 +88,39 @@ items:
       - '@azure.keyvault.models.CertificatePolicy
 
         '
+  type: class
+  uid: azure.keyvault.models.CertificateBundle
+- children: []
+  class: azure.keyvault.models.CertificateBundle
+  fullName: azure.keyvault.models.CertificateBundle
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.models
+  name: CertificateBundle
+  source:
+    id: CertificateBundle
+    path: azure-keyvault\azure\keyvault\models\certificate_bundle.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\certificate_bundle.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A certificate bundle consists of a certificate (X509) plus its attributes.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: CertificateBundle(cer=None, content_type=None, attributes=None, tags=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.keyvault.models.CertificateBundle
 references: []

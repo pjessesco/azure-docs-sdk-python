@@ -12,6 +12,16 @@ items:
   - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
   - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
   - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
   class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
   inheritance:
@@ -43,7 +53,7 @@ items:
     '
   syntax:
     content: NetworkInterfacesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -60,7 +70,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-09-01".
 
         '
@@ -68,7 +78,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
   langs:
@@ -94,13 +104,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the network interface.
 
         '
       id: network_interface_name
-      type:
+      type: &id005
       - str
     - description: 'Parameters supplied to the create or update network
 
@@ -108,14 +118,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.network.v2016_09_01.models.NetworkInterface
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -124,20 +134,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.NetworkInterface'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
   langs:
@@ -163,20 +173,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the network interface.
 
         '
       id: network_interface_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -185,20 +195,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
   langs:
@@ -224,27 +234,27 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the network interface.
 
         '
       id: network_interface_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'Expands referenced resources.
 
         '
       id: expand
-      type:
+      type: &id021
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id022
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -253,7 +263,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id023
       - bool
     - description: '*Operation configuration
 
@@ -261,16 +271,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id024
       type:
       - azure.mgmt.network.v2016_09_01.models.NetworkInterface
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id026
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
   langs:
@@ -296,20 +306,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id027
       - str
     - description: 'The name of the network interface.
 
         '
       id: network_interface_name
-      type:
+      type: &id028
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id029
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -318,20 +328,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id030
       - bool
-    return:
+    return: &id031
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.EffectiveRouteListResult'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id033
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
   langs:
@@ -358,7 +368,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id034
       - str
     - description: 'The name of the virtual machine
 
@@ -366,33 +376,33 @@ items:
 
         '
       id: virtual_machine_scale_set_name
-      type:
+      type: &id035
       - str
     - description: 'The virtual machine index.
 
         '
       id: virtualmachine_index
-      type:
+      type: &id036
       - str
     - description: 'The name of the network interface.
 
         '
       id: network_interface_name
-      type:
+      type: &id037
       - str
     - defaultValue: None
       description: 'Expands referenced resources.
 
         '
       id: expand
-      type:
+      type: &id038
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id039
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -401,7 +411,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id040
       - bool
     - description: '*Operation configuration
 
@@ -409,16 +419,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id041
       type:
       - azure.mgmt.network.v2016_09_01.models.NetworkInterface
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id043
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
   langs:
@@ -443,14 +453,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id044
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id045
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -459,7 +469,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id046
       - bool
     - description: '*Operation configuration
 
@@ -467,13 +477,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id047
       type:
       - azure.mgmt.network.v2016_09_01.models.NetworkInterfacePaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id049
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
   langs:
@@ -499,7 +509,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id050
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -508,7 +518,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id051
       - bool
     - description: '*Operation configuration
 
@@ -516,13 +526,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id052
       type:
       - azure.mgmt.network.v2016_09_01.models.NetworkInterfacePaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id054
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
   langs:
@@ -548,20 +558,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id055
       - str
     - description: 'The name of the network interface.
 
         '
       id: network_interface_name
-      type:
+      type: &id056
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id057
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -570,20 +580,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id058
       - bool
-    return:
+    return: &id059
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.network.v2016_09_01.models.EffectiveNetworkSecurityGroupListResult'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id061
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
   langs:
@@ -609,7 +619,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id062
       - str
     - description: 'The name of the virtual machine
 
@@ -617,14 +627,14 @@ items:
 
         '
       id: virtual_machine_scale_set_name
-      type:
+      type: &id063
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id064
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -633,7 +643,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id065
       - bool
     - description: '*Operation configuration
 
@@ -641,13 +651,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id066
       type:
       - azure.mgmt.network.v2016_09_01.models.NetworkInterfacePaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
 - class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
-  exceptions:
+  exceptions: &id068
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
   langs:
@@ -677,7 +687,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id069
       - str
     - description: 'The name of the virtual machine
 
@@ -685,20 +695,20 @@ items:
 
         '
       id: virtual_machine_scale_set_name
-      type:
+      type: &id070
       - str
     - description: 'The virtual machine index.
 
         '
       id: virtualmachine_index
-      type:
+      type: &id071
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id072
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -707,7 +717,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id073
       - bool
     - description: '*Operation configuration
 
@@ -715,12 +725,732 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id074
       type:
       - azure.mgmt.network.v2016_09_01.models.NetworkInterfacePaged
   type: method
   uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+- children:
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+  - azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: NetworkInterfacesOperations
+  source:
+    id: NetworkInterfacesOperations
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'NetworkInterfacesOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: NetworkInterfacesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+- &id010
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 182
+  summary: 'Creates or updates a network interface.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, network_interface_name, parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the network interface.
+
+        '
+      id: network_interface_name
+      type: *id005
+    - description: 'Parameters supplied to the create or update network
+
+        interface operation.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id011
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Deletes the specified network interface.
+
+    '
+  syntax:
+    content: delete(resource_group_name, network_interface_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the network interface.
+
+        '
+      id: network_interface_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+- *id017
+- &id025
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id018
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 116
+  summary: 'Gets information about the specified network interface.
+
+    '
+  syntax:
+    content: get(resource_group_name, network_interface_name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the network interface.
+
+        '
+      id: network_interface_name
+      type: *id020
+    - defaultValue: None
+      description: 'Expands referenced resources.
+
+        '
+      id: expand
+      type: *id021
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id022
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id023
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id024
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+- *id025
+- &id032
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id026
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: get_effective_route_table
+  source:
+    id: get_effective_route_table
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 406
+  summary: 'Gets all route tables applied to a network interface.
+
+    '
+  syntax:
+    content: get_effective_route_table(resource_group_name, network_interface_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id027
+    - description: 'The name of the network interface.
+
+        '
+      id: network_interface_name
+      type: *id028
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id029
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id030
+    return: *id031
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+- *id032
+- &id042
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id033
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: get_virtual_machine_scale_set_network_interface
+  source:
+    id: get_virtual_machine_scale_set_network_interface
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 720
+  summary: 'Get the specified network interface in a virtual machine scale set.
+
+    '
+  syntax:
+    content: get_virtual_machine_scale_set_network_interface(resource_group_name,
+      virtual_machine_scale_set_name, virtualmachine_index, network_interface_name,
+      expand=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id034
+    - description: 'The name of the virtual machine
+
+        scale set.
+
+        '
+      id: virtual_machine_scale_set_name
+      type: *id035
+    - description: 'The virtual machine index.
+
+        '
+      id: virtualmachine_index
+      type: *id036
+    - description: 'The name of the network interface.
+
+        '
+      id: network_interface_name
+      type: *id037
+    - defaultValue: None
+      description: 'Expands referenced resources.
+
+        '
+      id: expand
+      type: *id038
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id039
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id040
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id041
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+- *id042
+- &id048
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id043
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 340
+  summary: 'Gets all network interfaces in a resource group.
+
+    '
+  syntax:
+    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id044
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id045
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id046
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id047
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+- *id048
+- &id053
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id049
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list_all
+  source:
+    id: list_all
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 277
+  summary: 'Gets all network interfaces in a subscription.
+
+    '
+  syntax:
+    content: list_all(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id050
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id051
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id052
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+- *id053
+- &id060
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id054
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list_effective_network_security_groups
+  source:
+    id: list_effective_network_security_groups
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 491
+  summary: 'Gets all network security groups applied to a network interface.
+
+    '
+  syntax:
+    content: list_effective_network_security_groups(resource_group_name, network_interface_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id055
+    - description: 'The name of the network interface.
+
+        '
+      id: network_interface_name
+      type: *id056
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id057
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id058
+    return: *id059
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+- *id060
+- &id067
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id061
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list_virtual_machine_scale_set_network_interfaces
+  source:
+    id: list_virtual_machine_scale_set_network_interfaces
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 650
+  summary: 'Gets all network interfaces in a virtual machine scale set.
+
+    '
+  syntax:
+    content: list_virtual_machine_scale_set_network_interfaces(resource_group_name,
+      virtual_machine_scale_set_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id062
+    - description: 'The name of the virtual machine
+
+        scale set.
+
+        '
+      id: virtual_machine_scale_set_name
+      type: *id063
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id064
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id065
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id066
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+- *id067
+- &id075
+  class: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  exceptions: *id068
+  fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.operations
+  name: list_virtual_machine_scale_set_vm_network_interfaces
+  source:
+    id: list_virtual_machine_scale_set_vm_network_interfaces
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\operations\network_interfaces_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 576
+  summary: 'Gets information about all network interfaces in a virtual machine in
+    a
+
+    virtual machine scale set.
+
+    '
+  syntax:
+    content: list_virtual_machine_scale_set_vm_network_interfaces(resource_group_name,
+      virtual_machine_scale_set_name, virtualmachine_index, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id069
+    - description: 'The name of the virtual machine
+
+        scale set.
+
+        '
+      id: virtual_machine_scale_set_name
+      type: *id070
+    - description: 'The virtual machine index.
+
+        '
+      id: virtualmachine_index
+      type: *id071
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id072
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id073
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id074
+  type: method
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+- *id075
 references:
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+  isExternal: false
+  name: get_effective_route_table
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+  isExternal: false
+  name: get_virtual_machine_scale_set_network_interface
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+  isExternal: false
+  name: list_effective_network_security_groups
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+  isExternal: false
+  name: list_virtual_machine_scale_set_network_interfaces
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+  isExternal: false
+  name: list_virtual_machine_scale_set_vm_network_interfaces
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.delete
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+  isExternal: false
+  name: get_effective_route_table
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_effective_route_table
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+  isExternal: false
+  name: get_virtual_machine_scale_set_network_interface
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.get_virtual_machine_scale_set_network_interface
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_all
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+  isExternal: false
+  name: list_effective_network_security_groups
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_effective_network_security_groups
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+  isExternal: false
+  name: list_virtual_machine_scale_set_network_interfaces
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_network_interfaces
+- fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
+  isExternal: false
+  name: list_virtual_machine_scale_set_vm_network_interfaces
+  parent: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations
+  uid: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.list_virtual_machine_scale_set_vm_network_interfaces
 - fullName: azure.mgmt.network.v2016_09_01.operations.NetworkInterfacesOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.iothub.models.Capabilities
-- fullName: azure.mgmt.iothub.models.Capabilities.device_management
+- children:
+  - azure.mgmt.iothub.models.Capabilities.device_management
+  - azure.mgmt.iothub.models.Capabilities.none
+  class: azure.mgmt.iothub.models.Capabilities
+  fullName: azure.mgmt.iothub.models.Capabilities
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.iothub.models
+  name: Capabilities
+  source:
+    id: Capabilities
+    path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 56
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.iothub.models.Capabilities
+- &id001
+  fullName: azure.mgmt.iothub.models.Capabilities.device_management
   id: device_management
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.iothub.models.Capabilities
   type: attribute
   uid: azure.mgmt.iothub.models.Capabilities.device_management
-- fullName: azure.mgmt.iothub.models.Capabilities.none
+- &id002
+  fullName: azure.mgmt.iothub.models.Capabilities.none
   id: none
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.iothub.models.Capabilities
   type: attribute
   uid: azure.mgmt.iothub.models.Capabilities.none
+- *id001
+- *id002
 references: []

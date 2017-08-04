@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.iothub.models.RoutingSource
-- fullName: azure.mgmt.iothub.models.RoutingSource.device_job_lifecycle_events
+- children:
+  - azure.mgmt.iothub.models.RoutingSource.device_job_lifecycle_events
+  - azure.mgmt.iothub.models.RoutingSource.device_lifecycle_events
+  - azure.mgmt.iothub.models.RoutingSource.device_messages
+  - azure.mgmt.iothub.models.RoutingSource.twin_change_events
+  class: azure.mgmt.iothub.models.RoutingSource
+  fullName: azure.mgmt.iothub.models.RoutingSource
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.iothub.models
+  name: RoutingSource
+  source:
+    id: RoutingSource
+    path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 40
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.iothub.models.RoutingSource
+- &id001
+  fullName: azure.mgmt.iothub.models.RoutingSource.device_job_lifecycle_events
   id: device_job_lifecycle_events
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.iothub.models.RoutingSource
   type: attribute
   uid: azure.mgmt.iothub.models.RoutingSource.device_job_lifecycle_events
-- fullName: azure.mgmt.iothub.models.RoutingSource.device_lifecycle_events
+- &id002
+  fullName: azure.mgmt.iothub.models.RoutingSource.device_lifecycle_events
   id: device_lifecycle_events
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.iothub.models.RoutingSource
   type: attribute
   uid: azure.mgmt.iothub.models.RoutingSource.device_lifecycle_events
-- fullName: azure.mgmt.iothub.models.RoutingSource.device_messages
+- &id003
+  fullName: azure.mgmt.iothub.models.RoutingSource.device_messages
   id: device_messages
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.iothub.models.RoutingSource
   type: attribute
   uid: azure.mgmt.iothub.models.RoutingSource.device_messages
-- fullName: azure.mgmt.iothub.models.RoutingSource.twin_change_events
+- &id004
+  fullName: azure.mgmt.iothub.models.RoutingSource.twin_change_events
   id: twin_change_events
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.iothub.models.RoutingSource
   type: attribute
   uid: azure.mgmt.iothub.models.RoutingSource.twin_change_events
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

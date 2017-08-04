@@ -16,6 +16,20 @@ items:
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
   - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
   class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
   inheritance:
@@ -51,7 +65,7 @@ items:
     '
   syntax:
     content: VirtualMachinesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -68,7 +82,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-04-30-preview".
 
         '
@@ -76,7 +90,7 @@ items:
   type: class
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
   langs:
@@ -104,13 +118,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id005
       - str
     - description: 'Parameters supplied to the Capture Virtual Machine
 
@@ -118,14 +132,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineCaptureParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -134,26 +148,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id009
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineCaptureResult
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
   langs:
@@ -183,20 +197,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -205,26 +219,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id016
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
   langs:
@@ -250,13 +264,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id020
       - str
     - description: 'Parameters supplied to the Create Virtual Machine
 
@@ -264,14 +278,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id021
       - azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id022
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -280,26 +294,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id023
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id024
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id026
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
   langs:
@@ -329,20 +343,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id027
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id028
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id029
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -351,26 +365,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id030
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id031
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id033
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
   langs:
@@ -396,20 +410,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id034
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id035
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id036
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -418,26 +432,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id037
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id038
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id040
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
   langs:
@@ -463,20 +477,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id041
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id042
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id043
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -485,7 +499,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id044
       - bool
     - description: '*Operation configuration
 
@@ -493,10 +507,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id045
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -504,11 +518,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id047
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
   langs:
@@ -536,13 +550,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id048
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id049
       - str
     - defaultValue: None
       description: 'The expand expression to apply on the operation.
@@ -551,7 +565,7 @@ items:
 
         '
       id: expand
-      type:
+      type: &id050
       - 'str or @azure.mgmt.compute.compute.v2016_04_30_preview.models.InstanceViewTypes
 
         '
@@ -560,7 +574,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -569,7 +583,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
     - description: '*Operation configuration
 
@@ -577,10 +591,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id053
       description: '@azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -588,11 +602,11 @@ items:
       type:
       - 'azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id055
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
   langs:
@@ -621,14 +635,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id056
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id057
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -637,7 +651,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id058
       - bool
     - description: '*Operation configuration
 
@@ -645,7 +659,7 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id059
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine
 
         '
@@ -654,7 +668,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id061
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
   langs:
@@ -684,7 +698,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id062
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -693,7 +707,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id063
       - bool
     - description: '*Operation configuration
 
@@ -701,7 +715,7 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id064
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachine
 
         '
@@ -710,7 +724,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id066
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
   langs:
@@ -738,20 +752,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id067
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id068
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id069
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -760,7 +774,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id070
       - bool
     - description: '*Operation configuration
 
@@ -768,7 +782,7 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id071
       description: 'An iterator like instance of @azure.mgmt.compute.compute.v2016_04_30_preview.models.VirtualMachineSize
 
         '
@@ -777,7 +791,7 @@ items:
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id073
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
   langs:
@@ -807,20 +821,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id074
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id075
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id076
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -829,26 +843,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id077
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id078
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id080
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
   langs:
@@ -874,20 +888,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id081
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id082
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id083
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -896,26 +910,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id084
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id085
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id087
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
   langs:
@@ -941,20 +955,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id088
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id089
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id090
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -963,26 +977,26 @@ items:
 
         '
       id: raw
-      type:
+      type: &id091
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id092
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
 - class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
-  exceptions:
+  exceptions: &id094
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
   langs:
@@ -1007,20 +1021,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id095
       - str
     - description: 'The name of the virtual machine.
 
         '
       id: vm_name
-      type:
+      type: &id096
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id097
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1029,25 +1043,993 @@ items:
 
         '
       id: raw
-      type:
+      type: &id098
       - bool
-    return:
-      description: '@msrestazure.azure_operation.AzureOperationPoller
+    return: &id099
+      description: '@../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.compute.compute.v2016_04_30_preview.models.OperationStatusResponse
 
-        or @msrest.pipeline.ClientRawResponse if
+        or @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
-        or @msrest.pipeline.ClientRawResponse'
+        or @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+- children:
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+  - azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: VirtualMachinesOperations
+  source:
+    id: VirtualMachinesOperations
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'VirtualMachinesOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: VirtualMachinesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+- &id010
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: capture
+  source:
+    id: capture
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Captures the VM by copying virtual hard disks of the VM and outputs a
+
+    template that can be used to create similar VMs.
+
+    '
+  syntax:
+    content: capture(resource_group_name, vm_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id005
+    - description: 'Parameters supplied to the Capture Virtual Machine
+
+        operation.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+- *id010
+- &id017
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id011
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: convert_to_managed_disks
+  source:
+    id: convert_to_managed_disks
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 394
+  summary: 'Converts virtual machine disks from blob-based to managed disks.
+
+    Virtual machine must be stop-deallocated before invoking this
+
+    operation.
+
+    '
+  syntax:
+    content: convert_to_managed_disks(resource_group_name, vm_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+- *id017
+- &id025
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id018
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 136
+  summary: 'The operation to create or update a virtual machine.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, vm_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id020
+    - description: 'Parameters supplied to the Create Virtual Machine
+
+        operation.
+
+        '
+      id: parameters
+      type: *id021
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id022
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id023
+    return: *id024
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+- *id025
+- &id032
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id026
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: deallocate
+  source:
+    id: deallocate
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 484
+  summary: 'Shuts down the virtual machine and releases the compute resources. You
+
+    are not billed for the compute resources that this virtual machine
+
+    uses.
+
+    '
+  syntax:
+    content: deallocate(resource_group_name, vm_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id027
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id028
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id029
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id030
+    return: *id031
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+- *id032
+- &id039
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id033
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 234
+  summary: 'The operation to delete a virtual machine.
+
+    '
+  syntax:
+    content: delete(resource_group_name, vm_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id034
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id035
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id036
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id037
+    return: *id038
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+- *id039
+- &id046
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id040
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: generalize
+  source:
+    id: generalize
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 574
+  summary: 'Sets the state of the virtual machine to generalized.
+
+    '
+  syntax:
+    content: generalize(resource_group_name, vm_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id041
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id042
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id043
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id044
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id045
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+- *id046
+- &id054
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id047
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 322
+  summary: 'Retrieves information about the model view or the instance view of a
+
+    virtual machine.
+
+    '
+  syntax:
+    content: get(resource_group_name, vm_name, expand=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id048
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id049
+    - defaultValue: None
+      description: 'The expand expression to apply on the operation.
+
+        Possible values include: ''instanceView''
+
+        '
+      id: expand
+      type: *id050
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id053
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+- *id054
+- &id060
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id055
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 639
+  summary: 'Lists all of the virtual machines in the specified resource group. Use
+
+    the nextLink property in the response to get the next page of virtual
+
+    machines.
+
+    '
+  syntax:
+    content: list(resource_group_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id056
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id057
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id058
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id059
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+- *id060
+- &id065
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id061
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: list_all
+  source:
+    id: list_all
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 709
+  summary: 'Lists all of the virtual machines in the specified subscription. Use
+
+    the nextLink property in the response to get the next page of virtual
+
+    machines.
+
+    '
+  syntax:
+    content: list_all(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id062
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id063
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id064
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+- *id065
+- &id072
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id066
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: list_available_sizes
+  source:
+    id: list_available_sizes
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 776
+  summary: 'Lists all available virtual machine sizes to which the specified
+
+    virtual machine can be resized.
+
+    '
+  syntax:
+    content: list_available_sizes(resource_group_name, vm_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id067
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id068
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id069
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id070
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id071
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+- *id072
+- &id079
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id073
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: power_off
+  source:
+    id: power_off
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 848
+  summary: 'The operation to power off (stop) a virtual machine. The virtual
+
+    machine can be restarted with the same provisioned resources. You are
+
+    still charged for this virtual machine.
+
+    '
+  syntax:
+    content: power_off(resource_group_name, vm_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id074
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id075
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id076
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id077
+    return: *id078
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+- *id079
+- &id086
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id080
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: redeploy
+  source:
+    id: redeploy
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1114
+  summary: 'The operation to redeploy a virtual machine.
+
+    '
+  syntax:
+    content: redeploy(resource_group_name, vm_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id081
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id082
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id083
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id084
+    return: *id085
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+- *id086
+- &id093
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id087
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: restart
+  source:
+    id: restart
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 938
+  summary: 'The operation to restart a virtual machine.
+
+    '
+  syntax:
+    content: restart(resource_group_name, vm_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id088
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id089
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id090
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id091
+    return: *id092
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+- *id093
+- &id100
+  class: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  exceptions: *id094
+  fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+  langs:
+  - python
+  module: azure.mgmt.compute.compute.v2016_04_30_preview.operations
+  name: start
+  source:
+    id: start
+    path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\compute\v2016_04_30_preview\operations\virtual_machines_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1026
+  summary: 'The operation to start a virtual machine.
+
+    '
+  syntax:
+    content: start(resource_group_name, vm_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id095
+    - description: 'The name of the virtual machine.
+
+        '
+      id: vm_name
+      type: *id096
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id097
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id098
+    return: *id099
+  type: method
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+- *id100
 references:
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+  isExternal: false
+  name: capture
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+  isExternal: false
+  name: convert_to_managed_disks
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+  isExternal: false
+  name: deallocate
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+  isExternal: false
+  name: generalize
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+  isExternal: false
+  name: list_available_sizes
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+  isExternal: false
+  name: power_off
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+  isExternal: false
+  name: redeploy
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+  isExternal: false
+  name: restart
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+  isExternal: false
+  name: start
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+  isExternal: false
+  name: capture
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+  isExternal: false
+  name: convert_to_managed_disks
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.convert_to_managed_disks
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.create_or_update
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+  isExternal: false
+  name: deallocate
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.deallocate
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.delete
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+  isExternal: false
+  name: generalize
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.generalize
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.get
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+  isExternal: false
+  name: list_all
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_all
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+  isExternal: false
+  name: list_available_sizes
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.list_available_sizes
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+  isExternal: false
+  name: power_off
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.power_off
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+  isExternal: false
+  name: redeploy
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.redeploy
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+  isExternal: false
+  name: restart
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.restart
+- fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
+  isExternal: false
+  name: start
+  parent: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations
+  uid: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.start
 - fullName: azure.mgmt.compute.compute.v2016_04_30_preview.operations.VirtualMachinesOperations.capture
   isExternal: false
   name: capture

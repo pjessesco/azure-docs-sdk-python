@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: X12AgreementContent(receive_agreement, send_agreement)
-    parameters:
+    parameters: &id001
     - description: 'The X12 one-way receive agreement.
 
         '
@@ -38,6 +38,33 @@ items:
       id: send_agreement
       type:
       - azure.mgmt.logic.models.X12OneWayAgreement
+  type: class
+  uid: azure.mgmt.logic.models.X12AgreementContent
+- children: []
+  class: azure.mgmt.logic.models.X12AgreementContent
+  fullName: azure.mgmt.logic.models.X12AgreementContent
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: X12AgreementContent
+  source:
+    id: X12AgreementContent
+    path: azure-mgmt-logic\azure\mgmt\logic\models\x12_agreement_content.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\x12_agreement_content.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The X12 agreement content.
+
+    '
+  syntax:
+    content: X12AgreementContent(receive_agreement, send_agreement)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.X12AgreementContent
 references: []

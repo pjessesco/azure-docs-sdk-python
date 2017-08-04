@@ -56,7 +56,63 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.iothub.models.AccessRights
-- fullName: azure.mgmt.iothub.models.AccessRights.device_connect
+- children:
+  - azure.mgmt.iothub.models.AccessRights.device_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_read
+  - azure.mgmt.iothub.models.AccessRights.registry_read_device_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_read_registry_write
+  - azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_device_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect_device_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_read_service_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_read_service_connect_device_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_write
+  - azure.mgmt.iothub.models.AccessRights.registry_write_device_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_write_service_connect
+  - azure.mgmt.iothub.models.AccessRights.registry_write_service_connect_device_connect
+  - azure.mgmt.iothub.models.AccessRights.service_connect
+  - azure.mgmt.iothub.models.AccessRights.service_connect_device_connect
+  class: azure.mgmt.iothub.models.AccessRights
+  fullName: azure.mgmt.iothub.models.AccessRights
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.iothub.models
+  name: AccessRights
+  source:
+    id: AccessRights
+    path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-iothub\azure\mgmt\iothub\models\iot_hub_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.iothub.models.AccessRights
+- &id001
+  fullName: azure.mgmt.iothub.models.AccessRights.device_connect
   id: device_connect
   langs:
   - python
@@ -70,7 +126,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.device_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read
+- &id002
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read
   id: registry_read
   langs:
   - python
@@ -84,7 +141,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read_device_connect
+- &id003
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read_device_connect
   id: registry_read_device_connect
   langs:
   - python
@@ -98,7 +156,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read_device_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write
+- &id004
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write
   id: registry_read_registry_write
   langs:
   - python
@@ -112,7 +171,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_device_connect
+- &id005
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_device_connect
   id: registry_read_registry_write_device_connect
   langs:
   - python
@@ -127,7 +187,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_device_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect
+- &id006
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect
   id: registry_read_registry_write_service_connect
   langs:
   - python
@@ -142,7 +203,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect_device_connect
+- &id007
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect_device_connect
   id: registry_read_registry_write_service_connect_device_connect
   langs:
   - python
@@ -157,7 +219,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read_registry_write_service_connect_device_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read_service_connect
+- &id008
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read_service_connect
   id: registry_read_service_connect
   langs:
   - python
@@ -171,7 +234,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read_service_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_read_service_connect_device_connect
+- &id009
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_read_service_connect_device_connect
   id: registry_read_service_connect_device_connect
   langs:
   - python
@@ -186,7 +250,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_read_service_connect_device_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_write
+- &id010
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_write
   id: registry_write
   langs:
   - python
@@ -200,7 +265,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_write
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_write_device_connect
+- &id011
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_write_device_connect
   id: registry_write_device_connect
   langs:
   - python
@@ -214,7 +280,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_write_device_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_write_service_connect
+- &id012
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_write_service_connect
   id: registry_write_service_connect
   langs:
   - python
@@ -228,7 +295,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_write_service_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.registry_write_service_connect_device_connect
+- &id013
+  fullName: azure.mgmt.iothub.models.AccessRights.registry_write_service_connect_device_connect
   id: registry_write_service_connect_device_connect
   langs:
   - python
@@ -243,7 +311,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.registry_write_service_connect_device_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.service_connect
+- &id014
+  fullName: azure.mgmt.iothub.models.AccessRights.service_connect
   id: service_connect
   langs:
   - python
@@ -257,7 +326,8 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.service_connect
-- fullName: azure.mgmt.iothub.models.AccessRights.service_connect_device_connect
+- &id015
+  fullName: azure.mgmt.iothub.models.AccessRights.service_connect_device_connect
   id: service_connect_device_connect
   langs:
   - python
@@ -271,4 +341,19 @@ items:
       - azure.mgmt.iothub.models.AccessRights
   type: attribute
   uid: azure.mgmt.iothub.models.AccessRights.service_connect_device_connect
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
+- *id012
+- *id013
+- *id014
+- *id015
 references: []

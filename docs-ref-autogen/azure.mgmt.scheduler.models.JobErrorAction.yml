@@ -26,7 +26,7 @@ items:
   syntax:
     content: JobErrorAction(type=None, request=None, queue_message=None, service_bus_queue_message=None,
       service_bus_topic_message=None, retry_policy=None)
-    parameters:
+    parameters: &id001
     - description: 'Gets or sets the job error action type. Possible values
 
         include: ''Http'', ''Https'', ''StorageQueue'', ''ServiceBusQueue'',
@@ -73,6 +73,34 @@ items:
       id: retry_policy
       type:
       - azure.mgmt.scheduler.models.RetryPolicy
+  type: class
+  uid: azure.mgmt.scheduler.models.JobErrorAction
+- children: []
+  class: azure.mgmt.scheduler.models.JobErrorAction
+  fullName: azure.mgmt.scheduler.models.JobErrorAction
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.scheduler.models
+  name: JobErrorAction
+  source:
+    id: JobErrorAction
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\job_error_action.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\job_error_action.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'JobErrorAction.
+
+    '
+  syntax:
+    content: JobErrorAction(type=None, request=None, queue_message=None, service_bus_queue_message=None,
+      service_bus_topic_message=None, retry_policy=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.scheduler.models.JobErrorAction
 references: []

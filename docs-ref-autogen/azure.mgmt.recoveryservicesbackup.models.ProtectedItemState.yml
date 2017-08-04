@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.invalid
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.invalid
+  - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.ir_pending
+  - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protected
+  - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_error
+  - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_paused
+  - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_stopped
+  class: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: ProtectedItemState
+  source:
+    id: ProtectedItemState
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 40
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.invalid
   id: invalid
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.ir_pending
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.ir_pending
   id: ir_pending
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.ir_pending
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protected
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protected
   id: protected
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protected
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_error
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_error
   id: protection_error
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_error
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_paused
+- &id005
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_paused
   id: protection_paused
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_paused
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_stopped
+- &id006
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_stopped
   id: protection_stopped
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectedItemState
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectedItemState.protection_stopped
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

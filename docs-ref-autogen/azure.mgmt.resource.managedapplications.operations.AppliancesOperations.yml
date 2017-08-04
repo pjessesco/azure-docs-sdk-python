@@ -12,6 +12,16 @@ items:
   - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
   - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
   - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
   class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
   inheritance:
@@ -43,7 +53,7 @@ items:
     '
   syntax:
     content: AppliancesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -60,7 +70,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for this operation. Constant value: "2016-09-01-preview".
 
         '
@@ -68,7 +78,7 @@ items:
   type: class
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
   langs:
@@ -96,13 +106,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the appliance.
 
         '
       id: appliance_name
-      type:
+      type: &id005
       - str
     - description: 'Parameters supplied to the create or update an
 
@@ -110,14 +120,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.resource.managedapplications.models.Appliance
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,20 +136,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.resource.managedapplications.models.Appliance'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id011
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
   langs:
@@ -171,7 +181,7 @@ items:
 
         '
       id: appliance_id
-      type:
+      type: &id012
       - str
     - description: 'Parameters supplied to the create or update an
 
@@ -179,14 +189,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id013
       - azure.mgmt.resource.managedapplications.models.Appliance
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -195,20 +205,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.resource.managedapplications.models.Appliance'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id018
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
   langs:
@@ -236,20 +246,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the appliance.
 
         '
       id: appliance_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -258,20 +268,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
-    return:
+    return: &id023
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id025
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
   langs:
@@ -302,14 +312,14 @@ items:
 
         '
       id: appliance_id
-      type:
+      type: &id026
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id027
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -318,20 +328,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id028
       - bool
-    return:
+    return: &id029
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id031
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
   langs:
@@ -359,20 +369,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id032
       - str
     - description: 'The name of the appliance.
 
         '
       id: appliance_name
-      type:
+      type: &id033
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id034
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -381,7 +391,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id035
       - bool
     - description: '*Operation configuration
 
@@ -389,16 +399,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id036
       type:
       - azure.mgmt.resource.managedapplications.models.Appliance
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id038
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
   langs:
@@ -429,14 +439,14 @@ items:
 
         '
       id: appliance_id
-      type:
+      type: &id039
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id040
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -445,7 +455,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id041
       - bool
     - description: '*Operation configuration
 
@@ -453,16 +463,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id042
       type:
       - azure.mgmt.resource.managedapplications.models.Appliance
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id044
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
   langs:
@@ -490,14 +500,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id045
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id046
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -506,7 +516,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id047
       - bool
     - description: '*Operation configuration
 
@@ -514,13 +524,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id048
       type:
       - azure.mgmt.resource.managedapplications.models.AppliancePaged
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id050
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
   langs:
@@ -546,7 +556,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id051
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -555,7 +565,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id052
       - bool
     - description: '*Operation configuration
 
@@ -563,13 +573,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id053
       type:
       - azure.mgmt.resource.managedapplications.models.AppliancePaged
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id055
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
   langs:
@@ -599,13 +609,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id056
       - str
     - description: 'The name of the appliance.
 
         '
       id: appliance_name
-      type:
+      type: &id057
       - str
     - defaultValue: None
       description: 'Parameters supplied to update an existing
@@ -614,14 +624,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id058
       - azure.mgmt.resource.managedapplications.models.Appliance
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id059
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -630,7 +640,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id060
       - bool
     - description: '*Operation configuration
 
@@ -638,16 +648,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id061
       type:
       - azure.mgmt.resource.managedapplications.models.Appliance
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
 - class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
-  exceptions:
+  exceptions: &id063
   - type: azure.mgmt.resource.managedapplications.models.ErrorResponseException
   fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
   langs:
@@ -681,7 +691,7 @@ items:
 
         '
       id: appliance_id
-      type:
+      type: &id064
       - str
     - defaultValue: None
       description: 'Parameters supplied to update an existing
@@ -690,14 +700,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id065
       - azure.mgmt.resource.managedapplications.models.Appliance
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id066
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -706,7 +716,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id067
       - bool
     - description: '*Operation configuration
 
@@ -714,15 +724,737 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id068
       type:
       - azure.mgmt.resource.managedapplications.models.Appliance
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+- children:
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+  - azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: AppliancesOperations
+  source:
+    id: AppliancesOperations
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'AppliancesOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: AppliancesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+- &id010
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 177
+  summary: 'Creates a new appliance.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, appliance_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group. The name
+
+        is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the appliance.
+
+        '
+      id: appliance_name
+      type: *id005
+    - description: 'Parameters supplied to the create or update an
+
+        appliance.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id011
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: create_or_update_by_id
+  source:
+    id: create_or_update_by_id
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 611
+  summary: 'Creates a new appliance.
+
+    '
+  syntax:
+    content: create_or_update_by_id(appliance_id, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The fully qualified ID of the appliance,
+
+        including the appliance name and the appliance resource type. Use the
+
+        format,
+
+        /subscriptions/{guid}/resourceGroups/{resource-group-name}/Microsoft.Solutions/appliances/{appliance-name}
+
+        '
+      id: appliance_id
+      type: *id012
+    - description: 'Parameters supplied to the create or update an
+
+        appliance.
+
+        '
+      id: parameters
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+- *id017
+- &id024
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id018
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 100
+  summary: 'Deletes the appliance.
+
+    '
+  syntax:
+    content: delete(resource_group_name, appliance_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group. The name
+
+        is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the appliance.
+
+        '
+      id: appliance_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    return: *id023
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+- *id024
+- &id030
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id025
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: delete_by_id
+  source:
+    id: delete_by_id
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 535
+  summary: 'Deletes the appliance.
+
+    '
+  syntax:
+    content: delete_by_id(appliance_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The fully qualified ID of the appliance,
+
+        including the appliance name and the appliance resource type. Use the
+
+        format,
+
+        /subscriptions/{guid}/resourceGroups/{resource-group-name}/Microsoft.Solutions/appliances/{appliance-name}
+
+        '
+      id: appliance_id
+      type: *id026
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id027
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id028
+    return: *id029
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+- *id030
+- &id037
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id031
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets the appliance.
+
+    '
+  syntax:
+    content: get(resource_group_name, appliance_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group. The name
+
+        is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id032
+    - description: 'The name of the appliance.
+
+        '
+      id: appliance_name
+      type: *id033
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id034
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id035
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id036
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+- *id037
+- &id043
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id038
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: get_by_id
+  source:
+    id: get_by_id
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 474
+  summary: 'Gets the appliance.
+
+    '
+  syntax:
+    content: get_by_id(appliance_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The fully qualified ID of the appliance,
+
+        including the appliance name and the appliance resource type. Use the
+
+        format,
+
+        /subscriptions/{guid}/resourceGroups/{resource-group-name}/Microsoft.Solutions/appliances/{appliance-name}
+
+        '
+      id: appliance_id
+      type: *id039
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id040
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id041
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id042
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+- *id043
+- &id049
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id044
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 346
+  summary: 'Gets all the appliances within a resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group. The name
+
+        is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id045
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id046
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id047
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id048
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+- *id049
+- &id054
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id050
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: list_by_subscription
+  source:
+    id: list_by_subscription
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 412
+  summary: 'Gets all the appliances within a subscription.
+
+    '
+  syntax:
+    content: list_by_subscription(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id051
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id052
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id053
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+- *id054
+- &id062
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id055
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 272
+  summary: 'Updates an existing appliance. The only value that can be updated via
+
+    PATCH currently is the tags.
+
+    '
+  syntax:
+    content: update(resource_group_name, appliance_name, parameters=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group. The name
+
+        is case insensitive.
+
+        '
+      id: resource_group_name
+      type: *id056
+    - description: 'The name of the appliance.
+
+        '
+      id: appliance_name
+      type: *id057
+    - defaultValue: None
+      description: 'Parameters supplied to update an existing
+
+        appliance.
+
+        '
+      id: parameters
+      type: *id058
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id059
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id060
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id061
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+- *id062
+- &id069
+  class: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  exceptions: *id063
+  fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+  langs:
+  - python
+  module: azure.mgmt.resource.managedapplications.operations
+  name: update_by_id
+  source:
+    id: update_by_id
+    path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\managedapplications\operations\appliances_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 705
+  summary: 'Updates an existing appliance. The only value that can be updated via
+
+    PATCH currently is the tags.
+
+    '
+  syntax:
+    content: update_by_id(appliance_id, parameters=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The fully qualified ID of the appliance,
+
+        including the appliance name and the appliance resource type. Use the
+
+        format,
+
+        /subscriptions/{guid}/resourceGroups/{resource-group-name}/Microsoft.Solutions/appliances/{appliance-name}
+
+        '
+      id: appliance_id
+      type: *id064
+    - defaultValue: None
+      description: 'Parameters supplied to update an existing
+
+        appliance.
+
+        '
+      id: parameters
+      type: *id065
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id066
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id067
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id068
+  type: method
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+- *id069
 references:
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+  isExternal: false
+  name: create_or_update_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+  isExternal: false
+  name: delete_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+  isExternal: false
+  name: get_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+  isExternal: false
+  name: list_by_subscription
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+  isExternal: false
+  name: update_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+  isExternal: false
+  name: create_or_update_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update_by_id
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+  isExternal: false
+  name: delete_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.delete_by_id
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+  isExternal: false
+  name: get_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.get_by_id
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_resource_group
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+  isExternal: false
+  name: list_by_subscription
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.list_by_subscription
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update
+- fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
+  isExternal: false
+  name: update_by_id
+  parent: azure.mgmt.resource.managedapplications.operations.AppliancesOperations
+  uid: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.update_by_id
 - fullName: azure.mgmt.resource.managedapplications.operations.AppliancesOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -4,6 +4,8 @@ items:
 - children:
   - azure.mgmt.batch.operations.LocationOperations.check_name_availability
   - azure.mgmt.batch.operations.LocationOperations.get_quotas
+  - azure.mgmt.batch.operations.LocationOperations.check_name_availability
+  - azure.mgmt.batch.operations.LocationOperations.get_quotas
   class: azure.mgmt.batch.operations.LocationOperations
   fullName: azure.mgmt.batch.operations.LocationOperations
   inheritance:
@@ -27,7 +29,7 @@ items:
     '
   syntax:
     content: LocationOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -44,7 +46,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to be used with the HTTP request. Constant value:
         "2017-05-01".
 
@@ -53,7 +55,7 @@ items:
   type: class
   uid: azure.mgmt.batch.operations.LocationOperations
 - class: azure.mgmt.batch.operations.LocationOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.batch.operations.LocationOperations.check_name_availability
   langs:
@@ -81,20 +83,20 @@ items:
 
         '
       id: location_name
-      type:
+      type: &id004
       - str
     - description: 'The name to check for availability
 
         '
       id: name
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -103,7 +105,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -111,10 +113,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       description: '@azure.mgmt.batch.models.CheckNameAvailabilityResult or
 
-        @msrest.pipeline.ClientRawResponse if
+        @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -122,11 +124,11 @@ items:
       type:
       - 'azure.mgmt.batch.models.CheckNameAvailabilityResult or
 
-        @msrest.pipeline.ClientRawResponse'
+        @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.batch.operations.LocationOperations.check_name_availability
 - class: azure.mgmt.batch.operations.LocationOperations
-  exceptions:
+  exceptions: &id010
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.batch.operations.LocationOperations.get_quotas
   langs:
@@ -155,14 +157,14 @@ items:
 
         '
       id: location_name
-      type:
+      type: &id011
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id012
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -171,7 +173,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id013
       - bool
     - description: '*Operation configuration
 
@@ -179,10 +181,10 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id014
       description: '@azure.mgmt.batch.models.BatchLocationQuota or
 
-        @msrest.pipeline.ClientRawResponse if
+        @../msrest.pipeline.ClientRawResponse if
 
         raw=true
 
@@ -190,10 +192,174 @@ items:
       type:
       - 'azure.mgmt.batch.models.BatchLocationQuota or
 
-        @msrest.pipeline.ClientRawResponse'
+        @../msrest.pipeline.ClientRawResponse'
   type: method
   uid: azure.mgmt.batch.operations.LocationOperations.get_quotas
+- children:
+  - azure.mgmt.batch.operations.LocationOperations.check_name_availability
+  - azure.mgmt.batch.operations.LocationOperations.get_quotas
+  class: azure.mgmt.batch.operations.LocationOperations
+  fullName: azure.mgmt.batch.operations.LocationOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.batch.operations
+  name: LocationOperations
+  source:
+    id: LocationOperations
+    path: azure-mgmt-batch\azure\mgmt\batch\operations\location_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-batch\azure\mgmt\batch\operations\location_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'LocationOperations operations.
+
+
+
+    '
+  syntax:
+    content: LocationOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.batch.operations.LocationOperations
+- &id009
+  class: azure.mgmt.batch.operations.LocationOperations
+  exceptions: *id003
+  fullName: azure.mgmt.batch.operations.LocationOperations.check_name_availability
+  langs:
+  - python
+  module: azure.mgmt.batch.operations
+  name: check_name_availability
+  source:
+    id: check_name_availability
+    path: azure-mgmt-batch\azure\mgmt\batch\operations\location_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-batch\azure\mgmt\batch\operations\location_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 102
+  summary: 'Checks whether the Batch account name is available in the specified
+
+    region.
+
+    '
+  syntax:
+    content: check_name_availability(location_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The desired region for the name check.
+
+        '
+      id: location_name
+      type: *id004
+    - description: 'The name to check for availability
+
+        '
+      id: name
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.mgmt.batch.operations.LocationOperations.check_name_availability
+- *id009
+- &id015
+  class: azure.mgmt.batch.operations.LocationOperations
+  exceptions: *id010
+  fullName: azure.mgmt.batch.operations.LocationOperations.get_quotas
+  langs:
+  - python
+  module: azure.mgmt.batch.operations
+  name: get_quotas
+  source:
+    id: get_quotas
+    path: azure-mgmt-batch\azure\mgmt\batch\operations\location_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-batch\azure\mgmt\batch\operations\location_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets the Batch service quotas for the specified subscription at the
+
+    given location.
+
+    '
+  syntax:
+    content: get_quotas(location_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The region for which to retrieve Batch service
+
+        quotas.
+
+        '
+      id: location_name
+      type: *id011
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id012
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id013
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id014
+  type: method
+  uid: azure.mgmt.batch.operations.LocationOperations.get_quotas
+- *id015
 references:
+- fullName: azure.mgmt.batch.operations.LocationOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.batch.operations.LocationOperations
+  uid: azure.mgmt.batch.operations.LocationOperations.check_name_availability
+- fullName: azure.mgmt.batch.operations.LocationOperations.get_quotas
+  isExternal: false
+  name: get_quotas
+  parent: azure.mgmt.batch.operations.LocationOperations
+  uid: azure.mgmt.batch.operations.LocationOperations.get_quotas
+- fullName: azure.mgmt.batch.operations.LocationOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.batch.operations.LocationOperations
+  uid: azure.mgmt.batch.operations.LocationOperations.check_name_availability
+- fullName: azure.mgmt.batch.operations.LocationOperations.get_quotas
+  isExternal: false
+  name: get_quotas
+  parent: azure.mgmt.batch.operations.LocationOperations
+  uid: azure.mgmt.batch.operations.LocationOperations.get_quotas
 - fullName: azure.mgmt.batch.operations.LocationOperations.check_name_availability
   isExternal: false
   name: check_name_availability

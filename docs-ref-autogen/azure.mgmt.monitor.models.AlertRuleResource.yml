@@ -33,7 +33,7 @@ items:
   syntax:
     content: AlertRuleResource(location, alert_rule_resource_name, is_enabled, condition,
       tags=None, description=None, actions=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location
 
         '
@@ -86,7 +86,7 @@ items:
       - 'list of @azure.mgmt.monitor.models.RuleAction
 
         '
-    variables:
+    variables: &id002
     - description: 'Azure resource Id
 
         '
@@ -111,6 +111,42 @@ items:
       id: last_updated_time
       type:
       - datetime
+  type: class
+  uid: azure.mgmt.monitor.models.AlertRuleResource
+- children: []
+  class: azure.mgmt.monitor.models.AlertRuleResource
+  fullName: azure.mgmt.monitor.models.AlertRuleResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.monitor.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: AlertRuleResource
+  source:
+    id: AlertRuleResource
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\alert_rule_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\alert_rule_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The alert rule resource.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: AlertRuleResource(location, alert_rule_resource_name, is_enabled, condition,
+      tags=None, description=None, actions=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.monitor.models.AlertRuleResource
 references: []

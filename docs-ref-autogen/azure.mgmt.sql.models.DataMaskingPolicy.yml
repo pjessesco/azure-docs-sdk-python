@@ -34,7 +34,7 @@ items:
     '
   syntax:
     content: DataMaskingPolicy(data_masking_state, exempt_principals=None)
-    parameters:
+    parameters: &id001
     - description: 'The state of the data masking policy. Possible
 
         values include: ''Disabled'', ''Enabled''
@@ -57,7 +57,7 @@ items:
       id: exempt_principals
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource ID.
 
         '
@@ -106,6 +106,43 @@ items:
       id: kind
       type:
       - str
+  type: class
+  uid: azure.mgmt.sql.models.DataMaskingPolicy
+- children: []
+  class: azure.mgmt.sql.models.DataMaskingPolicy
+  fullName: azure.mgmt.sql.models.DataMaskingPolicy
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: msrest.serialization.Model
+      type: azure.mgmt.sql.models.resource.Resource
+    type: azure.mgmt.sql.models.proxy_resource.ProxyResource
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: DataMaskingPolicy
+  source:
+    id: DataMaskingPolicy
+    path: azure-mgmt-sql\azure\mgmt\sql\models\data_masking_policy.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\data_masking_policy.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Represents a database data masking policy.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: DataMaskingPolicy(data_masking_state, exempt_principals=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.sql.models.DataMaskingPolicy
 references: []

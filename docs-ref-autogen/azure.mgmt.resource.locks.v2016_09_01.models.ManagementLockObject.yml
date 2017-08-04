@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: ManagementLockObject(level, notes=None, owners=None, name=None)
-    parameters:
+    parameters: &id001
     - description: 'The level of the lock. Possible values are: NotSpecified,
 
         CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to
@@ -67,7 +67,7 @@ items:
       id: name
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'The resource ID of the lock.
 
         '
@@ -80,6 +80,39 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.resource.locks.v2016_09_01.models.ManagementLockObject
+- children: []
+  class: azure.mgmt.resource.locks.v2016_09_01.models.ManagementLockObject
+  fullName: azure.mgmt.resource.locks.v2016_09_01.models.ManagementLockObject
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.resource.locks.v2016_09_01.models
+  name: ManagementLockObject
+  source:
+    id: ManagementLockObject
+    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2016_09_01\models\management_lock_object.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2016_09_01\models\management_lock_object.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The lock information.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: ManagementLockObject(level, notes=None, owners=None, name=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.resource.locks.v2016_09_01.models.ManagementLockObject
 references: []

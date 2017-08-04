@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: Sku(name, family, capacity)
-    parameters:
+    parameters: &id001
     - description: 'The type of Redis cache to deploy. Valid values: (Basic,
 
         Standard, Premium). Possible values include: ''Basic'', ''Standard'',
@@ -58,6 +58,33 @@ items:
       id: capacity
       type:
       - int
+  type: class
+  uid: azure.mgmt.redis.models.Sku
+- children: []
+  class: azure.mgmt.redis.models.Sku
+  fullName: azure.mgmt.redis.models.Sku
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.redis.models
+  name: Sku
+  source:
+    id: Sku
+    path: azure-mgmt-redis\azure\mgmt\redis\models\sku.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\models\sku.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'SKU parameters supplied to the create Redis operation.
+
+    '
+  syntax:
+    content: Sku(name, family, capacity)
+    parameters: *id001
   type: class
   uid: azure.mgmt.redis.models.Sku
 references: []

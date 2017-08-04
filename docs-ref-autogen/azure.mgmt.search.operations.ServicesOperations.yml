@@ -7,6 +7,11 @@ items:
   - azure.mgmt.search.operations.ServicesOperations.delete
   - azure.mgmt.search.operations.ServicesOperations.get
   - azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+  - azure.mgmt.search.operations.ServicesOperations.check_name_availability
+  - azure.mgmt.search.operations.ServicesOperations.create_or_update
+  - azure.mgmt.search.operations.ServicesOperations.delete
+  - azure.mgmt.search.operations.ServicesOperations.get
+  - azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
   class: azure.mgmt.search.operations.ServicesOperations
   fullName: azure.mgmt.search.operations.ServicesOperations
   inheritance:
@@ -33,7 +38,7 @@ items:
     '
   syntax:
     content: ServicesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -50,7 +55,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for each request. The current version is
         2015-08-19. Constant value: "2015-08-19".
 
@@ -59,7 +64,7 @@ items:
   type: class
   uid: azure.mgmt.search.operations.ServicesOperations
 - class: azure.mgmt.search.operations.ServicesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.ServicesOperations.check_name_availability
   langs:
@@ -95,7 +100,7 @@ items:
 
         '
       id: name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -104,14 +109,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id005
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -120,7 +125,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -128,16 +133,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - azure.mgmt.search.models.CheckNameAvailabilityOutput
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.search.operations.ServicesOperations.check_name_availability
 - class: azure.mgmt.search.operations.ServicesOperations
-  exceptions:
+  exceptions: &id010
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.ServicesOperations.create_or_update
   langs:
@@ -171,7 +176,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id011
       - str
     - description: 'The name of the Azure Search service to
 
@@ -191,7 +196,7 @@ items:
 
         '
       id: search_service_name
-      type:
+      type: &id012
       - str
     - description: 'The definition of the Search service to create or
 
@@ -199,7 +204,7 @@ items:
 
         '
       id: service
-      type:
+      type: &id013
       - azure.mgmt.search.models.SearchService
     - defaultValue: None
       description: 'Additional parameters for
@@ -208,14 +213,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id014
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id015
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -224,7 +229,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id016
       - bool
     - description: '*Operation configuration
 
@@ -232,16 +237,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id017
       type:
       - azure.mgmt.search.models.SearchService
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.search.operations.ServicesOperations.create_or_update
 - class: azure.mgmt.search.operations.ServicesOperations
-  exceptions:
+  exceptions: &id019
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.ServicesOperations.delete
   langs:
@@ -273,7 +278,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id020
       - str
     - description: 'The name of the Azure Search service
 
@@ -281,7 +286,7 @@ items:
 
         '
       id: search_service_name
-      type:
+      type: &id021
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -290,14 +295,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id022
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id023
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -306,7 +311,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id024
       - bool
     - description: '*Operation configuration
 
@@ -314,16 +319,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id025
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.search.operations.ServicesOperations.delete
 - class: azure.mgmt.search.operations.ServicesOperations
-  exceptions:
+  exceptions: &id027
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.ServicesOperations.get
   langs:
@@ -355,7 +360,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id028
       - str
     - description: 'The name of the Azure Search service
 
@@ -363,7 +368,7 @@ items:
 
         '
       id: search_service_name
-      type:
+      type: &id029
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -372,14 +377,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id030
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -388,7 +393,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -396,16 +401,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - azure.mgmt.search.models.SearchService
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.search.operations.ServicesOperations.get
 - class: azure.mgmt.search.operations.ServicesOperations
-  exceptions:
+  exceptions: &id035
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
   langs:
@@ -435,7 +440,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id036
       - str
     - defaultValue: None
       description: 'Additional parameters for
@@ -444,14 +449,14 @@ items:
 
         '
       id: search_management_request_options
-      type:
+      type: &id037
       - azure.mgmt.search.models.SearchManagementRequestOptions
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id038
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -460,7 +465,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id039
       - bool
     - description: '*Operation configuration
 
@@ -468,12 +473,472 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id040
       type:
       - azure.mgmt.search.models.SearchServicePaged
   type: method
   uid: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+- children:
+  - azure.mgmt.search.operations.ServicesOperations.check_name_availability
+  - azure.mgmt.search.operations.ServicesOperations.create_or_update
+  - azure.mgmt.search.operations.ServicesOperations.delete
+  - azure.mgmt.search.operations.ServicesOperations.get
+  - azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+  class: azure.mgmt.search.operations.ServicesOperations
+  fullName: azure.mgmt.search.operations.ServicesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: ServicesOperations
+  source:
+    id: ServicesOperations
+    path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ServicesOperations operations.
+
+
+
+
+
+
+    '
+  syntax:
+    content: ServicesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.search.operations.ServicesOperations
+- &id009
+  class: azure.mgmt.search.operations.ServicesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.search.operations.ServicesOperations.check_name_availability
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: check_name_availability
+  source:
+    id: check_name_availability
+    path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 357
+  summary: 'Checks whether or not the given Search service name is available for
+
+    use. Search service names must be globally unique since they are part
+
+    of the service URI ([https:/](https:/)/<name>.search.windows.net).
+
+    '
+  syntax:
+    content: check_name_availability(name, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The Search service name to validate. Search service names
+
+        must only contain lowercase letters, digits or dashes, cannot use dash
+
+        as the first two or last one characters, cannot contain consecutive
+
+        dashes, and must be between 2 and 60 characters in length.
+
+        '
+      id: name
+      type: *id004
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.mgmt.search.operations.ServicesOperations.check_name_availability
+- *id009
+- &id018
+  class: azure.mgmt.search.operations.ServicesOperations
+  exceptions: *id010
+  fullName: azure.mgmt.search.operations.ServicesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Creates or updates a Search service in the given resource group. If the
+
+    Search service already exists, all properties will be updated with the
+
+    given values.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, search_service_name, service, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group within the
+
+        current subscription. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id011
+    - description: 'The name of the Azure Search service to
+
+        create or update. Search service names must only contain lowercase
+
+        letters, digits or dashes, cannot use dash as the first two or last
+
+        one characters, cannot contain consecutive dashes, and must be between
+
+        2 and 60 characters in length. Search service names must be globally
+
+        unique since they are part of the service URI
+
+        ([https:/](https:/)/<name>.search.windows.net). You cannot change the service
+
+        name after the service is created.
+
+        '
+      id: search_service_name
+      type: *id012
+    - description: 'The definition of the Search service to create or
+
+        update.
+
+        '
+      id: service
+      type: *id013
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id014
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id015
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id016
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id017
+  type: method
+  uid: azure.mgmt.search.operations.ServicesOperations.create_or_update
+- *id018
+- &id026
+  class: azure.mgmt.search.operations.ServicesOperations
+  exceptions: *id019
+  fullName: azure.mgmt.search.operations.ServicesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 209
+  summary: 'Deletes a Search service in the given resource group, along with its
+
+    associated resources.
+
+    '
+  syntax:
+    content: delete(resource_group_name, search_service_name, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group within the
+
+        current subscription. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id020
+    - description: 'The name of the Azure Search service
+
+        associated with the specified resource group.
+
+        '
+      id: search_service_name
+      type: *id021
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id022
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id023
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id024
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id025
+  type: method
+  uid: azure.mgmt.search.operations.ServicesOperations.delete
+- *id026
+- &id034
+  class: azure.mgmt.search.operations.ServicesOperations
+  exceptions: *id027
+  fullName: azure.mgmt.search.operations.ServicesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 132
+  summary: 'Gets the Search service with the given name in the given resource
+
+    group.
+
+    '
+  syntax:
+    content: get(resource_group_name, search_service_name, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group within the
+
+        current subscription. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id028
+    - description: 'The name of the Azure Search service
+
+        associated with the specified resource group.
+
+        '
+      id: search_service_name
+      type: *id029
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.mgmt.search.operations.ServicesOperations.get
+- *id034
+- &id041
+  class: azure.mgmt.search.operations.ServicesOperations
+  exceptions: *id035
+  fullName: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.search.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-search\azure\mgmt\search\operations\services_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 278
+  summary: 'Gets a list of all Search services in the given resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, search_management_request_options=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group within the
+
+        current subscription. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id036
+    - defaultValue: None
+      description: 'Additional parameters for
+
+        the operation
+
+        '
+      id: search_management_request_options
+      type: *id037
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id038
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id039
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id040
+  type: method
+  uid: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+- *id041
 references:
+- fullName: azure.mgmt.search.operations.ServicesOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.check_name_availability
+- fullName: azure.mgmt.search.operations.ServicesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.create_or_update
+- fullName: azure.mgmt.search.operations.ServicesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.delete
+- fullName: azure.mgmt.search.operations.ServicesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.get
+- fullName: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+- fullName: azure.mgmt.search.operations.ServicesOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.check_name_availability
+- fullName: azure.mgmt.search.operations.ServicesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.create_or_update
+- fullName: azure.mgmt.search.operations.ServicesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.delete
+- fullName: azure.mgmt.search.operations.ServicesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.get
+- fullName: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.search.operations.ServicesOperations
+  uid: azure.mgmt.search.operations.ServicesOperations.list_by_resource_group
 - fullName: azure.mgmt.search.operations.ServicesOperations.check_name_availability
   isExternal: false
   name: check_name_availability

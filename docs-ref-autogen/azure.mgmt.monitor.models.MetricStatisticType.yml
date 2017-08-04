@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.monitor.models.MetricStatisticType
-- fullName: azure.mgmt.monitor.models.MetricStatisticType.average
+- children:
+  - azure.mgmt.monitor.models.MetricStatisticType.average
+  - azure.mgmt.monitor.models.MetricStatisticType.max
+  - azure.mgmt.monitor.models.MetricStatisticType.min
+  - azure.mgmt.monitor.models.MetricStatisticType.sum
+  class: azure.mgmt.monitor.models.MetricStatisticType
+  fullName: azure.mgmt.monitor.models.MetricStatisticType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: MetricStatisticType
+  source:
+    id: MetricStatisticType
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.monitor.models.MetricStatisticType
+- &id001
+  fullName: azure.mgmt.monitor.models.MetricStatisticType.average
   id: average
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.monitor.models.MetricStatisticType
   type: attribute
   uid: azure.mgmt.monitor.models.MetricStatisticType.average
-- fullName: azure.mgmt.monitor.models.MetricStatisticType.max
+- &id002
+  fullName: azure.mgmt.monitor.models.MetricStatisticType.max
   id: max
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.monitor.models.MetricStatisticType
   type: attribute
   uid: azure.mgmt.monitor.models.MetricStatisticType.max
-- fullName: azure.mgmt.monitor.models.MetricStatisticType.min
+- &id003
+  fullName: azure.mgmt.monitor.models.MetricStatisticType.min
   id: min
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.monitor.models.MetricStatisticType
   type: attribute
   uid: azure.mgmt.monitor.models.MetricStatisticType.min
-- fullName: azure.mgmt.monitor.models.MetricStatisticType.sum
+- &id004
+  fullName: azure.mgmt.monitor.models.MetricStatisticType.sum
   id: sum
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.monitor.models.MetricStatisticType
   type: attribute
   uid: azure.mgmt.monitor.models.MetricStatisticType.sum
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

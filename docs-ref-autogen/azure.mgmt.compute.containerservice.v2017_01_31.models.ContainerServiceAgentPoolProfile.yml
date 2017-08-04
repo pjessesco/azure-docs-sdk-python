@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: ContainerServiceAgentPoolProfile(name, vm_size, dns_prefix, count=1)
-    parameters:
+    parameters: &id001
     - description: 'Unique name of the agent pool profile in the context of the
 
         subscription and resource group.
@@ -89,13 +89,46 @@ items:
       id: dns_prefix
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'FDQN for the agent pool.
 
         '
       id: fqdn
       type:
       - str
+  type: class
+  uid: azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerServiceAgentPoolProfile
+- children: []
+  class: azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerServiceAgentPoolProfile
+  fullName: azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerServiceAgentPoolProfile
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.compute.containerservice.v2017_01_31.models
+  name: ContainerServiceAgentPoolProfile
+  source:
+    id: ContainerServiceAgentPoolProfile
+    path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\models\container_service_agent_pool_profile.py
+    remote:
+      branch: master
+      path: azure-mgmt-compute\azure\mgmt\compute\containerservice\v2017_01_31\models\container_service_agent_pool_profile.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Profile for the container service agent pool.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: ContainerServiceAgentPoolProfile(name, vm_size, dns_prefix, count=1)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.compute.containerservice.v2017_01_31.models.ContainerServiceAgentPoolProfile
 references: []

@@ -28,7 +28,7 @@ items:
       meter_id=None, usage_start_time=None, usage_end_time=None, quantity=None, unit=None,
       meter_name=None, meter_category=None, meter_sub_category=None, meter_region=None,
       info_fields=None, instance_data=None)
-    parameters:
+    parameters: &id001
     - description: 'Unique Id for the usage aggregate.
 
         '
@@ -131,6 +131,36 @@ items:
       id: instance_data
       type:
       - str
+  type: class
+  uid: azure.mgmt.commerce.models.UsageAggregation
+- children: []
+  class: azure.mgmt.commerce.models.UsageAggregation
+  fullName: azure.mgmt.commerce.models.UsageAggregation
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.commerce.models
+  name: UsageAggregation
+  source:
+    id: UsageAggregation
+    path: azure-mgmt-commerce\azure\mgmt\commerce\models\usage_aggregation.py
+    remote:
+      branch: master
+      path: azure-mgmt-commerce\azure\mgmt\commerce\models\usage_aggregation.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Describes the usageAggregation.
+
+    '
+  syntax:
+    content: UsageAggregation(id=None, name=None, type=None, subscription_id=None,
+      meter_id=None, usage_start_time=None, usage_end_time=None, quantity=None, unit=None,
+      meter_name=None, meter_category=None, meter_sub_category=None, meter_region=None,
+      info_fields=None, instance_data=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.commerce.models.UsageAggregation
 references: []

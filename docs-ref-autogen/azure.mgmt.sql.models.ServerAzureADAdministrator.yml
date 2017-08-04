@@ -33,7 +33,7 @@ items:
     '
   syntax:
     content: ServerAzureADAdministrator(login, sid, tenant_id)
-    parameters:
+    parameters: &id001
     - description: 'The server administrator login value.
 
         '
@@ -52,7 +52,7 @@ items:
       id: tenant_id
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource name
 
         '
@@ -73,6 +73,42 @@ items:
       id: administrator_type
       type:
       - str
+  type: class
+  uid: azure.mgmt.sql.models.ServerAzureADAdministrator
+- children: []
+  class: azure.mgmt.sql.models.ServerAzureADAdministrator
+  fullName: azure.mgmt.sql.models.ServerAzureADAdministrator
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.sql.models.sql_sub_resource.SqlSubResource
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: ServerAzureADAdministrator
+  source:
+    id: ServerAzureADAdministrator
+    path: azure-mgmt-sql\azure\mgmt\sql\models\server_azure_ad_administrator.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\server_azure_ad_administrator.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An server Active Directory Administrator.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+
+    '
+  syntax:
+    content: ServerAzureADAdministrator(login, sid, tenant_id)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.sql.models.ServerAzureADAdministrator
 references: []

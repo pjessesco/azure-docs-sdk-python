@@ -3,6 +3,7 @@ api_name: []
 items:
 - children:
   - azure.mgmt.consumption.operations.UsageDetailsOperations.list
+  - azure.mgmt.consumption.operations.UsageDetailsOperations.list
   class: azure.mgmt.consumption.operations.UsageDetailsOperations
   fullName: azure.mgmt.consumption.operations.UsageDetailsOperations
   inheritance:
@@ -25,7 +26,7 @@ items:
     '
   syntax:
     content: UsageDetailsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -42,7 +43,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Version of the API to be used with the client request. The current
         version is 2017-02-27-preview. Constant value: "2017-04-24-preview".
 
@@ -51,7 +52,7 @@ items:
   type: class
   uid: azure.mgmt.consumption.operations.UsageDetailsOperations
 - class: azure.mgmt.consumption.operations.UsageDetailsOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.consumption.models.ErrorResponseException
   fullName: azure.mgmt.consumption.operations.UsageDetailsOperations.list
   langs:
@@ -91,7 +92,7 @@ items:
 
         '
       id: scope
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'May be used to expand the additionalProperties or
@@ -102,7 +103,7 @@ items:
 
         '
       id: expand
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'May be used to filter usageDetails by usageEnd (Utc
@@ -114,7 +115,7 @@ items:
 
         '
       id: filter
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'Skiptoken is only used if a previous operation
@@ -127,7 +128,7 @@ items:
 
         '
       id: skiptoken
-      type:
+      type: &id007
       - str
     - defaultValue: None
       description: 'May be used to limit the number of results to the most
@@ -136,14 +137,14 @@ items:
 
         '
       id: top
-      type:
+      type: &id008
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id009
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -152,7 +153,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id010
       - bool
     - description: '*Operation configuration
 
@@ -160,12 +161,157 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id011
       type:
       - azure.mgmt.consumption.models.UsageDetailPaged
   type: method
   uid: azure.mgmt.consumption.operations.UsageDetailsOperations.list
+- children:
+  - azure.mgmt.consumption.operations.UsageDetailsOperations.list
+  class: azure.mgmt.consumption.operations.UsageDetailsOperations
+  fullName: azure.mgmt.consumption.operations.UsageDetailsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.consumption.operations
+  name: UsageDetailsOperations
+  source:
+    id: UsageDetailsOperations
+    path: azure-mgmt-consumption\azure\mgmt\consumption\operations\usage_details_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-consumption\azure\mgmt\consumption\operations\usage_details_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'UsageDetailsOperations operations.
+
+
+    '
+  syntax:
+    content: UsageDetailsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.consumption.operations.UsageDetailsOperations
+- &id012
+  class: azure.mgmt.consumption.operations.UsageDetailsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.consumption.operations.UsageDetailsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.consumption.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-consumption\azure\mgmt\consumption\operations\usage_details_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-consumption\azure\mgmt\consumption\operations\usage_details_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Lists the usage details for a scope in reverse chronological order by
+
+    billing period. Usage details are available via this API only for
+
+    January 1, 2017 or later.
+
+    '
+  syntax:
+    content: list(scope, expand=None, filter=None, skiptoken=None, top=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The scope of the usage details. The scope can be
+
+        ''/subscriptions/{subscriptionId}'' for a subscription, or
+
+        ''/subscriptions/{subscriptionId}/providers/Microsoft.Billing/invoices/{invoiceName}''
+
+        for an invoice or
+
+        ''/subscriptions/{subscriptionId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}''
+
+        for a billing perdiod.
+
+        '
+      id: scope
+      type: *id004
+    - defaultValue: None
+      description: 'May be used to expand the additionalProperties or
+
+        meterDetails property within a list of usage details. By default,
+
+        these fields are not included when listing usage details.
+
+        '
+      id: expand
+      type: *id005
+    - defaultValue: None
+      description: 'May be used to filter usageDetails by usageEnd (Utc
+
+        time). The filter supports ''eq'', ''lt'', ''gt'', ''le'', ''ge'', and ''and''.
+        It
+
+        does not currently support ''ne'', ''or'', or ''not''.
+
+        '
+      id: filter
+      type: *id006
+    - defaultValue: None
+      description: 'Skiptoken is only used if a previous operation
+
+        returned a partial result. If a previous response contains a nextLink
+
+        element, the value of the nextLink element will include a skiptoken
+
+        parameter that specifies a starting point to use for subsequent calls.
+
+        '
+      id: skiptoken
+      type: *id007
+    - defaultValue: None
+      description: 'May be used to limit the number of results to the most
+
+        recent N usageDetails.
+
+        '
+      id: top
+      type: *id008
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id009
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id010
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id011
+  type: method
+  uid: azure.mgmt.consumption.operations.UsageDetailsOperations.list
+- *id012
 references:
+- fullName: azure.mgmt.consumption.operations.UsageDetailsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.consumption.operations.UsageDetailsOperations
+  uid: azure.mgmt.consumption.operations.UsageDetailsOperations.list
+- fullName: azure.mgmt.consumption.operations.UsageDetailsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.consumption.operations.UsageDetailsOperations
+  uid: azure.mgmt.consumption.operations.UsageDetailsOperations.list
 - fullName: azure.mgmt.consumption.operations.UsageDetailsOperations.list
   isExternal: false
   name: list

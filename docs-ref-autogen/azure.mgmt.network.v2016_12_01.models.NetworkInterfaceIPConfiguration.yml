@@ -31,7 +31,7 @@ items:
       private_ip_address=None, private_ip_allocation_method=None, private_ip_address_version=None,
       subnet=None, primary=None, public_ip_address=None, provisioning_state=None,
       name=None, etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource ID.
 
         '
@@ -138,6 +138,39 @@ items:
       id: etag
       type:
       - str
+  type: class
+  uid: azure.mgmt.network.v2016_12_01.models.NetworkInterfaceIPConfiguration
+- children: []
+  class: azure.mgmt.network.v2016_12_01.models.NetworkInterfaceIPConfiguration
+  fullName: azure.mgmt.network.v2016_12_01.models.NetworkInterfaceIPConfiguration
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.network.v2016_12_01.models.sub_resource.SubResource
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.models
+  name: NetworkInterfaceIPConfiguration
+  source:
+    id: NetworkInterfaceIPConfiguration
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\network_interface_ip_configuration.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\network_interface_ip_configuration.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'IPConfiguration in a network interface.
+
+    '
+  syntax:
+    content: NetworkInterfaceIPConfiguration(id=None, application_gateway_backend_address_pools=None,
+      load_balancer_backend_address_pools=None, load_balancer_inbound_nat_rules=None,
+      private_ip_address=None, private_ip_allocation_method=None, private_ip_address_version=None,
+      subnet=None, primary=None, public_ip_address=None, provisioning_state=None,
+      name=None, etag=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.network.v2016_12_01.models.NetworkInterfaceIPConfiguration
 references: []

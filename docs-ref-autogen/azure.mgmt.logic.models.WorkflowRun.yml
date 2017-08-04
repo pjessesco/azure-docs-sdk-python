@@ -32,14 +32,14 @@ items:
     '
   syntax:
     content: WorkflowRun(correlation=None)
-    parameters:
+    parameters: &id001
     - description: 'The run correlation.
 
         '
       id: correlation
       type:
       - azure.mgmt.logic.models.Correlation
-    variables:
+    variables: &id002
     - description: 'The resource id.
 
         '
@@ -130,6 +130,41 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.logic.models.WorkflowRun
+- children: []
+  class: azure.mgmt.logic.models.WorkflowRun
+  fullName: azure.mgmt.logic.models.WorkflowRun
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.logic.models.sub_resource.SubResource
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: WorkflowRun
+  source:
+    id: WorkflowRun
+    path: azure-mgmt-logic\azure\mgmt\logic\models\workflow_run.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\workflow_run.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The workflow run.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: WorkflowRun(correlation=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.logic.models.WorkflowRun
 references: []

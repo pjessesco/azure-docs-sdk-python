@@ -12,6 +12,16 @@ items:
   - azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
   - azure.mgmt.servicebus.operations.QueuesOperations.list_keys
   - azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+  - azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+  - azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+  - azure.mgmt.servicebus.operations.QueuesOperations.delete
+  - azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+  - azure.mgmt.servicebus.operations.QueuesOperations.get
+  - azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+  - azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+  - azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+  - azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+  - azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
   class: azure.mgmt.servicebus.operations.QueuesOperations
   fullName: azure.mgmt.servicebus.operations.QueuesOperations
   inheritance:
@@ -43,7 +53,7 @@ items:
     '
   syntax:
     content: QueuesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -60,7 +70,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2017-04-01".
 
         '
@@ -68,7 +78,7 @@ items:
   type: class
   uid: azure.mgmt.servicebus.operations.QueuesOperations
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
   langs:
@@ -96,19 +106,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id005
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id006
       - str
     - description: 'Parameters supplied to create or update a queue
 
@@ -116,14 +126,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id007
       - azure.mgmt.servicebus.models.SBQueue
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -132,7 +142,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
     - description: '*Operation configuration
 
@@ -140,16 +150,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id010
       type:
       - azure.mgmt.servicebus.models.SBQueue
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id012
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
   langs:
@@ -178,32 +188,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id014
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id015
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id016
       - str
     - defaultValue: None
       description: 'The rights associated with the rule.
 
         '
       id: rights
-      type:
+      type: &id017
       - 'list of str or @azure.mgmt.servicebus.models.AccessRights
 
         '
@@ -212,7 +222,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id018
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -221,7 +231,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id019
       - bool
     - description: '*Operation configuration
 
@@ -229,16 +239,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id020
       type:
       - azure.mgmt.servicebus.models.SBAuthorizationRule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id022
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete
   langs:
@@ -266,26 +276,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id023
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id024
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id025
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id026
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -294,7 +304,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id027
       - bool
     - description: '*Operation configuration
 
@@ -302,16 +312,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id028
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.delete
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id030
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
   langs:
@@ -339,32 +349,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id031
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id032
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id033
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id034
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id035
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -373,7 +383,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id036
       - bool
     - description: '*Operation configuration
 
@@ -381,16 +391,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id037
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id039
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.get
   langs:
@@ -418,26 +428,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id040
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id041
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id042
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id043
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -446,7 +456,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id044
       - bool
     - description: '*Operation configuration
 
@@ -454,16 +464,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id045
       type:
       - azure.mgmt.servicebus.models.SBQueue
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.get
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id047
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
   langs:
@@ -491,32 +501,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id048
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id049
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id050
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id051
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id052
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -525,7 +535,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id053
       - bool
     - description: '*Operation configuration
 
@@ -533,16 +543,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id054
       type:
       - azure.mgmt.servicebus.models.SBAuthorizationRule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id056
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
   langs:
@@ -570,26 +580,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id057
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id058
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id059
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id060
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -598,7 +608,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id061
       - bool
     - description: '*Operation configuration
 
@@ -606,13 +616,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id062
       type:
       - azure.mgmt.servicebus.models.SBAuthorizationRulePaged
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id064
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
   langs:
@@ -640,20 +650,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id065
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id066
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id067
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -662,7 +672,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id068
       - bool
     - description: '*Operation configuration
 
@@ -670,13 +680,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id069
       type:
       - azure.mgmt.servicebus.models.SBQueuePaged
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id071
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
   langs:
@@ -704,32 +714,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id072
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id073
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id074
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id075
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id076
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -738,7 +748,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id077
       - bool
     - description: '*Operation configuration
 
@@ -746,16 +756,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id078
       type:
       - azure.mgmt.servicebus.models.AccessKeys
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
 - class: azure.mgmt.servicebus.operations.QueuesOperations
-  exceptions:
+  exceptions: &id080
   - type: azure.mgmt.servicebus.models.ErrorResponseException
   fullName: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
   langs:
@@ -783,25 +793,25 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id081
       - str
     - description: 'The namespace name
 
         '
       id: namespace_name
-      type:
+      type: &id082
       - str
     - description: 'The queue name.
 
         '
       id: queue_name
-      type:
+      type: &id083
       - str
     - description: 'The authorizationrule name.
 
         '
       id: authorization_rule_name
-      type:
+      type: &id084
       - str
     - description: 'The access key to regenerate. Possible values
 
@@ -809,7 +819,7 @@ items:
 
         '
       id: key_type
-      type:
+      type: &id085
       - 'str or @azure.mgmt.servicebus.models.KeyType
 
         '
@@ -820,14 +830,14 @@ items:
 
         '
       id: key
-      type:
+      type: &id086
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id087
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -836,7 +846,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id088
       - bool
     - description: '*Operation configuration
 
@@ -844,15 +854,850 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id089
       type:
       - azure.mgmt.servicebus.models.AccessKeys
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+- children:
+  - azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+  - azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+  - azure.mgmt.servicebus.operations.QueuesOperations.delete
+  - azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+  - azure.mgmt.servicebus.operations.QueuesOperations.get
+  - azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+  - azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+  - azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+  - azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+  - azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: QueuesOperations
+  source:
+    id: QueuesOperations
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'QueuesOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: QueuesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.servicebus.operations.QueuesOperations
+- &id011
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 106
+  summary: 'Creates or updates a Service Bus queue. This operation is idempotent.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, namespace_name, queue_name, parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id005
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id006
+    - description: 'Parameters supplied to create or update a queue
+
+        resource.
+
+        '
+      id: parameters
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id010
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+- *id011
+- &id021
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id012
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: create_or_update_authorization_rule
+  source:
+    id: create_or_update_authorization_rule
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 371
+  summary: 'Creates an authorization rule for a queue.
+
+    '
+  syntax:
+    content: create_or_update_authorization_rule(resource_group_name, namespace_name,
+      queue_name, authorization_rule_name, rights=None, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id014
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id015
+    - description: 'The authorizationrule name.
+
+        '
+      id: authorization_rule_name
+      type: *id016
+    - defaultValue: None
+      description: 'The rights associated with the rule.
+
+        '
+      id: rights
+      type: *id017
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id018
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id019
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id020
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+- *id021
+- &id029
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id022
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 178
+  summary: 'Deletes a queue from the specified namespace in a resource group.
+
+    '
+  syntax:
+    content: delete(resource_group_name, namespace_name, queue_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id023
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id024
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id025
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id028
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.delete
+- *id029
+- &id038
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id030
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: delete_authorization_rule
+  source:
+    id: delete_authorization_rule
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 448
+  summary: 'Deletes a queue authorization rule.
+
+    '
+  syntax:
+    content: delete_authorization_rule(resource_group_name, namespace_name, queue_name,
+      authorization_rule_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id031
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id032
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id033
+    - description: 'The authorizationrule name.
+
+        '
+      id: authorization_rule_name
+      type: *id034
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id035
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id036
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id037
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+- *id038
+- &id046
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id039
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 235
+  summary: 'Returns a description for the specified queue.
+
+    '
+  syntax:
+    content: get(resource_group_name, namespace_name, queue_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id040
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id041
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id042
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id043
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id044
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id045
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.get
+- *id046
+- &id055
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id047
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: get_authorization_rule
+  source:
+    id: get_authorization_rule
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 508
+  summary: 'Gets an authorization rule for a queue by rule name.
+
+    '
+  syntax:
+    content: get_authorization_rule(resource_group_name, namespace_name, queue_name,
+      authorization_rule_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id048
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id049
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id050
+    - description: 'The authorizationrule name.
+
+        '
+      id: authorization_rule_name
+      type: *id051
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id052
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id053
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id054
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+- *id055
+- &id063
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id056
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: list_authorization_rules
+  source:
+    id: list_authorization_rules
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 299
+  summary: 'Gets all authorization rules for a queue.
+
+    '
+  syntax:
+    content: list_authorization_rules(resource_group_name, namespace_name, queue_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id057
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id058
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id059
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id060
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id061
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id062
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+- *id063
+- &id070
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id064
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: list_by_namespace
+  source:
+    id: list_by_namespace
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Gets the queues within a namespace.
+
+    '
+  syntax:
+    content: list_by_namespace(resource_group_name, namespace_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id065
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id066
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id067
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id068
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id069
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+- *id070
+- &id079
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id071
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: list_keys
+  source:
+    id: list_keys
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 576
+  summary: 'Primary and secondary connection strings to the queue.
+
+    '
+  syntax:
+    content: list_keys(resource_group_name, namespace_name, queue_name, authorization_rule_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id072
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id073
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id074
+    - description: 'The authorizationrule name.
+
+        '
+      id: authorization_rule_name
+      type: *id075
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id076
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id077
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id078
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+- *id079
+- &id090
+  class: azure.mgmt.servicebus.operations.QueuesOperations
+  exceptions: *id080
+  fullName: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+  langs:
+  - python
+  module: azure.mgmt.servicebus.operations
+  name: regenerate_keys
+  source:
+    id: regenerate_keys
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\operations\queues_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 643
+  summary: 'Regenerates the primary or secondary connection strings to the queue.
+
+    '
+  syntax:
+    content: regenerate_keys(resource_group_name, namespace_name, queue_name, authorization_rule_name,
+      key_type, key=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the Resource group within the
+
+        Azure subscription.
+
+        '
+      id: resource_group_name
+      type: *id081
+    - description: 'The namespace name
+
+        '
+      id: namespace_name
+      type: *id082
+    - description: 'The queue name.
+
+        '
+      id: queue_name
+      type: *id083
+    - description: 'The authorizationrule name.
+
+        '
+      id: authorization_rule_name
+      type: *id084
+    - description: 'The access key to regenerate. Possible values
+
+        include: ''PrimaryKey'', ''SecondaryKey''
+
+        '
+      id: key_type
+      type: *id085
+    - defaultValue: None
+      description: 'Optional, if the key value provided, is reset for KeyType
+
+        value or autogenerate Key value set for keyType
+
+        '
+      id: key
+      type: *id086
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id087
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id088
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id089
+  type: method
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+- *id090
 references:
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+  isExternal: false
+  name: create_or_update_authorization_rule
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.delete
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+  isExternal: false
+  name: delete_authorization_rule
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.get
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+  isExternal: false
+  name: get_authorization_rule
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+  isExternal: false
+  name: list_authorization_rules
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+  isExternal: false
+  name: list_by_namespace
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+  isExternal: false
+  name: regenerate_keys
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+  isExternal: false
+  name: create_or_update_authorization_rule
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update_authorization_rule
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.delete
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+  isExternal: false
+  name: delete_authorization_rule
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.delete_authorization_rule
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.get
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+  isExternal: false
+  name: get_authorization_rule
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.get_authorization_rule
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+  isExternal: false
+  name: list_authorization_rules
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_authorization_rules
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+  isExternal: false
+  name: list_by_namespace
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_by_namespace
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+  isExternal: false
+  name: list_keys
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.list_keys
+- fullName: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
+  isExternal: false
+  name: regenerate_keys
+  parent: azure.mgmt.servicebus.operations.QueuesOperations
+  uid: azure.mgmt.servicebus.operations.QueuesOperations.regenerate_keys
 - fullName: azure.mgmt.servicebus.operations.QueuesOperations.create_or_update
   isExternal: false
   name: create_or_update

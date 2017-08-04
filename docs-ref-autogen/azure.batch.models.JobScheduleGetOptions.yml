@@ -27,7 +27,7 @@ items:
     content: JobScheduleGetOptions(select=None, expand=None, timeout=30, client_request_id=None,
       return_client_request_id=False, ocp_date=None, if_match=None, if_none_match=None,
       if_modified_since=None, if_unmodified_since=None)
-    parameters:
+    parameters: &id001
     - description: 'An OData $select clause.
 
         '
@@ -122,6 +122,35 @@ items:
       id: if_unmodified_since
       type:
       - datetime
+  type: class
+  uid: azure.batch.models.JobScheduleGetOptions
+- children: []
+  class: azure.batch.models.JobScheduleGetOptions
+  fullName: azure.batch.models.JobScheduleGetOptions
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: JobScheduleGetOptions
+  source:
+    id: JobScheduleGetOptions
+    path: azure-batch\azure\batch\models\job_schedule_get_options.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\job_schedule_get_options.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Additional parameters for the JobSchedule_get operation.
+
+    '
+  syntax:
+    content: JobScheduleGetOptions(select=None, expand=None, timeout=30, client_request_id=None,
+      return_client_request_id=False, ocp_date=None, if_match=None, if_none_match=None,
+      if_modified_since=None, if_unmodified_since=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.JobScheduleGetOptions
 references: []

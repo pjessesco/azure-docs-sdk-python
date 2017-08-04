@@ -31,7 +31,7 @@ items:
   syntax:
     content: CertificateOperation(issuer_parameters=None, csr=None, cancellation_requested=None,
       status=None, status_details=None, error=None, target=None, request_id=None)
-    parameters:
+    parameters: &id001
     - description: 'Parameters for the issuer of the X509 component
 
         of a certificate.
@@ -88,13 +88,47 @@ items:
       id: request_id
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'The certificate id.
 
         '
       id: id
       type:
       - str
+  type: class
+  uid: azure.keyvault.generated.models.CertificateOperation
+- children: []
+  class: azure.keyvault.generated.models.CertificateOperation
+  fullName: azure.keyvault.generated.models.CertificateOperation
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.generated.models
+  name: CertificateOperation
+  source:
+    id: CertificateOperation
+    path: azure-keyvault\azure\keyvault\models\certificate_operation.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\certificate_operation.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A certificate operation is returned in case of asynchronous requests.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: CertificateOperation(issuer_parameters=None, csr=None, cancellation_requested=None,
+      status=None, status_details=None, error=None, target=None, request_id=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.keyvault.generated.models.CertificateOperation
 references: []

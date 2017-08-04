@@ -28,7 +28,7 @@ items:
       compress_message, check_duplicate_message, interchange_duplicates_validity_days,
       check_certificate_revocation_list_on_send, check_certificate_revocation_list_on_receive,
       encryption_algorithm, signing_algorithm=None)
-    parameters:
+    parameters: &id001
     - description: 'The value indicating whether to
 
         override incoming message properties with those in agreement.
@@ -115,6 +115,36 @@ items:
       - 'str or @azure.mgmt.logic.models.SigningAlgorithm
 
         '
+  type: class
+  uid: azure.mgmt.logic.models.AS2ValidationSettings
+- children: []
+  class: azure.mgmt.logic.models.AS2ValidationSettings
+  fullName: azure.mgmt.logic.models.AS2ValidationSettings
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.logic.models
+  name: AS2ValidationSettings
+  source:
+    id: AS2ValidationSettings
+    path: azure-mgmt-logic\azure\mgmt\logic\models\as2_validation_settings.py
+    remote:
+      branch: master
+      path: azure-mgmt-logic\azure\mgmt\logic\models\as2_validation_settings.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The AS2 agreement validation settings.
+
+    '
+  syntax:
+    content: AS2ValidationSettings(override_message_properties, encrypt_message, sign_message,
+      compress_message, check_duplicate_message, interchange_duplicates_validity_days,
+      check_certificate_revocation_list_on_send, check_certificate_revocation_list_on_receive,
+      encryption_algorithm, signing_algorithm=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.logic.models.AS2ValidationSettings
 references: []

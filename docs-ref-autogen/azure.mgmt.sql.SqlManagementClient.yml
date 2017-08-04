@@ -25,13 +25,13 @@ items:
     '
   syntax:
     content: SqlManagementClient(credentials, subscription_id, base_url=None)
-    parameters:
+    parameters: &id001
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - msrestazure.azure_active_directory
+      - ../msrestazure.azure_active_directory
     - description: 'The subscription ID that identifies an Azure
 
         subscription.
@@ -46,7 +46,7 @@ items:
       id: base_url
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Configuration for client.
 
         '
@@ -137,6 +137,34 @@ items:
       id: server_keys
       type:
       - azure.mgmt.sql.operations.ServerKeysOperations
+  type: class
+  uid: azure.mgmt.sql.SqlManagementClient
+- children: []
+  class: azure.mgmt.sql.SqlManagementClient
+  fullName: azure.mgmt.sql.SqlManagementClient
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.sql
+  name: SqlManagementClient
+  source:
+    id: SqlManagementClient
+    path: azure-mgmt-sql\azure\mgmt\sql\sql_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\sql_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 68
+  summary: 'The Azure SQL Database management API provides a RESTful set of web services
+    that interact with Azure SQL Database services to manage your databases. The API
+    enables you to create, retrieve, update, and delete databases.
+
+    '
+  syntax:
+    content: SqlManagementClient(credentials, subscription_id, base_url=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.sql.SqlManagementClient
 references: []

@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.servicebus.models.SkuName
-- fullName: azure.mgmt.servicebus.models.SkuName.basic
+- children:
+  - azure.mgmt.servicebus.models.SkuName.basic
+  - azure.mgmt.servicebus.models.SkuName.premium
+  - azure.mgmt.servicebus.models.SkuName.standard
+  class: azure.mgmt.servicebus.models.SkuName
+  fullName: azure.mgmt.servicebus.models.SkuName
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.servicebus.models
+  name: SkuName
+  source:
+    id: SkuName
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\service_bus_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\service_bus_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.servicebus.models.SkuName
+- &id001
+  fullName: azure.mgmt.servicebus.models.SkuName.basic
   id: basic
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.servicebus.models.SkuName
   type: attribute
   uid: azure.mgmt.servicebus.models.SkuName.basic
-- fullName: azure.mgmt.servicebus.models.SkuName.premium
+- &id002
+  fullName: azure.mgmt.servicebus.models.SkuName.premium
   id: premium
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.servicebus.models.SkuName
   type: attribute
   uid: azure.mgmt.servicebus.models.SkuName.premium
-- fullName: azure.mgmt.servicebus.models.SkuName.standard
+- &id003
+  fullName: azure.mgmt.servicebus.models.SkuName.standard
   id: standard
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.servicebus.models.SkuName
   type: attribute
   uid: azure.mgmt.servicebus.models.SkuName.standard
+- *id001
+- *id002
+- *id003
 references: []

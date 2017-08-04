@@ -44,7 +44,51 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.servicebus.models.EntityStatus
-- fullName: azure.mgmt.servicebus.models.EntityStatus.active
+- children:
+  - azure.mgmt.servicebus.models.EntityStatus.active
+  - azure.mgmt.servicebus.models.EntityStatus.creating
+  - azure.mgmt.servicebus.models.EntityStatus.deleting
+  - azure.mgmt.servicebus.models.EntityStatus.disabled
+  - azure.mgmt.servicebus.models.EntityStatus.receive_disabled
+  - azure.mgmt.servicebus.models.EntityStatus.renaming
+  - azure.mgmt.servicebus.models.EntityStatus.restoring
+  - azure.mgmt.servicebus.models.EntityStatus.send_disabled
+  - azure.mgmt.servicebus.models.EntityStatus.unknown
+  class: azure.mgmt.servicebus.models.EntityStatus
+  fullName: azure.mgmt.servicebus.models.EntityStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.servicebus.models
+  name: EntityStatus
+  source:
+    id: EntityStatus
+    path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\service_bus_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-servicebus\azure\mgmt\servicebus\models\service_bus_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 42
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.servicebus.models.EntityStatus
+- &id001
+  fullName: azure.mgmt.servicebus.models.EntityStatus.active
   id: active
   langs:
   - python
@@ -58,7 +102,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.active
-- fullName: azure.mgmt.servicebus.models.EntityStatus.creating
+- &id002
+  fullName: azure.mgmt.servicebus.models.EntityStatus.creating
   id: creating
   langs:
   - python
@@ -72,7 +117,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.creating
-- fullName: azure.mgmt.servicebus.models.EntityStatus.deleting
+- &id003
+  fullName: azure.mgmt.servicebus.models.EntityStatus.deleting
   id: deleting
   langs:
   - python
@@ -86,7 +132,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.deleting
-- fullName: azure.mgmt.servicebus.models.EntityStatus.disabled
+- &id004
+  fullName: azure.mgmt.servicebus.models.EntityStatus.disabled
   id: disabled
   langs:
   - python
@@ -100,7 +147,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.disabled
-- fullName: azure.mgmt.servicebus.models.EntityStatus.receive_disabled
+- &id005
+  fullName: azure.mgmt.servicebus.models.EntityStatus.receive_disabled
   id: receive_disabled
   langs:
   - python
@@ -114,7 +162,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.receive_disabled
-- fullName: azure.mgmt.servicebus.models.EntityStatus.renaming
+- &id006
+  fullName: azure.mgmt.servicebus.models.EntityStatus.renaming
   id: renaming
   langs:
   - python
@@ -128,7 +177,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.renaming
-- fullName: azure.mgmt.servicebus.models.EntityStatus.restoring
+- &id007
+  fullName: azure.mgmt.servicebus.models.EntityStatus.restoring
   id: restoring
   langs:
   - python
@@ -142,7 +192,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.restoring
-- fullName: azure.mgmt.servicebus.models.EntityStatus.send_disabled
+- &id008
+  fullName: azure.mgmt.servicebus.models.EntityStatus.send_disabled
   id: send_disabled
   langs:
   - python
@@ -156,7 +207,8 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.send_disabled
-- fullName: azure.mgmt.servicebus.models.EntityStatus.unknown
+- &id009
+  fullName: azure.mgmt.servicebus.models.EntityStatus.unknown
   id: unknown
   langs:
   - python
@@ -170,4 +222,13 @@ items:
       - azure.mgmt.servicebus.models.EntityStatus
   type: attribute
   uid: azure.mgmt.servicebus.models.EntityStatus.unknown
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
 references: []

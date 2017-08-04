@@ -27,7 +27,7 @@ items:
     content: SubnetOverride(resource_id=None, lab_subnet_name=None, use_in_vm_creation_permission=None,
       use_public_ip_address_permission=None, shared_public_ip_address_configuration=None,
       virtual_network_pool_name=None)
-    parameters:
+    parameters: &id001
     - description: 'The resource ID of the subnet.
 
         '
@@ -80,6 +80,35 @@ items:
       id: virtual_network_pool_name
       type:
       - str
+  type: class
+  uid: azure.mgmt.devtestlabs.models.SubnetOverride
+- children: []
+  class: azure.mgmt.devtestlabs.models.SubnetOverride
+  fullName: azure.mgmt.devtestlabs.models.SubnetOverride
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: SubnetOverride
+  source:
+    id: SubnetOverride
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\subnet_override.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\subnet_override.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Property overrides on a subnet of a virtual network.
+
+    '
+  syntax:
+    content: SubnetOverride(resource_id=None, lab_subnet_name=None, use_in_vm_creation_permission=None,
+      use_public_ip_address_permission=None, shared_public_ip_address_configuration=None,
+      virtual_network_pool_name=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.devtestlabs.models.SubnetOverride
 references: []

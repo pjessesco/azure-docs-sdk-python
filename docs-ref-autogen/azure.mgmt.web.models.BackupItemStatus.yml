@@ -46,7 +46,53 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.BackupItemStatus
-- fullName: azure.mgmt.web.models.BackupItemStatus.created
+- children:
+  - azure.mgmt.web.models.BackupItemStatus.created
+  - azure.mgmt.web.models.BackupItemStatus.delete_failed
+  - azure.mgmt.web.models.BackupItemStatus.delete_in_progress
+  - azure.mgmt.web.models.BackupItemStatus.deleted
+  - azure.mgmt.web.models.BackupItemStatus.failed
+  - azure.mgmt.web.models.BackupItemStatus.in_progress
+  - azure.mgmt.web.models.BackupItemStatus.partially_succeeded
+  - azure.mgmt.web.models.BackupItemStatus.skipped
+  - azure.mgmt.web.models.BackupItemStatus.succeeded
+  - azure.mgmt.web.models.BackupItemStatus.timed_out
+  class: azure.mgmt.web.models.BackupItemStatus
+  fullName: azure.mgmt.web.models.BackupItemStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: BackupItemStatus
+  source:
+    id: BackupItemStatus
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 332
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.BackupItemStatus
+- &id001
+  fullName: azure.mgmt.web.models.BackupItemStatus.created
   id: created
   langs:
   - python
@@ -60,7 +106,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.created
-- fullName: azure.mgmt.web.models.BackupItemStatus.delete_failed
+- &id002
+  fullName: azure.mgmt.web.models.BackupItemStatus.delete_failed
   id: delete_failed
   langs:
   - python
@@ -74,7 +121,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.delete_failed
-- fullName: azure.mgmt.web.models.BackupItemStatus.delete_in_progress
+- &id003
+  fullName: azure.mgmt.web.models.BackupItemStatus.delete_in_progress
   id: delete_in_progress
   langs:
   - python
@@ -88,7 +136,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.delete_in_progress
-- fullName: azure.mgmt.web.models.BackupItemStatus.deleted
+- &id004
+  fullName: azure.mgmt.web.models.BackupItemStatus.deleted
   id: deleted
   langs:
   - python
@@ -102,7 +151,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.deleted
-- fullName: azure.mgmt.web.models.BackupItemStatus.failed
+- &id005
+  fullName: azure.mgmt.web.models.BackupItemStatus.failed
   id: failed
   langs:
   - python
@@ -116,7 +166,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.failed
-- fullName: azure.mgmt.web.models.BackupItemStatus.in_progress
+- &id006
+  fullName: azure.mgmt.web.models.BackupItemStatus.in_progress
   id: in_progress
   langs:
   - python
@@ -130,7 +181,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.in_progress
-- fullName: azure.mgmt.web.models.BackupItemStatus.partially_succeeded
+- &id007
+  fullName: azure.mgmt.web.models.BackupItemStatus.partially_succeeded
   id: partially_succeeded
   langs:
   - python
@@ -144,7 +196,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.partially_succeeded
-- fullName: azure.mgmt.web.models.BackupItemStatus.skipped
+- &id008
+  fullName: azure.mgmt.web.models.BackupItemStatus.skipped
   id: skipped
   langs:
   - python
@@ -158,7 +211,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.skipped
-- fullName: azure.mgmt.web.models.BackupItemStatus.succeeded
+- &id009
+  fullName: azure.mgmt.web.models.BackupItemStatus.succeeded
   id: succeeded
   langs:
   - python
@@ -172,7 +226,8 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.succeeded
-- fullName: azure.mgmt.web.models.BackupItemStatus.timed_out
+- &id010
+  fullName: azure.mgmt.web.models.BackupItemStatus.timed_out
   id: timed_out
   langs:
   - python
@@ -186,4 +241,14 @@ items:
       - azure.mgmt.web.models.BackupItemStatus
   type: attribute
   uid: azure.mgmt.web.models.BackupItemStatus.timed_out
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
 references: []

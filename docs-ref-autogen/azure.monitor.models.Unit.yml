@@ -40,7 +40,47 @@ items:
   syntax: {}
   type: class
   uid: azure.monitor.models.Unit
-- fullName: azure.monitor.models.Unit.bytes
+- children:
+  - azure.monitor.models.Unit.bytes
+  - azure.monitor.models.Unit.bytes_per_second
+  - azure.monitor.models.Unit.count
+  - azure.monitor.models.Unit.count_per_second
+  - azure.monitor.models.Unit.milli_seconds
+  - azure.monitor.models.Unit.percent
+  - azure.monitor.models.Unit.seconds
+  class: azure.monitor.models.Unit
+  fullName: azure.monitor.models.Unit
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.monitor.models
+  name: Unit
+  source:
+    id: Unit
+    path: azure-monitor\azure\monitor\models\monitor_client_enums.py
+    remote:
+      branch: master
+      path: azure-monitor\azure\monitor\models\monitor_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 24
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.monitor.models.Unit
+- &id001
+  fullName: azure.monitor.models.Unit.bytes
   id: bytes
   langs:
   - python
@@ -54,7 +94,8 @@ items:
       - azure.monitor.models.Unit
   type: attribute
   uid: azure.monitor.models.Unit.bytes
-- fullName: azure.monitor.models.Unit.bytes_per_second
+- &id002
+  fullName: azure.monitor.models.Unit.bytes_per_second
   id: bytes_per_second
   langs:
   - python
@@ -68,7 +109,8 @@ items:
       - azure.monitor.models.Unit
   type: attribute
   uid: azure.monitor.models.Unit.bytes_per_second
-- fullName: azure.monitor.models.Unit.count
+- &id003
+  fullName: azure.monitor.models.Unit.count
   id: count
   langs:
   - python
@@ -82,7 +124,8 @@ items:
       - azure.monitor.models.Unit
   type: attribute
   uid: azure.monitor.models.Unit.count
-- fullName: azure.monitor.models.Unit.count_per_second
+- &id004
+  fullName: azure.monitor.models.Unit.count_per_second
   id: count_per_second
   langs:
   - python
@@ -96,7 +139,8 @@ items:
       - azure.monitor.models.Unit
   type: attribute
   uid: azure.monitor.models.Unit.count_per_second
-- fullName: azure.monitor.models.Unit.milli_seconds
+- &id005
+  fullName: azure.monitor.models.Unit.milli_seconds
   id: milli_seconds
   langs:
   - python
@@ -110,7 +154,8 @@ items:
       - azure.monitor.models.Unit
   type: attribute
   uid: azure.monitor.models.Unit.milli_seconds
-- fullName: azure.monitor.models.Unit.percent
+- &id006
+  fullName: azure.monitor.models.Unit.percent
   id: percent
   langs:
   - python
@@ -124,7 +169,8 @@ items:
       - azure.monitor.models.Unit
   type: attribute
   uid: azure.monitor.models.Unit.percent
-- fullName: azure.monitor.models.Unit.seconds
+- &id007
+  fullName: azure.monitor.models.Unit.seconds
   id: seconds
   langs:
   - python
@@ -138,4 +184,11 @@ items:
       - azure.monitor.models.Unit
   type: attribute
   uid: azure.monitor.models.Unit.seconds
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
 references: []

@@ -34,7 +34,7 @@ items:
     '
   syntax:
     content: RecoverableDatabase()
-    variables:
+    variables: &id001
     - description: 'Resource ID.
 
         '
@@ -81,6 +81,42 @@ items:
       id: last_available_backup_date
       type:
       - datetime
+  type: class
+  uid: azure.mgmt.sql.models.RecoverableDatabase
+- children: []
+  class: azure.mgmt.sql.models.RecoverableDatabase
+  fullName: azure.mgmt.sql.models.RecoverableDatabase
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: msrest.serialization.Model
+      type: azure.mgmt.sql.models.resource.Resource
+    type: azure.mgmt.sql.models.proxy_resource.ProxyResource
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: RecoverableDatabase
+  source:
+    id: RecoverableDatabase
+    path: azure-mgmt-sql\azure\mgmt\sql\models\recoverable_database.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\recoverable_database.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A recoverable database.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: RecoverableDatabase()
+    variables: *id001
   type: class
   uid: azure.mgmt.sql.models.RecoverableDatabase
 references: []

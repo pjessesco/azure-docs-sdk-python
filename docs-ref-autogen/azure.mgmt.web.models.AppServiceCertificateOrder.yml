@@ -34,7 +34,7 @@ items:
     content: AppServiceCertificateOrder(location, name=None, kind=None, type=None,
       tags=None, certificates=None, distinguished_name=None, validity_in_years=1,
       key_size=2048, product_type=None, auto_renew=True, csr=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -117,7 +117,7 @@ items:
       id: csr
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
@@ -218,6 +218,43 @@ items:
       id: next_auto_renewal_time_stamp
       type:
       - datetime
+  type: class
+  uid: azure.mgmt.web.models.AppServiceCertificateOrder
+- children: []
+  class: azure.mgmt.web.models.AppServiceCertificateOrder
+  fullName: azure.mgmt.web.models.AppServiceCertificateOrder
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: AppServiceCertificateOrder
+  source:
+    id: AppServiceCertificateOrder
+    path: azure-mgmt-web\azure\mgmt\web\models\app_service_certificate_order.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\app_service_certificate_order.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'SSL certificate purchase order.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: AppServiceCertificateOrder(location, name=None, kind=None, type=None,
+      tags=None, certificates=None, distinguished_name=None, validity_in_years=1,
+      key_size=2048, product_type=None, auto_renew=True, csr=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.AppServiceCertificateOrder
 references: []

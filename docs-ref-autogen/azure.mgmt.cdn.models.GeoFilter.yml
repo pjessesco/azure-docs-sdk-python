@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: GeoFilter(relative_path, action, country_codes)
-    parameters:
+    parameters: &id001
     - description: 'Relative path applicable to geo filter. (e.g.
 
         ''/mypictures'', ''/mypicture/kitty.jpg'', and etc.)
@@ -52,6 +52,33 @@ items:
       id: country_codes
       type:
       - list of str
+  type: class
+  uid: azure.mgmt.cdn.models.GeoFilter
+- children: []
+  class: azure.mgmt.cdn.models.GeoFilter
+  fullName: azure.mgmt.cdn.models.GeoFilter
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.cdn.models
+  name: GeoFilter
+  source:
+    id: GeoFilter
+    path: azure-mgmt-cdn\azure\mgmt\cdn\models\geo_filter.py
+    remote:
+      branch: master
+      path: azure-mgmt-cdn\azure\mgmt\cdn\models\geo_filter.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Rules defining user geo access within a CDN endpoint.
+
+    '
+  syntax:
+    content: GeoFilter(relative_path, action, country_codes)
+    parameters: *id001
   type: class
   uid: azure.mgmt.cdn.models.GeoFilter
 references: []

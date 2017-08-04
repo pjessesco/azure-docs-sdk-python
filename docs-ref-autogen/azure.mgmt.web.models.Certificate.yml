@@ -34,7 +34,7 @@ items:
     content: Certificate(location, name=None, kind=None, type=None, tags=None, host_names=None,
       pfx_blob=None, password=None, key_vault_id=None, key_vault_secret_name=None,
       server_farm_id=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource Name.
 
         '
@@ -105,7 +105,7 @@ items:
       id: server_farm_id
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource Id.
 
         '
@@ -218,6 +218,43 @@ items:
       id: certificate_name
       type:
       - str
+  type: class
+  uid: azure.mgmt.web.models.Certificate
+- children: []
+  class: azure.mgmt.web.models.Certificate
+  fullName: azure.mgmt.web.models.Certificate
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.web.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: Certificate
+  source:
+    id: Certificate
+    path: azure-mgmt-web\azure\mgmt\web\models\certificate.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\certificate.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'SSL certificate for an app.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: Certificate(location, name=None, kind=None, type=None, tags=None, host_names=None,
+      pfx_blob=None, password=None, key_vault_id=None, key_vault_secret_name=None,
+      server_farm_id=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.web.models.Certificate
 references: []

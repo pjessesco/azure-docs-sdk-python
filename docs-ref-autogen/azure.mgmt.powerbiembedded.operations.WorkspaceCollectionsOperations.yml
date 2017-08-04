@@ -12,6 +12,16 @@ items:
   - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
   - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
   - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
   class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
   inheritance:
@@ -43,7 +53,7 @@ items:
     '
   syntax:
     content: WorkspaceCollectionsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -60,7 +70,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-01-29".
 
         '
@@ -68,7 +78,7 @@ items:
   type: class
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
   langs:
@@ -96,28 +106,28 @@ items:
 
         '
       id: location
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'Workspace collection name
 
         '
       id: name
-      type:
+      type: &id005
       - str
     - defaultValue: Microsoft.PowerBI/workspaceCollections
       description: 'Resource type
 
         '
       id: type
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -126,7 +136,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -134,16 +144,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.powerbiembedded.models.CheckNameResponse
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id011
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
   langs:
@@ -175,7 +185,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'Power BI Embedded Workspace
 
@@ -183,26 +193,26 @@ items:
 
         '
       id: workspace_collection_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'Azure location
 
         '
       id: location
-      type:
+      type: &id014
       - str
     - defaultValue: None
       description: ''
       id: tags
-      type:
+      type: &id015
       - dict
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id016
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -211,7 +221,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id017
       - bool
     - description: '*Operation configuration
 
@@ -219,16 +229,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id018
       type:
       - azure.mgmt.powerbiembedded.models.WorkspaceCollection
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id020
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
   langs:
@@ -254,7 +264,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id021
       - str
     - description: 'Power BI Embedded Workspace
 
@@ -262,14 +272,14 @@ items:
 
         '
       id: workspace_collection_name
-      type:
+      type: &id022
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id023
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -278,20 +288,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id024
       - bool
-    return:
+    return: &id025
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id027
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
   langs:
@@ -319,7 +329,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id028
       - str
     - description: 'Power BI Embedded Workspace
 
@@ -327,14 +337,14 @@ items:
 
         '
       id: workspace_collection_name
-      type:
+      type: &id029
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id030
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -343,7 +353,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id031
       - bool
     - description: '*Operation configuration
 
@@ -351,16 +361,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id032
       type:
       - azure.mgmt.powerbiembedded.models.WorkspaceCollectionAccessKeys
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id034
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
   langs:
@@ -386,7 +396,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id035
       - str
     - description: 'Power BI Embedded Workspace
 
@@ -394,14 +404,14 @@ items:
 
         '
       id: workspace_collection_name
-      type:
+      type: &id036
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id037
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -410,7 +420,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id038
       - bool
     - description: '*Operation configuration
 
@@ -418,16 +428,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id039
       type:
       - azure.mgmt.powerbiembedded.models.WorkspaceCollection
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id041
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
   langs:
@@ -455,14 +465,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id042
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id043
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -471,7 +481,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id044
       - bool
     - description: '*Operation configuration
 
@@ -479,13 +489,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id045
       type:
       - azure.mgmt.powerbiembedded.models.WorkspaceCollectionPaged
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id047
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
   langs:
@@ -513,7 +523,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id048
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -522,7 +532,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id049
       - bool
     - description: '*Operation configuration
 
@@ -530,13 +540,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id050
       type:
       - azure.mgmt.powerbiembedded.models.WorkspaceCollectionPaged
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id052
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
   langs:
@@ -564,7 +574,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id053
       - str
     - defaultValue: None
       description: 'Name of the resource group the Power BI
@@ -573,19 +583,19 @@ items:
 
         '
       id: target_resource_group
-      type:
+      type: &id054
       - str
     - defaultValue: None
       description: ''
       id: resources
-      type:
+      type: &id055
       - list of str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id056
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -594,7 +604,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id057
       - bool
     - description: '*Operation configuration
 
@@ -602,16 +612,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id058
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id060
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
   langs:
@@ -639,7 +649,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id061
       - str
     - description: 'Power BI Embedded Workspace
 
@@ -647,14 +657,14 @@ items:
 
         '
       id: workspace_collection_name
-      type:
+      type: &id062
       - str
     - defaultValue: None
       description: 'Key name. Possible values include: ''key1'', ''key2''
 
         '
       id: key_name
-      type:
+      type: &id063
       - 'str or @azure.mgmt.powerbiembedded.models.AccessKeyName
 
         '
@@ -663,7 +673,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id064
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -672,7 +682,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id065
       - bool
     - description: '*Operation configuration
 
@@ -680,16 +690,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id066
       type:
       - azure.mgmt.powerbiembedded.models.WorkspaceCollectionAccessKeys
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
 - class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
-  exceptions:
+  exceptions: &id068
   - type: azure.mgmt.powerbiembedded.models.ErrorException
   fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
   langs:
@@ -717,7 +727,7 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id069
       - str
     - description: 'Power BI Embedded Workspace
 
@@ -725,19 +735,19 @@ items:
 
         '
       id: workspace_collection_name
-      type:
+      type: &id070
       - str
     - defaultValue: None
       description: ''
       id: tags
-      type:
+      type: &id071
       - dict
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id072
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -746,7 +756,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id073
       - bool
     - description: '*Operation configuration
 
@@ -754,15 +764,775 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id074
       type:
       - azure.mgmt.powerbiembedded.models.WorkspaceCollection
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+- children:
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+  - azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: WorkspaceCollectionsOperations
+  source:
+    id: WorkspaceCollectionsOperations
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'WorkspaceCollectionsOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: WorkspaceCollectionsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+- &id010
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: check_name_availability
+  source:
+    id: check_name_availability
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 323
+  summary: 'Verify the specified Power BI Workspace Collection name is valid and
+
+    not already in use.
+
+    '
+  syntax:
+    content: check_name_availability(location, name=None, type='Microsoft.PowerBI/workspaceCollections',
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Azure location
+
+        '
+      id: location
+      type: *id004
+    - defaultValue: None
+      description: 'Workspace collection name
+
+        '
+      id: name
+      type: *id005
+    - defaultValue: Microsoft.PowerBI/workspaceCollections
+      description: 'Resource type
+
+        '
+      id: type
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+- *id010
+- &id019
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id011
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: create
+  source:
+    id: create
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 100
+  summary: 'Creates a new Power BI Workspace Collection with the specified
+
+    properties. A Power BI Workspace Collection contains one or more
+
+    workspaces, and can be used to provision keys that provide API access
+
+    to those workspaces.
+
+    '
+  syntax:
+    content: create(resource_group_name, workspace_collection_name, location=None,
+      tags=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'Power BI Embedded Workspace
+
+        Collection name
+
+        '
+      id: workspace_collection_name
+      type: *id013
+    - defaultValue: None
+      description: 'Azure location
+
+        '
+      id: location
+      type: *id014
+    - defaultValue: None
+      description: ''
+      id: tags
+      type: *id015
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id016
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id017
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id018
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+- *id019
+- &id026
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id020
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 246
+  summary: 'Delete a Power BI Workspace Collection.
+
+    '
+  syntax:
+    content: delete(resource_group_name, workspace_collection_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id021
+    - description: 'Power BI Embedded Workspace
+
+        Collection name
+
+        '
+      id: workspace_collection_name
+      type: *id022
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id023
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id024
+    return: *id025
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+- *id026
+- &id033
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id027
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: get_access_keys
+  source:
+    id: get_access_keys
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 521
+  summary: 'Retrieves the primary and secondary access keys for the specified Power
+
+    BI Workspace Collection.
+
+    '
+  syntax:
+    content: get_access_keys(resource_group_name, workspace_collection_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id028
+    - description: 'Power BI Embedded Workspace
+
+        Collection name
+
+        '
+      id: workspace_collection_name
+      type: *id029
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id030
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id031
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id032
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+- *id033
+- &id040
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id034
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: get_by_name
+  source:
+    id: get_by_name
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Retrieves an existing Power BI Workspace Collection.
+
+    '
+  syntax:
+    content: get_by_name(resource_group_name, workspace_collection_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id035
+    - description: 'Power BI Embedded Workspace
+
+        Collection name
+
+        '
+      id: workspace_collection_name
+      type: *id036
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id037
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id038
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id039
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+- *id040
+- &id046
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id041
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 392
+  summary: 'Retrieves all existing Power BI workspace collections in the specified
+
+    resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id042
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id043
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id044
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id045
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+- *id046
+- &id051
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id047
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: list_by_subscription
+  source:
+    id: list_by_subscription
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 458
+  summary: 'Retrieves all existing Power BI workspace collections in the specified
+
+    subscription.
+
+    '
+  syntax:
+    content: list_by_subscription(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id048
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id049
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id050
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+- *id051
+- &id059
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id052
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: migrate
+  source:
+    id: migrate
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 656
+  summary: 'Migrates an existing Power BI Workspace Collection to a different
+
+    resource group and/or subscription.
+
+    '
+  syntax:
+    content: migrate(resource_group_name, target_resource_group=None, resources=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id053
+    - defaultValue: None
+      description: 'Name of the resource group the Power BI
+
+        workspace collections will be migrated to.
+
+        '
+      id: target_resource_group
+      type: *id054
+    - defaultValue: None
+      description: ''
+      id: resources
+      type: *id055
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id056
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id057
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id058
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+- *id059
+- &id067
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id060
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: regenerate_key
+  source:
+    id: regenerate_key
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 584
+  summary: 'Regenerates the primary or secondary access key for the specified Power
+
+    BI Workspace Collection.
+
+    '
+  syntax:
+    content: regenerate_key(resource_group_name, workspace_collection_name, key_name=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id061
+    - description: 'Power BI Embedded Workspace
+
+        Collection name
+
+        '
+      id: workspace_collection_name
+      type: *id062
+    - defaultValue: None
+      description: 'Key name. Possible values include: ''key1'', ''key2''
+
+        '
+      id: key_name
+      type: *id063
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id064
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id065
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id066
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+- *id067
+- &id075
+  class: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  exceptions: *id068
+  fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+  langs:
+  - python
+  module: azure.mgmt.powerbiembedded.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-powerbiembedded\azure\mgmt\powerbiembedded\operations\workspace_collections_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 175
+  summary: 'Update an existing Power BI Workspace Collection with the specified
+
+    properties.
+
+    '
+  syntax:
+    content: update(resource_group_name, workspace_collection_name, tags=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Azure resource group
+
+        '
+      id: resource_group_name
+      type: *id069
+    - description: 'Power BI Embedded Workspace
+
+        Collection name
+
+        '
+      id: workspace_collection_name
+      type: *id070
+    - defaultValue: None
+      description: ''
+      id: tags
+      type: *id071
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id072
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id073
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id074
+  type: method
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+- *id075
 references:
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+  isExternal: false
+  name: get_access_keys
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+  isExternal: false
+  name: get_by_name
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+  isExternal: false
+  name: list_by_subscription
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+  isExternal: false
+  name: migrate
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+  isExternal: false
+  name: regenerate_key
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+  isExternal: false
+  name: check_name_availability
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+  isExternal: false
+  name: create
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.create
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.delete
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+  isExternal: false
+  name: get_access_keys
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_access_keys
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+  isExternal: false
+  name: get_by_name
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.get_by_name
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_resource_group
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+  isExternal: false
+  name: list_by_subscription
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.list_by_subscription
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+  isExternal: false
+  name: migrate
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.migrate
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+  isExternal: false
+  name: regenerate_key
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.regenerate_key
+- fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations
+  uid: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.update
 - fullName: azure.mgmt.powerbiembedded.operations.WorkspaceCollectionsOperations.check_name_availability
   isExternal: false
   name: check_name_availability

@@ -30,7 +30,7 @@ items:
   syntax:
     content: ApplicationGatewayIPConfiguration(id=None, subnet=None, provisioning_state=None,
       name=None, etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource ID.
 
         '
@@ -71,6 +71,38 @@ items:
       id: etag
       type:
       - str
+  type: class
+  uid: azure.mgmt.network.v2016_09_01.models.ApplicationGatewayIPConfiguration
+- children: []
+  class: azure.mgmt.network.v2016_09_01.models.ApplicationGatewayIPConfiguration
+  fullName: azure.mgmt.network.v2016_09_01.models.ApplicationGatewayIPConfiguration
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.network.v2016_09_01.models.sub_resource.SubResource
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_09_01.models
+  name: ApplicationGatewayIPConfiguration
+  source:
+    id: ApplicationGatewayIPConfiguration
+    path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\models\application_gateway_ip_configuration.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_09_01\models\application_gateway_ip_configuration.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'IP configuration of an application gateway. Currently 1 public and 1
+
+    private IP configuration is allowed.
+
+    '
+  syntax:
+    content: ApplicationGatewayIPConfiguration(id=None, subnet=None, provisioning_state=None,
+      name=None, etag=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.network.v2016_09_01.models.ApplicationGatewayIPConfiguration
 references: []

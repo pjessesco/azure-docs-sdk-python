@@ -3,6 +3,7 @@ api_name: []
 items:
 - children:
   - azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+  - azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
   class: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
   fullName: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
   inheritance:
@@ -25,7 +26,7 @@ items:
     '
   syntax:
     content: JobDetailsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -42,7 +43,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client Api Version. Constant value: "2016-12-01".
 
         '
@@ -50,7 +51,7 @@ items:
   type: class
   uid: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
 - class: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
   langs:
@@ -76,7 +77,7 @@ items:
 
         '
       id: vault_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the resource group where the
 
@@ -84,20 +85,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id005
       - str
     - description: 'Name of the job whose details are to be fetched.
 
         '
       id: job_name
-      type:
+      type: &id006
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -106,7 +107,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
     - description: '*Operation configuration
 
@@ -114,15 +115,117 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id009
       type:
       - azure.mgmt.recoveryservicesbackup.models.JobResource
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+- children:
+  - azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+  class: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
+  fullName: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: JobDetailsOperations
+  source:
+    id: JobDetailsOperations
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\job_details_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\job_details_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'JobDetailsOperations operations.
+
+
+    '
+  syntax:
+    content: JobDetailsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
+- &id010
+  class: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\job_details_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\operations\job_details_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'Gets exteded information associated with the job.
+
+    '
+  syntax:
+    content: get(vault_name, resource_group_name, job_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the recovery services vault.
+
+        '
+      id: vault_name
+      type: *id004
+    - description: 'The name of the resource group where the
+
+        recovery services vault is present.
+
+        '
+      id: resource_group_name
+      type: *id005
+    - description: 'Name of the job whose details are to be fetched.
+
+        '
+      id: job_name
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id009
+  type: method
+  uid: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+- *id010
 references:
+- fullName: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+- fullName: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations
+  uid: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
 - fullName: azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get
   isExternal: false
   name: get

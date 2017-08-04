@@ -40,7 +40,47 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.scheduler.models.JobScheduleDay
-- fullName: azure.mgmt.scheduler.models.JobScheduleDay.friday
+- children:
+  - azure.mgmt.scheduler.models.JobScheduleDay.friday
+  - azure.mgmt.scheduler.models.JobScheduleDay.monday
+  - azure.mgmt.scheduler.models.JobScheduleDay.saturday
+  - azure.mgmt.scheduler.models.JobScheduleDay.sunday
+  - azure.mgmt.scheduler.models.JobScheduleDay.thursday
+  - azure.mgmt.scheduler.models.JobScheduleDay.tuesday
+  - azure.mgmt.scheduler.models.JobScheduleDay.wednesday
+  class: azure.mgmt.scheduler.models.JobScheduleDay
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.scheduler.models
+  name: JobScheduleDay
+  source:
+    id: JobScheduleDay
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\scheduler_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\scheduler_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 74
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.scheduler.models.JobScheduleDay
+- &id001
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay.friday
   id: friday
   langs:
   - python
@@ -54,7 +94,8 @@ items:
       - azure.mgmt.scheduler.models.JobScheduleDay
   type: attribute
   uid: azure.mgmt.scheduler.models.JobScheduleDay.friday
-- fullName: azure.mgmt.scheduler.models.JobScheduleDay.monday
+- &id002
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay.monday
   id: monday
   langs:
   - python
@@ -68,7 +109,8 @@ items:
       - azure.mgmt.scheduler.models.JobScheduleDay
   type: attribute
   uid: azure.mgmt.scheduler.models.JobScheduleDay.monday
-- fullName: azure.mgmt.scheduler.models.JobScheduleDay.saturday
+- &id003
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay.saturday
   id: saturday
   langs:
   - python
@@ -82,7 +124,8 @@ items:
       - azure.mgmt.scheduler.models.JobScheduleDay
   type: attribute
   uid: azure.mgmt.scheduler.models.JobScheduleDay.saturday
-- fullName: azure.mgmt.scheduler.models.JobScheduleDay.sunday
+- &id004
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay.sunday
   id: sunday
   langs:
   - python
@@ -96,7 +139,8 @@ items:
       - azure.mgmt.scheduler.models.JobScheduleDay
   type: attribute
   uid: azure.mgmt.scheduler.models.JobScheduleDay.sunday
-- fullName: azure.mgmt.scheduler.models.JobScheduleDay.thursday
+- &id005
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay.thursday
   id: thursday
   langs:
   - python
@@ -110,7 +154,8 @@ items:
       - azure.mgmt.scheduler.models.JobScheduleDay
   type: attribute
   uid: azure.mgmt.scheduler.models.JobScheduleDay.thursday
-- fullName: azure.mgmt.scheduler.models.JobScheduleDay.tuesday
+- &id006
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay.tuesday
   id: tuesday
   langs:
   - python
@@ -124,7 +169,8 @@ items:
       - azure.mgmt.scheduler.models.JobScheduleDay
   type: attribute
   uid: azure.mgmt.scheduler.models.JobScheduleDay.tuesday
-- fullName: azure.mgmt.scheduler.models.JobScheduleDay.wednesday
+- &id007
+  fullName: azure.mgmt.scheduler.models.JobScheduleDay.wednesday
   id: wednesday
   langs:
   - python
@@ -138,4 +184,11 @@ items:
       - azure.mgmt.scheduler.models.JobScheduleDay
   type: attribute
   uid: azure.mgmt.scheduler.models.JobScheduleDay.wednesday
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
 references: []

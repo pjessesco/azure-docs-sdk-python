@@ -38,6 +38,42 @@ items:
   - azure.mgmt.sql.operations.DatabasesOperations.list_usages
   - azure.mgmt.sql.operations.DatabasesOperations.pause
   - azure.mgmt.sql.operations.DatabasesOperations.resume
+  - azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+  - azure.mgmt.sql.operations.DatabasesOperations.delete
+  - azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+  - azure.mgmt.sql.operations.DatabasesOperations.export
+  - azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+  - azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+  - azure.mgmt.sql.operations.DatabasesOperations.get
+  - azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+  - azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+  - azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+  - azure.mgmt.sql.operations.DatabasesOperations.import_method
+  - azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+  - azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+  - azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+  - azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+  - azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+  - azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+  - azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+  - azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+  - azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+  - azure.mgmt.sql.operations.DatabasesOperations.list_usages
+  - azure.mgmt.sql.operations.DatabasesOperations.pause
+  - azure.mgmt.sql.operations.DatabasesOperations.resume
   class: azure.mgmt.sql.operations.DatabasesOperations
   fullName: azure.mgmt.sql.operations.DatabasesOperations
   inheritance:
@@ -95,7 +131,7 @@ items:
     '
   syntax:
     content: DatabasesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -112,7 +148,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The name of the database for which the data masking rule applies.
         Constant value: "Default".
 
@@ -142,7 +178,7 @@ items:
   type: class
   uid: azure.mgmt.sql.operations.DatabasesOperations
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
   langs:
@@ -174,19 +210,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the database to import into
 
         '
       id: database_name
-      type:
+      type: &id006
       - str
     - description: 'The required parameters for importing a Bacpac into
 
@@ -194,14 +230,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id007
       - azure.mgmt.sql.models.ImportExtensionRequest
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id008
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -210,20 +246,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id009
       - bool
-    return:
+    return: &id010
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.ImportExportResponse'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id012
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
   langs:
@@ -257,13 +293,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id013
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the database to be operated on
 
@@ -271,7 +307,7 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id015
       - str
     - description: 'The required parameters for creating or updating a
 
@@ -279,14 +315,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id016
       - azure.mgmt.sql.models.Database
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id017
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -295,20 +331,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id018
       - bool
-    return:
+    return: &id019
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.Database'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id021
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
   langs:
@@ -338,13 +374,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id022
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id023
       - str
     - description: 'The name of the database for which the blob
 
@@ -352,20 +388,20 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id024
       - str
     - description: 'The database blob auditing policy.
 
         '
       id: parameters
-      type:
+      type: &id025
       - azure.mgmt.sql.models.DatabaseBlobAuditingPolicy
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id026
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -374,7 +410,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id027
       - bool
     - description: '*Operation configuration
 
@@ -382,16 +418,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id028
       type:
       - azure.mgmt.sql.models.DatabaseBlobAuditingPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id030
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
   langs:
@@ -422,19 +458,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id031
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id032
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id033
       - str
     - description: 'The state of the data masking policy.
 
@@ -442,7 +478,7 @@ items:
 
         '
       id: data_masking_state
-      type:
+      type: &id034
       - 'str or @azure.mgmt.sql.models.DataMaskingState
 
         '
@@ -457,14 +493,14 @@ items:
 
         '
       id: exempt_principals
-      type:
+      type: &id035
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id036
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -473,7 +509,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id037
       - bool
     - description: '*Operation configuration
 
@@ -481,16 +517,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id038
       type:
       - azure.mgmt.sql.models.DataMaskingPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id040
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
   langs:
@@ -521,25 +557,25 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id041
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id042
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id043
       - str
     - description: 'The name of the data masking rule.
 
         '
       id: data_masking_rule_name
-      type:
+      type: &id044
       - str
     - description: 'The required parameters for creating or updating a
 
@@ -547,14 +583,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id045
       - azure.mgmt.sql.models.DataMaskingRule
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id046
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -563,7 +599,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id047
       - bool
     - description: '*Operation configuration
 
@@ -571,16 +607,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id048
       type:
       - azure.mgmt.sql.models.DataMaskingRule
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id050
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
   langs:
@@ -610,19 +646,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id051
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id052
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id053
       - str
     - description: 'The state of the geo backup policy. Possible values
 
@@ -630,7 +666,7 @@ items:
 
         '
       id: state
-      type:
+      type: &id054
       - 'str or @azure.mgmt.sql.models.GeoBackupPolicyState
 
         '
@@ -639,7 +675,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id055
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -648,7 +684,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id056
       - bool
     - description: '*Operation configuration
 
@@ -656,16 +692,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id057
       type:
       - azure.mgmt.sql.models.GeoBackupPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id059
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
   langs:
@@ -696,19 +732,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id060
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id061
       - str
     - description: 'The name of the database
 
         '
       id: database_name
-      type:
+      type: &id062
       - str
     - description: 'The status of the backup long term retention policy.
 
@@ -716,7 +752,7 @@ items:
 
         '
       id: state
-      type:
+      type: &id063
       - 'str or @azure.mgmt.sql.models.BackupLongTermRetentionPolicyState
 
         '
@@ -726,14 +762,14 @@ items:
 
         '
       id: recovery_services_backup_policy_resource_id
-      type:
+      type: &id064
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id065
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -742,20 +778,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id066
       - bool
-    return:
+    return: &id067
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.BackupLongTermRetentionPolicy'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id069
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
   langs:
@@ -785,13 +821,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id070
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id071
       - str
     - description: 'The name of the database for which database
 
@@ -799,20 +835,20 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id072
       - str
     - description: 'The database Threat Detection policy.
 
         '
       id: parameters
-      type:
+      type: &id073
       - azure.mgmt.sql.models.DatabaseSecurityAlertPolicy
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id074
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -821,7 +857,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id075
       - bool
     - description: '*Operation configuration
 
@@ -829,16 +865,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id076
       type:
       - azure.mgmt.sql.models.DatabaseSecurityAlertPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id078
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
   langs:
@@ -870,13 +906,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id079
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id080
       - str
     - description: 'The name of the database for which setting the
 
@@ -884,7 +920,7 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id081
       - str
     - defaultValue: None
       description: 'The status of the database transparent data encryption.
@@ -893,7 +929,7 @@ items:
 
         '
       id: status
-      type:
+      type: &id082
       - 'str or @azure.mgmt.sql.models.TransparentDataEncryptionStatus
 
         '
@@ -902,7 +938,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id083
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -911,7 +947,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id084
       - bool
     - description: '*Operation configuration
 
@@ -919,16 +955,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id085
       type:
       - azure.mgmt.sql.models.TransparentDataEncryption
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id087
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.delete
   langs:
@@ -958,26 +994,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id088
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id089
       - str
     - description: 'The name of the database to be deleted.
 
         '
       id: database_name
-      type:
+      type: &id090
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id091
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -986,7 +1022,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id092
       - bool
     - description: '*Operation configuration
 
@@ -994,16 +1030,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id093
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.delete
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id095
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
   langs:
@@ -1033,13 +1069,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id096
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id097
       - str
     - description: 'The name of the database that has the
 
@@ -1047,20 +1083,20 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id098
       - str
     - description: 'The ID of the replication link to be deleted.
 
         '
       id: link_id
-      type:
+      type: &id099
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id100
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1069,7 +1105,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id101
       - bool
     - description: '*Operation configuration
 
@@ -1077,16 +1113,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id102
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id104
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.export
   langs:
@@ -1116,32 +1152,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id105
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id106
       - str
     - description: 'The name of the database to be exported.
 
         '
       id: database_name
-      type:
+      type: &id107
       - str
     - description: 'The required parameters for exporting a database.
 
         '
       id: parameters
-      type:
+      type: &id108
       - azure.mgmt.sql.models.ExportRequest
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id109
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1150,20 +1186,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id110
       - bool
-    return:
+    return: &id111
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.ImportExportResponse'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.export
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id113
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
   langs:
@@ -1195,13 +1231,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id114
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id115
       - str
     - description: 'The name of the database that has the
 
@@ -1209,20 +1245,20 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id116
       - str
     - description: 'The ID of the replication link to be failed over.
 
         '
       id: link_id
-      type:
+      type: &id117
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id118
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1231,20 +1267,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id119
       - bool
-    return:
+    return: &id120
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id122
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
   langs:
@@ -1276,13 +1312,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id123
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id124
       - str
     - description: 'The name of the database that has the
 
@@ -1290,20 +1326,20 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id125
       - str
     - description: 'The ID of the replication link to be failed over.
 
         '
       id: link_id
-      type:
+      type: &id126
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id127
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1312,20 +1348,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id128
       - bool
-    return:
+    return: &id129
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id131
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get
   langs:
@@ -1355,19 +1391,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id132
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id133
       - str
     - description: 'The name of the database to be retrieved.
 
         '
       id: database_name
-      type:
+      type: &id134
       - str
     - defaultValue: None
       description: 'A comma separated list of child objects to expand in
@@ -1378,14 +1414,14 @@ items:
 
         '
       id: expand
-      type:
+      type: &id135
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id136
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1394,7 +1430,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id137
       - bool
     - description: '*Operation configuration
 
@@ -1402,16 +1438,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id138
       type:
       - azure.mgmt.sql.models.Database
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id140
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
   langs:
@@ -1441,26 +1477,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id141
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id142
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id143
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id144
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1469,7 +1505,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id145
       - bool
     - description: '*Operation configuration
 
@@ -1477,16 +1513,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id146
       type:
       - azure.mgmt.sql.models.BackupLongTermRetentionPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id148
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
   langs:
@@ -1516,13 +1552,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id149
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id150
       - str
     - description: 'The name of the database for which the blob
 
@@ -1530,14 +1566,14 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id151
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id152
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1546,7 +1582,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id153
       - bool
     - description: '*Operation configuration
 
@@ -1554,16 +1590,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id154
       type:
       - azure.mgmt.sql.models.DatabaseBlobAuditingPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id156
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
   langs:
@@ -1593,26 +1629,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id157
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id158
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id159
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id160
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1621,7 +1657,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id161
       - bool
     - description: '*Operation configuration
 
@@ -1629,16 +1665,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id162
       type:
       - azure.mgmt.sql.models.DataMaskingPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id164
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
   langs:
@@ -1668,26 +1704,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id165
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id166
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id167
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id168
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1696,7 +1732,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id169
       - bool
     - description: '*Operation configuration
 
@@ -1704,16 +1740,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id170
       type:
       - azure.mgmt.sql.models.GeoBackupPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id172
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
   langs:
@@ -1743,32 +1779,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id173
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id174
       - str
     - description: 'The name of the database to get the link for.
 
         '
       id: database_name
-      type:
+      type: &id175
       - str
     - description: 'The replication link ID to be retrieved.
 
         '
       id: link_id
-      type:
+      type: &id176
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id177
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1777,7 +1813,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id178
       - bool
     - description: '*Operation configuration
 
@@ -1785,16 +1821,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id179
       type:
       - azure.mgmt.sql.models.ReplicationLink
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id181
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
   langs:
@@ -1824,32 +1860,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id182
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id183
       - str
     - description: 'The name of database.
 
         '
       id: database_name
-      type:
+      type: &id184
       - str
     - description: 'The name of service tier advisor.
 
         '
       id: service_tier_advisor_name
-      type:
+      type: &id185
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id186
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1858,7 +1894,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id187
       - bool
     - description: '*Operation configuration
 
@@ -1866,16 +1902,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id188
       type:
       - azure.mgmt.sql.models.ServiceTierAdvisor
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id190
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
   langs:
@@ -1905,13 +1941,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id191
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id192
       - str
     - description: 'The name of the database for which database
 
@@ -1919,14 +1955,14 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id193
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id194
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1935,7 +1971,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id195
       - bool
     - description: '*Operation configuration
 
@@ -1943,16 +1979,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id196
       type:
       - azure.mgmt.sql.models.DatabaseSecurityAlertPolicy
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id198
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
   langs:
@@ -1982,13 +2018,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id199
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id200
       - str
     - description: 'The name of the database for which the
 
@@ -1996,14 +2032,14 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id201
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id202
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2012,7 +2048,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id203
       - bool
     - description: '*Operation configuration
 
@@ -2020,16 +2056,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id204
       type:
       - azure.mgmt.sql.models.TransparentDataEncryption
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id206
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.import_method
   langs:
@@ -2059,13 +2095,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id207
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id208
       - str
     - description: 'The required parameters for importing a Bacpac into
 
@@ -2073,14 +2109,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id209
       - azure.mgmt.sql.models.ImportRequest
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id210
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2089,20 +2125,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id211
       - bool
-    return:
+    return: &id212
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.sql.models.ImportExportResponse'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.import_method
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id214
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
   langs:
@@ -2132,13 +2168,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id215
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id216
       - str
     - defaultValue: None
       description: 'A comma separated list of child objects to expand in
@@ -2149,7 +2185,7 @@ items:
 
         '
       id: expand
-      type:
+      type: &id217
       - str
     - defaultValue: None
       description: 'An OData filter expression that describes a subset of
@@ -2158,14 +2194,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id218
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id219
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2174,7 +2210,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id220
       - bool
     - description: '*Operation configuration
 
@@ -2182,13 +2218,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id221
       type:
       - azure.mgmt.sql.models.DatabasePaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id223
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
   langs:
@@ -2218,26 +2254,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id224
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id225
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id226
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id227
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2246,7 +2282,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id228
       - bool
     - description: '*Operation configuration
 
@@ -2254,13 +2290,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id229
       type:
       - azure.mgmt.sql.models.DataMaskingRulePaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id231
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
   langs:
@@ -2290,26 +2326,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id232
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id233
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id234
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id235
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2318,7 +2354,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id236
       - bool
     - description: '*Operation configuration
 
@@ -2326,13 +2362,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id237
       type:
       - azure.mgmt.sql.models.GeoBackupPolicyPaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id239
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
   langs:
@@ -2362,26 +2398,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id240
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id241
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id242
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id243
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2390,7 +2426,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id244
       - bool
     - description: '*Operation configuration
 
@@ -2398,13 +2434,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id245
       type:
       - azure.mgmt.sql.models.MetricDefinitionPaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id247
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
   langs:
@@ -2434,19 +2470,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id248
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id249
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id250
       - str
     - description: 'An OData filter expression that describes a subset of
 
@@ -2454,14 +2490,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id251
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id252
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2470,7 +2506,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id253
       - bool
     - description: '*Operation configuration
 
@@ -2478,13 +2514,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id254
       type:
       - azure.mgmt.sql.models.MetricPaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id256
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
   langs:
@@ -2514,26 +2550,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id257
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id258
       - str
     - description: 'The name of the database to retrieve links for.
 
         '
       id: database_name
-      type:
+      type: &id259
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id260
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2542,7 +2578,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id261
       - bool
     - description: '*Operation configuration
 
@@ -2550,13 +2586,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id262
       type:
       - azure.mgmt.sql.models.ReplicationLinkPaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id264
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
   langs:
@@ -2586,13 +2622,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id265
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id266
       - str
     - description: 'The name of the database to get available
 
@@ -2600,14 +2636,14 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id267
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id268
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2616,7 +2652,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id269
       - bool
     - description: '*Operation configuration
 
@@ -2624,13 +2660,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id270
       type:
       - azure.mgmt.sql.models.RestorePointPaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id272
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
   langs:
@@ -2660,26 +2696,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id273
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id274
       - str
     - description: 'The name of database.
 
         '
       id: database_name
-      type:
+      type: &id275
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id276
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2688,7 +2724,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id277
       - bool
     - description: '*Operation configuration
 
@@ -2696,13 +2732,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id278
       type:
       - azure.mgmt.sql.models.ServiceTierAdvisorPaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id280
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
   langs:
@@ -2732,13 +2768,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id281
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id282
       - str
     - description: 'The name of the database for which the
 
@@ -2746,14 +2782,14 @@ items:
 
         '
       id: database_name
-      type:
+      type: &id283
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id284
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2762,7 +2798,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id285
       - bool
     - description: '*Operation configuration
 
@@ -2770,13 +2806,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id286
       type:
       - azure.mgmt.sql.models.TransparentDataEncryptionActivityPaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id288
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.list_usages
   langs:
@@ -2806,26 +2842,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id289
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id290
       - str
     - description: 'The name of the database.
 
         '
       id: database_name
-      type:
+      type: &id291
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id292
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2834,7 +2870,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id293
       - bool
     - description: '*Operation configuration
 
@@ -2842,13 +2878,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id294
       type:
       - azure.mgmt.sql.models.DatabaseUsagePaged
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.list_usages
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id296
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.pause
   langs:
@@ -2878,26 +2914,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id297
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id298
       - str
     - description: 'The name of the data warehouse to pause.
 
         '
       id: database_name
-      type:
+      type: &id299
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id300
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2906,20 +2942,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id301
       - bool
-    return:
+    return: &id302
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.pause
 - class: azure.mgmt.sql.operations.DatabasesOperations
-  exceptions:
+  exceptions: &id304
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.sql.operations.DatabasesOperations.resume
   langs:
@@ -2949,26 +2985,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id305
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id306
       - str
     - description: 'The name of the data warehouse to resume.
 
         '
       id: database_name
-      type:
+      type: &id307
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id308
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2977,19 +3013,2984 @@ items:
 
         '
       id: raw
-      type:
+      type: &id309
       - bool
-    return:
+    return: &id310
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.sql.operations.DatabasesOperations.resume
+- children:
+  - azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+  - azure.mgmt.sql.operations.DatabasesOperations.delete
+  - azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+  - azure.mgmt.sql.operations.DatabasesOperations.export
+  - azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+  - azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+  - azure.mgmt.sql.operations.DatabasesOperations.get
+  - azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+  - azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+  - azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+  - azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+  - azure.mgmt.sql.operations.DatabasesOperations.import_method
+  - azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+  - azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+  - azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+  - azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+  - azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+  - azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+  - azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+  - azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+  - azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+  - azure.mgmt.sql.operations.DatabasesOperations.list_usages
+  - azure.mgmt.sql.operations.DatabasesOperations.pause
+  - azure.mgmt.sql.operations.DatabasesOperations.resume
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  fullName: azure.mgmt.sql.operations.DatabasesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: DatabasesOperations
+  source:
+    id: DatabasesOperations
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'DatabasesOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: DatabasesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.sql.operations.DatabasesOperations
+- &id011
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_import_operation
+  source:
+    id: create_import_operation
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 766
+  summary: 'Creates an import operation that imports a bacpac into an existing
+
+    database. The existing database must be empty.
+
+    '
+  syntax:
+    content: create_import_operation(resource_group_name, server_name, database_name,
+      parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id005
+    - description: 'The name of the database to import into
+
+        '
+      id: database_name
+      type: *id006
+    - description: 'The required parameters for importing a Bacpac into
+
+        a database.
+
+        '
+      id: parameters
+      type: *id007
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id008
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id009
+    return: *id010
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+- *id011
+- &id020
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id012
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1681
+  summary: 'Creates a new database or updates an existing database. Location is a
+
+    required property in the request body, and it must be the same as the
+
+    location of the SQL server.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, server_name, database_name, parameters,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id013
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id014
+    - description: 'The name of the database to be operated on
+
+        (updated or created).
+
+        '
+      id: database_name
+      type: *id015
+    - description: 'The required parameters for creating or updating a
+
+        database.
+
+        '
+      id: parameters
+      type: *id016
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id017
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id018
+    return: *id019
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+- *id020
+- &id029
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id021
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_blob_auditing_policy
+  source:
+    id: create_or_update_blob_auditing_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2857
+  summary: 'Creates or updates a database''s blob auditing policy.
+
+    '
+  syntax:
+    content: create_or_update_blob_auditing_policy(resource_group_name, server_name,
+      database_name, parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id022
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id023
+    - description: 'The name of the database for which the blob
+
+        auditing policy will be defined.
+
+        '
+      id: database_name
+      type: *id024
+    - description: 'The database blob auditing policy.
+
+        '
+      id: parameters
+      type: *id025
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id028
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+- *id029
+- &id039
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id030
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_data_masking_policy
+  source:
+    id: create_or_update_data_masking_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 126
+  summary: 'Creates or updates a database data masking policy.
+
+    '
+  syntax:
+    content: create_or_update_data_masking_policy(resource_group_name, server_name,
+      database_name, data_masking_state, exempt_principals=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id031
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id032
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id033
+    - description: 'The state of the data masking policy.
+
+        Possible values include: ''Disabled'', ''Enabled''
+
+        '
+      id: data_masking_state
+      type: *id034
+    - defaultValue: None
+      description: 'The list of the exempt principals. Specifies
+
+        the semicolon-separated list of database users for which the data
+
+        masking policy does not apply. The specified users receive data
+
+        results without masking for all of the database queries.
+
+        '
+      id: exempt_principals
+      type: *id035
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id036
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id037
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id038
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+- *id039
+- &id049
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id040
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_data_masking_rule
+  source:
+    id: create_or_update_data_masking_rule
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 281
+  summary: 'Creates or updates a database data masking rule.
+
+    '
+  syntax:
+    content: create_or_update_data_masking_rule(resource_group_name, server_name,
+      database_name, data_masking_rule_name, parameters, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id041
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id042
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id043
+    - description: 'The name of the data masking rule.
+
+        '
+      id: data_masking_rule_name
+      type: *id044
+    - description: 'The required parameters for creating or updating a
+
+        data masking rule.
+
+        '
+      id: parameters
+      type: *id045
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id046
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id047
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id048
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+- *id049
+- &id058
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id050
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_geo_backup_policy
+  source:
+    id: create_or_update_geo_backup_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 441
+  summary: 'Updates a database geo backup policy.
+
+    '
+  syntax:
+    content: create_or_update_geo_backup_policy(resource_group_name, server_name,
+      database_name, state, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id051
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id052
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id053
+    - description: 'The state of the geo backup policy. Possible values
+
+        include: ''Disabled'', ''Enabled''
+
+        '
+      id: state
+      type: *id054
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id055
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id056
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id057
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+- *id058
+- &id068
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id059
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_long_term_retention_policy
+  source:
+    id: create_or_update_long_term_retention_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2602
+  summary: 'Creates or updates a database backup long term retention policy.
+
+    '
+  syntax:
+    content: create_or_update_long_term_retention_policy(resource_group_name, server_name,
+      database_name, state, recovery_services_backup_policy_resource_id, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id060
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id061
+    - description: 'The name of the database
+
+        '
+      id: database_name
+      type: *id062
+    - description: 'The status of the backup long term retention policy.
+
+        Possible values include: ''Disabled'', ''Enabled''
+
+        '
+      id: state
+      type: *id063
+    - description: 'The azure recovery
+
+        services backup protection policy resource id
+
+        '
+      id: recovery_services_backup_policy_resource_id
+      type: *id064
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id065
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id066
+    return: *id067
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+- *id068
+- &id077
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id069
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_threat_detection_policy
+  source:
+    id: create_or_update_threat_detection_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2452
+  summary: 'Creates or updates a database''s threat detection policy.
+
+    '
+  syntax:
+    content: create_or_update_threat_detection_policy(resource_group_name, server_name,
+      database_name, parameters, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id070
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id071
+    - description: 'The name of the database for which database
+
+        Threat Detection policy is defined.
+
+        '
+      id: database_name
+      type: *id072
+    - description: 'The database Threat Detection policy.
+
+        '
+      id: parameters
+      type: *id073
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id074
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id075
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id076
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+- *id077
+- &id086
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id078
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: create_or_update_transparent_data_encryption_configuration
+  source:
+    id: create_or_update_transparent_data_encryption_configuration
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2151
+  summary: 'Creates or updates a database''s transparent data encryption
+
+    configuration.
+
+    '
+  syntax:
+    content: create_or_update_transparent_data_encryption_configuration(resource_group_name,
+      server_name, database_name, status=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id079
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id080
+    - description: 'The name of the database for which setting the
+
+        transparent data encryption applies.
+
+        '
+      id: database_name
+      type: *id081
+    - defaultValue: None
+      description: 'The status of the database transparent data encryption.
+
+        Possible values include: ''Enabled'', ''Disabled''
+
+        '
+      id: status
+      type: *id082
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id083
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id084
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id085
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+- *id086
+- &id094
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id087
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1785
+  summary: 'Deletes a database.
+
+    '
+  syntax:
+    content: delete(resource_group_name, server_name, database_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id088
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id089
+    - description: 'The name of the database to be deleted.
+
+        '
+      id: database_name
+      type: *id090
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id091
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id092
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id093
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.delete
+- *id094
+- &id103
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id095
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: delete_replication_link
+  source:
+    id: delete_replication_link
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1122
+  summary: 'Deletes a database replication link. Cannot be done during failover.
+
+    '
+  syntax:
+    content: delete_replication_link(resource_group_name, server_name, database_name,
+      link_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id096
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id097
+    - description: 'The name of the database that has the
+
+        replication link to be dropped.
+
+        '
+      id: database_name
+      type: *id098
+    - description: 'The ID of the replication link to be deleted.
+
+        '
+      id: link_id
+      type: *id099
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id100
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id101
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id102
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+- *id103
+- &id112
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id104
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.export
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: export
+  source:
+    id: export
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 868
+  summary: 'Exports a database to a bacpac.
+
+    '
+  syntax:
+    content: export(resource_group_name, server_name, database_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id105
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id106
+    - description: 'The name of the database to be exported.
+
+        '
+      id: database_name
+      type: *id107
+    - description: 'The required parameters for exporting a database.
+
+        '
+      id: parameters
+      type: *id108
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id109
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id110
+    return: *id111
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.export
+- *id112
+- &id121
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id113
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: failover_replication_link
+  source:
+    id: failover_replication_link
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1259
+  summary: 'Sets which replica database is primary by failing over from the current
+
+    primary replica database.
+
+    '
+  syntax:
+    content: failover_replication_link(resource_group_name, server_name, database_name,
+      link_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id114
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id115
+    - description: 'The name of the database that has the
+
+        replication link to be failed over.
+
+        '
+      id: database_name
+      type: *id116
+    - description: 'The ID of the replication link to be failed over.
+
+        '
+      id: link_id
+      type: *id117
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id118
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id119
+    return: *id120
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+- *id121
+- &id130
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id122
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: failover_replication_link_allow_data_loss
+  source:
+    id: failover_replication_link_allow_data_loss
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1348
+  summary: 'Sets which replica database is primary by failing over from the current
+
+    primary replica database. This operation might result in data loss.
+
+    '
+  syntax:
+    content: failover_replication_link_allow_data_loss(resource_group_name, server_name,
+      database_name, link_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id123
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id124
+    - description: 'The name of the database that has the
+
+        replication link to be failed over.
+
+        '
+      id: database_name
+      type: *id125
+    - description: 'The ID of the replication link to be failed over.
+
+        '
+      id: link_id
+      type: *id126
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id127
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id128
+    return: *id129
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+- *id130
+- &id139
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id131
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1846
+  summary: 'Gets a database.
+
+    '
+  syntax:
+    content: get(resource_group_name, server_name, database_name, expand=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id132
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id133
+    - description: 'The name of the database to be retrieved.
+
+        '
+      id: database_name
+      type: *id134
+    - defaultValue: None
+      description: 'A comma separated list of child objects to expand in
+
+        the response. Possible properties: serviceTierAdvisors,
+
+        transparentDataEncryption.
+
+        '
+      id: expand
+      type: *id135
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id136
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id137
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id138
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get
+- *id139
+- &id147
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id140
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_backup_long_term_retention_policy
+  source:
+    id: get_backup_long_term_retention_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2532
+  summary: 'Returns a database backup long term retention policy.
+
+    '
+  syntax:
+    content: get_backup_long_term_retention_policy(resource_group_name, server_name,
+      database_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id141
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id142
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id143
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id144
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id145
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id146
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+- *id147
+- &id155
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id148
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_blob_auditing_policy
+  source:
+    id: get_blob_auditing_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2786
+  summary: 'Gets a database''s blob auditing policy.
+
+    '
+  syntax:
+    content: get_blob_auditing_policy(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id149
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id150
+    - description: 'The name of the database for which the blob
+
+        audit policy is defined.
+
+        '
+      id: database_name
+      type: *id151
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id152
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id153
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id154
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+- *id155
+- &id163
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id156
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_data_masking_policy
+  source:
+    id: get_data_masking_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 211
+  summary: 'Gets a database data masking policy.
+
+    '
+  syntax:
+    content: get_data_masking_policy(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id157
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id158
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id159
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id160
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id161
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id162
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+- *id163
+- &id171
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id164
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_geo_backup_policy
+  source:
+    id: get_geo_backup_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 523
+  summary: 'Gets a geo backup policy.
+
+    '
+  syntax:
+    content: get_geo_backup_policy(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id165
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id166
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id167
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id168
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id169
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id170
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+- *id171
+- &id180
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id172
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_replication_link
+  source:
+    id: get_replication_link
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1187
+  summary: 'Gets a database replication link.
+
+    '
+  syntax:
+    content: get_replication_link(resource_group_name, server_name, database_name,
+      link_id, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id173
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id174
+    - description: 'The name of the database to get the link for.
+
+        '
+      id: database_name
+      type: *id175
+    - description: 'The replication link ID to be retrieved.
+
+        '
+      id: link_id
+      type: *id176
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id177
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id178
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id179
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+- *id180
+- &id189
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id181
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_service_tier_advisor
+  source:
+    id: get_service_tier_advisor
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2003
+  summary: 'Gets a service tier advisor.
+
+    '
+  syntax:
+    content: get_service_tier_advisor(resource_group_name, server_name, database_name,
+      service_tier_advisor_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id182
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id183
+    - description: 'The name of database.
+
+        '
+      id: database_name
+      type: *id184
+    - description: 'The name of service tier advisor.
+
+        '
+      id: service_tier_advisor_name
+      type: *id185
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id186
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id187
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id188
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+- *id189
+- &id197
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id190
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_threat_detection_policy
+  source:
+    id: get_threat_detection_policy
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2381
+  summary: 'Gets a database''s threat detection policy.
+
+    '
+  syntax:
+    content: get_threat_detection_policy(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id191
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id192
+    - description: 'The name of the database for which database
+
+        Threat Detection policy is defined.
+
+        '
+      id: database_name
+      type: *id193
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id194
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id195
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id196
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+- *id197
+- &id205
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id198
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: get_transparent_data_encryption_configuration
+  source:
+    id: get_transparent_data_encryption_configuration
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2234
+  summary: 'Gets a database''s transparent data encryption configuration.
+
+    '
+  syntax:
+    content: get_transparent_data_encryption_configuration(resource_group_name, server_name,
+      database_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id199
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id200
+    - description: 'The name of the database for which the
+
+        transparent data encryption applies.
+
+        '
+      id: database_name
+      type: *id201
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id202
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id203
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id204
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+- *id205
+- &id213
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id206
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.import_method
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: import_method
+  source:
+    id: import_method
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 669
+  summary: 'Imports a bacpac into a new database. .
+
+    '
+  syntax:
+    content: import_method(resource_group_name, server_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id207
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id208
+    - description: 'The required parameters for importing a Bacpac into
+
+        a database.
+
+        '
+      id: parameters
+      type: *id209
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id210
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id211
+    return: *id212
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.import_method
+- *id213
+- &id222
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id214
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_by_server
+  source:
+    id: list_by_server
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1920
+  summary: 'Returns a list of databases in a server.
+
+    '
+  syntax:
+    content: list_by_server(resource_group_name, server_name, expand=None, filter=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id215
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id216
+    - defaultValue: None
+      description: 'A comma separated list of child objects to expand in
+
+        the response. Possible properties: serviceTierAdvisors,
+
+        transparentDataEncryption.
+
+        '
+      id: expand
+      type: *id217
+    - defaultValue: None
+      description: 'An OData filter expression that describes a subset of
+
+        databases to return.
+
+        '
+      id: filter
+      type: *id218
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id219
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id220
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id221
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+- *id222
+- &id230
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id223
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_data_masking_rules
+  source:
+    id: list_data_masking_rules
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 364
+  summary: 'Gets a list of database data masking rules.
+
+    '
+  syntax:
+    content: list_data_masking_rules(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id224
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id225
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id226
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id227
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id228
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id229
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+- *id230
+- &id238
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id231
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_geo_backup_policies
+  source:
+    id: list_geo_backup_policies
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 593
+  summary: 'Returns a list of geo backup policies.
+
+    '
+  syntax:
+    content: list_geo_backup_policies(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id232
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id233
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id234
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id235
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id236
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id237
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+- *id238
+- &id246
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id239
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_metric_definitions
+  source:
+    id: list_metric_definitions
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1046
+  summary: 'Returns database metric definitions.
+
+    '
+  syntax:
+    content: list_metric_definitions(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id240
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id241
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id242
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id243
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id244
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id245
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+- *id246
+- &id255
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id247
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_metrics
+  source:
+    id: list_metrics
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 967
+  summary: 'Returns database metrics.
+
+    '
+  syntax:
+    content: list_metrics(resource_group_name, server_name, database_name, filter,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id248
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id249
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id250
+    - description: 'An OData filter expression that describes a subset of
+
+        metrics to return.
+
+        '
+      id: filter
+      type: *id251
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id252
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id253
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id254
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+- *id255
+- &id263
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id256
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_replication_links
+  source:
+    id: list_replication_links
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1437
+  summary: 'Lists a database''s replication links.
+
+    '
+  syntax:
+    content: list_replication_links(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id257
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id258
+    - description: 'The name of the database to retrieve links for.
+
+        '
+      id: database_name
+      type: *id259
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id260
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id261
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id262
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+- *id263
+- &id271
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id264
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_restore_points
+  source:
+    id: list_restore_points
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 49
+  summary: 'Gets a list of database restore points.
+
+    '
+  syntax:
+    content: list_restore_points(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id265
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id266
+    - description: 'The name of the database to get available
+
+        restore points.
+
+        '
+      id: database_name
+      type: *id267
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id268
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id269
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id270
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+- *id271
+- &id279
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id272
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_service_tier_advisors
+  source:
+    id: list_service_tier_advisors
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2075
+  summary: 'Returns service tier advisors for specified database.
+
+    '
+  syntax:
+    content: list_service_tier_advisors(resource_group_name, server_name, database_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id273
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id274
+    - description: 'The name of database.
+
+        '
+      id: database_name
+      type: *id275
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id276
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id277
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id278
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+- *id279
+- &id287
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id280
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_transparent_data_encryption_activity
+  source:
+    id: list_transparent_data_encryption_activity
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2304
+  summary: 'Returns a database''s transparent data encryption operation result.
+
+    '
+  syntax:
+    content: list_transparent_data_encryption_activity(resource_group_name, server_name,
+      database_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id281
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id282
+    - description: 'The name of the database for which the
+
+        transparent data encryption applies.
+
+        '
+      id: database_name
+      type: *id283
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id284
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id285
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id286
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+- *id287
+- &id295
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id288
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.list_usages
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: list_usages
+  source:
+    id: list_usages
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 2710
+  summary: 'Returns database usages.
+
+    '
+  syntax:
+    content: list_usages(resource_group_name, server_name, database_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id289
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id290
+    - description: 'The name of the database.
+
+        '
+      id: database_name
+      type: *id291
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id292
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id293
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id294
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_usages
+- *id295
+- &id303
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id296
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.pause
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: pause
+  source:
+    id: pause
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1513
+  summary: 'Pauses a data warehouse.
+
+    '
+  syntax:
+    content: pause(resource_group_name, server_name, database_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id297
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id298
+    - description: 'The name of the data warehouse to pause.
+
+        '
+      id: database_name
+      type: *id299
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id300
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id301
+    return: *id302
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.pause
+- *id303
+- &id311
+  class: azure.mgmt.sql.operations.DatabasesOperations
+  exceptions: *id304
+  fullName: azure.mgmt.sql.operations.DatabasesOperations.resume
+  langs:
+  - python
+  module: azure.mgmt.sql.operations
+  name: resume
+  source:
+    id: resume
+    path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\operations\databases_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1597
+  summary: 'Resumes a data warehouse.
+
+    '
+  syntax:
+    content: resume(resource_group_name, server_name, database_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id305
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id306
+    - description: 'The name of the data warehouse to resume.
+
+        '
+      id: database_name
+      type: *id307
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id308
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id309
+    return: *id310
+  type: method
+  uid: azure.mgmt.sql.operations.DatabasesOperations.resume
+- *id311
 references:
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+  isExternal: false
+  name: create_import_operation
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+  isExternal: false
+  name: create_or_update_blob_auditing_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+  isExternal: false
+  name: create_or_update_data_masking_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+  isExternal: false
+  name: create_or_update_data_masking_rule
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+  isExternal: false
+  name: create_or_update_geo_backup_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+  isExternal: false
+  name: create_or_update_long_term_retention_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+  isExternal: false
+  name: create_or_update_threat_detection_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+  isExternal: false
+  name: create_or_update_transparent_data_encryption_configuration
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.delete
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+  isExternal: false
+  name: delete_replication_link
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.export
+  isExternal: false
+  name: export
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.export
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+  isExternal: false
+  name: failover_replication_link
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+  isExternal: false
+  name: failover_replication_link_allow_data_loss
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+  isExternal: false
+  name: get_backup_long_term_retention_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+  isExternal: false
+  name: get_blob_auditing_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+  isExternal: false
+  name: get_data_masking_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+  isExternal: false
+  name: get_geo_backup_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+  isExternal: false
+  name: get_replication_link
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+  isExternal: false
+  name: get_service_tier_advisor
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+  isExternal: false
+  name: get_threat_detection_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+  isExternal: false
+  name: get_transparent_data_encryption_configuration
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.import_method
+  isExternal: false
+  name: import_method
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.import_method
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+  isExternal: false
+  name: list_by_server
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+  isExternal: false
+  name: list_data_masking_rules
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+  isExternal: false
+  name: list_geo_backup_policies
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+  isExternal: false
+  name: list_metric_definitions
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+  isExternal: false
+  name: list_replication_links
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+  isExternal: false
+  name: list_restore_points
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+  isExternal: false
+  name: list_service_tier_advisors
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+  isExternal: false
+  name: list_transparent_data_encryption_activity
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_usages
+  isExternal: false
+  name: list_usages
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_usages
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.pause
+  isExternal: false
+  name: pause
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.pause
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.resume
+  isExternal: false
+  name: resume
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.resume
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+  isExternal: false
+  name: create_import_operation
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+  isExternal: false
+  name: create_or_update_blob_auditing_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_blob_auditing_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+  isExternal: false
+  name: create_or_update_data_masking_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+  isExternal: false
+  name: create_or_update_data_masking_rule
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_data_masking_rule
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+  isExternal: false
+  name: create_or_update_geo_backup_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_geo_backup_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+  isExternal: false
+  name: create_or_update_long_term_retention_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_long_term_retention_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+  isExternal: false
+  name: create_or_update_threat_detection_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_threat_detection_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+  isExternal: false
+  name: create_or_update_transparent_data_encryption_configuration
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.create_or_update_transparent_data_encryption_configuration
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.delete
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+  isExternal: false
+  name: delete_replication_link
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.delete_replication_link
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.export
+  isExternal: false
+  name: export
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.export
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+  isExternal: false
+  name: failover_replication_link
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+  isExternal: false
+  name: failover_replication_link_allow_data_loss
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.failover_replication_link_allow_data_loss
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+  isExternal: false
+  name: get_backup_long_term_retention_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_backup_long_term_retention_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+  isExternal: false
+  name: get_blob_auditing_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_blob_auditing_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+  isExternal: false
+  name: get_data_masking_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_data_masking_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+  isExternal: false
+  name: get_geo_backup_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_geo_backup_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+  isExternal: false
+  name: get_replication_link
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_replication_link
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+  isExternal: false
+  name: get_service_tier_advisor
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_service_tier_advisor
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+  isExternal: false
+  name: get_threat_detection_policy
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_threat_detection_policy
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+  isExternal: false
+  name: get_transparent_data_encryption_configuration
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.get_transparent_data_encryption_configuration
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.import_method
+  isExternal: false
+  name: import_method
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.import_method
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+  isExternal: false
+  name: list_by_server
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_by_server
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+  isExternal: false
+  name: list_data_masking_rules
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_data_masking_rules
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+  isExternal: false
+  name: list_geo_backup_policies
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_geo_backup_policies
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+  isExternal: false
+  name: list_metric_definitions
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_metric_definitions
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_metrics
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+  isExternal: false
+  name: list_replication_links
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_replication_links
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+  isExternal: false
+  name: list_restore_points
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_restore_points
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+  isExternal: false
+  name: list_service_tier_advisors
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_service_tier_advisors
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+  isExternal: false
+  name: list_transparent_data_encryption_activity
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_transparent_data_encryption_activity
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.list_usages
+  isExternal: false
+  name: list_usages
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.list_usages
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.pause
+  isExternal: false
+  name: pause
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.pause
+- fullName: azure.mgmt.sql.operations.DatabasesOperations.resume
+  isExternal: false
+  name: resume
+  parent: azure.mgmt.sql.operations.DatabasesOperations
+  uid: azure.mgmt.sql.operations.DatabasesOperations.resume
 - fullName: azure.mgmt.sql.operations.DatabasesOperations.create_import_operation
   isExternal: false
   name: create_import_operation

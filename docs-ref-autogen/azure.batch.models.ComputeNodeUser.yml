@@ -26,7 +26,7 @@ items:
   syntax:
     content: ComputeNodeUser(name, is_admin=None, expiry_time=None, password=None,
       ssh_public_key=None)
-    parameters:
+    parameters: &id001
     - description: 'The user name of the account.
 
         '
@@ -81,6 +81,34 @@ items:
       id: ssh_public_key
       type:
       - str
+  type: class
+  uid: azure.batch.models.ComputeNodeUser
+- children: []
+  class: azure.batch.models.ComputeNodeUser
+  fullName: azure.batch.models.ComputeNodeUser
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: ComputeNodeUser
+  source:
+    id: ComputeNodeUser
+    path: azure-batch\azure\batch\models\compute_node_user.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\compute_node_user.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A user account for RDP or SSH access on a compute node.
+
+    '
+  syntax:
+    content: ComputeNodeUser(name, is_admin=None, expiry_time=None, password=None,
+      ssh_public_key=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.ComputeNodeUser
 references: []

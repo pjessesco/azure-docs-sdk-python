@@ -31,7 +31,7 @@ items:
     content: ShutdownNotificationContent(skip_url=None, delay_url60=None, delay_url120=None,
       vm_name=None, guid=None, owner=None, event_type=None, text=None, subscription_id=None,
       resource_group_name=None, lab_name=None)
-    parameters:
+    parameters: &id001
     - description: 'The URL to skip auto-shutdown.
 
         '
@@ -98,6 +98,39 @@ items:
       id: lab_name
       type:
       - str
+  type: class
+  uid: azure.mgmt.devtestlabs.models.ShutdownNotificationContent
+- children: []
+  class: azure.mgmt.devtestlabs.models.ShutdownNotificationContent
+  fullName: azure.mgmt.devtestlabs.models.ShutdownNotificationContent
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.models
+  name: ShutdownNotificationContent
+  source:
+    id: ShutdownNotificationContent
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\shutdown_notification_content.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\models\shutdown_notification_content.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The contents of a shutdown notification. Webhooks can use this type to
+
+    deserialize the request body when they get notified of an imminent
+
+    shutdown.
+
+    '
+  syntax:
+    content: ShutdownNotificationContent(skip_url=None, delay_url60=None, delay_url120=None,
+      vm_name=None, guid=None, owner=None, event_type=None, text=None, subscription_id=None,
+      resource_group_name=None, lab_name=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.devtestlabs.models.ShutdownNotificationContent
 references: []

@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
-- fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.express_route
+- children:
+  - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.express_route
+  - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.ipsec
+  - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vnet2_vnet
+  - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vpn_client
+  class: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
+  fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_03_01.models
+  name: VirtualNetworkGatewayConnectionType
+  source:
+    id: VirtualNetworkGatewayConnectionType
+    path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\models\network_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2017_03_01\models\network_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 370
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
+- &id001
+  fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.express_route
   id: express_route
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
   type: attribute
   uid: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.express_route
-- fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.ipsec
+- &id002
+  fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.ipsec
   id: ipsec
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
   type: attribute
   uid: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.ipsec
-- fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vnet2_vnet
+- &id003
+  fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vnet2_vnet
   id: vnet2_vnet
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
   type: attribute
   uid: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vnet2_vnet
-- fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vpn_client
+- &id004
+  fullName: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vpn_client
   id: vpn_client
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType
   type: attribute
   uid: azure.mgmt.network.v2017_03_01.models.VirtualNetworkGatewayConnectionType.vpn_client
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

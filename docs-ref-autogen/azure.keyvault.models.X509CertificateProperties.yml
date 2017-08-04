@@ -26,7 +26,7 @@ items:
   syntax:
     content: X509CertificateProperties(subject=None, ekus=None, subject_alternative_names=None,
       key_usage=None, validity_in_months=None)
-    parameters:
+    parameters: &id001
     - description: 'The subject name. Should be a valid X509 distinguished
 
         Name.
@@ -63,6 +63,34 @@ items:
       id: validity_in_months
       type:
       - int
+  type: class
+  uid: azure.keyvault.models.X509CertificateProperties
+- children: []
+  class: azure.keyvault.models.X509CertificateProperties
+  fullName: azure.keyvault.models.X509CertificateProperties
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.models
+  name: X509CertificateProperties
+  source:
+    id: X509CertificateProperties
+    path: azure-keyvault\azure\keyvault\models\x509_certificate_properties.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\x509_certificate_properties.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Properties of the X509 component of a certificate.
+
+    '
+  syntax:
+    content: X509CertificateProperties(subject=None, ekus=None, subject_alternative_names=None,
+      key_usage=None, validity_in_months=None)
+    parameters: *id001
   type: class
   uid: azure.keyvault.models.X509CertificateProperties
 references: []

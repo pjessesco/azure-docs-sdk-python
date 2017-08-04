@@ -26,7 +26,7 @@ items:
   syntax:
     content: MetricValue(time_stamp, average=None, minimum=None, maximum=None, total=None,
       count=None)
-    parameters:
+    parameters: &id001
     - description: 'the timestamp for the metric value in ISO 8601 format.
 
         '
@@ -65,6 +65,34 @@ items:
       id: count
       type:
       - long
+  type: class
+  uid: azure.monitor.models.MetricValue
+- children: []
+  class: azure.monitor.models.MetricValue
+  fullName: azure.monitor.models.MetricValue
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.monitor.models
+  name: MetricValue
+  source:
+    id: MetricValue
+    path: azure-monitor\azure\monitor\models\metric_value.py
+    remote:
+      branch: master
+      path: azure-monitor\azure\monitor\models\metric_value.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Represents a metric value.
+
+    '
+  syntax:
+    content: MetricValue(time_stamp, average=None, minimum=None, maximum=None, total=None,
+      count=None)
+    parameters: *id001
   type: class
   uid: azure.monitor.models.MetricValue
 references: []

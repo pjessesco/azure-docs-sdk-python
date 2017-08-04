@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.scheduler.models.HttpAuthenticationType
-- fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.active_directory_oauth
+- children:
+  - azure.mgmt.scheduler.models.HttpAuthenticationType.active_directory_oauth
+  - azure.mgmt.scheduler.models.HttpAuthenticationType.basic
+  - azure.mgmt.scheduler.models.HttpAuthenticationType.client_certificate
+  - azure.mgmt.scheduler.models.HttpAuthenticationType.not_specified
+  class: azure.mgmt.scheduler.models.HttpAuthenticationType
+  fullName: azure.mgmt.scheduler.models.HttpAuthenticationType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.scheduler.models
+  name: HttpAuthenticationType
+  source:
+    id: HttpAuthenticationType
+    path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\scheduler_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-scheduler\azure\mgmt\scheduler\models\scheduler_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 49
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.scheduler.models.HttpAuthenticationType
+- &id001
+  fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.active_directory_oauth
   id: active_directory_oauth
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.scheduler.models.HttpAuthenticationType
   type: attribute
   uid: azure.mgmt.scheduler.models.HttpAuthenticationType.active_directory_oauth
-- fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.basic
+- &id002
+  fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.basic
   id: basic
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.scheduler.models.HttpAuthenticationType
   type: attribute
   uid: azure.mgmt.scheduler.models.HttpAuthenticationType.basic
-- fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.client_certificate
+- &id003
+  fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.client_certificate
   id: client_certificate
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.scheduler.models.HttpAuthenticationType
   type: attribute
   uid: azure.mgmt.scheduler.models.HttpAuthenticationType.client_certificate
-- fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.not_specified
+- &id004
+  fullName: azure.mgmt.scheduler.models.HttpAuthenticationType.not_specified
   id: not_specified
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.scheduler.models.HttpAuthenticationType
   type: attribute
   uid: azure.mgmt.scheduler.models.HttpAuthenticationType.not_specified
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

@@ -26,7 +26,7 @@ items:
   syntax:
     content: FeedbackProperties(lock_duration_as_iso8601=None, ttl_as_iso8601=None,
       max_delivery_count=None)
-    parameters:
+    parameters: &id001
     - description: 'The lock duration for the feedback queue.
 
         See:
@@ -57,6 +57,34 @@ items:
       id: max_delivery_count
       type:
       - int
+  type: class
+  uid: azure.mgmt.iothub.models.FeedbackProperties
+- children: []
+  class: azure.mgmt.iothub.models.FeedbackProperties
+  fullName: azure.mgmt.iothub.models.FeedbackProperties
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.iothub.models
+  name: FeedbackProperties
+  source:
+    id: FeedbackProperties
+    path: azure-mgmt-iothub\azure\mgmt\iothub\models\feedback_properties.py
+    remote:
+      branch: master
+      path: azure-mgmt-iothub\azure\mgmt\iothub\models\feedback_properties.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The properties of the feedback queue for cloud-to-device messages.
+
+    '
+  syntax:
+    content: FeedbackProperties(lock_duration_as_iso8601=None, ttl_as_iso8601=None,
+      max_delivery_count=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.iothub.models.FeedbackProperties
 references: []

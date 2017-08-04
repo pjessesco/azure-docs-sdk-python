@@ -34,14 +34,14 @@ items:
     '
   syntax:
     content: ElasticPoolActivity(location=None)
-    parameters:
+    parameters: &id001
     - description: 'The geo-location where the resource lives
 
         '
       id: location
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource ID.
 
         '
@@ -190,6 +190,43 @@ items:
       id: requested_dtu_guarantee
       type:
       - int
+  type: class
+  uid: azure.mgmt.sql.models.ElasticPoolActivity
+- children: []
+  class: azure.mgmt.sql.models.ElasticPoolActivity
+  fullName: azure.mgmt.sql.models.ElasticPoolActivity
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: msrest.serialization.Model
+      type: azure.mgmt.sql.models.resource.Resource
+    type: azure.mgmt.sql.models.proxy_resource.ProxyResource
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: ElasticPoolActivity
+  source:
+    id: ElasticPoolActivity
+    path: azure-mgmt-sql\azure\mgmt\sql\models\elastic_pool_activity.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\elastic_pool_activity.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Represents the activity on an elastic pool.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: ElasticPoolActivity(location=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.sql.models.ElasticPoolActivity
 references: []

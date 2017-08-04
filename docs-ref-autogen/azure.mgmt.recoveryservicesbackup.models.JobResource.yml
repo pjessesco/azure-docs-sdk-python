@@ -32,7 +32,7 @@ items:
     '
   syntax:
     content: JobResource(location=None, tags=None, e_tag=None, properties=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location.
 
         '
@@ -57,7 +57,7 @@ items:
       id: properties
       type:
       - azure.mgmt.recoveryservicesbackup.models.Job
-    variables:
+    variables: &id002
     - description: 'Resource Id represents the complete path to the resource.
 
         '
@@ -78,6 +78,41 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.JobResource
+- children: []
+  class: azure.mgmt.recoveryservicesbackup.models.JobResource
+  fullName: azure.mgmt.recoveryservicesbackup.models.JobResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.recoveryservicesbackup.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: JobResource
+  source:
+    id: JobResource
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\job_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\job_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Defines workload agnostic properties for a job.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: JobResource(location=None, tags=None, e_tag=None, properties=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.JobResource
 references: []

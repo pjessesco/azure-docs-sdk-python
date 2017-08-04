@@ -36,7 +36,7 @@ items:
     content: DataMaskingRule(schema_name, table_name, column_name, masking_function,
       alias_name=None, rule_state=None, number_from=None, number_to=None, prefix_size=None,
       suffix_size=None, replacement_string=None)
-    parameters:
+    parameters: &id001
     - description: 'The alias name. This is a legacy parameter and is no
 
         longer used.
@@ -149,7 +149,7 @@ items:
       id: replacement_string
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Resource ID.
 
         '
@@ -188,6 +188,45 @@ items:
       id: kind
       type:
       - str
+  type: class
+  uid: azure.mgmt.sql.models.DataMaskingRule
+- children: []
+  class: azure.mgmt.sql.models.DataMaskingRule
+  fullName: azure.mgmt.sql.models.DataMaskingRule
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: msrest.serialization.Model
+      type: azure.mgmt.sql.models.resource.Resource
+    type: azure.mgmt.sql.models.proxy_resource.ProxyResource
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: DataMaskingRule
+  source:
+    id: DataMaskingRule
+    path: azure-mgmt-sql\azure\mgmt\sql\models\data_masking_rule.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\data_masking_rule.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Represents a database data masking rule.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: DataMaskingRule(schema_name, table_name, column_name, masking_function,
+      alias_name=None, rule_state=None, number_from=None, number_to=None, prefix_size=None,
+      suffix_size=None, replacement_string=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.sql.models.DataMaskingRule
 references: []

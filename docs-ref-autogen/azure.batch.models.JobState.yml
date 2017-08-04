@@ -40,7 +40,47 @@ items:
   syntax: {}
   type: class
   uid: azure.batch.models.JobState
-- fullName: azure.batch.models.JobState.active
+- children:
+  - azure.batch.models.JobState.active
+  - azure.batch.models.JobState.completed
+  - azure.batch.models.JobState.deleting
+  - azure.batch.models.JobState.disabled
+  - azure.batch.models.JobState.disabling
+  - azure.batch.models.JobState.enabling
+  - azure.batch.models.JobState.terminating
+  class: azure.batch.models.JobState
+  fullName: azure.batch.models.JobState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.batch.models
+  name: JobState
+  source:
+    id: JobState
+    path: azure-batch\azure\batch\models\batch_service_client_enums.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\batch_service_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 142
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.batch.models.JobState
+- &id001
+  fullName: azure.batch.models.JobState.active
   id: active
   langs:
   - python
@@ -54,7 +94,8 @@ items:
       - azure.batch.models.JobState
   type: attribute
   uid: azure.batch.models.JobState.active
-- fullName: azure.batch.models.JobState.completed
+- &id002
+  fullName: azure.batch.models.JobState.completed
   id: completed
   langs:
   - python
@@ -68,7 +109,8 @@ items:
       - azure.batch.models.JobState
   type: attribute
   uid: azure.batch.models.JobState.completed
-- fullName: azure.batch.models.JobState.deleting
+- &id003
+  fullName: azure.batch.models.JobState.deleting
   id: deleting
   langs:
   - python
@@ -82,7 +124,8 @@ items:
       - azure.batch.models.JobState
   type: attribute
   uid: azure.batch.models.JobState.deleting
-- fullName: azure.batch.models.JobState.disabled
+- &id004
+  fullName: azure.batch.models.JobState.disabled
   id: disabled
   langs:
   - python
@@ -96,7 +139,8 @@ items:
       - azure.batch.models.JobState
   type: attribute
   uid: azure.batch.models.JobState.disabled
-- fullName: azure.batch.models.JobState.disabling
+- &id005
+  fullName: azure.batch.models.JobState.disabling
   id: disabling
   langs:
   - python
@@ -110,7 +154,8 @@ items:
       - azure.batch.models.JobState
   type: attribute
   uid: azure.batch.models.JobState.disabling
-- fullName: azure.batch.models.JobState.enabling
+- &id006
+  fullName: azure.batch.models.JobState.enabling
   id: enabling
   langs:
   - python
@@ -124,7 +169,8 @@ items:
       - azure.batch.models.JobState
   type: attribute
   uid: azure.batch.models.JobState.enabling
-- fullName: azure.batch.models.JobState.terminating
+- &id007
+  fullName: azure.batch.models.JobState.terminating
   id: terminating
   langs:
   - python
@@ -138,4 +184,11 @@ items:
       - azure.batch.models.JobState
   type: attribute
   uid: azure.batch.models.JobState.terminating
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
 references: []

@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: ServerForCreate(properties, location, sku=None, tags=None)
-    parameters:
+    parameters: &id001
     - description: 'The SKU (pricing tier) of the server.
 
         '
@@ -50,6 +50,33 @@ items:
       id: tags
       type:
       - dict
+  type: class
+  uid: azure.mgmt.rdbms.postgresql.models.ServerForCreate
+- children: []
+  class: azure.mgmt.rdbms.postgresql.models.ServerForCreate
+  fullName: azure.mgmt.rdbms.postgresql.models.ServerForCreate
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.rdbms.postgresql.models
+  name: ServerForCreate
+  source:
+    id: ServerForCreate
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\models\server_for_create.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\models\server_for_create.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Represents a server to be created.
+
+    '
+  syntax:
+    content: ServerForCreate(properties, location, sku=None, tags=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.rdbms.postgresql.models.ServerForCreate
 references: []

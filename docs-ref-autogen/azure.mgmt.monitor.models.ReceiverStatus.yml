@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.monitor.models.ReceiverStatus
-- fullName: azure.mgmt.monitor.models.ReceiverStatus.disabled
+- children:
+  - azure.mgmt.monitor.models.ReceiverStatus.disabled
+  - azure.mgmt.monitor.models.ReceiverStatus.enabled
+  - azure.mgmt.monitor.models.ReceiverStatus.not_specified
+  class: azure.mgmt.monitor.models.ReceiverStatus
+  fullName: azure.mgmt.monitor.models.ReceiverStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.monitor.models
+  name: ReceiverStatus
+  source:
+    id: ReceiverStatus
+    path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-monitor\azure\mgmt\monitor\models\monitor_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 85
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.monitor.models.ReceiverStatus
+- &id001
+  fullName: azure.mgmt.monitor.models.ReceiverStatus.disabled
   id: disabled
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.monitor.models.ReceiverStatus
   type: attribute
   uid: azure.mgmt.monitor.models.ReceiverStatus.disabled
-- fullName: azure.mgmt.monitor.models.ReceiverStatus.enabled
+- &id002
+  fullName: azure.mgmt.monitor.models.ReceiverStatus.enabled
   id: enabled
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.monitor.models.ReceiverStatus
   type: attribute
   uid: azure.mgmt.monitor.models.ReceiverStatus.enabled
-- fullName: azure.mgmt.monitor.models.ReceiverStatus.not_specified
+- &id003
+  fullName: azure.mgmt.monitor.models.ReceiverStatus.not_specified
   id: not_specified
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.monitor.models.ReceiverStatus
   type: attribute
   uid: azure.mgmt.monitor.models.ReceiverStatus.not_specified
+- *id001
+- *id002
+- *id003
 references: []

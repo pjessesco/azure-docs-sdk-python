@@ -29,7 +29,7 @@ items:
     content: InboundNatPool(protocol, frontend_port_range_start, frontend_port_range_end,
       backend_port, id=None, frontend_ip_configuration=None, provisioning_state=None,
       name=None, etag=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource ID.
 
         '
@@ -104,6 +104,37 @@ items:
       id: etag
       type:
       - str
+  type: class
+  uid: azure.mgmt.network.v2016_12_01.models.InboundNatPool
+- children: []
+  class: azure.mgmt.network.v2016_12_01.models.InboundNatPool
+  fullName: azure.mgmt.network.v2016_12_01.models.InboundNatPool
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.network.v2016_12_01.models.sub_resource.SubResource
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.models
+  name: InboundNatPool
+  source:
+    id: InboundNatPool
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\inbound_nat_pool.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\inbound_nat_pool.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Inbound NAT pool of the load balancer.
+
+    '
+  syntax:
+    content: InboundNatPool(protocol, frontend_port_range_start, frontend_port_range_end,
+      backend_port, id=None, frontend_ip_configuration=None, provisioning_state=None,
+      name=None, etag=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.network.v2016_12_01.models.InboundNatPool
 references: []

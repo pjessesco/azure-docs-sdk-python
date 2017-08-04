@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.ComputeModeOptions
-- fullName: azure.mgmt.web.models.ComputeModeOptions.dedicated
+- children:
+  - azure.mgmt.web.models.ComputeModeOptions.dedicated
+  - azure.mgmt.web.models.ComputeModeOptions.dynamic
+  - azure.mgmt.web.models.ComputeModeOptions.shared
+  class: azure.mgmt.web.models.ComputeModeOptions
+  fullName: azure.mgmt.web.models.ComputeModeOptions
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: ComputeModeOptions
+  source:
+    id: ComputeModeOptions
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 92
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.ComputeModeOptions
+- &id001
+  fullName: azure.mgmt.web.models.ComputeModeOptions.dedicated
   id: dedicated
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.web.models.ComputeModeOptions
   type: attribute
   uid: azure.mgmt.web.models.ComputeModeOptions.dedicated
-- fullName: azure.mgmt.web.models.ComputeModeOptions.dynamic
+- &id002
+  fullName: azure.mgmt.web.models.ComputeModeOptions.dynamic
   id: dynamic
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.web.models.ComputeModeOptions
   type: attribute
   uid: azure.mgmt.web.models.ComputeModeOptions.dynamic
-- fullName: azure.mgmt.web.models.ComputeModeOptions.shared
+- &id003
+  fullName: azure.mgmt.web.models.ComputeModeOptions.shared
   id: shared
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.web.models.ComputeModeOptions
   type: attribute
   uid: azure.mgmt.web.models.ComputeModeOptions.shared
+- *id001
+- *id002
+- *id003
 references: []

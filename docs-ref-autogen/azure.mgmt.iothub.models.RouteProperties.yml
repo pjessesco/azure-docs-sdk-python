@@ -27,7 +27,7 @@ items:
     '
   syntax:
     content: RouteProperties(name, source, endpoint_names, is_enabled, condition=None)
-    parameters:
+    parameters: &id001
     - description: 'The name of the route. The name can only include alphanumeric
 
         characters, periods, underscores, hyphens, has a maximum length of 64
@@ -76,6 +76,35 @@ items:
       id: is_enabled
       type:
       - bool
+  type: class
+  uid: azure.mgmt.iothub.models.RouteProperties
+- children: []
+  class: azure.mgmt.iothub.models.RouteProperties
+  fullName: azure.mgmt.iothub.models.RouteProperties
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.mgmt.iothub.models
+  name: RouteProperties
+  source:
+    id: RouteProperties
+    path: azure-mgmt-iothub\azure\mgmt\iothub\models\route_properties.py
+    remote:
+      branch: master
+      path: azure-mgmt-iothub\azure\mgmt\iothub\models\route_properties.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The properties of a routing rule that your IoT hub uses to route messages
+
+    to endpoints.
+
+    '
+  syntax:
+    content: RouteProperties(name, source, endpoint_names, is_enabled, condition=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.iothub.models.RouteProperties
 references: []

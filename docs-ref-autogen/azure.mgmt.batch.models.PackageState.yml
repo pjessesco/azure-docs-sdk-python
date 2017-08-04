@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.batch.models.PackageState
-- fullName: azure.mgmt.batch.models.PackageState.active
+- children:
+  - azure.mgmt.batch.models.PackageState.active
+  - azure.mgmt.batch.models.PackageState.pending
+  - azure.mgmt.batch.models.PackageState.unmapped
+  class: azure.mgmt.batch.models.PackageState
+  fullName: azure.mgmt.batch.models.PackageState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.batch.models
+  name: PackageState
+  source:
+    id: PackageState
+    path: azure-mgmt-batch\azure\mgmt\batch\models\batch_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-batch\azure\mgmt\batch\models\batch_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.batch.models.PackageState
+- &id001
+  fullName: azure.mgmt.batch.models.PackageState.active
   id: active
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.batch.models.PackageState
   type: attribute
   uid: azure.mgmt.batch.models.PackageState.active
-- fullName: azure.mgmt.batch.models.PackageState.pending
+- &id002
+  fullName: azure.mgmt.batch.models.PackageState.pending
   id: pending
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.batch.models.PackageState
   type: attribute
   uid: azure.mgmt.batch.models.PackageState.pending
-- fullName: azure.mgmt.batch.models.PackageState.unmapped
+- &id003
+  fullName: azure.mgmt.batch.models.PackageState.unmapped
   id: unmapped
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.batch.models.PackageState
   type: attribute
   uid: azure.mgmt.batch.models.PackageState.unmapped
+- *id001
+- *id002
+- *id003
 references: []

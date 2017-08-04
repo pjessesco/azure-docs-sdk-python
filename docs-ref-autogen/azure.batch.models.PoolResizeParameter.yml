@@ -26,7 +26,7 @@ items:
   syntax:
     content: PoolResizeParameter(target_dedicated_nodes=None, target_low_priority_nodes=None,
       resize_timeout=None, node_deallocation_option=None)
-    parameters:
+    parameters: &id001
     - description: 'The desired number of dedicated compute
 
         nodes in the pool.
@@ -73,6 +73,34 @@ items:
         @azure.batch.models.ComputeNodeDeallocationOption
 
         '
+  type: class
+  uid: azure.batch.models.PoolResizeParameter
+- children: []
+  class: azure.batch.models.PoolResizeParameter
+  fullName: azure.batch.models.PoolResizeParameter
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: PoolResizeParameter
+  source:
+    id: PoolResizeParameter
+    path: azure-batch\azure\batch\models\pool_resize_parameter.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\pool_resize_parameter.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Options for changing the size of a pool.
+
+    '
+  syntax:
+    content: PoolResizeParameter(target_dedicated_nodes=None, target_low_priority_nodes=None,
+      resize_timeout=None, node_deallocation_option=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.PoolResizeParameter
 references: []

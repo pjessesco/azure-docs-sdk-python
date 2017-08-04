@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: JobSchedulingError(category, code=None, message=None, details=None)
-    parameters:
+    parameters: &id001
     - description: 'The category of the job scheduling error. Possible values
 
         include: ''userError'', ''serverError''
@@ -62,6 +62,33 @@ items:
       - 'list of @azure.batch.models.NameValuePair
 
         '
+  type: class
+  uid: azure.batch.models.JobSchedulingError
+- children: []
+  class: azure.batch.models.JobSchedulingError
+  fullName: azure.batch.models.JobSchedulingError
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: JobSchedulingError
+  source:
+    id: JobSchedulingError
+    path: azure-batch\azure\batch\models\job_scheduling_error.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\job_scheduling_error.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An error encountered by the Batch service when scheduling a job.
+
+    '
+  syntax:
+    content: JobSchedulingError(category, code=None, message=None, details=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.JobSchedulingError
 references: []

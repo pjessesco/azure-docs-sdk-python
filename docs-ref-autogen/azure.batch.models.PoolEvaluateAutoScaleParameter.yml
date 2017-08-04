@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: PoolEvaluateAutoScaleParameter(auto_scale_formula)
-    parameters:
+    parameters: &id001
     - description: 'The formula for the desired number of compute
 
         nodes in the pool. The formula is validated and its results calculated,
@@ -44,6 +44,33 @@ items:
       id: auto_scale_formula
       type:
       - str
+  type: class
+  uid: azure.batch.models.PoolEvaluateAutoScaleParameter
+- children: []
+  class: azure.batch.models.PoolEvaluateAutoScaleParameter
+  fullName: azure.batch.models.PoolEvaluateAutoScaleParameter
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: PoolEvaluateAutoScaleParameter
+  source:
+    id: PoolEvaluateAutoScaleParameter
+    path: azure-batch\azure\batch\models\pool_evaluate_auto_scale_parameter.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\pool_evaluate_auto_scale_parameter.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Options for evaluating an automatic scaling formula on a pool.
+
+    '
+  syntax:
+    content: PoolEvaluateAutoScaleParameter(auto_scale_formula)
+    parameters: *id001
   type: class
   uid: azure.batch.models.PoolEvaluateAutoScaleParameter
 references: []

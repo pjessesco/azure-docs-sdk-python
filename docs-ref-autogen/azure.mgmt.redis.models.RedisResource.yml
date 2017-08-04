@@ -33,7 +33,7 @@ items:
   syntax:
     content: RedisResource(location, tags=None, redis_configuration=None, enable_non_ssl_port=None,
       tenant_settings=None, shard_count=None, subnet_id=None, static_ip=None, sku=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location.
 
         '
@@ -102,7 +102,7 @@ items:
       id: sku
       type:
       - azure.mgmt.redis.models.Sku
-    variables:
+    variables: &id002
     - description: 'Resource ID.
 
         '
@@ -161,6 +161,42 @@ items:
       - '@azure.mgmt.redis.models.RedisAccessKeys
 
         '
+  type: class
+  uid: azure.mgmt.redis.models.RedisResource
+- children: []
+  class: azure.mgmt.redis.models.RedisResource
+  fullName: azure.mgmt.redis.models.RedisResource
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.redis.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.redis.models
+  name: RedisResource
+  source:
+    id: RedisResource
+    path: azure-mgmt-redis\azure\mgmt\redis\models\redis_resource.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\models\redis_resource.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A single Redis item in List or Get Operation.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: RedisResource(location, tags=None, redis_configuration=None, enable_non_ssl_port=None,
+      tenant_settings=None, shard_count=None, subnet_id=None, static_ip=None, sku=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.redis.models.RedisResource
 references: []

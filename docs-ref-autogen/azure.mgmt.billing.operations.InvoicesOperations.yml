@@ -5,6 +5,9 @@ items:
   - azure.mgmt.billing.operations.InvoicesOperations.get
   - azure.mgmt.billing.operations.InvoicesOperations.get_latest
   - azure.mgmt.billing.operations.InvoicesOperations.list
+  - azure.mgmt.billing.operations.InvoicesOperations.get
+  - azure.mgmt.billing.operations.InvoicesOperations.get_latest
+  - azure.mgmt.billing.operations.InvoicesOperations.list
   class: azure.mgmt.billing.operations.InvoicesOperations
   fullName: azure.mgmt.billing.operations.InvoicesOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: InvoicesOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Version of the API to be used with the client request. The current
         version is 2017-04-24-preview. Constant value: "2017-04-24-preview".
 
@@ -55,7 +58,7 @@ items:
   type: class
   uid: azure.mgmt.billing.operations.InvoicesOperations
 - class: azure.mgmt.billing.operations.InvoicesOperations
-  exceptions:
+  exceptions: &id003
   - type: azure.mgmt.billing.models.ErrorResponseException
   fullName: azure.mgmt.billing.operations.InvoicesOperations.get
   langs:
@@ -82,14 +85,14 @@ items:
 
         '
       id: invoice_name
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id005
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -98,7 +101,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id006
       - bool
     - description: '*Operation configuration
 
@@ -106,16 +109,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id007
       type:
       - azure.mgmt.billing.models.Invoice
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.billing.operations.InvoicesOperations.get
 - class: azure.mgmt.billing.operations.InvoicesOperations
-  exceptions:
+  exceptions: &id009
   - type: azure.mgmt.billing.models.ErrorResponseException
   fullName: azure.mgmt.billing.operations.InvoicesOperations.get_latest
   langs:
@@ -143,7 +146,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id010
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -152,7 +155,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id011
       - bool
     - description: '*Operation configuration
 
@@ -160,16 +163,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id012
       type:
       - azure.mgmt.billing.models.Invoice
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.billing.operations.InvoicesOperations.get_latest
 - class: azure.mgmt.billing.operations.InvoicesOperations
-  exceptions:
+  exceptions: &id014
   - type: azure.mgmt.billing.models.ErrorResponseException
   fullName: azure.mgmt.billing.operations.InvoicesOperations.list
   langs:
@@ -208,7 +211,7 @@ items:
 
         '
       id: expand
-      type:
+      type: &id015
       - str
     - defaultValue: None
       description: 'May be used to filter invoices by invoicePeriodEndDate.
@@ -220,7 +223,7 @@ items:
 
         '
       id: filter
-      type:
+      type: &id016
       - str
     - defaultValue: None
       description: 'Skiptoken is only used if a previous operation
@@ -233,7 +236,7 @@ items:
 
         '
       id: skiptoken
-      type:
+      type: &id017
       - str
     - defaultValue: None
       description: 'May be used to limit the number of results to the most
@@ -242,14 +245,14 @@ items:
 
         '
       id: top
-      type:
+      type: &id018
       - int
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id019
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -258,7 +261,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id020
       - bool
     - description: '*Operation configuration
 
@@ -266,12 +269,271 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id021
       type:
       - azure.mgmt.billing.models.InvoicePaged
   type: method
   uid: azure.mgmt.billing.operations.InvoicesOperations.list
+- children:
+  - azure.mgmt.billing.operations.InvoicesOperations.get
+  - azure.mgmt.billing.operations.InvoicesOperations.get_latest
+  - azure.mgmt.billing.operations.InvoicesOperations.list
+  class: azure.mgmt.billing.operations.InvoicesOperations
+  fullName: azure.mgmt.billing.operations.InvoicesOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.billing.operations
+  name: InvoicesOperations
+  source:
+    id: InvoicesOperations
+    path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 18
+  summary: 'InvoicesOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: InvoicesOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.billing.operations.InvoicesOperations
+- &id008
+  class: azure.mgmt.billing.operations.InvoicesOperations
+  exceptions: *id003
+  fullName: azure.mgmt.billing.operations.InvoicesOperations.get
+  langs:
+  - python
+  module: azure.mgmt.billing.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 126
+  summary: 'Gets a named invoice resource. When getting a single invoice, the
+
+    downloadUrl property is expanded automatically.
+
+    '
+  syntax:
+    content: get(invoice_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of an invoice resource.
+
+        '
+      id: invoice_name
+      type: *id004
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id005
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id006
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id007
+  type: method
+  uid: azure.mgmt.billing.operations.InvoicesOperations.get
+- *id008
+- &id013
+  class: azure.mgmt.billing.operations.InvoicesOperations
+  exceptions: *id009
+  fullName: azure.mgmt.billing.operations.InvoicesOperations.get_latest
+  langs:
+  - python
+  module: azure.mgmt.billing.operations
+  name: get_latest
+  source:
+    id: get_latest
+    path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 184
+  summary: 'Gets the most recent invoice. When getting a single invoice, the
+
+    downloadUrl property is expanded automatically.
+
+    '
+  syntax:
+    content: get_latest(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id010
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id011
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id012
+  type: method
+  uid: azure.mgmt.billing.operations.InvoicesOperations.get_latest
+- *id013
+- &id022
+  class: azure.mgmt.billing.operations.InvoicesOperations
+  exceptions: *id014
+  fullName: azure.mgmt.billing.operations.InvoicesOperations.list
+  langs:
+  - python
+  module: azure.mgmt.billing.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-billing\azure\mgmt\billing\operations\invoices_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 37
+  summary: 'Lists the available invoices for a subscription in reverse
+
+    chronological order beginning with the most recent invoice. In preview,
+
+    invoices are available via this API only for invoice periods which end
+
+    December 1, 2016 or later.
+
+    '
+  syntax:
+    content: list(expand=None, filter=None, skiptoken=None, top=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'May be used to expand the downloadUrl property within a
+
+        list of invoices. This enables download links to be generated for
+
+        multiple invoices at once. By default, downloadURLs are not included
+
+        when listing invoices.
+
+        '
+      id: expand
+      type: *id015
+    - defaultValue: None
+      description: 'May be used to filter invoices by invoicePeriodEndDate.
+
+        The filter supports ''eq'', ''lt'', ''gt'', ''le'', ''ge'', and ''and''. It
+        does
+
+        not currently support ''ne'', ''or'', or ''not''.
+
+        '
+      id: filter
+      type: *id016
+    - defaultValue: None
+      description: 'Skiptoken is only used if a previous operation
+
+        returned a partial result. If a previous response contains a nextLink
+
+        element, the value of the nextLink element will include a skiptoken
+
+        parameter that specifies a starting point to use for subsequent calls.
+
+        '
+      id: skiptoken
+      type: *id017
+    - defaultValue: None
+      description: 'May be used to limit the number of results to the most
+
+        recent N invoices.
+
+        '
+      id: top
+      type: *id018
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id019
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id020
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id021
+  type: method
+  uid: azure.mgmt.billing.operations.InvoicesOperations.list
+- *id022
 references:
+- fullName: azure.mgmt.billing.operations.InvoicesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.billing.operations.InvoicesOperations
+  uid: azure.mgmt.billing.operations.InvoicesOperations.get
+- fullName: azure.mgmt.billing.operations.InvoicesOperations.get_latest
+  isExternal: false
+  name: get_latest
+  parent: azure.mgmt.billing.operations.InvoicesOperations
+  uid: azure.mgmt.billing.operations.InvoicesOperations.get_latest
+- fullName: azure.mgmt.billing.operations.InvoicesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.billing.operations.InvoicesOperations
+  uid: azure.mgmt.billing.operations.InvoicesOperations.list
+- fullName: azure.mgmt.billing.operations.InvoicesOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.billing.operations.InvoicesOperations
+  uid: azure.mgmt.billing.operations.InvoicesOperations.get
+- fullName: azure.mgmt.billing.operations.InvoicesOperations.get_latest
+  isExternal: false
+  name: get_latest
+  parent: azure.mgmt.billing.operations.InvoicesOperations
+  uid: azure.mgmt.billing.operations.InvoicesOperations.get_latest
+- fullName: azure.mgmt.billing.operations.InvoicesOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.billing.operations.InvoicesOperations
+  uid: azure.mgmt.billing.operations.InvoicesOperations.list
 - fullName: azure.mgmt.billing.operations.InvoicesOperations.get
   isExternal: false
   name: get

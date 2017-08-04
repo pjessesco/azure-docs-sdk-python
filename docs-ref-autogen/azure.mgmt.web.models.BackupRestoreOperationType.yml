@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.web.models.BackupRestoreOperationType
-- fullName: azure.mgmt.web.models.BackupRestoreOperationType.clone
+- children:
+  - azure.mgmt.web.models.BackupRestoreOperationType.clone
+  - azure.mgmt.web.models.BackupRestoreOperationType.default
+  - azure.mgmt.web.models.BackupRestoreOperationType.relocation
+  class: azure.mgmt.web.models.BackupRestoreOperationType
+  fullName: azure.mgmt.web.models.BackupRestoreOperationType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.web.models
+  name: BackupRestoreOperationType
+  source:
+    id: BackupRestoreOperationType
+    path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\models\web_site_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 360
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.web.models.BackupRestoreOperationType
+- &id001
+  fullName: azure.mgmt.web.models.BackupRestoreOperationType.clone
   id: clone
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.web.models.BackupRestoreOperationType
   type: attribute
   uid: azure.mgmt.web.models.BackupRestoreOperationType.clone
-- fullName: azure.mgmt.web.models.BackupRestoreOperationType.default
+- &id002
+  fullName: azure.mgmt.web.models.BackupRestoreOperationType.default
   id: default
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.web.models.BackupRestoreOperationType
   type: attribute
   uid: azure.mgmt.web.models.BackupRestoreOperationType.default
-- fullName: azure.mgmt.web.models.BackupRestoreOperationType.relocation
+- &id003
+  fullName: azure.mgmt.web.models.BackupRestoreOperationType.relocation
   id: relocation
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.web.models.BackupRestoreOperationType
   type: attribute
   uid: azure.mgmt.web.models.BackupRestoreOperationType.relocation
+- *id001
+- *id002
+- *id003
 references: []

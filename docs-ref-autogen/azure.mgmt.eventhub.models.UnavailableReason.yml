@@ -38,7 +38,45 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.eventhub.models.UnavailableReason
-- fullName: azure.mgmt.eventhub.models.UnavailableReason.invalid_name
+- children:
+  - azure.mgmt.eventhub.models.UnavailableReason.invalid_name
+  - azure.mgmt.eventhub.models.UnavailableReason.name_in_lockdown
+  - azure.mgmt.eventhub.models.UnavailableReason.name_in_use
+  - azure.mgmt.eventhub.models.UnavailableReason.none
+  - azure.mgmt.eventhub.models.UnavailableReason.subscription_is_disabled
+  - azure.mgmt.eventhub.models.UnavailableReason.too_many_namespace_in_current_subscription
+  class: azure.mgmt.eventhub.models.UnavailableReason
+  fullName: azure.mgmt.eventhub.models.UnavailableReason
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.eventhub.models
+  name: UnavailableReason
+  source:
+    id: UnavailableReason
+    path: azure-mgmt-eventhub\azure\mgmt\eventhub\models\event_hub_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-eventhub\azure\mgmt\eventhub\models\event_hub_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 53
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.eventhub.models.UnavailableReason
+- &id001
+  fullName: azure.mgmt.eventhub.models.UnavailableReason.invalid_name
   id: invalid_name
   langs:
   - python
@@ -52,7 +90,8 @@ items:
       - azure.mgmt.eventhub.models.UnavailableReason
   type: attribute
   uid: azure.mgmt.eventhub.models.UnavailableReason.invalid_name
-- fullName: azure.mgmt.eventhub.models.UnavailableReason.name_in_lockdown
+- &id002
+  fullName: azure.mgmt.eventhub.models.UnavailableReason.name_in_lockdown
   id: name_in_lockdown
   langs:
   - python
@@ -66,7 +105,8 @@ items:
       - azure.mgmt.eventhub.models.UnavailableReason
   type: attribute
   uid: azure.mgmt.eventhub.models.UnavailableReason.name_in_lockdown
-- fullName: azure.mgmt.eventhub.models.UnavailableReason.name_in_use
+- &id003
+  fullName: azure.mgmt.eventhub.models.UnavailableReason.name_in_use
   id: name_in_use
   langs:
   - python
@@ -80,7 +120,8 @@ items:
       - azure.mgmt.eventhub.models.UnavailableReason
   type: attribute
   uid: azure.mgmt.eventhub.models.UnavailableReason.name_in_use
-- fullName: azure.mgmt.eventhub.models.UnavailableReason.none
+- &id004
+  fullName: azure.mgmt.eventhub.models.UnavailableReason.none
   id: none
   langs:
   - python
@@ -94,7 +135,8 @@ items:
       - azure.mgmt.eventhub.models.UnavailableReason
   type: attribute
   uid: azure.mgmt.eventhub.models.UnavailableReason.none
-- fullName: azure.mgmt.eventhub.models.UnavailableReason.subscription_is_disabled
+- &id005
+  fullName: azure.mgmt.eventhub.models.UnavailableReason.subscription_is_disabled
   id: subscription_is_disabled
   langs:
   - python
@@ -108,7 +150,8 @@ items:
       - azure.mgmt.eventhub.models.UnavailableReason
   type: attribute
   uid: azure.mgmt.eventhub.models.UnavailableReason.subscription_is_disabled
-- fullName: azure.mgmt.eventhub.models.UnavailableReason.too_many_namespace_in_current_subscription
+- &id006
+  fullName: azure.mgmt.eventhub.models.UnavailableReason.too_many_namespace_in_current_subscription
   id: too_many_namespace_in_current_subscription
   langs:
   - python
@@ -122,4 +165,10 @@ items:
       - azure.mgmt.eventhub.models.UnavailableReason
   type: attribute
   uid: azure.mgmt.eventhub.models.UnavailableReason.too_many_namespace_in_current_subscription
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
 references: []

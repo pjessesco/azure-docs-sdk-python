@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.rdbms.postgresql.models.ServerState
-- fullName: azure.mgmt.rdbms.postgresql.models.ServerState.disabled
+- children:
+  - azure.mgmt.rdbms.postgresql.models.ServerState.disabled
+  - azure.mgmt.rdbms.postgresql.models.ServerState.dropping
+  - azure.mgmt.rdbms.postgresql.models.ServerState.ready
+  class: azure.mgmt.rdbms.postgresql.models.ServerState
+  fullName: azure.mgmt.rdbms.postgresql.models.ServerState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.rdbms.postgresql.models
+  name: ServerState
+  source:
+    id: ServerState
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\models\postgre_sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\postgresql\models\postgre_sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 27
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.rdbms.postgresql.models.ServerState
+- &id001
+  fullName: azure.mgmt.rdbms.postgresql.models.ServerState.disabled
   id: disabled
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.rdbms.postgresql.models.ServerState
   type: attribute
   uid: azure.mgmt.rdbms.postgresql.models.ServerState.disabled
-- fullName: azure.mgmt.rdbms.postgresql.models.ServerState.dropping
+- &id002
+  fullName: azure.mgmt.rdbms.postgresql.models.ServerState.dropping
   id: dropping
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.rdbms.postgresql.models.ServerState
   type: attribute
   uid: azure.mgmt.rdbms.postgresql.models.ServerState.dropping
-- fullName: azure.mgmt.rdbms.postgresql.models.ServerState.ready
+- &id003
+  fullName: azure.mgmt.rdbms.postgresql.models.ServerState.ready
   id: ready
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.rdbms.postgresql.models.ServerState
   type: attribute
   uid: azure.mgmt.rdbms.postgresql.models.ServerState.ready
+- *id001
+- *id002
+- *id003
 references: []

@@ -30,7 +30,37 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.servermanager.models.UpgradeMode
-- fullName: azure.mgmt.servermanager.models.UpgradeMode.automatic
+- children:
+  - azure.mgmt.servermanager.models.UpgradeMode.automatic
+  - azure.mgmt.servermanager.models.UpgradeMode.manual
+  class: azure.mgmt.servermanager.models.UpgradeMode
+  fullName: azure.mgmt.servermanager.models.UpgradeMode
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.servermanager.models
+  name: UpgradeMode
+  source:
+    id: UpgradeMode
+    path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\server_management_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-servermanager\azure\mgmt\servermanager\models\server_management_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.servermanager.models.UpgradeMode
+- &id001
+  fullName: azure.mgmt.servermanager.models.UpgradeMode.automatic
   id: automatic
   langs:
   - python
@@ -44,7 +74,8 @@ items:
       - azure.mgmt.servermanager.models.UpgradeMode
   type: attribute
   uid: azure.mgmt.servermanager.models.UpgradeMode.automatic
-- fullName: azure.mgmt.servermanager.models.UpgradeMode.manual
+- &id002
+  fullName: azure.mgmt.servermanager.models.UpgradeMode.manual
   id: manual
   langs:
   - python
@@ -58,4 +89,6 @@ items:
       - azure.mgmt.servermanager.models.UpgradeMode
   type: attribute
   uid: azure.mgmt.servermanager.models.UpgradeMode.manual
+- *id001
+- *id002
 references: []

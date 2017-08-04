@@ -30,7 +30,7 @@ items:
     '
   syntax:
     content: KeyItem(kid=None, attributes=None, tags=None)
-    parameters:
+    parameters: &id001
     - description: 'Key identifier.
 
         '
@@ -49,7 +49,7 @@ items:
       id: tags
       type:
       - dict
-    variables:
+    variables: &id002
     - description: 'True if the key''s lifetime is managed by key vault. If this
 
         is a key backing a certificate, then managed will be true.
@@ -58,6 +58,39 @@ items:
       id: managed
       type:
       - bool
+  type: class
+  uid: azure.keyvault.models.KeyItem
+- children: []
+  class: azure.keyvault.models.KeyItem
+  fullName: azure.keyvault.models.KeyItem
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.keyvault.models
+  name: KeyItem
+  source:
+    id: KeyItem
+    path: azure-keyvault\azure\keyvault\models\key_item.py
+    remote:
+      branch: master
+      path: azure-keyvault\azure\keyvault\models\key_item.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'The key item containing key metadata.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: KeyItem(kid=None, attributes=None, tags=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.keyvault.models.KeyItem
 references: []

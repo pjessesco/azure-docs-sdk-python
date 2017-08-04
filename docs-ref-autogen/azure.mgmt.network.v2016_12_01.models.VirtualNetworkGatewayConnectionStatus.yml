@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
-- fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connected
+- children:
+  - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connected
+  - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connecting
+  - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.not_connected
+  - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.unknown
+  class: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
+  fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.models
+  name: VirtualNetworkGatewayConnectionStatus
+  source:
+    id: VirtualNetworkGatewayConnectionStatus
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\network_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\network_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 321
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
+- &id001
+  fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connected
   id: connected
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connected
-- fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connecting
+- &id002
+  fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connecting
   id: connecting
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.connecting
-- fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.not_connected
+- &id003
+  fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.not_connected
   id: not_connected
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.not_connected
-- fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.unknown
+- &id004
+  fullName: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.unknown
   id: unknown
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.VirtualNetworkGatewayConnectionStatus.unknown
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

@@ -30,7 +30,7 @@ items:
       schema_name=None, name=None, type_family=None, c_sharp_name=None, full_csharp_name=None,
       system_type_id=None, user_type_id=None, schema_id=None, principal_id=None, is_nullable=None,
       is_user_defined=None, is_assembly_type=None, is_table_type=None, is_complex_type=None)
-    parameters:
+    parameters: &id001
     - description: 'the name of the Data Lake Analytics account.
 
         '
@@ -143,6 +143,38 @@ items:
       id: is_complex_type
       type:
       - bool
+  type: class
+  uid: azure.mgmt.datalake.analytics.catalog.models.USqlType
+- children: []
+  class: azure.mgmt.datalake.analytics.catalog.models.USqlType
+  fullName: azure.mgmt.datalake.analytics.catalog.models.USqlType
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.datalake.analytics.catalog.models.catalog_item.CatalogItem
+  langs:
+  - python
+  module: azure.mgmt.datalake.analytics.catalog.models
+  name: USqlType
+  source:
+    id: USqlType
+    path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\catalog\models\usql_type.py
+    remote:
+      branch: master
+      path: azure-mgmt-datalake_analytics\azure\mgmt\datalake\analytics\catalog\models\usql_type.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'A Data Lake Analytics catalog U-SQL type item.
+
+    '
+  syntax:
+    content: USqlType(compute_account_name=None, version=None, database_name=None,
+      schema_name=None, name=None, type_family=None, c_sharp_name=None, full_csharp_name=None,
+      system_type_id=None, user_type_id=None, schema_id=None, principal_id=None, is_nullable=None,
+      is_user_defined=None, is_assembly_type=None, is_table_type=None, is_complex_type=None)
+    parameters: *id001
   type: class
   uid: azure.mgmt.datalake.analytics.catalog.models.USqlType
 references: []

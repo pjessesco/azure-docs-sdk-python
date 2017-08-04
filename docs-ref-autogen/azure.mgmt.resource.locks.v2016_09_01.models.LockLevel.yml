@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel
-- fullName: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.can_not_delete
+- children:
+  - azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.can_not_delete
+  - azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.not_specified
+  - azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.read_only
+  class: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel
+  fullName: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.resource.locks.v2016_09_01.models
+  name: LockLevel
+  source:
+    id: LockLevel
+    path: azure-mgmt-resource\azure\mgmt\resource\locks\v2016_09_01\models\management_lock_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-resource\azure\mgmt\resource\locks\v2016_09_01\models\management_lock_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel
+- &id001
+  fullName: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.can_not_delete
   id: can_not_delete
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.resource.locks.v2016_09_01.models.LockLevel
   type: attribute
   uid: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.can_not_delete
-- fullName: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.not_specified
+- &id002
+  fullName: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.not_specified
   id: not_specified
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.resource.locks.v2016_09_01.models.LockLevel
   type: attribute
   uid: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.not_specified
-- fullName: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.read_only
+- &id003
+  fullName: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.read_only
   id: read_only
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.resource.locks.v2016_09_01.models.LockLevel
   type: attribute
   uid: azure.mgmt.resource.locks.v2016_09_01.models.LockLevel.read_only
+- *id001
+- *id002
+- *id003
 references: []

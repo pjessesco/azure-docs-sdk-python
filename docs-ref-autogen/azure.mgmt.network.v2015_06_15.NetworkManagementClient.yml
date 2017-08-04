@@ -3,6 +3,7 @@ api_name: []
 items:
 - children:
   - azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+  - azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
   class: azure.mgmt.network.v2015_06_15.NetworkManagementClient
   fullName: azure.mgmt.network.v2015_06_15.NetworkManagementClient
   inheritance:
@@ -25,13 +26,13 @@ items:
     '
   syntax:
     content: NetworkManagementClient(credentials, subscription_id, base_url=None)
-    parameters:
+    parameters: &id001
     - description: 'Credentials needed for the client to connect to Azure.
 
         '
       id: credentials
       type:
-      - msrestazure.azure_active_directory
+      - ../msrestazure.azure_active_directory
     - description: 'The subscription credentials which uniquely
 
         identify the Microsoft Azure subscription. The subscription ID forms part
@@ -48,7 +49,7 @@ items:
       id: base_url
       type:
       - str
-    variables:
+    variables: &id002
     - description: 'Configuration for client.
 
         '
@@ -166,7 +167,7 @@ items:
   type: class
   uid: azure.mgmt.network.v2015_06_15.NetworkManagementClient
 - class: azure.mgmt.network.v2015_06_15.NetworkManagementClient
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
   langs:
@@ -194,7 +195,7 @@ items:
 
         '
       id: location
-      type:
+      type: &id004
       - str
     - defaultValue: None
       description: 'The domain name to be verified. It must
@@ -205,14 +206,14 @@ items:
 
         '
       id: domain_name_label
-      type:
+      type: &id005
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id006
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -221,7 +222,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id007
       - bool
     - description: '*Operation configuration
 
@@ -229,15 +230,117 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id008
       type:
       - azure.mgmt.network.v2015_06_15.models.DnsNameAvailabilityResult
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+- children:
+  - azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+  class: azure.mgmt.network.v2015_06_15.NetworkManagementClient
+  fullName: azure.mgmt.network.v2015_06_15.NetworkManagementClient
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.network.v2015_06_15
+  name: NetworkManagementClient
+  source:
+    id: NetworkManagementClient
+    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\network_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\network_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 77
+  summary: 'Composite Swagger for Network Client
+
+
+    '
+  syntax:
+    content: NetworkManagementClient(credentials, subscription_id, base_url=None)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.network.v2015_06_15.NetworkManagementClient
+- &id009
+  class: azure.mgmt.network.v2015_06_15.NetworkManagementClient
+  exceptions: *id003
+  fullName: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+  langs:
+  - python
+  module: azure.mgmt.network.v2015_06_15
+  name: check_dns_name_availability
+  source:
+    id: check_dns_name_availability
+    path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\network_management_client.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2015_06_15\network_management_client.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 177
+  summary: 'Checks whether a domain name in the cloudapp.net zone is available for
+
+    use.
+
+    '
+  syntax:
+    content: check_dns_name_availability(location, domain_name_label=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The location of the domain name.
+
+        '
+      id: location
+      type: *id004
+    - defaultValue: None
+      description: 'The domain name to be verified. It must
+
+        conform to the following regular expression:
+
+        ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.
+
+        '
+      id: domain_name_label
+      type: *id005
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id006
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id007
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id008
+  type: method
+  uid: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+- *id009
 references:
+- fullName: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+  isExternal: false
+  name: check_dns_name_availability
+  parent: azure.mgmt.network.v2015_06_15.NetworkManagementClient
+  uid: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+- fullName: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
+  isExternal: false
+  name: check_dns_name_availability
+  parent: azure.mgmt.network.v2015_06_15.NetworkManagementClient
+  uid: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
 - fullName: azure.mgmt.network.v2015_06_15.NetworkManagementClient.check_dns_name_availability
   isExternal: false
   name: check_dns_name_availability

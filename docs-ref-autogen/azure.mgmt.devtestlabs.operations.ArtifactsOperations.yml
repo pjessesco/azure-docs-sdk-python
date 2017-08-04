@@ -5,6 +5,9 @@ items:
   - azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
   - azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
   - azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+  - azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+  - azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+  - azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
   class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
   fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations
   inheritance:
@@ -29,7 +32,7 @@ items:
     '
   syntax:
     content: ArtifactsOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -46,7 +49,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'Client API version. Constant value: "2016-05-15".
 
         '
@@ -54,7 +57,7 @@ items:
   type: class
   uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations
 - class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
   langs:
@@ -82,25 +85,25 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id005
       - str
     - description: 'The name of the artifact source.
 
         '
       id: artifact_source_name
-      type:
+      type: &id006
       - str
     - description: 'The name of the artifact.
 
         '
       id: name
-      type:
+      type: &id007
       - str
     - description: 'Parameters for generating an ARM
 
@@ -108,14 +111,14 @@ items:
 
         '
       id: generate_arm_template_request
-      type:
+      type: &id008
       - azure.mgmt.devtestlabs.models.GenerateArmTemplateRequest
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id009
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -124,7 +127,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id010
       - bool
     - description: '*Operation configuration
 
@@ -132,16 +135,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id011
       type:
       - azure.mgmt.devtestlabs.models.ArmTemplateInfo
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
 - class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
-  exceptions:
+  exceptions: &id013
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
   langs:
@@ -167,25 +170,25 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id014
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id015
       - str
     - description: 'The name of the artifact source.
 
         '
       id: artifact_source_name
-      type:
+      type: &id016
       - str
     - description: 'The name of the artifact.
 
         '
       id: name
-      type:
+      type: &id017
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -194,14 +197,14 @@ items:
 
         '
       id: expand
-      type:
+      type: &id018
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id019
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -210,7 +213,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id020
       - bool
     - description: '*Operation configuration
 
@@ -218,16 +221,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id021
       type:
       - azure.mgmt.devtestlabs.models.Artifact
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
 - class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
-  exceptions:
+  exceptions: &id023
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
   langs:
@@ -253,19 +256,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id024
       - str
     - description: 'The name of the lab.
 
         '
       id: lab_name
-      type:
+      type: &id025
       - str
     - description: 'The name of the artifact source.
 
         '
       id: artifact_source_name
-      type:
+      type: &id026
       - str
     - defaultValue: None
       description: 'Specify the $expand query. Example:
@@ -274,14 +277,14 @@ items:
 
         '
       id: expand
-      type:
+      type: &id027
       - str
     - defaultValue: None
       description: 'The filter to apply to the operation.
 
         '
       id: filter
-      type:
+      type: &id028
       - str
     - defaultValue: None
       description: 'The maximum number of resources to return from the
@@ -290,7 +293,7 @@ items:
 
         '
       id: top
-      type:
+      type: &id029
       - int
     - defaultValue: None
       description: 'The ordering expression for the results, using OData
@@ -299,14 +302,14 @@ items:
 
         '
       id: orderby
-      type:
+      type: &id030
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id031
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -315,7 +318,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id032
       - bool
     - description: '*Operation configuration
 
@@ -323,12 +326,317 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id033
       type:
       - azure.mgmt.devtestlabs.models.ArtifactPaged
   type: method
   uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+- children:
+  - azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+  - azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+  - azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+  class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: ArtifactsOperations
+  source:
+    id: ArtifactsOperations
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 19
+  summary: 'ArtifactsOperations operations.
+
+
+
+
+    '
+  syntax:
+    content: ArtifactsOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+- &id012
+  class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  exceptions: *id003
+  fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: generate_arm_template
+  source:
+    id: generate_arm_template
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 201
+  summary: 'Generates an ARM template for the given artifact, uploads the required
+
+    files to a storage account, and validates the generated artifact.
+
+    '
+  syntax:
+    content: generate_arm_template(resource_group_name, lab_name, artifact_source_name,
+      name, generate_arm_template_request, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id005
+    - description: 'The name of the artifact source.
+
+        '
+      id: artifact_source_name
+      type: *id006
+    - description: 'The name of the artifact.
+
+        '
+      id: name
+      type: *id007
+    - description: 'Parameters for generating an ARM
+
+        template for deploying artifacts.
+
+        '
+      id: generate_arm_template_request
+      type: *id008
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id009
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id010
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id011
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+- *id012
+- &id022
+  class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  exceptions: *id013
+  fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 129
+  summary: 'Get artifact.
+
+    '
+  syntax:
+    content: get(resource_group_name, lab_name, artifact_source_name, name, expand=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id014
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id015
+    - description: 'The name of the artifact source.
+
+        '
+      id: artifact_source_name
+      type: *id016
+    - description: 'The name of the artifact.
+
+        '
+      id: name
+      type: *id017
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
+
+        ''properties($select=title)''
+
+        '
+      id: expand
+      type: *id018
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id019
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id020
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id021
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+- *id022
+- &id034
+  class: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  exceptions: *id023
+  fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+  langs:
+  - python
+  module: azure.mgmt.devtestlabs.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-devtestlabs\azure\mgmt\devtestlabs\operations\artifacts_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 38
+  summary: 'List artifacts in a given artifact source.
+
+    '
+  syntax:
+    content: list(resource_group_name, lab_name, artifact_source_name, expand=None,
+      filter=None, top=None, orderby=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group.
+
+        '
+      id: resource_group_name
+      type: *id024
+    - description: 'The name of the lab.
+
+        '
+      id: lab_name
+      type: *id025
+    - description: 'The name of the artifact source.
+
+        '
+      id: artifact_source_name
+      type: *id026
+    - defaultValue: None
+      description: 'Specify the $expand query. Example:
+
+        ''properties($select=title)''
+
+        '
+      id: expand
+      type: *id027
+    - defaultValue: None
+      description: 'The filter to apply to the operation.
+
+        '
+      id: filter
+      type: *id028
+    - defaultValue: None
+      description: 'The maximum number of resources to return from the
+
+        operation.
+
+        '
+      id: top
+      type: *id029
+    - defaultValue: None
+      description: 'The ordering expression for the results, using OData
+
+        notation.
+
+        '
+      id: orderby
+      type: *id030
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id031
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id032
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id033
+  type: method
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+- *id034
 references:
+- fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+  isExternal: false
+  name: generate_arm_template
+  parent: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+- fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+- fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+- fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+  isExternal: false
+  name: generate_arm_template
+  parent: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
+- fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.get
+- fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.devtestlabs.operations.ArtifactsOperations
+  uid: azure.mgmt.devtestlabs.operations.ArtifactsOperations.list
 - fullName: azure.mgmt.devtestlabs.operations.ArtifactsOperations.generate_arm_template
   isExternal: false
   name: generate_arm_template

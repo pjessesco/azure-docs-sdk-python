@@ -44,7 +44,51 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.redis.models.DayOfWeek
-- fullName: azure.mgmt.redis.models.DayOfWeek.everyday
+- children:
+  - azure.mgmt.redis.models.DayOfWeek.everyday
+  - azure.mgmt.redis.models.DayOfWeek.friday
+  - azure.mgmt.redis.models.DayOfWeek.monday
+  - azure.mgmt.redis.models.DayOfWeek.saturday
+  - azure.mgmt.redis.models.DayOfWeek.sunday
+  - azure.mgmt.redis.models.DayOfWeek.thursday
+  - azure.mgmt.redis.models.DayOfWeek.tuesday
+  - azure.mgmt.redis.models.DayOfWeek.wednesday
+  - azure.mgmt.redis.models.DayOfWeek.weekend
+  class: azure.mgmt.redis.models.DayOfWeek
+  fullName: azure.mgmt.redis.models.DayOfWeek
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.redis.models
+  name: DayOfWeek
+  source:
+    id: DayOfWeek
+    path: azure-mgmt-redis\azure\mgmt\redis\models\redis_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-redis\azure\mgmt\redis\models\redis_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 41
+  summary: 'An enumeration.
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.redis.models.DayOfWeek
+- &id001
+  fullName: azure.mgmt.redis.models.DayOfWeek.everyday
   id: everyday
   langs:
   - python
@@ -58,7 +102,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.everyday
-- fullName: azure.mgmt.redis.models.DayOfWeek.friday
+- &id002
+  fullName: azure.mgmt.redis.models.DayOfWeek.friday
   id: friday
   langs:
   - python
@@ -72,7 +117,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.friday
-- fullName: azure.mgmt.redis.models.DayOfWeek.monday
+- &id003
+  fullName: azure.mgmt.redis.models.DayOfWeek.monday
   id: monday
   langs:
   - python
@@ -86,7 +132,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.monday
-- fullName: azure.mgmt.redis.models.DayOfWeek.saturday
+- &id004
+  fullName: azure.mgmt.redis.models.DayOfWeek.saturday
   id: saturday
   langs:
   - python
@@ -100,7 +147,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.saturday
-- fullName: azure.mgmt.redis.models.DayOfWeek.sunday
+- &id005
+  fullName: azure.mgmt.redis.models.DayOfWeek.sunday
   id: sunday
   langs:
   - python
@@ -114,7 +162,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.sunday
-- fullName: azure.mgmt.redis.models.DayOfWeek.thursday
+- &id006
+  fullName: azure.mgmt.redis.models.DayOfWeek.thursday
   id: thursday
   langs:
   - python
@@ -128,7 +177,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.thursday
-- fullName: azure.mgmt.redis.models.DayOfWeek.tuesday
+- &id007
+  fullName: azure.mgmt.redis.models.DayOfWeek.tuesday
   id: tuesday
   langs:
   - python
@@ -142,7 +192,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.tuesday
-- fullName: azure.mgmt.redis.models.DayOfWeek.wednesday
+- &id008
+  fullName: azure.mgmt.redis.models.DayOfWeek.wednesday
   id: wednesday
   langs:
   - python
@@ -156,7 +207,8 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.wednesday
-- fullName: azure.mgmt.redis.models.DayOfWeek.weekend
+- &id009
+  fullName: azure.mgmt.redis.models.DayOfWeek.weekend
   id: weekend
   langs:
   - python
@@ -170,4 +222,13 @@ items:
       - azure.mgmt.redis.models.DayOfWeek
   type: attribute
   uid: azure.mgmt.redis.models.DayOfWeek.weekend
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
 references: []

@@ -28,7 +28,7 @@ items:
   syntax:
     content: AutoPoolSpecification(pool_lifetime_option, auto_pool_id_prefix=None,
       keep_alive=None, pool=None)
-    parameters:
+    parameters: &id001
     - description: 'A prefix to be added to the unique identifier
 
         when a pool is automatically created. The Batch service assigns each auto
@@ -85,6 +85,36 @@ items:
       id: pool
       type:
       - azure.batch.models.PoolSpecification
+  type: class
+  uid: azure.batch.models.AutoPoolSpecification
+- children: []
+  class: azure.batch.models.AutoPoolSpecification
+  fullName: azure.batch.models.AutoPoolSpecification
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: msrest.serialization.Model
+  langs:
+  - python
+  module: azure.batch.models
+  name: AutoPoolSpecification
+  source:
+    id: AutoPoolSpecification
+    path: azure-batch\azure\batch\models\auto_pool_specification.py
+    remote:
+      branch: master
+      path: azure-batch\azure\batch\models\auto_pool_specification.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Specifies characteristics for a temporary ''auto pool''. The Batch service
+
+    will create this auto pool when the job is submitted.
+
+    '
+  syntax:
+    content: AutoPoolSpecification(pool_lifetime_option, auto_pool_id_prefix=None,
+      keep_alive=None, pool=None)
+    parameters: *id001
   type: class
   uid: azure.batch.models.AutoPoolSpecification
 references: []

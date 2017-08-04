@@ -8,6 +8,12 @@ items:
   - azure.mgmt.rdbms.mysql.operations.ServersOperations.list
   - azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
   - azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.update
   class: azure.mgmt.rdbms.mysql.operations.ServersOperations
   fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations
   inheritance:
@@ -35,7 +41,7 @@ items:
     '
   syntax:
     content: ServersOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -52,7 +58,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'The API version to use for the request. Constant value: "2017-04-30-preview".
 
         '
@@ -60,7 +66,7 @@ items:
   type: class
   uid: azure.mgmt.rdbms.mysql.operations.ServersOperations
 - class: azure.mgmt.rdbms.mysql.operations.ServersOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
   langs:
@@ -92,13 +98,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id005
       - str
     - description: 'The required parameters for creating or updating a
 
@@ -106,14 +112,14 @@ items:
 
         '
       id: parameters
-      type:
+      type: &id006
       - azure.mgmt.rdbms.mysql.models.ServerForCreate
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -122,20 +128,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.rdbms.mysql.models.Server'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
 - class: azure.mgmt.rdbms.mysql.operations.ServersOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
   langs:
@@ -165,20 +171,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id013
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id014
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -187,20 +193,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id015
       - bool
-    return:
+    return: &id016
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns None'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
 - class: azure.mgmt.rdbms.mysql.operations.ServersOperations
-  exceptions:
+  exceptions: &id018
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
   langs:
@@ -230,20 +236,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id019
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id020
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id021
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -252,7 +258,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id022
       - bool
     - description: '*Operation configuration
 
@@ -260,16 +266,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id023
       type:
       - azure.mgmt.rdbms.mysql.models.Server
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
 - class: azure.mgmt.rdbms.mysql.operations.ServersOperations
-  exceptions:
+  exceptions: &id025
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
   langs:
@@ -295,7 +301,7 @@ items:
 
         '
       id: custom_headers
-      type:
+      type: &id026
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -304,7 +310,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id027
       - bool
     - description: '*Operation configuration
 
@@ -312,13 +318,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id028
       type:
       - azure.mgmt.rdbms.mysql.models.ServerPaged
   type: method
   uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
 - class: azure.mgmt.rdbms.mysql.operations.ServersOperations
-  exceptions:
+  exceptions: &id030
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
   langs:
@@ -348,14 +354,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id031
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id032
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -364,7 +370,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id033
       - bool
     - description: '*Operation configuration
 
@@ -372,13 +378,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id034
       type:
       - azure.mgmt.rdbms.mysql.models.ServerPaged
   type: method
   uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
 - class: azure.mgmt.rdbms.mysql.operations.ServersOperations
-  exceptions:
+  exceptions: &id036
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
   langs:
@@ -410,26 +416,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id037
       - str
     - description: 'The name of the server.
 
         '
       id: server_name
-      type:
+      type: &id038
       - str
     - description: 'The required parameters for updating a server.
 
         '
       id: parameters
-      type:
+      type: &id039
       - azure.mgmt.rdbms.mysql.models.ServerUpdateParameters
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id040
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -438,19 +444,461 @@ items:
 
         '
       id: raw
-      type:
+      type: &id041
       - bool
-    return:
+    return: &id042
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.rdbms.mysql.models.Server'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+- children:
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+  - azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+  class: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.operations
+  name: ServersOperations
+  source:
+    id: ServersOperations
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'ServersOperations operations.
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: ServersOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations
+- &id010
+  class: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  exceptions: *id003
+  fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Creates a new server or updates an existing server. The update action
+
+    will overwrite the existing server.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, server_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id005
+    - description: 'The required parameters for creating or updating a
+
+        server.
+
+        '
+      id: parameters
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+- *id010
+- &id017
+  class: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  exceptions: *id011
+  fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 232
+  summary: 'Deletes a server.
+
+    '
+  syntax:
+    content: delete(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id013
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id014
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id015
+    return: *id016
+  type: method
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+- *id017
+- &id024
+  class: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  exceptions: *id018
+  fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 311
+  summary: 'Gets information about a server.
+
+    '
+  syntax:
+    content: get(resource_group_name, server_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id019
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id020
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id021
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id022
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id023
+  type: method
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+- *id024
+- &id029
+  class: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  exceptions: *id025
+  fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 442
+  summary: 'List all the servers in a given subscription.
+
+    '
+  syntax:
+    content: list(custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id026
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id027
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id028
+  type: method
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+- *id029
+- &id035
+  class: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  exceptions: *id030
+  fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 374
+  summary: 'List all the servers in a given resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id031
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id032
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id033
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id034
+  type: method
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+- *id035
+- &id043
+  class: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  exceptions: *id036
+  fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+  langs:
+  - python
+  module: azure.mgmt.rdbms.mysql.operations
+  name: update
+  source:
+    id: update
+    path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-rdbms\azure\mgmt\rdbms\mysql\operations\servers_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 137
+  summary: 'Updates an existing server. The request body can contain one to many of
+
+    the properties present in the normal server definition.
+
+    '
+  syntax:
+    content: update(resource_group_name, server_name, parameters, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the resource group that
+
+        contains the resource. You can obtain this value from the Azure
+
+        Resource Manager API or the portal.
+
+        '
+      id: resource_group_name
+      type: *id037
+    - description: 'The name of the server.
+
+        '
+      id: server_name
+      type: *id038
+    - description: 'The required parameters for updating a server.
+
+        '
+      id: parameters
+      type: *id039
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id040
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id041
+    return: *id042
+  type: method
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+- *id043
 references:
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.delete
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.get
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.list_by_resource_group
+- fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
+  isExternal: false
+  name: update
+  parent: azure.mgmt.rdbms.mysql.operations.ServersOperations
+  uid: azure.mgmt.rdbms.mysql.operations.ServersOperations.update
 - fullName: azure.mgmt.rdbms.mysql.operations.ServersOperations.create_or_update
   isExternal: false
   name: create_or_update

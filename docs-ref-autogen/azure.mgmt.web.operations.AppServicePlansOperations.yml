@@ -28,6 +28,32 @@ items:
   - azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
   - azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
   - azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+  - azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+  - azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+  - azure.mgmt.web.operations.AppServicePlansOperations.delete
+  - azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+  - azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+  - azure.mgmt.web.operations.AppServicePlansOperations.get
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+  - azure.mgmt.web.operations.AppServicePlansOperations.list
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+  - azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+  - azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+  - azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+  - azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
   class: azure.mgmt.web.operations.AppServicePlansOperations
   fullName: azure.mgmt.web.operations.AppServicePlansOperations
   inheritance:
@@ -75,7 +101,7 @@ items:
     '
   syntax:
     content: AppServicePlansOperations(client, config, serializer, deserializer)
-    parameters:
+    parameters: &id001
     - description: 'Client for service requests.
 
         '
@@ -92,7 +118,7 @@ items:
 
         '
       id: deserializer
-    variables:
+    variables: &id002
     - description: 'API Version. Constant value: "2016-09-01".
 
         '
@@ -100,7 +126,7 @@ items:
   type: class
   uid: azure.mgmt.web.operations.AppServicePlansOperations
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id003
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
   langs:
@@ -131,26 +157,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id004
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id005
       - str
     - description: 'Details of the App Service plan.
 
         '
       id: app_service_plan
-      type:
+      type: &id006
       - azure.mgmt.web.models.AppServicePlan
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id007
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -159,20 +185,20 @@ items:
 
         '
       id: raw
-      type:
+      type: &id008
       - bool
-    return:
+    return: &id009
       type:
-      - 'msrestazure.azure_operation.AzureOperationPoller
+      - '../msrestazure.azure_operation.AzureOperationPoller
 
         instance that returns @azure.mgmt.web.models.AppServicePlan'
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id011
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
   langs:
@@ -203,38 +229,38 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id012
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id013
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id014
       - str
     - description: 'Name of the Virtual Network route.
 
         '
       id: route_name
-      type:
+      type: &id015
       - str
     - description: 'Definition of the Virtual Network route.
 
         '
       id: route
-      type:
+      type: &id016
       - azure.mgmt.web.models.VnetRoute
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id017
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -243,7 +269,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id018
       - bool
     - description: '*Operation configuration
 
@@ -251,16 +277,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id019
       type:
       - azure.mgmt.web.models.VnetRoute
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id021
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete
   langs:
@@ -290,20 +316,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id022
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id023
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id024
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -312,7 +338,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id025
       - bool
     - description: '*Operation configuration
 
@@ -320,16 +346,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id026
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.delete
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id028
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
   langs:
@@ -360,32 +386,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id029
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id030
       - str
     - description: 'Name of the Service Bus namespace.
 
         '
       id: namespace_name
-      type:
+      type: &id031
       - str
     - description: 'Name of the Service Bus relay.
 
         '
       id: relay_name
-      type:
+      type: &id032
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id033
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -394,7 +420,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id034
       - bool
     - description: '*Operation configuration
 
@@ -402,16 +428,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id035
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id037
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
   langs:
@@ -442,32 +468,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id038
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id039
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id040
       - str
     - description: 'Name of the Virtual Network route.
 
         '
       id: route_name
-      type:
+      type: &id041
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id042
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -476,7 +502,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id043
       - bool
     - description: '*Operation configuration
 
@@ -484,16 +510,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id044
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id046
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.get
   langs:
@@ -523,20 +549,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id047
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id048
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id049
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -545,7 +571,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id050
       - bool
     - description: '*Operation configuration
 
@@ -553,16 +579,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id051
       type:
       - azure.mgmt.web.models.AppServicePlan
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.get
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id053
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
   langs:
@@ -593,32 +619,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id054
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id055
       - str
     - description: 'Name of the Service Bus namespace.
 
         '
       id: namespace_name
-      type:
+      type: &id056
       - str
     - description: 'Name of the Service Bus relay.
 
         '
       id: relay_name
-      type:
+      type: &id057
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id058
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -627,7 +653,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id059
       - bool
     - description: '*Operation configuration
 
@@ -635,16 +661,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id060
       type:
       - azure.mgmt.web.models.HybridConnection
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id062
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
   langs:
@@ -679,20 +705,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id063
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id064
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id065
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -701,7 +727,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id066
       - bool
     - description: '*Operation configuration
 
@@ -709,16 +735,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id067
       type:
       - azure.mgmt.web.models.HybridConnectionLimits
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id069
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
   langs:
@@ -749,32 +775,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id070
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id071
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id072
       - str
     - description: 'Name of the Virtual Network route.
 
         '
       id: route_name
-      type:
+      type: &id073
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id074
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -783,7 +809,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id075
       - bool
     - description: '*Operation configuration
 
@@ -791,16 +817,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id076
       type:
       - list of @azure.mgmt.web.models.VnetRoute
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id078
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
   langs:
@@ -831,26 +857,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id079
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id080
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id081
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id082
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -859,7 +885,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id083
       - bool
     - description: '*Operation configuration
 
@@ -867,16 +893,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id084
       type:
       - azure.mgmt.web.models.VnetInfo
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id086
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
   langs:
@@ -907,19 +933,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id087
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id088
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id089
       - str
     - description: 'Name of the gateway. Only the ''primary'' gateway
 
@@ -927,14 +953,14 @@ items:
 
         '
       id: gateway_name
-      type:
+      type: &id090
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id091
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -943,7 +969,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id092
       - bool
     - description: '*Operation configuration
 
@@ -951,16 +977,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id093
       type:
       - azure.mgmt.web.models.VnetGateway
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id095
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list
   langs:
@@ -995,14 +1021,14 @@ items:
 
         '
       id: detailed
-      type:
+      type: &id096
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id097
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1011,7 +1037,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id098
       - bool
     - description: '*Operation configuration
 
@@ -1019,13 +1045,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id099
       type:
       - azure.mgmt.web.models.AppServicePlanPaged
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id101
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
   langs:
@@ -1056,14 +1082,14 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id102
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id103
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1072,7 +1098,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id104
       - bool
     - description: '*Operation configuration
 
@@ -1080,13 +1106,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id105
       type:
       - azure.mgmt.web.models.AppServicePlanPaged
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id107
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
   langs:
@@ -1117,20 +1143,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id108
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id109
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id110
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1139,7 +1165,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id111
       - bool
     - description: '*Operation configuration
 
@@ -1147,16 +1173,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id112
       type:
       - list of @azure.mgmt.web.models.Capability
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id114
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
   langs:
@@ -1187,32 +1213,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id115
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id116
       - str
     - description: 'The name of the Service Bus namespace.
 
         '
       id: namespace_name
-      type:
+      type: &id117
       - str
     - description: 'The name of the Service Bus relay.
 
         '
       id: relay_name
-      type:
+      type: &id118
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id119
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1221,7 +1247,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id120
       - bool
     - description: '*Operation configuration
 
@@ -1229,16 +1255,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id121
       type:
       - azure.mgmt.web.models.HybridConnectionKey
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id123
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
   langs:
@@ -1269,20 +1295,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id124
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id125
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id126
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1291,7 +1317,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id127
       - bool
     - description: '*Operation configuration
 
@@ -1299,13 +1325,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id128
       type:
       - azure.mgmt.web.models.HybridConnectionPaged
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id130
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
   langs:
@@ -1340,20 +1366,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id131
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id132
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id133
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1362,7 +1388,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id134
       - bool
     - description: '*Operation configuration
 
@@ -1370,13 +1396,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id135
       type:
       - azure.mgmt.web.models.ResourceMetricDefinitionPaged
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id137
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
   langs:
@@ -1407,13 +1433,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id138
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id139
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to include instance details.
@@ -1422,7 +1448,7 @@ items:
 
         '
       id: details
-      type:
+      type: &id140
       - bool
     - defaultValue: None
       description: 'Return only usages/metrics specified in the filter.
@@ -1437,14 +1463,14 @@ items:
 
         '
       id: filter
-      type:
+      type: &id141
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id142
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1453,7 +1479,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id143
       - bool
     - description: '*Operation configuration
 
@@ -1461,13 +1487,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id144
       type:
       - azure.mgmt.web.models.ResourceMetricPaged
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id146
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
   langs:
@@ -1502,26 +1528,26 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id147
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id148
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id149
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id150
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1530,7 +1556,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id151
       - bool
     - description: '*Operation configuration
 
@@ -1538,16 +1564,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id152
       type:
       - list of @azure.mgmt.web.models.VnetRoute
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id154
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
   langs:
@@ -1578,20 +1604,20 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id155
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id156
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id157
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1600,7 +1626,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id158
       - bool
     - description: '*Operation configuration
 
@@ -1608,16 +1634,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id159
       type:
       - list of @azure.mgmt.web.models.VnetInfo
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id161
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
   langs:
@@ -1648,13 +1674,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id162
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id163
       - str
     - defaultValue: None
       description: 'Skip to a web app in the list of webapps associated
@@ -1667,7 +1693,7 @@ items:
 
         '
       id: skip_token
-      type:
+      type: &id164
       - str
     - defaultValue: None
       description: 'Supported filter: $filter=state eq running. Returns
@@ -1676,21 +1702,21 @@ items:
 
         '
       id: filter
-      type:
+      type: &id165
       - str
     - defaultValue: None
       description: 'List page size. If specified, results are paged.
 
         '
       id: top
-      type:
+      type: &id166
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id167
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1699,7 +1725,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id168
       - bool
     - description: '*Operation configuration
 
@@ -1707,13 +1733,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id169
       type:
       - azure.mgmt.web.models.SitePaged
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id171
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
   langs:
@@ -1744,32 +1770,32 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id172
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id173
       - str
     - description: 'Name of the Hybrid Connection namespace.
 
         '
       id: namespace_name
-      type:
+      type: &id174
       - str
     - description: 'Name of the Hybrid Connection relay.
 
         '
       id: relay_name
-      type:
+      type: &id175
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id176
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1778,7 +1804,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id177
       - bool
     - description: '*Operation configuration
 
@@ -1786,13 +1812,13 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id178
       type:
       - azure.mgmt.web.models.StrPaged
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id180
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
   langs:
@@ -1823,13 +1849,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id181
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id182
       - str
     - description: 'Name of worker machine, which typically starts
 
@@ -1837,14 +1863,14 @@ items:
 
         '
       id: worker_name
-      type:
+      type: &id183
       - str
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id184
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1853,7 +1879,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id185
       - bool
     - description: '*Operation configuration
 
@@ -1861,16 +1887,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id186
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id188
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
   langs:
@@ -1901,13 +1927,13 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id189
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id190
       - str
     - defaultValue: None
       description: 'Specify <code>true</code> to performa a soft
@@ -1920,14 +1946,14 @@ items:
 
         '
       id: soft_restart
-      type:
+      type: &id191
       - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id192
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -1936,7 +1962,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id193
       - bool
     - description: '*Operation configuration
 
@@ -1944,16 +1970,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id194
       type:
       - None
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id196
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
   langs:
@@ -1984,19 +2010,19 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id197
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id198
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id199
       - str
     - description: 'Name of the gateway. Only the ''primary'' gateway
 
@@ -2004,20 +2030,20 @@ items:
 
         '
       id: gateway_name
-      type:
+      type: &id200
       - str
     - description: 'Definition of the gateway.
 
         '
       id: connection_envelope
-      type:
+      type: &id201
       - azure.mgmt.web.models.VnetGateway
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id202
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2026,7 +2052,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id203
       - bool
     - description: '*Operation configuration
 
@@ -2034,16 +2060,16 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id204
       type:
       - azure.mgmt.web.models.VnetGateway
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
 - class: azure.mgmt.web.operations.AppServicePlansOperations
-  exceptions:
+  exceptions: &id206
   - type: msrestazure.azure_exceptions.CloudError
   fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
   langs:
@@ -2074,38 +2100,38 @@ items:
 
         '
       id: resource_group_name
-      type:
+      type: &id207
       - str
     - description: 'Name of the App Service plan.
 
         '
       id: name
-      type:
+      type: &id208
       - str
     - description: 'Name of the Virtual Network.
 
         '
       id: vnet_name
-      type:
+      type: &id209
       - str
     - description: 'Name of the Virtual Network route.
 
         '
       id: route_name
-      type:
+      type: &id210
       - str
     - description: 'Definition of the Virtual Network route.
 
         '
       id: route
-      type:
+      type: &id211
       - azure.mgmt.web.models.VnetRoute
     - defaultValue: None
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
-      type:
+      type: &id212
       - dict
     - defaultValue: 'False'
       description: 'returns the direct response alongside the
@@ -2114,7 +2140,7 @@ items:
 
         '
       id: raw
-      type:
+      type: &id213
       - bool
     - description: '*Operation configuration
 
@@ -2122,15 +2148,2164 @@ items:
 
         '
       id: operation_config
-    return:
+    return: &id214
       type:
       - azure.mgmt.web.models.VnetRoute
-      - 'msrest.pipeline.ClientRawResponse
+      - '../msrest.pipeline.ClientRawResponse
 
         if raw=true'
   type: method
   uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+- children:
+  - azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+  - azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+  - azure.mgmt.web.operations.AppServicePlansOperations.delete
+  - azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+  - azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+  - azure.mgmt.web.operations.AppServicePlansOperations.get
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+  - azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+  - azure.mgmt.web.operations.AppServicePlansOperations.list
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+  - azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+  - azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+  - azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+  - azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+  - azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: AppServicePlansOperations
+  source:
+    id: AppServicePlansOperations
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'AppServicePlansOperations operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '
+  syntax:
+    content: AppServicePlansOperations(client, config, serializer, deserializer)
+    parameters: *id001
+    variables: *id002
+  type: class
+  uid: azure.mgmt.web.operations.AppServicePlansOperations
+- &id010
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id003
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: create_or_update
+  source:
+    id: create_or_update
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 244
+  summary: 'Creates or updates an App Service Plan.
+
+
+    Creates or updates an App Service Plan.
+
+    '
+  syntax:
+    content: create_or_update(resource_group_name, name, app_service_plan, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id004
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id005
+    - description: 'Details of the App Service plan.
+
+        '
+      id: app_service_plan
+      type: *id006
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id007
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id008
+    return: *id009
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+- *id010
+- &id020
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id011
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: create_or_update_vnet_route
+  source:
+    id: create_or_update_vnet_route
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1612
+  summary: 'Create or update a Virtual Network route in an App Service plan.
+
+
+    Create or update a Virtual Network route in an App Service plan.
+
+    '
+  syntax:
+    content: create_or_update_vnet_route(resource_group_name, name, vnet_name, route_name,
+      route, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id012
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id013
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id014
+    - description: 'Name of the Virtual Network route.
+
+        '
+      id: route_name
+      type: *id015
+    - description: 'Definition of the Virtual Network route.
+
+        '
+      id: route
+      type: *id016
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id017
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id018
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id019
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+- *id020
+- &id027
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id021
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: delete
+  source:
+    id: delete
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 341
+  summary: 'Delete an App Service plan.
+
+
+    Delete an App Service plan.
+
+    '
+  syntax:
+    content: delete(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id022
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id023
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id024
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id025
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id026
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete
+- *id027
+- &id036
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id028
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: delete_hybrid_connection
+  source:
+    id: delete_hybrid_connection
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 533
+  summary: 'Delete a Hybrid Connection in use in an App Service plan.
+
+
+    Delete a Hybrid Connection in use in an App Service plan.
+
+    '
+  syntax:
+    content: delete_hybrid_connection(resource_group_name, name, namespace_name, relay_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id029
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id030
+    - description: 'Name of the Service Bus namespace.
+
+        '
+      id: namespace_name
+      type: *id031
+    - description: 'Name of the Service Bus relay.
+
+        '
+      id: relay_name
+      type: *id032
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id033
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id034
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id035
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+- *id036
+- &id045
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id037
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: delete_vnet_route
+  source:
+    id: delete_vnet_route
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1688
+  summary: 'Delete a Virtual Network route in an App Service plan.
+
+
+    Delete a Virtual Network route in an App Service plan.
+
+    '
+  syntax:
+    content: delete_vnet_route(resource_group_name, name, vnet_name, route_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id038
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id039
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id040
+    - description: 'Name of the Virtual Network route.
+
+        '
+      id: route_name
+      type: *id041
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id042
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id043
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id044
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+- *id045
+- &id052
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id046
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.get
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get
+  source:
+    id: get
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 180
+  summary: 'Get an App Service plan.
+
+
+    Get an App Service plan.
+
+    '
+  syntax:
+    content: get(resource_group_name, name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id047
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id048
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id049
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id050
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id051
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get
+- *id052
+- &id061
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id053
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_hybrid_connection
+  source:
+    id: get_hybrid_connection
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 462
+  summary: 'Retrieve a Hybrid Connection in use in an App Service plan.
+
+
+    Retrieve a Hybrid Connection in use in an App Service plan.
+
+    '
+  syntax:
+    content: get_hybrid_connection(resource_group_name, name, namespace_name, relay_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id054
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id055
+    - description: 'Name of the Service Bus namespace.
+
+        '
+      id: namespace_name
+      type: *id056
+    - description: 'Name of the Service Bus relay.
+
+        '
+      id: relay_name
+      type: *id057
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id058
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id059
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id060
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+- *id061
+- &id068
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id062
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_hybrid_connection_plan_limit
+  source:
+    id: get_hybrid_connection_plan_limit
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 744
+  summary: 'Get the maximum number of Hybrid Connections allowed in an App Service
+
+    plan.
+
+
+    Get the maximum number of Hybrid Connections allowed in an App Service
+
+    plan.
+
+    '
+  syntax:
+    content: get_hybrid_connection_plan_limit(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id063
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id064
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id065
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id066
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id067
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+- *id068
+- &id077
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id069
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_route_for_vnet
+  source:
+    id: get_route_for_vnet
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1542
+  summary: 'Get a Virtual Network route in an App Service plan.
+
+
+    Get a Virtual Network route in an App Service plan.
+
+    '
+  syntax:
+    content: get_route_for_vnet(resource_group_name, name, vnet_name, route_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id070
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id071
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id072
+    - description: 'Name of the Virtual Network route.
+
+        '
+      id: route_name
+      type: *id073
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id074
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id075
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id076
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+- *id077
+- &id085
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id078
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_vnet_from_server_farm
+  source:
+    id: get_vnet_from_server_farm
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1257
+  summary: 'Get a Virtual Network associated with an App Service plan.
+
+
+    Get a Virtual Network associated with an App Service plan.
+
+    '
+  syntax:
+    content: get_vnet_from_server_farm(resource_group_name, name, vnet_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id079
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id080
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id081
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id082
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id083
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id084
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+- *id085
+- &id094
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id086
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: get_vnet_gateway
+  source:
+    id: get_vnet_gateway
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1324
+  summary: 'Get a Virtual Network gateway.
+
+
+    Get a Virtual Network gateway.
+
+    '
+  syntax:
+    content: get_vnet_gateway(resource_group_name, name, vnet_name, gateway_name,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id087
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id088
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id089
+    - description: 'Name of the gateway. Only the ''primary'' gateway
+
+        is supported.
+
+        '
+      id: gateway_name
+      type: *id090
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id091
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id092
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id093
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+- *id094
+- &id100
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id095
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list
+  source:
+    id: list
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 39
+  summary: 'Get all App Service plans for a subcription.
+
+
+    Get all App Service plans for a subcription.
+
+    '
+  syntax:
+    content: list(detailed=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: None
+      description: 'Specify <code>true</code> to return all App Service
+
+        plan properties. The default is <code>false</code>, which returns a
+
+        subset of the properties.
+
+        Retrieval of all properties may increase the API latency.
+
+        '
+      id: detailed
+      type: *id096
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id097
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id098
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id099
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list
+- *id100
+- &id106
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id101
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_by_resource_group
+  source:
+    id: list_by_resource_group
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 111
+  summary: 'Get all App Service plans in a resource group.
+
+
+    Get all App Service plans in a resource group.
+
+    '
+  syntax:
+    content: list_by_resource_group(resource_group_name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id102
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id103
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id104
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id105
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+- *id106
+- &id113
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id107
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_capabilities
+  source:
+    id: list_capabilities
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 398
+  summary: 'List all capabilities of an App Service plan.
+
+
+    List all capabilities of an App Service plan.
+
+    '
+  syntax:
+    content: list_capabilities(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id108
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id109
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id110
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id111
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id112
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+- *id113
+- &id122
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id114
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_hybrid_connection_keys
+  source:
+    id: list_hybrid_connection_keys
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 596
+  summary: 'Get the send key name and value of a Hybrid Connection.
+
+
+    Get the send key name and value of a Hybrid Connection.
+
+    '
+  syntax:
+    content: list_hybrid_connection_keys(resource_group_name, name, namespace_name,
+      relay_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id115
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id116
+    - description: 'The name of the Service Bus namespace.
+
+        '
+      id: namespace_name
+      type: *id117
+    - description: 'The name of the Service Bus relay.
+
+        '
+      id: relay_name
+      type: *id118
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id119
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id120
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id121
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+- *id122
+- &id129
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id123
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_hybrid_connections
+  source:
+    id: list_hybrid_connections
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 811
+  summary: 'Retrieve all Hybrid Connections in use in an App Service plan.
+
+
+    Retrieve all Hybrid Connections in use in an App Service plan.
+
+    '
+  syntax:
+    content: list_hybrid_connections(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id124
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id125
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id126
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id127
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id128
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+- *id129
+- &id136
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id130
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_metric_defintions
+  source:
+    id: list_metric_defintions
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 883
+  summary: 'Get metrics that can be queried for an App Service plan, and their
+
+    definitions.
+
+
+    Get metrics that can be queried for an App Service plan, and their
+
+    definitions.
+
+    '
+  syntax:
+    content: list_metric_defintions(resource_group_name, name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id131
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id132
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id133
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id134
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id135
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+- *id136
+- &id145
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id137
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_metrics
+  source:
+    id: list_metrics
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 957
+  summary: 'Get metrics for an App Serice plan.
+
+
+    Get metrics for an App Serice plan.
+
+    '
+  syntax:
+    content: list_metrics(resource_group_name, name, details=None, filter=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id138
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id139
+    - defaultValue: None
+      description: 'Specify <code>true</code> to include instance details.
+
+        The default is <code>false</code>.
+
+        '
+      id: details
+      type: *id140
+    - defaultValue: None
+      description: 'Return only usages/metrics specified in the filter.
+
+        Filter conforms to odata syntax. Example: $filter=(name.value eq
+
+        ''Metric1'' or name.value eq ''Metric2'') and startTime eq
+
+        ''2014-01-01T00:00:00Z'' and endTime eq ''2014-12-31T23:59:59Z'' and
+
+        timeGrain eq duration''[Hour|Minute|Day]''.
+
+        '
+      id: filter
+      type: *id141
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id142
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id143
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id144
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+- *id145
+- &id153
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id146
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_routes_for_vnet
+  source:
+    id: list_routes_for_vnet
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1473
+  summary: 'Get all routes that are associated with a Virtual Network in an App
+
+    Service plan.
+
+
+    Get all routes that are associated with a Virtual Network in an App
+
+    Service plan.
+
+    '
+  syntax:
+    content: list_routes_for_vnet(resource_group_name, name, vnet_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id147
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id148
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id149
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id150
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id151
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id152
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+- *id153
+- &id160
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id154
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_vnets
+  source:
+    id: list_vnets
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1193
+  summary: 'Get all Virtual Networks associated with an App Service plan.
+
+
+    Get all Virtual Networks associated with an App Service plan.
+
+    '
+  syntax:
+    content: list_vnets(resource_group_name, name, custom_headers=None, raw=False,
+      **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id155
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id156
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id157
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id158
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id159
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+- *id160
+- &id170
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id161
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_web_apps
+  source:
+    id: list_web_apps
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1106
+  summary: 'Get all apps associated with an App Service plan.
+
+
+    Get all apps associated with an App Service plan.
+
+    '
+  syntax:
+    content: list_web_apps(resource_group_name, name, skip_token=None, filter=None,
+      top=None, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id162
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id163
+    - defaultValue: None
+      description: 'Skip to a web app in the list of webapps associated
+
+        with app service plan. If specified, the resulting list will contain
+
+        web apps starting from (including) the skipToken. Otherwise, the
+
+        resulting list contains web apps from the start of the list
+
+        '
+      id: skip_token
+      type: *id164
+    - defaultValue: None
+      description: 'Supported filter: $filter=state eq running. Returns
+
+        only web apps that are currently running
+
+        '
+      id: filter
+      type: *id165
+    - defaultValue: None
+      description: 'List page size. If specified, results are paged.
+
+        '
+      id: top
+      type: *id166
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id167
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id168
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id169
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+- *id170
+- &id179
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id171
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: list_web_apps_by_hybrid_connection
+  source:
+    id: list_web_apps_by_hybrid_connection
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 667
+  summary: 'Get all apps that use a Hybrid Connection in an App Service Plan.
+
+
+    Get all apps that use a Hybrid Connection in an App Service Plan.
+
+    '
+  syntax:
+    content: list_web_apps_by_hybrid_connection(resource_group_name, name, namespace_name,
+      relay_name, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id172
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id173
+    - description: 'Name of the Hybrid Connection namespace.
+
+        '
+      id: namespace_name
+      type: *id174
+    - description: 'Name of the Hybrid Connection relay.
+
+        '
+      id: relay_name
+      type: *id175
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id176
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id177
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id178
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+- *id179
+- &id187
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id180
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: reboot_worker
+  source:
+    id: reboot_worker
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1827
+  summary: 'Reboot a worker machine in an App Service plan.
+
+
+    Reboot a worker machine in an App Service plan.
+
+    '
+  syntax:
+    content: reboot_worker(resource_group_name, name, worker_name, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id181
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id182
+    - description: 'Name of worker machine, which typically starts
+
+        with RD.
+
+        '
+      id: worker_name
+      type: *id183
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id184
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id185
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id186
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+- *id187
+- &id195
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id188
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: restart_web_apps
+  source:
+    id: restart_web_apps
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1042
+  summary: 'Restart all apps in an App Service plan.
+
+
+    Restart all apps in an App Service plan.
+
+    '
+  syntax:
+    content: restart_web_apps(resource_group_name, name, soft_restart=None, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id189
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id190
+    - defaultValue: None
+      description: 'Specify <code>true</code> to performa a soft
+
+        restart, applies the configuration settings and restarts the apps if
+
+        necessary. The default is <code>false</code>, which always restarts
+
+        and reprovisions the apps
+
+        '
+      id: soft_restart
+      type: *id191
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id192
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id193
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id194
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+- *id195
+- &id205
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id196
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: update_vnet_gateway
+  source:
+    id: update_vnet_gateway
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1395
+  summary: 'Update a Virtual Network gateway.
+
+
+    Update a Virtual Network gateway.
+
+    '
+  syntax:
+    content: update_vnet_gateway(resource_group_name, name, vnet_name, gateway_name,
+      connection_envelope, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id197
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id198
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id199
+    - description: 'Name of the gateway. Only the ''primary'' gateway
+
+        is supported.
+
+        '
+      id: gateway_name
+      type: *id200
+    - description: 'Definition of the gateway.
+
+        '
+      id: connection_envelope
+      type: *id201
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id202
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id203
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id204
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+- *id205
+- &id215
+  class: azure.mgmt.web.operations.AppServicePlansOperations
+  exceptions: *id206
+  fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+  langs:
+  - python
+  module: azure.mgmt.web.operations
+  name: update_vnet_route
+  source:
+    id: update_vnet_route
+    path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+    remote:
+      branch: master
+      path: azure-mgmt-web\azure\mgmt\web\operations\app_service_plans_operations.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1751
+  summary: 'Create or update a Virtual Network route in an App Service plan.
+
+
+    Create or update a Virtual Network route in an App Service plan.
+
+    '
+  syntax:
+    content: update_vnet_route(resource_group_name, name, vnet_name, route_name, route,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Name of the resource group to which the
+
+        resource belongs.
+
+        '
+      id: resource_group_name
+      type: *id207
+    - description: 'Name of the App Service plan.
+
+        '
+      id: name
+      type: *id208
+    - description: 'Name of the Virtual Network.
+
+        '
+      id: vnet_name
+      type: *id209
+    - description: 'Name of the Virtual Network route.
+
+        '
+      id: route_name
+      type: *id210
+    - description: 'Definition of the Virtual Network route.
+
+        '
+      id: route
+      type: *id211
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type: *id212
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type: *id213
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return: *id214
+  type: method
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+- *id215
 references:
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+  isExternal: false
+  name: create_or_update_vnet_route
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+  isExternal: false
+  name: delete_hybrid_connection
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+  isExternal: false
+  name: delete_vnet_route
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+  isExternal: false
+  name: get_hybrid_connection
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+  isExternal: false
+  name: get_hybrid_connection_plan_limit
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+  isExternal: false
+  name: get_route_for_vnet
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+  isExternal: false
+  name: get_vnet_from_server_farm
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+  isExternal: false
+  name: get_vnet_gateway
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+  isExternal: false
+  name: list_capabilities
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+  isExternal: false
+  name: list_hybrid_connection_keys
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+  isExternal: false
+  name: list_hybrid_connections
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+  isExternal: false
+  name: list_metric_defintions
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+  isExternal: false
+  name: list_routes_for_vnet
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+  isExternal: false
+  name: list_vnets
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+  isExternal: false
+  name: list_web_apps
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+  isExternal: false
+  name: list_web_apps_by_hybrid_connection
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+  isExternal: false
+  name: reboot_worker
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+  isExternal: false
+  name: restart_web_apps
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+  isExternal: false
+  name: update_vnet_gateway
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+  isExternal: false
+  name: update_vnet_route
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+  isExternal: false
+  name: create_or_update
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+  isExternal: false
+  name: create_or_update_vnet_route
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update_vnet_route
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete
+  isExternal: false
+  name: delete
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+  isExternal: false
+  name: delete_hybrid_connection
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_hybrid_connection
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+  isExternal: false
+  name: delete_vnet_route
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.delete_vnet_route
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get
+  isExternal: false
+  name: get
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+  isExternal: false
+  name: get_hybrid_connection
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+  isExternal: false
+  name: get_hybrid_connection_plan_limit
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_hybrid_connection_plan_limit
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+  isExternal: false
+  name: get_route_for_vnet
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_route_for_vnet
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+  isExternal: false
+  name: get_vnet_from_server_farm
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_from_server_farm
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+  isExternal: false
+  name: get_vnet_gateway
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.get_vnet_gateway
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list
+  isExternal: false
+  name: list
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+  isExternal: false
+  name: list_by_resource_group
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_by_resource_group
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+  isExternal: false
+  name: list_capabilities
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_capabilities
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+  isExternal: false
+  name: list_hybrid_connection_keys
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connection_keys
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+  isExternal: false
+  name: list_hybrid_connections
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_hybrid_connections
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+  isExternal: false
+  name: list_metric_defintions
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metric_defintions
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+  isExternal: false
+  name: list_metrics
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_metrics
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+  isExternal: false
+  name: list_routes_for_vnet
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_routes_for_vnet
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+  isExternal: false
+  name: list_vnets
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_vnets
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+  isExternal: false
+  name: list_web_apps
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+  isExternal: false
+  name: list_web_apps_by_hybrid_connection
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.list_web_apps_by_hybrid_connection
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+  isExternal: false
+  name: reboot_worker
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.reboot_worker
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+  isExternal: false
+  name: restart_web_apps
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.restart_web_apps
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+  isExternal: false
+  name: update_vnet_gateway
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_gateway
+- fullName: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
+  isExternal: false
+  name: update_vnet_route
+  parent: azure.mgmt.web.operations.AppServicePlansOperations
+  uid: azure.mgmt.web.operations.AppServicePlansOperations.update_vnet_route
 - fullName: azure.mgmt.web.operations.AppServicePlansOperations.create_or_update
   isExternal: false
   name: create_or_update

@@ -35,7 +35,7 @@ items:
       notification_hub_create_or_update_parameters_name=None, registration_ttl=None,
       authorization_rules=None, apns_credential=None, wns_credential=None, gcm_credential=None,
       mpns_credential=None, adm_credential=None, baidu_credential=None)
-    parameters:
+    parameters: &id001
     - description: 'Resource location
 
         '
@@ -120,7 +120,7 @@ items:
       id: baidu_credential
       type:
       - azure.mgmt.notificationhubs.models.BaiduCredential
-    variables:
+    variables: &id002
     - description: 'Resource Id
 
         '
@@ -139,6 +139,44 @@ items:
       id: type
       type:
       - str
+  type: class
+  uid: azure.mgmt.notificationhubs.models.NotificationHubCreateOrUpdateParameters
+- children: []
+  class: azure.mgmt.notificationhubs.models.NotificationHubCreateOrUpdateParameters
+  fullName: azure.mgmt.notificationhubs.models.NotificationHubCreateOrUpdateParameters
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: msrest.serialization.Model
+    type: azure.mgmt.notificationhubs.models.resource.Resource
+  langs:
+  - python
+  module: azure.mgmt.notificationhubs.models
+  name: NotificationHubCreateOrUpdateParameters
+  source:
+    id: NotificationHubCreateOrUpdateParameters
+    path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\models\notification_hub_create_or_update_parameters.py
+    remote:
+      branch: master
+      path: azure-mgmt-notificationhubs\azure\mgmt\notificationhubs\models\notification_hub_create_or_update_parameters.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 15
+  summary: 'Parameters supplied to the CreateOrUpdate NotificationHub operation.
+
+
+    Variables are only populated by the server, and will be ignored when
+
+    sending a request.
+
+    '
+  syntax:
+    content: NotificationHubCreateOrUpdateParameters(location, tags=None, sku=None,
+      notification_hub_create_or_update_parameters_name=None, registration_ttl=None,
+      authorization_rules=None, apns_credential=None, wns_credential=None, gcm_credential=None,
+      mpns_credential=None, adm_credential=None, baidu_credential=None)
+    parameters: *id001
+    variables: *id002
   type: class
   uid: azure.mgmt.notificationhubs.models.NotificationHubCreateOrUpdateParameters
 references: []

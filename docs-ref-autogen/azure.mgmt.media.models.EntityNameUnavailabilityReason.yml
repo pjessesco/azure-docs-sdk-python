@@ -32,7 +32,39 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.media.models.EntityNameUnavailabilityReason
-- fullName: azure.mgmt.media.models.EntityNameUnavailabilityReason.already_exists
+- children:
+  - azure.mgmt.media.models.EntityNameUnavailabilityReason.already_exists
+  - azure.mgmt.media.models.EntityNameUnavailabilityReason.invalid
+  - azure.mgmt.media.models.EntityNameUnavailabilityReason.none
+  class: azure.mgmt.media.models.EntityNameUnavailabilityReason
+  fullName: azure.mgmt.media.models.EntityNameUnavailabilityReason
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.media.models
+  name: EntityNameUnavailabilityReason
+  source:
+    id: EntityNameUnavailabilityReason
+    path: azure-mgmt-media\azure\mgmt\media\models\media_services_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-media\azure\mgmt\media\models\media_services_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 20
+  summary: 'An enumeration.
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.media.models.EntityNameUnavailabilityReason
+- &id001
+  fullName: azure.mgmt.media.models.EntityNameUnavailabilityReason.already_exists
   id: already_exists
   langs:
   - python
@@ -46,7 +78,8 @@ items:
       - azure.mgmt.media.models.EntityNameUnavailabilityReason
   type: attribute
   uid: azure.mgmt.media.models.EntityNameUnavailabilityReason.already_exists
-- fullName: azure.mgmt.media.models.EntityNameUnavailabilityReason.invalid
+- &id002
+  fullName: azure.mgmt.media.models.EntityNameUnavailabilityReason.invalid
   id: invalid
   langs:
   - python
@@ -60,7 +93,8 @@ items:
       - azure.mgmt.media.models.EntityNameUnavailabilityReason
   type: attribute
   uid: azure.mgmt.media.models.EntityNameUnavailabilityReason.invalid
-- fullName: azure.mgmt.media.models.EntityNameUnavailabilityReason.none
+- &id003
+  fullName: azure.mgmt.media.models.EntityNameUnavailabilityReason.none
   id: none
   langs:
   - python
@@ -74,4 +108,7 @@ items:
       - azure.mgmt.media.models.EntityNameUnavailabilityReason
   type: attribute
   uid: azure.mgmt.media.models.EntityNameUnavailabilityReason.none
+- *id001
+- *id002
+- *id003
 references: []

@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.sql.models.RecommendedIndexType
-- fullName: azure.mgmt.sql.models.RecommendedIndexType.clustered
+- children:
+  - azure.mgmt.sql.models.RecommendedIndexType.clustered
+  - azure.mgmt.sql.models.RecommendedIndexType.clusteredcolumnstore
+  - azure.mgmt.sql.models.RecommendedIndexType.columnstore
+  - azure.mgmt.sql.models.RecommendedIndexType.nonclustered
+  class: azure.mgmt.sql.models.RecommendedIndexType
+  fullName: azure.mgmt.sql.models.RecommendedIndexType
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.sql.models
+  name: RecommendedIndexType
+  source:
+    id: RecommendedIndexType
+    path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-sql\azure\mgmt\sql\models\sql_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 222
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.sql.models.RecommendedIndexType
+- &id001
+  fullName: azure.mgmt.sql.models.RecommendedIndexType.clustered
   id: clustered
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.sql.models.RecommendedIndexType
   type: attribute
   uid: azure.mgmt.sql.models.RecommendedIndexType.clustered
-- fullName: azure.mgmt.sql.models.RecommendedIndexType.clusteredcolumnstore
+- &id002
+  fullName: azure.mgmt.sql.models.RecommendedIndexType.clusteredcolumnstore
   id: clusteredcolumnstore
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.sql.models.RecommendedIndexType
   type: attribute
   uid: azure.mgmt.sql.models.RecommendedIndexType.clusteredcolumnstore
-- fullName: azure.mgmt.sql.models.RecommendedIndexType.columnstore
+- &id003
+  fullName: azure.mgmt.sql.models.RecommendedIndexType.columnstore
   id: columnstore
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.sql.models.RecommendedIndexType
   type: attribute
   uid: azure.mgmt.sql.models.RecommendedIndexType.columnstore
-- fullName: azure.mgmt.sql.models.RecommendedIndexType.nonclustered
+- &id004
+  fullName: azure.mgmt.sql.models.RecommendedIndexType.nonclustered
   id: nonclustered
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.sql.models.RecommendedIndexType
   type: attribute
   uid: azure.mgmt.sql.models.RecommendedIndexType.nonclustered
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

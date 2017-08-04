@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.invalid
+- children:
+  - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.invalid
+  - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.not_protected
+  - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protected
+  - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protecting
+  class: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.recoveryservicesbackup.models
+  name: ProtectionStatus
+  source:
+    id: ProtectionStatus
+    path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-recoveryservicesbackup\azure\mgmt\recoveryservicesbackup\models\recovery_services_backup_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 347
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
+- &id001
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.invalid
   id: invalid
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.invalid
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.not_protected
+- &id002
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.not_protected
   id: not_protected
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.not_protected
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protected
+- &id003
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protected
   id: protected
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protected
-- fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protecting
+- &id004
+  fullName: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protecting
   id: protecting
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.recoveryservicesbackup.models.ProtectionStatus
   type: attribute
   uid: azure.mgmt.recoveryservicesbackup.models.ProtectionStatus.protecting
+- *id001
+- *id002
+- *id003
+- *id004
 references: []

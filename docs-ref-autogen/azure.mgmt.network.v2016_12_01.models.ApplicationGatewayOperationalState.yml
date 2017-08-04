@@ -34,7 +34,41 @@ items:
   syntax: {}
   type: class
   uid: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
-- fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.running
+- children:
+  - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.running
+  - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.starting
+  - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopped
+  - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopping
+  class: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
+  fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
+  langs:
+  - python
+  module: azure.mgmt.network.v2016_12_01.models
+  name: ApplicationGatewayOperationalState
+  source:
+    id: ApplicationGatewayOperationalState
+    path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\network_management_client_enums.py
+    remote:
+      branch: master
+      path: azure-mgmt-network\azure\mgmt\network\v2016_12_01\models\network_management_client_enums.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 109
+  summary: 'An enumeration.
+
+
+
+
+
+    '
+  syntax: {}
+  type: class
+  uid: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
+- &id001
+  fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.running
   id: running
   langs:
   - python
@@ -48,7 +82,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.running
-- fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.starting
+- &id002
+  fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.starting
   id: starting
   langs:
   - python
@@ -62,7 +97,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.starting
-- fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopped
+- &id003
+  fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopped
   id: stopped
   langs:
   - python
@@ -76,7 +112,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopped
-- fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopping
+- &id004
+  fullName: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopping
   id: stopping
   langs:
   - python
@@ -90,4 +127,8 @@ items:
       - azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState
   type: attribute
   uid: azure.mgmt.network.v2016_12_01.models.ApplicationGatewayOperationalState.stopping
+- *id001
+- *id002
+- *id003
+- *id004
 references: []
