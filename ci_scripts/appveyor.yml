@@ -54,6 +54,9 @@ on_success:
     - cd c:/projects/azure-sdk-for-python/doc
     - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/build.bat -Destination c:/projects/azure-sdk-for-python/doc/build.bat
     - call build.bat
+    # remove empty namespace rst files
+    - ps: Remove-Item c:/projects/azure-sdk-for-python/doc/ref/azure.rst
+    - ps: Remove-Item c:/projects/azure-sdk-for-python/doc/ref/azure.mgmt.rst
     
     # Move rst file to doc path
     - ps: Move-Item c:/projects/azure-sdk-for-python/doc/ref/*.rst -Destination c:/projects/azure-sdk-for-python/doc
