@@ -24,6 +24,9 @@ init:
     
     # Install requests (2.14.1) since msrest requires requests~=2.14.1
     - "%PYTHON%/python.exe -m pip install requests==2.14.1"
+    
+    # Install vcrpy since azure storage requires
+    - "%PYTHON%/python.exe -m pip install vcrpy"
 
     # Install sphinx (1.5.5) and its extensions
     - "%PYTHON%/python.exe -m pip install sphinx==1.5.5"
