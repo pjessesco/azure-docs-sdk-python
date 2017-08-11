@@ -48,14 +48,20 @@ install:
     # Ignore STDOUT
     - "%PYTHON%/python.exe setup.py install > null"
 
-    - cd c:/projects/azure-storage-python
-
-    # Ignore STDOUT
-    - "%PYTHON%/python.exe azure-storage-common/setup.py install"
-    - "%PYTHON%/python.exe azure-storage-blob/setup.py install"
-    - "%PYTHON%/python.exe azure-storage-file/setup.py install"
-    - "%PYTHON%/python.exe azure-storage-queue/setup.py install"
-    - "%PYTHON%/python.exe azure-storage-table/setup.py install"
+    - cd c:/projects/azure-storage-python/azure-storage-common
+    - "%PYTHON%/python.exe setup.py install"
+    
+    - cd c:/projects/azure-storage-python/azure-storage-blob
+    - "%PYTHON%/python.exe setup.py install"
+    
+    - cd c:/projects/azure-storage-python/azure-storage-file
+    - "%PYTHON%/python.exe setup.py install"
+    
+    - cd c:/projects/azure-storage-python/azure-storage-queue
+    - "%PYTHON%/python.exe setup.py install"
+    
+    - cd c:/projects/azure-storage-python/azure-storage-table
+    - "%PYTHON%/python.exe setup.py install"
 
 build: off
 
