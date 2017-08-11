@@ -86,8 +86,28 @@ on_success:
     - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/conf.py -Destination c:/projects/azure-sdk-for-python/doc/conf.py
     - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/postprocess_toc_yml.py -Destination c:/projects/azure-sdk-for-python/doc/postprocess_toc_yml.py
     - "%SPHINXBUILD% . _build"
-    - "%PYTHON%/python.exe postprocess_toc_yml.py"
+    
+    # Build yml for azure-storage-python
+    # remove old rst fils and copy pre-defined ref/rst
+    - ps: Remove-Item c:/projects/azure-storage-python/doc/ref/* -recurse
+    - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/ref/azure-storage-python/*.rst -Destination c:/projects/azure-storage-python/doc/ref -Recurse
 
+    # Move rst file to doc path
+    - ps: Move-Item c:/projects/azure-storage-python/doc/ref/*.rst -Destination c:/projects/azure-storage-python/doc
+    
+    # Generate yml
+    - cd c:/projects/azure-storage-python/doc
+    - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/conf.py -Destination c:/projects/azure-storage-python/doc/conf.py
+    - "%SPHINXBUILD% . _build"
+    
+    #Combine toc yml files and copy azure-storage-python yml files to azure-sdk-for-python
+    - ps: Get-Content c:/projects/azure-sdk-for-python/doc/_build/docfx_yaml/toc.yml | Add-Content c:/projects/azure-storage-python/doc/_build/docfx_yaml/toc.yml
+    - ps: Copy-Item -Path c:/projects/azure-storage-python/doc/_build/docfx_yaml/* -Destination c:/projects/azure-sdk-for-python/doc/_build/docfx_yaml -Recurse
+
+    # Post process toc yml
+    - cd c:/projects/azure-sdk-for-python/doc
+    - "%PYTHON%/python.exe postprocess_toc_yml.py"
+    
     # Generate xrefmap.yml
     - cd c:/projects/azure-sdk-for-python/doc
     - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/generate_xrefmap.py -Destination c:/projects/azure-sdk-for-python/doc/generate_xrefmap.py
