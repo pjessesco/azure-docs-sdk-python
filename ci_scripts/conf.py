@@ -33,14 +33,7 @@ exclude_patterns = [
   '_build',
   '*.tests.rst',
   'azure.servicefabric*.rst',
-  'azure.servicemanagement*.rst',
-  'azure.rst',
-  'azure.mgmt.rst',
-  'azure.mgmt.compute.rst',
-  'azure.mgmt.datalake.rst',
-  'azure.mgmt.documentdb.rst',
-  'azure.mgmt.rdbms.rst',
-  'azure.mgmt.resource.rst'
+  'azure.servicemanagement*.rst'
 ]
 
 
