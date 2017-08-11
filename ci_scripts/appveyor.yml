@@ -67,9 +67,10 @@ install:
 build: off
 
 on_success:
+    # Build yml for azure-sdk-for-python
     # remove old rst fils and copy pre-defined ref/rst
     - ps: Remove-Item c:/projects/azure-sdk-for-python/doc/ref/* -recurse
-    - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/ref/*.rst -Destination c:/projects/azure-sdk-for-python/doc/ref -Recurse
+    - ps: Copy-Item c:/projects/azure-docs-sdk-python/ci_scripts/ref/azure-sdk-for-python/*.rst -Destination c:/projects/azure-sdk-for-python/doc/ref -Recurse
 
     # Generate new rst files
     - cd c:/projects/azure-sdk-for-python/doc
