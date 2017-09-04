@@ -1,7 +1,8 @@
 ### YamlMime:UniversalReference
 api_name: []
 items:
-- children: []
+- children:
+  - azure.mgmt.network.v2017_06_01.models.RouteFilterRule.route_filter_rule_type
   class: azure.mgmt.network.v2017_06_01.models.RouteFilterRule
   fullName: azure.mgmt.network.v2017_06_01.models.RouteFilterRule
   inheritance:
@@ -32,7 +33,8 @@ items:
 
     '
   syntax:
-    content: RouteFilterRule(access, communities, id=None, location=None, tags=None)
+    content: RouteFilterRule(access, communities, id=None, name=None, location=None,
+      tags=None)
     parameters:
     - description: 'Resource ID.
 
@@ -58,6 +60,14 @@ items:
       id: communities
       type:
       - list of str
+    - description: 'The name of the resource that is unique within a resource
+
+        group. This name can be used to access the resource.
+
+        '
+      id: name
+      type:
+      - str
     - description: 'Resource location.
 
         '
@@ -87,14 +97,6 @@ items:
       id: provisioning_state
       type:
       - str
-    - description: 'The name of the resource that is unique within a resource
-
-        group. This name can be used to access the resource.
-
-        '
-      id: name
-      type:
-      - str
     - description: 'A unique read-only string that changes whenever the resource
 
         is updated.
@@ -105,4 +107,19 @@ items:
       - str
   type: class
   uid: azure.mgmt.network.v2017_06_01.models.RouteFilterRule
-references: []
+- class: azure.mgmt.network.v2017_06_01.models.RouteFilterRule
+  fullName: azure.mgmt.network.v2017_06_01.models.RouteFilterRule.route_filter_rule_type
+  langs:
+  - python
+  module: azure.mgmt.network.v2017_06_01.models
+  name: route_filter_rule_type
+  syntax:
+    content: route_filter_rule_type = 'Community'
+  type: attribute
+  uid: azure.mgmt.network.v2017_06_01.models.RouteFilterRule.route_filter_rule_type
+references:
+- fullName: azure.mgmt.network.v2017_06_01.models.RouteFilterRule.route_filter_rule_type
+  isExternal: false
+  name: route_filter_rule_type
+  parent: azure.mgmt.network.v2017_06_01.models.RouteFilterRule
+  uid: azure.mgmt.network.v2017_06_01.models.RouteFilterRule.route_filter_rule_type

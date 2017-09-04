@@ -45,6 +45,9 @@ items:
   - azure.storage.file.fileservice.FileService.set_share_metadata
   - azure.storage.file.fileservice.FileService.set_share_properties
   - azure.storage.file.fileservice.FileService.update_range
+  - azure.storage.file.fileservice.FileService.MAX_CHUNK_GET_SIZE
+  - azure.storage.file.fileservice.FileService.MAX_RANGE_SIZE
+  - azure.storage.file.fileservice.FileService.MAX_SINGLE_GET_SIZE
   class: azure.storage.file.fileservice.FileService
   fullName: azure.storage.file.fileservice.FileService
   inheritance:
@@ -3742,6 +3745,36 @@ items:
       - int
   type: method
   uid: azure.storage.file.fileservice.FileService.update_range
+- class: azure.storage.file.fileservice.FileService
+  fullName: azure.storage.file.fileservice.FileService.MAX_CHUNK_GET_SIZE
+  langs:
+  - python
+  module: azure.storage.file.fileservice
+  name: MAX_CHUNK_GET_SIZE
+  syntax:
+    content: MAX_CHUNK_GET_SIZE = 8388608
+  type: attribute
+  uid: azure.storage.file.fileservice.FileService.MAX_CHUNK_GET_SIZE
+- class: azure.storage.file.fileservice.FileService
+  fullName: azure.storage.file.fileservice.FileService.MAX_RANGE_SIZE
+  langs:
+  - python
+  module: azure.storage.file.fileservice
+  name: MAX_RANGE_SIZE
+  syntax:
+    content: MAX_RANGE_SIZE = 4194304
+  type: attribute
+  uid: azure.storage.file.fileservice.FileService.MAX_RANGE_SIZE
+- class: azure.storage.file.fileservice.FileService
+  fullName: azure.storage.file.fileservice.FileService.MAX_SINGLE_GET_SIZE
+  langs:
+  - python
+  module: azure.storage.file.fileservice
+  name: MAX_SINGLE_GET_SIZE
+  syntax:
+    content: MAX_SINGLE_GET_SIZE = 33554432
+  type: attribute
+  uid: azure.storage.file.fileservice.FileService.MAX_SINGLE_GET_SIZE
 references:
 - fullName: azure.storage.file.fileservice.FileService.abort_copy_file
   isExternal: false
@@ -3958,3 +3991,18 @@ references:
   name: update_range
   parent: azure.storage.file.fileservice.FileService
   uid: azure.storage.file.fileservice.FileService.update_range
+- fullName: azure.storage.file.fileservice.FileService.MAX_CHUNK_GET_SIZE
+  isExternal: false
+  name: MAX_CHUNK_GET_SIZE
+  parent: azure.storage.file.fileservice.FileService
+  uid: azure.storage.file.fileservice.FileService.MAX_CHUNK_GET_SIZE
+- fullName: azure.storage.file.fileservice.FileService.MAX_RANGE_SIZE
+  isExternal: false
+  name: MAX_RANGE_SIZE
+  parent: azure.storage.file.fileservice.FileService
+  uid: azure.storage.file.fileservice.FileService.MAX_RANGE_SIZE
+- fullName: azure.storage.file.fileservice.FileService.MAX_SINGLE_GET_SIZE
+  isExternal: false
+  name: MAX_SINGLE_GET_SIZE
+  parent: azure.storage.file.fileservice.FileService
+  uid: azure.storage.file.fileservice.FileService.MAX_SINGLE_GET_SIZE

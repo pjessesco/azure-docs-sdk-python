@@ -41,6 +41,8 @@ items:
   - azure.storage.blob.baseblobservice.BaseBlobService.set_container_acl
   - azure.storage.blob.baseblobservice.BaseBlobService.set_container_metadata
   - azure.storage.blob.baseblobservice.BaseBlobService.snapshot_blob
+  - azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
+  - azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
   class: azure.storage.blob.baseblobservice.BaseBlobService
   fullName: azure.storage.blob.baseblobservice.BaseBlobService
   inheritance:
@@ -4813,6 +4815,26 @@ items:
       - azure.storage.blob.models.Blob
   type: method
   uid: azure.storage.blob.baseblobservice.BaseBlobService.snapshot_blob
+- class: azure.storage.blob.baseblobservice.BaseBlobService
+  fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
+  langs:
+  - python
+  module: azure.storage.blob.baseblobservice
+  name: MAX_CHUNK_GET_SIZE
+  syntax:
+    content: MAX_CHUNK_GET_SIZE = 4194304
+  type: attribute
+  uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
+- class: azure.storage.blob.baseblobservice.BaseBlobService
+  fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
+  langs:
+  - python
+  module: azure.storage.blob.baseblobservice
+  name: MAX_SINGLE_GET_SIZE
+  syntax:
+    content: MAX_SINGLE_GET_SIZE = 33554432
+  type: attribute
+  uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
 references:
 - fullName: azure.storage.blob.baseblobservice.BaseBlobService.abort_copy_blob
   isExternal: false
@@ -5009,3 +5031,13 @@ references:
   name: snapshot_blob
   parent: azure.storage.blob.baseblobservice.BaseBlobService
   uid: azure.storage.blob.baseblobservice.BaseBlobService.snapshot_blob
+- fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
+  isExternal: false
+  name: MAX_CHUNK_GET_SIZE
+  parent: azure.storage.blob.baseblobservice.BaseBlobService
+  uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
+- fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
+  isExternal: false
+  name: MAX_SINGLE_GET_SIZE
+  parent: azure.storage.blob.baseblobservice.BaseBlobService
+  uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE

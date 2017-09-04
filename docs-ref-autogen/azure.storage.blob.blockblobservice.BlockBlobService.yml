@@ -9,6 +9,9 @@ items:
   - azure.storage.blob.blockblobservice.BlockBlobService.get_block_list
   - azure.storage.blob.blockblobservice.BlockBlobService.put_block
   - azure.storage.blob.blockblobservice.BlockBlobService.put_block_list
+  - azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
+  - azure.storage.blob.blockblobservice.BlockBlobService.MAX_SINGLE_PUT_SIZE
+  - azure.storage.blob.blockblobservice.BlockBlobService.MIN_LARGE_BLOCK_UPLOAD_THRESHOLD
   class: azure.storage.blob.blockblobservice.BlockBlobService
   fullName: azure.storage.blob.blockblobservice.BlockBlobService
   inheritance:
@@ -1246,6 +1249,36 @@ items:
       - azure.storage.blob.models.ResourceProperties
   type: method
   uid: azure.storage.blob.blockblobservice.BlockBlobService.put_block_list
+- class: azure.storage.blob.blockblobservice.BlockBlobService
+  fullName: azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
+  langs:
+  - python
+  module: azure.storage.blob.blockblobservice
+  name: MAX_BLOCK_SIZE
+  syntax:
+    content: MAX_BLOCK_SIZE = 4194304
+  type: attribute
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
+- class: azure.storage.blob.blockblobservice.BlockBlobService
+  fullName: azure.storage.blob.blockblobservice.BlockBlobService.MAX_SINGLE_PUT_SIZE
+  langs:
+  - python
+  module: azure.storage.blob.blockblobservice
+  name: MAX_SINGLE_PUT_SIZE
+  syntax:
+    content: MAX_SINGLE_PUT_SIZE = 67108864
+  type: attribute
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.MAX_SINGLE_PUT_SIZE
+- class: azure.storage.blob.blockblobservice.BlockBlobService
+  fullName: azure.storage.blob.blockblobservice.BlockBlobService.MIN_LARGE_BLOCK_UPLOAD_THRESHOLD
+  langs:
+  - python
+  module: azure.storage.blob.blockblobservice
+  name: MIN_LARGE_BLOCK_UPLOAD_THRESHOLD
+  syntax:
+    content: MIN_LARGE_BLOCK_UPLOAD_THRESHOLD = 4194305
+  type: attribute
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.MIN_LARGE_BLOCK_UPLOAD_THRESHOLD
 references:
 - fullName: azure.storage.blob.blockblobservice.BlockBlobService.create_blob_from_bytes
   isExternal: false
@@ -1282,3 +1315,18 @@ references:
   name: put_block_list
   parent: azure.storage.blob.blockblobservice.BlockBlobService
   uid: azure.storage.blob.blockblobservice.BlockBlobService.put_block_list
+- fullName: azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
+  isExternal: false
+  name: MAX_BLOCK_SIZE
+  parent: azure.storage.blob.blockblobservice.BlockBlobService
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
+- fullName: azure.storage.blob.blockblobservice.BlockBlobService.MAX_SINGLE_PUT_SIZE
+  isExternal: false
+  name: MAX_SINGLE_PUT_SIZE
+  parent: azure.storage.blob.blockblobservice.BlockBlobService
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.MAX_SINGLE_PUT_SIZE
+- fullName: azure.storage.blob.blockblobservice.BlockBlobService.MIN_LARGE_BLOCK_UPLOAD_THRESHOLD
+  isExternal: false
+  name: MIN_LARGE_BLOCK_UPLOAD_THRESHOLD
+  parent: azure.storage.blob.blockblobservice.BlockBlobService
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.MIN_LARGE_BLOCK_UPLOAD_THRESHOLD

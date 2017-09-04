@@ -49,7 +49,8 @@ items:
     do not include the x-ms-blob-sequence-number header.
 
     '
-  syntax: {}
+  syntax:
+    content: Increment = 'increment'
   type: attribute
   uid: azure.storage.blob.models.SequenceNumberAction.Increment
 - class: azure.storage.blob.models.SequenceNumberAction
@@ -71,7 +72,8 @@ items:
     request and the value currently stored for the blob.
 
     '
-  syntax: {}
+  syntax:
+    content: Max = 'max'
   type: attribute
   uid: azure.storage.blob.models.SequenceNumberAction.Max
 - class: azure.storage.blob.models.SequenceNumberAction
@@ -91,7 +93,8 @@ items:
   summary: 'Sets the sequence number to the value included with the request.
 
     '
-  syntax: {}
+  syntax:
+    content: Update = 'update'
   type: attribute
   uid: azure.storage.blob.models.SequenceNumberAction.Update
 references:
