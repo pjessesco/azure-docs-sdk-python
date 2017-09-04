@@ -2,7 +2,6 @@
 api_name: []
 items:
 - children:
-  - azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
   - azure.storage.blob.baseblobservice.BaseBlobService.abort_copy_blob
   - azure.storage.blob.baseblobservice.BaseBlobService.acquire_blob_lease
   - azure.storage.blob.baseblobservice.BaseBlobService.acquire_container_lease
@@ -43,6 +42,7 @@ items:
   - azure.storage.blob.baseblobservice.BaseBlobService.set_container_metadata
   - azure.storage.blob.baseblobservice.BaseBlobService.snapshot_blob
   - azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
+  - azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
   class: azure.storage.blob.baseblobservice.BaseBlobService
   fullName: azure.storage.blob.baseblobservice.BaseBlobService
   inheritance:
@@ -60,7 +60,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 101
+    startLine: 98
   summary: 'This is the main class managing Blob resources.
 
 
@@ -211,27 +211,6 @@ items:
   type: class
   uid: azure.storage.blob.baseblobservice.BaseBlobService
 - class: azure.storage.blob.baseblobservice.BaseBlobService
-  fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
-  langs:
-  - python
-  module: azure.storage.blob.baseblobservice
-  name: MAX_SINGLE_GET_SIZE
-  source:
-    id: MAX_SINGLE_GET_SIZE
-    path: null
-    remote:
-      branch: split-library
-      path: null
-      repo: https://github.com/Azure/azure-storage-python.git
-    startLine: null
-  summary: 'MAX_SINGLE_GET_SIZE comment
-
-    '
-  syntax:
-    content: MAX_SINGLE_GET_SIZE = 33554432
-  type: attribute
-  uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
-- class: azure.storage.blob.baseblobservice.BaseBlobService
   fullName: azure.storage.blob.baseblobservice.BaseBlobService.abort_copy_blob
   langs:
   - python
@@ -244,7 +223,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 3046
+    startLine: 3059
   summary: 'Aborts a pending copy_blob operation, and leaves a destination blob
 
     with zero length and full metadata.
@@ -302,7 +281,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2456
+    startLine: 2469
   summary: 'Requests a new lease. If the blob does not have an active lease, the Blob
 
     service creates a lease on the blob and returns a new lease ID.
@@ -432,7 +411,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 920
+    startLine: 933
   summary: 'Requests a new lease. If the container does not have an active lease,
 
     the Blob service creates a lease on the container and returns a new
@@ -530,7 +509,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2638
+    startLine: 2651
   summary: 'Breaks the lease, if the blob has an active lease. Once a lease is broken,
 
     it cannot be renewed. Any authorized request can break the lease; the request
@@ -674,7 +653,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1054
+    startLine: 1067
   summary: 'Break the lease, if the container has an active lease. Once a lease is
 
     broken, it cannot be renewed. Any authorized request can break the lease;
@@ -781,7 +760,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2712
+    startLine: 2725
   summary: 'Changes the lease ID of an active lease. A change must include the current
 
     lease ID and a new lease ID.
@@ -897,7 +876,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1109
+    startLine: 1122
   summary: 'Change the lease ID of an active lease. A change must include the current
 
     lease ID and a new lease ID.
@@ -982,7 +961,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2836
+    startLine: 2849
   summary: 'Copies a blob asynchronously. This operation returns a copy operation
 
     properties object, including a copy ID you can use to check or abort the
@@ -1278,7 +1257,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 541
+    startLine: 554
   summary: 'Creates a new container under the specified account. If the container
 
     with the same name already exists, the operation fails if
@@ -1348,7 +1327,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 3083
+    startLine: 3096
   summary: 'Marks the specified blob or snapshot for deletion.
 
     The blob is later deleted during garbage collection.
@@ -1481,7 +1460,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 779
+    startLine: 792
   summary: 'Marks the specified container for deletion. The container and any blobs
 
     contained within it are later deleted during garbage collection.
@@ -1577,7 +1556,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1497
+    startLine: 1510
   summary: 'Returns a boolean indicating whether the container exists (if blob_name
 
     is None), or otherwise a boolean indicating whether the blob exists.
@@ -1636,7 +1615,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 241
+    startLine: 254
   summary: 'Generates a shared access signature for the blob service.
 
     Use the returned signature with the sas_token parameter of any BlobService.
@@ -1747,7 +1726,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 374
+    startLine: 387
   summary: 'Generates a shared access signature for the blob.
 
     Use the returned signature with the sas_token parameter of any BlobService.
@@ -1924,7 +1903,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 289
+    startLine: 302
   summary: 'Generates a shared access signature for the container.
 
     Use the returned signature with the sas_token parameter of any BlobService.
@@ -2097,7 +2076,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2231
+    startLine: 2244
   summary: 'Returns all user-defined metadata for the specified blob or snapshot.
 
     '
@@ -2219,7 +2198,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1369
+    startLine: 1382
   summary: 'Returns all user-defined metadata, standard HTTP properties, and
 
     system properties for the blob. It does not return the content of the blob.
@@ -2346,7 +2325,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1345
+    startLine: 1358
   summary: 'Gets the properties of a storage account''s Blob service, including
 
     Azure Storage Analytics.
@@ -2385,7 +2364,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1268
+    startLine: 1281
   summary: 'Retrieves statistics related to replication for the Blob service. It is
 
     only available when read-access geo-redundant replication is enabled for
@@ -2449,7 +2428,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2006
+    startLine: 2019
   summary: 'Downloads a blob as an array of bytes, with automatic chunking and
 
     progress notifications. Returns an instance of @azure.storage.blob.baseblobservice.Blob
@@ -2678,7 +2657,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1642
+    startLine: 1655
   summary: 'Downloads a blob to a file path, with automatic chunking and progress
 
     notifications. Returns an instance of @azure.storage.blob.baseblobservice.Blob
@@ -2925,7 +2904,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1766
+    startLine: 1779
   summary: 'Downloads a blob to a stream, with automatic chunking and progress
 
     notifications. Returns an instance of @azure.storage.blob.baseblobservice.Blob
@@ -3160,7 +3139,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2119
+    startLine: 2132
   summary: 'Downloads a blob as unicode text, with automatic chunking and progress
 
     notifications. Returns an instance of @azure.storage.blob.baseblobservice.Blob
@@ -3396,7 +3375,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 693
+    startLine: 706
   summary: 'Gets the permissions for the specified container.
 
     The permissions indicate whether container data may be accessed publicly.
@@ -3449,7 +3428,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 618
+    startLine: 631
   summary: 'Returns all user-defined metadata for the specified container.
 
     '
@@ -3499,7 +3478,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 590
+    startLine: 603
   summary: 'Returns all user-defined metadata and system properties for the specified
 
     container. The data returned does not include the container''s list of blobs.
@@ -3551,7 +3530,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1150
+    startLine: 1163
   summary: 'Returns a generator to list the blobs under the specified container.
 
     The generator will lazily follow the continuation tokens returned by
@@ -3663,7 +3642,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 462
+    startLine: 475
   summary: 'Returns a generator to list the containers under the specified account.
 
     The generator will lazily follow the continuation tokens returned by
@@ -3751,20 +3730,61 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 223
+    startLine: 217
+  summary: 'Creates the url to access a blob.
+
+    '
   syntax:
     content: make_blob_url(container_name, blob_name, protocol=None, sas_token=None,
       snapshot=None)
     parameters:
-    - id: self
-    - id: container_name
-    - id: blob_name
+    - description: 'Name of container.
+
+        '
+      id: container_name
+      type:
+      - str
+    - description: 'Name of blob.
+
+        '
+      id: blob_name
+      type:
+      - str
     - defaultValue: None
+      description: 'Protocol to use: ''http'' or ''https''. If not specified, uses
+        the
+
+        protocol specified when BaseBlobService was initialized.
+
+        '
       id: protocol
+      type:
+      - str
     - defaultValue: None
+      description: 'Shared access signature token created with
+
+        generate_shared_access_signature.
+
+        '
       id: sas_token
+      type:
+      - str
     - defaultValue: None
+      description: 'An string value that uniquely identifies the snapshot. The value
+        of
+
+        this query parameter indicates the snapshot version.
+
+        '
       id: snapshot
+      type:
+      - str
+    return:
+      description: 'blob access URL.
+
+        '
+      type:
+      - str
   type: method
   uid: azure.storage.blob.baseblobservice.BaseBlobService.make_blob_url
 - class: azure.storage.blob.baseblobservice.BaseBlobService
@@ -3780,7 +3800,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2584
+    startLine: 2597
   summary: 'Releases the lease. The lease may be released if the lease ID specified
     on the
 
@@ -3891,7 +3911,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1015
+    startLine: 1028
   summary: 'Release the lease. The lease may be released if the lease_id specified
     matches
 
@@ -3970,7 +3990,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2525
+    startLine: 2538
   summary: 'Renews the lease. The lease can be renewed if the lease ID specified on
 
     the request matches that associated with the blob. Note that the lease may
@@ -4087,7 +4107,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 971
+    startLine: 984
   summary: 'Renews the lease. The lease can be renewed if the lease ID specified
 
     matches that associated with the container. Note that
@@ -4173,7 +4193,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2295
+    startLine: 2308
   summary: 'Sets user-defined metadata for the specified blob as one or more
 
     name-value pairs.
@@ -4299,7 +4319,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1433
+    startLine: 1446
   summary: 'Sets system properties on the blob. If one property is set for the
 
     content_settings, all properties will be overriden.
@@ -4421,7 +4441,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1304
+    startLine: 1317
   summary: 'Sets the properties of a storage account''s Blob service, including
 
     Azure Storage Analytics. If an element (ex Logging) is left as None, the
@@ -4502,7 +4522,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 724
+    startLine: 737
   summary: 'Sets the permissions for the specified container or stored access
 
     policies that may be used with Shared Access Signatures. The permissions
@@ -4597,7 +4617,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 647
+    startLine: 660
   summary: 'Sets one or more user-defined name-value pairs for the specified
 
     container. Each call to this operation replaces all existing metadata
@@ -4680,7 +4700,7 @@ items:
       branch: split-library
       path: azure_storage_blob-0.36.0-py3.5.egg\azure\storage\blob\baseblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2769
+    startLine: 2782
   summary: 'Creates a read-only snapshot of a blob.
 
     '
@@ -4805,12 +4825,17 @@ items:
     content: MAX_CHUNK_GET_SIZE = 4194304
   type: attribute
   uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
-references:
-- fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
-  isExternal: false
+- class: azure.storage.blob.baseblobservice.BaseBlobService
+  fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
+  langs:
+  - python
+  module: azure.storage.blob.baseblobservice
   name: MAX_SINGLE_GET_SIZE
-  parent: azure.storage.blob.baseblobservice.BaseBlobService
+  syntax:
+    content: MAX_SINGLE_GET_SIZE = 33554432
+  type: attribute
   uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
+references:
 - fullName: azure.storage.blob.baseblobservice.BaseBlobService.abort_copy_blob
   isExternal: false
   name: abort_copy_blob
@@ -5011,3 +5036,8 @@ references:
   name: MAX_CHUNK_GET_SIZE
   parent: azure.storage.blob.baseblobservice.BaseBlobService
   uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_CHUNK_GET_SIZE
+- fullName: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
+  isExternal: false
+  name: MAX_SINGLE_GET_SIZE
+  parent: azure.storage.blob.baseblobservice.BaseBlobService
+  uid: azure.storage.blob.baseblobservice.BaseBlobService.MAX_SINGLE_GET_SIZE
