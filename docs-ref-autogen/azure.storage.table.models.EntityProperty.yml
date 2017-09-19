@@ -14,7 +14,7 @@ items:
     id: EntityProperty
     path: azure-storage-table\azure\storage\table\models.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\models.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 82
@@ -22,9 +22,9 @@ items:
     \ when necessary.\n\nValues which require explicit typing are GUID, INT32, and\
     \ BINARY. Other EdmTypes\nmay be explicitly create as EntityProperty objects but\
     \ need not be. For example,\nthe below with both create STRING typed properties\
-    \ on the entity:\n\n\n<!-- literal_block {\"backrefs\": [], \"xml:space\": \"\
-    preserve\", \"ids\": [], \"dupnames\": [], \"names\": [], \"classes\": []} -->\n\
-    \n````\n\n   entity = Entity()\n   entity.a = 'b'\n   entity.x = EntityProperty(EdmType.STRING,\
+    \ on the entity:\n\n\n<!-- literal_block {\"xml:space\": \"preserve\", \"backrefs\"\
+    : [], \"ids\": [], \"names\": [], \"classes\": [], \"dupnames\": []} -->\n\n````\n\
+    \n   entity = Entity()\n   entity.a = 'b'\n   entity.x = EntityProperty(EdmType.STRING,\
     \ 'y')\n   ````\n"
   syntax:
     content: EntityProperty(type=None, value=None, encrypt=False)

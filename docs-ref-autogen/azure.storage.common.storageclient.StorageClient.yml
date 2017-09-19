@@ -2,6 +2,7 @@
 api_name: []
 items:
 - children:
+  - azure.storage.common.storageclient.StorageClient.extract_date_and_request_id
   - azure.storage.common.storageclient.StorageClient.set_proxy
   class: azure.storage.common.storageclient.StorageClient
   fullName: azure.storage.common.storageclient.StorageClient
@@ -15,14 +16,15 @@ items:
     id: StorageClient
     path: azure-storage-common\azure\storage\common\storageclient.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-common\azure\storage\common\storageclient.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 45
+    startLine: 49
   summary: 'This is the base class for service objects. Service objects are used to
     do
 
     all requests to Storage. This class cannot be instantiated directly.
+
 
 
 
@@ -86,7 +88,7 @@ items:
     - description: 'A function which determines whether to retry. Takes as a parameter
         a
 
-        @azure.storage.models.RetryContext object. Returns the number
+        @azure.storage.common.models.RetryContext object. Returns the number
 
         of seconds to wait before retrying the request, or None to indicate not
 
@@ -109,7 +111,7 @@ items:
         '
       id: location_mode
       type:
-      - LocationMode
+      - ~azure.storage.common.models.LocationMode
     - description: 'The protocol to use for requests. Defaults to https.
 
         '
@@ -158,6 +160,26 @@ items:
   type: class
   uid: azure.storage.common.storageclient.StorageClient
 - class: azure.storage.common.storageclient.StorageClient
+  fullName: azure.storage.common.storageclient.StorageClient.extract_date_and_request_id
+  langs:
+  - python
+  module: azure.storage.common.storageclient
+  name: extract_date_and_request_id
+  source:
+    id: extract_date_and_request_id
+    path: azure-storage-common\azure\storage\common\storageclient.py
+    remote:
+      branch: dev
+      path: azure-storage-common\azure\storage\common\storageclient.py
+      repo: https://github.com/Azure/azure-storage-python.git
+    startLine: 192
+  syntax:
+    content: extract_date_and_request_id(retry_context)
+    parameters:
+    - id: retry_context
+  type: method
+  uid: azure.storage.common.storageclient.StorageClient.extract_date_and_request_id
+- class: azure.storage.common.storageclient.StorageClient
   fullName: azure.storage.common.storageclient.StorageClient.set_proxy
   langs:
   - python
@@ -167,10 +189,10 @@ items:
     id: set_proxy
     path: azure-storage-common\azure\storage\common\storageclient.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-common\azure\storage\common\storageclient.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 153
+    startLine: 157
   summary: 'Sets the proxy server host and port for the HTTP CONNECT Tunnelling.
 
     '
@@ -206,6 +228,11 @@ items:
   type: method
   uid: azure.storage.common.storageclient.StorageClient.set_proxy
 references:
+- fullName: azure.storage.common.storageclient.StorageClient.extract_date_and_request_id
+  isExternal: false
+  name: extract_date_and_request_id
+  parent: azure.storage.common.storageclient.StorageClient
+  uid: azure.storage.common.storageclient.StorageClient.extract_date_and_request_id
 - fullName: azure.storage.common.storageclient.StorageClient.set_proxy
   isExternal: false
   name: set_proxy

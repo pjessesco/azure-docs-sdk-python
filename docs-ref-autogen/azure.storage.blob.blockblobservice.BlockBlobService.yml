@@ -9,6 +9,7 @@ items:
   - azure.storage.blob.blockblobservice.BlockBlobService.get_block_list
   - azure.storage.blob.blockblobservice.BlockBlobService.put_block
   - azure.storage.blob.blockblobservice.BlockBlobService.put_block_list
+  - azure.storage.blob.blockblobservice.BlockBlobService.set_standard_blob_tier
   - azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
   - azure.storage.blob.blockblobservice.BlockBlobService.MAX_SINGLE_PUT_SIZE
   - azure.storage.blob.blockblobservice.BlockBlobService.MIN_LARGE_BLOCK_UPLOAD_THRESHOLD
@@ -28,7 +29,7 @@ items:
     id: BlockBlobService
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 74
@@ -47,6 +48,7 @@ items:
     blob that is no more than 64 MB in size, you can upload it in its entirety with
 
     a single write operation; see create_blob_from_bytes.
+
 
 
 
@@ -115,7 +117,7 @@ items:
     id: create_blob_from_bytes
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 593
@@ -179,7 +181,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash for each chunk of the blob. The
         storage
@@ -209,7 +211,7 @@ items:
         '
       id: progress_callback
       type:
-      - callback function in format of func(current, total)
+      - func(current, total)
     - defaultValue: '2'
       description: 'Maximum number of parallel connections to use when the blob size
         exceeds
@@ -314,7 +316,7 @@ items:
     id: create_blob_from_path
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 325
@@ -360,7 +362,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash for each chunk of the blob. The
         storage
@@ -390,7 +392,7 @@ items:
         '
       id: progress_callback
       type:
-      - callback function in format of func(current, total)
+      - func(current, total)
     - defaultValue: '2'
       description: 'Maximum number of parallel connections to use when the blob size
         exceeds
@@ -495,7 +497,7 @@ items:
     id: create_blob_from_stream
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 413
@@ -552,7 +554,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash for each chunk of the blob. The
         storage
@@ -582,7 +584,7 @@ items:
         '
       id: progress_callback
       type:
-      - callback function in format of func(current, total)
+      - func(current, total)
     - defaultValue: '2'
       description: 'Maximum number of parallel connections to use when the blob size
         exceeds
@@ -734,7 +736,7 @@ items:
     id: create_blob_from_text
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 699
@@ -787,7 +789,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash for each chunk of the blob. The
         storage
@@ -817,7 +819,7 @@ items:
         '
       id: progress_callback
       type:
-      - callback function in format of func(current, total)
+      - func(current, total)
     - defaultValue: '2'
       description: 'Maximum number of parallel connections to use when the blob size
         exceeds
@@ -922,7 +924,7 @@ items:
     id: get_block_list
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 276
@@ -1000,7 +1002,7 @@ items:
     id: put_block
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 152
@@ -1088,7 +1090,7 @@ items:
     id: put_block_list
     path: azure-storage-blob\azure\storage\blob\blockblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\blockblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 194
@@ -1135,9 +1137,9 @@ items:
         '
       id: block_list
       type:
-      - 'list of @azure.storage.blob.models.BlobBlock
+      - 'list(@azure.storage.blob.models.BlobBlock
 
-        '
+        )'
     - defaultValue: None
       description: 'ContentSettings object used to set properties on the blob.
 
@@ -1151,7 +1153,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash of the block list content. The
         storage
@@ -1250,6 +1252,63 @@ items:
   type: method
   uid: azure.storage.blob.blockblobservice.BlockBlobService.put_block_list
 - class: azure.storage.blob.blockblobservice.BlockBlobService
+  fullName: azure.storage.blob.blockblobservice.BlockBlobService.set_standard_blob_tier
+  langs:
+  - python
+  module: azure.storage.blob.blockblobservice
+  name: set_standard_blob_tier
+  source:
+    id: set_standard_blob_tier
+    path: azure-storage-blob\azure\storage\blob\blockblobservice.py
+    remote:
+      branch: dev
+      path: azure-storage-blob\azure\storage\blob\blockblobservice.py
+      repo: https://github.com/Azure/azure-storage-python.git
+    startLine: 793
+  summary: 'Sets the block blob tiers on the blob. This API is only supported for
+    block blobs on standard storage accounts.
+
+    '
+  syntax:
+    content: set_standard_blob_tier(container_name, blob_name, standard_blob_tier,
+      timeout=None)
+    parameters:
+    - description: 'Name of existing container.
+
+        '
+      id: container_name
+      type:
+      - str
+    - description: 'Name of blob to update.
+
+        '
+      id: blob_name
+      type:
+      - str
+    - description: 'A standard blob tier value to set the blob to. For this version
+        of the library,
+
+        this is only applicable to block blobs on standard storage accounts.
+
+        '
+      id: standard_blob_tier
+      type:
+      - StandardBlobTier
+    - defaultValue: None
+      description: 'The timeout parameter is expressed in seconds. This method may
+        make
+
+        multiple calls to the Azure service and the timeout will apply to
+
+        each call individually.
+
+        '
+      id: timeout
+      type:
+      - int
+  type: method
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.set_standard_blob_tier
+- class: azure.storage.blob.blockblobservice.BlockBlobService
   fullName: azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
   langs:
   - python
@@ -1315,6 +1374,11 @@ references:
   name: put_block_list
   parent: azure.storage.blob.blockblobservice.BlockBlobService
   uid: azure.storage.blob.blockblobservice.BlockBlobService.put_block_list
+- fullName: azure.storage.blob.blockblobservice.BlockBlobService.set_standard_blob_tier
+  isExternal: false
+  name: set_standard_blob_tier
+  parent: azure.storage.blob.blockblobservice.BlockBlobService
+  uid: azure.storage.blob.blockblobservice.BlockBlobService.set_standard_blob_tier
 - fullName: azure.storage.blob.blockblobservice.BlockBlobService.MAX_BLOCK_SIZE
   isExternal: false
   name: MAX_BLOCK_SIZE

@@ -37,7 +37,7 @@ items:
     id: TableService
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 92
@@ -165,10 +165,10 @@ items:
     id: batch
     path: contextlib.py
     remote:
-      branch: split-library
+      branch: dev
       path: contextlib.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 838
+    startLine: 839
   summary: 'Creates a batch object which can be used as a context manager. Commits
     the batch on exit.
 
@@ -200,10 +200,10 @@ items:
     id: commit_batch
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 799
+    startLine: 798
   summary: 'Commits a @azure.storage.table.TableBatch request.
 
     '
@@ -233,9 +233,12 @@ items:
       description: 'A list of the batch responses corresponding to the requests in
         the batch.
 
+        The items could either be an etag, in case of success, or an error object
+        in case of failure.
+
         '
       type:
-      - list of response objects
+      - list(@azure.storage.table.models.AzureBatchOperationError, str)
   type: method
   uid: azure.storage.table.tableservice.TableService.commit_batch
 - class: azure.storage.table.tableservice.TableService
@@ -248,7 +251,7 @@ items:
     id: create_table
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 496
@@ -302,10 +305,10 @@ items:
     id: delete_entity
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1001
+    startLine: 1002
   summary: 'Deletes an existing entity in a table. Throws if the entity does not exist.
 
 
@@ -375,7 +378,7 @@ items:
     id: delete_table
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 563
@@ -440,7 +443,7 @@ items:
     id: exists
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 537
@@ -481,7 +484,7 @@ items:
     id: generate_account_shared_access_signature
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 194
@@ -530,7 +533,7 @@ items:
         '
       id: expiry
       type:
-      - datetime.datetime or str
+      - datetime or str
     - defaultValue: None
       description: 'The time at which the shared access signature becomes valid. If
 
@@ -545,7 +548,7 @@ items:
         '
       id: start
       type:
-      - datetime.datetime or str
+      - datetime or str
     - defaultValue: None
       description: 'Specifies an IP address or a range of IP addresses from which
         to accept requests.
@@ -568,7 +571,7 @@ items:
       description: 'Specifies the protocol permitted for a request made. The default
         value
 
-        is https,http. See @azure.storage.models.Protocol for possible values.
+        is https,http. See @azure.storage.common.models.Protocol for possible values.
 
         '
       id: protocol
@@ -592,7 +595,7 @@ items:
     id: generate_table_shared_access_signature
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 242
@@ -643,7 +646,7 @@ items:
         '
       id: expiry
       type:
-      - datetime.datetime or str
+      - datetime or str
     - defaultValue: None
       description: 'The time at which the shared access signature becomes valid. If
 
@@ -658,7 +661,7 @@ items:
         '
       id: start
       type:
-      - datetime.datetime or str
+      - datetime or str
     - defaultValue: None
       description: 'A unique value up to 64 characters in length that correlates to
         a
@@ -691,7 +694,7 @@ items:
       description: 'Specifies the protocol permitted for a request made. The default
         value
 
-        is https,http. See @azure.storage.models.Protocol for possible values.
+        is https,http. See @azure.storage.common.models.Protocol for possible values.
 
         '
       id: protocol
@@ -765,10 +768,10 @@ items:
     id: get_entity
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 852
+    startLine: 853
   summary: 'Get an entity from the specified table. Throws if the entity does not
     exist.
 
@@ -825,7 +828,7 @@ items:
         '
       id: property_resolver
       type:
-      - callback function in format of func(pk, rk, prop_name, prop_value, service_edm_type)
+      - func(pk, rk, prop_name, prop_value, service_edm_type)
     - defaultValue: None
       description: 'The server timeout, expressed in seconds.
 
@@ -851,7 +854,7 @@ items:
     id: get_table_acl
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 605
@@ -881,7 +884,7 @@ items:
 
         '
       type:
-      - 'dict of str to @azure.storage.models.AccessPolicy:'
+      - dict(str, @azure.storage.common.models.AccessPolicy)
   type: method
   uid: azure.storage.table.tableservice.TableService.get_table_acl
 - class: azure.storage.table.tableservice.TableService
@@ -894,7 +897,7 @@ items:
     id: get_table_service_properties
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 363
@@ -918,7 +921,7 @@ items:
 
         '
       type:
-      - azure.storage.models.ServiceProperties
+      - azure.storage.common.models.ServiceProperties
   type: method
   uid: azure.storage.table.tableservice.TableService.get_table_service_properties
 - class: azure.storage.table.tableservice.TableService
@@ -931,7 +934,7 @@ items:
     id: get_table_service_stats
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 327
@@ -983,7 +986,7 @@ items:
 
         '
       type:
-      - azure.storage.models.ServiceStats
+      - azure.storage.common.models.ServiceStats
   type: method
   uid: azure.storage.table.tableservice.TableService.get_table_service_stats
 - class: azure.storage.table.tableservice.TableService
@@ -996,10 +999,10 @@ items:
     id: insert_entity
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 891
+    startLine: 892
   summary: 'Inserts a new entity into the table. Throws if an entity with the same
 
     PartitionKey and RowKey already exists.
@@ -1038,7 +1041,7 @@ items:
         '
       id: entity
       type:
-      - 'a dict or @azure.storage.table.models.Entity
+      - 'dict or @azure.storage.table.models.Entity
 
         '
     - defaultValue: None
@@ -1066,10 +1069,10 @@ items:
     id: insert_or_merge_entity
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1065
+    startLine: 1066
   summary: 'Merges an existing entity or inserts a new entity if it does not exist
 
     in the table.
@@ -1098,7 +1101,7 @@ items:
         '
       id: entity
       type:
-      - 'a dict or @azure.storage.table.models.Entity
+      - 'dict or @azure.storage.table.models.Entity
 
         '
     - defaultValue: None
@@ -1126,10 +1129,10 @@ items:
     id: insert_or_replace_entity
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1035
+    startLine: 1036
   summary: 'Replaces an existing entity or inserts a new entity if it does not
 
     exist in the table. Because this operation can insert or update an
@@ -1161,7 +1164,7 @@ items:
         '
       id: entity
       type:
-      - 'a dict or @azure.storage.table.models.Entity
+      - 'dict or @azure.storage.table.models.Entity
 
         '
     - defaultValue: None
@@ -1189,7 +1192,7 @@ items:
     id: list_tables
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 426
@@ -1248,11 +1251,12 @@ items:
       type:
       - int
     return:
-      description: 'A generator which produces @azure.storage.models.table.Table objects.
+      description: 'A generator which produces @azure.storage.common.models.table.Table
+        objects.
 
         '
       type:
-      - 'azure.storage.models.ListGenerator:'
+      - 'azure.storage.common.models.ListGenerator:'
   type: method
   uid: azure.storage.table.tableservice.TableService.list_tables
 - class: azure.storage.table.tableservice.TableService
@@ -1265,10 +1269,10 @@ items:
     id: merge_entity
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 960
+    startLine: 961
   summary: 'Updates an existing entity by merging the entity''s properties. Throws
 
     if the entity does not exist.
@@ -1300,7 +1304,7 @@ items:
         '
       id: entity
       type:
-      - 'a dict or @azure.storage.table.models.Entity
+      - 'dict or @azure.storage.table.models.Entity
 
         '
     - defaultValue: '*'
@@ -1347,7 +1351,7 @@ items:
     id: query_entities
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 670
@@ -1355,12 +1359,12 @@ items:
 
     generator will lazily follow the continuation tokens returned by the
 
-    service and stop when all entities have been returned or max_results is
+    service and stop when all entities have been returned or num_results is
 
     reached.
 
 
-    If max_results is specified and the account has more than that number of
+    If num_results is specified and the account has more than that number of
 
     entities, the generator will have a populated next_marker field once it
 
@@ -1447,7 +1451,7 @@ items:
         '
       id: property_resolver
       type:
-      - callback function in format of func(pk, rk, prop_name, prop_value, service_edm_type)
+      - func(pk, rk, prop_name, prop_value, service_edm_type)
     - defaultValue: None
       description: 'The server timeout, expressed in seconds. This function may make
         multiple
@@ -1466,7 +1470,7 @@ items:
 
         '
       type:
-      - azure.storage.models.ListGenerator
+      - azure.storage.common.models.ListGenerator
   type: method
   uid: azure.storage.table.tableservice.TableService.query_entities
 - class: azure.storage.table.tableservice.TableService
@@ -1479,7 +1483,7 @@ items:
     id: set_table_acl
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 629
@@ -1529,9 +1533,9 @@ items:
         '
       id: signed_identifiers
       type:
-      - 'dict of str to @azure.storage.models.AccessPolicy
+      - 'dict(str, @azure.storage.common.models.AccessPolicy
 
-        '
+        )'
     - defaultValue: None
       description: 'The server timeout, expressed in seconds.
 
@@ -1551,7 +1555,7 @@ items:
     id: set_table_service_properties
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 385
@@ -1609,9 +1613,9 @@ items:
         '
       id: cors
       type:
-      - 'list of @azure.storage.models.CorsRule
+      - 'list(@azure.storage.common.models.CorsRule
 
-        '
+        )'
     - defaultValue: None
       description: 'The server timeout, expressed in seconds.
 
@@ -1631,10 +1635,10 @@ items:
     id: update_entity
     path: azure-storage-table\azure\storage\table\tableservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-table\azure\storage\table\tableservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 926
+    startLine: 927
   summary: 'Updates an existing entity in a table. Throws if the entity does not exist.
 
     The update_entity operation replaces the entire entity and can be used to
@@ -1658,7 +1662,7 @@ items:
         '
       id: entity
       type:
-      - 'a dict or @azure.storage.table.models.Entity
+      - 'dict or @azure.storage.table.models.Entity
 
         '
     - defaultValue: '*'

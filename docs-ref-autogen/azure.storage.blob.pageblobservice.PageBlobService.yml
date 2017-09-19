@@ -32,7 +32,7 @@ items:
     id: PageBlobService
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 71
@@ -96,7 +96,7 @@ items:
     id: clear_page
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 388
@@ -262,24 +262,47 @@ items:
     id: copy_blob
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 1166
-  summary: "Copies a blob asynchronously. This operation returns a copy operation\n\
-    properties object, including a copy ID you can use to check or abort the\ncopy\
-    \ operation. The Blob service copies blobs on a best-effort basis.\n\nThe source\
-    \ blob for a copy operation must be a page blob. If the destination\nblob already\
-    \ exists, it must be of the same blob type as the source blob.\nAny existing destination\
-    \ blob will be overwritten.\nThe destination blob cannot be modified while a copy\
-    \ operation is in progress.\n\nWhen copying from a page blob, the Blob service\
-    \ creates a destination page\nblob of the source blob\u2019s length, initially\
-    \ containing all zeroes. Then\nthe source page ranges are enumerated, and non-empty\
-    \ ranges are copied.\n\nIf the tier on the source blob is larger than the tier\
-    \ being passed to this\ncopy operation or if the size of the blob exceeds the\
-    \ tier being passed to\nthis copy operation then the operation will fail.\n\n\
-    You can call get_blob_properties on the destination\nblob to check the status\
-    \ of the copy operation. The final blob will be\ncommitted when the copy completes.\n"
+  summary: 'Copies a blob asynchronously. This operation returns a copy operation
+
+    properties object, including a copy ID you can use to check or abort the
+
+    copy operation. The Blob service copies blobs on a best-effort basis.
+
+
+    The source blob for a copy operation must be a page blob. If the destination
+
+    blob already exists, it must be of the same blob type as the source blob.
+
+    Any existing destination blob will be overwritten.
+
+    The destination blob cannot be modified while a copy operation is in progress.
+
+
+    When copying from a page blob, the Blob service creates a destination page
+
+    blob of the source blob''s length, initially containing all zeroes. Then
+
+    the source page ranges are enumerated, and non-empty ranges are copied.
+
+
+    If the tier on the source blob is larger than the tier being passed to this
+
+    copy operation or if the size of the blob exceeds the tier being passed to
+
+    this copy operation then the operation will fail.
+
+
+    You can call get_blob_properties on the destination
+
+    blob to check the status of the copy operation. The final blob will be
+
+    committed when the copy completes.
+
+    '
   syntax:
     content: copy_blob(container_name, blob_name, copy_source, metadata=None, source_if_modified_since=None,
       source_if_unmodified_since=None, source_if_match=None, source_if_none_match=None,
@@ -339,7 +362,7 @@ items:
         '
       id: metadata
       type:
-      - A dict mapping str to str.
+      - dict(str, str).
     - defaultValue: None
       description: 'A DateTime value. Azure expects the date value passed in to be
         UTC.
@@ -540,7 +563,7 @@ items:
     id: create_blob
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 137
@@ -606,7 +629,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: None
       description: 'Required if the blob has an active lease.
 
@@ -708,7 +731,7 @@ items:
     id: create_blob_from_bytes
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 1022
@@ -772,7 +795,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash for each page of the blob. The
         storage
@@ -802,7 +825,7 @@ items:
         '
       id: progress_callback
       type:
-      - callback function in format of func(current, total)
+      - func(current, total)
     - defaultValue: '2'
       description: 'Maximum number of parallel connections to use.
 
@@ -914,7 +937,7 @@ items:
     id: create_blob_from_path
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 797
@@ -960,7 +983,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash for each page of the blob. The
         storage
@@ -990,7 +1013,7 @@ items:
         '
       id: progress_callback
       type:
-      - callback function in format of func(current, total)
+      - func(current, total)
     - defaultValue: '2'
       description: 'Maximum number of parallel connections to use.
 
@@ -1102,7 +1125,7 @@ items:
     id: create_blob_from_stream
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 889
@@ -1156,7 +1179,7 @@ items:
         '
       id: metadata
       type:
-      - a dict mapping str to str
+      - dict(str, str)
     - defaultValue: 'False'
       description: 'If true, calculates an MD5 hash for each page of the blob. The
         storage
@@ -1186,7 +1209,7 @@ items:
         '
       id: progress_callback
       type:
-      - callback function in format of func(current, total)
+      - func(current, total)
     - defaultValue: '2'
       description: 'Maximum number of parallel connections to use. Note that parallel
         upload
@@ -1301,7 +1324,7 @@ items:
     id: get_page_ranges
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 478
@@ -1448,7 +1471,7 @@ items:
 
         '
       type:
-      - list of @azure.storage.blob.models.PageRange
+      - list(@azure.storage.blob.models.PageRange)
   type: method
   uid: azure.storage.blob.pageblobservice.PageBlobService.get_page_ranges
 - class: azure.storage.blob.pageblobservice.PageBlobService
@@ -1461,7 +1484,7 @@ items:
     id: get_page_ranges_diff
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 565
@@ -1621,7 +1644,7 @@ items:
 
         '
       type:
-      - list of @azure.storage.blob.models.PageRange
+      - list(@azure.storage.blob.models.PageRange)
   type: method
   uid: azure.storage.blob.pageblobservice.PageBlobService.get_page_ranges_diff
 - class: azure.storage.blob.pageblobservice.PageBlobService
@@ -1634,7 +1657,7 @@ items:
     id: incremental_copy_blob
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 215
@@ -1703,7 +1726,7 @@ items:
         '
       id: metadata
       type:
-      - A dict mapping str to str.
+      - dict(str, str).
     - defaultValue: None
       description: 'A DateTime value. Azure expects the date value passed in to be
         UTC.
@@ -1823,7 +1846,7 @@ items:
     id: resize_blob
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 729
@@ -1946,7 +1969,7 @@ items:
     id: set_premium_page_blob_tier
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 1129
@@ -1979,6 +2002,8 @@ items:
 
         '
       id: premium_page_blob_tier
+      type:
+      - PremiumPageBlobTier
     - defaultValue: None
       description: 'The timeout parameter is expressed in seconds. This method may
         make
@@ -2003,7 +2028,7 @@ items:
     id: set_sequence_number
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 659
@@ -2137,7 +2162,7 @@ items:
     id: update_page
     path: azure-storage-blob\azure\storage\blob\pageblobservice.py
     remote:
-      branch: split-library
+      branch: dev
       path: azure-storage-blob\azure\storage\blob\pageblobservice.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 298
