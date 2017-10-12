@@ -22,10 +22,10 @@ items:
     id: AccountPermissions
     path: azure-storage-common\azure\storage\common\models.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\models.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 534
+    startLine: 528
   summary: '@azure.storage.common.models.ResourceTypes class to be used with generate_shared_access_signature
 
     method and for the AccessPolicies used with set_*_acl. There are two types of
@@ -51,10 +51,8 @@ items:
     content: AccountPermissions(read=False, write=False, delete=False, list=False,
       add=False, create=False, update=False, process=False, _str=None)
     variables:
-    - description: 'Valid for the following Object resource types only: queue messages,
-        table
-
-        entities, and append blobs.
+    - description: 'Valid for the following Object resource types only: queue messages
+        and append blobs.
 
         '
       id: AccountPermissions.ADD
@@ -97,10 +95,7 @@ items:
       id: AccountPermissions.READ
       type:
       - AccountPermissions
-    - description: 'Valid for the following Object resource types only: queue messages
-        and table
-
-        entities.
+    - description: 'Valid for the following Object resource types only: queue messages.
 
         '
       id: AccountPermissions.UPDATE

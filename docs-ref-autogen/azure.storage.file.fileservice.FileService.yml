@@ -44,6 +44,7 @@ items:
   - azure.storage.file.fileservice.FileService.set_share_acl
   - azure.storage.file.fileservice.FileService.set_share_metadata
   - azure.storage.file.fileservice.FileService.set_share_properties
+  - azure.storage.file.fileservice.FileService.snapshot_share
   - azure.storage.file.fileservice.FileService.update_range
   - azure.storage.file.fileservice.FileService.MAX_CHUNK_GET_SIZE
   - azure.storage.file.fileservice.FileService.MAX_RANGE_SIZE
@@ -62,10 +63,10 @@ items:
     id: FileService
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 95
+    startLine: 101
   summary: 'The Server Message Block (SMB) protocol is the preferred file share protocol
 
     used on premise today. The Microsoft Azure File service enables customers to
@@ -80,6 +81,7 @@ items:
     Direct Attached Storage (DAS) and Storage Area Network (SAN) solutions, which
 
     are often complex and expensive to install, configure, and operate.
+
 
 
 
@@ -184,10 +186,10 @@ items:
     id: abort_copy_file
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1399
+    startLine: 1483
   summary: "   Aborts a pending copy_file operation, and leaves a destination file\n\
     \   with zero length and full metadata.\n"
   syntax:
@@ -238,10 +240,10 @@ items:
     id: clear_range
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2288
+    startLine: 2388
   summary: 'Clears the specified range and releases the space used in storage for
 
     that range.
@@ -312,10 +314,10 @@ items:
     id: copy_file
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1345
+    startLine: 1429
   summary: 'Copies a file asynchronously. This operation returns a copy operation
 
     properties object, including a copy ID you can use to check or abort the
@@ -414,10 +416,10 @@ items:
     id: create_directory
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 883
+    startLine: 950
   summary: 'Creates a new directory under the specified share or parent directory.
 
     If the directory with the same name already exists, the operation fails
@@ -488,10 +490,10 @@ items:
     id: create_file
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1458
+    startLine: 1542
   summary: 'Creates a new file.
 
 
@@ -563,10 +565,10 @@ items:
     id: create_file_from_bytes
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1600
+    startLine: 1684
   summary: 'Creates a new file from an array of bytes, or updates the content
 
     of an existing file, with automatic chunking and progress
@@ -694,10 +696,10 @@ items:
     id: create_file_from_path
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1502
+    startLine: 1586
   summary: 'Creates a new azure file from a local file path, or updates the content
     of an
 
@@ -808,10 +810,10 @@ items:
     id: create_file_from_stream
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1666
+    startLine: 1750
   summary: 'Creates a new file from a file/stream, or updates the content of an
 
     existing file, with automatic chunking and progress notifications.
@@ -932,10 +934,10 @@ items:
     id: create_file_from_text
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1553
+    startLine: 1637
   summary: 'Creates a new file from str/unicode, or updates the content of an
 
     existing file, with automatic chunking and progress notifications.
@@ -1032,10 +1034,10 @@ items:
     id: create_share
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 603
+    startLine: 619
   summary: 'Creates a new share under the specified account. If the share
 
     with the same name already exists, the operation fails on the
@@ -1107,10 +1109,10 @@ items:
     id: delete_directory
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 931
+    startLine: 998
   summary: 'Deletes the specified empty directory. Note that the directory must
 
     be empty before it can be deleted. Attempting to delete directories
@@ -1176,10 +1178,10 @@ items:
     id: delete_file
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1434
+    startLine: 1518
   summary: 'Marks the specified file for deletion. The file is later
 
     deleted during garbage collection.
@@ -1225,10 +1227,10 @@ items:
     id: delete_share
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 845
+    startLine: 902
   summary: 'Marks the specified share for deletion. If the share
 
     does not exist, the operation fails on the service. By
@@ -1239,7 +1241,8 @@ items:
 
     '
   syntax:
-    content: delete_share(share_name, fail_not_exist=False, timeout=None)
+    content: delete_share(share_name, fail_not_exist=False, timeout=None, snapshot=None,
+      delete_snapshots=None)
     parameters:
     - description: 'Name of share to delete.
 
@@ -1263,6 +1266,25 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        Specify this argument to delete a specific snapshot only.
+
+        delete_snapshots must be None if this is specified.
+
+        '
+      id: snapshot
+      type:
+      - str
+    - defaultValue: None
+      description: 'To delete a share that has snapshots, this must be specified as
+        DeleteSnapshot.Include.
+
+        '
+      id: delete_snapshots
+      type:
+      - ~azure.storage.file.models.DeleteSnapshot
     return:
       description: 'True if share is deleted, False share doesn''t exist.
 
@@ -1281,10 +1303,10 @@ items:
     id: exists
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1184
+    startLine: 1263
   summary: 'Returns a boolean indicating whether the share exists if only share name
     is
 
@@ -1296,7 +1318,8 @@ items:
 
     '
   syntax:
-    content: exists(share_name, directory_name=None, file_name=None, timeout=None)
+    content: exists(share_name, directory_name=None, file_name=None, timeout=None,
+      snapshot=None)
     parameters:
     - description: 'Name of a share.
 
@@ -1325,6 +1348,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A boolean indicating whether the resource exists.
 
@@ -1343,10 +1373,10 @@ items:
     id: generate_account_shared_access_signature
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 225
+    startLine: 233
   summary: 'Generates a shared access signature for the file service.
 
     Use the returned signature with the sas_token parameter of the FileService.
@@ -1392,7 +1422,8 @@ items:
         '
       id: expiry
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'The time at which the shared access signature becomes valid. If
 
@@ -1407,7 +1438,8 @@ items:
         '
       id: start
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'Specifies an IP address or a range of IP addresses from which
         to accept requests.
@@ -1456,10 +1488,10 @@ items:
     id: generate_file_shared_access_signature
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 365
+    startLine: 373
   summary: 'Generates a shared access signature for the file.
 
     Use the returned signature with the sas_token parameter of FileService.
@@ -1527,7 +1559,8 @@ items:
         '
       id: expiry
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'The time at which the shared access signature becomes valid. If
 
@@ -1542,7 +1575,8 @@ items:
         '
       id: start
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'A unique value up to 64 characters in length that correlates to
         a
@@ -1649,10 +1683,10 @@ items:
     id: generate_share_shared_access_signature
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 274
+    startLine: 282
   summary: 'Generates a shared access signature for the share.
 
     Use the returned signature with the sas_token parameter of FileService.
@@ -1702,7 +1736,8 @@ items:
         '
       id: expiry
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'The time at which the shared access signature becomes valid. If
 
@@ -1717,7 +1752,8 @@ items:
         '
       id: start
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'A unique value up to 64 characters in length that correlates to
         a
@@ -1822,15 +1858,15 @@ items:
     id: get_directory_metadata
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1005
+    startLine: 1075
   summary: 'Returns all user-defined metadata for the specified directory.
 
     '
   syntax:
-    content: get_directory_metadata(share_name, directory_name, timeout=None)
+    content: get_directory_metadata(share_name, directory_name, timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -1851,6 +1887,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A dictionary representing the directory metadata name, value pairs.
 
@@ -1869,10 +1912,10 @@ items:
     id: get_directory_properties
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 977
+    startLine: 1044
   summary: 'Returns all user-defined metadata and system properties for the
 
     specified directory. The data returned does not include the directory''s
@@ -1881,7 +1924,7 @@ items:
 
     '
   syntax:
-    content: get_directory_properties(share_name, directory_name, timeout=None)
+    content: get_directory_properties(share_name, directory_name, timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -1902,6 +1945,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'properties for the specified directory within a directory object.
 
@@ -1920,15 +1970,16 @@ items:
     id: get_file_metadata
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1282
+    startLine: 1363
   summary: 'Returns all user-defined metadata for the specified file.
 
     '
   syntax:
-    content: get_file_metadata(share_name, directory_name, file_name, timeout=None)
+    content: get_file_metadata(share_name, directory_name, file_name, timeout=None,
+      snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -1955,6 +2006,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A dictionary representing the file metadata name, value pairs.
 
@@ -1973,10 +2031,10 @@ items:
     id: get_file_properties
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1157
+    startLine: 1234
   summary: 'Returns all user-defined metadata, standard HTTP properties, and
 
     system properties for the file. Returns an instance of @azure.storage.file.models.File
@@ -1986,7 +2044,8 @@ items:
 
     '
   syntax:
-    content: get_file_properties(share_name, directory_name, file_name, timeout=None)
+    content: get_file_properties(share_name, directory_name, file_name, timeout=None,
+      snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2013,6 +2072,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'a file object including properties and metadata.
 
@@ -2031,10 +2097,10 @@ items:
     id: get_file_service_properties
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 502
+    startLine: 510
   summary: 'Gets the properties of a storage account''s File service, including
 
     Azure Storage Analytics.
@@ -2068,10 +2134,10 @@ items:
     id: get_file_to_bytes
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2071
+    startLine: 2165
   summary: 'Downloads a file as an array of bytes, with automatic chunking and
 
     progress notifications. Returns an instance of @azure.storage.file.models.File
@@ -2083,7 +2149,7 @@ items:
   syntax:
     content: get_file_to_bytes(share_name, directory_name, file_name, start_range=None,
       end_range=None, validate_content=False, progress_callback=None, max_connections=2,
-      timeout=None)
+      timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2207,6 +2273,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A File with properties, content, and metadata.
 
@@ -2225,10 +2298,10 @@ items:
     id: get_file_to_path
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1797
+    startLine: 1883
   summary: 'Downloads a file to a file path, with automatic chunking and progress
 
     notifications. Returns an instance of File with properties and metadata.
@@ -2237,7 +2310,7 @@ items:
   syntax:
     content: get_file_to_path(share_name, directory_name, file_name, file_path, open_mode='wb',
       start_range=None, end_range=None, validate_content=False, progress_callback=None,
-      max_connections=2, timeout=None)
+      max_connections=2, timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2379,6 +2452,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A File with properties and metadata.
 
@@ -2397,10 +2477,10 @@ items:
     id: get_file_to_stream
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1879
+    startLine: 1967
   summary: 'Downloads a file to a stream, with automatic chunking and progress
 
     notifications. Returns an instance of @azure.storage.file.models.File with properties
@@ -2411,7 +2491,7 @@ items:
   syntax:
     content: get_file_to_stream(share_name, directory_name, file_name, stream, start_range=None,
       end_range=None, validate_content=False, progress_callback=None, max_connections=2,
-      timeout=None)
+      timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2541,6 +2621,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A File with properties and metadata.
 
@@ -2559,10 +2646,10 @@ items:
     id: get_file_to_text
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2150
+    startLine: 2247
   summary: 'Downloads a file as unicode text, with automatic chunking and progress
 
     notifications. Returns an instance of @azure.storage.file.models.File with properties,
@@ -2573,7 +2660,7 @@ items:
   syntax:
     content: get_file_to_text(share_name, directory_name, file_name, encoding='utf-8',
       start_range=None, end_range=None, validate_content=False, progress_callback=None,
-      max_connections=2, timeout=None)
+      max_connections=2, timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2704,6 +2791,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A File with properties, content, and metadata.
 
@@ -2722,10 +2816,10 @@ items:
     id: get_share_acl
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 762
+    startLine: 819
   summary: 'Gets the permissions for the specified share.
 
     '
@@ -2763,15 +2857,15 @@ items:
     id: get_share_metadata
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 707
+    startLine: 761
   summary: 'Returns all user-defined metadata for the specified share.
 
     '
   syntax:
-    content: get_share_metadata(share_name, timeout=None)
+    content: get_share_metadata(share_name, timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2786,6 +2880,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A dictionary representing the share metadata name, value pairs.
 
@@ -2804,10 +2905,10 @@ items:
     id: get_share_properties
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 653
+    startLine: 704
   summary: 'Returns all user-defined metadata and system properties for the
 
     specified share. The data returned does not include the shares''s
@@ -2816,7 +2917,7 @@ items:
 
     '
   syntax:
-    content: get_share_properties(share_name, timeout=None)
+    content: get_share_properties(share_name, timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2831,6 +2932,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'A Share that exposes properties and metadata.
 
@@ -2849,10 +2957,10 @@ items:
     id: get_share_stats
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 817
+    startLine: 874
   summary: 'Gets the approximate size of the data stored on the share,
 
     rounded up to the nearest gigabyte.
@@ -2897,10 +3005,10 @@ items:
     id: list_directories_and_files
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1066
+    startLine: 1139
   summary: 'Returns a generator to list the directories and files under the specified
     share.
 
@@ -2922,7 +3030,7 @@ items:
     '
   syntax:
     content: list_directories_and_files(share_name, directory_name=None, num_results=None,
-      marker=None, timeout=None, prefix=None)
+      marker=None, timeout=None, prefix=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -2982,6 +3090,13 @@ items:
       id: prefix
       type:
       - str
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
   type: method
   uid: azure.storage.file.fileservice.FileService.list_directories_and_files
 - class: azure.storage.file.fileservice.FileService
@@ -2994,16 +3109,16 @@ items:
     id: list_ranges
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2332
+    startLine: 2432
   summary: 'Retrieves the valid ranges for a file.
 
     '
   syntax:
     content: list_ranges(share_name, directory_name, file_name, start_range=None,
-      end_range=None, timeout=None)
+      end_range=None, timeout=None, snapshot=None)
     parameters:
     - description: 'Name of existing share.
 
@@ -3052,6 +3167,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: None
+      description: 'A string that represents the snapshot version, if applicable.
+
+        '
+      id: snapshot
+      type:
+      - str
     return:
       description: 'a list of valid ranges
 
@@ -3070,10 +3192,10 @@ items:
     id: list_shares
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 525
+    startLine: 533
   summary: 'Returns a generator to list the shares under the specified account.
 
     The generator will lazily follow the continuation tokens returned by
@@ -3094,7 +3216,7 @@ items:
     '
   syntax:
     content: list_shares(prefix=None, marker=None, num_results=None, include_metadata=False,
-      timeout=None)
+      timeout=None, include_snapshots=False)
     parameters:
     - defaultValue: None
       description: 'Filters the results to return only shares whose names
@@ -3142,6 +3264,13 @@ items:
       id: timeout
       type:
       - int
+    - defaultValue: 'False'
+      description: 'Specifies that share snapshots be returned in the response.
+
+        '
+      id: include_snapshots
+      type:
+      - bool
   type: method
   uid: azure.storage.file.fileservice.FileService.list_shares
 - class: azure.storage.file.fileservice.FileService
@@ -3154,10 +3283,10 @@ items:
     id: make_file_url
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 183
+    startLine: 191
   summary: 'Creates the url to access a file.
 
     '
@@ -3219,10 +3348,10 @@ items:
     id: resize_file
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1215
+    startLine: 1296
   summary: 'Resizes a file to the specified size. If the specified byte
 
     value is less than the current size of the file, then all
@@ -3276,10 +3405,10 @@ items:
     id: set_directory_metadata
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1033
+    startLine: 1106
   summary: 'Sets one or more user-defined name-value pairs for the specified
 
     directory. Each call to this operation replaces all existing metadata
@@ -3332,10 +3461,10 @@ items:
     id: set_file_metadata
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1311
+    startLine: 1395
   summary: 'Sets user-defined metadata for the specified file as one or more
 
     name-value pairs.
@@ -3393,10 +3522,10 @@ items:
     id: set_file_properties
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 1250
+    startLine: 1331
   summary: 'Sets system properties on the file. If one property is set for the
 
     content_settings, all properties will be overriden.
@@ -3449,10 +3578,10 @@ items:
     id: set_file_service_properties
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 467
+    startLine: 475
   summary: 'Sets the properties of a storage account''s File service, including
 
     Azure Storage Analytics. If an element (ex HourMetrics) is left as None, the
@@ -3514,10 +3643,10 @@ items:
     id: set_share_acl
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 786
+    startLine: 843
   summary: 'Sets the permissions for the specified share or stored access
 
     policies that may be used with Shared Access Signatures.
@@ -3564,10 +3693,10 @@ items:
     id: set_share_metadata
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 732
+    startLine: 789
   summary: 'Sets one or more user-defined name-value pairs for the specified
 
     share. Each call to this operation replaces all existing metadata
@@ -3615,10 +3744,10 @@ items:
     id: set_share_properties
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 678
+    startLine: 732
   summary: 'Sets service-defined properties for the specified share.
 
     '
@@ -3649,6 +3778,65 @@ items:
   type: method
   uid: azure.storage.file.fileservice.FileService.set_share_properties
 - class: azure.storage.file.fileservice.FileService
+  fullName: azure.storage.file.fileservice.FileService.snapshot_share
+  langs:
+  - python
+  module: azure.storage.file.fileservice
+  name: snapshot_share
+  source:
+    id: snapshot_share
+    path: azure-storage-file\azure\storage\file\fileservice.py
+    remote:
+      branch: master
+      path: azure-storage-file\azure\storage\file\fileservice.py
+      repo: https://github.com/Azure/azure-storage-python.git
+    startLine: 669
+  summary: 'Creates a snapshot of an existing share under the specified account.
+
+    '
+  syntax:
+    content: snapshot_share(share_name, metadata=None, quota=None, timeout=None)
+    parameters:
+    - description: 'The name of the share to create a snapshot of.
+
+        '
+      id: share_name
+      type:
+      - str
+    - defaultValue: None
+      description: 'A dict with name_value pairs to associate with the
+
+        share as metadata. Example:{''Category'':''test''}
+
+        '
+      id: metadata
+      type:
+      - 'a dict of str to str:'
+    - defaultValue: None
+      description: 'Specifies the maximum size of the share, in gigabytes. Must be
+
+        greater than 0, and less than or equal to 5TB (5120).
+
+        '
+      id: quota
+      type:
+      - int
+    - defaultValue: None
+      description: 'The timeout parameter is expressed in seconds.
+
+        '
+      id: timeout
+      type:
+      - int
+    return:
+      description: 'snapshot properties
+
+        '
+      type:
+      - azure.storage.file.models.Share
+  type: method
+  uid: azure.storage.file.fileservice.FileService.snapshot_share
+- class: azure.storage.file.fileservice.FileService
   fullName: azure.storage.file.fileservice.FileService.update_range
   langs:
   - python
@@ -3658,10 +3846,10 @@ items:
     id: update_range
     path: azure-storage-file\azure\storage\file\fileservice.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-file\azure\storage\file\fileservice.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 2231
+    startLine: 2331
   summary: 'Writes the bytes specified by the request body into the specified range.
 
     '
@@ -3984,6 +4172,11 @@ references:
   name: set_share_properties
   parent: azure.storage.file.fileservice.FileService
   uid: azure.storage.file.fileservice.FileService.set_share_properties
+- fullName: azure.storage.file.fileservice.FileService.snapshot_share
+  isExternal: false
+  name: snapshot_share
+  parent: azure.storage.file.fileservice.FileService
+  uid: azure.storage.file.fileservice.FileService.snapshot_share
 - fullName: azure.storage.file.fileservice.FileService.update_range
   isExternal: false
   name: update_range

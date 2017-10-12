@@ -7,7 +7,6 @@ items:
   - azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_file_service
   - azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_page_blob_service
   - azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_queue_service
-  - azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_table_service
   - azure.storage.common.cloudstorageaccount.CloudStorageAccount.generate_shared_access_signature
   class: azure.storage.common.cloudstorageaccount.CloudStorageAccount
   fullName: azure.storage.common.cloudstorageaccount.CloudStorageAccount
@@ -21,16 +20,15 @@ items:
     id: CloudStorageAccount
     path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 32
-  summary: 'Provides a factory for creating the blob, queue, table, and file services
+  summary: 'Provides a factory for creating the blob, queue, and file services
 
     with a common account name and account key or sas token.  Users can either
 
     use the factory or can construct the appropriate service directly.
-
 
 
 
@@ -54,7 +52,7 @@ items:
     id: create_append_blob_service
     path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 94
@@ -85,7 +83,7 @@ items:
     id: create_block_blob_service
     path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 60
@@ -116,10 +114,10 @@ items:
     id: create_file_service
     path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 145
+    startLine: 128
   summary: 'Creates a FileService object with the settings specified in the
 
     CloudStorageAccount.
@@ -147,7 +145,7 @@ items:
     id: create_page_blob_service
     path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
       repo: https://github.com/Azure/azure-storage-python.git
     startLine: 77
@@ -178,10 +176,10 @@ items:
     id: create_queue_service
     path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 128
+    startLine: 111
   summary: 'Creates a QueueService object with the settings specified in the
 
     CloudStorageAccount.
@@ -200,37 +198,6 @@ items:
   type: method
   uid: azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_queue_service
 - class: azure.storage.common.cloudstorageaccount.CloudStorageAccount
-  fullName: azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_table_service
-  langs:
-  - python
-  module: azure.storage.common.cloudstorageaccount
-  name: create_table_service
-  source:
-    id: create_table_service
-    path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
-    remote:
-      branch: dev
-      path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
-      repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 111
-  summary: 'Creates a TableService object with the settings specified in the
-
-    CloudStorageAccount.
-
-    '
-  syntax:
-    content: create_table_service()
-    parameters:
-    - id: self
-    return:
-      description: 'A service object.
-
-        '
-      type:
-      - azure.storage.table.tableservice.TableService
-  type: method
-  uid: azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_table_service
-- class: azure.storage.common.cloudstorageaccount.CloudStorageAccount
   fullName: azure.storage.common.cloudstorageaccount.CloudStorageAccount.generate_shared_access_signature
   langs:
   - python
@@ -240,10 +207,10 @@ items:
     id: generate_shared_access_signature
     path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
     remote:
-      branch: dev
+      branch: master
       path: azure-storage-common\azure\storage\common\cloudstorageaccount.py
       repo: https://github.com/Azure/azure-storage-python.git
-    startLine: 161
+    startLine: 144
   summary: 'Generates a shared access signature for the account.
 
     Use the returned signature with the sas_token parameter of the service
@@ -304,7 +271,8 @@ items:
         '
       id: expiry
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'The time at which the shared access signature becomes valid. If
 
@@ -319,7 +287,8 @@ items:
         '
       id: start
       type:
-      - datetime or str
+      - datetime
+      - str
     - defaultValue: None
       description: 'Specifies an IP address or a range of IP addresses from which
         to accept requests.
@@ -378,11 +347,6 @@ references:
   name: create_queue_service
   parent: azure.storage.common.cloudstorageaccount.CloudStorageAccount
   uid: azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_queue_service
-- fullName: azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_table_service
-  isExternal: false
-  name: create_table_service
-  parent: azure.storage.common.cloudstorageaccount.CloudStorageAccount
-  uid: azure.storage.common.cloudstorageaccount.CloudStorageAccount.create_table_service
 - fullName: azure.storage.common.cloudstorageaccount.CloudStorageAccount.generate_shared_access_signature
   isExternal: false
   name: generate_shared_access_signature

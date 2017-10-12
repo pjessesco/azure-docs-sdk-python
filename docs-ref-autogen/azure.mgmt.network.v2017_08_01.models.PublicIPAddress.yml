@@ -33,7 +33,7 @@ items:
   syntax:
     content: PublicIPAddress(id=None, location=None, tags=None, sku=None, public_ip_allocation_method=None,
       public_ip_address_version=None, dns_settings=None, ip_address=None, idle_timeout_in_minutes=None,
-      resource_guid=None, provisioning_state=None, etag=None)
+      resource_guid=None, provisioning_state=None, etag=None, zones=None)
     parameters:
     - description: 'Resource ID.
 
@@ -68,9 +68,8 @@ items:
         '
       id: public_ip_allocation_method
       type:
-      - 'str or @azure.mgmt.network.v2017_08_01.models.IPAllocationMethod
-
-        '
+      - str
+      - azure.mgmt.network.v2017_08_01.models.IPAllocationMethod
     - description: 'The public IP address version. Possible
 
         values are: ''IPv4'' and ''IPv6''. Possible values include: ''IPv4'', ''IPv6''
@@ -78,9 +77,8 @@ items:
         '
       id: public_ip_address_version
       type:
-      - 'str or @azure.mgmt.network.v2017_08_01.models.IPVersion
-
-        '
+      - str
+      - azure.mgmt.network.v2017_08_01.models.IPVersion
     - description: 'The FQDN of the DNS record associated with the public
 
         IP address.
@@ -127,6 +125,14 @@ items:
       id: etag
       type:
       - str
+    - description: 'A list of availability zones denoting the IP allocated for
+
+        the resource needs to come from.
+
+        '
+      id: zones
+      type:
+      - list of str
     variables:
     - description: 'Resource name.
 

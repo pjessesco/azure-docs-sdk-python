@@ -25,7 +25,7 @@ items:
     '
   syntax:
     content: StartTaskInformation(state, start_time, retry_count, end_time=None, exit_code=None,
-      failure_info=None, last_retry_time=None, result=None)
+      container_info=None, failure_info=None, last_retry_time=None, result=None)
     parameters:
     - description: 'The state of the start task on the compute node. Values are:
 
@@ -42,9 +42,8 @@ items:
         '
       id: state
       type:
-      - 'str or @azure.batch.models.StartTaskState
-
-        '
+      - str
+      - ~azure.batch.models.StartTaskState
     - description: 'The time at which the start task started running. This
 
         value is reset every time the task is restarted or retried (that is, this
@@ -89,6 +88,16 @@ items:
       id: exit_code
       type:
       - int
+    - description: 'Information about the container under which the
+
+        task is executing. This property is set only if the task runs in a
+
+        container context.
+
+        '
+      id: container_info
+      type:
+      - ~azure.batch.models.TaskContainerExecutionInformation
     - description: 'Information describing the task failure, if any. This
 
         property is set only if the task is in the completed state and encountered
@@ -98,7 +107,7 @@ items:
         '
       id: failure_info
       type:
-      - azure.batch.models.TaskFailureInformation
+      - ~azure.batch.models.TaskFailureInformation
     - description: 'The number of times the task has been retried by the
 
         Batch service. Task application failures (non-zero exit code) are retried,
@@ -138,9 +147,8 @@ items:
         '
       id: result
       type:
-      - 'str or @azure.batch.models.TaskExecutionResult
-
-        '
+      - str
+      - ~azure.batch.models.TaskExecutionResult
   type: class
   uid: azure.batch.models.StartTaskInformation
 references: []
