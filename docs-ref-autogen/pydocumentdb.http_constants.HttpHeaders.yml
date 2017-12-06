@@ -75,6 +75,7 @@ items:
   - pydocumentdb.http_constants.HttpHeaders.PageSize
   - pydocumentdb.http_constants.HttpHeaders.PartitionKey
   - pydocumentdb.http_constants.HttpHeaders.PartitionKeyRangeID
+  - pydocumentdb.http_constants.HttpHeaders.PopulateQueryMetrics
   - pydocumentdb.http_constants.HttpHeaders.PostTriggerExclude
   - pydocumentdb.http_constants.HttpHeaders.PostTriggerInclude
   - pydocumentdb.http_constants.HttpHeaders.PreTriggerExclude
@@ -122,9 +123,10 @@ items:
     remote:
       branch: master
       path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\http_constants.py
-      repo: https://github.com/Azure/azure-documentdb-python.git
+      repo: https://github.com/Azure/azure-cosmosdb-python.git
     startLine: 37
   summary: 'Constants of http headers.
+
 
 
 
@@ -967,6 +969,16 @@ items:
   type: attribute
   uid: pydocumentdb.http_constants.HttpHeaders.PartitionKeyRangeID
 - class: pydocumentdb.http_constants.HttpHeaders
+  fullName: pydocumentdb.http_constants.HttpHeaders.PopulateQueryMetrics
+  langs:
+  - python
+  module: pydocumentdb.http_constants
+  name: PopulateQueryMetrics
+  syntax:
+    content: PopulateQueryMetrics = 'x-ms-documentdb-populatequerymetrics'
+  type: attribute
+  uid: pydocumentdb.http_constants.HttpHeaders.PopulateQueryMetrics
+- class: pydocumentdb.http_constants.HttpHeaders
   fullName: pydocumentdb.http_constants.HttpHeaders.PostTriggerExclude
   langs:
   - python
@@ -1662,6 +1674,11 @@ references:
   name: PartitionKeyRangeID
   parent: pydocumentdb.http_constants.HttpHeaders
   uid: pydocumentdb.http_constants.HttpHeaders.PartitionKeyRangeID
+- fullName: pydocumentdb.http_constants.HttpHeaders.PopulateQueryMetrics
+  isExternal: false
+  name: PopulateQueryMetrics
+  parent: pydocumentdb.http_constants.HttpHeaders
+  uid: pydocumentdb.http_constants.HttpHeaders.PopulateQueryMetrics
 - fullName: pydocumentdb.http_constants.HttpHeaders.PostTriggerExclude
   isExternal: false
   name: PostTriggerExclude
