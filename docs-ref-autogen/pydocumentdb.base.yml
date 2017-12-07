@@ -1,0 +1,434 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - pydocumentdb.base.DecodeBase64String
+  - pydocumentdb.base.GenerateGuidId
+  - pydocumentdb.base.GetAttachmentIdFromMediaId
+  - pydocumentdb.base.GetDocumentCollectionInfo
+  - pydocumentdb.base.GetDocumentCollectionLink
+  - pydocumentdb.base.GetHeaders
+  - pydocumentdb.base.GetPathFromLink
+  - pydocumentdb.base.GetResourceIdOrFullNameFromLink
+  - pydocumentdb.base.IndexOfNth
+  - pydocumentdb.base.IsDatabaseLink
+  - pydocumentdb.base.IsDocumentCollectionLink
+  - pydocumentdb.base.IsNameBased
+  - pydocumentdb.base.ParsePaths
+  - pydocumentdb.base.TrimBeginningAndEndingSlashes
+  fullName: pydocumentdb.base
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: base
+  source:
+    id: base
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 0
+  summary: 'Base functions in the Azure DocumentDB database service.
+
+    '
+  type: module
+  uid: pydocumentdb.base
+- fullName: pydocumentdb.base.DecodeBase64String
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: DecodeBase64String
+  source:
+    id: DecodeBase64String
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 495
+  summary: 'Decodes a Base64 encoded string by replacing ''-'' with ''/''
+
+    '
+  syntax:
+    content: DecodeBase64String(string_to_decode)
+    parameters:
+    - id: string_to_decode
+  type: function
+  uid: pydocumentdb.base.DecodeBase64String
+- fullName: pydocumentdb.base.GenerateGuidId
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: GenerateGuidId
+  source:
+    id: GenerateGuidId
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 263
+  summary: 'Gets a random GUID.
+
+
+    Note that here we use python''s UUID generation library. Basically UUID
+
+    is the same as GUID when represented as a string.
+
+    '
+  syntax:
+    content: GenerateGuidId()
+  type: function
+  uid: pydocumentdb.base.GenerateGuidId
+- fullName: pydocumentdb.base.GetAttachmentIdFromMediaId
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: GetAttachmentIdFromMediaId
+  source:
+    id: GetAttachmentIdFromMediaId
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 237
+  summary: 'Gets attachment id from media id.
+
+    '
+  syntax:
+    content: GetAttachmentIdFromMediaId(media_id)
+    parameters:
+    - id: media_id
+  type: function
+  uid: pydocumentdb.base.GetAttachmentIdFromMediaId
+- fullName: pydocumentdb.base.GetDocumentCollectionInfo
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: GetDocumentCollectionInfo
+  source:
+    id: GetDocumentCollectionInfo
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 415
+  summary: "Given the self link and alt_content_path from the reponse header and result\n\
+    \   extract the collection name and collection id\n\n   Ever response header has\
+    \ alt-content-path that is the\n   owner's path in ascii. For document create\
+    \ / update requests, this can be used\n   to get the collection name, but for\
+    \ collection create response, we can't use it.\n   So we also rely on\n"
+  syntax:
+    content: GetDocumentCollectionInfo(self_link, alt_content_path, id_from_response)
+    parameters:
+    - id: self_link
+    - id: alt_content_path
+    - id: id_from_response
+  type: function
+  uid: pydocumentdb.base.GetDocumentCollectionInfo
+- fullName: pydocumentdb.base.GetDocumentCollectionLink
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: GetDocumentCollectionLink
+  source:
+    id: GetDocumentCollectionLink
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 456
+  summary: 'Gets the document collection link
+
+    '
+  syntax:
+    content: GetDocumentCollectionLink(link)
+    parameters:
+    - id: link
+  type: function
+  uid: pydocumentdb.base.GetDocumentCollectionLink
+- fullName: pydocumentdb.base.GetHeaders
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: GetHeaders
+  source:
+    id: GetHeaders
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 40
+  summary: 'Gets HTTP request headers.
+
+    '
+  syntax:
+    content: GetHeaders(document_client, default_headers, verb, path, resource_id,
+      resource_type, options, partition_key_range_id=None)
+    parameters:
+    - id: document_client
+    - id: default_headers
+    - id: verb
+    - id: path
+    - id: resource_id
+    - id: resource_type
+    - id: options
+    - defaultValue: None
+      id: partition_key_range_id
+  type: function
+  uid: pydocumentdb.base.GetHeaders
+- fullName: pydocumentdb.base.GetPathFromLink
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: GetPathFromLink
+  source:
+    id: GetPathFromLink
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 275
+  summary: 'Gets path from resource link with optional resource type
+
+    '
+  syntax:
+    content: GetPathFromLink(resource_link, resource_type='')
+    parameters:
+    - id: resource_link
+    - defaultValue: ''
+      id: resource_type
+  type: function
+  uid: pydocumentdb.base.GetPathFromLink
+- fullName: pydocumentdb.base.GetResourceIdOrFullNameFromLink
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: GetResourceIdOrFullNameFromLink
+  source:
+    id: GetResourceIdOrFullNameFromLink
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 196
+  summary: 'Gets resource id or full name from resource link.
+
+    '
+  syntax:
+    content: GetResourceIdOrFullNameFromLink(resource_link)
+    parameters:
+    - id: resource_link
+  type: function
+  uid: pydocumentdb.base.GetResourceIdOrFullNameFromLink
+- fullName: pydocumentdb.base.IndexOfNth
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: IndexOfNth
+  source:
+    id: IndexOfNth
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 475
+  summary: 'Gets the index of Nth occurance of a given character in a string
+
+    '
+  syntax:
+    content: IndexOfNth(s, value, n)
+    parameters:
+    - id: s
+    - id: value
+    - id: n
+  type: function
+  uid: pydocumentdb.base.IndexOfNth
+- fullName: pydocumentdb.base.IsDatabaseLink
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: IsDatabaseLink
+  source:
+    id: IsDatabaseLink
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 343
+  summary: 'Finds whether the link is a database Self Link or a database ID based
+    link
+
+    '
+  syntax:
+    content: IsDatabaseLink(link)
+    parameters:
+    - id: link
+  type: function
+  uid: pydocumentdb.base.IsDatabaseLink
+- fullName: pydocumentdb.base.IsDocumentCollectionLink
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: IsDocumentCollectionLink
+  source:
+    id: IsDocumentCollectionLink
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 375
+  summary: 'Finds whether the link is a document colllection Self Link or a document
+    colllection ID based link
+
+    '
+  syntax:
+    content: IsDocumentCollectionLink(link)
+    parameters:
+    - id: link
+  type: function
+  uid: pydocumentdb.base.IsDocumentCollectionLink
+- fullName: pydocumentdb.base.IsNameBased
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: IsNameBased
+  source:
+    id: IsNameBased
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 299
+  summary: 'Finds whether the link is name based or not
+
+    '
+  syntax:
+    content: IsNameBased(link)
+    parameters:
+    - id: link
+  type: function
+  uid: pydocumentdb.base.IsNameBased
+- fullName: pydocumentdb.base.ParsePaths
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: ParsePaths
+  source:
+    id: ParsePaths
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 529
+  syntax:
+    content: ParsePaths(paths)
+    parameters:
+    - id: paths
+  type: function
+  uid: pydocumentdb.base.ParsePaths
+- fullName: pydocumentdb.base.TrimBeginningAndEndingSlashes
+  langs:
+  - python
+  module: pydocumentdb.base
+  name: TrimBeginningAndEndingSlashes
+  source:
+    id: TrimBeginningAndEndingSlashes
+    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+    remote:
+      branch: master
+      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\base.py
+      repo: https://github.com/Azure/azure-documentdb-python.git
+    startLine: 508
+  summary: 'Trims beginning and ending slashes
+
+    '
+  syntax:
+    content: TrimBeginningAndEndingSlashes(path)
+    parameters:
+    - id: path
+  type: function
+  uid: pydocumentdb.base.TrimBeginningAndEndingSlashes
+references:
+- fullName: pydocumentdb.base.DecodeBase64String
+  isExternal: false
+  name: DecodeBase64String
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.DecodeBase64String
+- fullName: pydocumentdb.base.GenerateGuidId
+  isExternal: false
+  name: GenerateGuidId
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.GenerateGuidId
+- fullName: pydocumentdb.base.GetAttachmentIdFromMediaId
+  isExternal: false
+  name: GetAttachmentIdFromMediaId
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.GetAttachmentIdFromMediaId
+- fullName: pydocumentdb.base.GetDocumentCollectionInfo
+  isExternal: false
+  name: GetDocumentCollectionInfo
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.GetDocumentCollectionInfo
+- fullName: pydocumentdb.base.GetDocumentCollectionLink
+  isExternal: false
+  name: GetDocumentCollectionLink
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.GetDocumentCollectionLink
+- fullName: pydocumentdb.base.GetHeaders
+  isExternal: false
+  name: GetHeaders
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.GetHeaders
+- fullName: pydocumentdb.base.GetPathFromLink
+  isExternal: false
+  name: GetPathFromLink
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.GetPathFromLink
+- fullName: pydocumentdb.base.GetResourceIdOrFullNameFromLink
+  isExternal: false
+  name: GetResourceIdOrFullNameFromLink
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.GetResourceIdOrFullNameFromLink
+- fullName: pydocumentdb.base.IndexOfNth
+  isExternal: false
+  name: IndexOfNth
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.IndexOfNth
+- fullName: pydocumentdb.base.IsDatabaseLink
+  isExternal: false
+  name: IsDatabaseLink
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.IsDatabaseLink
+- fullName: pydocumentdb.base.IsDocumentCollectionLink
+  isExternal: false
+  name: IsDocumentCollectionLink
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.IsDocumentCollectionLink
+- fullName: pydocumentdb.base.IsNameBased
+  isExternal: false
+  name: IsNameBased
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.IsNameBased
+- fullName: pydocumentdb.base.ParsePaths
+  isExternal: false
+  name: ParsePaths
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.ParsePaths
+- fullName: pydocumentdb.base.TrimBeginningAndEndingSlashes
+  isExternal: false
+  name: TrimBeginningAndEndingSlashes
+  parent: pydocumentdb.base
+  uid: pydocumentdb.base.TrimBeginningAndEndingSlashes
