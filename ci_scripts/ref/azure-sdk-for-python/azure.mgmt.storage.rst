@@ -14,6 +14,7 @@ Submodules
 
 .. toctree::
 
+   azure.mgmt.storage.v2017_10_01
    azure.mgmt.storage.v2017_06_01
    azure.mgmt.storage.v2016_12_01
    azure.mgmt.storage.v2016_01_01
