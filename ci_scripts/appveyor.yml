@@ -38,12 +38,16 @@ clone_script:
     - git config --global core.autocrlf true
     - git config core.autocrlf
     - cd c:/projects
-    - git clone -q --branch=%APPVEYOR_REPO_BRANCH% https://github.com/Azure/azure-sdk-for-python.git
-    - git clone -q --branch=%APPVEYOR_REPO_BRANCH% https://github.com/Azure/azure-storage-python.git
-    - git clone -q --branch=%APPVEYOR_REPO_BRANCH% https://github.com/MicrosoftDocs/azure-docs-sdk-python.git
+    - git clone -q --branch=master https://github.com/Azure/azure-sdk-for-python.git
+    - git clone -q --branch=master https://github.com/Azure/azure-storage-python.git
+    - git clone -q --branch=appveytest https://github.com/MicrosoftDocs/azure-docs-sdk-python.git
 
 install:
     - cd c:/projects/azure-sdk-for-python
+    
+    - ps: REG QUERY HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled
+    - ps: REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem /f /v LongPathsEnabled /t REG_DWORD /d 1
+    - ps: REG QUERY HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled
 
     # Ignore STDOUT
     - "%PYTHON%/python.exe setup.py install > null"
@@ -131,7 +135,7 @@ on_success:
     - git add . > null
     - git commit -a -m "appveyor ci - update yml files" > null | echo commit change(s)
 
-    - git push -u origin %APPVEYOR_REPO_BRANCH%:%APPVEYOR_REPO_BRANCH%
+    - git push -u origin appveytest:appveytest
 
 on_finish:
     # if want to RDP, uncomment below command
