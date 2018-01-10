@@ -15,10 +15,10 @@ items:
   name: SessionContainer
   source:
     id: SessionContainer
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
       repo: https://github.com/Azure/azure-documentdb-python.git
     startLine: 31
   summary: '
@@ -37,10 +37,10 @@ items:
   name: get_session_token
   source:
     id: get_session_token
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
       repo: https://github.com/Azure/azure-documentdb-python.git
     startLine: 38
   summary: 'Get Session Token for collection_link
@@ -49,8 +49,18 @@ items:
   syntax:
     content: get_session_token(resource_path)
     parameters:
-    - id: self
-    - id: resource_path
+    - description: 'Self link / path to the resource
+
+        '
+      id: resource_path
+      type:
+      - str
+    return:
+      description: 'Session Token dictionary for the collection_id
+
+        '
+      type:
+      - dict
   type: method
   uid: pydocumentdb.session.SessionContainer.get_session_token
 - class: pydocumentdb.session.SessionContainer
@@ -61,19 +71,30 @@ items:
   name: parse_session_token
   source:
     id: parse_session_token
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 149
+    startLine: 150
   summary: 'Extracts session token from response headers and parses
 
     '
   syntax:
     content: parse_session_token(response_headers)
     parameters:
-    - id: response_headers
+    - description: ''
+      id: response_headers
+      type:
+      - dict
+    return:
+      description: 'A dictionary of partition id to session lsn
+
+        for given collection
+
+        '
+      type:
+      - dict
   type: method
   uid: pydocumentdb.session.SessionContainer.parse_session_token
 - class: pydocumentdb.session.SessionContainer
@@ -84,12 +105,12 @@ items:
   name: set_session_token
   source:
     id: set_session_token
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\session.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\session.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 75
+    startLine: 77
   summary: 'Session token must only be updated from response of requests that successfully
     mutate resource on the
 
@@ -99,9 +120,16 @@ items:
   syntax:
     content: set_session_token(response_result, response_headers)
     parameters:
-    - id: self
-    - id: response_result
-    - id: response_headers
+    - description: ''
+      id: response_result
+      type:
+      - dict
+    - description: ''
+      id: response_headers
+      type:
+      - dict
+    return:
+      description: "* None \n"
   type: method
   uid: pydocumentdb.session.SessionContainer.set_session_token
 references:

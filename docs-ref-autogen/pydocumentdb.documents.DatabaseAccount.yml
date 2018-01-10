@@ -14,10 +14,10 @@ items:
   name: DatabaseAccount
   source:
     id: DatabaseAccount
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
     startLine: 27
   summary: 'Database account. A DatabaseAccount is the container for databases.
@@ -27,6 +27,67 @@ items:
     '
   syntax:
     content: DatabaseAccount()
+    variables:
+    - description: 'The self-link for Databases in the databaseAccount.
+
+        '
+      id: DatabaseLink
+      type:
+      - str
+    - description: 'The self-link for Media in the databaseAccount.
+
+        '
+      id: MediaLink
+      type:
+      - str
+    - description: 'Attachment content (media) storage quota in MBs (Retrieved from
+        gateway).
+
+        '
+      id: MaxMediaStorageUsageInMB
+      type:
+      - int
+    - description: 'Current attachment content (media) usage in MBs (Retrieved from
+        gateway).
+
+        Value is returned from cached information updated periodically and
+
+        is not guaranteed to be real time.
+
+        '
+      id: CurrentMediaStorageUsageInMB
+      type:
+      - int
+    - description: 'UserConsistencyPolicy settings.
+
+        '
+      id: ConsistencyPolicy
+      type:
+      - dict
+    - description: 'The default consistency level.
+
+        '
+      id: ConsistencyPolicy['defaultConsistencyLevel']
+      type:
+      - dict
+    - description: 'In bounded staleness consistency, the maximum allowed staleness
+        in
+
+        terms difference in sequence numbers (aka version).
+
+        '
+      id: ConsistencyPolicy['maxStalenessPrefix']
+      type:
+      - int
+    - description: 'In bounded staleness consistency, the maximum allowed staleness
+        in
+
+        terms time interval.
+
+        '
+      id: ConsistencyPolicy['maxStalenessIntervalInSeconds']
+      type:
+      - int
   type: class
   uid: pydocumentdb.documents.DatabaseAccount
 - class: pydocumentdb.documents.DatabaseAccount

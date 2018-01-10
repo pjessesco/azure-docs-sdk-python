@@ -14,18 +14,37 @@ items:
   name: IndexKind
   source:
     id: IndexKind
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 137
+    startLine: 143
   summary: 'Specifies the index kind of index specs.
 
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'The index entries are hashed to serve point look up queries.
+
+        Can be used to serve queries like: SELECT * FROM docs d WHERE d.prop = 5
+
+        '
+      id: Hash
+      type:
+      - str
+    - description: 'The index entries are ordered. Range indexes are optimized for
+
+        inequality predicate queries with efficient range scans.
+
+        Can be used to serve queries like: SELECT * FROM docs d WHERE d.prop > 5
+
+        '
+      id: Range
+      type:
+      - str
   type: class
   uid: pydocumentdb.documents.IndexKind
 - class: pydocumentdb.documents.IndexKind

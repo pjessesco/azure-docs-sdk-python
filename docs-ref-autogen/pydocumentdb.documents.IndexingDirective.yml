@@ -15,19 +15,38 @@ items:
   name: IndexingDirective
   source:
     id: IndexingDirective
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 176
+    startLine: 187
   summary: 'Specifies whether or not the resource is to be indexed.
 
 
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'Use any pre-defined/pre-configured defaults.
+
+        '
+      id: Default
+      type:
+      - int
+    - description: 'Index the resource.
+
+        '
+      id: Exclude
+      type:
+      - int
+    - description: 'Do not index the resource.
+
+        '
+      id: Include
+      type:
+      - int
   type: class
   uid: pydocumentdb.documents.IndexingDirective
 - class: pydocumentdb.documents.IndexingDirective

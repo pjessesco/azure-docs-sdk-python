@@ -17,12 +17,12 @@ items:
   name: TriggerOperation
   source:
     id: TriggerOperation
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 242
+    startLine: 259
   summary: 'Specifies the operations on which a trigger should be executed.
 
 
@@ -31,7 +31,38 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'All operations.
+
+        '
+      id: All
+      type:
+      - str
+    - description: 'Create operations only.
+
+        '
+      id: Create
+      type:
+      - str
+    - description: 'Update operations only.
+
+        '
+      id: Update
+      type:
+      - str
+    - description: 'Delete operations only.
+
+        '
+      id: Delete
+      type:
+      - str
+    - description: 'Replace operations only.
+
+        '
+      id: Replace
+      type:
+      - str
   type: class
   uid: pydocumentdb.documents.TriggerOperation
 - class: pydocumentdb.documents.TriggerOperation

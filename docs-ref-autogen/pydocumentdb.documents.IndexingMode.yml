@@ -15,19 +15,63 @@ items:
   name: IndexingMode
   source:
     id: IndexingMode
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 110
+    startLine: 114
   summary: 'Specifies the supported indexing modes.
 
 
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'Index is updated synchronously with a create or
+
+        update operation. With consistent indexing, query behavior is the
+
+        same as the default consistency level for the collection.
+
+
+        The index is
+
+        always kept up to date with the data.
+
+        '
+      id: Consistent
+      type:
+      - str
+    - description: 'Index is updated asynchronously with respect to a create
+
+        or update operation.
+
+
+        With lazy indexing, queries are eventually consistent. The index is
+
+        updated when the collection is idle.
+
+        '
+      id: Lazy
+      type:
+      - str
+    - description: 'No index is provided.
+
+
+        Setting IndexingMode to "None" drops the index. Use this if you don''t
+
+        want to maintain the index for a document collection, to save the
+
+        storage cost or improve the write throughput. Your queries will
+
+        degenerate to scans of the entire collection.
+
+        '
+      id: NoIndex
+      type:
+      - str
   type: class
   uid: pydocumentdb.documents.IndexingMode
 - class: pydocumentdb.documents.IndexingMode

@@ -13,17 +13,26 @@ items:
   name: ConnectionMode
   source:
     id: ConnectionMode
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 189
+    startLine: 202
   summary: 'Represents the connection mode to be used by the client.
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'Use the Azure Cosmos DB gateway to route all requests. The
+
+        gateway proxies requests to the right data partition.
+
+        '
+      id: Gateway
+      type:
+      - int
   type: class
   uid: pydocumentdb.documents.ConnectionMode
 - class: pydocumentdb.documents.ConnectionMode

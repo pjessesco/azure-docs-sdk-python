@@ -14,18 +14,31 @@ items:
   name: TriggerType
   source:
     id: TriggerType
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 231
+    startLine: 247
   summary: 'Specifies the type of the trigger.
 
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'Trigger should be executed before the associated operation(s).
+
+        '
+      id: Pre
+      type:
+      - str
+    - description: 'Trigger should be executed after the associated operation(s).
+
+        '
+      id: Post
+      type:
+      - str
   type: class
   uid: pydocumentdb.documents.TriggerType
 - class: pydocumentdb.documents.TriggerType

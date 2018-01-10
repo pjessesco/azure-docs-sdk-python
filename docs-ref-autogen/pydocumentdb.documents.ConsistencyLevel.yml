@@ -17,13 +17,13 @@ items:
   name: ConsistencyLevel
   source:
     id: ConsistencyLevel
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
     startLine: 76
-  summary: 'Represents the consistency levels supported for DocumentDB client
+  summary: 'Represents the consistency levels supported for Azure Cosmos DB client
 
     operations.
 
@@ -43,7 +43,58 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'Strong Consistency guarantees that read operations always
+
+        return the value that was last written.
+
+        '
+      id: Strong
+      type:
+      - str
+    - description: 'Bounded Staleness guarantees that reads are not
+
+        too out-of-date. This can be configured based on number of operations
+
+        (MaxStalenessPrefix) or time (MaxStalenessIntervalInSeconds).
+
+        '
+      id: BoundedStaleness
+      type:
+      - str
+    - description: 'Session Consistency guarantees monotonic reads (you never
+
+        read old data, then new, then old again), monotonic writes (writes
+
+        are ordered) and read your writes (your writes are immediately
+
+        visible to your reads) within any single session.
+
+        '
+      id: Session
+      type:
+      - str
+    - description: 'Eventual Consistency guarantees that reads will return
+
+        a subset of writes. All writes will be eventually be available for
+
+        reads.
+
+        '
+      id: Eventual
+      type:
+      - str
+    - description: 'ConsistentPrefix Consistency guarantees that
+
+        reads will return some prefix of all writes with no gaps. All writes
+
+        will be eventually be available for reads.
+
+        '
+      id: ConsistentPrefix
+      type:
+      - str
   type: class
   uid: pydocumentdb.documents.ConsistencyLevel
 - class: pydocumentdb.documents.ConsistencyLevel

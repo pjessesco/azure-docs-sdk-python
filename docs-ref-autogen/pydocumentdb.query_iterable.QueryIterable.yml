@@ -14,10 +14,10 @@ items:
   name: QueryIterable
   source:
     id: QueryIterable
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\query_iterable.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\query_iterable.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\query_iterable.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\query_iterable.py
       repo: https://github.com/Azure/azure-documentdb-python.git
     startLine: 27
   summary: 'Represents an iterable object of the query results.
@@ -40,26 +40,41 @@ items:
   name: PartitioningQueryIterable
   source:
     id: PartitioningQueryIterable
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\query_iterable.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\query_iterable.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\query_iterable.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\query_iterable.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 58
+    startLine: 60
   summary: "Represents a client side partitioning query iterable.\n\nThis constructor\
     \ instantiates a QueryIterable for\nclient side partitioning queries, and sets\
     \ _MultiCollectionQueryExecutionContext\nas the internal execution context.\n\
-    :Parameters:\n\n\n   * *client*: DocumentClient, instance of document client \n\
-    \n   * *query*: str or dict \n\n   * *options*: dict, the request options for\
-    \ the request. \n\n   * *database_link*: str, database self link or ID based link\
-    \ \n\n   * *partition_key*: str, partition key for the query \n"
+    :param DocumentClient client:\n\n\n   Instance of document client\n\n"
   syntax:
     content: PartitioningQueryIterable(client, query, options, database_link, partition_key)
     parameters:
-    - id: cls
-    - id: client
-    - id: query
-    - id: options
+    - description: ''
+      id: or dict) options
+      type:
+      - (str
+    - description: 'The request options for the request.
+
+        '
+      id: options
+      type:
+      - dict
+    - description: 'Database self link or ID based link
+
+        '
+      id: database_link
+      type:
+      - str
+    - description: 'Partition key for the query
+
+        '
+      id: partition_key
+      type:
+      - str
     - id: database_link
     - id: partition_key
   type: method
@@ -72,12 +87,12 @@ items:
   name: fetch_next_block
   source:
     id: fetch_next_block
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\query_iterable.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\query_iterable.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\query_iterable.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\query_iterable.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 113
+    startLine: 118
   summary: 'Returns a block of results with respecting retry policy.
 
 
@@ -90,6 +105,12 @@ items:
     content: fetch_next_block()
     parameters:
     - id: self
+    return:
+      description: 'List of results.
+
+        '
+      type:
+      - list
   type: method
   uid: pydocumentdb.query_iterable.QueryIterable.fetch_next_block
 references:
@@ -103,3 +124,12 @@ references:
   name: fetch_next_block
   parent: pydocumentdb.query_iterable.QueryIterable
   uid: pydocumentdb.query_iterable.QueryIterable.fetch_next_block
+- fullName: (str
+  name: (str
+  spec.python:
+  - fullName: (
+    name: (
+  - fullName: str
+    name: str
+    uid: str
+  uid: (str

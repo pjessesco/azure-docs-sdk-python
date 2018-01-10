@@ -17,12 +17,12 @@ items:
   name: DataType
   source:
     id: DataType
-    path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+    path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
     remote:
       branch: master
-      path: pydocumentdb-2.3.0-py3.6.egg\pydocumentdb\documents.py
+      path: pydocumentdb-2.3.1-py3.6.egg\pydocumentdb\documents.py
       repo: https://github.com/Azure/azure-documentdb-python.git
-    startLine: 159
+    startLine: 166
   summary: 'Specifies the data type of index specs.
 
 
@@ -31,7 +31,38 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    variables:
+    - description: 'Represents a numeric data type.
+
+        '
+      id: Number
+      type:
+      - str
+    - description: 'Represents a string data type.
+
+        '
+      id: String
+      type:
+      - str
+    - description: 'Represents a point data type.
+
+        '
+      id: Point
+      type:
+      - str
+    - description: 'Represents a line string data type.
+
+        '
+      id: LineString
+      type:
+      - str
+    - description: 'Represents a polygon data type.
+
+        '
+      id: Polygon
+      type:
+      - str
   type: class
   uid: pydocumentdb.documents.DataType
 - class: pydocumentdb.documents.DataType
