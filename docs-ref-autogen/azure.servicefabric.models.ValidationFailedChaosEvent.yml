@@ -28,17 +28,29 @@ items:
   syntax:
     content: ValidationFailedChaosEvent(time_stamp_utc, reason=None)
     parameters:
-    - description: ''
+    - description: 'The UTC timestamp when this Chaos event was
+
+        generated.
+
+        '
       id: time_stamp_utc
       type:
       - datetime
-    - description: 'Polymorphic Discriminator
+    - description: 'Constant filled by server.
 
         '
       id: kind
       type:
       - str
-    - description: ''
+    - description: 'Describes why the ValidationFailedChaosEvent was generated.
+
+        This may happen because more than MaxPercentUnhealthyNodes are unhealthy
+
+        for more than MaxClusterStabilizationTimeout. This reason will be in the
+
+        Reason property of the ValidationFailedChaosEvent as a string.
+
+        '
       id: reason
       type:
       - str

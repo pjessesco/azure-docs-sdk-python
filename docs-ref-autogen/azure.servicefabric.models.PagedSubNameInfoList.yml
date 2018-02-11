@@ -32,7 +32,19 @@ items:
   syntax:
     content: PagedSubNameInfoList(continuation_token=None, is_consistent=None, sub_names=None)
     parameters:
-    - description: ''
+    - description: 'The continuation token parameter is used to
+
+        obtain next set of results. The continuation token is included in the
+
+        response of the API when the results from the system do not fit in a
+
+        single response. When this value is passed to the next API call, the API
+
+        returns next set of results. If there are no further results then the
+
+        continuation token is not included in the response.
+
+        '
       id: continuation_token
       type:
       - str
@@ -46,10 +58,26 @@ items:
       id: is_consistent
       type:
       - bool
-    - description: ''
+    - description: 'List of the child names.
+
+        '
       id: sub_names
       type:
-      - list of str
+      - list[str]
   type: class
   uid: azure.servicefabric.models.PagedSubNameInfoList
-references: []
+references:
+- fullName: list[str]
+  name: list[str]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: str
+    name: str
+    uid: str
+  - fullName: ']'
+    name: ']'
+  uid: list[str]

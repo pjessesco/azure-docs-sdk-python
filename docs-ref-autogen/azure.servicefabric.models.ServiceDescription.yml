@@ -25,6 +25,11 @@ items:
 
     service.
 
+
+    You probably want to use the sub-classes and not this class directly. Known
+
+    sub-classes are: StatefulServiceDescription, StatelessServiceDescription
+
     '
   syntax:
     content: ServiceDescription(service_name, service_type_name, partition_description,
@@ -33,23 +38,43 @@ items:
       default_move_cost=None, is_default_move_cost_specified=None, service_package_activation_mode=None,
       service_dns_name=None)
     parameters:
-    - description: ''
+    - description: 'The name of the application, including the
+
+        ''fabric:'' URI scheme.
+
+        '
       id: application_name
       type:
       - str
-    - description: ''
+    - description: 'The full name of the service with ''fabric:'' URI
+
+        scheme.
+
+        '
       id: service_name
       type:
       - str
-    - description: ''
+    - description: 'Name of the service type as specified in the
+
+        service manifest.
+
+        '
       id: service_type_name
       type:
       - str
-    - description: ''
+    - description: 'The initialization data as an array of bytes.
+
+        Initialization data is passed to service instances or replicas when they
+
+        are created.
+
+        '
       id: initialization_data
       type:
-      - list of int
-    - description: ''
+      - list[int]
+    - description: 'The partition description as an object.
+
+        '
       id: partition_description
       type:
       - azure.servicefabric.models.PartitionSchemeDescription
@@ -67,27 +92,33 @@ items:
       id: placement_constraints
       type:
       - str
-    - description: ''
+    - description: 'The correlation scheme.
+
+        '
       id: correlation_scheme
       type:
-      - list of azure.servicefabric.models.ServiceCorrelationDescription
-    - description: ''
+      - list[azure.servicefabric.models.ServiceCorrelationDescription]
+    - description: 'The service load metrics.
+
+        '
       id: service_load_metrics
       type:
-      - list of azure.servicefabric.models.ServiceLoadMetricDescription
-    - description: ''
+      - list[azure.servicefabric.models.ServiceLoadMetricDescription]
+    - description: 'The service placement policies.
+
+        '
       id: service_placement_policies
       type:
-      - list ofazure.servicefabric.models.ServicePlacementPolicyDescription
-    - description: 'Possible values include: ''Zero'', ''Low'',
+      - list[azure.servicefabric.models.ServicePlacementPolicyDescription]
+    - description: 'The move cost for the service. Possible values
 
-        ''Medium'', ''High''
+        include: ''Zero'', ''Low'', ''Medium'', ''High''
 
         '
       id: default_move_cost
       type:
       - str
-      - azure.servicefabric.models.enum
+      - azure.servicefabric.models.MoveCost
     - description: 'Indicates if the DefaultMoveCost
 
         property is specified.
@@ -96,7 +127,9 @@ items:
       id: is_default_move_cost_specified
       type:
       - bool
-    - description: 'Possible values include:
+    - description: 'The activation mode of service
+
+        package to be used for a service. Possible values include:
 
         ''SharedProcess'', ''ExclusiveProcess''
 
@@ -104,7 +137,7 @@ items:
       id: service_package_activation_mode
       type:
       - str
-      - azure.servicefabric.models.enum
+      - azure.servicefabric.models.ServicePackageActivationMode
     - description: 'The DNS name of the service. It requires the DNS
 
         system service to be enabled in Service Fabric cluster.
@@ -113,7 +146,7 @@ items:
       id: service_dns_name
       type:
       - str
-    - description: 'Polymorphic Discriminator
+    - description: 'Constant filled by server.
 
         '
       id: service_kind
@@ -121,4 +154,60 @@ items:
       - str
   type: class
   uid: azure.servicefabric.models.ServiceDescription
-references: []
+references:
+- fullName: list[int]
+  name: list[int]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: int
+    name: int
+    uid: int
+  - fullName: ']'
+    name: ']'
+  uid: list[int]
+- fullName: list[azure.servicefabric.models.ServiceCorrelationDescription]
+  name: list[ServiceCorrelationDescription]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.ServiceCorrelationDescription
+    name: ServiceCorrelationDescription
+    uid: azure.servicefabric.models.ServiceCorrelationDescription
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.ServiceCorrelationDescription]
+- fullName: list[azure.servicefabric.models.ServiceLoadMetricDescription]
+  name: list[ServiceLoadMetricDescription]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.ServiceLoadMetricDescription
+    name: ServiceLoadMetricDescription
+    uid: azure.servicefabric.models.ServiceLoadMetricDescription
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.ServiceLoadMetricDescription]
+- fullName: list[azure.servicefabric.models.ServicePlacementPolicyDescription]
+  name: list[ServicePlacementPolicyDescription]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.ServicePlacementPolicyDescription
+    name: ServicePlacementPolicyDescription
+    uid: azure.servicefabric.models.ServicePlacementPolicyDescription
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.ServicePlacementPolicyDescription]

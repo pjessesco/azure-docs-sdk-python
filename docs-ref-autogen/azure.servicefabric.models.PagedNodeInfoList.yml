@@ -30,14 +30,42 @@ items:
   syntax:
     content: PagedNodeInfoList(continuation_token=None, items=None)
     parameters:
-    - description: ''
+    - description: 'The continuation token parameter is used to
+
+        obtain next set of results. The continuation token is included in the
+
+        response of the API when the results from the system do not fit in a
+
+        single response. When this value is passed to the next API call, the API
+
+        returns next set of results. If there are no further results then the
+
+        continuation token is not included in the response.
+
+        '
       id: continuation_token
       type:
       - str
-    - description: ''
+    - description: 'List of node information.
+
+        '
       id: items
       type:
-      - list of azure.servicefabric.models.NodeInfo
+      - list[azure.servicefabric.models.NodeInfo]
   type: class
   uid: azure.servicefabric.models.PagedNodeInfoList
-references: []
+references:
+- fullName: list[azure.servicefabric.models.NodeInfo]
+  name: list[NodeInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.NodeInfo
+    name: NodeInfo
+    uid: azure.servicefabric.models.NodeInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.NodeInfo]

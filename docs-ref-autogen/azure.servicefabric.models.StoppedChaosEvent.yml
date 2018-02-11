@@ -30,17 +30,25 @@ items:
   syntax:
     content: StoppedChaosEvent(time_stamp_utc, reason=None)
     parameters:
-    - description: ''
+    - description: 'The UTC timestamp when this Chaos event was
+
+        generated.
+
+        '
       id: time_stamp_utc
       type:
       - datetime
-    - description: 'Polymorphic Discriminator
+    - description: 'Constant filled by server.
 
         '
       id: kind
       type:
       - str
-    - description: ''
+    - description: 'Describes why Chaos stopped. Chaos can stop because of
+
+        StopChaos API call or the timeToRun provided in ChaosParameters is over.
+
+        '
       id: reason
       type:
       - str

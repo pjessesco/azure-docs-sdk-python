@@ -33,7 +33,19 @@ items:
   syntax:
     content: PagedPropertyInfoList(continuation_token=None, is_consistent=None, properties=None)
     parameters:
-    - description: ''
+    - description: 'The continuation token parameter is used to
+
+        obtain next set of results. The continuation token is included in the
+
+        response of the API when the results from the system do not fit in a
+
+        single response. When this value is passed to the next API call, the API
+
+        returns next set of results. If there are no further results then the
+
+        continuation token is not included in the response.
+
+        '
       id: continuation_token
       type:
       - str
@@ -47,10 +59,26 @@ items:
       id: is_consistent
       type:
       - bool
-    - description: ''
+    - description: 'List of property information.
+
+        '
       id: properties
       type:
-      - list of azure.servicefabric.models.PropertyInfo
+      - list[azure.servicefabric.models.PropertyInfo]
   type: class
   uid: azure.servicefabric.models.PagedPropertyInfoList
-references: []
+references:
+- fullName: list[azure.servicefabric.models.PropertyInfo]
+  name: list[PropertyInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.PropertyInfo
+    name: PropertyInfo
+    uid: azure.servicefabric.models.PropertyInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.PropertyInfo]

@@ -4,6 +4,7 @@ items:
 - children:
   - azure.servicefabric.ServiceFabricClientAPIs.cancel_operation
   - azure.servicefabric.ServiceFabricClientAPIs.cancel_repair_task
+  - azure.servicefabric.ServiceFabricClientAPIs.commit_image_store_upload_session
   - azure.servicefabric.ServiceFabricClientAPIs.copy_image_store_content
   - azure.servicefabric.ServiceFabricClientAPIs.create_application
   - azure.servicefabric.ServiceFabricClientAPIs.create_compose_deployment
@@ -13,6 +14,7 @@ items:
   - azure.servicefabric.ServiceFabricClientAPIs.create_service_from_template
   - azure.servicefabric.ServiceFabricClientAPIs.delete_application
   - azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_content
+  - azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_upload_session
   - azure.servicefabric.ServiceFabricClientAPIs.delete_name
   - azure.servicefabric.ServiceFabricClientAPIs.delete_property
   - azure.servicefabric.ServiceFabricClientAPIs.delete_repair_task
@@ -44,6 +46,7 @@ items:
   - azure.servicefabric.ServiceFabricClientAPIs.get_compose_deployment_status
   - azure.servicefabric.ServiceFabricClientAPIs.get_compose_deployment_status_list
   - azure.servicefabric.ServiceFabricClientAPIs.get_compose_deployment_upgrade_progress
+  - azure.servicefabric.ServiceFabricClientAPIs.get_container_logs_deployed_on_node
   - azure.servicefabric.ServiceFabricClientAPIs.get_data_loss_progress
   - azure.servicefabric.ServiceFabricClientAPIs.get_deployed_application_health
   - azure.servicefabric.ServiceFabricClientAPIs.get_deployed_application_health_using_policy
@@ -62,6 +65,8 @@ items:
   - azure.servicefabric.ServiceFabricClientAPIs.get_fault_operation_list
   - azure.servicefabric.ServiceFabricClientAPIs.get_image_store_content
   - azure.servicefabric.ServiceFabricClientAPIs.get_image_store_root_content
+  - azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_id
+  - azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_path
   - azure.servicefabric.ServiceFabricClientAPIs.get_name_exists_info
   - azure.servicefabric.ServiceFabricClientAPIs.get_node_health
   - azure.servicefabric.ServiceFabricClientAPIs.get_node_health_using_policy
@@ -94,6 +99,7 @@ items:
   - azure.servicefabric.ServiceFabricClientAPIs.get_service_name_info
   - azure.servicefabric.ServiceFabricClientAPIs.get_service_type_info_list
   - azure.servicefabric.ServiceFabricClientAPIs.get_sub_name_info_list
+  - azure.servicefabric.ServiceFabricClientAPIs.get_upgrade_orchestration_service_state
   - azure.servicefabric.ServiceFabricClientAPIs.invoke_infrastructure_command
   - azure.servicefabric.ServiceFabricClientAPIs.invoke_infrastructure_query
   - azure.servicefabric.ServiceFabricClientAPIs.provision_application_type
@@ -123,6 +129,7 @@ items:
   - azure.servicefabric.ServiceFabricClientAPIs.resume_cluster_upgrade
   - azure.servicefabric.ServiceFabricClientAPIs.rollback_application_upgrade
   - azure.servicefabric.ServiceFabricClientAPIs.rollback_cluster_upgrade
+  - azure.servicefabric.ServiceFabricClientAPIs.set_upgrade_orchestration_service_state
   - azure.servicefabric.ServiceFabricClientAPIs.start_application_upgrade
   - azure.servicefabric.ServiceFabricClientAPIs.start_chaos
   - azure.servicefabric.ServiceFabricClientAPIs.start_cluster_configuration_upgrade
@@ -142,6 +149,7 @@ items:
   - azure.servicefabric.ServiceFabricClientAPIs.update_repair_task_health_policy
   - azure.servicefabric.ServiceFabricClientAPIs.update_service
   - azure.servicefabric.ServiceFabricClientAPIs.upload_file
+  - azure.servicefabric.ServiceFabricClientAPIs.upload_file_chunk
   class: azure.servicefabric.ServiceFabricClientAPIs
   fullName: azure.servicefabric.ServiceFabricClientAPIs
   inheritance:
@@ -160,6 +168,14 @@ items:
     startLine: 45
   summary: 'Service Fabric REST Client APIs allows management of Service Fabric clusters,
     applications and services.
+
+
+
+
+
+
+
+
 
 
 
@@ -343,7 +359,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11028
+    startLine: 11262
   summary: 'Cancels a user-induced fault operation.
 
 
@@ -459,11 +475,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -486,7 +498,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7134
+    startLine: 7117
   summary: 'Requests the cancellation of the given repair task.
 
 
@@ -532,11 +544,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.RepairTaskUpdateInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'RepairTaskUpdateInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -544,6 +552,94 @@ items:
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.cancel_repair_task
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.commit_image_store_upload_session
+  langs:
+  - python
+  module: azure.servicefabric
+  name: commit_image_store_upload_session
+  source:
+    id: commit_image_store_upload_session
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 10112
+  summary: 'Commit an image store upload session.
+
+
+    When all file chunks have been uploaded, the upload session needs to be
+
+    committed explicitly to complete the upload. Image store preserves the
+
+    upload session until the expiration time, which is 30 minutes after the
+
+    last chunk received.
+
+    .
+
+    '
+  syntax:
+    content: commit_image_store_upload_session(session_id, timeout=60, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'A GUID generated by the user for a file uploading.
+
+        It identifies an image store upload session which keeps track of all
+
+        file chunks until it is committed.
+
+        '
+      id: session_id
+      type:
+      - str
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'None or ClientRawResponse if raw=true
+
+        '
+      type:
+      - None
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.commit_image_store_upload_session
 - class: azure.servicefabric.ServiceFabricClientAPIs
   exceptions:
   - type: azure.servicefabric.models.FabricErrorException
@@ -559,7 +655,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10039
+    startLine: 9998
   summary: 'Copies image store content internally.
 
 
@@ -616,11 +712,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -643,7 +735,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3108
+    startLine: 3120
   summary: 'Creates a Service Fabric application.
 
 
@@ -698,11 +790,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -725,11 +813,19 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9151
+    startLine: 9148
   summary: 'Creates a Service Fabric compose deployment.
 
 
-    Creates a Service Fabric compose deployment.
+    Compose is a file format that describes multi-container applications.
+
+    This API allows deploying container based applications defined in
+
+    compose format in a Service Fabric cluster. Once the deployment is
+
+    created it''s status can be tracked via *GetComposeDeploymentStatus*
+
+    API.
 
     '
   syntax:
@@ -780,11 +876,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -807,7 +899,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11114
+    startLine: 11345
   summary: 'Creates a Service Fabric name.
 
 
@@ -817,7 +909,11 @@ items:
   syntax:
     content: create_name(name, timeout=60, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: ''
+    - description: 'The Service Fabric name, including the ''fabric:'' URI
+
+        scheme.
+
+        '
       id: name
       type:
       - str
@@ -857,11 +953,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -884,7 +976,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7058
+    startLine: 7046
   summary: 'Creates a new repair task.
 
 
@@ -953,11 +1045,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.RepairTaskUpdateInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'RepairTaskUpdateInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -980,11 +1068,19 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5198
-  summary: 'Creates the specified service.
+    startLine: 5230
+  summary: 'Creates the specified Service Fabric service.
 
 
-    Creates the specified service.
+    This api allows creating a new Service Fabric stateless or stateful
+
+    service under a specified Service Fabric application. The description
+
+    for creating the service includes partitioning information and optional
+
+    properties for placement and load balancing. Some of the properties can
+
+    later be modified using *UpdateService* API.
 
     '
   syntax:
@@ -995,13 +1091,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -1051,11 +1151,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1078,15 +1174,19 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5269
-  summary: 'Creates a Service Fabric service from the service template defined in
-
-    the application manifest.
+    startLine: 5304
+  summary: 'Creates a Service Fabric service from the service template.
 
 
     Creates a Service Fabric service from the service template defined in
 
-    the application manifest.
+    the application manifest. A service template contains the properties
+
+    that will be same for the service instance of the same type. The API
+
+    allows overriding the properties that are usually different for
+
+    different services of the same service type.
 
     '
   syntax:
@@ -1097,13 +1197,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -1155,11 +1259,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1182,7 +1282,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3168
+    startLine: 3177
   summary: 'Deletes an existing Service Fabric application.
 
 
@@ -1213,13 +1313,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -1276,11 +1380,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1303,7 +1403,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9916
+    startLine: 9882
   summary: 'Deletes existing image store content.
 
 
@@ -1362,11 +1462,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1374,6 +1470,90 @@ items:
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_content
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_upload_session
+  langs:
+  - python
+  module: azure.servicefabric
+  name: delete_image_store_upload_session
+  source:
+    id: delete_image_store_upload_session
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 10056
+  summary: 'Cancels an image store upload session.
+
+
+    The DELETE request will cause the existing upload session to expire and
+
+    remove any previously uploaded file chunks.
+
+    .
+
+    '
+  syntax:
+    content: delete_image_store_upload_session(session_id, timeout=60, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'A GUID generated by the user for a file uploading.
+
+        It identifies an image store upload session which keeps track of all
+
+        file chunks until it is committed.
+
+        '
+      id: session_id
+      type:
+      - str
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'None or ClientRawResponse if raw=true
+
+        '
+      type:
+      - None
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_upload_session
 - class: azure.servicefabric.ServiceFabricClientAPIs
   exceptions:
   - type: azure.servicefabric.models.FabricErrorException
@@ -1389,7 +1569,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11233
+    startLine: 11459
   summary: 'Deletes a Service Fabric name.
 
 
@@ -1447,11 +1627,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1474,7 +1650,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11604
+    startLine: 11815
   summary: 'Deletes the specified Service Fabric property.
 
 
@@ -1537,11 +1713,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1564,7 +1736,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7199
+    startLine: 7177
   summary: 'Deletes a completed repair task.
 
 
@@ -1621,11 +1793,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1648,7 +1816,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5344
+    startLine: 5379
   summary: 'Deletes an existing Service Fabric service.
 
 
@@ -1673,15 +1841,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -1738,11 +1908,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1765,15 +1931,23 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8917
-  summary: 'Downloads packages associated with specified service manifest to image
+    startLine: 8830
+  summary: 'Downloads all of the code packagesassociated with specified service
 
-    cache on specified node.
+    manifest on the specified node.
 
 
-    Downloads packages associated with specified service manifest to image
+    This API provides a way to download code packages including the
 
-    cache on specified node.
+    container images on a specific node outside of the normal application
+
+    deployment and upgrade path. This is useful for the large code packages
+
+    and container iamges to be present on the node before the actual
+
+    application deployment and upgrade, thus significantly reducing the
+
+    total time required for the deployment or upgrade.
 
     .
 
@@ -1832,11 +2006,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1859,7 +2029,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2134
+    startLine: 2173
   summary: 'Deactivate a Service Fabric cluster node with the specified
 
     deactivation intent.
@@ -1914,22 +2084,13 @@ items:
 
         deactivating the node. The possible values are following.
 
-        - Pause - Indicates that the node should be paused. The value is 1.
-
-        - Restart - Indicates that the intent is for the node to be restarted
-
-        after a short period of time. The value is 2.
-
-        - RemoveData - Indicates the intent is for the node to remove data.
-
-        The value is 3.
-
         . Possible values include: ''Pause'', ''Restart'', ''RemoveData''
 
         '
       id: deactivation_intent
       type:
       - str
+      - azure.servicefabric.models.DeactivationIntent
     - defaultValue: None
       description: 'headers that will be added to the request
 
@@ -1953,11 +2114,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -1980,7 +2137,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2217
+    startLine: 2249
   summary: 'Activate a Service Fabric cluster node which is currently deactivated.
 
 
@@ -2038,11 +2195,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -2065,7 +2218,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7336
+    startLine: 7307
   summary: 'Forces the approval of the given repair task.
 
 
@@ -2093,7 +2246,7 @@ items:
 
         actual current version of the repair task. If zero, then no version
 
-        check is performed.</para>
+        check is performed.
 
         '
       id: version
@@ -2122,11 +2275,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.RepairTaskUpdateInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'RepairTaskUpdateInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -2149,7 +2298,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1530
+    startLine: 1604
   summary: 'Gets the Azure Active Directory metadata used for secured connection to
 
     cluster.
@@ -2207,11 +2356,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.AadMetadataObject or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'AadMetadataObject or ClientRawResponse if raw=true
 
         '
       type:
@@ -2234,7 +2379,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3509
+    startLine: 3520
   summary: 'Gets the health of the service fabric application.
 
 
@@ -2242,7 +2387,7 @@ items:
 
     reports either Ok, Error or Warning health state. If the entity is not
 
-    found in the helath store, it will return Error.
+    found in the health store, it will return Error.
 
     '
   syntax:
@@ -2255,13 +2400,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -2329,8 +2478,9 @@ items:
 
         the following health states. Only deployed applications that match the
 
-        filter will be returned.All deployed applications are used to evaluate the
-        aggregated health
+        filter will be returned.
+
+        All deployed applications are used to evaluate the aggregated health
 
         state. If not specified, all entries are returned.
 
@@ -2476,11 +2626,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ApplicationHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ApplicationHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -2503,7 +2649,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3672
+    startLine: 3681
   summary: 'Gets the health of a Service Fabric application using the specified
 
     policy.
@@ -2530,13 +2676,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -2604,8 +2754,9 @@ items:
 
         the following health states. Only deployed applications that match the
 
-        filter will be returned.All deployed applications are used to evaluate the
-        aggregated health
+        filter will be returned.
+
+        All deployed applications are used to evaluate the aggregated health
 
         state. If not specified, all entries are returned.
 
@@ -2764,11 +2915,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ApplicationHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ApplicationHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -2791,7 +2938,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3428
+    startLine: 3441
   summary: 'Gets information about a Service Fabric application.
 
 
@@ -2814,13 +2961,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -2871,11 +3022,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ApplicationInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ApplicationInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -2898,7 +3045,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3324
+    startLine: 3330
   summary: 'Gets the list of applications created in the Service Fabric cluster
 
     that match filters specified as the parameter.
@@ -2923,13 +3070,15 @@ items:
     '
   syntax:
     content: get_application_info_list(application_definition_kind_filter=0, application_type_name=None,
-      exclude_application_parameters=False, continuation_token=None, timeout=60, custom_headers=None,
-      raw=False, **operation_config)
+      exclude_application_parameters=False, continuation_token=None, max_results=0,
+      timeout=60, custom_headers=None, raw=False, **operation_config)
     parameters:
     - defaultValue: '0'
       description: 'Used to filter on
 
-        ApplicationDefinitionKind for application query operations.
+        ApplicationDefinitionKind which is the mechanism used to define a
+
+        Service Fabric application.
 
         - Default - Default value, which performs the same function as
 
@@ -2992,6 +3141,25 @@ items:
       id: continuation_token
       type:
       - str
+    - defaultValue: '0'
+      description: 'The maximum number of results to be returned as
+
+        part of the paged queries. This parameter defines the upper bound on
+
+        the number of results returned. The results returned can be less than
+
+        the specified maximum results if they do not fit in the message as per
+
+        the max message size restrictions defined in the configuration. If
+
+        this parameter is zero or not specified, the paged queries includes as
+
+        much results as possible that fit in the return message.
+
+        '
+      id: max_results
+      type:
+      - long
     - defaultValue: '60'
       description: 'The server timeout for performing the operation in
 
@@ -3028,11 +3196,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedApplicationInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedApplicationInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -3055,7 +3219,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3247
+    startLine: 3255
   summary: 'Gets load information about a Service Fabric application.
 
 
@@ -3080,13 +3244,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -3128,11 +3296,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ApplicationLoadInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ApplicationLoadInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -3155,7 +3319,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4885
+    startLine: 4925
   summary: 'Gets the manifest describing an application type.
 
 
@@ -3216,11 +3380,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ApplicationTypeManifest or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ApplicationTypeManifest or ClientRawResponse if raw=true
 
         '
       type:
@@ -3243,7 +3403,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5125
+    startLine: 5160
   summary: 'Gets the name of the Service Fabric application for a service.
 
 
@@ -3258,15 +3418,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -3308,11 +3470,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ApplicationNameInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ApplicationNameInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -3335,7 +3493,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2418
+    startLine: 2442
   summary: 'Gets the list of application types in the Service Fabric cluster.
 
 
@@ -3374,7 +3532,9 @@ items:
     - defaultValue: '0'
       description: 'Used to filter on
 
-        ApplicationTypeDefinitionKind for application type query operations.
+        ApplicationTypeDefinitionKind which is the mechanism used to define a
+
+        Service Fabric application type.
 
         - Default - Default value, which performs the same function as
 
@@ -3481,11 +3641,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedApplicationTypeInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedApplicationTypeInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -3508,7 +3664,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2530
+    startLine: 2551
   summary: 'Gets the list of application types in the Service Fabric cluster
 
     matching exactly the specified name.
@@ -3648,11 +3804,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedApplicationTypeInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedApplicationTypeInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -3675,7 +3827,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4030
+    startLine: 4034
   summary: 'Gets details for the latest upgrade performed on this application.
 
 
@@ -3692,13 +3844,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -3740,9 +3896,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ApplicationUpgradeProgressInfo or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'ApplicationUpgradeProgressInfo or ClientRawResponse if
 
         raw=true
 
@@ -3767,7 +3921,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9685
+    startLine: 9660
   summary: 'Gets the next segment of the Chaos report based on the passed-in
 
     continuation token or the passed-in time-range.
@@ -3812,30 +3966,30 @@ items:
       type:
       - str
     - defaultValue: None
-      description: 'The count of ticks representing the start time
+      description: 'The Windows file time representing the start
 
-        of the time range for which a Chaos report is to be generated. Please
+        time of the time range for which a Chaos report is to be generated.
 
-        consult [DateTime.Ticks
+        Please consult [DateTime.ToFileTimeUtc
 
-        Property]([https://msdn.microsoft.com/en-us/library/system.datetime.ticks%28v=vs.110%29](https://msdn.microsoft.com/en-us/library/system.datetime.ticks%28v=vs.110%29))
+        Method]([https://msdn.microsoft.com/en-us/library/system.datetime.tofiletimeutc(v=vs.110).aspx](https://msdn.microsoft.com/en-us/library/system.datetime.tofiletimeutc(v=vs.110).aspx))
 
-        for details about tick.
+        for details.
 
         '
       id: start_time_utc
       type:
       - str
     - defaultValue: None
-      description: 'The count of ticks representing the end time of
+      description: 'The Windows file time representing the end time
 
-        the time range for which a Chaos report is to be generated. Please
+        of the time range for which a Chaos report is to be generated. Please
 
-        consult [DateTime.Ticks
+        consult [DateTime.ToFileTimeUtc
 
-        Property]([https://msdn.microsoft.com/en-us/library/system.datetime.ticks%28v=vs.110%29](https://msdn.microsoft.com/en-us/library/system.datetime.ticks%28v=vs.110%29))
+        Method]([https://msdn.microsoft.com/en-us/library/system.datetime.tofiletimeutc(v=vs.110).aspx](https://msdn.microsoft.com/en-us/library/system.datetime.tofiletimeutc(v=vs.110).aspx))
 
-        for details about tick.
+        for details.
 
         '
       id: end_time_utc
@@ -3877,11 +4031,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ChaosReport
-
-        or @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ChaosReport or ClientRawResponse if raw=true
 
         '
       type:
@@ -3904,7 +4054,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 968
+    startLine: 940
   summary: 'Get the Service Fabric standalone cluster configuration.
 
 
@@ -3967,11 +4117,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterConfiguration or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ClusterConfiguration or ClientRawResponse if raw=true
 
         '
       type:
@@ -3994,15 +4140,15 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1037
+    startLine: 1005
   summary: 'Get the cluster configuration upgrade status of a Service Fabric
 
     standalone cluster.
 
 
-    Get the cluster configuration upgrade status of a Service Fabric
+    Get the cluster configuration upgrade status details of a Service
 
-    standalone cluster.
+    Fabric standalone cluster.
 
     .
 
@@ -4047,10 +4193,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterConfigurationUpgradeStatusInfo
-        or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'ClusterConfigurationUpgradeStatusInfo or ClientRawResponse if
 
         raw=true
 
@@ -4075,7 +4218,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 142
+    startLine: 138
   summary: 'Gets the health of a Service Fabric cluster.
 
 
@@ -4336,11 +4479,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ClusterHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -4363,7 +4502,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 502
+    startLine: 498
   summary: 'Gets the health of a Service Fabric cluster using health chunks.
 
 
@@ -4422,11 +4561,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterHealthChunk or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ClusterHealthChunk or ClientRawResponse if raw=true
 
         '
       type:
@@ -4449,7 +4584,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 569
+    startLine: 561
   summary: 'Gets the health of a Service Fabric cluster using health chunks.
 
 
@@ -4569,11 +4704,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterHealthChunk or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ClusterHealthChunk or ClientRawResponse if raw=true
 
         '
       type:
@@ -4596,7 +4727,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 312
+    startLine: 304
   summary: 'Gets the health of a Service Fabric cluster using the specified policy.
 
 
@@ -4840,12 +4971,34 @@ items:
       type:
       - long
     - defaultValue: None
-      description: ''
+      description: 'Defines a map that contains
+
+        specific application health policies for different applications.
+
+        Each entry specifies as key the application name and as value an
+
+        ApplicationHealthPolicy used to evaluate the application health.
+
+        If an application is not specified in the map, the application health
+
+        evaluation uses the ApplicationHealthPolicy found in its application
+
+        manifest or the default application health policy (if no health policy
+
+        is defined in the manifest).
+
+        The map is empty by default.
+
+        '
       id: application_health_policy_map
       type:
-      - list ofazure.servicefabric.models.ApplicationHealthPolicyMapItem
+      - list[azure.servicefabric.models.ApplicationHealthPolicyMapItem]
     - defaultValue: None
-      description: ''
+      description: 'Defines a health policy used to evaluate
+
+        the health of the cluster or of a cluster node.
+
+        '
       id: cluster_health_policy
       type:
       - azure.servicefabric.models.ClusterHealthPolicy
@@ -4872,11 +5025,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ClusterHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -4919,7 +5068,7 @@ items:
 
     is generated internally by service fabric during cluster deployment in
 
-    other deployment scenarios (for e.g when using azuer portal).
+    other deployment scenarios (for e.g when using azure portal).
 
     The contents of the cluster manifest are for informational purposes
 
@@ -4969,11 +5118,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterManifest or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ClusterManifest or ClientRawResponse if raw=true
 
         '
       type:
@@ -4996,7 +5141,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 905
+    startLine: 881
   summary: 'Gets the progress of the current cluster upgrade.
 
 
@@ -5047,11 +5192,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ClusterUpgradeProgressObject or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ClusterUpgradeProgressObject or ClientRawResponse if raw=true
 
         '
       type:
@@ -5074,7 +5215,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9212
+    startLine: 9209
   summary: 'Gets information about a Service Fabric compose deployment.
 
 
@@ -5133,11 +5274,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ComposeDeploymentStatusInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ComposeDeploymentStatusInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -5160,7 +5297,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9282
+    startLine: 9275
   summary: 'Gets the list of compose deployments created in the Service Fabric
 
     cluster.
@@ -5257,10 +5394,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedComposeDeploymentStatusInfoList
-        or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'PagedComposeDeploymentStatusInfoList or ClientRawResponse if
 
         raw=true
 
@@ -5285,7 +5419,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9369
+    startLine: 9360
   summary: 'Gets details for the latest upgrade performed on this Service Fabric
 
     compose deployment.
@@ -5342,10 +5476,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ComposeDeploymentUpgradeProgressInfo
-        or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'ComposeDeploymentUpgradeProgressInfo or ClientRawResponse if
 
         raw=true
 
@@ -5355,6 +5486,131 @@ items:
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_compose_deployment_upgrade_progress
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.get_container_logs_deployed_on_node
+  langs:
+  - python
+  module: azure.servicefabric
+  name: get_container_logs_deployed_on_node
+  source:
+    id: get_container_logs_deployed_on_node
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 9060
+  summary: 'Gets the container logs for container deployed on a Service Fabric
+
+    node.
+
+
+    Gets the container logs for container deployed on a Service Fabric node
+
+    for the given code package.
+
+    '
+  syntax:
+    content: get_container_logs_deployed_on_node(node_name, application_id, service_manifest_name,
+      code_package_name, tail=None, timeout=60, custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'The name of the node.
+
+        '
+      id: node_name
+      type:
+      - str
+    - description: 'The identity of the application. This is
+
+        typically the full name of the application without the ''fabric:'' URI
+
+        scheme.
+
+        Starting from version 6.0, hierarchical names are delimited with the
+
+        "~" character.
+
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
+
+        '
+      id: application_id
+      type:
+      - str
+    - description: 'The name of a service manifest
+
+        registered as part of an application type in a Service Fabric cluster.
+
+        '
+      id: service_manifest_name
+      type:
+      - str
+    - description: 'The name of code package specified in
+
+        service manifest registered as part of an application type in a
+
+        Service Fabric cluster.
+
+        '
+      id: code_package_name
+      type:
+      - str
+    - defaultValue: None
+      description: 'Number of lines to fetch from tail end.
+
+        '
+      id: tail
+      type:
+      - str
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'ContainerLogs or ClientRawResponse if raw=true
+
+        '
+      type:
+      - azure.servicefabric.models.ContainerLogs
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_container_logs_deployed_on_node
 - class: azure.servicefabric.ServiceFabricClientAPIs
   exceptions:
   - type: azure.servicefabric.models.FabricErrorException
@@ -5370,7 +5626,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10361
+    startLine: 10628
   summary: 'Gets the progress of a partition data loss operation started using the
 
     StartDataLoss API.
@@ -5389,15 +5645,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -5453,11 +5711,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PartitionDataLossProgress or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PartitionDataLossProgress or ClientRawResponse if raw=true
 
         '
       type:
@@ -5480,7 +5734,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4466
+    startLine: 4511
   summary: 'Gets the information about health of an application deployed on a
 
     Service Fabric node.
@@ -5514,13 +5768,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -5687,11 +5945,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.DeployedApplicationHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'DeployedApplicationHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -5714,7 +5968,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4611
+    startLine: 4654
   summary: 'Gets the information about health of an application deployed on a
 
     Service Fabric node. using the specified policy.
@@ -5761,13 +6015,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -5947,11 +6205,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.DeployedApplicationHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'DeployedApplicationHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -5974,7 +6228,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4389
+    startLine: 4421
   summary: 'Gets the information about an application deployed on a Service Fabric
 
     node.
@@ -5982,12 +6236,24 @@ items:
 
     Gets the information about an application deployed on a Service Fabric
 
-    node.
+    node.  This query returns system application information if the
+
+    application ID provided is for system application. Results encompass
+
+    deployed applications in active, activating, and downloading states.
+
+    This query requires that the node name corresponds to a node on the
+
+    cluster. The query fails if the provided node name does not point to
+
+    any active Service Fabric nodes on the cluster.
+
+    .
 
     '
   syntax:
     content: get_deployed_application_info(node_name, application_id, timeout=60,
-      custom_headers=None, raw=False, **operation_config)
+      include_health_state=False, custom_headers=None, raw=False, **operation_config)
     parameters:
     - description: 'The name of the node.
 
@@ -5999,13 +6265,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -6024,6 +6294,23 @@ items:
       id: timeout
       type:
       - long
+    - defaultValue: 'False'
+      description: 'Include the health state of an entity.
+
+        If this parameter is false or not specified, then the health state
+
+        returned is "Unknown".
+
+        When set to true, the query goes in parallel to the node and the
+
+        health system service before the results are merged.
+
+        As a result, the query is more expensive and may take a longer time.
+
+        '
+      id: include_health_state
+      type:
+      - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
@@ -6047,11 +6334,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.DeployedApplicationInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'DeployedApplicationInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -6074,16 +6357,30 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4322
+    startLine: 4321
   summary: 'Gets the list of applications deployed on a Service Fabric node.
 
 
-    Gets the list of applications deployed on a Service Fabric node.
+    Gets the list of applications deployed on a Service Fabric node. The
+
+    results do not include information about deployed system applications
+
+    unless explicitly queried for by ID. Results encompass deployed
+
+    applications in active, activating, and downloading states. This query
+
+    requires that the node name corresponds to a node on the cluster. The
+
+    query fails if the provided node name does not point to any active
+
+    Service Fabric nodes on the cluster.
+
+    .
 
     '
   syntax:
-    content: get_deployed_application_info_list(node_name, timeout=60, custom_headers=None,
-      raw=False, **operation_config)
+    content: get_deployed_application_info_list(node_name, timeout=60, include_health_state=False,
+      continuation_token=None, max_results=0, custom_headers=None, raw=False, **operation_config)
     parameters:
     - description: 'The name of the node.
 
@@ -6102,6 +6399,61 @@ items:
 
         '
       id: timeout
+      type:
+      - long
+    - defaultValue: 'False'
+      description: 'Include the health state of an entity.
+
+        If this parameter is false or not specified, then the health state
+
+        returned is "Unknown".
+
+        When set to true, the query goes in parallel to the node and the
+
+        health system service before the results are merged.
+
+        As a result, the query is more expensive and may take a longer time.
+
+        '
+      id: include_health_state
+      type:
+      - bool
+    - defaultValue: None
+      description: 'The continuation token parameter is used to
+
+        obtain next set of results. A continuation token with a non empty
+
+        value is included in the response of the API when the results from the
+
+        system do not fit in a single response. When this value is passed to
+
+        the next API call, the API returns next set of results. If there are
+
+        no further results then the continuation token does not contain a
+
+        value. The value of this parameter should not be URL encoded.
+
+        '
+      id: continuation_token
+      type:
+      - str
+    - defaultValue: '0'
+      description: 'The maximum number of results to be returned as
+
+        part of the paged queries. This parameter defines the upper bound on
+
+        the number of results returned. The results returned can be less than
+
+        the specified maximum results if they do not fit in the message as per
+
+        the max message size restrictions defined in the configuration. If
+
+        this parameter is zero or not specified, the paged queries includes as
+
+        much results as possible that fit in the return message.
+
+        '
+      id: max_results
       type:
       - long
     - defaultValue: None
@@ -6127,15 +6479,13 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.DeployedApplicationInfo or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'PagedDeployedApplicationInfoList or ClientRawResponse if
 
         raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.DeployedApplicationInfo
+      - azure.servicefabric.models.PagedDeployedApplicationInfoList
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_deployed_application_info_list
@@ -6154,7 +6504,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8987
+    startLine: 8900
   summary: 'Gets the list of code packages deployed on a Service Fabric node.
 
 
@@ -6177,13 +6527,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -6245,15 +6599,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.DeployedCodePackageInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.DeployedCodePackageInfo
+      - list[azure.servicefabric.models.DeployedCodePackageInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_deployed_code_package_info_list
@@ -6272,7 +6622,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8568
+    startLine: 8486
   summary: 'Gets the information about health of an service package for a specific
 
     application deployed for a Service Fabric node and application.
@@ -6303,13 +6653,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -6408,11 +6762,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.DeployedServicePackageHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'DeployedServicePackageHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -6435,7 +6785,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8677
+    startLine: 8593
   summary: 'Gets the information about health of service package for a specific
 
     application deployed on a Service Fabric node using the specified
@@ -6479,13 +6829,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -6597,11 +6951,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.DeployedServicePackageHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'DeployedServicePackageHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -6624,7 +6974,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8410
+    startLine: 8332
   summary: 'Gets the list of service packages deployed on a Service Fabric node.
 
 
@@ -6647,13 +6997,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -6695,16 +7049,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.DeployedServicePackageInfo
-        or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.DeployedServicePackageInfo
+      - list[azure.servicefabric.models.DeployedServicePackageInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_deployed_service_package_info_list
@@ -6723,7 +7072,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8486
+    startLine: 8406
   summary: 'Gets the list of service packages deployed on a Service Fabric node
 
     matching exactly the specified name.
@@ -6752,13 +7101,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -6806,16 +7159,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.DeployedServicePackageInfo
-        or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.DeployedServicePackageInfo
+      - list[azure.servicefabric.models.DeployedServicePackageInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_deployed_service_package_info_list_by_name
@@ -6834,7 +7182,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8114
+    startLine: 8048
   summary: 'Gets the details of replica deployed on a Service Fabric node.
 
 
@@ -6905,9 +7253,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.DeployedServiceReplicaDetailInfo or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'DeployedServiceReplicaDetailInfo or ClientRawResponse if
 
         raw=true
 
@@ -6932,7 +7278,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8190
+    startLine: 8121
   summary: 'Gets the details of replica deployed on a Service Fabric node.
 
 
@@ -6997,9 +7343,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.DeployedServiceReplicaDetailInfo or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'DeployedServiceReplicaDetailInfo or ClientRawResponse if
 
         raw=true
 
@@ -7024,7 +7368,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8025
+    startLine: 7961
   summary: 'Gets the list of replicas deployed on a Service Fabric node.
 
 
@@ -7055,13 +7399,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -7119,16 +7467,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.DeployedServiceReplicaInfo
-        or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.DeployedServiceReplicaInfo
+      - list[azure.servicefabric.models.DeployedServiceReplicaInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_deployed_service_replica_info_list
@@ -7147,7 +7490,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3016
+    startLine: 3030
   summary: 'Gets the information about a specified service type of the application
 
     deployed on a node in a Service Fabric cluster.
@@ -7180,13 +7523,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -7249,15 +7596,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.DeployedServiceTypeInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.DeployedServiceTypeInfo
+      - list[azure.servicefabric.models.DeployedServiceTypeInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_deployed_service_type_info_by_name
@@ -7276,7 +7619,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2929
+    startLine: 2945
   summary: 'Gets the list containing the information about service types from the
 
     applications deployed on a node in a Service Fabric cluster.
@@ -7307,13 +7650,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -7368,15 +7715,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.DeployedServiceTypeInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.DeployedServiceTypeInfo
+      - list[azure.servicefabric.models.DeployedServiceTypeInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_deployed_service_type_info_list
@@ -7395,7 +7738,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10945
+    startLine: 11183
   summary: 'Gets a list of user-induced fault operations filtered by provided
 
     input.
@@ -7488,15 +7831,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.OperationStatus or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.OperationStatus
+      - list[azure.servicefabric.models.OperationStatus]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_fault_operation_list
@@ -7515,7 +7854,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9847
+    startLine: 9817
   summary: 'Gets the image store content information.
 
 
@@ -7572,11 +7911,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ImageStoreContent or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ImageStoreContent or ClientRawResponse if raw=true
 
         '
       type:
@@ -7599,7 +7934,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9977
+    startLine: 9940
   summary: 'Gets the content information at the root of the image store.
 
 
@@ -7648,11 +7983,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ImageStoreContent or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ImageStoreContent or ClientRawResponse if raw=true
 
         '
       type:
@@ -7660,6 +7991,174 @@ items:
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_root_content
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_id
+  langs:
+  - python
+  module: azure.servicefabric
+  name: get_image_store_upload_session_by_id
+  source:
+    id: get_image_store_upload_session_by_id
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 10170
+  summary: 'Get the image store upload session by ID.
+
+
+    Gets the image store upload session identified by the given ID. User
+
+    can query the upload session at any time during uploading.
+
+    .
+
+    '
+  syntax:
+    content: get_image_store_upload_session_by_id(session_id, timeout=60, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'A GUID generated by the user for a file uploading.
+
+        It identifies an image store upload session which keeps track of all
+
+        file chunks until it is committed.
+
+        '
+      id: session_id
+      type:
+      - str
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'UploadSession or ClientRawResponse if raw=true
+
+        '
+      type:
+      - azure.servicefabric.models.UploadSession
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_id
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_path
+  langs:
+  - python
+  module: azure.servicefabric
+  name: get_image_store_upload_session_by_path
+  source:
+    id: get_image_store_upload_session_by_path
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 10234
+  summary: 'Get the image store upload session by relative path.
+
+
+    Gets the image store upload session associated with the given image
+
+    store relative path. User can query the upload session at any time
+
+    during uploading.
+
+    .
+
+    '
+  syntax:
+    content: get_image_store_upload_session_by_path(content_path, timeout=60, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - description: 'Relative path to file or folder in the image
+
+        store from its root.
+
+        '
+      id: content_path
+      type:
+      - str
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'UploadSession or ClientRawResponse if raw=true
+
+        '
+      type:
+      - azure.servicefabric.models.UploadSession
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_path
 - class: azure.servicefabric.ServiceFabricClientAPIs
   exceptions:
   - type: azure.servicefabric.models.FabricErrorException
@@ -7675,7 +8174,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11174
+    startLine: 11403
   summary: 'Returns whether the Service Fabric name exists.
 
 
@@ -7730,11 +8229,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -7757,7 +8252,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1762
+    startLine: 1811
   summary: 'Gets the health of a Service Fabric node.
 
 
@@ -7867,11 +8362,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.NodeHealth
-
-        or @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'NodeHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -7894,7 +8385,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1856
+    startLine: 1903
   summary: 'Gets the health of a Service Fabric node, by using the specified health
 
     policy.
@@ -8023,11 +8514,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.NodeHealth
-
-        or @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'NodeHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -8050,13 +8537,15 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1695
-  summary: 'Gets the list of nodes in the Service Fabric cluster.
+    startLine: 1745
+  summary: 'Gets the information about a specific node in the Service Fabric
+
+    cluster.
 
 
     Gets the information about a specific node in the Service Fabric
 
-    Cluster.The respons include the name, status, id, health, uptime and
+    Cluster.The response include the name, status, id, health, uptime and
 
     other details about the node.
 
@@ -8107,11 +8596,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.NodeInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'NodeInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -8134,15 +8619,15 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1597
+    startLine: 1667
   summary: 'Gets the list of nodes in the Service Fabric cluster.
 
 
-    The Nodes endpoint returns information about the nodes in the Service
+    Gets the list of nodes in the Service Fabric cluster. The response
 
-    Fabric Cluster. The respons include the name, status, id, health,
+    include the name, status, id, health, uptime and other details about
 
-    uptime and other details about the node.
+    the node.
 
     '
   syntax:
@@ -8175,41 +8660,7 @@ items:
 
         value will be returned. The filter value can be one of the following.
 
-        - default - This filter value will match all of the nodes excepts the
-
-        ones with with status as Unknown or Removed.
-
-        - all - This filter value will match all of the nodes.
-
-        - up - This filter value will match nodes that are Up.
-
-        - down - This filter value will match nodes that are Down.
-
-        - enabling - This filter value will match nodes that are in the
-
-        process of being enabled with status as Enabling.
-
-        - disabling - This filter value will match nodes that are in the
-
-        process of being disabled with status as Disabling.
-
-        - disabled - This filter value will match nodes that are Disabled.
-
-        - unknown - This filter value will match nodes whose status is
-
-        Unknown. A node would be in Unknown state if Service Fabric does not
-
-        have authoritative information about that node. This can happen if the
-
-        system learns about a node at runtime.
-
-        - removed - This filter value will match nodes whose status is
-
-        Removed. These are the nodes that are removed from the cluster using
-
-        the RemoveNodeState API.
-
-        . Possible values include: ''default'', ''all'', ''up'', ''down'', ''enabling'',
+        Possible values include: ''default'', ''all'', ''up'', ''down'', ''enabling'',
 
         ''disabling'', ''disabled'', ''unknown'', ''removed''
 
@@ -8217,6 +8668,7 @@ items:
       id: node_status_filter
       type:
       - str
+      - azure.servicefabric.models.NodeStatusFilterOptionalQueryParam
     - defaultValue: '60'
       description: 'The server timeout for performing the operation in
 
@@ -8253,11 +8705,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedNodeInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedNodeInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -8280,11 +8728,13 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2067
+    startLine: 2109
   summary: 'Gets the load information of a Service Fabric node.
 
 
-    Gets the load information of a Service Fabric node.
+    Retrieves the load information of a Service Fabric node for all the
+
+    metrics that have load or capacity defined.
 
     '
   syntax:
@@ -8333,11 +8783,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.NodeLoadInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'NodeLoadInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -8360,7 +8806,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10872
+    startLine: 11114
   summary: 'Gets the progress of an operation started using StartNodeTransition.
 
 
@@ -8425,11 +8871,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.NodeTransitionProgress or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'NodeTransitionProgress or ClientRawResponse if raw=true
 
         '
       type:
@@ -8452,7 +8894,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6292
+    startLine: 6309
   summary: 'Gets the health of the specified Service Fabric partition.
 
 
@@ -8637,11 +9079,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PartitionHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PartitionHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -8664,7 +9102,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6426
+    startLine: 6439
   summary: 'Gets the health of the specified Service Fabric partition, by using the
 
     specified health policy.
@@ -8878,11 +9316,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PartitionHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PartitionHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -8905,7 +9339,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6154
+    startLine: 6179
   summary: 'Gets the information about a Service Fabric partition.
 
 
@@ -8964,11 +9398,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ServicePartitionInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ServicePartitionInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -8991,7 +9421,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6069
+    startLine: 6096
   summary: 'Gets the list of partitions of a Service Fabric service.
 
 
@@ -9010,15 +9440,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -9079,9 +9511,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedServicePartitionInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
+      description: 'PagedServicePartitionInfoList or ClientRawResponse if
 
         raw=true
 
@@ -9106,7 +9536,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6682
+    startLine: 6688
   summary: 'Gets the load of the specified Service Fabric partition.
 
 
@@ -9167,11 +9597,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PartitionLoadInformation or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PartitionLoadInformation or ClientRawResponse if raw=true
 
         '
       type:
@@ -9194,7 +9620,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10702
+    startLine: 10952
   summary: 'Gets the progress of a PartitionRestart operation started using
 
     StartPartitionRestart.
@@ -9213,15 +9639,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -9277,11 +9705,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PartitionRestartProgress or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PartitionRestartProgress or ClientRawResponse if raw=true
 
         '
       type:
@@ -9304,7 +9728,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11532
+    startLine: 11747
   summary: 'Gets the specified Service Fabric property.
 
 
@@ -9367,11 +9791,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PropertyInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PropertyInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -9394,11 +9814,17 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11380
+    startLine: 11599
   summary: 'Gets information on all Service Fabric properties under a given name.
 
 
-    Gets information on all Service Fabric properties under a given name.
+    A Service Fabric name can have one or more named properties that stores
+
+    custom information. This operation gets the information about these
+
+    properties in a paged list. The information include name, value and
+
+    metadata about each of the properties.
 
     '
   syntax:
@@ -9479,11 +9905,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedPropertyInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedPropertyInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -9506,7 +9928,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 769
+    startLine: 753
   summary: 'Gets a list of fabric code versions that are provisioned in a Service
 
     Fabric cluster.
@@ -9566,15 +9988,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.FabricCodeVersionInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.FabricCodeVersionInfo
+      - list[azure.servicefabric.models.FabricCodeVersionInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_provisioned_fabric_code_version_info_list
@@ -9593,7 +10011,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 837
+    startLine: 817
   summary: 'Gets a list of fabric config versions that are provisioned in a Service
 
     Fabric cluster.
@@ -9653,15 +10071,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.FabricConfigVersionInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.FabricConfigVersionInfo
+      - list[azure.servicefabric.models.FabricConfigVersionInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_provisioned_fabric_config_version_info_list
@@ -9680,7 +10094,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10535
+    startLine: 10793
   summary: 'Gets the progress of a quorum loss operation on a partition started
 
     using the StartQuorumLoss API.
@@ -9699,15 +10113,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -9763,11 +10179,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PartitionQuorumLossProgress or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PartitionQuorumLossProgress or ClientRawResponse if raw=true
 
         '
       type:
@@ -9790,7 +10202,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7259
+    startLine: 7234
   summary: 'Gets a list of repair tasks matching the given filters.
 
 
@@ -9867,15 +10279,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.RepairTask or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.RepairTask
+      - list[azure.servicefabric.models.RepairTask]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_repair_task_list
@@ -9894,7 +10302,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7693
+    startLine: 7644
   summary: 'Gets the health of a Service Fabric stateful service replica or
 
     stateless service instance.
@@ -10012,11 +10420,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ReplicaHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ReplicaHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -10039,7 +10443,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7793
+    startLine: 7740
   summary: 'Gets the health of a Service Fabric stateful service replica or
 
     stateless service instance using the specified policy.
@@ -10181,11 +10585,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ReplicaHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ReplicaHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -10208,11 +10608,11 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7614
+    startLine: 7567
   summary: 'Gets the information about a replica of a Service Fabric partition.
 
 
-    The respons include the id, role, status, health, node name, uptime,
+    The response include the id, role, status, health, node name, uptime,
 
     and other details about the replica.
 
@@ -10288,11 +10688,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ReplicaInfo
-
-        or @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ReplicaInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -10315,7 +10711,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7534
+    startLine: 7491
   summary: 'Gets the information about replicas of a Service Fabric service
 
     partition.
@@ -10393,11 +10789,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedReplicaInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedReplicaInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -10420,7 +10812,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5492
+    startLine: 5533
   summary: 'Gets the description of an existing Service Fabric service.
 
 
@@ -10435,15 +10827,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -10485,11 +10879,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ServiceDescription or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ServiceDescription or ClientRawResponse if raw=true
 
         '
       type:
@@ -10512,7 +10902,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5565
+    startLine: 5603
   summary: 'Gets the health of the specified Service Fabric service.
 
 
@@ -10540,15 +10930,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -10709,11 +11101,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ServiceHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ServiceHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -10736,7 +11124,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5705
+    startLine: 5740
   summary: 'Gets the health of the specified Service Fabric service, by using the
 
     specified health policy.
@@ -10776,15 +11164,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -10958,11 +11348,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ServiceHealth or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ServiceHealth or ClientRawResponse if raw=true
 
         '
       type:
@@ -10985,7 +11371,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5045
+    startLine: 5079
   summary: 'Gets the information about the specific service belonging to a Service
 
     Fabric application.
@@ -11004,13 +11390,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -11018,15 +11408,17 @@ items:
       - str
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -11068,11 +11460,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ServiceInfo
-
-        or @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ServiceInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -11095,7 +11483,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4956
+    startLine: 4992
   summary: 'Gets the information about all services belonging to the application
 
     specified by the application id.
@@ -11114,13 +11502,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -11190,11 +11582,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedServiceInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedServiceInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -11217,7 +11605,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2854
+    startLine: 2874
   summary: 'Gets the manifest describing a service type.
 
 
@@ -11286,11 +11674,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ServiceTypeManifest or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ServiceTypeManifest or ClientRawResponse if raw=true
 
         '
       type:
@@ -11313,7 +11697,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6224
+    startLine: 6245
   summary: 'Gets the name of the Service Fabric service for a partition.
 
 
@@ -11368,11 +11752,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ServiceNameInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ServiceNameInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -11395,7 +11775,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2777
+    startLine: 2801
   summary: 'Gets the list containing the information about service types that are
 
     supported by a provisioned application type in a Service Fabric
@@ -11468,15 +11848,11 @@ items:
         '
       id: operation_config
     return:
-      description: 'list of @azure.servicefabric.models.ServiceTypeInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'list or ClientRawResponse if raw=true
 
         '
       type:
-      - list of azure.servicefabric.models.ServiceTypeInfo
+      - list[azure.servicefabric.models.ServiceTypeInfo]
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_service_type_info_list
@@ -11495,7 +11871,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11294
+    startLine: 11517
   summary: 'Enumerates all the Service Fabric names under a given name.
 
 
@@ -11584,11 +11960,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PagedSubNameInfoList or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PagedSubNameInfoList or ClientRawResponse if raw=true
 
         '
       type:
@@ -11596,6 +11968,80 @@ items:
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_sub_name_info_list
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.get_upgrade_orchestration_service_state
+  langs:
+  - python
+  module: azure.servicefabric
+  name: get_upgrade_orchestration_service_state
+  source:
+    id: get_upgrade_orchestration_service_state
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1067
+  summary: 'Get the service state of Service Fabric Upgrade Orchestration Service.
+
+
+    Get the service state of Service Fabric Upgrade Orchestration Service.
+
+    This API is internally used for support purposes.
+
+    '
+  syntax:
+    content: get_upgrade_orchestration_service_state(timeout=60, custom_headers=None,
+      raw=False, **operation_config)
+    parameters:
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'UpgradeOrchestrationServiceState or ClientRawResponse if
+
+        raw=true
+
+        '
+      type:
+      - azure.servicefabric.models.UpgradeOrchestrationServiceState
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_upgrade_orchestration_service_state
 - class: azure.servicefabric.ServiceFabricClientAPIs
   exceptions:
   - type: azure.servicefabric.models.FabricErrorException
@@ -11611,7 +12057,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10100
+    startLine: 10381
   summary: 'Invokes an administrative command on the given Infrastructure Service
 
     instance.
@@ -11701,11 +12147,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'str or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'str or ClientRawResponse if raw=true
 
         '
       type:
@@ -11728,7 +12170,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10181
+    startLine: 10459
   summary: 'Invokes a read-only query on the given infrastructure service instance.
 
 
@@ -11816,11 +12258,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'str or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'str or ClientRawResponse if raw=true
 
         '
       type:
@@ -11843,33 +12281,21 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2642
-  summary: 'Provisions or registers a Service Fabric application type with the
-
-    cluster.
-
-
-    Provisions or registers a Service Fabric application type with the
-
-    cluster. This is required before any new applications can be
-
-    instantiated.
-
-    '
+    startLine: 2659
+  summary: "Provisions or registers a Service Fabric application type with the\ncluster\
+    \ using the .sfpkg package in the external store or using the\napplication package\
+    \ in the image store.\n\nProvisions a Service Fabric application type with the\
+    \ cluster. This is\nrequired before any new applications can be instantiated.\n\
+    The provision operation can be performed either on the application\npackage specified\
+    \ by the relativePathInImageStore, or by using the URI\nof the external .sfpkg.\n\
+    .\n\n:param\n   provision_application_type_description_base_required_body_param:\
+    \ The\n   base type of provision application type description which supports\n\
+    \   either image store based provision or external store based provision.\n\n"
   syntax:
-    content: provision_application_type(application_type_build_path, timeout=60, custom_headers=None,
-      raw=False, **operation_config)
+    content: provision_application_type(provision_application_type_description_base_required_body_param,
+      timeout=60, custom_headers=None, raw=False, **operation_config)
     parameters:
-    - description: 'The relative image store path to
-
-        the application package.
-
-        '
-      id: application_type_build_path
-      type:
-      - str
-    - defaultValue: '60'
-      description: 'The server timeout for performing the operation in
+    - description: 'The server timeout for performing the operation in
 
         seconds. This specifies the time duration that the client is willing
 
@@ -11881,14 +12307,14 @@ items:
       id: timeout
       type:
       - long
-    - defaultValue: None
+    - defaultValue: '60'
       description: 'headers that will be added to the request
 
         '
       id: custom_headers
       type:
       - dict
-    - defaultValue: 'False'
+    - defaultValue: None
       description: 'returns the direct response alongside the
 
         deserialized response
@@ -11897,18 +12323,15 @@ items:
       id: raw
       type:
       - bool
-    - description: '*Operation configuration
+    - defaultValue: 'False'
+      description: '*Operation configuration
 
         overrides*.
 
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -11931,7 +12354,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1101
+    startLine: 1196
   summary: 'Provision the code or configuration packages of a Service Fabric
 
     cluster.
@@ -11996,11 +12419,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12023,7 +12442,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11464
+    startLine: 11682
   summary: 'Creates or updates a Service Fabric property.
 
 
@@ -12088,11 +12507,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12115,7 +12530,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7000
+    startLine: 6991
   summary: 'Indicates to the Service Fabric cluster that it should attempt to
 
     recover any services (including system services) which are currently
@@ -12173,11 +12588,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12200,7 +12611,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6812
+    startLine: 6811
   summary: 'Indicates to the Service Fabric cluster that it should attempt to
 
     recover a specific partition which is currently stuck in quorum loss.
@@ -12263,11 +12674,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12290,7 +12697,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6875
+    startLine: 6871
   summary: 'Indicates to the Service Fabric cluster that it should attempt to
 
     recover the specified service which is currently stuck in quorum loss.
@@ -12313,15 +12720,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -12363,11 +12772,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12390,7 +12795,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6943
+    startLine: 6937
   summary: 'Indicates to the Service Fabric cluster that it should attempt to
 
     recover the system services which are currently stuck in quorum loss.
@@ -12447,11 +12852,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12474,7 +12875,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9438
+    startLine: 9427
   summary: 'Deletes an existing Service Fabric compose deployment from cluster.
 
 
@@ -12527,11 +12928,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12554,7 +12951,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2278
+    startLine: 2307
   summary: 'Notifies Service Fabric that the persisted state on a node has been
 
     permanently removed or lost.
@@ -12625,11 +13022,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12652,7 +13045,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8330
+    startLine: 8255
   summary: 'Removes a service replica running on a node.
 
 
@@ -12748,11 +13141,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12775,7 +13164,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3851
+    startLine: 3858
   summary: 'Sends a health report on the Service Fabric application.
 
 
@@ -12814,13 +13203,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -12915,11 +13308,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -12942,7 +13331,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 674
+    startLine: 661
   summary: 'Sends a health report on the Service Fabric cluster.
 
 
@@ -13066,11 +13455,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -13093,7 +13478,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4775
+    startLine: 4816
   summary: 'Sends a health report on the Service Fabric application deployed on a
 
     Service Fabric node.
@@ -13140,13 +13525,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -13241,11 +13630,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -13268,7 +13653,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8805
+    startLine: 8719
   summary: 'Sends a health report on the Service Fabric deployed service package.
 
 
@@ -13314,13 +13699,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -13421,11 +13810,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -13448,7 +13833,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1966
+    startLine: 2011
   summary: 'Sends a health report on the Service Fabric node.
 
 
@@ -13578,11 +13963,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -13605,7 +13986,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6581
+    startLine: 6590
   summary: 'Sends a health report on the Service Fabric partition.
 
 
@@ -13735,11 +14116,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -13762,7 +14139,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7911
+    startLine: 7854
   summary: 'Sends a health report on the Service Fabric replica.
 
 
@@ -13813,22 +14190,13 @@ items:
 
         Stateful) for which the health is being reported. Following are the
 
-        possible values.
-
-        - Stateless - Does not use Service Fabric to make its state highly
-
-        available or reliable. The value is 1
-
-        - Stateful - Uses Service Fabric to make its state or part of its
-
-        state highly available and reliable. The value is 2.
-
-        . Possible values include: ''Stateless'', ''Stateful''
+        possible values. Possible values include: ''Stateless'', ''Stateful''
 
         '
       id: service_kind
       type:
       - str
+      - azure.servicefabric.models.ReplicaHealthReportServiceKindRequiredQueryParam
     - defaultValue: Stateful
       description: 'Describes the health information for the
 
@@ -13919,11 +14287,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -13946,7 +14310,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5864
+    startLine: 5896
   summary: 'Sends a health report on the Service Fabric service.
 
 
@@ -13983,15 +14347,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -14086,11 +14452,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14113,7 +14475,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 6753
+    startLine: 6755
   summary: 'Resets the current load of a Service Fabric partition.
 
 
@@ -14168,11 +14530,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14195,7 +14553,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5970
+    startLine: 6000
   summary: 'Resolve a Service Fabric partition.
 
 
@@ -14210,15 +14568,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -14309,11 +14669,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.ResolvedServicePartition or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'ResolvedServicePartition or ClientRawResponse if raw=true
 
         '
       type:
@@ -14336,7 +14692,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9074
+    startLine: 8985
   summary: 'Restarts a code package deployed on a Service Fabric node in a cluster.
 
 
@@ -14361,13 +14717,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -14417,11 +14777,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14444,7 +14800,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2345
+    startLine: 2371
   summary: 'Restarts a Service Fabric cluster node.
 
 
@@ -14498,6 +14854,7 @@ items:
       id: create_fabric_dump
       type:
       - str
+      - azure.servicefabric.models.CreateFabricDump
     - defaultValue: None
       description: 'headers that will be added to the request
 
@@ -14521,11 +14878,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14548,7 +14901,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 8263
+    startLine: 8191
   summary: 'Restarts a service replica of a persisted service running on a node.
 
 
@@ -14619,11 +14972,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14646,7 +14995,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4178
+    startLine: 4179
   summary: 'Resumes upgrading an application in the Service Fabric cluster.
 
 
@@ -14669,13 +15018,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -14725,11 +15078,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14752,11 +15101,13 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1281
+    startLine: 1368
   summary: 'Make the cluster upgrade move on to the next upgrade domain.
 
 
-    Make the cluster upgrade move on to the next upgrade domain.
+    Make the cluster code or configuration upgrade move on to the next
+
+    upgrade domain if appropriate.
 
     '
   syntax:
@@ -14807,11 +15158,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14859,13 +15206,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -14907,11 +15258,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14934,11 +15281,11 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1229
+    startLine: 1319
   summary: 'Rollback the upgrade of a Service Fabric cluster.
 
 
-    Rollback the upgrade of a Service Fabric cluster.
+    Rollback the code or configuration upgrade of a Service Fabric cluster.
 
     '
   syntax:
@@ -14981,11 +15328,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -14993,6 +15336,91 @@ items:
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.rollback_cluster_upgrade
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.set_upgrade_orchestration_service_state
+  langs:
+  - python
+  module: azure.servicefabric
+  name: set_upgrade_orchestration_service_state
+  source:
+    id: set_upgrade_orchestration_service_state
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 1126
+  summary: 'Update the service state of Service Fabric Upgrade Orchestration
+
+    Service.
+
+
+    Update the service state of Service Fabric Upgrade Orchestration
+
+    Service. This API is internally used for support purposes.
+
+    '
+  syntax:
+    content: set_upgrade_orchestration_service_state(timeout=60, service_state=None,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'The state of Service Fabric Upgrade
+
+        Orchestration Service.
+
+        '
+      id: service_state
+      type:
+      - str
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'UpgradeOrchestrationServiceStateSummary or ClientRawResponse
+
+        if raw=true
+
+        '
+      type:
+      - azure.servicefabric.models.UpgradeOrchestrationServiceStateSummary
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.set_upgrade_orchestration_service_state
 - class: azure.servicefabric.ServiceFabricClientAPIs
   exceptions:
   - type: azure.servicefabric.models.FabricErrorException
@@ -15008,7 +15436,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 3957
+    startLine: 3963
   summary: 'Starts upgrading an application in the Service Fabric cluster.
 
 
@@ -15025,13 +15453,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -15081,11 +15513,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15108,7 +15536,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9564
+    startLine: 9546
   summary: 'Starts Chaos in the cluster.
 
 
@@ -15177,11 +15605,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15204,7 +15628,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1406
+    startLine: 1487
   summary: 'Start upgrading the configuration of a Service Fabric standalone
 
     cluster.
@@ -15263,11 +15687,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15290,7 +15710,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1342
+    startLine: 1427
   summary: 'Start upgrading the code or configuration version of a Service Fabric
 
     cluster.
@@ -15351,11 +15771,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15378,7 +15794,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9496
+    startLine: 9482
   summary: 'Starts upgrading a compose deployment in the Service Fabric cluster.
 
 
@@ -15441,11 +15857,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15468,7 +15880,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10261
+    startLine: 10536
   summary: 'This API will induce data loss for the specified partition. It will
 
     trigger a call to the OnDataLossAsync API of the partition.
@@ -15517,15 +15929,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -15547,28 +15961,15 @@ items:
       - str
     - description: 'This enum is passed to the StartDataLoss API to
 
-        indicate what type of data loss to induce.
+        indicate what type of data loss to induce. Possible values include:
 
-        - Invalid - Reserved.  Do not pass into API.
-
-        - PartialDataLoss - PartialDataLoss option will cause a quorum of
-
-        replicas to go down, triggering an OnDataLoss event in the system for
-
-        the given partition.
-
-        - FullDataLoss - FullDataLoss option will drop all the replicas which
-
-        means that all the data will be lost.
-
-        . Possible values include: ''Invalid'', ''PartialDataLoss'',
-
-        ''FullDataLoss''
+        ''Invalid'', ''PartialDataLoss'', ''FullDataLoss''
 
         '
       id: data_loss_mode
       type:
       - str
+      - azure.servicefabric.models.DataLossModeRequiredQueryParam
     - defaultValue: '60'
       description: 'The server timeout for performing the operation in
 
@@ -15605,11 +16006,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15632,7 +16029,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10784
+    startLine: 11031
   summary: 'Starts or stops a cluster node.
 
 
@@ -15678,20 +16075,15 @@ items:
 
         perform.  NodeTransitionType.Start will start a stopped node.
 
-        NodeTransitionType.Stop will stop a node that is up.
+        NodeTransitionType.Stop will stop a node that is up. Possible values
 
-        - Invalid - Reserved.  Do not pass into API.
-
-        - Start - Transition a stopped node to up.
-
-        - Stop - Transition an up node to stopped.
-
-        . Possible values include: ''Invalid'', ''Start'', ''Stop''
+        include: ''Invalid'', ''Start'', ''Stop''
 
         '
       id: node_transition_type
       type:
       - str
+      - azure.servicefabric.models.NodeTransitionTypeRequiredQueryParam
     - description: 'The node instance ID of the target node.
 
         This can be determined through GetNodeInfo API.
@@ -15746,11 +16138,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15773,7 +16161,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10617
+    startLine: 10872
   summary: 'This API will restart some or all replicas or instances of the
 
     specified partition.
@@ -15798,15 +16186,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -15826,13 +16216,17 @@ items:
       id: operation_id
       type:
       - str
-    - description: "* Invalid - Reserved.  Do not pass into \n\nAPI.\n- AllReplicasOrInstances\
-        \ - All replicas or instances in the partition\nare restarted at once.\n-\
-        \ OnlyActiveSecondaries - Only the secondary replicas are restarted.\n. Possible\
-        \ values include: 'Invalid', 'AllReplicasOrInstances',\n'OnlyActiveSecondaries'\n"
+    - description: 'Describe which partitions to restart.
+
+        Possible values include: ''Invalid'', ''AllReplicasOrInstances'',
+
+        ''OnlyActiveSecondaries''
+
+        '
       id: restart_partition_mode
       type:
       - str
+      - azure.servicefabric.models.RestartPartitionModeRequiredQueryParam
     - defaultValue: '60'
       description: 'The server timeout for performing the operation in
 
@@ -15869,11 +16263,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -15896,7 +16286,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 10443
+    startLine: 10707
   summary: 'Induces quorum loss for a given stateful service partition.
 
 
@@ -15923,15 +16313,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -15953,24 +16345,15 @@ items:
       - str
     - description: 'This enum is passed to the StartQuorumLoss
 
-        API to indicate what type of quorum loss to induce.
+        API to indicate what type of quorum loss to induce. Possible values
 
-        - Invalid - Reserved.  Do not pass into API.
-
-        - QuorumReplicas - Partial Quorum loss mode : Minimum number of
-
-        replicas for a partition will be down that will cause a quorum loss.
-
-        - AllReplicas- Full Quorum loss mode : All replicas for a partition
-
-        will be down that will cause a quorum loss.
-
-        . Possible values include: ''Invalid'', ''QuorumReplicas'', ''AllReplicas''
+        include: ''Invalid'', ''QuorumReplicas'', ''AllReplicas''
 
         '
       id: quorum_loss_mode
       type:
       - str
+      - azure.servicefabric.models.QuorumLossModeRequiredQueryParam
     - description: 'The amount of time for which the
 
         partition will be kept in quorum loss.  This must be specified in
@@ -16017,11 +16400,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16044,7 +16423,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9631
+    startLine: 9609
   summary: 'Stops Chaos in the cluster if it is already running, otherwise it does
 
     nothing.
@@ -16094,11 +16473,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16121,7 +16496,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 11667
+    startLine: 11875
   summary: 'Submits a property batch.
 
 
@@ -16163,7 +16538,7 @@ items:
         '
       id: operations
       type:
-      - list of azure.servicefabric.models.PropertyBatchOperation
+      - list[azure.servicefabric.models.PropertyBatchOperation]
     - defaultValue: None
       description: 'headers that will be added to the request
 
@@ -16187,11 +16562,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.PropertyBatchInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'PropertyBatchInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -16214,7 +16585,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 2706
+    startLine: 2725
   summary: 'Removes or unregisters a Service Fabric application type from the
 
     cluster.
@@ -16224,16 +16595,16 @@ items:
 
     cluster. This operation can only be performed if all application
 
-    instance of the application type has been deleted. Once the application
+    instances of the application type has been deleted. Once the
 
-    type is unregistered, no new application instance can be created for
+    application type is unregistered, no new application instances can be
 
-    this particular application type.
+    created for this particular application type.
 
     '
   syntax:
     content: unprovision_application_type(application_type_name, application_type_version,
-      timeout=60, custom_headers=None, raw=False, **operation_config)
+      timeout=60, async_parameter=None, custom_headers=None, raw=False, **operation_config)
     parameters:
     - description: 'The name of the application type.
 
@@ -16241,7 +16612,11 @@ items:
       id: application_type_name
       type:
       - str
-    - description: ''
+    - description: 'The version of the application type
+
+        as defined in the application manifest.
+
+        '
       id: application_type_version
       type:
       - str
@@ -16258,6 +16633,23 @@ items:
       id: timeout
       type:
       - long
+    - defaultValue: None
+      description: 'The flag indicating whether or not unprovision
+
+        should occur asynchronously. When set to true, the unprovision
+
+        operation returns when the request is accepted by the system, and the
+
+        unprovision operation continues without any timeout limit. The default
+
+        value is false. However, we recommend to set it to true for large
+
+        application packages that were provisioned.
+
+        '
+      id: async_parameter
+      type:
+      - bool
     - defaultValue: None
       description: 'headers that will be added to the request
 
@@ -16281,11 +16673,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16308,7 +16696,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1165
+    startLine: 1257
   summary: 'Unprovision the code or configuration packages of a Service Fabric
 
     cluster.
@@ -16316,7 +16704,9 @@ items:
 
     Unprovision the code or configuration packages of a Service Fabric
 
-    cluster.
+    cluster. It is supported to unprovision code and configuration
+
+    separately.
 
     '
   syntax:
@@ -16373,11 +16763,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16400,7 +16786,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 4103
+    startLine: 4106
   summary: 'Updates an ongoing application upgrade in the Service Fabric cluster.
 
 
@@ -16421,13 +16807,17 @@ items:
 
         typically the full name of the application without the ''fabric:'' URI
 
-        scheme. Starting from version 6.0, hierarchical names are delimited
+        scheme.
 
-        with the "~" character. For example, if the application name is
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        "fabric://myapp/app1", the application identity would be "myapp~app1"
+        "~" character.
 
-        in 6.0+ and "myapp/app1" in previous versions.
+        For example, if the application name is "fabric:/myapp/app1", the
+
+        application identity would be "myapp~app1" in 6.0+ and "myapp/app1" in
+
+        previous versions.
 
         '
       id: application_id
@@ -16477,11 +16867,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16504,11 +16890,13 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 1469
+    startLine: 1546
   summary: 'Update the upgrade parameters of a Service Fabric cluster upgrade.
 
 
-    Update the upgrade parameters of a Service Fabric cluster upgrade.
+    Update the upgrade parameters used during a Service Fabric cluster
+
+    upgrade.
 
     '
   syntax:
@@ -16559,11 +16947,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16586,7 +16970,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7470
+    startLine: 7432
   summary: 'Updates the execution state of a repair task.
 
 
@@ -16632,11 +17016,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.RepairTaskUpdateInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'RepairTaskUpdateInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -16659,7 +17039,7 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 7405
+    startLine: 7372
   summary: 'Updates the health policy of the given repair task.
 
 
@@ -16705,11 +17085,7 @@ items:
         '
       id: operation_config
     return:
-      description: '@azure.servicefabric.models.RepairTaskUpdateInfo or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'RepairTaskUpdateInfo or ClientRawResponse if raw=true
 
         '
       type:
@@ -16732,11 +17108,31 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 5421
-  summary: 'Updates the specified service using the given update description.
+    startLine: 5454
+  summary: 'Updates a Service Fabric service using the specified update
+
+    description.
 
 
-    Updates the specified service using the given update description.
+    This API allows updating properties of a running Service Fabric
+
+    service. The set of properties that can be updated are a subset of the
+
+    properties that were specified at the time of creating the service. The
+
+    current set of properties can be obtained using *GetServiceDescription*
+
+    API. Please note that updating the properties of a running service is
+
+    different than upgrading your application using
+
+    *StartApplicationUpgrade* API. The upgrade is a long running background
+
+    operation that involves moving the application from one version to
+
+    another, one upgrade domain at a time, whereas update applies the new
+
+    properties immediately to the service.
 
     '
   syntax:
@@ -16745,15 +17141,17 @@ items:
     parameters:
     - description: 'The identity of the service. This is typically the
 
-        full name of the service without the ''fabric:'' URI scheme. Starting
+        full name of the service without the ''fabric:'' URI scheme.
 
-        from version 6.0, hierarchical names are delimited with the "~"
+        Starting from version 6.0, hierarchical names are delimited with the
 
-        character. For example, if the service name is
+        "~" character.
 
-        "fabric://myapp/app1/svc1", the service identity would be
+        For example, if the service name is "fabric:/myapp/app1/svc1", the
 
-        "myapp~app1~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.
+        service identity would be "myapp~app1~svc1" in 6.0+ and
+
+        "myapp/app1/svc1" in previous versions.
 
         '
       id: service_id
@@ -16803,11 +17201,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16830,18 +17224,35 @@ items:
       branch: master
       path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
       repo: https://github.com/Azure/azure-sdk-for-python.git
-    startLine: 9777
-  summary: "Uploads contents of the file to the image store.\n\nUploads contents of\
-    \ the file to the image store. Use this API if the\nfile is small enough to upload\
-    \ again if the connection fails. The\nfile's data needs to be added to the request\
-    \ body. The contents will be\nuploaded to the specified path. Image store service\
-    \ uses a mark file to\nindicate the availability of the folder. The mark file\
-    \ is an empty file\nnamed \"_.dir\". The mark file is generated by the image store\
-    \ service\nwhen all files in a folder are uploaded. When using File-by-File\n\
-    approach to upload application package in REST, the image store service\nisn\uFFFD\
-    t aware of the file hierarchy of the application package; you need\nto create\
-    \ a mark file per folder and upload it last, to let the image\nstore service know\
-    \ that the folder is complete.\n.\n"
+    startLine: 9750
+  summary: 'Uploads contents of the file to the image store.
+
+
+    Uploads contents of the file to the image store. Use this API if the
+
+    file is small enough to upload again if the connection fails. The
+
+    file''s data needs to be added to the request body. The contents will be
+
+    uploaded to the specified path. Image store service uses a mark file to
+
+    indicate the availability of the folder. The mark file is an empty file
+
+    named "_.dir". The mark file is generated by the image store service
+
+    when all files in a folder are uploaded. When using File-by-File
+
+    approach to upload application package in REST, the image store service
+
+    isn''t aware of the file hierarchy of the application package; you need
+
+    to create a mark file per folder and upload it last, to let the image
+
+    store service know that the folder is complete.
+
+    .
+
+    '
   syntax:
     content: upload_file(content_path, timeout=60, custom_headers=None, raw=False,
       **operation_config)
@@ -16890,11 +17301,7 @@ items:
         '
       id: operation_config
     return:
-      description: 'None or
-
-        @msrest.pipeline.ClientRawResponse if
-
-        raw=true
+      description: 'None or ClientRawResponse if raw=true
 
         '
       type:
@@ -16902,6 +17309,132 @@ items:
       - msrest.pipeline.ClientRawResponse
   type: method
   uid: azure.servicefabric.ServiceFabricClientAPIs.upload_file
+- class: azure.servicefabric.ServiceFabricClientAPIs
+  exceptions:
+  - type: azure.servicefabric.models.FabricErrorException
+  fullName: azure.servicefabric.ServiceFabricClientAPIs.upload_file_chunk
+  langs:
+  - python
+  module: azure.servicefabric
+  name: upload_file_chunk
+  source:
+    id: upload_file_chunk
+    path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+    remote:
+      branch: master
+      path: azure-servicefabric\azure\servicefabric\service_fabric_client_ap_is.py
+      repo: https://github.com/Azure/azure-sdk-for-python.git
+    startLine: 10301
+  summary: 'Uploads a file chunk to the image store relative path.
+
+
+    Uploads a file chunk to the image store with the specified upload
+
+    session ID and image store relative path. This API allows user to
+
+    resume the file upload operation. user doesn''t have to restart the file
+
+    upload from scratch whenever there is a network interruption. Use this
+
+    option if the file size is large.
+
+    To perform a resumable file upload, user need to break the file into
+
+    multiple chunks and upload these chunks to the image store one-by-one.
+
+    Chunks don''t have to be uploaded in order. If the file represented by
+
+    the image store relative path already exists, it will be overwritten
+
+    when the upload session commits.
+
+    .
+
+    '
+  syntax:
+    content: upload_file_chunk(content_path, session_id, content_range, timeout=60,
+      custom_headers=None, raw=False, **operation_config)
+    parameters:
+    - description: 'Relative path to file or folder in the image
+
+        store from its root.
+
+        '
+      id: content_path
+      type:
+      - str
+    - description: 'A GUID generated by the user for a file uploading.
+
+        It identifies an image store upload session which keeps track of all
+
+        file chunks until it is committed.
+
+        '
+      id: session_id
+      type:
+      - str
+    - description: 'When uploading file chunks to the image store,
+
+        the Content-Range header field need to be configured and sent with a
+
+        request. The format should looks like "bytes
+
+        {First-Byte-Position}-{Last-Byte-Position}/{File-Length}". For
+
+        example, Content-Range:bytes 300-5000/20000 indicates that user is
+
+        sending bytes 300 through 5,000 and the total file length is 20,000
+
+        bytes.
+
+        '
+      id: content_range
+      type:
+      - str
+    - defaultValue: '60'
+      description: 'The server timeout for performing the operation in
+
+        seconds. This specifies the time duration that the client is willing
+
+        to wait for the requested operation to complete. The default value for
+
+        this parameter is 60 seconds.
+
+        '
+      id: timeout
+      type:
+      - long
+    - defaultValue: None
+      description: 'headers that will be added to the request
+
+        '
+      id: custom_headers
+      type:
+      - dict
+    - defaultValue: 'False'
+      description: 'returns the direct response alongside the
+
+        deserialized response
+
+        '
+      id: raw
+      type:
+      - bool
+    - description: '*Operation configuration
+
+        overrides*.
+
+        '
+      id: operation_config
+    return:
+      description: 'None or ClientRawResponse if raw=true
+
+        '
+      type:
+      - None
+      - msrest.pipeline.ClientRawResponse
+  type: method
+  uid: azure.servicefabric.ServiceFabricClientAPIs.upload_file_chunk
 references:
 - fullName: azure.servicefabric.ServiceFabricClientAPIs.cancel_operation
   isExternal: false
@@ -16913,6 +17446,11 @@ references:
   name: cancel_repair_task
   parent: azure.servicefabric.ServiceFabricClientAPIs
   uid: azure.servicefabric.ServiceFabricClientAPIs.cancel_repair_task
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.commit_image_store_upload_session
+  isExternal: false
+  name: commit_image_store_upload_session
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.commit_image_store_upload_session
 - fullName: azure.servicefabric.ServiceFabricClientAPIs.copy_image_store_content
   isExternal: false
   name: copy_image_store_content
@@ -16958,6 +17496,11 @@ references:
   name: delete_image_store_content
   parent: azure.servicefabric.ServiceFabricClientAPIs
   uid: azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_content
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_upload_session
+  isExternal: false
+  name: delete_image_store_upload_session
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.delete_image_store_upload_session
 - fullName: azure.servicefabric.ServiceFabricClientAPIs.delete_name
   isExternal: false
   name: delete_name
@@ -17113,6 +17656,11 @@ references:
   name: get_compose_deployment_upgrade_progress
   parent: azure.servicefabric.ServiceFabricClientAPIs
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_compose_deployment_upgrade_progress
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.get_container_logs_deployed_on_node
+  isExternal: false
+  name: get_container_logs_deployed_on_node
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_container_logs_deployed_on_node
 - fullName: azure.servicefabric.ServiceFabricClientAPIs.get_data_loss_progress
   isExternal: false
   name: get_data_loss_progress
@@ -17203,6 +17751,16 @@ references:
   name: get_image_store_root_content
   parent: azure.servicefabric.ServiceFabricClientAPIs
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_root_content
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_id
+  isExternal: false
+  name: get_image_store_upload_session_by_id
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_id
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_path
+  isExternal: false
+  name: get_image_store_upload_session_by_path
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_image_store_upload_session_by_path
 - fullName: azure.servicefabric.ServiceFabricClientAPIs.get_name_exists_info
   isExternal: false
   name: get_name_exists_info
@@ -17363,6 +17921,11 @@ references:
   name: get_sub_name_info_list
   parent: azure.servicefabric.ServiceFabricClientAPIs
   uid: azure.servicefabric.ServiceFabricClientAPIs.get_sub_name_info_list
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.get_upgrade_orchestration_service_state
+  isExternal: false
+  name: get_upgrade_orchestration_service_state
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.get_upgrade_orchestration_service_state
 - fullName: azure.servicefabric.ServiceFabricClientAPIs.invoke_infrastructure_command
   isExternal: false
   name: invoke_infrastructure_command
@@ -17508,6 +18071,11 @@ references:
   name: rollback_cluster_upgrade
   parent: azure.servicefabric.ServiceFabricClientAPIs
   uid: azure.servicefabric.ServiceFabricClientAPIs.rollback_cluster_upgrade
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.set_upgrade_orchestration_service_state
+  isExternal: false
+  name: set_upgrade_orchestration_service_state
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.set_upgrade_orchestration_service_state
 - fullName: azure.servicefabric.ServiceFabricClientAPIs.start_application_upgrade
   isExternal: false
   name: start_application_upgrade
@@ -17603,3 +18171,162 @@ references:
   name: upload_file
   parent: azure.servicefabric.ServiceFabricClientAPIs
   uid: azure.servicefabric.ServiceFabricClientAPIs.upload_file
+- fullName: azure.servicefabric.ServiceFabricClientAPIs.upload_file_chunk
+  isExternal: false
+  name: upload_file_chunk
+  parent: azure.servicefabric.ServiceFabricClientAPIs
+  uid: azure.servicefabric.ServiceFabricClientAPIs.upload_file_chunk
+- fullName: list[azure.servicefabric.models.ApplicationHealthPolicyMapItem]
+  name: list[ApplicationHealthPolicyMapItem]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.ApplicationHealthPolicyMapItem
+    name: ApplicationHealthPolicyMapItem
+    uid: azure.servicefabric.models.ApplicationHealthPolicyMapItem
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.ApplicationHealthPolicyMapItem]
+- fullName: list[azure.servicefabric.models.DeployedCodePackageInfo]
+  name: list[DeployedCodePackageInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.DeployedCodePackageInfo
+    name: DeployedCodePackageInfo
+    uid: azure.servicefabric.models.DeployedCodePackageInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.DeployedCodePackageInfo]
+- fullName: list[azure.servicefabric.models.DeployedServicePackageInfo]
+  name: list[DeployedServicePackageInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.DeployedServicePackageInfo
+    name: DeployedServicePackageInfo
+    uid: azure.servicefabric.models.DeployedServicePackageInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.DeployedServicePackageInfo]
+- fullName: list[azure.servicefabric.models.DeployedServiceReplicaInfo]
+  name: list[DeployedServiceReplicaInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.DeployedServiceReplicaInfo
+    name: DeployedServiceReplicaInfo
+    uid: azure.servicefabric.models.DeployedServiceReplicaInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.DeployedServiceReplicaInfo]
+- fullName: list[azure.servicefabric.models.DeployedServiceTypeInfo]
+  name: list[DeployedServiceTypeInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.DeployedServiceTypeInfo
+    name: DeployedServiceTypeInfo
+    uid: azure.servicefabric.models.DeployedServiceTypeInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.DeployedServiceTypeInfo]
+- fullName: list[azure.servicefabric.models.OperationStatus]
+  name: list[OperationStatus]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.OperationStatus
+    name: OperationStatus
+    uid: azure.servicefabric.models.OperationStatus
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.OperationStatus]
+- fullName: list[azure.servicefabric.models.FabricCodeVersionInfo]
+  name: list[FabricCodeVersionInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.FabricCodeVersionInfo
+    name: FabricCodeVersionInfo
+    uid: azure.servicefabric.models.FabricCodeVersionInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.FabricCodeVersionInfo]
+- fullName: list[azure.servicefabric.models.FabricConfigVersionInfo]
+  name: list[FabricConfigVersionInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.FabricConfigVersionInfo
+    name: FabricConfigVersionInfo
+    uid: azure.servicefabric.models.FabricConfigVersionInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.FabricConfigVersionInfo]
+- fullName: list[azure.servicefabric.models.RepairTask]
+  name: list[RepairTask]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.RepairTask
+    name: RepairTask
+    uid: azure.servicefabric.models.RepairTask
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.RepairTask]
+- fullName: list[azure.servicefabric.models.ServiceTypeInfo]
+  name: list[ServiceTypeInfo]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.ServiceTypeInfo
+    name: ServiceTypeInfo
+    uid: azure.servicefabric.models.ServiceTypeInfo
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.ServiceTypeInfo]
+- fullName: list[azure.servicefabric.models.PropertyBatchOperation]
+  name: list[PropertyBatchOperation]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.PropertyBatchOperation
+    name: PropertyBatchOperation
+    uid: azure.servicefabric.models.PropertyBatchOperation
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.PropertyBatchOperation]

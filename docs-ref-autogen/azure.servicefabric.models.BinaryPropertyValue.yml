@@ -28,16 +28,34 @@ items:
   syntax:
     content: BinaryPropertyValue(data)
     parameters:
-    - description: 'Polymorphic Discriminator
+    - description: 'Constant filled by server.
 
         '
       id: kind
       type:
       - str
-    - description: ''
+    - description: 'Array of bytes to be sent as an integer array. Each element
+
+        of array is a number between 0 and 255.
+
+        '
       id: data
       type:
-      - list of int
+      - list[int]
   type: class
   uid: azure.servicefabric.models.BinaryPropertyValue
-references: []
+references:
+- fullName: list[int]
+  name: list[int]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: int
+    name: int
+    uid: int
+  - fullName: ']'
+    name: ']'
+  uid: list[int]

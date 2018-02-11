@@ -35,15 +35,19 @@ items:
     content: PartitionsHealthEvaluation(aggregated_health_state=None, description=None,
       max_percent_unhealthy_partitions_per_service=None, total_count=None, unhealthy_evaluations=None)
     parameters:
-    - description: 'Possible values include: ''Invalid'', ''Ok'',
+    - description: 'The health state of a Service Fabric
 
-        ''Warning'', ''Error'', ''Unknown''
+        entity such as Cluster, Node, Application, Service, Partition, Replica
+
+        etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'',
+
+        ''Unknown''
 
         '
       id: aggregated_health_state
       type:
       - str
-      - azure.servicefabric.models.enum
+      - azure.servicefabric.models.HealthState
     - description: 'Description of the health evaluation, which represents
 
         a summary of the evaluation process.
@@ -52,7 +56,7 @@ items:
       id: description
       type:
       - str
-    - description: 'Polymorphic Discriminator
+    - description: 'Constant filled by server.
 
         '
       id: kind
@@ -76,10 +80,30 @@ items:
       id: total_count
       type:
       - long
-    - description: ''
+    - description: 'List of unhealthy evaluations that led to
+
+        the aggregated health state. Includes all the unhealthy
+
+        PartitionHealthEvaluation that impacted the aggregated health.
+
+        '
       id: unhealthy_evaluations
       type:
-      - list of azure.servicefabric.models.HealthEvaluationWrapper
+      - list[azure.servicefabric.models.HealthEvaluationWrapper]
   type: class
   uid: azure.servicefabric.models.PartitionsHealthEvaluation
-references: []
+references:
+- fullName: list[azure.servicefabric.models.HealthEvaluationWrapper]
+  name: list[HealthEvaluationWrapper]
+  spec.python:
+  - fullName: list
+    name: list
+    uid: list
+  - fullName: '['
+    name: '['
+  - fullName: azure.servicefabric.models.HealthEvaluationWrapper
+    name: HealthEvaluationWrapper
+    uid: azure.servicefabric.models.HealthEvaluationWrapper
+  - fullName: ']'
+    name: ']'
+  uid: list[azure.servicefabric.models.HealthEvaluationWrapper]
